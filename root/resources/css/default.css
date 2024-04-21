@@ -661,7 +661,7 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .form-wrap.type2 > div.input input:disabled + .value-wrap .unit { color:#999999; }
 /* .form-wrap.type2 > div.input:after { content:'만원'; } */
 .value-wrap { height:50px; color:#4E32A5; font-size:0; line-height:50px; }
-.form-wrap.type2 .value-wrap { position:absolute; top:0; left:0; right:0; display:flex; align-items:center; justify-content: space-between; border-bottom:1px solid #E5E5E5; }
+.form-wrap.type2 .value-wrap { position:absolute; top:0; left:0; right:0; /*display:flex; align-items:center; justify-content: space-between; */ border-bottom:1px solid #E5E5E5; }
 
 .form-wrap.type2 input:focus ~ .value-wrap,
 .form-wrap.type2 input:valid ~ .value-wrap { border-color:#B088FF;}
@@ -2314,7 +2314,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 /* 헤더 변경 2024-04-18 */
 /** 헤더 **/
-.headerWrap01 { display:flex; justify-content: center; align-items:center; position:fixed; width:100%; height:50px; top:0; left:0; background-color:#FFFFFF !important; z-index:100 !important; }
+.headerWrap01 { display:flex; justify-content: center; align-items:center; position:fixed; width:100%; height:50px; top:0; left:0; background-color:#FFFFFF; z-index:100 !important; }
 .headerWrap01.bg-color02 { background-color:#F5F8FA;  }
 
 /*헤더 왼쪽*/
