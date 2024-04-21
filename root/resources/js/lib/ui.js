@@ -2,12 +2,12 @@
 $(document).ready(function(){
 
 	//예가람 신규
-	 /**  3자리 수마다 콤마 적용 **/
-	$(document).on('keyup', 'input[inputmode=numeric]', function (event) {
-		this.value = this.value.replace(/[^0-9]/g, ''); // 입력값이 숫자가 아니면 공백
-		this.value = this.value.replace(/,/g, ''); // ,값 공백처리
-		this.value = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 정규식을 이용해서 3자리 마다 , 추가
-	});
+	//  /**  3자리 수마다 콤마 적용 **/
+	// $(document).on('keyup', 'input[inputmode=numeric]', function (event) {
+	// 	this.value = this.value.replace(/[^0-9]/g, ''); // 입력값이 숫자가 아니면 공백
+	// 	this.value = this.value.replace(/,/g, ''); // ,값 공백처리
+	// 	this.value = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // 정규식을 이용해서 3자리 마다 , 추가
+	// });
 	
 
 	/* 라벨 액션 2023-10-06 삭제 */
@@ -107,7 +107,7 @@ $(document).ready(function(){
 	*/
 
 	$('.check').on('click', function() {
-		var totalNum = $(".level2 fieldset > .check").length;	
+		var totalNum = $(".level2 fieldset > .check").length;
 		var checkNum = $(".level2 fieldset > .check:checked").length;
 
 		var dmTotalNum	= $(".level3 .check").length;
@@ -139,7 +139,7 @@ $(document).ready(function(){
 	* 툴팁
 	*/
 	$(".tooltip-btn").on('click', function(){
-		var $this = $(this).parents(".tooltip-wrap");		
+		var $this = $(this).parents(".tooltip-wrap");
 		
 		$this.removeClass('on');
 		if($this.hasClass('on')){
@@ -151,7 +151,7 @@ $(document).ready(function(){
 
 	//툴팁 닫기
 	$(".tooltip-close").on('click', function(){
-		var $this = $(this).parents(".tooltip-wrap");		
+		var $this = $(this).parents(".tooltip-wrap");
 		$this.removeClass('on');
 	});	
 	
