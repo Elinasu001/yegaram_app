@@ -1,0 +1,161 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body, p, div, input, ul, ol, li, span, a, h1, h3 {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Spoqa Han Sans Neo', "Apple SD Gothic Neo", sans-serif;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+/*
+input {
+    height: 40px;
+    border: 1px solid #dddddd;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+*/
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+#wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+h1 {
+    padding-top: 20px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.wp32 {
+    width: calc(33.33% - 9px);
+}
+
+.wp49 {
+    width: calc(50% - 8px);
+}
+
+.card_ipt {
+    width: calc(25% - 20px);
+}
+
+.ownInput {
+}
+
+.formatting {
+    padding: 15px;
+}
+
+/* tab_st */
+.lst_tab {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lst_tab ul {
+}
+
+.lst_tab ul:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.lst_tab ul li {
+    width: 50%;
+    height: 53px;
+    float: left;
+}
+
+.lst_tab.n4 ul li {
+    width: 25%;
+}
+
+.lst_tab ul li a {
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #dddddd;
+    background-color: #efefef;
+    color: #333;
+    line-height: 53px;
+    margin-left: -1px;
+}
+
+.lst_tab ul li.on a {
+    background-color: #3a61a7;
+    color: #fff;
+}
+
+.tabCont .cont.on {
+    display: block;
+}
+
+.tabCont .cont {
+    display: none;
+    padding: 15px;
+}
+
+.main_tit {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 25px;
+}
+
+.title1 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.group {
+    margin-top: 20px;
+}
+
+.group:first-child {
+    margin-top: 0px;
+}
+
+.btn_next {
+    text-align: center;
+}
+
+.btn_next button {
+    margin: 0;
+    background-color: #3a61a7;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #dddddd;
+    line-height: 53px;
+    padding: 0px 23px;
+}

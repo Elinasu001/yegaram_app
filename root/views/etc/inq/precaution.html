@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803174840"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803174840"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803174840"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803174840"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803174840"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803174840"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803174840"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803174840"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803174840" id="biz_common" 
+	data-menuId="etc/inq"
+	data-frameId="precaution"
+	data-serviceCd="precaution.frm" 
+	data-serverTime="20230803174840"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+<script type="text/javascript">
+var PageFunc = function() {
+	
+	var _back = function() { // 뒤로가기
+		history.back();
+	}
+	
+	var _proc = function() { // 본처리
+		// TODO 
+		return true;
+	}
+	
+	var _cancel = function() { // 그만하기
+		goMainPage();
+	}
+	
+	var _validate = function() { // 유효성검증
+		// TODO 
+		return true;
+	}
+	
+	/**************************
+	* 사전점검표 체크
+	***************************/
+	var _checkNext = function(el){
+		
+	}
+	
+	return {
+		back : _back,
+		proc : _proc,
+		cancel : _cancel,
+		checkNext : _checkNext
+	};
+}();
+
+
+$(document).ready(function(){
+	
+});
+</script>
+</head>
+<body>
+	<!-- header -->
+	<header class="headerWrap">
+		<div class="header">
+			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+			<h2><span>이용자 유의사항</span></h2> <!-- [퍼블-2] 텍스트 변경 -->
+		</div>
+		<div class="menu-wrap">
+		</div>
+	</header>
+	<!-- //header -->
+
+    <!-- s: contentsWrap -->
+    <div class="contentsWrap">
+        <!-- s: contents -->
+        <div class="contents">
+            <div class="default-wrap"><!-- [퍼블] 클래스 변경 -->
+				<div class="tit-wrap"><!-- [퍼블] 클래스 변경 -->
+					<p class="txt"><strong>고객님, 금융거래 이용 시<br>유의사항에 대해 안내해 드려요</strong></p> <!-- [퍼블-2] 변경 -->
+				</div>
+				<section class="tabs-wrap type-box">
+                    <div class="tabs">
+                        <ul class="tab-item">
+                            <li class="on" data-tab="tab-cont09"><a href="#none">전자금융거래<br/>이용자 주의사항</a></li>
+                            <li data-tab="tab-cont10" class=""><a href="#none">스마트폰 금융거래<br/>유의사항</a></li>
+                            <li data-tab="tab-cont11" class=""><a href="#none">보이스피싱<br/>피해예방 유의사항</a></li>
+						</ul>
+
+						<!-- [퍼블-2] 전체 변경 -->
+                        <div class="tab-content-area">
+                            <div id="tab-cont09" class="">
+                                <div class="terms-notice-wrap">
+									<div class="sub-tit-wrap">
+                                        <p class="tit">전자금융거래 이용자 유의사항</p>
+                                        <p class="txt">
+											전자금융거래 이용자는 전자금융거래 이용에 필요한 정보가 제 3자에게 유출되는 것을 방지하고,
+											전자금융거래 사고를 사전에 예방 하기 위해 다음의 10개 사항을 유의하여 거래할 것
+										</p>
+                                    </div>
+
+									<div class="guide-txt-wrap">
+										<ul class="list-bull type-large num">
+											<li>
+												<em>1.</em>
+												제3자가 쉽게 추측할 수 있는 비밀번호를 사용하지 말 것<br>
+												예) 주민등록번호, 생일날짜, 전화번호, 차량번호 연속숫자 등
+											</li>
+											<li>
+												<em>2.</em>
+												전자금융거래 비밀번호와 계좌비밀번호를 반드시 다르게 사용할 것
+											</li>
+											<li>
+												<em>3.</em>
+												비밀번호를 정기적으로 변경하고, 특히 비밀번호가 노출되었다고 의심되는 경우 빠른 시간 내에 금융회사 앞 통보 및 변경 조치할 것<br>
+												예) 전자금융거래를 담당하던 종업원이 퇴직한 경우 비밀번호 등을 변경할 것
+											</li>
+											<li>
+												<em>4.</em>
+												공동인증서를 하드 디스크에 저장하지 말 것<br>
+												예) IC카드, USB 저장장치 등에 저장
+											</li>
+											<li>
+												<em>5.</em>
+												전자금융거래에 필요한 정보를 수첩·지갑 등에 기록하지 말 것
+											</li>
+											<li>
+												<em>6.</em>
+												전자금융거래를 절대로 타인에게 위탁하거나 관련 정보를 알려주지 말 것<br>
+												예1) 현금인출 또는 자금이체를 친구 및 동료에게 부탁하지 말 것<br>
+												예2) 사적 금전 차입 시 전자금융거래 정보를 타인에게 알려주지 말 것
+											</li>
+											<li>
+												<em>7.</em>
+												전자금융거래 이용내역을 본인에게 즉시 알려주는 서비스를 적극 이용할 것<br>
+												예) 전자금융거래 내역을 본인의 핸드폰 등으로 즉시 확인할 수 있는 휴대폰 문자 메시지 서비스(SMS) 등을 적극 이용할 것
+											</li>
+											<li>
+												<em>8.</em>
+												PC방 등 개방된 컴퓨터는 가급적 사용을 자제하고, 사용한 경우에는 관련 정보를 삭제할 것
+											</li>
+											<li>
+												<em>9.</em>
+												전자금융거래의 1회 이체한도 및 일일이체한도를 적절히 설정할 것
+											</li>
+											<li>
+												<em>10.</em>
+												인터넷 금융거래에 이용되는 PC에 백신 프로그램을 설치하여 실행함으로써 해킹 등의 보안 침해사고에 대비할 것
+											</li>
+										</ul>
+									</div>
+
+								</div>
+                            </div>
+                            <div id="tab-cont10" class="dp-none">
+                                <div  class="terms-notice-wrap">
+									<div class="sub-tit-wrap">
+                                        <p class="tit">스마트폰 금융거래 유의사항</p>
+                                    </div>
+
+									<div class="guide-txt-wrap">
+										<ul class="list-bull type-large num">
+											<li>
+												<em>1.</em>
+												금융회사가 안내하는 배포처를 확인하여 금융서비스 이용하기<br>
+												* 금융회사가 안내하는 공식 배포처를 통해 스마트폰 금융프로그램(앱)을 설치하세요.<br>
+												* 블로그, 게시판 등 금융회사가 제공하지 않는 경로로 배포되는 스마트폰 금융프로그램(앱)은 설치하지 마세요.
+											</li>
+											<li>
+												<em>2.</em>
+												스마트폰이나 인터넷에 금융정보를 저장하지 않기<br>
+												* 계좌번호, 계좌비밀번호, 보안카드번호 등 금융정보는 스마트폰이나 인터넷(E-Mail함, 웹하드 등)에 저장하지 마세요.<br>
+												* 자동로그인 기능은 가급적 사용하지 마세요.
+											</li>
+											<li>
+												<em>3.</em>
+												금융거래 비밀번호를 안전하게 관리하기<br>
+												* 금융거래 비밀번호는 유추하기 쉬운 번호(전화번호, 생년월일 등)나 인터넷포털, 쇼핑몰 등 의 비밀번호와 동일하게 설정하지 말고 주기적으로 변경하세요.<br>
+												* 비밀번호를 입력하거나 금융거래를 하는 경우 주변을 살펴 타인에게 노출되지 않도록 주의하세요.
+											</li>
+											<li>
+												<em>4.</em>
+												스마트폰 분실·도난 시 스마트폰 금융서비스 사용 중지하기<br>
+												* 스마트폰을 분실하거나 도난을 당한 경우 새로운 공동인증서로 재발급 받으세요.<br>
+												* 스마트폰에 모바일신용카드가 발급되어 있는 경우 카드사에 연락하여 사용 중지를 요청하세요.
+											</li>
+											<li>
+												<em>5.</em>
+												스마트폰 교체·수리 전 중요정보 삭제하기<br>
+												* 스마트폰을 교체하거나 수리하기 전에 공동인증서와 스마트폰 금융프로그램(앱)을 삭제하세요.<br>
+												* 스마트폰에 모바일 신용카드가 발급되어 있는 경우 카드사에 연락하여 사용중지를 요청하세요.
+											</li>
+											<li>
+												<em>6.</em>
+												휴대폰 문자통보서비스(SMS), 일회용비밀번호(OTP) 이용하기<br>
+												* 보다 안전한 스마트폰 금융거래를 위하여 '휴대폰문자서비스(SMS)', '일회용 비밀번호(OTP) 발생기' 등 금융보안서비스를 이용하세요.
+											</li>
+											<li>
+												<em>7.</em>
+												스마트폰 사용환경을 임의로 변경하지 않기<br>
+												* 스마트폰 보안에 영향을 주는 구조변경('탈옥', '루팅' 등)을 하지 마세요.
+											</li>
+											<li>
+												<em>8.</em>
+												스마트폰 보안업데이트를 정기적으로 수행하고 바이러스 검사하기<br>
+												* '스마트폰 운영체제'와 '백신', '금융프로그램(앱)'을 최신 버전으로 업데이트 하세요.<br>
+												* 스마트폰 백신프로그램을 이용하여 수시로 바이러스 검사하세요.
+											</li>
+											<li>
+												<em>9.</em>
+												스마트폰 '잠금기능'을 설정하고 '잠금비밀번호'는 수시로 변경하기<br>
+												* 스마트폰에서 제공하는 잠금기능을 설정하고 잠금기능에 사용한 비밀번호는 수시로 변경하세요.
+											</li>
+											<li>
+												<em>10.</em>
+												출처가 불분명하거나 보안설정 없는 무선랜(Wi-Fi)사용시 주의하기<br>
+												* 개인정보 등을 요구하는 민감한 서비스를 이용할 경우 출처가 불분명하거나 보안설정 없는 무선랜(Wi-Fi)은 사용하지 말고 이동통신망(3G 등)*을 이용하세요.<br>
+												* 블루투스나 무선랜(Wi-Fi)은 평상시에는 꺼두고 필요할 때만 사용하세요.<br>
+												* 이동통신망(3G 등)을 이용할 경우 과도한 데이터통화료가 발생할 수 있으므로 전용요금제를 이용하거나 민감한 정보를 요구하는 서비스를 이용할 경우로 한정하여 사용
+											</li>
+										</ul>
+									</div>
+
+                                </div>
+                            </div>
+                            <div id="tab-cont11" class="dp-none">
+                                <div  class="terms-notice-wrap">
+									<div class="sub-tit-wrap">
+                                        <p class="tit">보이스피싱 피해예방 유의사항</p>
+                                    </div>
+									
+									<div class="guide-txt-wrap">
+										<ul class="list-bull type-large num">
+											<li>
+												<em>1.</em>
+												전화로 정부기관이라며 자금이체를 요구하면 일단 보이스피싱 의심<br>
+												* 검찰·경찰·금감원 등 정부기관은 어떠한 경우에도 전화로 자금의 이체 또는 개인의 금융 거래정보를 요구하지 않습니다. 정부기관을 사칭, 
+												범죄에 연루되었다며 금융거래 정보를 요구하거나 안전조치 등을 명목으로 자금의 이체 등을 요구하는 경우는 
+												100% 보이스피싱이므로 이러한 전화를 받는 경우 전화를 끊고 해당 기관의 대표전화*로 전화하여 사실여부를 반드시 확인하시기 바랍니다.<br>
+												* 대검찰청<a href="tel:02-3480-2000" target="_blank">(☎02-3480-2000)</a>, 경찰<a href="tel:112" target="_blank">(☎112)</a>, 금감원<a href="tel:1332" target="_blank">(☎1332)</a>
+											</li>
+											<li>
+												<em>2.</em>
+												전화,문자로 대출 권유받는 경우 무대응 또는 금융회사 여부 확인<br>
+												* 전화 또는 문자를 통한 대출광고는 대출빙자형 보이스피싱일 가능성이 높으므로 이러한 연락을 받은 경우 반드시 금융회사의 실제 존재 여부를 우선 확인한 후, 
+												대출을 권유하는 자가 금융회사 직원인지 또는 정식 등록된 대출모집인인지 여부를 확인하시기 바랍니다.<br>
+												* 제도권 금융회사 조회<br><a href="http://www.fss.or.kr" target="_blank">(http://www.fss.or.kr)</a><br>
+												* 대출모집인 등록 조회<br><a href="http://www.loanconsultant.or.kr" target="_blank">(http://www.loanconsultant.or.kr)</a>
+											</li>
+											<li>
+												<em>3.</em>
+												대출 처리비용 등을 이유로 선입금 요구시 보이스피싱을 의심<br>
+												* 정상적인 금융회사는 전산비용, 보증료, 저금리 전환 예치금, 선이자 등 어떠한 명목으로도 대출과 관련하여 선입금하라고 요구하지 않으므로, 이러한 요구에 절대로 응해서는 안됩니다.
+											</li>
+											<li>
+												<em>4.</em>
+												저금리 대출 위한 고금리 대출 권유는 100% 보이스피싱<br>
+												* 정상적인 금융회사는 저금리 대출을 받기 위해서 고금리 대출을 먼저 받으라고 요구하지 않습니다. 저금리 대출을 받기 위해서는 
+												거래 실적을 쌓아야 한다며 고금리 대출을 먼저 받으라고 하는 경우는 100% 보이스피싱입니다. 또한 대출금 상환시에는 해당 
+												금융회사의 계좌가 맞는지 여부를 반드시 확인하시기 바랍니다.
+											</li>
+											<li>
+												<em>5.</em>
+												납치·협박 전화를 받는 경우 자녀 안전부터 확인<br>
+												* 자녀가 다쳤다거나 납치되었다는 전화를 받았을 때에는 침착하게 대처해야합니다. 사기범의 요구대로 급하게 금전을 입금하기 보다는
+												먼저 준비해 둔 지인들의 연락처를 이용하여 자녀가 안전한지 여부부터 확인하시기 바랍니다.
+											</li>
+											<li>
+												<em>6.</em>
+												채용을 이유로 계좌 비밀번호 등 요구시 보이스피싱 의심<br>
+												* 정상적인 기업의 정식 채용철차에서는 급여 계좌 개설 또는 보안관련 출입증 등에 필요하다면서 체크카드 및 금융거래정보
+												(비밀번호, 공동인증서, OTP 등)를 절대 요구하지 않습니다. 급여계좌 등록은 실제로 취업된 후에 이루어지는 것으로, 본인 명의 계좌번호만 알려주면 됩니다.
+											</li>
+											<li>
+												<em>7.</em>
+												가족 등 사칭 금전 요구시 먼저 본인 확인<br>
+												* 가족 및 지인 등이 메신저로 금전을 요구하는 경우 반드시 유선으로 한번 더 본인임을 확인하시기 바랍니다. 만약 상대방이 통화할 수
+												없는 상황 등을 들어 본인 확인을 회피하고자 하는 경우 직접 신분을 확인할 때까지는 금전 요구에 응하지 말아야 합니다.
+											</li>
+											<li>
+												<em>8.</em>
+												출처 불명 파일, 이메일, 문자는 클릭하지 말고 삭제<br>
+												* 출처가 불분명한 파일을 다운받거나 의심스러운 인터넷 주소가 포함된 문자를 클릭하면 악성 코드에 감염되어 개인정보가 유출될 수 있습니다. 악성코드 
+												감염은 금융거래 시 파밍 등을 일으키는 주요 원인이므로 이러한 파일이나 문자는 즉시 삭제하시기 바랍니다.<br>
+												* 악성코드 치료 방법 : 한국인터넷진흥원(KISA)의 "보호나라"사이트&gt;"알림마당"메뉴&gt;공지사항 108번 게시글 참고
+											</li>
+											<li>
+												<em>9.</em>
+												금감원 팝업창 뜨고 금융거래정보 입력 요구시 100% 보이스피싱<br>
+												* 인터넷 포털사이트에 접속시, 보안관련 인증 절차를 진행한다는 내용의 금감원 팝업창이 뜨며, 이를 클릭하면 보안승급을 위해서라며 
+												계좌번호, 비밀번호, 보인카드번호 등 금융거래 정보를 입력하라고 요구하면 보이스피싱(파밍)이니 절대 응해서는 안됩니다.<br>
+											</li>
+											<li>
+												<em>10.</em>
+												보이스피싱 피해발생시 즉시 신고 후 피해금 환급 신청<br>
+												* 사기범에게 속아 자금을 이체한 경우, 사기범이 예금을 인출하지 못하도록 신속히 경찰 또는 해당 금융회사에 전화하여 계좌에 대한 지급정지 
+												조치를 하시기 바랍니다. 지급정지 조치 후 경찰서에 방문하여 피해 신고를 하고, 금융회사에 피해금 환급을 신청하시기 바랍니다.<br>
+												* 해당 계좌에 피해금이 인출되지 않고 남아 있는 경우 피해금 환급제도에 따라 별도의 소송절차 없이 피해금을 되찾을 수 있습니다.
+											</li>
+										</ul>
+									</div>
+
+                                </div>
+                            </div>
+                        </div>
+						<!-- // [퍼블-2] 전체 변경 -->
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+        <!-- //e: contents -->
+
+    </div>
+    <!-- e: contentsWrap -->			
+</body>
+</html>

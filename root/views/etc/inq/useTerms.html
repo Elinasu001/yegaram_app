@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803175852"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803175852"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803175852"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803175852"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803175852"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803175852"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803175852"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803175852"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803175852" id="biz_common" 
+	data-menuId="etc/inq"
+	data-frameId="useTerms"
+	data-serviceCd="useTerms.frm" 
+	data-serverTime="20230803175852"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+<script type="text/javascript">
+var PageFunc = function() {
+	
+	var _back = function() { // 뒤로가기
+		history.back();
+	}
+	
+	var _proc = function() { // 본처리
+		// TODO 
+		return true;
+	}
+	
+	var _cancel = function() { // 그만하기
+		goMainPage();
+	}
+	
+	var _validate = function() { // 유효성검증
+		// TODO 
+		return true;
+	}
+	
+	/**************************
+	* 사전점검표 체크
+	***************************/
+	var _checkNext = function(el){
+		
+	}
+	
+	return {
+		back : _back,
+		proc : _proc,
+		cancel : _cancel,
+		checkNext : _checkNext
+	};
+}();
+
+
+$(document).ready(function(){
+	
+});
+</script>
+</head>
+<body>
+	<!-- header -->
+	<header class="headerWrap">
+		<div class="header">
+			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+			<h2><span>이용약관</span></h2>
+		</div>
+		<div class="menu-wrap">
+		</div>
+	</header>
+	<!-- //header -->
+
+    <!-- s: contentsWrap -->
+    <div class="contentsWrap">
+        <!-- s: contents -->
+        <div class="contents">
+            <div class="default-wrap"><!--[퍼블] 클래스 변경-->
+				<!-- [퍼블] 삭제 <div class="tit-wrap mt40">
+					<p class="txt">고객님께서 필요하신<br/><b>이용약관</b>을 확인해 보세요</p>
+				</div> -->
+				<section class="tabs-wrap type-box">
+                    <div class="tabs">
+                        <ul class="tab-item">
+                            <li class="on" data-tab="tab-cont09"><a href="#none">개인(신용)정보<br/> 수집·이용 동의</a></li> <!-- P00004 -->
+                            <li data-tab="tab-cont10" class=""><a href="#none">개인(신용)정보<br/> 조회 동의</a></li> <!-- P00007 -->
+                            <li data-tab="tab-cont11" class=""><a href="#none">개인(신용)정보<br/> 제공 동의</a></li> <!-- P00005 -->
+						</ul>
+
+                        <div class="tab-content-area">
+                            <div id="tab-cont09" class="">
+                                <div  class="info-wrap"><!--D:약관 불러 올 경우 info-wrap 사용-->
+									<iframe src="/resources/pdfjs/web/viewer.html?file=/resources/terms/P00004.pdf" style="width:100%; height:100%;"></iframe>
+                                </div>
+                            </div>
+                            <div id="tab-cont10" class="">
+                                <div  class="info-wrap"><!--D:약관 불러 올 경우 info-wrap 사용-->
+									<iframe src="/resources/pdfjs/web/viewer.html?file=/resources/terms/P00007.pdf" style="width:100%; height:100%;"></iframe>
+                                </div>
+                            </div>
+                            <div id="tab-cont11" class="">
+                               <div  class="info-wrap"><!--D:약관 불러 올 경우 info-wrap 사용-->
+									<iframe src="/resources/pdfjs/web/viewer.html?file=/resources/terms/P00005.pdf" style="width:100%; height:100%;"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+        <!-- //e: contents -->
+
+    </div>
+    <!-- e: contentsWrap -->
+					
+</body>
+</html>

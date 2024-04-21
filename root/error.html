@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+    <title>예가람저축은행</title>
+    <meta charset="utf-8">
+    <style>
+        /* html, body{margin:0;padding:0;background:#ffffff;}
+        .wrap{position:relative;height:100vh;}
+        h1{height:50px;margin:0;font-size:16px;font-weight:700;border-bottom: 1px solid #EEEEEE;text-align:center;line-height:50px;}
+        .contents{padding:0 4.375%;}
+        .msg-result-wrap{padding:30px 4.375%;}
+        .msg-result-wrap .tit{font-size:16px;font-weight:700;color:#000;text-align:center;line-height:1.45;}
+        .result-msg{margin-top:20px;padding:10px;border:1px solid #ddd;font-size:12px;color:#787878;text-align:center;}
+        .message{position:relative;padding-left:18px;font-size:12px;color:#612885;line-height:16px;margin-right:12px;margin-left:12px}
+        .message:before{content:'';position:absolute;left:0;top:0;width:13px;height:13px;background-image:url('/resources/images/common/ico_warning.png');background-size:13px 13px;}
+        .img-end-area{height:90px;margin:30px 0;text-align:center;}
+        .img-end-area img{width:90px;}
+        .btm-btn-wrap{position:fixed;bottom:0;left:0;right:0;width:100%;}
+        .btm-btn-wrap a{display:block;width:100%;height:55px;background:#464646;font-size:16px;color:#fff;line-height:55px;text-decoration:none;text-align:center;} */
+        
+        /*** 폰트 ***/
+        @font-face {
+            font-family: 'Spoqa Han Sans Neo';
+            font-weight: 700;
+            src: local('Spoqa Han Sans Neo Bold'),
+            url('/resources/font/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
+            url('/resources/font/SpoqaHanSansNeo-Bold.woff') format('woff'),
+            url('/resources/font/SpoqaHanSansNeo-Bold.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Spoqa Han Sans Neo';
+            font-weight: 500;
+            src: local('Spoqa Han Sans Neo Medium'),
+            url('/resources/font/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
+            url('/resources/font/SpoqaHanSansNeo-Medium.woff') format('woff'),
+            url('/resources/font/SpoqaHanSansNeo-Medium.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Spoqa Han Sans Neo';
+            font-weight: 400;
+            src: local('Spoqa Han Sans Neo Regular'),
+            url('/resources/font/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
+            url('/resources/font/SpoqaHanSansNeo-Regular.woff') format('woff'),
+            url('/resources/font/SpoqaHanSansNeo-Regular.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Spoqa Han Sans Neo';
+            font-weight: 300;
+            src: local('Spoqa Han Sans Neo Light'),
+            url('/resources/font/SpoqaHanSansNeo-Light.woff2') format('woff2'),
+            url('/resources/font/SpoqaHanSansNeo-Light.woff') format('woff'),
+            url('/resources/font/SpoqaHanSansNeo-Light.ttf') format('truetype');
+        }
+
+        /*** 리셋 ***/
+        html,body { margin:0;padding:0; }
+        html { font-size:18px; height:100%;}
+        * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-text-size-adjust: none; max-height: 1000000px;}
+        body{ width:100%; height:100%; background-color:#FFFFFF; text-align:left; font-family:'Spoqa Han Sans Neo', "Apple SD Gothic Neo", sans-serif; font-weight:400; color:#333333; font-size:1rem;  line-height:1.38889; letter-spacing:-.4px; outline:none; -webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight-color:transparent; }
+        a { text-decoration:none; cursor:pointer; }
+
+        /*** 스타일 ***/
+        .contentsWrap { position:relative; width:100%; min-height:100vh; padding-top:50px; padding-bottom:100px; }
+        .default-wrap { padding:20px; }
+        .default-wrap > .result-area { margin-top:12vh; }
+        .result-area { text-align:center; }
+        .result-area::before { content:''; display:inline-block; width:64px; height:64px; }
+        .result-area.exclamation::before { background:url("./resources/images/common/ico_result_exclamation.png") center no-repeat; background-size:100%; }
+        .result-area > p.tit { margin-top:20px; margin-bottom:0; font-size:1.33333rem; color:#333333; line-height:1.29167; }
+        .result-area > .sub-txt { margin-bottom:20px; text-align:center; font-size:1rem; color:#000000; }
+        .result-area .txtbox-wrap p { color:#666; }
+
+        .sub-info-wrap { position:relative; margin-top:30px; padding:20px 100px 20px 30px; border-radius:15px; background:url("/resources/images/common/visual_obj_info_02.png") no-repeat right 10px bottom; background-color:#F1F6FF; background-size:115px; font-size:0.77778rem; line-height:1.5; }
+        .sub-info-wrap .tel { font-weight:500; font-size:0.77778rem; line-height:1.5; color:#212D97; }
+        .sub-info-wrap .tel strong { font-size:1rem; line-height:1.38889; }
+        .sub-info-wrap > p { margin-top:10px; font-size:0.77778rem; line-height:1.5; color:#757AA7; }
+
+        .fixed-btn-wrap { position:fixed; bottom:0; left:0px; width:100%; z-index:20; background:linear-gradient(0deg, rgba(255,255,255,1) 89%, rgba(255,255,255,0) 100%); text-align:center; }
+        .btn-wrap { padding:20px; }
+        .btn-wrap .btn { display:block; position:relative; width:100%; height:60px; border-radius:10px; background:linear-gradient(320deg, rgba(38,15,84,1) 0%, rgba(61,18,146,1) 100%); box-shadow:0px 20px 10px -20px rgba(88,57,149,1); font-weight:700; color:#fff; font-size:1rem; line-height:60px; text-align:center; }
+
+   </style>
+
+    <script type="text/javascript">
+        var depth1 = 1;
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+        function goMain(){
+            util.getHostName(function(result){
+                location.href=result.hostname;
+            }, function(result){
+            });
+        }
+    </script>
+</head>
+<body>
+    <!-- <div class="wrap">
+        <h1>네트워크 오류</h1>
+        <div class="contents">
+            <div class="msg-result-wrap">
+                <div class="tit">통신상태가 원활하지 않습니다.</div>
+                <div class="result-msg">통신상태를 확인해주세요.</div>
+            </div>
+            <p class="message">자세한 안내는 고객지원팀 1877-9900로 문의해주세요.<br>(상담가능시간 : 평일 09:00 ~ 18:00 / 토, 일 공휴일 휴무)</p>
+            <div class="img-end-area"><img src="/resources/images/common/img_msg_error.png" alt="죄송합니다."></div>
+        </div>
+        <div class="btm-btn-wrap">
+            <a href="Javascript:goMain();">메인으로</a>
+	    </div>
+    </div> -->
+
+    <div class="contentsWrap">
+        <div class="contents">
+            <div class="default-wrap">
+                <div class="result-area exclamation">
+					<p class="tit"><strong>통신상태가 원활하지 않아요</strong></p>
+                    <div class="txtbox-wrap">
+						<p>통신상태를 확인해 주세요</p>
+					</div>
+				</div>
+                <div class="sub-info-wrap">
+					<div class="tel">이용문의 <strong>1877-9900</strong></div>
+					<p>평일 09:00 ~ 18:00<br>(주말 및 공휴일 휴무)</p>
+				</div>
+            </div>
+        </div>
+
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <a href="javascript:void(0);" class="btn">홈으로</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<%@page import="java.nio.ByteBuffer"%>
+<%@page language="java" contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="java.util.*"%>
+<%@page import="java.io.DataInputStream"%>
+<%@page import="java.io.FileInputStream"%>
+<%@page import="java.io.BufferedOutputStream"%>
+<%@page import="java.io.FileOutputStream"%>
+<%@page import="org.bouncycastle.util.encoders.Base64"%>
+<%@page import="com.wizvera.util.Hex"%>
+
+<%!
+public int indexOf(byte[] outerArray, byte[] smallerArray) {
+    for(int i = 0; i < outerArray.length - smallerArray.length+1; ++i) {
+        boolean found = true;
+        for(int j = 0; j < smallerArray.length; ++j) {
+           if (outerArray[i+j] != smallerArray[j]) {
+               found = false;
+               break;
+           }
+        }
+        if (found) return i;
+     }
+   return -1;  
+}  
+%>
+
+<%
+String signData = request.getParameter("PKCS7");
+%>
+
+<%=signData%>
+
+
+<%
+try{
+	DataInputStream dis = new DataInputStream(new FileInputStream("/opt/delfino/data/pdf1.pdf"));
+	int available = dis.available();
+	byte[] pdfData = new byte[available];
+	dis.readFully(pdfData);
+	dis.close();
+	byte[] find = "Contents <".getBytes();
+	
+	int index = indexOf(pdfData, find);
+	
+	byte[] sign = Base64.decode(signData);
+	
+	BufferedOutputStream signFile = new BufferedOutputStream(new FileOutputStream("/opt/delfino/data/signed.der"));
+	signFile.write(sign);
+	signFile.close();
+	
+	sign = Hex.encode(sign).getBytes();
+	
+	if(index != -1){
+		index += find.length;
+		BufferedOutputStream outFile = new BufferedOutputStream(new FileOutputStream("/opt/delfino/data/pdf1_result.pdf"));
+		outFile.write(pdfData, 0, index);
+		outFile.write(sign);
+		outFile.write(pdfData, index+sign.length, pdfData.length-(index+sign.length));
+		outFile.close();
+	}
+	
+}catch(Exception e){
+	e.printStackTrace();
+}
+%>

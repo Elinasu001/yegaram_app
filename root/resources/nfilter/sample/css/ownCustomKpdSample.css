@@ -1,0 +1,1049 @@
+
+    
+
+/*�۾� ���ſ� css*/
+.tenKey .ir_pm {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/*����ŷ�� css*/
+.tenKey .btnSection .btnCustom .clicked {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    background: #1f88d9;
+    opacity: 0.7;
+}
+
+/*/////////////////////// �̹��� ���� 10 Ű�е�///////////////////////////////////*/
+.tenKey {
+    position: absolute;
+    z-index: 9999;
+    width: 100vw;
+    height: 103vw;
+    background-color: rgb(209, 211, 211);
+    box-sizing: border-box;
+}
+
+/*header css*/
+.tenKey .header {
+    display: none;
+    cursor: default;
+    box-sizing: border-box;
+    width: 100%;
+    height: 15.02%;
+    padding: 3.52%;
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    background-color: #fff;
+}
+
+.tenKey .header .close {
+    display: none;
+}
+
+.tenKey .header .close.off {
+    display: none;
+}
+
+/*��ü keypadSection �� ���ڹ�ư + dummy css*/
+.tenKey .btnSection {
+    position: relative;
+    margin: 3px;
+    font-size: 0;
+    text-align: center;
+    height: 100%;
+}
+
+.tenKey .btnSection .btnCustom {
+    cursor: pointer;
+    vertical-align: top;
+    display: inline-block;
+    background: #fff;
+    width: calc((100% - 8px) / 3);
+    height: calc((100% - 12px) / 4);
+    margin: 0 2px 2px 0;
+    text-align: center;
+    font-size: 1.75rem;
+    position: relative;
+}
+
+.tenKey .btnSection .btnCustom:nth-child(3n) {
+    margin-right: 0;
+}
+
+.tenKey .btnCustom:last-child {
+    margin-right: 0;
+}
+
+.tenKey .btnSection .lastbtn {
+    margin-bottom: 0;
+    position: relative;
+    margin-right: 0;
+    left: calc((100% - 8px) / 3 + 1px);
+    box-sizing: border-box;
+}
+
+.tenKey .btnSection .btnCustom.dummy {
+    display: none;
+}
+
+/* �Ʒ��� cmd btn css */
+
+/* exchange btn css */
+.tenKey .btnSection .btnCustom.exchange {
+    display: none;
+    margin: 0;
+}
+
+.tenKey .btnSection .btnCustom.exchange.RNoff {
+    display: none;
+}
+
+/*Clear ��ư css*/
+.tenKey .btnSection .btnCustom.reset {
+    display: none;
+    margin: 0;
+}
+
+.tenKey .btnSection .btnCustom.reset.ACoff {
+    display: none;
+}
+
+.tenKey .btnSection .btnCustom.reset::after {
+    display: none;
+}
+
+/* delete ��ư�� css */
+.tenKey .btnSection .btnCustom.delete {
+    right: calc((100% - 8px) / 3 + 1px);
+    background-color: rgb(45, 71, 79);
+}
+
+.tenKey .btnSection .btnCustom.delete.ACoff {
+    right: calc((100% - 8px) / 3 + 1px);
+}
+
+.tenKey .btnSection .btnCustom.delete.RNoff {
+    right: calc((100% - 8px) / 3 + 1px);
+}
+
+.tenKey .delete .delBox {
+    box-sizing: border-box;
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tenKey .delete .delBox::before {
+    transform: rotate(45deg);
+    transform-origin: 14px 2px;
+    content: "";
+    display: block;
+    width: 14.6px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    border-radius: 1px;
+}
+
+.tenKey .delete .delBox::after {
+    transform: rotate(-45deg);
+    transform-origin: 14px 0px;
+    content: "";
+    display: block;
+    width: 14.6px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    border-radius: 1px;
+}
+
+.tenKey .delete .delBox .square {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    border-left: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.tenKey .delete .delBox .square::before {
+    width: 80%;
+    height: 2px;
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.tenKey .delete .delBox .square::after {
+    width: 80%;
+    height: 2px;
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* enter ��ư�� css */
+.tenKey .btnSection .btnCustom.enter {
+    right: -1px;
+    background-color: rgb(31, 136, 217);
+}
+
+.tenKey .btnSection .btnCustom .enterBox {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 15px;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+}
+
+.tenKey .btnCustom .enterBox::before {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transform: translateX(-2px) translateY(150%) rotate(45deg);
+    width: 10px;
+    height: 2px;
+    content: "";
+    display: block;
+    background: #fff;
+}
+
+.tenKey .btnCustom .enterBox::after {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transform: translateX(-2px) translateY(-150%) rotate(-45deg);
+    width: 10px;
+    height: 2px;
+    content: "";
+    display: block;
+    background: #fff;
+}
+
+/*////////////////////// ������ �ڵ� ////////////////////////*/
+
+@media (min-width: 770px) {
+    .tenKey {
+        width: 770px;
+        height: 793.09px;
+    }
+}
+
+@media (orientation: landscape) {
+    .tenKey {
+        width: 70vh;
+        height: 72.1vh;
+    }
+}
+
+
+/*�۾� ���ſ� css*/
+.popup .header > .ir_pm {
+    display: block;
+    overflow: hidden;
+    font-size: 20px;
+    line-height: 20px;
+    background: none;
+    text-indent: 0px;
+    color: white;
+}
+
+.popup .reset.ir_pm {
+    display: block;
+    overflow: hidden;
+    font-size: 20px;
+    line-height: 20px;
+    background: #1f88d9;
+    text-indent: 0px;
+}
+
+.popup .ir_pm {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/*����ŷ�� css*/
+.popup .btnSection .btnCustom .clicked {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    background: #1f88d9;
+    opacity: 0.7;
+}
+
+/*/////////////////////// �̹��� ���� 10 Ű�е�///////////////////////////////////*/
+.popup {
+    position: absolute;
+    z-index: 9999;
+    width: 100vw;
+    height: 340px;
+    background-color: rgb(17 174 77);
+    box-sizing: border-box;
+}
+
+/*header css*/
+.popup .header {
+    display: block;
+    cursor: default;
+    box-sizing: border-box;
+    width: 100%;
+    /* height: 12%; */
+    padding: 13px 3px;
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    /*background-color: #11b351;*/
+    text-align: right;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.popup .header .close {
+    display: inline-block;
+}
+
+.popup .header .close.off {
+    display: none;
+}
+
+/*��ü keypadSection �� ���ڹ�ư + dummy css*/
+.popup .btnSection {
+    position: relative;
+    font-size: 0;
+    text-align: center;
+    /* height: 100%; */
+    height: calc(100% - 48px);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.popup .btnSection .btnCustom {
+    cursor: pointer;
+    vertical-align: top;
+    display: inline-block;
+    background: #13c75a;
+    /*width: calc((100% - 10px) / 4);*/
+    width: calc(100% / 4 - 4px);
+    /* height: calc((100% - 120px) / 3); */
+    height: calc((100% / 4) - 3px);
+    margin: 0 1px 1px 0;
+    text-align: center;
+    font-size: 1.9rem;
+    color: white;
+    position: relative;
+}
+
+/* .popup .btnSection .btnCustom:nth-child(4n) {
+    margin-right: 0;
+}
+ */
+.popup .btnCustom:last-child {
+    margin-right: 0;
+}
+
+.popup .btnSection .lastbtn {
+    margin-bottom: 0;
+    position: relative;
+    /* margin-right: 0; */
+    box-sizing: border-box;
+}
+
+.popup .btnSection .btnCustom.dummy {
+    cursor: pointer;
+    vertical-align: top;
+    display: inline-block;
+    background: #13c75a;
+    /*width: calc((100% - 10px) / 4);*/
+    width: calc(100% / 4 - 4px);
+    /*  height: calc((100% - 120px) / 3); */
+    height: calc((100% / 4) - 3px);
+    margin: 0 1px 1px 0;
+    text-align: center;
+    font-size: 1.9rem;
+    color: white;
+    position: relative;
+}
+
+/* �Ʒ��� cmd btn css */
+
+/* exchange btn css */
+.popup .btnSection .btnCustom.exchange {
+    display: none;
+    margin: 0;
+}
+
+.popup .btnSection .btnCustom.exchange.RNoff {
+    display: none;
+}
+
+/*Clear ��ư css*/
+.popup .btnSection .btnCustom.reset {
+    cursor: pointer;
+    vertical-align: top;
+    display: inline-block;
+    background: #13c75a;
+    /*width: calc((100% - 8px) / 2);*/
+    width: calc(100% / 2 - 7px);
+    /*     height: calc((100% - 120px) / 3); */
+    height: calc((100% / 4) - 3px);
+    margin: 0 1px 1px 0;
+    text-align: center;
+    font-size: 1.4rem;
+    color: white;
+    position: relative;
+}
+
+/* delete ��ư�� css */
+.popup .btnSection .btnCustom.delete {
+    cursor: pointer;
+    vertical-align: top;
+    display: inline-block;
+    background: #13c75a;
+    /*width: calc((100% - 8px) / 2);*/
+    /*  width: calc(100% / 2 - 8px); */
+    /* width: calc(100% / 2 - 6px); */
+    width: calc(100% / 2 - 7px);
+    /*  height: calc((100% - 120px) / 3); */
+    height: calc((100% / 4) - 3px);
+    margin: 0 1px 1px 0;
+    text-align: center;
+    font-size: 1.9rem;
+    color: #505050;
+    position: relative;
+}
+
+.popup .delete .delBox {
+    box-sizing: border-box;
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup .delete .delBox::before {
+    transform: rotate(45deg);
+    transform-origin: 14px 2px;
+    content: "";
+    display: block;
+    width: 14.6px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    border-radius: 1px;
+}
+
+.popup .delete .delBox::after {
+    transform: rotate(-45deg);
+    transform-origin: 14px 0px;
+    content: "";
+    display: block;
+    width: 14.6px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    border-radius: 1px;
+}
+
+.popup .delete .delBox .square {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    border-left: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.popup .delete .delBox .square::before {
+    width: 80%;
+    height: 2px;
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.popup .delete .delBox .square::after {
+    width: 80%;
+    height: 2px;
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* enter ��ư�� css */
+.popup .btnSection .btnCustom.enter {
+    right: -1px;
+    background-color: rgb(31, 136, 217);
+    display: none;
+}
+
+
+/*�۾� ���ſ� css*/
+
+.popup2 .ir_pm {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+.popup2 .ir_pm .resetBox {
+    text-indent: initial;
+    position: relative;
+}
+
+.popup2 .ir_pm .resetBox {
+    text-indent: initial;
+}
+
+.popup2 .ir_pm .resetBox:After {
+    content: "��ü����";
+    font-size: 22px;
+}
+
+/*����ŷ�� css*/
+.popup2 .btnSection .btnCustom .clicked {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    background: #1f88d9;
+    opacity: 0.7;
+}
+
+/*/////////////////////// �̹��� ���� 10 Ű�е�///////////////////////////////////*/
+/* .popup2 {
+    position: absolute;
+    z-index: 9999;
+    width: 100vw;
+    height: 350px;
+    background-color: #13c75a;
+    box-sizing: border-box;
+    
+} */
+.popup2 {
+    position: fixed;
+    left:0; 
+    bottom:0;
+    z-index: 9999;
+    width: 100vw;
+    height: 350px;
+    background-color: #FFF;
+    box-sizing: border-box;
+    
+}
+.showFormBx { margin:15vh 0 0!important; }
+
+/*header css*/
+.popup2 .header {
+    display: none;
+    cursor: default;
+    box-sizing: border-box;
+    width: 100%;
+    height: 15.02%;
+    padding: 3.52%;
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    background-color: #fff;
+}
+
+.popup2 .header .close {
+    display: none;
+}
+
+.popup2 .header .close.off {
+    display: none;
+}
+
+/*��ü keypadSection �� ���ڹ�ư + dummy css*/
+.popup2 .btnSection {
+    position: relative;
+    padding: 3px;
+    font-size: 0;
+    text-align: center;
+    height: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 2023-06-19, Ŀ������ ���� �ּ�
+.popup2 .btnSection .btnCustom {
+    cursor: pointer;
+    vertical-align: top;
+    display: inline-block;
+    background: #13c75a;
+    width: calc((100% - 8px) / 3);
+    height: calc((100% - 12px) / 4);
+    margin: 0 2px 2px 0;
+    text-align: center;
+    font-size: 1.75rem;
+    position: relative;
+    color: #fff;
+} 
+*/
+
+.popup2 .btnSection .btnCustom {
+    cursor: pointer;
+    vertical-align: top;
+    display: inline-block;
+    background: #fff;
+	border-radius:15px;
+    width: calc((100% - 8px) / 3);
+    height: calc((100% - 12px) / 4);
+    margin: 0 2px 2px 0;
+    text-align: center;
+    font-size: 1.75rem;
+    position: relative;
+    color: #260F54;
+}
+
+.popup2 .btnSection .btnCustom:hover {
+    background:#EEEBFF;
+}
+
+.popup2 .btnSection .btnCustom span { color: #260F54; }
+
+.popup2 .btnSection .btnCustom:nth-child(3n) {
+    margin-right: 0;
+}
+
+.popup2 .btnCustom:last-child {
+    margin-right: 0;
+}
+
+.popup2 .btnSection .lastbtn {
+    margin-bottom: 0;
+    position: relative;
+    margin-right: 0;
+    left: calc((100% - 8px) / 3 + 1px);
+    box-sizing: border-box;
+}
+
+.popup2 .btnSection .btnCustom.dummy {
+    display: none;
+}
+
+/* �Ʒ��� cmd btn css */
+
+/* exchange btn css */
+/* 2023-06-19, Ŀ������ ���� �ּ� 
+.popup2 .btnSection .btnCustom.exchange {
+    display: none;
+    margin: 0;
+}
+
+.popup2 .btnSection .btnCustom.exchange.RNoff {
+    display: none;
+}
+ */
+.popup2 .btnSection .btnCustom.exchange.ir_pm {
+    margin: 0;
+    right: calc((100% - 8px) / 3 + 1px);
+	/* text-indent:0;
+	font-size:1rem */
+
+}
+
+
+.popup2 .btnSection .btnCustom.exchange .exchangeBox {
+    box-sizing: border-box;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background:url(../../../images/common/ico_symbol.png) center center no-repeat;
+    background-size:100%;
+}
+
+
+/*Clear ��ư css*/
+/* 2023-06-19, Ŀ������ ���� �ּ�
+.popup2 .btnSection .btnCustom.reset {
+    margin: 0;
+    right: calc((100% - 8px) / 3 + 1px);
+}
+
+.popup2 .btnSection .btnCustom.reset.ACoff {
+    display: none;
+}
+
+.popup2 .btnSection .btnCustom.reset::after {
+    display: none;
+} 
+*/
+
+.popup2 .btnSection .btnCustom.reset {
+    display: none;
+    margin: 0;
+}
+
+.popup2 .btnSection .btnCustom.reset.ACoff {
+    display: none;
+}
+
+.popup2 .btnSection .btnCustom.reset::after {
+    display: none;
+} 
+
+
+
+/* delete ��ư�� css */
+/* 2023-06-19, Ŀ������ ���� �ּ� 
+.popup2 .btnSection .btnCustom.delete {
+    right: calc((100% - 8px) / 3 + 1px);
+    background-color: #13c75a;
+}
+ */
+
+ .popup2 .btnSection .btnCustom.delete {
+    right: calc((100% - 8px) / 3 + 1px);
+}
+
+
+.popup2 .btnSection .btnCustom.delete.ACoff {
+    right: calc((100% - 8px) / 3 + 1px);
+}
+
+.popup2 .btnSection .btnCustom.delete.RNoff {
+    right: -1px;
+	text-indent:0;
+	font-size:0;
+}
+
+.popup2 .delete .delBox {
+    box-sizing: border-box;
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup2 .delete .delBox {
+    box-sizing: border-box;
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 2023-06-19, Ŀ������ ���� �ּ�
+.popup2 .delete .delBox::before {
+    transform: rotate(45deg);
+    transform-origin: 14px 2px;
+    content: "";
+    display: block;
+    width: 14.6px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    border-radius: 1px;
+}
+
+.popup2 .delete .delBox::after {
+    transform: rotate(-45deg);
+    transform-origin: 14px 0px;
+    content: "";
+    display: block;
+    width: 14.6px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    border-radius: 1px;
+}
+
+.popup2 .delete .delBox .square {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    border-left: 0;
+    width: 20px;
+    height: 20px;
+} 
+
+.popup2 .delete .delBox .square::before {
+    width: 80%;
+    height: 2px;
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #666;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.popup2 .delete .delBox .square::after {
+    width: 80%;
+    height: 2px;
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+*/
+
+.popup2 .delete .delBox::before {
+    transform: rotate(45deg);
+    transform-origin: 14px 2px;
+    content: "";
+    display: block;
+    width: 14px;
+    height: 2px;
+    background: #666;
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    border-radius: 1px;
+}
+
+.popup2 .delete .delBox::after {
+    transform: rotate(-45deg);
+    transform-origin: 14px 0px;
+    content: "";
+    display: block;
+    width: 14px;
+    height: 2px;
+    background: #666;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    border-radius: 1px;
+}
+
+.popup2 .delete .delBox .square {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    border: 2px solid #666;
+    border-left: 0;
+    width: 20px;
+    height: 20px;
+	border-radius:0 3px 3px 0;
+}
+
+.popup2 .delete .delBox .square::before {
+    width: 80%;
+    height: 2px;
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #666;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.popup2 .delete .delBox .square::after {
+    width: 80%;
+    height: 2px;
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #666;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* enter ��ư�� css */
+/* div.ownKeypadWrap button:focus {
+        outline: 0px solid #2f88d9;
+    }
+
+.showFormBx {
+    text-align: center;
+    margin: 242px 0;
+}
+
+.showFormBx ul {
+    display: inline-block;
+}
+
+.showFormBx ul:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.showFormBx ul li {
+    width: 20px;
+    height: 20px;
+    background-color: #c5c5c5;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    float: left;
+    margin: 0 8px;
+}
+
+.showFormBx ul li.on {
+    background-color: #11b351;
+} */
+
+/* 2023-06-19 �ν�Ÿ�� �߰� */
+div.ownKeypadWrap button:focus {
+    outline: 0px solid #2f88d9;
+}
+
+.showFormBx {
+    text-align: center;
+    margin: 242px 0;
+    position: 
+}
+
+.showFormBx ul {
+    display: inline-block;
+}
+
+.showFormBx ul:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+/*     .showFormBx ul li {
+        width: 20px;
+        height: 20px;
+        background-color: #c5c5c5;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        border-radius: 100%;
+        float: left;
+        margin: 0 8px;
+    }
+    
+    .showFormBx ul li.on {
+        background-color: #11b351;
+    } */
+   .showFormBx ul li {
+      width: 20px;
+      height: 20px;
+      background-color: #E5E5E5;
+      float: left;
+      margin: 0 12px;
+transform:rotate(45deg)
+
+  }
+
+  .showFormBx ul li.on {
+      background-color: #260F54;
+  }
+.popup2 .btnSection .btnCustom.enter {
+    display: none;
+    right: -1px;
+    background-color: rgb(31, 136, 217);
+}
+
+.popup2 .btnSection .btnCustom .enterBox {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 15px;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+}
+
+.popup2 .btnCustom .enterBox::before {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transform: translateX(-2px) translateY(150%) rotate(45deg);
+    width: 10px;
+    height: 2px;
+    content: "";
+    display: block;
+    background: #fff;
+}
+
+.popup2 .btnCustom .enterBox::after {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transform: translateX(-2px) translateY(-150%) rotate(-45deg);
+    width: 10px;
+    height: 2px;
+    content: "";
+    display: block;
+    background: #fff;
+}

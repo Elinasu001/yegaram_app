@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common" 
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm" 
+	data-serverTime="20230803152535"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+
+
+<script>
+    /*amount button*/
+    function incrsAmt(obj, plusVal){
+        // border 활성화
+        $(".radio-list >li").removeClass("active");
+        var parentDiv = $(obj).closest("li");
+        parentDiv.addClass("active");
+        
+        var resultVal = 0;	// 화면세팅값
+        
+        // 초기화여부 체크
+        if (plusVal == 0){
+            resultVal = plusVal;
+            $("#PYMN_AMT").val(resultVal);
+            $("#procBtn").addClass("disabled");
+        } else {
+            var inputVal  = calcFunc.removeComma($("#PYMN_AMT").val());   // 현재입력값
+            if (inputVal == "") inputVal = 0
+            resultVal = calcFunc.addComma(parseInt(inputVal) + plusVal); // 현재입력값+증가값
+            $("#PYMN_AMT").val(calcFunc.removeComma(resultVal));
+            validChk();
+        }
+            
+        // 텍스트 화면세팅
+        $(".PYMN_AMT").text(resultVal);
+	
+    }
+    /*amount button*/
+
+    /* 납일일 선택시 라디오 활성화*/
+    function tranDtSel(){
+        $("#LY_YN_2").prop("checked",true);
+        $("#TRNF_HOPE_DD").val($("#tranDt").text());
+        $('.select-wrap').addClass('on');
+        validChk();
+        console.log($(this));
+    }
+    /* 납일일 선택시 라디오 활성화*/
+</script>
+<body>
+    <!-- header -->
+    <div id="headerWrap">
+        <script>
+        $(document).ready(function(){
+            document.charset="euc-kr";
+            $("#headerWrap").load("../includes/header.html");
+        });
+        </script>
+    </div>
+	<!-- //header -->
+
+    <!--contentsWrap -->
+    <form>
+        <div class="contentsWrap">
+            <!-- s: contents -->
+            <div class="contents">
+                <div class="default-wrap">
+                    <section class="form-all-wrap">
+                        <!-- 금액입력 -->
+                        <div class="form-wrap type2">
+                            <label for="PYMN_AMT">저축금액</label>
+                            <div class="input">
+                                <input type="tel" title="" class="validChk" id="PYMN_AMT" name="PYMN_AMT" value="0" placeholder="예치금액을 입력해주세요." required="">
+                                <div class="value-wrap">
+                                    <strong class="value PYMN_AMT"></strong>
+                                    <span class="unit">만원</span>
+                                </div>
+                            </div>
+                            <div class="inquiry-set-wrap">
+                                <div class="type-area">
+                                    <ul class="radio-list style-button">
+                                        <li><button type="button" onclick="incrsAmt(this, 1);">1만</button></li>
+                                        <li><button type="button" onclick="incrsAmt(this, 5);">5만</button></li>
+                                        <li><button type="button" onclick="incrsAmt(this, 10);">10만</button></li>
+                                        <li><button type="button" onclick="incrsAmt(this, 100);">100만</button></li>
+                                        <li><button type="button" onclick="incrsAmt(this, 0);">초기화</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="info-txt">가가가가</p>
+
+                        <div class="form-wrap type2">
+                        <label for="DD1_TRNF_LMIT_AMT">1일 이체한도</label>
+                            <div class="input">
+                                <input type="tel" title="" class="validChk" id="DD1_TRNF_LMIT_AMT" value="0" placeholder="1일 이체한도를 입력해주세요." maxlength="12" required="">
+                                <div class="value-wrap">
+                                    <strong class="value" id="DD1_TRNF_LMIT_AMT_TEXT"></strong>
+                                    <span class="unit">원</span>
+                                </div>
+                            </div>
+                            <p class="error-txt">1일 이체한도를 입력해주세요</p>
+                        </div>
+                        <div class="inquiry-set-wrap">
+                            <div class="type-area">
+                                <ul class="radio-list style-button">
+                                    `<li><button type="button" onclick="incrsAmt(this, 'DD1_TRNF_LMIT_AMT', 100000);">10만</button></li>
+                                    <li><button type="button" onclick="incrsAmt(this, 'DD1_TRNF_LMIT_AMT', 1000000);">100만</button></li>
+                                    <li><button type="button" onclick="incrsAmt(this, 'DD1_TRNF_LMIT_AMT', 10000000);">1000만</button></li>
+                                    <li><button type="button" onclick="incrsAmt(this, 'DD1_TRNF_LMIT_AMT', 100000000);">1억</button></li>
+                                    <li><button type="button" onclick="incrsAmt(this, 'DD1_TRNF_LMIT_AMT', 0);">초기화</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="info-txt">가가가가</p>
+
+                        <!--// 금액입력 -->
+
+                        <div class="form-wrap date-sel-wrap w50">
+                            <div class="input">
+                                <input type="date" title="발급일자" id="period3" class="inp" name="" value="" placeholder="발급일자를 입력해주세요." required="" readonly>
+                            </div>
+                        </div>
+
+                        
+                        <div class="form-wrap date-sel-wrap w50">
+                            <div class="input">
+                                <span id="period1">
+                                    <input type="month" title="" id="" class="inp option" name="" value="" placeholder="자동이체 시작일을 선택해주세요" required="" readonly>
+                                </span>
+                                <span class="inputTextHyphen">~</span>
+                                <span id="period2">
+                                    <input type="month" title="" id="" class="inp option" name="" value="" placeholder="자동이체 종료일을 선택해주세요" required="" readonly>
+                                </span>
+                            </div>
+                        </div>
+
+                        <ul class="radio-list">
+                            <li>
+                                <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked" class="monthly">
+                                <label for="radio01_2" class="">납입일 선택</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="radio01" id="radio01_1" value="" onclick="">
+                                <label for="radio01_1" class="">매월 말일</label>
+                            </li>
+                        </ul>
+                        <div class="form-wrap">
+                            <div class="input">
+                                <div class="select-wrap type2 type-dd">
+                                    <div id="rolldate2" class="select-box" tabindex="1">
+                                        <label for="">납입일</label>
+                                        <span class="option">미선택</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- 이메일 검색 -->
+                        <div class="form-wrap searchInput bg-gray">
+                            <div class="input">
+                                <input type="text" id="email" class="inp" pattern=".+@\." placeholder="이메일 입력" name="" value="" required="">
+                            </div>
+                            <button type="button" class="btn-delete">검색어 삭제</button>
+                            <button type="button" class="btn-search">검색</button>
+                            <p class="error-txt">이메일을 입력해주세요</p>
+                        </div>
+                        <ul class="email-list active"><!-- D: 클래스 active로 제어 -->
+                            <li><a href="#none"><span class="inputId"></span>@gmail.com</a></li>
+                            <li><a href="#none"><span class="inputId"></span>@naver.com</a></li>
+                            <li><a href="#none"><span class="inputId"></span>@nate.com</a></li>
+                            <li><a href="#none"><span class="inputId"></span>@daum.net</a></li>
+                            <li><a href="#none"><span class="inputId"></span>@nate.com</a></li>
+                        </ul>
+                        <!-- //이메일 검색 -->
+
+
+                        <!-- 아이디 및 이메일 -->
+                        <div class="form-wrap">
+                            <label for="" class="formlabel">아이디</label>
+                            <div class="input">
+                                <input type="text" title="아이디" id="" class="inp" name="" value="" placeholder="아이디 입력"  required="">
+                            </div>
+                        </div>
+
+                        <div class="form-wrap">
+                            <label for="" class="formlabel">비밀번호</label>
+                            <div class="input">
+                                <input type="password" title="비밀번호" id="USR_PWD" class="inp" name="" value="" placeholder="비밀번호 입력" required="" maxlength="50">
+                            </div>
+                        </div>
+
+                        <div class="form-wrap password ok"><!-- [D] 비밀번호 일치시 클래스 ok 추가 / 비밀번호 불일치시 클래스 error 추가 -->
+                            <label for="USR_ID_PWD2" class="formlabel">비밀번호 확인</label>
+                            <div class="input">
+                                <input type="text" id="USR_ID_PWD2" class="inp" name="" value="" placeholder="비빌번호 확인" required="" minlength="4" maxlength="50">
+                            </div>
+                            <span class="valid-ok">일치</span><!-- [D] 비밀번호 일치시 노출 -->
+                            <span class="valid-txt">불일치</span><!-- [D] 비밀번호 불일치시 노출 -->
+                            <p class="error-txt">비밀번호를 입력해주세요</p>
+                        </div>
+
+                        <div class="form-wrap password error"><!-- [D] 비밀번호 일치시 클래스 ok 추가 / 비밀번호 불일치시 클래스 error 추가 -->
+                            <label for="USR_ID_PWD2" class="formlabel">비밀번호 확인</label>
+                            <div class="input">
+                                <input type="text" id="USR_ID_PWD2" class="inp" name="" value="" placeholder="비빌번호 확인" required="" minlength="4" maxlength="50">
+                            </div>
+                            <span class="valid-ok">일치</span><!-- [D] 비밀번호 일치시 노출 -->
+                            <span class="valid-txt">불일치</span><!-- [D] 비밀번호 불일치시 노출 -->
+                        </div>
+                        <!--// 아이디 및 이메일 -->
+
+                        <div class="form-wrap password form-line"><!--D: form-line클래스 : input에 버튼(btnInput) 있을 경우-->
+                            <label for="ipt05" class="formlabel">인증번호</label>
+                            <div class="input verification">
+                                <input type="text" title="은행선택" id="ipt05" class="inp" name="" value="" required="" placeholder="인증번호">
+                                <div class="verifi-time">
+                                    <span class="txt-numb" id="PHONE_AUTH_TIMER">03:00</span>
+                                    <button type="button" class="btn-certi">인증번호요청</button>
+                                <!-- <button type="button" class="btn-certi">재전송</button> --><!--D: 인증번호 재전송 -->
+                                </div>
+                            </div>
+                            <p class="error-txt">인증번호을 입력해주세요</p>
+                        </div>
+
+                        <div class="form-wrap password w50">
+                            <label for="ipt02" class="formlabel">주민등록번호</label>
+                            <div class="input">
+                                <span>
+                                    <input type="tel" title="주민등록번호 앞자리" id="ipt02" class="inp" name="" value="" maxlength="6" required="">
+                                </span>
+                                <span class="inputTextHyphen">-</span>
+                                <span class="jummin" >
+                                    <input type="tel" title="주민등록번호 뒷자리(첫번째 숫자)" id="jumin1" class="inp" name="jumin1" value="" maxlength="0" required="" >
+                                    <span class="jumintext">●●●●●●●</span>
+                                </span>
+                            </div>
+                            <p class="error-txt">주민등록번호를 입력해주세요.</p>
+                        </div>
+
+                        <div class="form-wrap phone">
+                            <label for="" class="formlabel">휴대폰번호</label>
+                            <div class="input">
+                                <div class="select-wrap type-line">
+                                    <div class="select-box" tabindex="1">
+                                        <span class="option">선택</span>
+                                    </div>
+                                </div>
+                                <span>
+                                    <input type="tel" title="" class="inp " id="" name="" value="" placeholder="휴대폰번호 입력" maxlength="11" required />
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- 팝업 검색폼 -->
+                        <div class="form-wrap searchInput bg-gray">
+                            <div class="input">
+                                <input type="search" title="" id="" class="" name="" value="" placeholder="검색" required="">
+                            </div>
+                            <button type="button" class="btn-search">검색</button>
+                            <button type="button" class="btn-delete">검색어 삭제</button>
+                        </div>
+                        <!-- 팝업 검색폼 -->
+
+                        <div class="form-wrap">
+							<div class="input">
+								<input type="search" title="" id="" class="" name="" value="" placeholder="검색 입력" required="">
+							</div>
+							<button type="button" class="btn-search">검색</button>
+							<button type="button" class="btn-delete">검색어 삭제</button>
+						</div>
+
+                        <!--*** 주소 검색-->
+                        <!--주소 검색 영역-->
+                        <div class="search-area">
+                            <div class="form-wrap">
+                                <div class="input">
+                                    <input type="search" title="" id="" class="" name="" value="" placeholder="도로명주소, 건물명 또는 지번" required="" >
+                                </div>
+                                <button type="button" class="btn-search">검색</button>
+                                <button type="button" class="btn-delete">검색어 삭제</button>
+                            </div>
+                            <dl class="juso-ex-list" id="exSearch">
+                                <dt>도로명 + 건물번호</dt>
+                                <dd>중앙대로 244</dd>
+                                <dt>지역명(동/리)+번지</dt>
+                                <dd>초량동 1193-1</dd>
+                                <dt>지역명(동/리) + 건물명(아파트명)</dt>
+                                <dd>초량동 흥국생명</dd>
+                            </dl>
+                        </div>
+                        <!--주소 검색 영역-->
+
+                        <!--주소 검색 결과 영역-->
+                        <div class="search-result-area" id=""  >
+                            <div class="result-box" >
+                                <a href="#none">
+                                    <span class="zipcode">12345</span>
+                                    <ul class="juso-list">
+                                        <li>
+                                            <em class="roadname">도로명</em>
+                                            <p>서울시 동작구 동작로 131 고려아파트 1154동 702호</p>
+                                        </li>
+                                        <li>
+                                            <em>지&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;번</em>
+                                            <p>서울시 동작구 동작로 131</p>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="result-area nodata" id=""> <!--D: 주소 검색 없을 경우-->
+                            <p lass="desc">검색결과가 없어요</p>
+                            <p class="desc">도로명, 지번주소, 지역명(동/리) + 건물명으로<br>다시 검색하세요</p>
+                        </div>
+
+                        <!-- 주소입력 -->
+                        <div class="form-wrap">
+                            <label for="" class="formlabel">상세주소</label>
+                            <div class="input">
+                                <input type="text" title="상세주소" id="" class="inp" name="" value="" placeholder="상세주소" required />
+                            </div>
+                            <!-- <p class="error-txt">상세주소를 입력해주세요</p> -->
+                        </div>
+                        <!--//주소입력 -->
+
+                        <!-- 주소입력 -->
+                        <div class="form-wrap form-line">
+                            <label for="" class="formlabel">주소(현재거주지)</label>
+                            <div class="input">
+                                <input type="text" title="우편번호" id="" class="inp" name="" value="" placeholder="우편번호" required />
+                                <button type="button" class="btnInput">우편번호찾기</button>
+                            </div>
+                            <div class="input">
+                                <input type="text" title="주소" id="" class="inp" name="" value="" placeholder="주소" required />
+                            </div>
+                            <div class="input">
+                                <input type="text" title="상세주소" id="" class="inp" name="" value="" placeholder="상세주소" required />
+                            </div>
+                            <div class="input">
+                                <input type="text" title="직장전화" id="" class="inp" name="" value="" placeholder="직장전화" required />
+                            </div>
+                        </div>
+
+                        
+                        <div class="form-wrap form-line">
+                            <div class="check-account">
+                                <input type="checkbox" id="chk01" name="check" value="">
+                                <label for="chk01">
+                                    <span>주소(현재 거주지)와 동일</span>
+                                </label>
+                            </div>
+                            <label for="" class="formlabel">주소(현재거주지)</label>
+                            <div class="input">
+                                <input type="text" title="우편번호" id="" class="inp" name="" value="" placeholder="우편번호" required />
+                                <button type="button" class="btnInput">우편번호찾기</button>
+                            </div>
+                            <div class="input">
+                                <input type="text" title="주소" id="" class="inp" name="" value="" placeholder="주소" required />
+                            </div>
+                            <div class="input">
+                                <input type="text" title="상세주소" id="" class="inp" name="" value="" placeholder="상세주소" required />
+                            </div>
+                            <div class="input">
+                                <input type="text" title="직장전화" id="" class="inp" name="" value="" placeholder="직장전화" required />
+                            </div>
+                        </div>
+                        
+                        <!--//주소입력 -->
+
+                        <!--//주소 검색 결과 영역-->
+
+                        <!--//*** 주소 검색-->
+
+                        <div class="form-wrap">
+							<label for="" class="formlabel">카드번호<span class="essential">*</span></label>
+							<div class="input">
+								<input type="text" title="카드번호" id="" class="inp" name="" value="" placeholder="카드번호" required="">
+							</div>
+						</div>
+
+                        <div class="form-wrap w50">
+							<label for="" class="formlabel">신고인 전화번호</label>
+							<div class="input">
+								<span>
+									<input type="tel" title="핸드폰번호 앞자리" id="" class="inp" name="" value="" maxlength="3" required="" numberonly="">
+								</span>
+								<span class="inputTextHyphen">-</span>
+								<span>
+									<input type="tel" title="핸드폰번호 가운데자리" id="" class="inp" name="" value="" maxlength="4" required="" numberonly="">
+								</span>
+								<span class="inputTextHyphen">-</span>
+                                <span>
+									<input type="tel" title="핸드폰번호 뒷자리" id="" class="inp" name="" value="" maxlength="4" required="" numberonly="">
+								</span>
+							</div>
+						</div>
+
+                        <div class="form-wrap">
+                            <label for="" class="formlabel">계좌비밀번호</label>
+                            <div class="input">
+                                <input type="password" title="새로운 계좌비밀번호" id="" class="inp" name="" value="" placeholder="신규 계좌비밀번호 입력" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-wrap">
+                            <label for="" class="formlabel">계좌비밀번호 확인</label>
+                            <div class="input">
+                                <input type="password" title="새로운 계좌비밀번호 확인" id="" class="inp" name="" value="" placeholder="신규 계좌비밀번호 입력" readonly>
+                            </div>
+                        </div>
+                        
+
+                        <div class="imgbox-wrap mb40">
+                            <img src="/resources/images/common/img_registrationcard.png" alt="주민등록증 예시이미지">
+                        </div>
+                        <dl class="list-bull ico">
+                            <dt><b>촬영 전 확인해 주세요</b></dt>
+                            <dd>타인의 신분증으로 촬영하시면 관계 법령에 따라 처벌될 수 있어요</dd>
+                            <dd>흔들림 없고,  빛 반사가 없도록 촬영해 주세요</dd>
+                            <dd>신분증 정보가 식별이 어려울 경우, 진위확인이 불가능하여 비대면계좌개설 이용이 제한될 수 있어요</dd>
+                        </dl>
+
+                        <div class="form-wrap form-line">
+                            <label for="ipt06" class="formlabel">등록할 OTP 일련번호(S/N)</label>
+                            <div class="input">
+                                <span class="mb0">
+                                    <input type="text" title="등록할 OTP 일련번호(S/N)" id="OTP_SRNO_VAL" class="inp" name="" placeholder="등록할 OTP 일련번호(S/N) 입력" value="" required="">
+                                </span>
+                            </div>
+                            <p class="error-txt">아이디를 입력해주세요</p>
+                        </div>
+
+                        <div class="form-wrap">
+                            <div class="OTP_DIV">
+                                <img src="../../resources/images/common/img-otp.png" alt="OTP 일련번호, OTP 벤더코드" />
+                            </div>
+                        </div>
+
+                        <!--인증번호 입력 -->
+
+                        
+                        <div class="form-wrap form-crtf">
+                            <div class="imgbox-wrap crtf">
+                                <img src="/resources/images/common/img_accountCrtf.png" alt="본인계좌 인증 예시이미지. 보낸사람:예가람저축은행1234, 입금:1원.">
+                                <p class="s-txt ta-c"><b>입금자명 뒤쪽 4자리 숫자 입력</b></p>
+                            </div>
+                            
+                            <div class="input">
+                                <span>
+                                    <input type="tel" title="" id="REMARK1" placeholder="1" required="" numberonly maxlength="1" onkeyup="${reqDs.id}_Func.changeRemark(this)">
+                                </span>
+                                <span>
+                                    <input type="tel" title="" id="REMARK2" placeholder="2" required="" numberonly maxlength="1" onkeyup="${reqDs.id}_Func.changeRemark(this)">
+                                </span>
+                                <span>
+                                    <input type="tel" title="" id="REMARK3" placeholder="3" required="" numberonly maxlength="1" onkeyup="${reqDs.id}_Func.changeRemark(this)">
+                                </span>
+                                <span>
+                                    <input type="tel" title="" id="REMARK4" placeholder="4" required="" numberonly maxlength="1" onkeyup="${reqDs.id}_Func.changeRemark(this)">
+                                </span>
+                                <p class="verifi-time">남은 입력시간:<span class="txt-numb" id="otuAthnNoTimerTxt">4:52</span></p>
+                            </div>
+                        </div>
+
+                        <div class="form-wrap form-cert">
+                            <div class="input">
+                                <span>
+                                    <input type="tel" title="" id="iptCert01_1" name="iptCert01" value="" placeholder="" required="" numberonly="" maxlength="4">
+                                </span>
+                                <span>
+                                    <input type="tel" title="" id="iptCert01_2" name="iptCert01" value="" placeholder="" required="" numberonly="" maxlength="4">
+                                </span>
+                                <span>
+                                    <input type="tel" title="" id="iptCert01_3" name="iptCert01" value="" placeholder="" required="" numberonly="" maxlength="4">
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-wrap form-cert form-disabled"><!--D: disabled-->
+                            <div class="input">
+                                <span>
+                                    <input type="tel" title="" id="iptCert01_1" name="iptCert01" value="" placeholder="" required="" numberonly="" maxlength="4">
+                                </span>
+                                <span>
+                                    <input type="tel" title="" id="iptCert01_2" name="iptCert01" value="" placeholder="" required="" numberonly="" maxlength="4">
+                                </span>
+                                <span>
+                                    <input type="tel" title="" id="iptCert01_3" name="iptCert01" value="" placeholder="" required="" numberonly="" maxlength="4">
+                                </span>
+                            </div>
+                        </div>
+                        <!--//인증번호 입력 -->
+
+                        <!-- 증명서 발급신청 -->
+                        <div class="form-wrap">
+                            <div class="input">
+                                <textarea type="text" title="성명" id="ipt02" class="inp" name="" value="" placeholder="내용을 입력해주세요" maxlength="" required="">내용을 입력해주세요
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="form-wrap">
+                            <div class="sub-tit-wrap">
+                                <p class="tit">첨부파일</p>
+                            </div>
+                            <div class="input">
+                                <div class="file-box added"><!-- [D] 클래스 added 추가시 파일삭제 버튼 노출, 파일추가 버튼 히든 -->
+                                    <span class="file-name">대출신청화면.jpg</span>
+                                    <label for="file" class="file-label">파일 추가</label>
+                                    <input type="file" id="file" class="ip-file">
+                                    <button type="button" class="btn-file-del">파일 삭제</button>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="info-txt">이미지(jpg, png, gif 등) 파일 또는 PDF 파일만 첨부 가능해요</p>
+                        <p class="info-txt">첨부파일은 10MB 이하만 등록이 가능해요</p>
+                        <!-- //증명서 발급신청 -->
+
+                    </section>
+
+                </div>
+            </div>
+            <!-- //e: contents -->
+
+        </div>
+        <!-- //contentsWrap -->
+    </form>
+</body>
+</html>
+

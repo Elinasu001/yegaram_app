@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Sample API</title>
+<link type="text/css" rel="stylesheet" href="css/fsbBtnStyle.css" />
+<link type="text/css" rel="stylesheet" href="css/fsbCommon.css" />
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/fsbCommon.js?v=2"></script>
+<script type="text/javascript" src="js/apiJsonFlow.js?v=2"></script>
+<script type="text/javascript" src="js/apiJson.js?v=2"></script>
+<script type="text/javascript">
+var $btnRecInput	= null;
+
+$(document).ready(function(){
+	var $flowSelect	= $('#flowSelect');
+	$flowSelect.find('option:eq(0)').nextAll().remove();
+	$.each(flowLogic,function(k,v){
+		$('<option>').val(k).html(v.flow_nm).appendTo($flowSelect);
+	});
+	
+	// API 프로세스 선택
+	$('#flowSelect').change(function(){
+		var flowKey		= $(this).val();
+		var $tr			= $('<tr>');
+		var $td			= $('<td>').addClass('left');
+		var $a			= $('<a>').attr('href','javascript:void(0)').addClass('apiAction');
+		var $flowTbody	= $('#flowTbody').empty();
+		var $trClone;
+		
+		if(flowKey == ''){
+			$flowTbody.html('<tr><td colspan="4">API프로세스 선택를 선택해주세요.</td></tr>');
+			return false;
+		}	
+		
+		$.each(flowLogic[flowKey].flow_data,function(k,v){
+			$trClone	= $tr.clone().appendTo($flowTbody);
+			$td.clone().removeClass('left').html((k+1)).appendTo($trClone);
+			$td.clone().html($a.clone().attr('apiKey',v.id).html(v.id).get(0).outerHTML).appendTo($trClone);
+			$td.clone().html($a.clone().attr('apiKey',v.id).html(v.name).get(0).outerHTML).appendTo($trClone);
+			$td.clone().html($a.clone().attr('apiKey',v.id).html(v.explain).get(0).outerHTML).appendTo($trClone);
+		});
+	});
+	
+	// Modal Window Open Data Setting
+	$('#flowTbody').on('click','.apiAction',function(){
+		var $this		= $(this)
+		var apiKey		= $this.attr('apiKey');
+		var apiNm		= $this.closest('tr').find('td:eq(2)').text();
+		var $dynamicApi	= $('#dynamicApi').empty();
+		var apiDataJson	= apiInputData[apiKey];
+		var _value		= '';
+		var kNm			= '';
+		var $tr,$td,$input,$btn,$span;
+		
+		$('.apiId').html(apiNm+' ('+apiKey+')');
+		
+		if(apiDataJson == null){
+			alert('등록된 API가 없습니다.');
+			return false;
+		}
+		
+		createTr('BT_ID',apiDataJson.BT_NAME,null,'readonly');
+		createTr('FRST_TRNM_CHNL_DVCD','API',null,'readonly');
+		
+		$.each(apiDataJson.PARAMS,function(key,val){
+			if(Array.isArray(val) || $.isPlainObject(val)){
+				createTr(key,val,'button');
+				
+			}else{
+				_value	= globalVariable[key];
+				_value	= _value != null && _value != '' ? _value : val;
+				createTr(key,_value);
+			}
+		});
+		
+		modalControllerFn(true);
+		
+		function createTr(key, val, inputTpye ,attr){
+			kNm			= enCdToKrNm[key];
+			kNm			= kNm == null || kNm == '' ? key : kNm;
+			$tr			= $('<tr>').appendTo($dynamicApi);
+			$('<td>').html(kNm).appendTo($tr);
+			$td			= $('<td>').appendTo($tr);
+			
+			if(inputTpye == 'button'){
+				$btn		= $('<button>').appendTo($td);
+				$btn.attr({'type':'button','name':key});
+				$btn.addClass('small button color green btnRecInput');
+				$btn.css('font-size','11px');
+				$btn.html(key+' 입력');
+				$span	= $('<span>').appendTo($td);
+				$span.css('display','none').html(JSON.stringify(val));
+				
+			}else{
+				inputTpye	= inputTpye == null ? 'text' : inputTpye; 
+				$input		= $('<input>').appendTo($td);
+				$input.attr({'type':inputTpye,'name':key,'value':val});
+				if(attr != null) $input.prop(attr,true);
+			}
+		}
+	});
+	
+	// ModalLayer Window Close
+	$('.btnClose,.btnCancel').click(function(){
+		modalControllerFn(false);
+	});
+	
+	// ModalRec Window Open Data Setting
+	$('#dynamicApi').on('click','.btnRecInput',function(e){
+		var $this		= $(this);
+		$btnRecInput	= $this;
+		var $recList	= $('.recList').empty();
+		var objData		= $this.next('span').html();
+		objData			= objData != null && objData != '' ? JSON.parse(objData) : '';
+		var kNm			= '';
+		var $table,$colgroup,$tr,$td,$input;
+
+		$('.recId').html($this.text());
+		
+		if(Array.isArray(objData)){
+
+			$.each(objData,function(key,val){
+				$table		= $('<table>').addClass('tableStyle03').appendTo($recList);
+				$colgroup	= $('<colgroup>').appendTo($table);
+				$('<col>').attr('width','35%').appendTo($colgroup);
+				$('<col>').attr('width','*').appendTo($colgroup);
+				
+				$.each(val,function(k,v){
+					kNm			= enCdToKrNm[k];
+					kNm			= kNm == null || kNm == '' ? k : kNm;
+					$tr			= $('<tr>').appendTo($table);
+					$('<td>').html(kNm).appendTo($tr);
+					$td			= $('<td>').appendTo($tr);
+					$input		= $('<input>').appendTo($td);
+					$input.attr({'type':'text','name':k,'value':v});
+				});
+			});
+			
+			modalRecControllerFn(true);
+			
+		}else{
+			alert('rec 형식의 값이 아닙니다.');
+		}
+	});
+	
+	// ModalRec array add del
+	$('.arryAdd,.arryDel').click(function(){
+		var $this		= $(this);
+		var $recList 	= $('.recList');
+
+		if($this.hasClass('arryAdd')){
+			var $table	= $recList.find('table:eq(0)').clone();
+			$table.find('input').attr('value','');
+			$recList.append($table);
+			
+		}else{
+			if($recList.find('table').length < 2){
+				alert('더이상 삭제 할수 없습니다.');
+				return false;
+			}
+			$recList.find('table').last().remove();
+		}
+	});
+
+	// ModalRec Window Close
+	$('.btnRecSubmit').click(function(){
+		var arry	= [];
+		var obj		= {};
+		$('.recList').find('table').each(function(){
+			obj		= {};
+			$(this).find('input').each(function(){
+				obj[this.name]	= this.value;
+			});
+			arry.push(obj);
+		});
+
+		$btnRecInput.next('span').text(JSON.stringify(arry));
+		modalRecControllerFn(false);
+	});
+	
+	// ModalRec Window Close
+	$('.btnRecClose,.btnRecCancel').click(function(){
+		modalRecControllerFn(false);
+	});
+	
+	// API CALL ACTION
+	$('.btnSubmit').click(function(){	
+		var $form	= $('#cForm');
+		$form.find('.btnRecInput').each(function(){
+			var $this	= $(this);
+			$('<input>').attr({'type':'hidden','name':$this.attr('name'),'value':$this.next('span').html()}).appendTo($form);
+		});
+		
+		cmnAjaxCallFn({
+			url			: '/OPENAPI_TEST.act' 
+			,dataType	: 'JSON'
+			,data		: $form.serializeObject() //$form.serialize()
+			,success	: function(resData){
+				$('.request').hide();
+				$('.btnSubmit').hide();
+				$('.btnCancel').html('닫기');
+				var $result	= $('.result').show();
+				$result.html(domDrow(resData));
+				$result.find('li:last-child').addClass('treeEnd');	
+				globalVariableSet(resData);
+			}
+			,error		: function(xhr,status,error){
+				alert('서버와의 통신이 원활하지 않습니다.\n다시 시도해 주세요.'+error);
+			}
+		});
+		
+	});	
+	
+});
+$.fn.serializeObject = function () {
+	
+	  var result = {};
+	  var extend = function (i, element) {
+	    var node = result[element.name];
+	    if ('undefined' !== typeof node && node !== null) {
+	      if ($.isArray(node)) {
+	        node.push(element.value);
+	      } else {
+	        result[element.name] = [node, element.value];
+	      }
+	    } else {
+	      result[element.name] = element.value;
+	    }
+	  };
+
+	  $.each(this.serializeArray(), extend);
+	  return result;
+	};
+	
+function modalControllerFn(type){
+	if(type){
+		$('#modalBg').show();
+		$('#modalLayer').show();
+	}else{
+		$('#modalBg').hide();
+		$('#modalLayer').hide();
+		$('.request').show();
+		$('.result').hide();
+		$('.btnSubmit').show();
+		$('.btnCancel').html('취소');		
+	}
+}
+
+function modalRecControllerFn(type){
+	if(type){
+		$('#modalRec').show();
+	}else{
+		$('#modalRec').hide();
+		$btnRecInput	= null;
+	}
+}
+</script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="select">
+	  <select id="flowSelect">
+	    <option value="">::: API 프로세스 선택 :::</option>
+	  </select>
+	</div>	
+		
+	<div class="tableDiv">
+		<table class="tableStyle02">
+			<colgroup>
+				<col width="50">
+				<col width="150">
+				<col width="180">
+				<col width="*">
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">No.</th>
+					<th scope="col">API ID</th>
+					<th scope="col">API NAME</th>
+					<th scope="col">API 설명</th>
+				</tr>
+			</thead>
+			<tbody id="flowTbody">
+				<tr>
+					<td colspan="4">API프로세스 선택를 선택해주세요.</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div id="modalLayer" class="modalLayer">
+		<div class="apiTitle">
+			<span class="bullet">-</span> 
+			<span class="apiId"></span> 
+			<span class="btnClose">X</span>
+		</div>
+		
+		<div class="apiList request">
+			<form id="cForm" name="cForm" method="post">
+				<table class="tableStyle03">
+					<colgroup>
+						<col width="35%">
+						<col width="*">
+					</colgroup>
+					<tbody id="dynamicApi">
+					</tbody>
+				</table>
+			</form>
+		</div>
+		
+		<div class="apiList result"></div>
+		
+		<div class="btns">
+			<button class="small color blue button btnSubmit">전송</button>
+			<button class="small button btnCancel">취소</button>
+		</div>
+	</div>
+	
+	<div id="modalRec" class="modalLayer">
+		<div class="recTitle">
+			<span class="bullet">-</span> 
+			<span class="recId"></span> 
+			<span class="btnRecClose">X</span>
+		</div>
+		
+		<div class="recList request"></div>
+		
+		<div class="btns">
+			<button class="small color orange button arryAdd">배열추가</button>
+			<button class="small color red button arryDel">배열삭제</button> 
+			<button class="small color blue button btnRecSubmit">입력확인</button>
+			<button class="small button btnRecCancel">입력취소</button>
+		</div>
+	</div>
+	
+	
+<div id="modalBg" class="modalBg"></div>
+
+</div>
+</body>
+</html>

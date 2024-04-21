@@ -1,0 +1,15 @@
+/* 키패드 공통 css */
+div.ownKeypadWrap { position:absolute; top:initial !important; bottom:0;}
+div.ownKeypadWrap button {border: 0; }
+div.ownKeypadWrap button:focus{outline: 1px solid #2f88d9;}
+div.ownKeypadBG {display: none; position: absolute; z-index: 9998; width: 100%; height: 100%; top: 0; left: 0; background: rgba(102, 102, 102, .4);}
+
+#ownKeypad {position: relative;margin: 0px;z-index: 9999;touch-action: manipulation;}
+#ownKeypad .kpdGrp {width: 0px;height: 0px;display: none;}
+#ownKeypad .kpdWrap {position: relative; display: none;}
+#ownKeypad .kpdBtn {cursor: pointer;padding: 0; position: absolute;overflow: hidden;}
+#ownKeypad .kpdBtn:hover {/* -webkit-tap-highlight-color: transparent;-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* background: red; */}
+#ownKeypad .kpd-blank {cursor: default;}
+#ownKeypad .kpd-touch {z-index: 30; display: none; position: absolute; }
+#ownKeypad .kpd-touch .kpdBtn { background-color : #1f88d9; opacity : 0.7; filter: alpha(opacity=70); }
+#ownKeypadCustom {z-index: 9999;}
