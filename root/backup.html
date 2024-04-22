@@ -1,0 +1,398 @@
+<html lang="ko"><head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>예가람 저축은행 금융플랫폼 개편 | pc worklist</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <meta name="keywords" content="예가람저축은행">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <meta name="apple-mobile-web-app-status-bar-style" content="white">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta property="og:image" content="https://www.yegaramsb.co.kr/resources/normal/images/main/meta-img-square_new.jpg">
+        <link rel="stylesheet" type="text/css" href="./resources/css/worklist.css">
+        <script src="./resources/js/lib/jquery-1.11.3.min.js"></script>
+        <style>
+            /* 2023-05-21 가이드 추가 */
+        .cont table {
+            display: none;
+        }
+    
+        .cont .tit {
+            cursor: pointer;
+        }
+    
+        .cont .tit.on ~ table {
+            display: table;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper pc">
+            <section class="ifr_view">
+                <iframe id="iframe" width="100%" height="100%" src="./button.html"></iframe>
+            </section>
+            <section class="container">
+    
+                <div class="header">
+                    <h1>예가람저축은행 - APP 리뉴얼 IA(Information Architecture)</h1>
+                    <ul class="stateArea">
+                        <li><strong>진행상테 :</strong></li>
+                        <li class="typeConfirm"><span>기</span>기획확인필요</li>
+                        <li class="typeIng"><span>진</span>xd 현행화진행중</li>
+                        <li class="typeComp"><span>완</span>완료</li>
+                        <li class="typeCommon"><span>공</span>공통</li>
+                        <li class="typeNon"><span>삭</span>삭제</li>
+                    </ul>
+                    <ul><!-- 
+                        <li>프로젝트 기간 : 2023.05</li>
+                        
+                        <li><span id="delCnt"></span> / <span id="compCnt"></span> (loan / renewal)</li>
+                        <li><span id="wipCnt"></span> (남은 화면 수)</li>
+                        <li><span id="totCnt"></span> (총 본수)</li>
+                        -->
+                        <li><span id="compCnt">0</span> / <span id="totCnt">0</span>  (완료 / 총 본수) ※ 기획확인필요 : <span id="confirmCnt">0</span> 건 ※ 디자인확인필요 : <span id="ingCnt">0</span> 건</li>
+                        <li>종합 진척률 : <span id="totPer">NaN %</span> </li>
+                        <!--
+                        <li>총 <span id="totCnt"></span>개</li>
+                        <li>작업중 <span id="wipCnt"></span>개</li>
+                        <li>완료 <span id="compCnt"></span>개</li>
+                        -->
+                    </ul>
+                    <!--
+                    <div class="progressArea"><span></span></div>-->
+                    <!--
+                    <ul>
+                        <li><a href="#none" data-url="#none">dd</a></li>
+                    </ul>
+                    -->
+                </div>
+    
+                <div class="cont guide" style="margin-top: 273px;">
+                    <div class="guide">
+                        <h3 class="tit on">가이드</h3>
+                        <summary></summary>
+                        <table>
+                            <caption></caption>
+                            <colgroup>
+                                <col width="8%">
+                                <col width="22%">
+                                <col width="15%">
+                                <col width="10%">
+                                <col width="*">
+                                <col width="10%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">분류</th>
+                                    <th scope="col">설명</th>
+                                    <th scope="col" class="fileName">화면ID</th>
+                                    <th scope="col">담당</th>
+                                    <th scope="col">사용법</th>
+                                    <th scope="col">비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>가이드</td>
+                                    <td>basicLayout</td>
+                                    <td class="fileName"><a href="/views/guide/basicLayout.html" target="_blank">basicLayout.html</a></td>
+                                    <td>박수현</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>가이드</td>
+                                    <td>header.html</td>
+                                    <td class="fileName"><a href="/views/guide/header.html" target="_blank">header.html</a></td>
+                                    <td>박수현</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>가이드</td>
+                                    <td>btmNav.html</td>
+                                    <td class="fileName"><a href="/views/guide/btmNav.html" target="_blank">btmNav.html</a></td>
+                                    <td>박수현</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>가이드</td>
+                                    <td>main_pro_header.html</td>
+                                    <td class="fileName"><a href="/views/guide/main_pro_header.html" target="_blank">main_pro_header.html</a></td>
+                                    <td>박수현</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>가이드</td>
+                                    <td>menu</td>
+                                    <td class="fileName"><a href="/views/includes/menu.html" target="_blank">menu.html</a></td>
+                                    <td>박수현</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>가이드</td>
+                                    <td>form</td>
+                                    <td class="fileName"><a href="/views/guide/form.html" target="_blank">form.html</a></td>
+                                    <td>박수현</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+    
+                                <tr>
+                                    <td>가이드</td>
+                                    <td>check</td>
+                                    <td class="fileName"><a href="/views/guide/check.html" target="_blank">check.html</a></td>
+                                    <td>박수현</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>가이드</td>
+                                    <td>step_bar</td>
+                                    <td class="fileName"><a href="/views/guide/step_bar.html" target="_blank">step_bar.html</a></td>
+                                    <td>박수현</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>가이드</td>
+                                    <td>button</td>
+                                    <td class="fileName"><a href="/views/guide/button.html" target="_blank">button.html</a></td>
+                                    <td>박수현</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>가이드</td>
+                                    <td>list-bull</td>
+                                    <td class="fileName"><a href="/views/guide/list-bull.html" target="_blank">list-bull.html</a></td>
+                                    <td>박수현</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>가이드</td>
+                                    <td>terms</td>
+                                    <td class="fileName"><a href="/views/guide/terms.html" target="_blank">terms.html</a></td>
+                                    <td>윤은정</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>가이드</td>
+                                    <td>결과화면</td>
+                                    <td class="fileName"><a href="/views/guide/result.html" target="_blank">result.html</a></td>
+                                    <td>윤은정</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+    
+                                <tr>
+                                    <td>가이드</td>
+                                    <td>tab</td>
+                                    <td class="fileName"><a href="/views/guide/tab.html" target="_blank">tab.html</a></td>
+                                    <td>윤은정</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+    
+                                <tr>
+                                    <td>가이드</td>
+                                    <td>table</td>
+                                    <td class="fileName"><a href="/views/guide/table.html" target="_blank">table.html</a></td>
+                                    <td>윤은정</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>가이드</td>
+                                    <td>card</td>
+                                    <td class="fileName"><a href="/views/guide/card.html" target="_blank">card.html</a></td>
+                                    <td>윤은정</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+        
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="cont guide" style="margin-top: 273px;">
+                    <div class="guide">
+                        <h3 class="tit on">로그인</h3>
+                        <summary></summary>
+                        <table>
+                            <caption></caption>
+                            <colgroup>
+                                <col style="width:8%;">
+                                <col style="width:8%;">
+                                <col style="width:10%;">
+                                <col style="width:20%;">
+                                <col style="width:auto;">
+                                <col style="width:auto;">
+                              </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">담당</th>
+                                    <th scope="col">전달날짜</th>
+                                    <th scope="col">화면이름</th>
+                                    <th scope="col" class="fileName">url</th>
+                                    <th scope="col" class="fileName">publishing</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="modify"></td>
+                                    <td class="person"></td>
+                                    <td></td>
+                                    <td>로그인</td>
+                                    <td></td>
+                                    <td><a href="views/common/layer/login.html" target="_blank">/views/common/layer/login.html</a></td>
+                                  </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+    
+    
+                
+            </section>
+        </div>
+    
+    <script>
+    
+    $(document).ready(function(){
+    
+        var fromDate = [],
+            toDate = [],
+            dateGap = [];
+    
+        var wipCnt = 0, compCnt = 0;
+    
+        pjState();
+    
+        var headerH = $(".container .header").outerHeight();
+    
+        //alert(headerH);
+        $(".container .cont.guide").css("margin-top", headerH + "px");
+    
+    
+    
+    function pjState(){
+    
+            $(".page table tbody tr").each(function(i, e){
+                fromDate[i] = new Date( $(".fromDate").eq(i).text() );
+                toDate[i] = new Date( $(".toDate").eq(i).text() );
+                dateGap[i] = Math.ceil( (toDate[i].getTime() - fromDate[i].getTime()) / (1000 * 3600 * 24 ));
+    
+                dateGap[i] >= 0 ? $(".state").eq(i).html("<span>완</span>").closest("tr").addClass("comp") : $("table .state").eq(i).text("");
+                
+                /* 진행중 
+                if( $(".toDate").eq(i).text() == 0 ){
+                    $(".state").eq(i).html("<span>진</span>").closest("tr").addClass("ing");
+                    console.log( $(this) );
+                }
+                */
+    
+                ($(".state").eq(i).text() == "완") ? compCnt++ : wipCnt++;
+    
+                if( $(this).hasClass("Non") ){
+                    $(".state").eq(i).html("<span>삭</span>");
+                }else if( $(this).hasClass("confirm") ){
+                    $(".state").eq(i).html("<span>기</span>");
+                }else if( $(this).hasClass("ing") ){
+                    $(".state").eq(i).html("<span>진</span>");
+                }
+    
+            });
+        
+            var totCnt = $(".page table tbody tr").length; 
+    
+            var nonCnt = $('.page .Non').length; // 삭제
+            var comCnt = $('.page .common').length; // 공통
+    
+            // 완료 + 삭제 + 공통
+            var sumCnt = compCnt + nonCnt + comCnt;
+            
+            $("#confirmCnt").text( $(".page .confirm").length ); // 기획
+            $("#ingCnt").text( $(".page .ing").length ); // 디자인
+                    
+    
+            $("#compCnt").text(sumCnt); // 합계
+            $("#totCnt").text(totCnt); // 전체
+        
+            $("#totPer").text( Math.floor((sumCnt / totCnt) * 100) + " %");
+            
+            //$(".progressArea > span").animate({ "width" : (test / totCnt) * 100 + "%" }, 1500);
+            //$(".progressArea > span").after("종합 진척률 : " + Math.floor((test / totCnt) * 100) + "%");
+    
+        }
+    
+        /* list toggle */
+        $('.cont .tit').addClass('on');
+        $('.cont .tit').on('click', function () {
+            $(this).toggleClass('on');
+        })
+    
+        
+    
+    });
+    </script>
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+    
+    </body></html>
