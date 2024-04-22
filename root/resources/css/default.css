@@ -874,7 +874,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 .form-wrap.form-crtf .input > span.disabled > input[type="password"] { background-color:#F8F8F8; }
 .form-wrap.form-crtf .txt-crtf { display:inline-block; width:100%; margin-bottom:15px; font-size:0.88889rem; line-height:1.4375; text-align:center; }
 .form-wrap.form-crtf .txt-crtf > span { font-weight:bold; color:#F1108E; }
-
+.form-wrap.form-crtf .verifi-time { width:100%; }
 
 /* 공인인증서 인증번호 */
 .form-wrap.form-cert .input { display:flex; justify-content:space-between; }
