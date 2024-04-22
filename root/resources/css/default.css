@@ -992,7 +992,6 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 .btn-wrap .btn:disabled::before { background:none; /* background:url(../images/common/shadow-gr.png) no-repeat 50% / 100%;  */}
 
 
-
 /* .btn-wrap.type-multi { font-size:0; }
 .btn-wrap.type-multi .btn:first-child:not(:only-child) { display:inline-block; margin-right:10px; width:calc(33.5% - 10px);background:#FFFFFF; border:1px solid #DDDDDD; color:#26282C; box-shadow:none; }
 .btn-wrap.type-multi .btn:first-child::before { background:none; }
