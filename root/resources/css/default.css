@@ -59,6 +59,11 @@ button { padding:0; border:none; cursor:pointer; font-family:inherit; background
 hr.line { height:10px; border-top:solid 1px #DDDFE9; background:#F8F8FA; }
 .sr-only {width:0; height:0; font-size:0px; line-height:0; text-indent:-10000px; }
 
+.flexCenter { display:flex; justify-content: center; }
+.flexRight { display:flex; justify-content: flex-end; }
+.flexCol  { display:flex; flex-direction:column; }
+.flexRow { display:flex; flex-direction: row; }
+
 /* .form-wrap input::placeholder { color: #CCCCCC; font-weight:400 !important; font-size:0.88889rem !important; line-height:1.278rem !important;}
 .form-wrap.type2 input:focus { color:#FFFFFF !important; } */
 
@@ -981,9 +986,7 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 /** normal style **/
 .btn-wrap { display:flex; gap:10px; }
 .btn-wrap .btn { display:block; position:relative; width:100%; height:60px; border-radius:30px; background:#4E32A5; font-weight:500; color:#fff; font-size:1rem; line-height:60px; text-align:center; }
-/* .btn-wrap.flex-row { gap:10px; }   row */
-.btn-wrap.flex-row .btn.btn-info { width:70%; }
-.btn-wrap.flex-col { display:flex; flex-direction:column; } /* column */
+.btn-wrap.flexRow .btn.btn-info { width:53%; }
 
 /** disabled style **/
 .btn-wrap .btn.disabled,
