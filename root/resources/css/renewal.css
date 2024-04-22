@@ -29,10 +29,10 @@ body.fix { overflow:hidden; }
 
 
 /* 공통 - 컨텐츠 in 버튼 */
-.btn-cont-wrap { display:flex; width:100%; padding:0; text-align:center; align-items:start; }
+.btn-cont-wrap { display:flex; gap:10px; width:100%; padding:0; text-align:center; align-items:start; }
 /*.btn-cont-wrap > p::before{ content:""; position:absolute; z-index:1; top:-15px; left:0; width:100%; height:112px; background:url("../images/common/shadow.png") no-repeat center/100%;}normal 스타일*/
 /*.btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:15px 5px; border-radius:10px; background:#260F54; font-size:0.9rem; font-weight:500; color:#fff; letter-spacing:-1px; text-align:center; }*/
-.btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:14px 5px; border-radius:10px; background:linear-gradient(320deg, rgba(38,15,84,1) 0%, rgba(61,18,146,1) 100%); color:#fff; font-size:1rem; font-weight:700; text-align:center; }
+.btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:14px 5px; border-radius:30px; background:linear-gradient(320deg, rgba(38,15,84,1) 0%, rgba(61,18,146,1) 100%); color:#fff; font-size:1rem; font-weight:700; text-align:center; }
 .btn-cont-wrap.btn-sm .btn {display:inline-block; width:unset; padding:12px 20px; border-radius:8px; background:#EEEBFF; font-size:0.88888rem; font-weight:500; color:#6836CB; }
 .btn-cont-wrap.btn-mini .btn { display:inline-block; width:unset; padding:8px 16px; border-radius:8px; background:#EEEBFF; font-size:0.77777rem; font-weight:400; color:#6836CB; }
 .btn-cont-wrap.btn-sm .btn:first-child,
@@ -50,13 +50,14 @@ body.fix { overflow:hidden; }
 .btn.btn-camera::before { content:""; display:inline-block; width:24px; height:24px; margin:-4px 3px 0 0; background:url("../images/common/ico_camera_white.png") no-repeat 50%/20px auto; vertical-align:middle; }
 .btn-cont-wrap .btn.btn-camera { margin:20px 0 10px; color:#260F54; }
 .btn-cont-wrap .btn.btn-camera::before { width:22px; height:22px; margin:-5px 4px 0 0; background:url("../images/common/ico_camera_purple.png") no-repeat 50%/22px auto; }
-.btn-cont-wrap .btn + .btn { margin-left:10px; }
+/* .btn-cont-wrap .btn + .btn { margin-left:10px; } */
 
 .normal-btn { height:34px; border:solid 1px #ddd; background:#fff; color:#454545; padding:0 16px; font-weight:400; font-size:0.77777rem; border-radius:8px; line-height:34px; }
 .btn-gray { padding:7px 16px; border-radius:8px; border:1px solid #F2F4F6; background:#F2F4F6; font-size:0.77778rem; line-height:1.5; font-weight:400; color:#454545; }
 .btn.btn-gray { background:#F2F4F6; color:#454545; font-weight:500; }
-.btn.btn-info { background:#F4F5FB; font-weight:500; color:#2B0F62; }
-.btn.btn-primary { background:#4817AB; font-weight:500; color:#fff; }
+.btn.btn-info { background:#FFFFFF; border:1px solid #DDDDDD; font-weight:500; color:#2B0F62; }
+.btn.btn-primary { background:#9F7CE3; font-weight:500; color:#fff; }
+.btn.btn-sub { background:#F2F4F6; color:#26282C; }
 .btn-cont-wrap .btn.btn-border { border:1px solid #DDDDDD; background:#fff; font-weight:500; color:#454545; }
 
 /* 공통 - layerpopup 텍스트영역*/

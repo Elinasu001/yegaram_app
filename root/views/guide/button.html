@@ -48,7 +48,11 @@
 	data-activeMode="local"
 	data-activeEnv="${active.env">
 </script>
+<style>
+    .default-wrap h3.tit-h3 {  display:block; margin:20px 0; font-size:20px; }
+    .default-wrap h4.tit-h4 {  display:block; margin:20px 0; font-size:16px; }
 
+</style>
 
 <body>
     <!-- header -->
@@ -69,10 +73,90 @@
             <div class="contents">
                 <div class="default-wrap">
 
+                    <h3 class="tit-h3">컨텐츠 버튼</h3>
+
+                    <h4 class="tit-h4">컨텐츠 2개 버튼</h4>
+
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-info">버튼명</a>
+                        <a href="javascript:void(0);" class="btn btn-primary">버튼명</a>
+                    </div>
+
+                    <h4 class="tit-h4">컨텐츠 버튼 - primary</h4>
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-primary">버튼명</a>
+                    </div>
+
+                    <h4 class="tit-h4">컨텐츠 버튼 - sub</h4>
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-info">버튼명</a>
+                    </div>
+
+                    <h3 class="tit-h3">하단 버튼 [fixed-btn-wrap 구조 안에 들어감]</h3>
+
+                    <h4 class="tit-h4">하단 2개 버튼</h4>
+
+                    <!-- D: fixed-btn-wrap -->
+                    <div class="btn-wrap flex-row">
+                        <a href="javascript:void(0);" class="btn btn-info">버튼명</a>
+                        <a href="javascript:void(0);" class="btn">버튼명</a>
+                    </div>
+
+                    <h4 class="tit-h4">하단 버튼 - primary </h4>
+
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn">버튼명</a>
+                    </div>
+
+                    <h4 class="tit-h4">하단 버튼 - sub </h4>
+
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn btn-sub">버튼명</a>
+                    </div>
+
+                    <h4 class="tit-h4">하단 버튼 - disabled </h4>
+
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn disabled">버튼명</a>
+                    </div>
+
+                    <h4 class="tit-h4">하단 버튼 - txt </h4>
+
+                    <div class="btn-wrap flex-col">
+                        <a href="javascript:void(0);" class="btn">버튼명</a>
+                        <a href="#none" class="btn txt">버튼명</a>
+                    </div>
 
                 </div>
             </div>
             <!-- //contents -->
+
+
+            <!-- s: button -->
+            <!-- <div class="fixed-btn-wrap">
+                <div class="btn-wrap type-multi">
+                    <a href="javascript:void(0);" class="btn">버튼명</a>
+                    <a href="javascript:void(0);" class="btn">버튼명</a>
+                </div>
+            </div> -->
+            <!-- e: button -->
+
+            <!-- s: button -->
+            <div class="fixed-btn-wrap"> <!--D : 하단 버튼 예시 -->
+                <div class="btn-wrap flex-col">
+                    <a href="javascript:void(0);" class="btn">버튼명</a>
+                    <a href="#none" class="btn txt">버튼명</a>
+                </div>
+            </div>
+            <!-- e: button -->
+
+            <!-- s: button -->
+            <!-- <div class="fixed-btn-wrap">
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn disabled">버튼명</a>
+                </div>
+            </div> -->
+            <!-- e: button -->
 
         </div>
         <!-- //contentsWrap -->
