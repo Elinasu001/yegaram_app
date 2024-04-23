@@ -141,7 +141,7 @@ $(document).ready(function(){
     var bbsSelect3Form = makeForm("bbsSelect3Form");
     addFormData(bbsSelect3Form, "txGbnCd", "QMNU"); // QMNU:빠른메뉴
     doAction("MAIN_SELECT", bbsSelect3Form, function(resDs){
-    	 var tmp_html = '<li><a href="#" onclick="javascript:#URI#">#NAME#</a></li>';
+    	 var tmp_html = '<li><a href="javascript:void(0);" onclick="javascript:#URI#">#NAME#</a></li>';
          var add_html = "";
          $.each(resDs.REC, function(idx, item){
          	var r_html = tmp_html;
@@ -201,7 +201,7 @@ $(document).ready(function(){
 			<div class="all-menu-wrap">
 				<div class="all-menu-header">
 					<div class="all-menu-info">
-						<a href="javascript:void(0);" onclick="javascript:biz.login(function(res){doReload();});"><span><b>로그인</b></span> &gt;</a>
+						<a href="javascript:void(0);" onclick="javascript:biz.login(function(res){doReload();});" class="btn-txt md">로그인</a>
 						<ul>
 							<li><a onclick="goMainPage();" class="btn-home">홈으로</a></li>
 							<li><a onclick="doActionMenu('usr/mng/usrChng','USR_INFO_MNG');" class="btn-mypage">마이페이지</a></li>
@@ -209,6 +209,10 @@ $(document).ready(function(){
 							<li><a class="btn-menu-close">닫기</a></li>
 						</ul>
 					</div>
+					<div class="txtbox-wrap flexRight">
+                        <a href="javascript:void(0);" class="btn-txt" onclick="openPopupUp('all-menu-view');">메뉴 펄쳐보기</a>
+                    </div>
+					
 					<ul class="top-menu">
 						<li><a href="javascript:void(0);" onclick="openPopup('NA25000000_Pop');">고객센터</a></li> <!-- [퍼블] [20230904] .count-flag 추가 / -->
 						<li><a href="javascript:void(0);" onclick="openPopup('NA26000000_Pop');">인증/보안</a></li>
@@ -242,35 +246,40 @@ $(document).ready(function(){
 						</ul>
 					</div>
 					<div class="menuDepth2">
-						<ul class="NA21000000 on ">
-							<li><a href="#" onclick="javascript:doActionMenu('dep/inq/depAcnoList','ACNO_INQ');">예적금 계좌 모두보기</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('lon/inq/loanAcnoList','ACNO_INQ');">대출 계좌 모두보기</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('lon/inq/loanProgSrch','LOAN_PRGS_INQ');">대출진행상태조회</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('bnk/prc/transPrc1','');">이체</a></li>
-							<li><a hrf="#" onclick="javascript:doActionMenu('bnk/inq/transInq','');">이체결과조회</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('bnk/prc/autoTransReg1','LOGIN_MNG');">자동이체</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/autoTransMng','LOGIN_MNG');">자동이체 관리</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('bnk/inq/autoTransInq','LOGIN_MNG');">자동이체 결과조회</a></li>
+						<ul class="NA21000000 on">
+							<li><a href="javascript:void(0);">내 계좌</a></li>
+							<li><a href="javascript:void(0);">대출진행상태조회</a></li>
+							<li><a href="javascript:void(0);">이체</a></li>
+							<li><a href="javascript:void(0);">이체결과조회</a></li>
+							<li><a href="javascript:void(0);">자동이체</a></li>
+							<li><a href="javascript:void(0);" >자동이체관리</a></li>
+							<li><a href="javascript:void(0);" >자동이체결과조회</a></li>
 						</ul>
-						<ul class="NA22000000 ">
-							<li><a href="#" onclick="javascript:doActionMenu('lon/inq/loanList','BBS_SELECT');">대출상품 모두보기</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('lon/inq/qckLonLimt1','');">간편한도조회</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('lon/prc/loanAuth','');">온라인바로대출신청</a></li>
+						<ul class="NA22000000">
+							<li><a href="javascript:void(0);">대출상품</a></li>
+							<li><a href="javascript:void(0);">간편한도조회</a></li>
+							<li><a href="javascript:void(0);">대출이어하기</a></li>
+							<li><a href="javascript:void(0);">신용조회동의</a></li>
+							<li><a href="javascript:void(0);">온라인서류제출</a></li>
+							<li><a href="javascript:void(0);">전자계약서 작성하기</a></li>
+							<li><a href="javascript:void(0);">계약서 확인(다운로드)</a></li>
+							<li><a href="javascript:void(0);">대출이용가이드</a></li>
 						</ul>
-						<ul class="NA23000000 ">
-							<li><a href="#" onclick="javascript:doActionMenu('dep/inq/depList','BBS_SELECT');">예적금상품 모두보기</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('dep/prc/qckAcnoOpenPrc1','');">빠른계좌개설</a></li>
+						<ul class="NA23000000">
+							<li><a href="javascript:void(0);">예적금상품</a></li>
+							<li><a href="javascript:void(0);">빠른계좌개설</a></li>
 						</ul>	
-						<ul class="NA24000000 ">
-							<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/imdtAcctMng1','MNRC_ACCT_MNG');">즉시입금지정계좌관리</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/trnLmtMng1','TRANS_LMT_MNG');">이체한도관리</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/lmitLmtMng1','');">한도제한해제</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/cnclAcctList','');">해지계좌조회</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/trnSusAcct1','ACNO_STS_MNG');">거래중지계좌</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/txfrLmitInq1','');">비과세한도조회</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/txfrCmphSvCert1','');">비과세종합저축증빙자료제출</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/acnoPswdUnlock1','');">계좌비밀번호 오류해제</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('','');">전자금융가입</a></li>
+						<ul class="NA24000000">
+							<li><a href="javascript:void(0);">지연이체관리</a></li>
+							<li><a href="javascript:void(0);">입금지정계좌관리</a></li>
+							<li><a href="javascript:void(0);">이체한도관리</a></li>
+							<li><a href="javascript:void(0);">한도제한해제</a></li>
+							<li><a href="javascript:void(0);">해지계좌조회</a></li>
+							<li><a href="javascript:void(0);">거래중지계좌</a></li>
+							<li><a href="javascript:void(0);">비과세한도조회</a></li>
+							<li><a href="javascript:void(0);">비과세종합저축증빙자료제출</a></li>
+							<li><a href="javascript:void(0);">계좌비밀번호 오류해제</a></li>
+							<li><a href="javascript:void(0);">전자금융가입</a></li>
 						</ul>	
 					</div>
 				</div>
@@ -279,7 +288,7 @@ $(document).ready(function(){
 		<!-- e : 전체메뉴 // -->
 							
 		<!-- // s : 메뉴 펼쳐보기 팝업 -->
-		<div id="all-menu-view" class="layerpopup laypop-all on" tabindex="0" data-focus-prev="btn-menu-close" style="display: none;">
+		<div id="all-menu-view" class="layerpopup laypop-all on" tabindex="0" data-focus-prev="btn-menu-close" style="display: block;">
 			<div class="pop-header none-bor">
 				<h2 class="pop-title">전체메뉴</h2>
 				<button type="button" name="button" class="btn-layer-close" onclick="closePopup('all-menu-view')">닫기</button>
@@ -302,8 +311,8 @@ $(document).ready(function(){
 						<li><a href="javascript:void(0);" data-focus="NA24000000">전자금융관리</a></li>
 						<li><a href="javascript:void(0);" data-focus="NA25000000">고객센터</a></li>
 						<li><a href="javascript:void(0);" data-focus="NA26000000">인증/보안</a></li>
-						<li><a href="javascript:void(0);" data-focus="NA27000000">내정보관리</a></li>
-						<li><a href="javascript:void(0);" data-focus="NA28000000">사고신고</a></li>
+						<li><a href="javascript:void(0);" data-focus="NA27000000">사고신고</a></li>
+						<!-- <li><a href="javascript:void(0);" data-focus="NA28000000">사고신고</a></li> -->
 					</ul>
 				</div>
 				
@@ -313,37 +322,40 @@ $(document).ready(function(){
 					</div>
 					<ul id="NA21000000">
 						<li class="tit">마이뱅킹</li>
-						<li><a href="#" onclick="javascript:doActionMenu('dep/inq/depAcnoList','ACNO_INQ');">예적금 계좌 모두보기</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('lon/inq/loanAcnoList','ACNO_INQ');">대출 계좌 모두보기</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('lon/inq/loanProgSrch','LOAN_PRGS_INQ');">대출진행상태조회</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('bnk/prc/transPrc1','');">이체</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('bnk/inq/transInq','');">이체결과조회</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('bnk/prc/autoTransReg1','LOGIN_MNG');">자동이체</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/autoTransMng','LOGIN_MNG');">자동이체 관리</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('bnk/inq/autoTransInq','LOGIN_MNG');">자동이체 결과조회</a></li>
+						<li><a href="javascript:void(0);">내계좌</a></li>
+						<li><a href="javascript:void(0);">대출진행상태조회</a></li>
+						<li><a href="javascript:void(0);">이체</a></li>
+						<li><a href="javascript:void(0);">이체결과조회</a></li>
+						<li><a href="javascript:void(0);">자동이체</a></li>
+						<li><a href="javascript:void(0);">자동이체 관리</a></li>
+						<li><a href="javascript:void(0);">자동이체 결과조회</a></li>
 					</ul>	
 				
 					<ul id="NA22000000">
 						<li class="tit">대출</li>
-							<li><a href="#" onclick="javascript:doActionMenu('lon/inq/loanList','BBS_SELECT');">대출상품 모두보기</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('lon/inq/qckLonLimt1','');">간편한도조회</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('lon/prc/loanAuth','');">온라인바로대출신청</a></li>
+							<li><a href="javascript:void(0);">대출상품</a></li>
+							<li><a href="javascript:void(0);">간편한도조회</a></li>
+							<li><a href="javascript:void(0);">대출이어하기</a></li>
+							<li><a href="javascript:void(0);">신용조회동의</a></li>
+							<li><a href="javascript:void(0);">온라인서류제출</a></li>
 					</ul>	
 				
 					<ul id="NA23000000">
-						<li class="tit">예적금</li>
-						<li><a href="#" onclick="javascript:doActionMenu('dep/inq/depList','BBS_SELECT');">예적금상품 모두보기</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('dep/prc/qckAcnoOpenPrc1','');">빠른계좌개설</a></li>
+						<li class="tit">예/적금</li>
+						<li><a href="javascript:void(0);">예적금상품 모두보기</a></li>
+						<li><a href="javascript:void(0);">빠른계좌개설</a></li>
 					</ul>	
 					<ul id="NA24000000">
 						<li class="tit">전자금융관리</li>
-						<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/trnLmtMng1','TRANS_LMT_MNG');">이체한도관리</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/lmitLmtMng1','');">한도제한해제</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/cnclAcctList','');">해지계좌조회</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/trnSusAcct1','ACNO_STS_MNG');">거래중지계좌</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/txfrLmitInq1','');">비과세한도조회</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/txfrCmphSvCert1','');">비과세종합저축증빙자료제출</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/acnoPswdUnlock1','');">계좌비밀번호 오류해제</a></li>
+						<li><a href="javascript:void(0);">즉시입금지정계좌관리</a></li>
+						<li><a href="javascript:void(0);">이체한도관리</a></li>
+						<li><a href="javascript:void(0);">한도제한해제</a></li>
+						<li><a href="javascript:void(0);">한지계좌조회</a></li>
+						<li><a href="javascript:void(0);">거래중지계좌</a></li>
+						<li><a href="javascript:void(0);">비과세한도조회</a></li>
+						<li><a href="javascript:void(0);">비과세종합저축증빙자료제출</a></li>
+						<li><a href="javascript:void(0);">계좌비밀번호 오류해제</a></li>
+						<li><a href="javascript:void(0);">전자금융가입</a></li>
 						<li>
 							<span>전자금융가입</span>
 							<ul>
@@ -353,83 +365,76 @@ $(document).ready(function(){
 				
 					<ul id="NA25000000">
 						<li class="tit">고객센터</li>
-						<li><a href="#" onclick="javascript:doActionMenu('etc/inq/noti1','');">공지사항</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('etc/inq/faq','');">자주묻는질문</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('etc/inq/event1','');">이벤트</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('etc/inq/civilApply1','ACNO_STS_MNG');">전자민원신청</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('etc/inq/rtCut','');">금리인하요구권</a></li>
+						<li><a href="javascript:void(0);">공지사항</a></li>
+						<li><a href="javascript:void(0);">자주묻는질문</a></li>
+						<li><a href="javascript:void(0);">이벤트</a></li>
+						<li><a href="javascript:void(0);">전자민원신청</a></li>
+						<li><a href="javascript:void(0);">금리인하요구권</a></li>
 						<li>
 							<span>금융소비자보호</span>
 							<ul>
-								<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('etc/inq/privacy','');">개인정보처리방침</a></li>
-								<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('etc/inq/illeagal','');">위법계약해지권</a></li>
-								<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('etc/inq/useTerms','');">이용약관</a></li>
-								<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('etc/inq/elecFinance','');">전자금융 이용약관</a></li>
+								<li><a href="javascript:void(0);">개인정보처리방침</a></li>
+								<li><a href="javascript:void(0);">위법계약해지권</a></li>
+								<li><a href="javascript:void(0);">이용약관</a></li>
+								<li><a href="javascript:void(0);">전자금융 이용약관</a></li>
 							</ul>
 						</li>
-						<li><a href="#" onclick="javascript:doActionMenu('etc/inq/branch','');">영업점안내</a></li>
+						<li><a href="javascript:void(0);">영업점안내</a></li>
 						<li>
 							<span>이용안내</span>
 							<ul>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('etc/inq/hours','');">이용시간 안내</a></li>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('etc/inq/advise','');">상담원 연결</a></li>
+									<li><a href="javascript:void(0);">이용시간 안내</a></li>
+									<li><a href="javascript:void(0);">상담원 연결</a></li>
 							</ul>
 						</li>
-						<li><a href="#" onclick="javascript:doActionMenu('etc/inq/precaution','');">이용자유의사항</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('etc/inq/certApply1','LOGIN_MNG');">증명서발급신청</a></li>
+						<li><a href="javascript:void(0);">이용자유의사항</a></li>
+						<li><a href="javascript:void(0);">증명서발급신청</a></li>
 					</ul>	
 					<ul id="NA26000000">
 						<li class="tit">인증/보안</li>
 						<li>
 							<span>공동인증서</span>
 							<ul>
-								<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/comCertImp1','');">공동인증서 가져오기</a></li>
-								<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/comCertSnd1','');">공동인증서 내보내기</a></li>
-								<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/comCertMng','');">공동인증서 관리</a></li>
+								<li><a href="javascript:void(0);">공동인증서 가져오기/내보내기</a></li>
+								<li><a href="javascript:void(0);">공동인증서 관리</a></li>
 							</ul>
 						</li>
 					
 						<li>
 							<span>전자금융사기예방서비스</span>
 							<ul>
-								<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/tmnlSvcInfo','');">전자금융사기예방서비스 안내</a></li>
-								<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/tmnlSvcReg1','');">단말기지정서비스 가입</a></li>
-								<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/tmnlSvcChng1','PRVT_FRUD_MNG');">단말기지정서비스 조회/해지</a></li>
-								<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/authExpReg1','');">인증예외서비스 등록</a></li>
-								<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/addtAuthReg1','');">추가인증서비스 가입</a></li>
-								<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/addtAuthChng1','');">추가인증서비스 변경</a></li>
+								<li><a href="javascript:void(0);">전자금융사기예방서비스 안내</a></li>
+								<li><a href="javascript:void(0);">단말기지정서비스 가입</a></li>
+								<li><a href="javascript:void(0);">단말기지정서비스 조회/해지</a></li>
+								<li><a href="javascript:void(0);">인증예외서비스 등록</a></li>
+								<li><a href="javascript:void(0);">추가인증 가입</a></li>
+								<li><a href="javascript:void(0);">추가인증 변경</a></li>
 							</ul>
 						</li>
 						<li>
 							<span>타기관인증서</span>
 							<ul>
-								<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/othCertReg1','');">타기관인증서 등록</a></li>
-								<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/othCertCnsl1','');">타기관인증서 해제</a></li>
+								<li><a href="javascript:void(0);">타기관 인증서 등록</a></li>
+								<li><a href="javascript:void(0);">타기관 인증서 해제</a></li>
 							</ul>
 						</li>
 					
-						<li><a href="#" onclick="javascript:doActionMenu('crt/simpleAuthReg1','');">간편인증 등록</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('crt/simpleAuthCnsl1','');">간편비밀번호 해지</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('crt/ptrnAuthReg1','');">패턴 인증 등록/재등록</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('crt/ptrnAuthCnsl1','');">패턴 인증 해지</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('crt/bioAuthReg1','');">바이오 인증 등록/재등록</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('crt/bioAuthCnsl1','');">바이오 인증 해지</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('crt/mOtpReg1','');">mOTP 설정/재설정</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('crt/othOtpReg1','');">타기관 OTP 등록/변경</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('crt/otpChng1','');">OTP 보정</a></li>
+						<li><a href="javascript:void(0);">간편인증 관리</a></li>
+						<li><a href="javascript:void(0);">mOTP 설정/재설정</a></li>
+						<li><a href="javascript:void(0);">타기관 OTP 등록/변경</a></li>
+						<li><a href="javascript:void(0);">OTP 보정</a></li>
+						<li><a href="javascript:void(0);">장기미접속 해제</a></li>
 					</ul>	
 					<ul id="NA27000000">
-						<li class="tit">내정보관리</li>
-						<li><a href="#" onclick="javascript:doActionMenu('usr/mng/usrChng','');">내정보관리</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('usr/mng/usrFrtPswd1','');">최초 비밀번호 등록</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('usr/mng/usrPwErr1','');">고객비밀번호 오류해제</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('usr/mng/usrReReg1','');">고객비밀번호 분실/재등록</a></li>
-					</ul>	
-					<ul id="NA28000000">
 						<li class="tit">사고신고</li>
-						<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/acdtPassbook1','');">사고신고</a></li>
-						<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/acdtOtpRecovery1','');">OTP사고회복</a></li>
+						<li><a href="javascript:void(0);">사고신고</a></li>
+						<li><a href="javascript:void(0);">OTP사고회복</a></li>
 					</ul>	
+					<!-- <ul id="NA28000000">
+						<li class="tit">사고신고</li>
+						<li><a href="javascript:void(0);">사고신고</a></li>
+						<li><a href="javascript:void(0);">OTP사고회복</a></li>
+					</ul>	 -->
 				</div>
 			</div>
 		</div>
@@ -437,36 +442,36 @@ $(document).ready(function(){
 		<div id="NA25000000_Pop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close">
 			<div class="pop-header">
 				<h2 class="pop-title">고객센터</h2>
-				<button type="button" name="button" class="btn-layer-close" onclick="closePopup('NA25000000_Pop');">닫기</button>
+				<button type="button" name="button" class="btn-layer-close" >닫기</button>
 			</div>
 			<div class="pop-con-wrap">
 				<div class="default-wrap"> <!-- [퍼블] mt40 제거-->
 					<p class="gnb-tit">고객님 무엇을 도와드릴까요?</p>
 					<div class="listmenu-box">
 						<ul>
-							<li><a href="#" onclick="javascript:doActionMenu('etc/inq/noti1','');">공지사항</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('etc/inq/event1','');">이벤트</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('etc/inq/civilApply1','ACNO_STS_MNG');">전자민원신청</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('etc/inq/rtCut','');">금리인하요구권</a></li>
+							<li><a href="javascript:void(0);">공지사항</a></li>
+							<li><a href="javascript:void(0);">이벤트</a></li>
+							<li><a href="javascript:void(0);">전자민원신청</a></li>
+							<li><a href="javascript:void(0);">금리인하요구권</a></li>
 							<li>
 								<span>금융소비자보호</span>
 								<ul>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('etc/inq/privacy','');">개인정보처리방침</a></li>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('etc/inq/illeagal','');">위법계약해지권</a></li>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('etc/inq/useTerms','');">이용약관</a></li>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('etc/inq/elecFinance','');">전자금융 이용약관</a></li>
+									<li><a href="javascript:void(0);">개인정보처리방침</a></li>
+									<li><a href="javascript:void(0);">위법계약해지권</a></li>
+									<li><a href="javascript:void(0);">이용약관</a></li>
+									<li><a href="javascript:void(0);">전자금융 이용약관</a></li>
 								</ul>
 							</li>
-							<li><a href="#" onclick="javascript:doActionMenu('etc/inq/branch','');">영업점안내</a></li>
+							<li><a href="javascript:void(0);">영업점안내</a></li>
 							<li>
 								<span>이용안내</span>
 								<ul>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('etc/inq/hours','');">이용시간 안내</a></li>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('etc/inq/advise','');">상담원 연결</a></li>
+									<li><a href="javascript:void(0);">이용시간 안내</a></li>
+									<li><a href="javascript:void(0);">상담원 연결</a></li>
 								</ul>
 							</li>
-							<li><a href="#" onclick="javascript:doActionMenu('etc/inq/precaution','');">이용자유의사항</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('etc/inq/certApply1','LOGIN_MNG');">증명서발급신청</a></li>
+							<li><a href="javascript:void(0);">이용자유의사항</a></li>
+							<li><a href="javascript:void(0);">증명서발급신청</a></li>
 						</ul>
 					</div>
 				</div>
@@ -486,41 +491,41 @@ $(document).ready(function(){
 							<li>
 								<span>공동인증서</span>
 								<ul>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/comCertInfo','');">공동인증서 안내</a></li>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/comCertImp1','');">공동인증서 가져오기</a></li>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/comCertSnd1','');">공동인증서 내보내기</a></li>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/comCertMng','');">공동인증서 관리</a></li>
+									<li><a href="javascript:void(0);">공동인증서 안내</a></li>
+									<li><a href="javascript:void(0);">공동인증서 가져오기</a></li>
+									<li><a href="javascript:void(0);">공동인증서 내보내기</a></li>
+									<li><a href="javascript:void(0);">공동인증서 관리</a></li>
 								</ul>
 							</li>
 							<li>
 								<span>전자금융사기예방서비스</span>
 								<ul>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/tmnlSvcInfo','');">전자금융사기예방서비스 안내</a></li>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/tmnlSvcReg1','');">단말기지정서비스 가입</a></li>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/tmnlSvcChng1','PRVT_FRUD_MNG');">단말기지정서비스 조회/해지</a></li>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/authExpReg1','');">인증예외서비스 등록</a></li>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/addtAuthReg1','');">추가인증서비스 가입</a></li>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/addtAuthChng1','');">추가인증서비스 변경</a></li>
+									<li><a href="javascript:void(0);">전자금융사기예방서비스 안내</a></li>
+									<li><a href="javascript:void(0);">단말기지정서비스 가입</a></li>
+									<li><a href="javascript:void(0);">단말기지정서비스 조회/해지</a></li>
+									<li><a href="javascript:void(0);">인증예외서비스 등록</a></li>
+									<li><a href="javascript:void(0);">추가인증서비스 가입</a></li>
+									<li><a href="javascript:void(0);">추가인증서비스 변경</a></li>
 									
 								</ul>
 							</li>
 							<li>
 								<span>타기관인증서</span>
 								<ul>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/othCertReg1','');">타기관인증서 등록</a></li>
-									<li><a href="javascript:void(0);" onclick="javascript:doActionMenu('crt/othCertCnsl1','');">타기관인증서 해제</a></li>
+									<li><a href="javascript:void(0);">타기관인증서 등록</a></li>
+									<li><a href="javascript:void(0);">타기관인증서 해제</a></li>
 								</ul>
 							</li>
 						
-							<li><a href="#" onclick="javascript:doActionMenu('crt/simpleAuthReg1','');">간편인증 등록</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('crt/simpleAuthCnsl1','');">간편비밀번호 해지</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('crt/ptrnAuthReg1','');">패턴 인증 등록/재등록</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('crt/ptrnAuthCnsl1','');">패턴 인증 해지</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('crt/bioAuthReg1','');">바이오 인증 등록/재등록</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('crt/bioAuthCnsl1','');">바이오 인증 해지</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('crt/mOtpReg1','');">mOTP 설정/재설정</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('crt/othOtpReg1','');">타기관 OTP 등록/변경</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('crt/otpChng1','');">OTP 보정</a></li>
+							<li><a href="javascript:void(0);">간편인증 등록</a></li>
+							<li><a href="javascript:void(0);">간편비밀번호 해지</a></li>
+							<li><a href="javascript:void(0);">패턴 인증 등록/재등록</a></li>
+							<li><a href="javascript:void(0);">패턴 인증 해지</a></li>
+							<li><a href="javascript:void(0);">바이오 인증 등록/재등록</a></li>
+							<li><a href="javascript:void(0);">바이오 인증 해지</a></li>
+							<li><a href="javascript:void(0);">mOTP 설정/재설정</a></li>
+							<li><a href="javascript:void(0);">타기관 OTP 등록/변경</a></li>
+							<li><a href="javascript:void(0);">OTP 보정</a></li>
 						</ul>
 					</div>
 				</div>
@@ -537,10 +542,10 @@ $(document).ready(function(){
 					<p class="gnb-tit"></p>
 					<div class="listmenu-box">
 						<ul>
-							<li><a href="#" onclick="javascript:doActionMenu('usr/mng/usrChng','');">내정보관리</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('usr/mng/usrFrtPswd1','');">최초 비밀번호 등록</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('usr/mng/usrPwErr1','');">고객비밀번호 오류해제</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('usr/mng/usrReReg1','');">고객비밀번호 분실/재등록</a></li>
+							<li><a href="javascript:void(0);">내정보관리</a></li>
+							<li><a href="javascript:void(0);">최초 비밀번호 등록</a></li>
+							<li><a href="javascript:void(0);">고객비밀번호 오류해제</a></li>
+							<li><a href="javascript:void(0);">고객비밀번호 분실/재등록</a></li>
 						</ul>
 					</div>
 				</div>
@@ -557,8 +562,8 @@ $(document).ready(function(){
 					<p class="gnb-tit"></p>
 					<div class="listmenu-box">
 						<ul>
-							<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/acdtPassbook1','');">사고신고</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('bnk/mng/acdtOtpRecovery1','');">OTP사고회복</a></li>
+							<li><a href="javascript:void(0);" >사고신고</a></li>
+							<li><a href="javascript:void(0);">OTP사고회복</a></li>
 						</ul>
 					</div>
 				</div>
@@ -575,8 +580,8 @@ $(document).ready(function(){
 					<p class="gnb-tit"></p>
 					<div class="listmenu-box">
 						<ul>
-							<li><a href="#" onclick="javascript:doActionMenu('lon/mng/onlPprSnd1','LOAN_DOC_MNG&amp;txGbnCd=P');">온라인서류제출</a></li>
-							<li><a href="#" onclick="javascript:doActionMenu('lon/mng/crdInqAgr1','CRDT_AGR_PRC');">신용조회동의</a></li>
+							<li><a href="javascript:void(0);">온라인서류제출</a></li>
+							<li><a href="javascript:void(0);">신용조회동의</a></li>
 						</ul>
 					</div>
 				</div>
