@@ -203,16 +203,30 @@
                         </div>
 
                         <div class="form-wrap">
-                            <label for="" class="formlabel">비밀번호</label>
+                            <label for="" class="formlabel">아이디 - Disabled</label>
+                            <div class="input">
+                                <input type="text" title="아이디" id="" class="inp" name="" value="" placeholder="아이디 입력"  required="" Disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-wrap">
+                            <label for="" class="formlabel">아이디 - readonly</label>
+                            <div class="input">
+                                <input type="text" title="아이디" id="" class="inp" name="" value="" placeholder="아이디 입력"  required="" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-wrap">
+                            <label for="" class="formlabel essential">비밀번호 - essential</label>
                             <div class="input">
                                 <input type="password" title="비밀번호" id="USR_PWD" class="inp" name="" value="" placeholder="비밀번호 입력" required="" maxlength="50">
                             </div>
                         </div>
 
                         <div class="form-wrap password ok"><!-- [D] 비밀번호 일치시 클래스 ok 추가 / 비밀번호 불일치시 클래스 error 추가 -->
-                            <label for="USR_ID_PWD2" class="formlabel">비밀번호 확인</label>
+                            <label for="" class="formlabel essential">비밀번호 확인 - essential / ok</label>
                             <div class="input">
-                                <input type="text" id="USR_ID_PWD2" class="inp" name="" value="" placeholder="비빌번호 확인" required="" minlength="4" maxlength="50">
+                                <input type="password" id="" class="inp" name="" value="" placeholder="비빌번호 확인" required="" minlength="4" maxlength="50">
                             </div>
                             <span class="valid-ok">일치</span><!-- [D] 비밀번호 일치시 노출 -->
                             <span class="valid-txt">불일치</span><!-- [D] 비밀번호 불일치시 노출 -->
@@ -220,9 +234,9 @@
                         </div>
 
                         <div class="form-wrap password error"><!-- [D] 비밀번호 일치시 클래스 ok 추가 / 비밀번호 불일치시 클래스 error 추가 -->
-                            <label for="USR_ID_PWD2" class="formlabel">비밀번호 확인</label>
+                            <label for="" class="formlabel essential">비밀번호 확인 - essential / error</label>
                             <div class="input">
-                                <input type="text" id="USR_ID_PWD2" class="inp" name="" value="" placeholder="비빌번호 확인" required="" minlength="4" maxlength="50">
+                                <input type="password" id="" class="inp" name="" value="" placeholder="비빌번호 확인" required="" minlength="4" maxlength="50">
                             </div>
                             <span class="valid-ok">일치</span><!-- [D] 비밀번호 일치시 노출 -->
                             <span class="valid-txt">불일치</span><!-- [D] 비밀번호 불일치시 노출 -->
@@ -234,7 +248,7 @@
                             <div class="input verification">
                                 <input type="text" title="은행선택" id="ipt05" class="inp" name="" value="" required="" placeholder="인증번호">
                                 <div class="verifi-time">
-                                    <span class="txt-numb" id="PHONE_AUTH_TIMER">03:00</span>
+                                    <span class="txt-numb" id="">03:00</span>
                                     <button type="button" class="btn-certi">인증번호요청</button>
                                 <!-- <button type="button" class="btn-certi">재전송</button> --><!--D: 인증번호 재전송 -->
                                 </div>
@@ -393,7 +407,7 @@
                         <!--//*** 주소 검색-->
 
                         <div class="form-wrap">
-							<label for="" class="formlabel">카드번호<span class="essential">*</span></label>
+							<label for="" class="formlabel">카드번호</label>
 							<div class="input">
 								<input type="text" title="카드번호" id="" class="inp" name="" value="" placeholder="카드번호" required="">
 							</div>

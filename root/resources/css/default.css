@@ -421,12 +421,14 @@ label + input textarea:focus:-ms-input-placeholder {  color:transparent; } */
 input[type="text"]:disabled,
 input[type="password"]:disabled,
 input[type="tel"]:disabled:not(.form-cert input:disabled),
-textarea:disabled { color:#999 !important; }
+textarea:disabled { color:#CCCCCC !important; }
 input[type="text"]:read-only,
 input[type="password"]:read-only,
 input[type="tel"]:read-only:not(.form-cert input:read-only),
-textarea:read-only { border-color:#ddd !important; }
-.essential { margin-left:5px; color:#ff0000; }
+textarea:read-only { border-color:#DDDDDD !important; }
+/* .essential { margin-left:5px; color:#ff0000; } */
+.essential { position:relative; }
+.essential::after { content:"*"; position:absolute; padding-left:3px; color:#ff0000;}
 
 /*** 폼 form ***/
 /* 2023-10-06 onbasic 클래스 삭제, selet-form-wrap 클래스 추가 에 따른 수정 */
@@ -434,6 +436,8 @@ textarea:read-only { border-color:#ddd !important; }
 .form-all-wrap .form-wrap:first-child { margin-top:0; }
 .form-all-wrap .form-wrap { margin-top:30px; }
 .form-wrap .check-account { margin-top:0; margin-bottom:20px; }
+
+
 .form-wrap + div > .form-wrap { margin-top: 30px; }
 .form-wrap + div > .form-wrap.select-form-wrap { margin-top:10px; }
 .txt-list-wrap + div > .form-wrap { margin-top: 40px; }
@@ -452,16 +456,14 @@ textarea:read-only { border-color:#ddd !important; }
 .inquiry-set-wrap + .form-wrap { margin-top:40px; }
 .sub-tit-wrap + .bg-box { margin-top:-15px; }/*네이버앱 대응으로 인한 음수 마진 추가*/
 .terms-area + .form-wrap { margin-top:20px; }
-#divFormat { /*margin-top:30px;*/ }
 .result-area + .sub-info-wrap { margin-top:30px; }
-/* .default-wrap > .form-wrap { margin-top:30px; } */
 .default-wrap > .form-wrap:first-child { margin-top:40px; }
 .layer-up .default-wrap > .form-wrap:first-child { margin-top:0; }
 
 .form-wrap > div.input { /*display:inline-block;*/ position:relative; /*width:100%;*/ }
 .form-wrap > div.input input { width:100%; /*height:100%;*/ padding:13px 0; border-bottom:1px solid #DDDDDD; color:#CCCCCC; /*-webkit-text-fill-color:inherit; opacity:1;*/ }
 .form-wrap > div.input input::placeholder { color:#CCCCCC; text-shadow:none; }
-.formlabel { display:block; position:relative; z-index:1; padding-top:3px; font-size:0.77778rem; line-height:1.5; cursor:pointer; transition:all 0.3s; color:#999999;}
+.formlabel { display:block; position:relative; z-index:1; padding-top:3px; font-size:0.77778rem; font-weight:500; line-height:1.5; cursor:pointer; transition:all 0.3s; color:#999999;}
 
 .form-wrap > div:last-child { margin-bottom:0; }
 /* .form-wrap > div.input input::placeholder { color: transparent; } */
@@ -469,12 +471,17 @@ textarea:read-only { border-color:#ddd !important; }
 /* .layerpopup .form-wrap > div.input input::placeholder { color:#CCCCCC; }
  */
 .form-wrap.searchInput > div.input input::placeholder { color:#CCCCCC; }
-.formlabel.onbasic { top:40px; width:100%; font-size:1rem; }
+/* .formlabel.onbasic { top:40px; width:100%; font-size:1rem; }
 .formlabel.action,
-.formlabel.onbasic:has(+.input input:disabled) { top:0; width:auto; font-size:0.77778rem; line-height:1.5; }/*top:5px;*/
-.form-wrap .action ~ .input input:focus::placeholder { color:#CCCCCC; }
-.form-wrap > div.input input:focus { border-color:#B088FF; }
+.formlabel.onbasic:has(+.input input:disabled) { top:0; width:auto; font-size:0.77778rem; line-height:1.5; }
+.form-wrap .action ~ .input input:focus::placeholder { color:#CCCCCC; } */
+.form-wrap > div.input input:focus { color:#DDDDDD; border-color:#B088FF; }
 .form-wrap > div.input input:valid { color:#333333; }
+.form-wrap > div.input input[type="password"]:focus { color:#DDDDDD !important; }
+.form-wrap > div.input input[type="password"]:valid { font-size:30px; color:#4E32A5; }
+.form-wrap > div.input input[type="password"]:disabled { font-size:30px; color:#CCCCCC; }
+
+
 /*.bank-input-warp .formlabel.action,*//*수현-test*/
 /* .form-wrap:not(.address, .password), */
 /* .form-wrap:not(.form-wrap .select-wrap, .address, .password), */
@@ -536,8 +543,8 @@ input[type="file"]::file-selector-button { display:none; }
 
 /* tab 안 검색창 (회색 배경 검색창) */
 .form-wrap.searchInput.bg-gray input { background:#F8F8F8; border:none; padding:15px; border-radius:10px; }
-.form-wrap.searchInput.bg-gray input:focus,
-.form-wrap.searchInput.bg-gray input:valid { color:#333333 !important; }
+/* .form-wrap.searchInput.bg-gray input:focus 
+.form-wrap.searchInput.bg-gray input:valid { color:#333333 !important; } */
 .form-wrap.searchInput.bg-gray .btn-search { right:15px; }
 .form-wrap.searchInput.bg-gray .btn-delete { right:49px; }
 
@@ -774,7 +781,7 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .form-wrap.w50 > div.input { display:flex; /*height:100%;*/ }
 .form-wrap.w50 > div.input > span { position:relative; display:inline-block; width:50%; height:50px; line-height:50px; }
 .form-wrap.w50 > div.input > span.inputTextHyphen { width:20px; color:#999999; text-align:center; line-height:50px; }
-.jumintext { position:absolute; left:10px; top:50%; transform:translate(0, -50%); letter-spacing:6px; color:#999999; font-size:0.55556rem; }
+.jumintext { position:absolute; left:10px; top:50%; transform:translate(0, -50%); letter-spacing:6px; color:#CCCCCC; font-size:0.55556rem; }
 :disabled ~ .jumintext { color:#DDDDDD; }
 input[type="hidden"] ~ .jumintext { left:15px; }
 .num-masking { letter-spacing:-1px; color:#260F54; font-size:0.88889rem; line-height:1.4375; }

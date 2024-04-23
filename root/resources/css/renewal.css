@@ -371,7 +371,7 @@ body.fix { overflow:hidden; }
 
 .input.verification { display:flex; align-items:center; justify-content:space-between;  }
 .input.verification .verifi-time  { position:absolute; right:0; margin-top:0; margin-left:0; }
-.input.verification .verifi-time .txt-numb { margin-right:10px; color:#FF0000; text-decoration:none; }
+.input.verification .verifi-time .txt-numb { margin-right:10px; color:#FF0000; font-weight:500; text-decoration:none; }
 
 /* 대출신청 */
 .check-account { margin-top:10px; }
