@@ -214,10 +214,10 @@ $(document).ready(function(){
                     </div>
 					
 					<ul class="top-menu">
-						<li><a href="javascript:void(0);" onclick="openPopup('NA25000000_Pop');">고객센터</a></li> <!-- [퍼블] [20230904] .count-flag 추가 / -->
-						<li><a href="javascript:void(0);" onclick="openPopup('NA26000000_Pop');">인증/보안</a></li>
-						<li><a href="javascript:void(0);" onclick="openPopup('NA28000000_Pop');">사고신고</a></li>
-						<li><a href="javascript:void(0);" onclick="openPopup('NA27000000_Pop');">공지사항<em class="count-flag"><span id="">N</span></em></a></li>
+						<li><a href="javascript:void(0);" onclick="openPopupUp('NA25000000_Pop');">고객센터</a></li>
+						<li><a href="javascript:void(0);" onclick="openPopupUp('NA26000000_Pop');">인증/보안</a></li>
+						<li><a href="javascript:void(0);" onclick="openPopupUp('NA28000000_Pop');">사고신고</a></li>
+						<li><a href="javascript:void(0);" onclick="openPopupUp('NA27000000_Pop');">공지사항<em class="count-flag"><span id="">N</span></em></a></li> <!-- D:  count-flag : 공지사항 알림 있을 경우  / -->
 					</ul>
 					<!-- <dl class="quick-menu">
 						<dt>빠른서비스<button type="button" class="btn-allopen" onclick="openPopup('all-menu-view');">메뉴펼쳐보기</button></dt>
@@ -288,7 +288,7 @@ $(document).ready(function(){
 		<!-- e : 전체메뉴 // -->
 							
 		<!-- // s : 메뉴 펼쳐보기 팝업 -->
-		<div id="all-menu-view" class="layerpopup laypop-all on" tabindex="0" data-focus-prev="btn-menu-close" style="display: block;">
+		<div id="all-menu-view" class="layerpopup laypop-all on" tabindex="0" data-focus-prev="btn-menu-close">
 			<div class="pop-header none-bor">
 				<h2 class="pop-title">전체메뉴</h2>
 				<button type="button" name="button" class="btn-layer-close" onclick="closePopup('all-menu-view')">닫기</button>
@@ -317,7 +317,7 @@ $(document).ready(function(){
 				</div>
 				
 				<div class="listmenu-box" id="MENU_SEARCH_AREA">
-					<div class="result-area nodata" id="jobSearchNoData" style="display:block">
+					<div class="result-area nodata" id="jobSearchNoData" >
 						<p lass="desc">일치하는 검색 결과가 없어요</p>
 					</div>
 					<ul id="NA21000000">
@@ -445,11 +445,12 @@ $(document).ready(function(){
 				<button type="button" name="button" class="btn-layer-close" >닫기</button>
 			</div>
 			<div class="pop-con-wrap">
-				<div class="default-wrap"> <!-- [퍼블] mt40 제거-->
+				<div class="default-wrap">
 					<p class="gnb-tit">고객님 무엇을 도와드릴까요?</p>
 					<div class="listmenu-box">
 						<ul>
 							<li><a href="javascript:void(0);">공지사항</a></li>
+							<li><a href="javascript:void(0);">자주묻는질문</a></li>
 							<li><a href="javascript:void(0);">이벤트</a></li>
 							<li><a href="javascript:void(0);">전자민원신청</a></li>
 							<li><a href="javascript:void(0);">금리인하요구권</a></li>
@@ -484,16 +485,15 @@ $(document).ready(function(){
 				<button type="button" name="button" class="btn-layer-close" onclick="closePopup('NA26000000_Pop');">닫기</button>
 			</div>
 			<div class="pop-con-wrap">
-				<div class="default-wrap mt40">
+				<div class="default-wrap">
+					<p class="gnb-tit">고객님 무엇을 도와드릴까요?</p>
 					<p class="gnb-tit"></p>
 					<div class="listmenu-box">
 						<ul>
 							<li>
 								<span>공동인증서</span>
 								<ul>
-									<li><a href="javascript:void(0);">공동인증서 안내</a></li>
-									<li><a href="javascript:void(0);">공동인증서 가져오기</a></li>
-									<li><a href="javascript:void(0);">공동인증서 내보내기</a></li>
+									<li><a href="javascript:void(0);">공동인증서 가져오기/내보내기</a></li>
 									<li><a href="javascript:void(0);">공동인증서 관리</a></li>
 								</ul>
 							</li>
@@ -504,41 +504,38 @@ $(document).ready(function(){
 									<li><a href="javascript:void(0);">단말기지정서비스 가입</a></li>
 									<li><a href="javascript:void(0);">단말기지정서비스 조회/해지</a></li>
 									<li><a href="javascript:void(0);">인증예외서비스 등록</a></li>
-									<li><a href="javascript:void(0);">추가인증서비스 가입</a></li>
-									<li><a href="javascript:void(0);">추가인증서비스 변경</a></li>
+									<li><a href="javascript:void(0);">추가인증 가입</a></li>
+									<li><a href="javascript:void(0);">추가인증 변경</a></li>
 									
 								</ul>
 							</li>
 							<li>
-								<span>타기관인증서</span>
+								<span>타기관 인증서</span>
 								<ul>
-									<li><a href="javascript:void(0);">타기관인증서 등록</a></li>
-									<li><a href="javascript:void(0);">타기관인증서 해제</a></li>
+									<li><a href="javascript:void(0);">타기관 인증서 등록</a></li>
+									<li><a href="javascript:void(0);">타기관 인증서 해제</a></li>
 								</ul>
 							</li>
 						
-							<li><a href="javascript:void(0);">간편인증 등록</a></li>
-							<li><a href="javascript:void(0);">간편비밀번호 해지</a></li>
-							<li><a href="javascript:void(0);">패턴 인증 등록/재등록</a></li>
-							<li><a href="javascript:void(0);">패턴 인증 해지</a></li>
-							<li><a href="javascript:void(0);">바이오 인증 등록/재등록</a></li>
-							<li><a href="javascript:void(0);">바이오 인증 해지</a></li>
+							<li><a href="javascript:void(0);">간편인증 관리</a></li>
 							<li><a href="javascript:void(0);">mOTP 설정/재설정</a></li>
 							<li><a href="javascript:void(0);">타기관 OTP 등록/변경</a></li>
 							<li><a href="javascript:void(0);">OTP 보정</a></li>
+							<li><a href="javascript:void(0);">장기미접속해제</a></li>
 						</ul>
 					</div>
 				</div>
 					<!-- //e: 검색 결과 영역 -->
 			</div>
 		</div>
-		<div id="NA27000000_Pop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close">
+		<!-- <div id="NA27000000_Pop" class="layerpopup laypop-all on" tabindex="0" data-focus-prev="btn-menu-close"  style="display:block;">
 			<div class="pop-header">
 				<h2 class="pop-title">내정보관리</h2>
 				<button type="button" name="button" class="btn-layer-close" onclick="closePopup('NA27000000_Pop');">닫기</button>
 			</div>
 			<div class="pop-con-wrap">
-				<div class="default-wrap mt40">
+				<div class="default-wrap">
+					<p class="gnb-tit">고객님 무엇을 도와드릴까요?</p>
 					<p class="gnb-tit"></p>
 					<div class="listmenu-box">
 						<ul>
@@ -549,16 +546,16 @@ $(document).ready(function(){
 						</ul>
 					</div>
 				</div>
-					<!-- //e: 검색 결과 영역 -->
 			</div>
-		</div>
+		</div> -->
 		<div id="NA28000000_Pop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close">
 			<div class="pop-header">
 				<h2 class="pop-title">사고신고</h2>
 				<button type="button" name="button" class="btn-layer-close" onclick="closePopup('NA28000000_Pop');">닫기</button>
 			</div>
 			<div class="pop-con-wrap">
-				<div class="default-wrap mt40">
+				<div class="default-wrap">
+					<p class="gnb-tit">고객님 무엇을 도와드릴까요?</p>
 					<p class="gnb-tit"></p>
 					<div class="listmenu-box">
 						<ul>
@@ -588,58 +585,59 @@ $(document).ready(function(){
 					<!-- //e: 검색 결과 영역 -->
 			</div>
 		</div>
-		<script>
-		function fnMenuSearch() {
-			var liTag = $("#MENU_SEARCH_AREA").find('li');
-			var searchText = $("#MENU_SEARCH_TEXT").val(); 
-			$.each(liTag, function(idx, item){
-				var temp = $(item).find("a")[0];
-				var checkHtml = $(temp).html()+"";
-				if (checkHtml.indexOf(searchText) > -1) {
-					$(this).show();
-				} else {
-					$(this).hide();
-				}
-			});
-		}
 		
-		
-		// 전체메뉴 스크립트 depth1
-		$('.all-menu-area .menuDepth1 li').click(function(){
-			var menuOn = $(this).children('a').attr('data-focus');
-			$(this).addClass('on').siblings().removeClass('on');
-			$('.all-menu-area .menuDepth2 .' + menuOn + '').addClass('on').siblings().removeClass('on');
-		});
-		
-		// 메뉴 펼쳐보기 스크립트 <!-- [퍼블] 스크립트 수정 -->
-		$('.tab-slidemenu li').click(function(){
-			var currMenu = $(this).children('a').attr('data-focus');
-			var currMenuOffset = $('#' + currMenu + '').offset().top + $('.listmenu-box').scrollTop() - 192;
-
-			$(this).addClass("on").siblings().removeClass("on");
-			$('.listmenu-box').animate({ scrollTop : currMenuOffset }, 300);
-			$(".tab-slidemenu").animate({ scrollLeft : $(this).offset().left + $(".tab-slidemenu").scrollLeft() - 20 });
-		});
-		
-		// 전체메뉴 open
-		function openMenu(id){
-			var t = $('#' + id);
-			var currentTop = $(window).scrollTop();
-			t.animate({ left : 0 });
-			$('body').addClass('on');
-			$('body').css({ 'position' : 'fixed', 'top' : -currentTop });
-			t.find('.btn-menu-close').click(function(){
-				closeMenu(id);
-				$('body').removeAttr('style').removeClass('on');
-				$(window).scrollTop(currentTop);
-			});
-		}
-		
-		// 전체메뉴 close
-		function closeMenu(){
-			$('.menuWrap').animate({ left:'100%' });
-		}
-		</script>
 	</div>
 	
 </body>
+<script>
+	function fnMenuSearch() {
+		var liTag = $("#MENU_SEARCH_AREA").find('li');
+		var searchText = $("#MENU_SEARCH_TEXT").val(); 
+		$.each(liTag, function(idx, item){
+			var temp = $(item).find("a")[0];
+			var checkHtml = $(temp).html()+"";
+			if (checkHtml.indexOf(searchText) > -1) {
+				$(this).show();
+			} else {
+				$(this).hide();
+			}
+		});
+	}
+	
+	
+	// 전체메뉴 스크립트 depth1
+	$('.all-menu-area .menuDepth1 li').click(function(){
+		var menuOn = $(this).children('a').attr('data-focus');
+		$(this).addClass('on').siblings().removeClass('on');
+		$('.all-menu-area .menuDepth2 .' + menuOn + '').addClass('on').siblings().removeClass('on');
+	});
+	
+	// 메뉴 펼쳐보기 스크립트 <!-- [퍼블] 스크립트 수정 -->
+	$('.tab-slidemenu li').click(function(){
+		var currMenu = $(this).children('a').attr('data-focus');
+		var currMenuOffset = $('#' + currMenu + '').offset().top + $('.listmenu-box').scrollTop() - 192;
+
+		$(this).addClass("on").siblings().removeClass("on");
+		$('.listmenu-box').animate({ scrollTop : currMenuOffset }, 300);
+		$(".tab-slidemenu").animate({ scrollLeft : $(this).offset().left + $(".tab-slidemenu").scrollLeft() - 20 });
+	});
+	
+	// 전체메뉴 open
+	function openMenu(id){
+		var t = $('#' + id);
+		var currentTop = $(window).scrollTop();
+		t.animate({ left : 0 });
+		$('body').addClass('on');
+		$('body').css({ 'position' : 'fixed', 'top' : -currentTop });
+		t.find('.btn-menu-close').click(function(){
+			closeMenu(id);
+			$('body').removeAttr('style').removeClass('on');
+			$(window).scrollTop(currentTop);
+		});
+	}
+	
+	// 전체메뉴 close
+	function closeMenu(){
+		$('.menuWrap').animate({ left:'100%' });
+	}
+	</script>
