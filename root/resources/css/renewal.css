@@ -30,15 +30,14 @@ body.fix { overflow:hidden; }
 
 /* 공통 - 컨텐츠 in 버튼 */
 .btn-cont-wrap { display:flex; gap:10px; width:100%; padding:0; text-align:center; align-items:start; }
-/*.btn-cont-wrap > p::before{ content:""; position:absolute; z-index:1; top:-15px; left:0; width:100%; height:112px; background:url("../images/common/shadow.png") no-repeat center/100%;}normal 스타일*/
-/*.btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:15px 5px; border-radius:10px; background:#260F54; font-size:0.9rem; font-weight:500; color:#fff; letter-spacing:-1px; text-align:center; }*/
 .btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:14px 5px; border-radius:30px; background:linear-gradient(320deg, rgba(38,15,84,1) 0%, rgba(61,18,146,1) 100%); color:#fff; font-size:1rem; font-weight:700; text-align:center; }
-.btn-cont-wrap.btn-add .btn {display:inline-block; width:unset; padding:12px 20px; border-radius:8px; background:#FFFFFF; border:1px solid #4E32A5; font-size:1rem; line-height:1.38889rem; font-weight:500; color:#4E32A5; }
-.btn-cont-wrap.btn-mini .btn { display:inline-block; width:unset; padding:8px 16px; border-radius:8px; background:#EEEBFF; font-size:0.77777rem; font-weight:400; color:#6836CB; }
-.btn-cont-wrap.btn-add .btn:first-child,
-.btn-cont-wrap.btn-mini .btn:first-child { margin-right:0; }
-.btn-cont-wrap.btn-add .btn.normal { /*border:solid 1px #ddd; */ color:#666; background:#fff; }
-.btn-cont-wrap.btn-add .btn-gray { background:#F2F4F6; color:#454545; }
+.btn-cont-wrap .btn.btn-add {display:inline-block; width:unset; height:48px;  padding:12px 54px; background:#FFFFFF; border:1px solid #4E32A5; font-size:1rem; line-height:1.38889rem; font-weight:500; color:#4E32A5; }
+.btn-cont-wrap .btn.btn-sm { display:inline-block; width:unset; height:34px; padding:7px 17px;  background:#FFFFFF; border:1px solid #DDDDDD; border-radius:17px;  font-size:0.77778rem;  font-weight:400; color:#26282C; }
+.btn-cont-wrap .btn.btn-sm.gray { background: #F1F1F1; border:1px solid #F1F1F1; color:#666666; }
+.btn-cont-wrap .btn.btn-sm.blue { background: #F2F4F6; border:1px solid #F2F4F6; color:#26282C; }
+.btn-cont-wrap .btn.btn-mini { display:inline-block; width:unset; height:23px; padding:3px 6px; background:#FFFFFF; border:1px solid #612AD0; border-radius:13px; font-size:0.66667rem; font-weight:400; color:#612AD0; }
+
+
 .btn-cont-wrap.btn-txt { display:inline-block; width:100%; }
 .btn-cont-wrap.btn-txt .btn { display:inline-block; width:unset; height:unset; border-radius:0; background:transparent; color:#333; line-height:unset; }
 .btn-cont-wrap.arrow .btn { padding-right:20px; }
@@ -315,7 +314,7 @@ body.fix { overflow:hidden; }
 .arrow-button-list li + li { margin-top:10px; }
 
 /* 공통-신분증촬영 */
-.imgbox-wrap { min-height:200px; padding:30px 47px; background:#F4F5FB; border-radius:15px; }
+.imgbox-wrap { min-height:200px; padding:30px 47px; background:#F8F8F8; border-radius:15px; }
 .imgbox-wrap.type-high { min-height:52vh; }/*2023-07-19 서류촬영용 추가*/
 .ocr-img { min-height:200px; border-radius:20px; border:solid 1px #eee; }
 .imgbox-wrap.crtf { padding:0 47px; background:transparent; text-align:center; }
@@ -350,8 +349,8 @@ body.fix { overflow:hidden; }
 
 /* 툴팁 */
 .tooltip-wrap { display:inline-block; position:relative; z-index:4; margin-top:-2px; vertical-align:middle; }
-.tooltip-wrap .tooltip-txt { z-index:2; display:none; /* opacity:0; */ position:absolute; left:50%; top:-70px; transform:translateX(-50%); padding:11px 28px 11px 15px; white-space:nowrap; transition:all .2s ease; background:#3A00B1; border-radius:10px; color:#999999; box-shadow:0px 7px 7px 0px #bebdbd; font-size:0.66667rem; line-height:1.58334;; letter-spacing:-1px; }
-.tooltip-wrap .tooltip-txt::before { content: ''; position: absolute; transform:translate(-50%, 0) rotate(90deg); bottom:-9px; left:50%; border-top:5px solid transparent; border-right:5px solid transparent; border-bottom:5px solid transparent; border-left:5px solid #3A00B1; }
+.tooltip-wrap .tooltip-txt { z-index:2; display:none; position:absolute; left:50%; top:-70px; transform:translateX(-50%); padding:11px 28px 11px 15px; white-space:nowrap; transition:all .2s ease; background:#9F7CE3; border-radius:10px; color:#FFFFFF; box-shadow:0px 3px 6px #9F7CE3; font-size:0.66667rem; line-height:1.58334;; letter-spacing:-1px; }
+.tooltip-wrap .tooltip-txt::before { content: ''; position: absolute; transform:translate(-50%, 0) rotate(90deg); bottom:-9px; left:50%; border-top:5px solid transparent; border-right:5px solid transparent; border-bottom:5px solid transparent; border-left:5px solid #9F7CE3; }
 .tooltip-wrap .tooltip-close { position:absolute; right:8px; top:8px; width:12px; height:12px; background:url("../images/common/btn_close_white.png") no-repeat 50%/12px auto; font-size:0; }
 .tooltip-wrap.on .tooltip-txt { /* opacity:1; */ display:block; }
 .tooltip-wrap > a { display:flex; align-items:center; justify-content:center; width:16px; height:17px; border:1px solid #8052DC; border-radius:50%; color:#8052DC; font-size:0.66667rem; font-weight:bold; text-align:center; }
