@@ -197,7 +197,7 @@ function certLogin(authType) {
 				<dd>비밀번호를 다섯 번 잘못 입력하실 경우 비밀번호 오류를 해제 하셔야해요</dd>
 				<dd>아이디가 기억나지 않으실 경우 본인인증을 통해서도로그인이 가능해요</dd>
 			</dl>
-			<div class="btn-cont-wrap btn-sm btn-mini type2">
+			<div class="btn-cont-wrap btn-add btn-mini type2">
                 <a href="#none" class="btn" onclick="javascript:userCertLogin('LOGIN');">본인인증 로그인</a>
             </div>
 

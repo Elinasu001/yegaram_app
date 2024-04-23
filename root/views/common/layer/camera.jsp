@@ -503,7 +503,7 @@ box-sizing:border-box;
 				<img id="resultImg" src=""/>
 			</div>
 			
-			<div class="btn-cont-wrap btn-sm mt20" id="retryCameraBtn" style="display: none;">
+			<div class="btn-cont-wrap btn-add mt20" id="retryCameraBtn" style="display: none;">
 				<a href="#none" class="btn" >다시촬영 </a>
 			</div>
         </div>

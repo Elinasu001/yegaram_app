@@ -613,7 +613,7 @@ box-sizing:border-box;
 				<img id="resultImg" src=""/>
 			</div>
 			
-			<div class="btn-cont-wrap btn-sm" id="retryCameraBtn" style="display: none;">
+			<div class="btn-cont-wrap btn-add" id="retryCameraBtn" style="display: none;">
 				<a href="#none" class="btn btn-camera" >다시촬영</a><!-- [퍼블] 클래스 변경 -->
 			</div>
 			<input type="hidden" id="ocrREQ_ID" />

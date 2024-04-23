@@ -164,12 +164,12 @@ function jobSearchView(gubun){
             
             <div class="result-area nodata" id="jobSearchNoData" style="display:none"><!-- [퍼블] 클래스 변경 -->
                 <p lass="desc">검색결과가 없어요</p><!-- [퍼블] 클래스,텍스트 변경 -->
-                <div class="btn-cont-wrap btn-sm">
+                <div class="btn-cont-wrap btn-add">
 					<a href="#none" class="btn normal" onclick="javascript:${reqDs.id }_Func.select('RESET');">처음으로</a>
 				</div>
             </div>
             
-			<div class="btn-cont-wrap btn-sm"><!-- [퍼블] 클래스 변경 -->
+			<div class="btn-cont-wrap btn-add"><!-- [퍼블] 클래스 변경 -->
 				<a href="#none" class="btn">더보기</a><!-- [퍼블] 텍스트 변경 -->
 			</div>
         </div>

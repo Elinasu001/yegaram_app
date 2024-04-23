@@ -33,12 +33,12 @@ body.fix { overflow:hidden; }
 /*.btn-cont-wrap > p::before{ content:""; position:absolute; z-index:1; top:-15px; left:0; width:100%; height:112px; background:url("../images/common/shadow.png") no-repeat center/100%;}normal 스타일*/
 /*.btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:15px 5px; border-radius:10px; background:#260F54; font-size:0.9rem; font-weight:500; color:#fff; letter-spacing:-1px; text-align:center; }*/
 .btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:14px 5px; border-radius:30px; background:linear-gradient(320deg, rgba(38,15,84,1) 0%, rgba(61,18,146,1) 100%); color:#fff; font-size:1rem; font-weight:700; text-align:center; }
-.btn-cont-wrap.btn-sm .btn {display:inline-block; width:unset; padding:12px 20px; border-radius:8px; background:#EEEBFF; font-size:0.88888rem; font-weight:500; color:#6836CB; }
+.btn-cont-wrap.btn-add .btn {display:inline-block; width:unset; padding:12px 20px; border-radius:8px; background:#FFFFFF; border:1px solid #4E32A5; font-size:1rem; line-height:1.38889rem; font-weight:500; color:#4E32A5; }
 .btn-cont-wrap.btn-mini .btn { display:inline-block; width:unset; padding:8px 16px; border-radius:8px; background:#EEEBFF; font-size:0.77777rem; font-weight:400; color:#6836CB; }
-.btn-cont-wrap.btn-sm .btn:first-child,
+.btn-cont-wrap.btn-add .btn:first-child,
 .btn-cont-wrap.btn-mini .btn:first-child { margin-right:0; }
-.btn-cont-wrap.btn-sm .btn.normal { /*border:solid 1px #ddd; */ color:#666; background:#fff; }
-.btn-cont-wrap.btn-sm .btn-gray { background:#F2F4F6; color:#454545; }
+.btn-cont-wrap.btn-add .btn.normal { /*border:solid 1px #ddd; */ color:#666; background:#fff; }
+.btn-cont-wrap.btn-add .btn-gray { background:#F2F4F6; color:#454545; }
 .btn-cont-wrap.btn-txt { display:inline-block; width:100%; }
 .btn-cont-wrap.btn-txt .btn { display:inline-block; width:unset; height:unset; border-radius:0; background:transparent; color:#333; line-height:unset; }
 .btn-cont-wrap.arrow .btn { padding-right:20px; }
@@ -637,8 +637,8 @@ body.fix { overflow:hidden; }
 /* .default-wrap:has(.txt-list-wrap) { padding-top:20px; } */
 /* .default-wrap:has(.tit-wrap + .txt-list-wrap) { padding-top:0 } */
 /* .default-wrap:has(> .visaul-info-section) { padding-top:0; } */
-.txt-list-wrap + .btn-cont-wrap.btn-sm,
-div:has(.txt-list-wrap) + .btn-cont-wrap.btn-sm { margin-top:40px; }
+.txt-list-wrap + .btn-cont-wrap.btn-add,
+div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .txt-list-wrap + .arrow-button-list { margin-top:10px; }
 .txt-list-wrap + .form-wrap { margin-top:40px; }
 .result-area .txtbox-wrap { margin-top:20px; }
@@ -744,7 +744,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-sm { margin-top:40px; }
 .layer-up .default-wrap .price-input + .check-account { margin-top:15px; }
 
  /* 여유자금 계산을 완료 한 로그인 사용자 팝업 */
-/* .layerpopup:has(.btn-cont-wrap:not(.btn-sm)) .btn { padding:0; } (청)찜한상품버튼에도 적용되서 주석처리=>여유자금계산기용유니크클래스필요 */
+/* .layerpopup:has(.btn-cont-wrap:not(.btn-add)) .btn { padding:0; } (청)찜한상품버튼에도 적용되서 주석처리=>여유자금계산기용유니크클래스필요 */
 
 /* 여유자금 계산기 doughnut 차트 */
 .chart-box { overflow:hidden; position:relative; padding:150px 0; }
@@ -1005,9 +1005,9 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-sm { margin-top:40px; }
 .chart-wrap .inquiry-set-wrap { margin:0; padding:0; }
 .sub-top-wrap .txt-list-wrap .txt-detail-area { background:#FFFFFF; }
 .sub-top-wrap:has(.txt-list-wrap) { padding:30px 20px; }
-.default-wrap:has(.txt-list-wrap) .btn-cont-wrap.btn-sm { margin-top:40px; }
+.default-wrap:has(.txt-list-wrap) .btn-cont-wrap.btn-add { margin-top:40px; }
 /* .default-wrap > .tit-wrap { padding:20px 0 40px; } */
-.txt-list-wrap .btn-cont-wrap.btn-sm:first-of-type { margin-top:20px; }
+.txt-list-wrap .btn-cont-wrap.btn-add:first-of-type { margin-top:20px; }
 
 
 /** 230829~ 이청아 **/
