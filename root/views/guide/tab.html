@@ -59,6 +59,9 @@
             $("#headerWrap").load("../includes/header.html");
         });
         </script>
+        <style>
+            h3{ margin:50px 0 20px; }
+        </style>
     </div>
 	<!-- //header -->
     
@@ -68,13 +71,58 @@
             <!--contents -->
             <div class="contents">
                 <div class="default-wrap">
-                    
-                    <div class="step-wrap">
-                        <div class="step-line" aria-label="총 6단계 중 1단계 진행중">
-                            <div class="step-bar" style="width: 33.3333%;"></div>
+                    <h3>Case 1 - 상단에 위치</h3>
+                    <section class="tabs-wrap">
+                        <div class="tabs">
+                            <ul class="tab-item">
+                                <li class="on" data-tab="tab-cont001"><a href="#none">TAB1</a></li>
+                                <li data-tab="tab-cont002" class=""><a href="#none">TAB2</a></li>
+                                <li data-tab="tab-cont003" class=""><a href="#none">TAB3</a></li>
+                            </ul>
+                            <div class="tab-content-area">
+
+                                <div id="tab-cont001" class="tab-content on">
+                                     탭내용1
+                                </div>
+
+                                <div id="tab-cont002" class="tab-content dp-none">
+                                    탭내용2
+                                </div>
+
+                                <div id="tab-cont003" class="tab-content dp-none">
+                                   탭 내용3
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="num"><strong class="current">2</strong>/<span class="tot">6</span></div>
-                    </div>
+                    </section>
+
+                    <h3>Case 2 - 본문 컨텐츠 영역</h3>
+                    <section class="tabs-wrap type2">
+                        <div class="tabs">
+                            <ul class="tab-item">
+                                <li class="on" data-tab="tab-cont003"><a href="#none">TAB1</a></li>
+                                <li data-tab="tab-cont004" class=""><a href="#none">TAB2</a></li>
+                                <li data-tab="tab-cont005" class=""><a href="#none">TAB3</a></li>
+                            </ul>
+                            <div class="tab-content-area">
+
+                                <div id="tab-cont003" class="tab-content on">
+                                     탭내용1
+                                </div>
+
+                                <div id="tab-cont004" class="tab-content dp-none">
+                                    탭내용2
+                                </div>
+
+                                <div id="tab-cont005" class="tab-content dp-none">
+                                   탭 내용3
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                    
 
                 </div>
             </div>

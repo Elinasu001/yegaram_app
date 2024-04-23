@@ -641,12 +641,6 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .fix-tag span,
 .fix-tag a { margin-right:10px; }
 .fix-tag a { color:#999999; }
-.tabs-wrap.type2 { margin-top:15px; }
-.tabs-wrap.type2 .tab-item:before { content:none; }
-.tabs-wrap.type2 .tab-item li { line-height:inherit; height:inherit; border-radius:23px; margin-right:6px; margin-top:10px; background:#F4F5FB; }
-.tabs-wrap.type2 .tab-item li a { padding:6px 15px; font-size:0.66667rem; line-height:1.58334; }
-.tabs-wrap.type2 .tab-item li.on { border-bottom:none; font-weight:500; background:#260F54!important;}
-.tabs-wrap.type2 .tab-item li.on a { color:#FFFFFF; }
 .terms-list.type2 > li > span { padding:4px 8px; border-radius:5px; border:1px solid #DDDDDD;}
 .terms-list.type2 > li > p { margin-top:10px; font-weight:400; }
 .fix-tag + .tabs-wrap { margin-top:35px; }
@@ -1507,19 +1501,26 @@ body.on { position:fixed; top:0; }
 .lypop-type .btn-layer-close{top:5px;width:40px;height:40px;background:url("../images/common/btn_close.png") no-repeat 50%/24px auto;}
 
 
-/*** 탭 ***/ /*(청)2023-06-19 banklistWrap 선택자 삭제-test필요 | (청)2023-06-21 float/dp-ib/w100세트삭제-test필요*/
+/*** 탭 ***/
+/**Case 1 - 상단에 위치**/
 .tabs-wrap.vs-hidden { visibility:hidden; }
 .tabs-wrap .tab-item { position:relative; background:#fff; font-size:0; }
-.tabs-wrap .tab-item:before { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:#EEEEEE; }
-.tabs-wrap .tab-item li { display:inline-block; position:relative; height:42px; margin-right:20px; font-size:1rem; line-height:42px; }
+.tabs-wrap .tab-item li { display:inline-block; position:relative; height:56px; margin-right:20px; font-size:1rem; line-height:56px; }
 .tabs-wrap .tab-item li:last-child { margin-right:0; }
 .tabs-wrap .tab-item li a { display:block; padding:0 2px; color:#666666; line-height:inherit; text-align:center; }
 .tabs-wrap .tab-item li.on,
-.tabs-wrap .swiper-pager li.swiper-pagination-bullet-active { border-bottom:2px solid #260F54; font-weight:700; color:#260F54; }
+.tabs-wrap .swiper-pager li.swiper-pagination-bullet-active { border-bottom:2px solid #4E32A5; font-weight:600; color:#4E32A5; }
 .tabs-wrap .tab-item li.on a,
-.tabs-wrap .swiper-pager li.swiper-pagination-bullet-active a { color:#260F54; }
-
+.tabs-wrap .swiper-pager li.swiper-pagination-bullet-active a { color:#4E32A5; }
 .tabs-wrap .request-wrap { margin-top:20px; }
+/*Case 2 - 본문 컨텐츠 영역*/
+.tabs-wrap.type2 .tab-item { padding:4px; border-radius:10px; background:#F8F8F8; }
+.tabs-wrap.type2 .tab-item:before { display:none; }
+.tabs-wrap.type2 .tab-item li { width:50%; margin-right:0; border:#F8F8F8; background:#F8F8F8; color:#666; font-size:0.88889rem; }
+.tabs-wrap.type2 .tab-item li.on { border:1px solid #260F54; border-radius:8px; background:#fff; font-weight:bold; }
+.tabs-wrap.type2 .tab-item li a { padding:0; }
+
+
 
 /** _탭리스트 쭉 뻗는 case **/
 .tabs-wrap .tab-item.type-spread li,
@@ -2174,11 +2175,6 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 /* 금융계산기 */
 .fin-cal-wrap { padding:25px 20px; border-radius:15px; background:#fff; box-shadow:0px 2px 6px 2px rgba(99,113,133,0.1); }
-.tabs.type2 .tab-item { padding:4px; border-radius:10px; background:#F8F8F8; }
-.tabs.type2 .tab-item:before { display:none; }
-.tabs.type2 .tab-item li { width:50%; margin-right:0; border:#F8F8F8; background:#F8F8F8; color:#666; font-size:0.88889rem; }
-.tabs.type2 .tab-item li.on { border:1px solid #260F54; border-radius:8px; background:#fff; font-weight:bold; }
-.tabs.type2 .tab-item li a { padding:0; }
 .fin-cal-wrap .sub-tit-wrap { margin:0 0 20px 0; }
 .fin-cal-wrap .tab-content-area .s-txt { margin:25px 0 15px 0; }
 .fin-cal-wrap .tab-content-area .bg-box { margin-top:20px; }
