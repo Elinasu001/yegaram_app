@@ -29,14 +29,20 @@ body.fix { overflow:hidden; }
 
 
 /* 공통 - 컨텐츠 in 버튼 */
-.btn-cont-wrap { display:flex; gap:10px; width:100%; padding:0; text-align:center; align-items:start; }
+.btn-cont-wrap { display:flex; gap:10px; /*width:100%;*/ padding:0; text-align:center; align-items:start; }
 .btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:14px 5px; border-radius:30px; background:linear-gradient(320deg, rgba(38,15,84,1) 0%, rgba(61,18,146,1) 100%); color:#fff; font-size:1rem; font-weight:700; text-align:center; }
-.btn-cont-wrap .btn.btn-add {display:inline-block; width:unset; height:48px;  padding:12px 54px; background:#FFFFFF; border:1px solid #4E32A5; font-size:1rem; line-height:1.38889rem; font-weight:500; color:#4E32A5; }
-.btn-cont-wrap .btn.btn-sm { display:inline-block; width:unset; height:34px; padding:7px 17px;  background:#FFFFFF; border:1px solid #DDDDDD; border-radius:17px;  font-size:0.77778rem;  font-weight:400; color:#26282C; }
-.btn-cont-wrap .btn.btn-sm.gray { background: #F1F1F1; border:1px solid #F1F1F1; color:#666666; }
-.btn-cont-wrap .btn.btn-sm.blue { background: #F2F4F6; border:1px solid #F2F4F6; color:#26282C; }
-.btn-cont-wrap .btn.btn-mini { display:inline-block; width:unset; height:23px; padding:3px 6px; background:#FFFFFF; border:1px solid #612AD0; border-radius:13px; font-size:0.66667rem; font-weight:400; color:#612AD0; }
+.btn.btn-add {display:inline-block; width:unset; height:48px;  padding:12px 54px; background:#FFFFFF; border:1px solid #4E32A5; font-size:1rem; line-height:1.38889rem; font-weight:500; color:#4E32A5; }
+.btn.btn-sm { display:inline-block; width:unset; height:30px; padding:7px 16px;  background:#FFFFFF; border:1px solid #DDDDDD; border-radius:17px;  font-size:0.77778rem; line-height: 1rem; font-weight:400; color:#26282C; }
+.btn.btn-sm.gray { background: #F1F1F1; border:1px solid #F1F1F1; color:#666666; }
+.btn.btn-sm.green { background: #E3F6F8; border:1px solid #E3F6F8; color:#00A2C4; }
+.btn.btn-sm.pink { background: #FFE9F5; border:1px solid #FFE9F5; color:#F648AA; }
+.btn.btn-sm.red { background: #FFEFEF; border:1px solid #FFEFEF; color:#FF0000; }
+.btn.btn-sm.blue { background: #EFF4FF; border:1px solid #EFF4FF; color:#2B66F6; }
 
+.btn.btn-sm.other { height:34px; background: #F2F4F6; border:1px solid #F2F4F6; color:#26282C; }
+.btn.btn-mini { display:inline-block; width:unset; height:23px; padding:3px 6px; background:#FFFFFF; border:1px solid #999999; border-radius:13px; font-size:0.66667rem; font-weight:400; color:#666666; }
+.btn.btn-mini.purple { border:1px solid #9F7CE3; color:#612AD0;  }
+.btn.btn-mini.pink { border:1px solid #D00F7B; color:#D00F7B;  }
 
 .btn-cont-wrap.btn-txt { display:inline-block; width:100%; }
 .btn-cont-wrap.btn-txt .btn { display:inline-block; width:unset; height:unset; border-radius:0; background:transparent; color:#333; line-height:unset; }
@@ -55,7 +61,7 @@ body.fix { overflow:hidden; }
 .btn-gray { padding:7px 16px; border-radius:8px; border:1px solid #F2F4F6; background:#F2F4F6; font-size:0.77778rem; line-height:1.5; font-weight:400; color:#454545; }
 .btn.btn-gray { background:#F2F4F6; color:#454545; font-weight:500; }
 .btn.btn-info { background:#FFFFFF; border:1px solid #DDDDDD; font-weight:500; color:#2B0F62; }
-.btn.btn-primary { background:#9F7CE3; font-weight:500; color:#fff; }
+.btn.btn-primary { background:#948CF5; font-weight:500; color:#fff; }
 .btn.btn-sub { background:#F2F4F6; color:#26282C; }
 .btn-cont-wrap .btn.btn-border { border:1px solid #DDDDDD; background:#fff; font-weight:500; color:#454545; }
 

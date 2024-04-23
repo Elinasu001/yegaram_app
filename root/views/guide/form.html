@@ -246,7 +246,7 @@
                         <div class="form-wrap password form-line"><!--D: form-line클래스 : input에 버튼(btnInput) 있을 경우-->
                             <label for="ipt05" class="formlabel">인증번호</label>
                             <div class="input verification">
-                                <input type="text" title="은행선택" id="ipt05" class="inp" name="" value="" required="" placeholder="인증번호">
+                                <input type="number" title="은행선택" id="ipt05" class="inp" name="" value="" required="" placeholder="인증번호">
                                 <div class="verifi-time">
                                     <span class="txt-numb" id="">03:00</span>
                                     <button type="button" class="btn-certi">인증번호요청</button>
@@ -260,11 +260,11 @@
                             <label for="ipt02" class="formlabel">주민등록번호</label>
                             <div class="input">
                                 <span>
-                                    <input type="tel" title="주민등록번호 앞자리" id="ipt02" class="inp" name="" value="" maxlength="6" required="">
+                                    <input type="number" title="주민등록번호 앞자리" id="ipt02" class="inp" name="" value="" maxlength="6" required="">
                                 </span>
                                 <span class="inputTextHyphen">-</span>
                                 <span class="jummin" >
-                                    <input type="tel" title="주민등록번호 뒷자리(첫번째 숫자)" id="jumin1" class="inp" name="jumin1" value="" maxlength="0" required="" >
+                                    <input type="number" title="주민등록번호 뒷자리(첫번째 숫자)" id="jumin1" class="inp" name="jumin1" value="" maxlength="0" required="" >
                                     <span class="jumintext">●●●●●●●</span>
                                 </span>
                             </div>
@@ -280,7 +280,7 @@
                                     </div>
                                 </div>
                                 <span>
-                                    <input type="tel" title="" class="inp " id="" name="" value="" placeholder="휴대폰번호 입력" maxlength="11" required />
+                                    <input type="tel" title="" class="inp " id="" name="" value="" placeholder="휴대폰번호 입력" maxlength="11" required  numberonly/>
                                 </span>
                             </div>
                         </div>
