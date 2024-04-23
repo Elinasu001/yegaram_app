@@ -213,6 +213,11 @@ html.font-size-3{ font-size: 24px;}
 .toast p { display:none; font-size:0.88889rem; line-height:1.4375; font-weight:400; color:#FFFFFF; background:rgb(39 6 107 / 90%); text-align:center; padding:15px 25px; box-shadow:0 5px 15px 0 rgb(55 41 131 / 30%); border-radius:15px; }
 
 
+.col-02 li { width:calc(100% / 2); }
+.col-03 li { width:calc(100% / 3); }
+
+
+
 /** 글로벌 **/
 .bg-box { background:#F8F8F8; padding:20px; border-radius:20px; text-align:left; }
 .bg-box .box-tit { display:block; margin-bottom:10px; font-size:0.88889rem; line-height:1.4375; color:#454545; }
@@ -1511,21 +1516,26 @@ body.on { position:fixed; top:0; }
 /*** 탭 ***/
 /**Case 1 - 상단에 위치**/
 .tabs-wrap.vs-hidden { visibility:hidden; }
-.tabs-wrap .tab-item { position:relative; background:#fff; font-size:0; }
-.tabs-wrap .tab-item li { display:inline-block; position:relative; height:56px; margin-right:20px; font-size:1rem; line-height:56px; }
+.tabs-wrap .tab-item { display:flex; align-items:center; position:relative; background:#fff; font-size:0; }
+.tabs-wrap .tab-item li { display:inline-block; position:relative;  margin-right:20px; padding:14px 0; font-size:1rem; color:#666666; }
 .tabs-wrap .tab-item li:last-child { margin-right:0; }
-.tabs-wrap .tab-item li a { display:block; padding:0 2px; color:#666666; line-height:inherit; text-align:center; }
-.tabs-wrap .tab-item li.on,
-.tabs-wrap .swiper-pager li.swiper-pagination-bullet-active { border-bottom:2px solid #4E32A5; font-weight:600; color:#4E32A5; }
+.tabs-wrap .tab-item li a { display:block; padding:0 2px; line-height:inherit; text-align:center; }
+.tabs-wrap .tab-item li.on { border-bottom:2px solid #4E32A5; font-weight:600; color:#4E32A5; }
 .tabs-wrap .tab-item li.on a,
-.tabs-wrap .swiper-pager li.swiper-pagination-bullet-active a { color:#4E32A5; }
-.tabs-wrap .request-wrap { margin-top:20px; }
+.tabs-wrap.type2 .tab-item li a { padding:0; color:#4E32A5; }
+
+
 /*Case 2 - 본문 컨텐츠 영역*/
-.tabs-wrap.type2 .tab-item { padding:4px; border-radius:10px; background:#F8F8F8; }
+.tabs-wrap.type2 .tab-item { flex-wrap:wrap; padding:4px; min-height:48px; border-radius:24px; background:#F8F8F8; }
 .tabs-wrap.type2 .tab-item:before { display:none; }
-.tabs-wrap.type2 .tab-item li { width:50%; margin-right:0; border:#F8F8F8; background:#F8F8F8; color:#666; font-size:0.88889rem; }
-.tabs-wrap.type2 .tab-item li.on { border:1px solid #260F54; border-radius:8px; background:#fff; font-weight:bold; }
-.tabs-wrap.type2 .tab-item li a { padding:0; }
+.tabs-wrap.type2 .tab-item li {  height:40px; line-height:24px; padding:8px; margin-right:0; font-size:0.89rem; border:0; border-radius:24px;  }
+.tabs-wrap.type2 .tab-item li.on {  background:#fff; font-weight:600; box-shadow:0 0 4px #00000029; }
+.tabs-wrap.type2 .tab-item li a { padding:0; color:#999; }
+.tabs-wrap.type2 .tab-item li.on a {color:#26282C;}
+
+.tabs-wrap.type2 .tab-item.square,
+.tabs-wrap.type2 .tab-item.square li { height:auto; border-radius:10px; }
+
 
 
 
@@ -2367,28 +2377,10 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 
 /*input 추가*/
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col { width:100%; }
-/* .col:first-child, .col-3:first-child, .col-5:first-child { margin-right:4px; }
-.col:last-child, .col-3:last-child, .col-5:last-child { margin-left:4px; } */
+
 .form-row { gap:8px; }
 .form-wrap.login .form-row { gap:0; }
 .form-row:has(.input-hyphen) { gap:4px; }
-
-/* .col { -ms-flex-preferred-size:0;  flex-basis:0;  -ms-flex-positive:1; flex-grow:1; width:50%; }/// */
-.col-1 { -ms-flex: 0 0 10%; flex: 0 0 10%; max-width:10%; }
-.col-2 { -ms-flex: 0 0 20%; flex: 0 0 20%; max-width:20%; }
-.col-3 { -ms-flex: 0 0 30%; flex: 0 0 30%; max-width:30%; }
-.col-4 { -ms-flex: 0 0 40%; flex: 0 0 40%; max-width:40%; }
-.col-5 { -ms-flex: 0 0 50%; flex: 0 0 50%; max-width:50%; }
-.col-6 { -ms-flex: 0 0 60%; flex: 0 0 60%; max-width:60%;}
-.col-7 { -ms-flex: 0 0 70%; flex: 0 0 70%; max-width:70%; }
-.col-8 { -ms-flex: 0 0 80%;flex: 0 0 80%; max-width:80%; }
-.col-9 { -ms-flex: 0 0 90%; flex: 0 0 90%; max-width:90%; }
-.col-10 { -ms-flex: 0 0 100%; flex: 0 0 100%; max-width:100%; }
-
-/* .col:first-child { margin-right:10px; }
-.col:last-child { margin-left:10px; } */
-
 
 
 /** placeholder **/

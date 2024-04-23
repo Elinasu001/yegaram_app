@@ -49,6 +49,11 @@
 	data-activeEnv="${active.env">
 </script>
 
+<style>
+    h3.guid{ padding:30px 0 10px; }
+    p.guid { font-size:14px; }
+    section{ padding:20px 0 !important; }
+</style>
 
 <body>
     <!-- header -->
@@ -59,9 +64,6 @@
             $("#headerWrap").load("../includes/header.html");
         });
         </script>
-        <style>
-            h3{ margin:50px 0 20px; }
-        </style>
     </div>
 	<!-- //header -->
     
@@ -71,7 +73,7 @@
             <!--contents -->
             <div class="contents">
                 <div class="default-wrap">
-                    <h3>Case 1 - 상단에 위치</h3>
+                    <h3 class="guid">Case 1 - 상단에 위치</h3>
                     <section class="tabs-wrap">
                         <div class="tabs">
                             <ul class="tab-item">
@@ -81,7 +83,7 @@
                             </ul>
                             <div class="tab-content-area">
 
-                                <div id="tab-cont001" class="tab-content on">
+                                <div id="tab-cont001" class="tab-content">
                                      탭내용1
                                 </div>
 
@@ -90,33 +92,90 @@
                                 </div>
 
                                 <div id="tab-cont003" class="tab-content dp-none">
-                                   탭 내용3
+                                    탭내용3
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </section>
+
+                    <h3 class="guid">Case 2 - 본문 컨텐츠 영역</h3>
+                    <p class="guid">
+                         - 탭 개수에 따라 tab-item에 col-02, col-03 추가 할것
+                         (현재 2,3,4단까지 나뉘어있음.. 짝수, 홀수로 제어)
+                    </p>
+                    <section class="tabs-wrap type2">
+                        <div class="tabs">
+                            <ul class="tab-item col-02">
+                                <li class="on" data-tab="tab-cont004"><a href="#none">TAB1</a></li>
+                                <li data-tab="tab-cont005" class=""><a href="#none">TAB2</a></li>
+                             </ul>
+                            <div class="tab-content-area">
+
+                                <div id="tab-cont004" class="tab-content">
+                                     탭내용1
+                                </div>
+
+                                <div id="tab-cont005" class="tab-content dp-none">
+                                    탭내용2
                                 </div>
 
                             </div>
                         </div>
                     </section>
 
-                    <h3>Case 2 - 본문 컨텐츠 영역</h3>
+                    <p class="guid">
+                        - 탭버튼 글자가 2줄일경우 tab-item에 square 클래스 추가
+                   </p>    
                     <section class="tabs-wrap type2">
                         <div class="tabs">
-                            <ul class="tab-item">
-                                <li class="on" data-tab="tab-cont003"><a href="#none">TAB1</a></li>
-                                <li data-tab="tab-cont004" class=""><a href="#none">TAB2</a></li>
-                                <li data-tab="tab-cont005" class=""><a href="#none">TAB3</a></li>
-                            </ul>
+                            <ul class="tab-item square col-03">
+                                <li class="on" data-tab="tab-cont007"><a href="#none">개인정보<br />처리방침</a></li>
+                                <li data-tab="tab-cont008" class=""><a href="#none">개인정보<br />처리방침</a></li>
+                                <li data-tab="tab-cont009" class=""><a href="#none">개인정보<br />처리방침</a></li>
+                             </ul>
                             <div class="tab-content-area">
 
-                                <div id="tab-cont003" class="tab-content on">
+                                <div id="tab-cont007" class="tab-content">
                                      탭내용1
                                 </div>
 
-                                <div id="tab-cont004" class="tab-content dp-none">
+                                <div id="tab-cont008" class="tab-content dp-none">
                                     탭내용2
                                 </div>
 
-                                <div id="tab-cont005" class="tab-content dp-none">
-                                   탭 내용3
+                                <div id="tab-cont009" class="tab-content dp-none">
+                                    탭내용3
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="tabs-wrap type2">
+                        <div class="tabs">
+                            <ul class="tab-item square col-02">
+                                <li class="on" data-tab="tab-cont010"><a href="#none">개인정보<br />처리방침</a></li>
+                                <li data-tab="tab-cont011" class=""><a href="#none">개인정보<br />처리방침</a></li>
+                                <li data-tab="tab-cont012" class=""><a href="#none">개인정보<br />처리방침</a></li>
+                                <li data-tab="tab-cont013" class=""><a href="#none">개인정보<br />처리방침</a></li>
+
+                             </ul>
+                            <div class="tab-content-area">
+
+                                <div id="tab-cont010" class="tab-content">
+                                     탭내용1
+                                </div>
+
+                                <div id="tab-cont011" class="tab-content dp-none">
+                                    탭내용2
+                                </div>
+
+                                <div id="tab-cont012" class="tab-content dp-none">
+                                    탭내용3
+                                </div>
+                                <div id="tab-cont013" class="tab-content dp-none">
+                                    탭내용4
                                 </div>
 
                             </div>
