@@ -393,24 +393,24 @@ input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; marg
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
-input:-webkit-autofill:active { -webkit-text-fill-color: #000 !important; -webkit-box-shadow: 0 0 0px 1000px #fff inset !important; box-shadow: 0 0 0px 1000px #fff inset !important; transition: background-color 5000s ease-in-out 0s !important; }
+input:-webkit-autofill:active { -webkit-text-fill-color: #000 !important; -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset !important; box-shadow: 0 0 0px 1000px #FFFFFF inset !important; transition: background-color 5000s ease-in-out 0s !important; }
 
 input:autofill,
 input:autofill:hover,
 input:autofill:focus,
-input:autofill:active { -webkit-text-fill-color: #000 !important; -webkit-box-shadow: 0 0 0px 1000px #fff inset !important; box-shadow: 0 0 0px 1000px #fff inset !important; transition: background-color 5000s ease-in-out 0s !important; }
+input:autofill:active { -webkit-text-fill-color: #000 !important; -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset !important; box-shadow: 0 0 0px 1000px #FFFFFF inset !important; transition: background-color 5000s ease-in-out 0s !important; }
 
 /* 아이디 배경 :issue ( 텍스트 입력 시 배경 사라짐 > type-box일 경우 배경 따로 추가 ) */
-.form-wrap.type-box input,
-.form-wrap.type-box input:-webkit-autofill,
+.form-wrap.type-box input, 
+.form-wrap.type-box input:focus,
 .form-wrap.type-box input:-webkit-autofill:hover,
 .form-wrap.type-box input:-webkit-autofill:focus,
-.form-wrap.type-box input:-webkit-autofill:active { padding:13px !important;  border:1px solid #F8F8F8 !important;  border-radius: 8px;  -webkit-box-shadow: 0 0 0px 1000px #F8F8F8 inset !important; }
-
+.form-wrap.type-box input:-webkit-autofill:active  {  padding:15px !important;  border:1px solid #F8F8F8 !important;  border-radius: 8px;  -webkit-box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;   box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;  background: #F8F8F8; }
+.form-wrap.type-box .btn-input { right:10px; }
 
 
 input.error { border-color:#FF0000; }
-.form-wrap input:focus { border-color:#260F54; }
+/* .form-wrap input:focus { border-color:#260F54; } */
 .form-wrap > div { border-color:#260F54; }
 .form-wrap input:focus-visible,
 .form-wrap textarea:focus-visible { outline:none; }
@@ -490,10 +490,10 @@ textarea:read-only { border-color:#DDDDDD !important; }
 
 .form-wrap > div:last-child { margin-bottom:0; }
 /* .form-wrap > div.input input::placeholder { color: transparent; } */
-.form-wrap.type-box > div.input input::placeholder { font-weight:300; color:#999999; }
+/* .form-wrap.type-box > div.input input::placeholder { font-weight:300; color:#999999; } */
 /* .layerpopup .form-wrap > div.input input::placeholder { color:#CCCCCC; }
  */
-.form-wrap.searchInput > div.input input::placeholder { color:#CCCCCC; }
+/* .form-wrap.searchInput > div.input input::placeholder { color:#CCCCCC; } */
 /* .formlabel.onbasic { top:40px; width:100%; font-size:1rem; }
 .formlabel.action,
 .formlabel.onbasic:has(+.input input:disabled) { top:0; width:auto; font-size:0.77778rem; line-height:1.5; }
@@ -564,12 +564,6 @@ input[type="file"]::file-selector-button { display:none; }
 .btn-file-del { display:none; position:absolute; top:50%; right:20px; width:20px; height:20px; background: #FFFFFF; border:none; border-radius: 10px; background:url("../images/common/ico_minus.png") no-repeat 50%/20px auto; color:transparent; font-size:0; transform:translateY(-50%); }
 .added .btn-file-del { display:block; }
 
-/* tab 안 검색창 (회색 배경 검색창) */
-.form-wrap.searchInput.bg-gray input { background:#F8F8F8; border:none; padding:15px; border-radius:10px; }
-/* .form-wrap.searchInput.bg-gray input:focus 
-.form-wrap.searchInput.bg-gray input:valid { color:#333333 !important; } */
-.form-wrap.searchInput.bg-gray .btn-search { right:15px; }
-.form-wrap.searchInput.bg-gray .btn-delete { right:49px; }
 
 /* .search-area.type-box { padding-top:0; }
 .form-wrap.email-wrap > div.input input,
@@ -1884,15 +1878,15 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 .btn-search { width:24px; height:24px; padding:0; background:url("../images/common/ico_search.png") no-repeat 50%/24px auto; text-indent:-9999px; }
 .btn-search:after { content:''; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:120%; height:120%; }
 .btn-delete { width:24px; height:24px; padding:0; background:url("../images/common/ico_delete.png") no-repeat 50%/24px auto; text-indent:-9999px; }
-.btn-delete:after { content:''; position:absolute; right:-10%; top:50%; transform:translateY(-50%); width:120%; height:120%; }
-.form-wrap .btn-search { position:absolute; top:50%; right:0; transform:translateY(-50%); }
-.form-wrap .btn-delete { position:absolute; bottom:14px; right:34px; }
+/* .btn-delete:after { content:''; position:absolute; right:-10%; top:50%; transform:translateY(-50%); width:120%; height:120%; } */
+.form-wrap .btn-input{ position:absolute; top:50%; right:0px; transform:translateY(-50%); font-size:0; }
+.form-wrap .btn-delete {}
 .form-wrap.type2 .btn-delete { bottom:10px; }
-.form-wrap.searchInput .btn-delete { bottom:inherit; top:50%; right:35px; transform:translateY(-50%); }
+/* .form-wrap.searchInput .btn-delete { bottom:inherit; top:50%; right:35px; transform:translateY(-50%); } */
 .form-wrap .formlabel.onbasic ~ .btn-delete { display:none; }
 .form-wrap .formlabel.onbasic.action ~ .btn-delete { display:block; top:inherit; bottom: 14px; transform:none; }
 .form-wrap .input:has(.static-unit) ~ .btn-delete { right:32px; }
-.form-wrap.type-box .btn-delete { position:absolute; right:15px; }
+/* .form-wrap.type-box .btn-delete { position:absolute; right:15px; } */
 
 
 /** 검색 영역 **/

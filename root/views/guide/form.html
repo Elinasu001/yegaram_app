@@ -176,14 +176,17 @@
 
 
                         <!-- 이메일 검색 -->
-                        <div class="form-wrap searchInput bg-gray">
+                        <div class="form-wrap type-box">
                             <div class="input">
-                                <input type="text" id="email" class="inp" pattern=".+@\." placeholder="이메일 입력" name="" value="" required="">
+                                <input type="email" id="" class="inp" pattern=".+@\." placeholder="이메일 입력" name="" value="" required="">
                             </div>
-                            <button type="button" class="btn-delete">검색어 삭제</button>
-                            <button type="button" class="btn-search">검색</button>
-                            <p class="error-txt">이메일을 입력해주세요</p>
+                            <div class="btn-input">
+                                <button type="button" class="btn-delete">검색어 삭제</button>
+                                <button type="button" class="btn-search">검색</button>
+                            </div>
                         </div>
+
+                        
                         <ul class="email-list active"><!-- D: 클래스 active로 제어 -->
                             <li><a href="#none"><span class="inputId"></span>@gmail.com</a></li>
                             <li><a href="#none"><span class="inputId"></span>@naver.com</a></li>
@@ -245,11 +248,11 @@
 
                         <div class="form-wrap password form-line"><!--D: form-line클래스 : input에 버튼(btnInput) 있을 경우-->
                             <label for="ipt05" class="formlabel">인증번호</label>
-                            <div class="input verification">
+                            <div class="input">
                                 <input type="number" title="은행선택" id="ipt05" class="inp" name="" value="" required="" placeholder="인증번호">
-                                <div class="verifi-time">
+                                <div class="btn-input">
                                     <span class="txt-numb" id="">03:00</span>
-                                    <button type="button" class="btn-certi">인증번호요청</button>
+                                    <button type="button" class="btn btn-sm">인증번호요청</button>
                                 <!-- <button type="button" class="btn-certi">재전송</button> --><!--D: 인증번호 재전송 -->
                                 </div>
                             </div>
@@ -290,8 +293,10 @@
                             <div class="input">
                                 <input type="search" title="" id="" class="" name="" value="" placeholder="검색" required="">
                             </div>
-                            <button type="button" class="btn-search">검색</button>
-                            <button type="button" class="btn-delete">검색어 삭제</button>
+                            <div class="btn-input">
+                                <button type="button" class="btn-delete">검색어 삭제</button>
+                                <button type="button" class="btn-search">검색</button>
+                            </div>
                         </div>
                         <!-- 팝업 검색폼 -->
 
@@ -299,8 +304,10 @@
 							<div class="input">
 								<input type="search" title="" id="" class="" name="" value="" placeholder="검색 입력" required="">
 							</div>
-							<button type="button" class="btn-search">검색</button>
-							<button type="button" class="btn-delete">검색어 삭제</button>
+                            <div class="btn-input">
+                                <button type="button" class="btn-delete">검색어 삭제</button>
+                                <button type="button" class="btn-search">검색</button>
+                            </div>
 						</div>
 
                         <!--*** 주소 검색-->
@@ -310,8 +317,10 @@
                                 <div class="input">
                                     <input type="search" title="" id="" class="" name="" value="" placeholder="도로명주소, 건물명 또는 지번" required="" >
                                 </div>
-                                <button type="button" class="btn-search">검색</button>
-                                <button type="button" class="btn-delete">검색어 삭제</button>
+                                <div class="btn-input">
+                                    <button type="button" class="btn-delete">검색어 삭제</button>
+                                    <button type="button" class="btn-search">검색</button>
+                                </div>
                             </div>
                             <dl class="juso-ex-list" id="exSearch">
                                 <dt>도로명 + 건물번호</dt>
