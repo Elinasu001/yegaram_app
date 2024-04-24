@@ -266,7 +266,7 @@ html.font-size-3{ font-size: 24px;}
 .point-red{ color:#FF0000; }
 
 /* 기타 -그레이 */
-.flag { display:inline-block; width:auto; height:23px; margin-right:6px; padding:3px 6px; border-radius:13px; border:1px solid #999999; background:#FFFFFF; font-size:0.66667rem; font-weight:400; color:#666666; letter-spacing:-.5px; text-align:center; vertical-align:middle; } /* 접수완료, 긍정 - 파랑 */
+.flag { display:inline-block; width:auto; height:23px; margin-right:6px; padding:4px 6px; border-radius:13px; border:1px solid #999999; background:#FFFFFF; font-size:0.66667rem; font-weight:400; color:#666666; letter-spacing:-.5px; text-align:center; vertical-align:middle; } /* 접수완료, 긍정 - 파랑 */
 .flag.style2 { border:1px solid #9F7CE3; color:#612AD0; } /* 예적금 - 보라색 */
 .flag.style3 {border:1px solid #D00F7B; color:#D00F7B;  }/* 대출- 핑크 */
 
@@ -2306,6 +2306,8 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 .progress-txt { display:flex; position:relative; margin:7px 0 20px; font-size:0.66667rem; line-height:1.58334;  }
 .progress-txt > li { margin-right:10px; color:#666666; }
+.progress-txt > li:last-child { margin-right:0; }
+.progress-txt > li.right { flex:1; display:flex; justify-content: flex-end; }
 .progress-txt > li span.num { color:#999999; }
 .progress-txt > li.flag-right { position:absolute; top:50%; right:0; transform:translate(0, -50%); margin:0; }
 .progress-txt > li.flag-right .flag { margin-right:0; }

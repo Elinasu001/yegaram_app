@@ -40,6 +40,8 @@ body.fix { overflow:hidden; }
 .btn.btn-sm.blue { background: #EFF4FF; border:1px solid #EFF4FF; color:#2B66F6; }
 
 .btn.btn-sm.other { height:34px; background: #F2F4F6; border:1px solid #F2F4F6; color:#26282C; }
+ 
+.btn.sq { border-radius:6px; }
 
 .btn-cont-wrap.btn-txt { display:inline-block; width:100%; }
 .btn-cont-wrap.btn-txt .btn { display:inline-block; width:unset; height:unset; border-radius:0; background:transparent; color:#333; line-height:unset; }
