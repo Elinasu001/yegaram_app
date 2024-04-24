@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803133439"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803133439"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803133439"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803133439"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803133439"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803133439"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803133439"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803133439"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803133439" id="biz_common" 
+	data-menuId=""
+	data-frameId="main"
+	data-serviceCd="main.frm" 
+	data-serverTime="20230803133439"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+<link href="/resources/css/main_renewal.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script type="text/javascript">
+var PageFunc = function() {
+	var _back = function() { // 뒤로가기
+		// TODO 앱 종료 메시지 등
+		return true;
+	}
+	var _proc = function() { // 본처리
+		return true;
+	}
+	var _cancel = function() { // 그만하기
+	}
+	return {
+		back : _back,
+		proc : _proc,
+		cancel : _cancel
+	};
+}();
+
+function goNotiDetail(seq){
+	var notiDetailForm = makeForm("notiDetailForm");
+	addFormData(notiDetailForm, "LINK_ACT", "BBS_SELECT");
+	addFormData(notiDetailForm, "txGbnCd", "N");
+	addFormData(notiDetailForm, "SEQ", seq);
+	doActionFrame("etc/inq/noti2", notiDetailForm);
+}
+function goFaqDetail(seq){
+	var notiDetailForm = makeForm("notiDetailForm");
+	addFormData(notiDetailForm, "LINK_ACT", "BBS_SELECT");
+	addFormData(notiDetailForm, "txGbnCd", "F");
+	addFormData(notiDetailForm, "SEQ", seq);
+	doActionFrame("etc/inq/faq2", notiDetailForm); 
+}
+$(document).ready(function(){
+	
+    var bbsSelectForm = makeForm("bbsSelectForm");
+    addFormData(bbsSelectForm, "txGbnCd", "NOTI"); // NOTI:공지 RKEY:추천검색어 FAQ:FAQ 배너:BNN 팝업:POP 영업점:BRC
+    doAction("MAIN_SELECT", bbsSelectForm, function(resDs){
+    	var tmp_html = '<div class="swiper-slide"><a href="javascript:#FUNC#"><p class="notice-tit">#TITLE#</p><span class="notice-date">#OPEN_START_DT#</span></a></div>';
+        var add_html = "";
+        var noti_cnt = 0;
+        $.each(resDs.REC, function(idx, item){
+        	var r_html = tmp_html;
+        	r_html = r_html.replace("#FUNC#", "goNotiDetail('"+item.SEQ+"');"); 
+        	r_html = r_html.replace("#TITLE#", item.TITLE);
+        	r_html = r_html.replace("#OPEN_START_DT#", item.OPEN_START_DT);
+        	add_html += r_html;
+        	noti_cnt++;
+        });
+        $("#MAIN_NOTI").html(add_html);
+        $("#MAIN_NOTI_CNT").html(noti_cnt);
+        
+     	// 공지사항
+        var noticeSlider = new Swiper('.notice-slider-wrap.swiper', { // 2023-06-20 선택자 변경 : swiper-container => swiper
+            direction : 'vertical',
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            loop : true,
+            loopedSlides: 1,
+            observer: true,
+            observeParents: true,
+        });
+     
+    }, false);
+    
+    var bbsSelect2Form = makeForm("bbsSelect2Form");
+    addFormData(bbsSelect2Form, "txGbnCd", "BNN"); // NOTI:공지 RKEY:추천검색어 FAQ:FAQ 배너:BNN 팝업:POP 영업점:BRC
+    doAction("MAIN_SELECT", bbsSelect2Form, function(resDs){
+    	var tmp_html = '';
+    	
+        var recomSlider = new Swiper('.recom-slider-wrap .swiper', { // 2023-06-20 선택자 변경 : swiper-container => swiper
+            effect: "cards",
+            cardsEffect: {
+                perSlideRotate: 0,
+                slideShadows: false,
+            },
+            // 2023-06-23(2) 수정
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+                reverseDirection: true,
+            },
+            loop : true,
+        });
+        
+    }, false);
+    
+    var bbsSelect3Form = makeForm("bbsSelect3Form");
+    addFormData(bbsSelect3Form, "txGbnCd", "QMNU"); // QMNU:빠른메뉴
+    doAction("MAIN_SELECT", bbsSelect3Form, function(resDs){
+    	 var tmp_html = '<li><a href="javascript:void(0);" onclick="javascript:#URI#">#NAME#</a></li>';
+         var add_html = "";
+         $.each(resDs.REC, function(idx, item){
+         	var r_html = tmp_html;
+         	r_html = r_html.replace("#URI#", "doActionMenu('"+item.URI+"');");
+         	r_html = r_html.replace("#NAME#", item.NAME);
+         	add_html += r_html;
+         });
+         $("#MAIN_QUICK_MENU").html(add_html);
+         
+    }, false);
+    
+    var bbsSelect4Form = makeForm("bbsSelect4Form");
+    addFormData(bbsSelect4Form, "txGbnCd", "FAQ"); // NOTI:공지 RKEY:추천검색어 FAQ:FAQ 배너:BNN 팝업:POP 영업점:BRC
+    doAction("MAIN_SELECT", bbsSelect4Form, function(resDs){
+    	var tmp_html = '<li><a href="javascript:#FUNC#" class="go-link">#TITLE#</a></li>';
+        var add_html = "";
+        $.each(resDs.REC, function(idx, item){
+        	var r_html = tmp_html;
+        	r_html = r_html.replace("#FUNC#", "goFaqDetail('"+item.SEQ+"');"); 
+        	r_html = r_html.replace("#TITLE#", item.TITLE);
+        	add_html += r_html;
+        });
+        $("#MAIN_FAQ").html(add_html);
+    }, false);
+    
+    var bbsSelect5Form = makeForm("bbsSelect5Form");
+    addFormData(bbsSelect5Form, "txGbnCd", "POP"); // NOTI:공지 RKEY:추천검색어 FAQ:FAQ 배너:BNN 팝업:POP 영업점:BRC
+    doAction("MAIN_SELECT", bbsSelectForm, function(resDs){
+    	if (resDs.REC.length > 1) {
+    		// TODO 팝업 노출
+    	}
+    }, false);
+    
+	// 하단배너는 고정
+    var newsSlider = new Swiper('.news-slider-wrap.swiper', { 
+        slidesPerView : 1.06, /*1.1*/
+        spaceBetween : 20,
+        pagination : {
+            el : '.swiper-pagination',
+            clickable : true,
+        },
+        // 2023-06-23 추가
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        loop : true,
+    });
+    
+});
+</script>
+</head>
+<body>
+	<div id="menuDiv">
+		<!-- // s : 전체메뉴 -->
+		<div id="menuWrap" class="menuWrap" style="left: 0%;">
+			<div class="all-menu-wrap">
+				<div class="all-menu-header">
+					<div class="all-menu-info">
+						<a href="javascript:void(0);" onclick="javascript:biz.login(function(res){doReload();});" class="btn-txt md">로그인</a>
+						<ul>
+							<li><a onclick="goMainPage();" class="btn-home">홈으로</a></li>
+							<li><a onclick="doActionMenu('usr/mng/usrChng','USR_INFO_MNG');" class="btn-mypage">마이페이지</a></li>
+							<!-- <li><a onclick="doActionMenu('etc/mng/envMng');" class="btn-option">설정</a></li> [퍼블] 삭제 -->
+							<li><a class="btn-menu-close">닫기</a></li>
+						</ul>
+					</div>
+					<div class="txtbox-wrap flexRight">
+                        <a href="javascript:void(0);" class="btn-txt" onclick="openPopupUp('all-menu-view');">메뉴 펄쳐보기</a>
+                    </div>
+					
+					<ul class="top-menu">
+						<li><a href="javascript:void(0);" onclick="openPopupUp('NA25000000_Pop');">고객센터</a></li>
+						<li><a href="javascript:void(0);" onclick="openPopupUp('NA26000000_Pop');">인증/보안</a></li>
+						<li><a href="javascript:void(0);" onclick="openPopupUp('NA28000000_Pop');">사고신고</a></li>
+						<li><a href="javascript:void(0);" onclick="openPopupUp('NA27000000_Pop');">공지사항<em class="count-flag"><span id="">N</span></em></a></li> <!-- D:  count-flag : 공지사항 알림 있을 경우  / -->
+					</ul>
+					<!-- <dl class="quick-menu">
+						<dt>빠른서비스<button type="button" class="btn-allopen" onclick="openPopup('all-menu-view');">메뉴펼쳐보기</button></dt>
+						<dd>
+							<a href="javascript:void(0);" onclick="doActionMenu('lon/prc/loanSign','LOAN_SIGN');">전자계약서작성</a>
+							<a href="javascript:void(0);" onclick="doActionMenu('lon/mng/onlPprSnd1','LOAN_DOC_MNG&amp;txGbnCd=P');">온라인서류제출</a>
+							<a href="javascript:void(0);" onclick="doActionMenu('lon/mng/crdInqAgr1','CRDT_AGR_PRC');">신용조회동의</a>
+						</dd>
+					</dl> -->
+				</div>
+				<div class="all-menu-area">
+					<div class="menuDepth1">
+						<ul>
+							<li class="on">
+								<a href="javascript:void(0);" data-focus="NA21000000">마이뱅킹</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" data-focus="NA22000000">대출</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" data-focus="NA23000000">예적금</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" data-focus="NA24000000">전자금융관리</a>
+							</li>
+						</ul>
+					</div>
+					<div class="menuDepth2">
+						<ul class="NA21000000 on">
+							<li><a href="javascript:void(0);">내 계좌</a></li>
+							<li><a href="javascript:void(0);">대출진행상태조회</a></li>
+							<li><a href="javascript:void(0);">이체</a></li>
+							<li><a href="javascript:void(0);">이체결과조회</a></li>
+							<li><a href="javascript:void(0);">자동이체</a></li>
+							<li><a href="javascript:void(0);" >자동이체관리</a></li>
+							<li><a href="javascript:void(0);" >자동이체결과조회</a></li>
+						</ul>
+						<ul class="NA22000000">
+							<li><a href="javascript:void(0);">대출상품</a></li>
+							<li><a href="javascript:void(0);">간편한도조회</a></li>
+							<li><a href="javascript:void(0);">대출이어하기</a></li>
+							<li><a href="javascript:void(0);">신용조회동의</a></li>
+							<li><a href="javascript:void(0);">온라인서류제출</a></li>
+							<li><a href="javascript:void(0);">전자계약서 작성하기</a></li>
+							<li><a href="javascript:void(0);">계약서 확인(다운로드)</a></li>
+							<li><a href="javascript:void(0);">대출이용가이드</a></li>
+						</ul>
+						<ul class="NA23000000">
+							<li><a href="javascript:void(0);">예적금상품</a></li>
+							<li><a href="javascript:void(0);">빠른계좌개설</a></li>
+						</ul>	
+						<ul class="NA24000000">
+							<li><a href="javascript:void(0);">지연이체관리</a></li>
+							<li><a href="javascript:void(0);">입금지정계좌관리</a></li>
+							<li><a href="javascript:void(0);">이체한도관리</a></li>
+							<li><a href="javascript:void(0);">한도제한해제</a></li>
+							<li><a href="javascript:void(0);">해지계좌조회</a></li>
+							<li><a href="javascript:void(0);">거래중지계좌</a></li>
+							<li><a href="javascript:void(0);">비과세한도조회</a></li>
+							<li><a href="javascript:void(0);">비과세종합저축증빙자료제출</a></li>
+							<li><a href="javascript:void(0);">계좌비밀번호 오류해제</a></li>
+							<li><a href="javascript:void(0);">전자금융가입</a></li>
+						</ul>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- e : 전체메뉴 // -->
+							
+		<!-- // s : 메뉴 펼쳐보기 팝업 -->
+		<div id="all-menu-view" class="layerpopup laypop-all on" tabindex="0" data-focus-prev="btn-menu-close">
+			<div class="pop-header none-bor">
+				<h2 class="pop-title">전체메뉴</h2>
+				<button type="button" name="button" class="btn-layer-close" onclick="closePopup('all-menu-view')">닫기</button>
+			</div>
+			<div class="pop-con-wrap">
+				<div class="search-wrap">
+					<div class="search-area">
+						<div class="form-wrap">
+							<div class="input">
+								<input type="search" title="" id="MENU_SEARCH_TEXT" class="" name="" value="" placeholder="검색어를 입력하세요." required="">
+							</div>
+							<button type="button" class="btn-search" onclick="javascript:fnMenuSearch();">검색</button>
+							<button type="button" class="btn-delete">검색어 삭제</button>
+						</div>
+					</div>
+					<ul class="tab-slidemenu">
+						<li class="on"><a href="javascript:void(0);" data-focus="NA21000000">마이뱅킹</a></li>
+						<li><a href="javascript:void(0);" data-focus="NA22000000">대출</a></li>
+						<li><a href="javascript:void(0);" data-focus="NA23000000">예적금</a></li>
+						<li><a href="javascript:void(0);" data-focus="NA24000000">전자금융관리</a></li>
+						<li><a href="javascript:void(0);" data-focus="NA25000000">고객센터</a></li>
+						<li><a href="javascript:void(0);" data-focus="NA26000000">인증/보안</a></li>
+						<li><a href="javascript:void(0);" data-focus="NA27000000">사고신고</a></li>
+						<!-- <li><a href="javascript:void(0);" data-focus="NA28000000">사고신고</a></li> -->
+					</ul>
+				</div>
+				
+				<div class="listmenu-box" id="MENU_SEARCH_AREA">
+					<div class="result-area nodata" id="jobSearchNoData" >
+						<p lass="desc">일치하는 검색 결과가 없어요</p>
+					</div>
+					<ul id="NA21000000">
+						<li class="tit">마이뱅킹</li>
+						<li><a href="javascript:void(0);">내계좌</a></li>
+						<li><a href="javascript:void(0);">대출진행상태조회</a></li>
+						<li><a href="javascript:void(0);">이체</a></li>
+						<li><a href="javascript:void(0);">이체결과조회</a></li>
+						<li><a href="javascript:void(0);">자동이체</a></li>
+						<li><a href="javascript:void(0);">자동이체 관리</a></li>
+						<li><a href="javascript:void(0);">자동이체 결과조회</a></li>
+					</ul>	
+				
+					<ul id="NA22000000">
+						<li class="tit">대출</li>
+							<li><a href="javascript:void(0);">대출상품</a></li>
+							<li><a href="javascript:void(0);">간편한도조회</a></li>
+							<li><a href="javascript:void(0);">대출이어하기</a></li>
+							<li><a href="javascript:void(0);">신용조회동의</a></li>
+							<li><a href="javascript:void(0);">온라인서류제출</a></li>
+					</ul>	
+				
+					<ul id="NA23000000">
+						<li class="tit">예/적금</li>
+						<li><a href="javascript:void(0);">예적금상품 모두보기</a></li>
+						<li><a href="javascript:void(0);">빠른계좌개설</a></li>
+					</ul>	
+					<ul id="NA24000000">
+						<li class="tit">전자금융관리</li>
+						<li><a href="javascript:void(0);">즉시입금지정계좌관리</a></li>
+						<li><a href="javascript:void(0);">이체한도관리</a></li>
+						<li><a href="javascript:void(0);">한도제한해제</a></li>
+						<li><a href="javascript:void(0);">한지계좌조회</a></li>
+						<li><a href="javascript:void(0);">거래중지계좌</a></li>
+						<li><a href="javascript:void(0);">비과세한도조회</a></li>
+						<li><a href="javascript:void(0);">비과세종합저축증빙자료제출</a></li>
+						<li><a href="javascript:void(0);">계좌비밀번호 오류해제</a></li>
+						<li><a href="javascript:void(0);">전자금융가입</a></li>
+						<li>
+							<span>전자금융가입</span>
+							<ul>
+							</ul>
+						</li>
+					</ul>	
+				
+					<ul id="NA25000000">
+						<li class="tit">고객센터</li>
+						<li><a href="javascript:void(0);">공지사항</a></li>
+						<li><a href="javascript:void(0);">자주묻는질문</a></li>
+						<li><a href="javascript:void(0);">이벤트</a></li>
+						<li><a href="javascript:void(0);">전자민원신청</a></li>
+						<li><a href="javascript:void(0);">금리인하요구권</a></li>
+						<li>
+							<span>금융소비자보호</span>
+							<ul>
+								<li><a href="javascript:void(0);">개인정보처리방침</a></li>
+								<li><a href="javascript:void(0);">위법계약해지권</a></li>
+								<li><a href="javascript:void(0);">이용약관</a></li>
+								<li><a href="javascript:void(0);">전자금융 이용약관</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);">영업점안내</a></li>
+						<li>
+							<span>이용안내</span>
+							<ul>
+									<li><a href="javascript:void(0);">이용시간 안내</a></li>
+									<li><a href="javascript:void(0);">상담원 연결</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:void(0);">이용자유의사항</a></li>
+						<li><a href="javascript:void(0);">증명서발급신청</a></li>
+					</ul>	
+					<ul id="NA26000000">
+						<li class="tit">인증/보안</li>
+						<li>
+							<span>공동인증서</span>
+							<ul>
+								<li><a href="javascript:void(0);">공동인증서 가져오기/내보내기</a></li>
+								<li><a href="javascript:void(0);">공동인증서 관리</a></li>
+							</ul>
+						</li>
+					
+						<li>
+							<span>전자금융사기예방서비스</span>
+							<ul>
+								<li><a href="javascript:void(0);">전자금융사기예방서비스 안내</a></li>
+								<li><a href="javascript:void(0);">단말기지정서비스 가입</a></li>
+								<li><a href="javascript:void(0);">단말기지정서비스 조회/해지</a></li>
+								<li><a href="javascript:void(0);">인증예외서비스 등록</a></li>
+								<li><a href="javascript:void(0);">추가인증 가입</a></li>
+								<li><a href="javascript:void(0);">추가인증 변경</a></li>
+							</ul>
+						</li>
+						<li>
+							<span>타기관인증서</span>
+							<ul>
+								<li><a href="javascript:void(0);">타기관 인증서 등록</a></li>
+								<li><a href="javascript:void(0);">타기관 인증서 해제</a></li>
+							</ul>
+						</li>
+					
+						<li><a href="javascript:void(0);">간편인증 관리</a></li>
+						<li><a href="javascript:void(0);">mOTP 설정/재설정</a></li>
+						<li><a href="javascript:void(0);">타기관 OTP 등록/변경</a></li>
+						<li><a href="javascript:void(0);">OTP 보정</a></li>
+						<li><a href="javascript:void(0);">장기미접속 해제</a></li>
+					</ul>	
+					<ul id="NA27000000">
+						<li class="tit">사고신고</li>
+						<li><a href="javascript:void(0);">사고신고</a></li>
+						<li><a href="javascript:void(0);">OTP사고회복</a></li>
+					</ul>	
+					<!-- <ul id="NA28000000">
+						<li class="tit">사고신고</li>
+						<li><a href="javascript:void(0);">사고신고</a></li>
+						<li><a href="javascript:void(0);">OTP사고회복</a></li>
+					</ul>	 -->
+				</div>
+			</div>
+		</div>
+		<!-- e : 메뉴 펼쳐보기 팝업 // -->
+		<div id="NA25000000_Pop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close">
+			<div class="pop-header">
+				<h2 class="pop-title">고객센터</h2>
+				<button type="button" name="button" class="btn-layer-close" >닫기</button>
+			</div>
+			<div class="pop-con-wrap">
+				<div class="default-wrap">
+					<p class="gnb-tit">고객님 무엇을 도와드릴까요?</p>
+					<div class="listmenu-box">
+						<ul>
+							<li><a href="javascript:void(0);">공지사항</a></li>
+							<li><a href="javascript:void(0);">자주묻는질문</a></li>
+							<li><a href="javascript:void(0);">이벤트</a></li>
+							<li><a href="javascript:void(0);">전자민원신청</a></li>
+							<li><a href="javascript:void(0);">금리인하요구권</a></li>
+							<li>
+								<span>금융소비자보호</span>
+								<ul>
+									<li><a href="javascript:void(0);">개인정보처리방침</a></li>
+									<li><a href="javascript:void(0);">위법계약해지권</a></li>
+									<li><a href="javascript:void(0);">이용약관</a></li>
+									<li><a href="javascript:void(0);">전자금융 이용약관</a></li>
+								</ul>
+							</li>
+							<li><a href="javascript:void(0);">영업점안내</a></li>
+							<li>
+								<span>이용안내</span>
+								<ul>
+									<li><a href="javascript:void(0);">이용시간 안내</a></li>
+									<li><a href="javascript:void(0);">상담원 연결</a></li>
+								</ul>
+							</li>
+							<li><a href="javascript:void(0);">이용자유의사항</a></li>
+							<li><a href="javascript:void(0);">증명서발급신청</a></li>
+						</ul>
+					</div>
+				</div>
+					<!-- //e: 검색 결과 영역 -->
+			</div>
+		</div>
+		<div id="NA26000000_Pop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close">
+			<div class="pop-header">
+				<h2 class="pop-title">인증/보안</h2>
+				<button type="button" name="button" class="btn-layer-close" onclick="closePopup('NA26000000_Pop');">닫기</button>
+			</div>
+			<div class="pop-con-wrap">
+				<div class="default-wrap">
+					<p class="gnb-tit">고객님 무엇을 도와드릴까요?</p>
+					<p class="gnb-tit"></p>
+					<div class="listmenu-box">
+						<ul>
+							<li>
+								<span>공동인증서</span>
+								<ul>
+									<li><a href="javascript:void(0);">공동인증서 가져오기/내보내기</a></li>
+									<li><a href="javascript:void(0);">공동인증서 관리</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>전자금융사기예방서비스</span>
+								<ul>
+									<li><a href="javascript:void(0);">전자금융사기예방서비스 안내</a></li>
+									<li><a href="javascript:void(0);">단말기지정서비스 가입</a></li>
+									<li><a href="javascript:void(0);">단말기지정서비스 조회/해지</a></li>
+									<li><a href="javascript:void(0);">인증예외서비스 등록</a></li>
+									<li><a href="javascript:void(0);">추가인증 가입</a></li>
+									<li><a href="javascript:void(0);">추가인증 변경</a></li>
+									
+								</ul>
+							</li>
+							<li>
+								<span>타기관 인증서</span>
+								<ul>
+									<li><a href="javascript:void(0);">타기관 인증서 등록</a></li>
+									<li><a href="javascript:void(0);">타기관 인증서 해제</a></li>
+								</ul>
+							</li>
+						
+							<li><a href="javascript:void(0);">간편인증 관리</a></li>
+							<li><a href="javascript:void(0);">mOTP 설정/재설정</a></li>
+							<li><a href="javascript:void(0);">타기관 OTP 등록/변경</a></li>
+							<li><a href="javascript:void(0);">OTP 보정</a></li>
+							<li><a href="javascript:void(0);">장기미접속해제</a></li>
+						</ul>
+					</div>
+				</div>
+					<!-- //e: 검색 결과 영역 -->
+			</div>
+		</div>
+		<!-- <div id="NA27000000_Pop" class="layerpopup laypop-all on" tabindex="0" data-focus-prev="btn-menu-close"  style="display:block;">
+			<div class="pop-header">
+				<h2 class="pop-title">내정보관리</h2>
+				<button type="button" name="button" class="btn-layer-close" onclick="closePopup('NA27000000_Pop');">닫기</button>
+			</div>
+			<div class="pop-con-wrap">
+				<div class="default-wrap">
+					<p class="gnb-tit">고객님 무엇을 도와드릴까요?</p>
+					<p class="gnb-tit"></p>
+					<div class="listmenu-box">
+						<ul>
+							<li><a href="javascript:void(0);">내정보관리</a></li>
+							<li><a href="javascript:void(0);">최초 비밀번호 등록</a></li>
+							<li><a href="javascript:void(0);">고객비밀번호 오류해제</a></li>
+							<li><a href="javascript:void(0);">고객비밀번호 분실/재등록</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<div id="NA28000000_Pop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close">
+			<div class="pop-header">
+				<h2 class="pop-title">사고신고</h2>
+				<button type="button" name="button" class="btn-layer-close" onclick="closePopup('NA28000000_Pop');">닫기</button>
+			</div>
+			<div class="pop-con-wrap">
+				<div class="default-wrap">
+					<p class="gnb-tit">고객님 무엇을 도와드릴까요?</p>
+					<p class="gnb-tit"></p>
+					<div class="listmenu-box">
+						<ul>
+							<li><a href="javascript:void(0);" >사고신고</a></li>
+							<li><a href="javascript:void(0);">OTP사고회복</a></li>
+						</ul>
+					</div>
+				</div>
+					<!-- //e: 검색 결과 영역 -->
+			</div>
+		</div>
+		<div id="NA29000000_Pop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close">
+			<div class="pop-header">
+				<h2 class="pop-title">기타(빠른서비스)</h2>
+				<button type="button" name="button" class="btn-layer-close" onclick="closePopup('NA29000000_Pop');">닫기</button>
+			</div>
+			<div class="pop-con-wrap">
+				<div class="default-wrap mt40">
+					<p class="gnb-tit"></p>
+					<div class="listmenu-box">
+						<ul>
+							<li><a href="javascript:void(0);">온라인서류제출</a></li>
+							<li><a href="javascript:void(0);">신용조회동의</a></li>
+						</ul>
+					</div>
+				</div>
+					<!-- //e: 검색 결과 영역 -->
+			</div>
+		</div>
+		
+	</div>
+	
+</body>
+<script>
+	function fnMenuSearch() {
+		var liTag = $("#MENU_SEARCH_AREA").find('li');
+		var searchText = $("#MENU_SEARCH_TEXT").val(); 
+		$.each(liTag, function(idx, item){
+			var temp = $(item).find("a")[0];
+			var checkHtml = $(temp).html()+"";
+			if (checkHtml.indexOf(searchText) > -1) {
+				$(this).show();
+			} else {
+				$(this).hide();
+			}
+		});
+	}
+	
+	
+	// 전체메뉴 스크립트 depth1
+	$('.all-menu-area .menuDepth1 li').click(function(){
+		var menuOn = $(this).children('a').attr('data-focus');
+		$(this).addClass('on').siblings().removeClass('on');
+		$('.all-menu-area .menuDepth2 .' + menuOn + '').addClass('on').siblings().removeClass('on');
+	});
+	
+	// 메뉴 펼쳐보기 스크립트 <!-- [퍼블] 스크립트 수정 -->
+	$('.tab-slidemenu li').click(function(){
+		var currMenu = $(this).children('a').attr('data-focus');
+		var currMenuOffset = $('#' + currMenu + '').offset().top + $('.listmenu-box').scrollTop() - 192;
+
+		$(this).addClass("on").siblings().removeClass("on");
+		$('.listmenu-box').animate({ scrollTop : currMenuOffset }, 300);
+		$(".tab-slidemenu").animate({ scrollLeft : $(this).offset().left + $(".tab-slidemenu").scrollLeft() - 20 });
+	});
+	
+	// 전체메뉴 open
+	function openMenu(id){
+		var t = $('#' + id);
+		var currentTop = $(window).scrollTop();
+		t.animate({ left : 0 });
+		$('body').addClass('on');
+		$('body').css({ 'position' : 'fixed', 'top' : -currentTop });
+		t.find('.btn-menu-close').click(function(){
+			closeMenu(id);
+			$('body').removeAttr('style').removeClass('on');
+			$(window).scrollTop(currentTop);
+		});
+	}
+	
+	// 전체메뉴 close
+	function closeMenu(){
+		$('.menuWrap').animate({ left:'100%' });
+	}
+	</script>
