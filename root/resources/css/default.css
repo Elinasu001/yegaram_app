@@ -1014,8 +1014,9 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 .btn-txt { display:block; position:relative; height:18px; color:#666666; font-size:0.77778rem;}
 .btn-txt.md { height:20px; font-size:0.88889rem; }
 .btn-txt:after { content:''; display:inline-block; width:6px; height:6px; margin:-2px 0 0 4px; border:solid #666666; border-width:1px 1px 0 0; vertical-align:middle; transform:rotate(45deg); }
-/*.btn-txt:before { content:''; position:absolute; top:50%; left:50%; width:120%; height:120%; transform:translate(-50%, -50%); }*/
 
+.btn-txt.login { height:17px; color:#4E32A5; font-weight:500;  }
+.btn-txt.login:after { content:''; border-radius: 0.1em;  display:inline-block; width:6px; height:6px; margin:-2px 0 0 4px; border:solid #4E32A5; border-width:2px 2px 0 0; vertical-align:middle; transform:rotate(45deg);  }
 /** type-popup : 바텀시트에서 사용하는 버튼 **/
 .btn-wrap.type-popup .btn { /*border:2px solid #E6E2FB;*/ font-size:1rem; font-weight:700; background:#EEEBFF; color:#260F54; box-shadow:none; }
 .btn-wrap.type-popup .btn:before { content:none; }
@@ -1200,9 +1201,9 @@ left
 .headerWrap .headerCenter h2 span { display:inline-block; font-size:0.88889rem; line-height:1.278rem;  font-weight:500; }
 
 /*헤더 오른쪽*/
-.headerWrap .headerRight { position:relative; }
+.headerWrap .headerRight { position:relative;  }
 .headerWrap .headerLeft { position:absolute; left:10px; }
-.headerWrap .headerRight { position:absolute; right:10px; }
+.headerWrap .headerRight { position:absolute; right:10px;  display:flex; align-items:center; gap:12px; }
 
 .headerWrap .headerRight .btn-notify,
 .headerWrap .headerRight .btn-like,
