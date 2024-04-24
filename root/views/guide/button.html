@@ -76,6 +76,9 @@
                         <p>
                             • 왼쪽, 가운데, 오른쪽 : flexLeft, flexCenter, flexRight 클래스를 사용하여 위치조정 가능
                         </p>
+                        <p>
+                            • 버튼이 위아래로 나열할 경우 : flexCol 클래스를 사용하여 위치조정 가능
+                        </p>
                     </div>
 
                     <h3 class="tit-h3">컨텐츠 버튼</h3>
@@ -154,29 +157,66 @@
                         <a href="javascript:void(0);" class="btn btn-add">버튼명</a>
                     </div>
 
-                    <h4 class="tit-h4">• sm버튼 - default</h4>
+                    <h4 class="tit-h4">• sm버튼 - default(카드)</h4>
 
                     <div class="btn-cont-wrap">
-                        <a href="#none" class="btn btn-sm">버튼명</a>
+                        <a href="javascript:void(0);" class="btn btn-sm">대출/예/적금</a>
+                        <a href="javascript:void(0);" class="btn btn-sm gray">취소</a>
+                    </div>
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-sm blue">완료</a>
+                        <a href="javascript:void(0);" class="btn btn-sm green">진행중</a>
+                        <a href="javascript:void(0);" class="btn btn-sm pink">대기</a>
+                        <a href="javascript:void(0);" class="btn btn-sm red">상태표시</a>
                     </div>
 
-                    <h4 class="tit-h4">• sm버튼 - gray</h4>
+                    <h4 class="tit-h4">• sm버튼 - blue(외버튼)</h4>
 
                     <div class="btn-cont-wrap">
-                        <a href="#none" class="btn btn-sm gray">버튼명</a>
-                    </div>
-
-                    <h4 class="tit-h4">• sm버튼 - blue</h4>
-
-                    <div class="btn-cont-wrap">
-                        <a href="#none" class="btn btn-sm blue">버튼명</a>
+                        <a href="javascript:void(0);" class="btn btn-sm other">버튼명</a>
                     </div>
 
                     <h4 class="tit-h4">• mini버튼</h4>
 
                     <div class="btn-cont-wrap">
-                        <a href="#none" class="btn btn-mini">버튼명버튼명</a>
+                        <a href="javascript:void(0);" class="btn btn-mini">버튼명버튼명</a>
+                        <a href="javascript:void(0);" class="btn btn-mini purple">버튼명버튼명</a>
+                        <a href="javascript:void(0);" class="btn btn-mini pink">버튼명버튼명</a>
                     </div>
+
+                    <h3 class="tit-h3">팝업 버튼</h3>
+
+                    <h4 class="tit-h4">• 팝업 하단버튼 - txt <span class="essential">(onclick : openPopupUp 사용)</span></h4>
+
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-primary"  onclick="openPopupUp('lyPop1');">버튼명</a>
+                    </div>
+
+
+                    <h4 class="tit-h4">• 팝업 하단버튼 - disabled <span class="essential">(onclick : openPopupUp 사용)</span></h4>
+
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-primary"  onclick="openPopupUp('lyPop2');">버튼명</a>
+                    </div>
+
+                    <h4 class="tit-h4">• 팝업 셀렉트버튼 <span class="essential">(onclick : openPopupUp 사용)</span></h4>
+
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-primary"  onclick="openPopupUp('lySel1');">버튼명</a>
+                    </div>
+
+                    <h4 class="tit-h4">• 팝업 셀렉트버튼-non-click   <span class="essential">(onclick : openPopupUp 사용)</span></h4>
+                    
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-primary"  onclick="openPopupUp('lySelBtn');">버튼명</a>
+                    </div>
+
+                    <h4 class="tit-h4">• 하단 2개 버튼 <span class="essential">(onclick : alertPopup 사용)</span> </h4>
+
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-primary"  onclick="alertPopup('lyAlert');">버튼명</a>
+                    </div>
+
 
                 </div>
             </div>
@@ -209,6 +249,109 @@
             </div> -->
             <!-- e: button -->
 
+            <!--하단 txt 버튼-->
+            <div id="lyPop1" class="layerpopup layer-up has-button"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">팝업 버튼</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con ly-select">
+                        
+                    </div>
+                </div>
+                <!--D: fixed-btn-wrap 버튼은 content-wrap 밖으로 위치-->
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap flexCol">
+                        <a href="javascript:void(0);" class="btn close">확인</a>
+                        <a href="javascript:void(0);" class="btn txt">버튼명</a>
+                    </div>
+                </div>
+            </div>
+            <!--//하단 txt 버튼-->
+
+            <!--하단 disabled 버튼 -->
+            <div id="lyPop2" class="layerpopup layer-up has-button"><!-- [D] has-button 클래스 : 팝업 하단버튼 있을 경우 사용(alert 제외) -->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">팝업 버튼</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con ly-select">
+                        fffffff
+                    </div>
+                </div>
+                <!--D: fixed-btn-wrap 버튼은 content-wrap 밖으로 위치-->
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn disabled">버튼명</a>
+                    </div>
+                </div>
+            </div>
+            <!--//하단 disabled 버튼 -->
+
+            <!-- 셀렉트 버튼 -->
+            <div id="lySel1" class="layerpopup layer-up show"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">근로자유형을 선택해주세요</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con ly-select">
+                        <ul class="ly-select-list">
+                            <li class=""><button>정규직</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                            <li><button>비정규직</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- //셀렉트 버튼 -->
+
+
+            <div id="lySelBtn" class="layerpopup layer-up has-button">
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">거래자금원천</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con ly-select">
+                        <ul class="ly-select-list non-click">
+                            <li class="">
+                                <button type="button">보유</button>
+                                <div class="form-wrap  view-wrap form-type2">
+                                    <div class="input">
+                                        <input type="text" title="연간소득" id="ipt02" class="inp" name="" value="" placeholder="고객님의 연간소득을 입력해주세요" required="">
+                                    </div>
+                                    <p class="error-txt">고객님의 연간소득을 입력해주세요</p>
+                                </div>
+                            </li>
+                            <li class=""><button type="button">미보유</button></li>
+                        </ul>
+                    </div>
+                    <div class="fixed-btn-wrap">
+                        <div class="btn-wrap ">
+                            <a href="#none" class="btn close" >확인</a><!-- [D] 버튼에 btn 클래스 필수 (normal style) -->
+                        </div>
+                    </div>
+                </div>
+                    <!-- e: bottom sheet -->
+            </div>
+
+            <!-- 알럿 버튼 -->
+            <div id="lyAlert" class="layerpopup type-alert" >
+                <div class="content-wrap">
+                    
+                    <div class="pop-con-wrap">
+                        <span class="pop-con">주소를 입력해주세요</span>
+                    </div>
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn btn-info" onclick="">버튼명</a>
+                        <a href="javascript:void(0);" class="btn close">확인</a>
+                    </div>
+                </div>
+            </div>
+            <!--//알럿 버튼 -->
+            
         </div>
         <!-- //contentsWrap -->
     </form>
