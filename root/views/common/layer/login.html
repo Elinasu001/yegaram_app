@@ -57,135 +57,21 @@
 				<h2 class="pop-title">${reqDs.title }</h2>
 				<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close" onclick="javascript:${reqDs.id}_Func.close();">닫기</button>
 			</div>
-	
-			<!-- s: content -->
-			<div class="pop-con-wrap">
-				<div class="default-wrap">
-					<div class="tit-wrap">
-						<p class="txt">어떤 방식으로<br><strong>로그인</strong>하시겠어요?</p>
-					</div>
-					<div class="inner-wrap flex-col-between">
-						<ul class="check-box">
-							<li class="idcard" onclick="openPopupUp('lyPop_01');">
-								<fieldset>
-									<input type="radio" id="Chk01_1" name="Chk01" value="" class="">
-									<label for="Chk01_1">전자금융아이디</label><!--[퍼블-4] 텍스트 변경-->
-								</fieldset>
-							</li>
-							<li class="phone">
-								<fieldset>
-									<input type="radio" id="Chk01_2" name="Chk01" value="" class="">
-									<label for="Chk01_2">본인인증</label>
-								</fieldset>
-							</li>
-							<li class="ohter">
-								<fieldset>
-									<input type="radio" id="Chk01_3" name="Chk01" value="" class="">
-									<label for="Chk01_3">다른 인증 수단</label>
-								</fieldset>
-							</li>
-						</ul>
-						<!-- [퍼블-2] 배너 영역 마크업 변경 : 메인배너와 일원화 -->
-						<div class="banner-area">
-							<a href="javascript:void(0);" class="banner-box style2">
-								<p class="banner-tit">
-									<span>예가람저축은행 계좌를 개설하시면</span>
-									다양한 금융서비스를<br>이용하실 수 있어요
-								</p>
-								<div class="go-link-wrap">
-									<span class="btn-go-link" onclick="doActionFrame('dep/prc/qckAcnoOpenPrc1');">빠른계좌개설</span>
-								</div>
-							</a>
-						</div>
-						<!-- // [퍼블-2] 배너 영역 마크업 변경 : 메인배너와 일원화 -->
-					</div>
-				</div>
-			</div>
-			<!-- e: content -->
 		</div>
 		<!-- e: 로그인 메인 페이지 -->
 
 		<!-- s: 사용자 아이디 팝업 -->
 		<div id="biz_6quggsm31co" class="layerpopup laypop-all has-button show" style="z-index: 322; display: block;">
 
-
-
-			<script type="text/javascript">
-			var biz_6quggsm31co_Func = ({
-				// 닫기  
-				close : function(){},
-				// 취소 (그만하기)
-				cancel : function(){},
-				// 확인 (처리 완료 버튼, 또는 처리완료 선택)
-				confirm : function(){
-					
-					if ($.trim($("#USER_ID_12").val())=='') {
-						biz.alert("사용자ID를 입력해 주세요.");
-						return false;
-					}
-					
-					if ($("#USR_PWD").val()=='') {
-						biz.alert("비밀번호를 입력해 주세요.");
-						return false;
-					}
-					
-					var loginForm = makeForm("loginForm");
-					addFormData(loginForm, "txGbnCd", "I");
-					addFormData(loginForm, "USER_ID_12", $("#USER_ID_12").val());
-					addFormData(loginForm, "E2E_USR_PWD", nshc.encrypted("USR_PWD"));
-					doAction("LOGIN", loginForm, function(resDs){
-						if (typeof(resDs.LOGIN_YN) != 'undefined' && resDs.LOGIN_YN == 'Y') {
-							setCookie("LAST_LOGIN_MTH_CD", "ID"); // 최종로그인 수단 ID
-							// 로그인 정상 콜백수행
-							biz_6quggsm31co_Func.callback('Y');
-						} else {
-							if (typeof(resDs.API_RS_MSG) != 'undefined' && resDs.API_RS_MSG.indexOf('ECB10667') > -1) {
-								
-								biz_6quggsm31co_Func.callback('FRST');
-								
-								
-							} else {
-								errMsg(resDs.API_RS_MSG);	
-							}
-						}
-					});
-				},
-				// 호출 화면 콜백 처리	
-				callback : function(){}
-			});
-			
-			$(document).ready(function(){
-				dynamicInput();
-				initializedNFilter();
-				$("#USER_ID_12").focus();
-			});
-			
-			function initializedNFilter() {
-				// 키패드 초기화 시작
-				nshc.setOnInitStart();
-				// Open Web nFilter 키패드 설정
-				nshc.setCommon(document.getElementById('USR_PWD'), "mode=mCKpd"); // pcCKpd
-				nshc.ownCallback = function (msg, inputID) {
-					if (msg == "close") {
-						$("label[for='"+inputID+"']").addClass("onbasic");
-					}  else if (msg == "open") {
-						$("label[for='"+inputID+"']").removeClass("onbasic");
-					} 
-				}
-			}
-			</script>
 			<div class="content-wrap">
 				<div class="pop-header">
-					<!-- <h2 class="pop-title">사용자 아이디 로그인</h2> [퍼블-3] 삭제 -->
 					<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
 				</div>
-				<div class="pop-con-wrap login-id"><!-- [퍼블-3] 클래스 추가 -->
+				<div class="pop-con-wrap login-id">
 					<div class="default-wrap">
-						<!-- [퍼블-3] 타이틀 추가 -->
 						<div class="tit-wrap">
-							<p class="txt"><strong>전자금융 아이디 로그인</strong></p><!--[퍼블-4]변경-->
+							<p class="txt"><strong>전자금융 아이디 로그인</strong></p>
 						</div>
-						<!-- // [퍼블-3] 타이틀 추가 -->
 						<div class="form-wrap type-box">
 							<div class="input">
 								<input type="text" title="아이디" id="USER_ID_12" class="inp" name="" value="" required="" placeholder="아이디">
@@ -196,17 +82,17 @@
 								<input type="password" title="비밀번호" id="USR_PWD" class="inp" name="" value="" placeholder="비밀번호" required="" maxlength="50" nfilter="on" mode="mCKpd"><input type="hidden" id="USR_PWD_nfilter_sec" name="USR_PWD_nfilter_sec">
 							</div>
 						</div>
-						<div class="join-wrap"><!--[퍼블-4]추가-->
+						<div class="join-wrap">
 							<p class="tit">전자금융아이디가 없으세요?</p>
 							<div class="btn-cont-wrap join">
 								<a href="#none" class="btn ">전자금융가입하기</a>
 							</div>
 						</div>
-						<dl class="list-bull type-caption"><!-- [퍼블-2] 클래스 변경 -->
+						<dl class="list-bull type-caption">
 							<dt>알아두세요</dt>
 							<dd>아이디 로그인은 전자금융 가입 후 이용이 가능해요</dd>
 							<dd>전자금융 아이디가 기억나지 않으면 휴대폰번호 인증으로</br>
-								로그인 하세요</dd><!--[퍼블-4]변경-->
+								로그인 하세요</dd> 
 						</dl>
 					</div>
 				</div>
