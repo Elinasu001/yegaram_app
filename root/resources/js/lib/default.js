@@ -136,7 +136,7 @@ function deleteBlock(_full) {
   $(window).scrollTop(winScrollTop);//180607추가
 }
 //popup
-function alertPopup(id) {
+function openPopup(id) {
   var _target = $('#' + id);
   currentTop = $(window).scrollTop();
   $('body').css({ 'position': 'fixed', 'top': -currentTop });
