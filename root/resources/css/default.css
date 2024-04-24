@@ -265,14 +265,16 @@ html.font-size-3{ font-size: 24px;}
 .point { /* font-weight:500; */ font-weight:700; color:#F1108E; }
 .point-red{ color:#FF0000; }
 
-.flag { display:inline-block; width:auto; height:26px; margin-right:6px; padding:0 8px; border-radius:5px; background:#EFF4FF; font-size:0.77778rem; line-height:1.5; font-weight:500; color:#2B66F6; line-height:26px; letter-spacing:-.5px; text-align:center; vertical-align:middle; } /* 접수완료, 긍정 - 파랑 */
-.flag.style2 { color:#612AD0; background:#E7DBFF; } /* 예금상품표기,공지사항,이벤트 - 보라색 */
-.flag.style3 { color:#00A2C4; background:#E3F6F8; } /* 심사중 - 초록 */ 
-.flag.style4 { color:#FF0000; background:#FEEFEF; } /* 거절,부정,사고신고 - 빨강 */
+/* 기타 -그레이 */
+.flag { display:inline-block; width:auto; height:23px; margin-right:6px; padding:3px 6px; border-radius:13px; border:1px solid #999999; background:#FFFFFF; font-size:0.66667rem; font-weight:400; color:#666666; letter-spacing:-.5px; text-align:center; vertical-align:middle; } /* 접수완료, 긍정 - 파랑 */
+.flag.style2 { border:1px solid #9F7CE3; color:#612AD0; } /* 예적금 - 보라색 */
+.flag.style3 {border:1px solid #D00F7B; color:#D00F7B;  }/* 대출- 핑크 */
+
+.flag.style4  { color:#00A2C4; background:#E3F6F8; } /* 심사중 - 초록 */ 
 .flag.style5 { color:#C1016C; background:#FFE6F4; } /* 대출상품표기 - 빨강 */
 .flag.style6 { color:#2B66F6; background:#F5F8FE; }/* 공지사항,이벤트  - 파랑 */ 
 .flag.style7 { color:#999999; background:#EFF0F2; }/* 공지사항,이벤트 - 회색 */
-.flag.style8 { color:#F648AA; background:#FFE9F5;  }/* 공지사항,이벤트 - 핑크 */
+.flag.style8   { color:#FF0000; background:#FEEFEF; } /* 거절,부정,사고신고 - 빨강 */
 .flag.style9 { color:#757575; background:#FFFFFF; border:1px solid #DDDDDD; }/* 공지사항 - 화이트 */ 
 .flag.dep { background:#FFF0C8; color:#DC7D10; }
 .flag.loan { background:#DFF1FF; color:#2B66F6; }
@@ -1786,7 +1788,7 @@ body.on { position:fixed; top:0; }
 /*.step-wrap .step-line:before,*/
 .step-wrap .step-line:after { content:''; position:absolute; top:50%; left:-4px; width:6px; height:6px; background:#260F54; -webkit-transform:rotate(45deg) translateY(-80%); -ms-transform:rotate(45deg) translateY(-80%); transform:rotate(45deg) translateY(-80%); }
 .step-wrap .step-line:after { left:inherit; right:3px; background:#E5E5E5; }
-.step-wrap .step-line .step-bar { position:absolute; top:0; left:0; height:100%; background:#260F54; border-radius:0 10px 10px 0; }
+.step-wrap .step-line .step-bar { position:absolute; top:0; left:0; height:100%; background:#7F52DC; border-radius:0 10px 10px 0; }
 /* .step-wrap .step-line .step-bar:after { content:''; position:absolute; top:50%; right:0; z-index:1; width:6px; height:6px; border:4px solid #260F54; background:#fff;-webkit-transform:rotate(45deg) translateY(-80%);-ms-transform:rotate(45deg) translateY(-80%);transform:rotate(45deg) translateY(-80%)} */
 .step-wrap .num { display:none; margin-top:10px; text-align:right; font-size:0.77778rem; line-height:1.5; color:#CCCCCC; letter-spacing:2px; }
 .step-wrap .num > strong {  color:#F1108E; }
@@ -2281,9 +2283,9 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .progress-area .progress-wrap {position:relative;padding: 44px 0 0;text-align:center;}
 .progress-wrap .progress-line { position:relative; height:10px; border-radius:10px; background:#EBEAF5; }
 .progress-wrap .progress-line:after { left:inherit; right:3px; background:#EBEAF5; }
-.progress-wrap .progress-line .progress-bar { position:absolute; top:0; left:0; height:100%; border-radius:10px; background:linear-gradient(90deg, #DDC2FF 0%, #674AFF 100%); }
-.progress-wrap .progress-line .progress-bar .current { position:absolute; bottom:calc(100% + 7px); right:-22px; padding:4px 10px; border-radius:15px; background:#694CFF; font-weight:700; color:#fff; font-size:0.77778rem; line-height:1.5; letter-spacing:-.5px; }
-.progress-wrap .progress-line .progress-bar .current:after { content:''; position:absolute; top:100%; left:50%; border:solid transparent;border-width:7px 4px 0 4px; border-top-color:#694CFF; transform:translateX(-50%); }
+.progress-wrap .progress-line .progress-bar { position:absolute; top:0; left:0; height:100%; border-radius:10px; background:linear-gradient(90deg, #FFFFFF 0%, #F1108E 100%); }
+.progress-wrap .progress-line .progress-bar .current { position:absolute; bottom:calc(100% + 7px); right:-22px; padding:5px 10px; border-radius:15px; background:#F10F8E; font-weight:700; color:#fff; font-size:0.77778rem; height:28px; letter-spacing:-.5px; }
+.progress-wrap .progress-line .progress-bar .current:after { content:''; position:absolute; top:100%; left:50%; border:solid transparent;border-width:7px 4px 0 4px; border-top-color:#F10F8E; transform:translateX(-50%); }
 .progress-wrap [class*="-date"] { position:absolute; bottom:0; left:0; font-weight:300; color:#999999; font-size:0.77778rem; line-height:1.5; }
 .progress-wrap [class*="-date"] .date { margin-left:2px; font-weight:400; color:#454545; }
 .progress-wrap [class*="-date"]:last-of-type { left:inherit; right:0; }
@@ -2302,9 +2304,9 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .btn-set.star { width: 24px; height: 24px; background:url("../images/common/ico-star_off.png") no-repeat 50%/24px auto; color:transparent; text-indent:-9999px; }
 .btn-set.star.on { background:url("../images/common/ico-star_on.png") no-repeat 50%/24px auto; }
 
-.progress-txt { display:flex; position:relative; margin:7px 0 20px; font-size:0.66667rem; line-height:1.58334; }
+.progress-txt { display:flex; position:relative; margin:7px 0 20px; font-size:0.66667rem; line-height:1.58334;  }
 .progress-txt > li { margin-right:10px; color:#666666; }
-.progress-txt > li span + span { color:#999999; }
+.progress-txt > li span.num { color:#999999; }
 .progress-txt > li.flag-right { position:absolute; top:50%; right:0; transform:translate(0, -50%); margin:0; }
 .progress-txt > li.flag-right .flag { margin-right:0; }
 

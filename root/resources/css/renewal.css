@@ -40,9 +40,6 @@ body.fix { overflow:hidden; }
 .btn.btn-sm.blue { background: #EFF4FF; border:1px solid #EFF4FF; color:#2B66F6; }
 
 .btn.btn-sm.other { height:34px; background: #F2F4F6; border:1px solid #F2F4F6; color:#26282C; }
-.btn.btn-mini { display:inline-block; width:unset; height:23px; padding:3px 6px; background:#FFFFFF; border:1px solid #999999; border-radius:13px; font-size:0.66667rem; font-weight:400; color:#666666; }
-.btn.btn-mini.purple { border:1px solid #9F7CE3; color:#612AD0;  }
-.btn.btn-mini.pink { border:1px solid #D00F7B; color:#D00F7B;  }
 
 .btn-cont-wrap.btn-txt { display:inline-block; width:100%; }
 .btn-cont-wrap.btn-txt .btn { display:inline-block; width:unset; height:unset; border-radius:0; background:transparent; color:#333; line-height:unset; }
