@@ -136,11 +136,11 @@ function deleteBlock(_full) {
   $(window).scrollTop(winScrollTop);//180607추가
 }
 //popup
-function openPopup(id) {
+function alertPopup(id) {
   var _target = $('#' + id);
   currentTop = $(window).scrollTop();
   $('body').css({ 'position': 'fixed', 'top': -currentTop });
-  _target.find('.btn-layer-close').on('click', function () {
+  _target.find('.btn-layer-close, .close').on('click', function () {
     closePopup(id);
     $('body').removeAttr('style');
     $(window).scrollTop(currentTop);
@@ -151,7 +151,6 @@ function openPopup(id) {
 	 _target.fadeIn(600);
     _target.focus();
 	_target.addClass("on");
-  
   }else{
     _target.fadeIn(600);
 	_target.addClass("on");
@@ -168,7 +167,7 @@ function openPopupUp(id) {
   _target.removeClass('close');
   _target.addClass('show').show();
   _target.focus();
-  _target.find('.btn-layer-close').on('click', function () {
+  _target.find('.btn-layer-close, .close').on('click', function () {
     closePopupUp(id);
     $('body').removeAttr('style');
     $(window).scrollTop(currentTop);
