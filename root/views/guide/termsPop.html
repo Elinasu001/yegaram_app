@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+
+
+<style>
+    h3.guid{ padding:30px 0 10px; }
+    p.guid { font-size:14px; }
+</style>
+</head>
+<body>
+	<!-- header -->
+	<div id="headerWrap"><header class="headerWrap">
+        <div class="headerLeft">
+            <a href="javascript:void(0)" class="btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>  
+        </div>
+        <div class="headerCenter">
+            <h2 class="text"><span>약관동의 샘플</span></h2> <!--D: TEXT -->
+        </div>
+        <div class="headerRight">
+            <a href="javascript:void(0)" class="btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>  
+        </div>
+    </header>
+    
+    </div>
+	<!-- //header -->
+	
+  	<!-- s: contentsWrap -->
+	<div class="contentsWrap">
+        <form id="frm" name="frm" method="post">
+            <!-- s: contents -->
+            <div class="contents">
+                <div class="default-wrap">
+        
+                    <div class="tit-wrap">
+                        <p class="txt"><b>약관명</b>을<br/> 입력하세요</p>
+                    </div>
+                    <section class="terms-area">
+                        <div class="terms-wrap level1 chk-all">
+                            <fieldset>
+                                <input type="checkbox" id="allChk01" name="allChk01" value="" class="check all">
+                                <label for="allChk01"><span>약관에 모두 동의할게요</span></label>
+                            </fieldset>
+                        </div>
+
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chkEach01" name="check" value="" class="check">
+                                <label for="chkEach01"><span>[필수]약관1번 입니다.</span></label>
+                            </fieldset>
+                        </div>
+
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chkEach02" name="check" value="" class="check">
+                                <label for="chkEach02"><span>[필수]약관2번 입니다.</span></label>
+                            </fieldset>
+                        </div>
+
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chkEach10" name="check" value="" class="check all">
+                                <label for="chkEach10"><span>[선택]약관3번 입니다.</span></label>
+                            </fieldset>
+
+                            <!-- [퍼블] 수정 -->
+                            <div class="etc level3">
+                                <div class="terms-wrap">
+                                    <input type="checkbox" id="SMS_YN" name="SMS_YN" value="" class="check">
+                                    <label for="svcCheck01">문자메세지</label>
+                                </div>
+                                <div class="terms-wrap">
+                                    <input type="checkbox" id="TEL_YN" name="TEL_YN" value="" class="check">
+                                    <label for="svcCheck03">휴대전화</label>
+                                </div>
+                                <div class="terms-wrap">
+                                    <input type="checkbox" id="EMAIL_YN" name="EMAIL_YN" value="" class="check">
+                                    <label for="svcCheck02">이메일</label>
+                                </div>
+                                <div class="terms-wrap">
+                                    <input type="checkbox" id="DM_YN" name="DM_YN" value="" class="check">
+                                    <label for="svcCheck04">DM</label>
+                                </div>
+                            </div>
+                            <!-- // [퍼블] 수정 -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- //e: contents -->
+        </form>
+		
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <a href="#none" class="btn" onclick="PageFunc.proc();">다음</a>
+            </div>
+            <a href="#none" class="btn-txt" onclick="PageFunc.cancel();">그만하기</a>
+        </div>
+	</div>
+	<!-- //e: contentsWrap -->
+
+    <!-- s: 약관풀팝업 -->
+    <div id="lyTermsPop" class="layerpopup laypop-all agree-layer" style="display:block;">
+        <!-- s: contents -->
+        <div class="pop-header">
+            <h2 class="pop-title">약관명</h2>
+            <a class="btn-back" onclick="backKeyAction();"><span class="blind">이전페이지 이동하기</span></a>
+            <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lyTermsPop')">닫기</button>
+        </div>
+        
+        <div class="pop-con-wrap">
+            <div class="default-wrap mb0">
+                <div class="info-wrap">
+                    PDF솔루션 들어갈 예정
+                </div>
+                <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lyTermsPop')">닫기</button>
+            </div>
+        </div>
+
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap"><!-- [D] 클래스 type-popup / type-alert 추가시 각 style 노출 -->
+                <a href="#none" class="btn disabled">확인</a><!-- [D] btn 클래스 필수(normal style) / disabled 추가 -->
+            </div>
+        </div>
+    </div>
+    <!-- //e: 약관풀팝업 -->
+
+	<!-- footer -->
+	
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
