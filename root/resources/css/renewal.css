@@ -428,10 +428,10 @@ body.fix { overflow:hidden; }
 .check-box.flex-col { display:flex; flex-direction:column; margin-top:10px; }
 .check-box.flex-col > li:first-child { margin-top:0; }
 .check-box.flex-col > li { margin-right:0; margin-top:10px; }
-.check-box.flex-col > li input[type="radio"] + label { padding:20px; }
+.check-box.flex-col > li input[type="radio"] + label { padding:20px; text-align: left; }
 .check-box.flex-col > li label::after { top:22px; left:44px; }
 .check-box.flex-col > li.certi label::after { border-radius:50%; background:url("../images/common/ico_certi_joint.png") no-repeat 50%/24px auto #F8F8FA; }
-.check-box.flex-col > li ul { padding-left:64px; text-align:left; font-size:0; }
+.check-box.flex-col > li ul { padding-left:64px; font-size:0; }
 .check-box.flex-col > li ul li { line-height:0; }
 .check-box.flex-col > li ul li:nth-child(3) { margin-top:10px; }
 .check-box.flex-col > li ul .name { font-size:1rem; line-height:1.38889rem; font-weight:600; color:#4E32A5; }
@@ -439,6 +439,11 @@ body.fix { overflow:hidden; }
 .check-box.flex-col > li ul .issuer { font-size:0.66667rem; line-height:1.056rem; font-weight:500; color:#999999; }
 .check-box.flex-col > li ul .deadline { font-size:0.66667rem; line-height:1.056rem; font-weight:500; color:#999999; }
 
+.check-box.flex-col.type2 > li input[type="radio"] + label { padding:25px 20px;; }
+.check-box.flex-col.type2 > li label::after { width:36px; height:36px; top:20px; right:-3px; left:inherit; }
+.check-box.flex-col.type2 > li.elecId label::after { background:url("../images/common/ico_elcId.png") no-repeat 100%/36px auto;  }
+.check-box.flex-col.type2 > li.phoneCerti label::after {  background:url("../images/common/ico_phoneCerti.png") no-repeat 100%/36px auto;  }
+.check-box.flex-col.type2 > li.etcCerti label::after { background:url("../images/common/ico_etcCerti.png") no-repeat 100%/36px auto;   }
 
 /* 마이데이터 */
 /* .mydata-wrap::before { content:''; display:inline-block; width:170px; height:60px; margin-bottom:10px; background:url("../../images/common/ico-mydata-bg.png") no-repeat left top; background-size:100%; }

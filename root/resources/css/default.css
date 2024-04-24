@@ -1209,11 +1209,8 @@ left
 .headerWrap .headerRight .btn-like,
 .headerWrap .headerRight .btn-interest { position:relative; }
 
-.headerWrap .headerRight .btn-notify img,
-.headerWrap .headerRight .btn-like img,
-.headerWrap .headerRight .btn-interest img,
-.headerWrap .headerRight .btn-menu-close img,
-.headerWrap .headerRight .btn-menu img { width:24px; height:24px; }
+.headerWrap .headerLeft .btn img,
+.headerWrap .headerRight .btn img { width:24px; height:24px; }
 
 .headerWrap .headerRight .btn-notify .count-flag,
 .headerWrap .headerRight .btn-like .count-flag,
@@ -1827,7 +1824,7 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 /** 싱글화면 - 상단 타이틀 **/
 .tit-wrap { margin-top:40px; }
 .tit-wrap > span { display:inline-block; margin-bottom:10px; padding:4px 15px; border-radius:20px; background:#EBF2FF; font-size:0.88889rem; line-height:1.4375; color:#2968CF; }
-.tit-wrap > .txt { font-size:1.33334rem; line-height:1.29167; }
+.tit-wrap > .txt { font-size:1.22222rem; line-height:1.5rem; }
 .tit-wrap > .txt span { display:block; margin-bottom:5px; font-weight:400; color:#000000; font-size:1rem; line-height:1.38889; }
 /*아이콘 있는 case*/
 .tit-wrap > .txt.has-icon b { font-weight:700; position:relative; }
