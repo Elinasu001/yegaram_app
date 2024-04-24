@@ -54,7 +54,7 @@
 		<!-- s: 로그인 메인 페이지 -->
 		<div id="" class="layerpopup laypop-all login-popup" tabindex="0" data-focus-prev="btn-menu-close" style="display: block;">
 			<div class="pop-header">
-				<h2 class="pop-title">${reqDs.title }</h2>
+				<h2 class="pop-title">로그인</h2>
 				<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close" onclick="javascript:${reqDs.id}_Func.close();">닫기</button>
 			</div>
 		</div>
@@ -65,6 +65,7 @@
 
 			<div class="content-wrap">
 				<div class="pop-header">
+					<h2 class="pop-title">로그인</h2>
 					<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
 				</div>
 				<div class="pop-con-wrap login-id">
@@ -72,14 +73,16 @@
 						<div class="tit-wrap">
 							<p class="txt"><strong>전자금융 아이디 로그인</strong></p>
 						</div>
-						<div class="form-wrap type-box">
-							<div class="input">
-								<input type="text" title="아이디" id="USER_ID_12" class="inp" name="" value="" required="" placeholder="아이디">
+						<div class="form-all-wrap">
+							<div class="form-wrap type-box">
+								<div class="input">
+									<input type="text" title="아이디" id="USER_ID_12" class="inp" name="" value="" required="" placeholder="아이디">
+								</div>
 							</div>
-						</div>
-						<div class="form-wrap type-box">
-							<div class="input">
-								<input type="password" title="비밀번호" id="USR_PWD" class="inp" name="" value="" placeholder="비밀번호" required="" maxlength="50" nfilter="on" mode="mCKpd"><input type="hidden" id="USR_PWD_nfilter_sec" name="USR_PWD_nfilter_sec">
+							<div class="form-wrap type-box">
+								<div class="input">
+									<input type="password" title="비밀번호" id="USR_PWD" class="inp" name="" value="" placeholder="비밀번호" required="" maxlength="50" nfilter="on" mode="mCKpd"><input type="hidden" id="USR_PWD_nfilter_sec" name="USR_PWD_nfilter_sec">
+								</div>
 							</div>
 						</div>
 						<div class="join-wrap">
@@ -88,12 +91,17 @@
 								<a href="#none" class="btn ">전자금융가입하기</a>
 							</div>
 						</div>
-						<dl class="list-bull type-caption">
-							<dt>알아두세요</dt>
-							<dd>아이디 로그인은 전자금융 가입 후 이용이 가능해요</dd>
-							<dd>전자금융 아이디가 기억나지 않으면 휴대폰번호 인증으로</br>
-								로그인 하세요</dd> 
-						</dl>
+
+						<div class="list-bull">
+							<div class="border"></div>
+							<strong>알아두세요</strong>
+							<ul>
+								<li>아이디 로그인은 전자금융 가입 후 이용이 가능해요</li>
+								<li>전자금융 아이디가 기억나지 않으면 휴대폰번호 인증으로</br>
+									로그인 하세요</li>
+							</ul>
+						</div>
+						
 					</div>
 				</div>
 			</div>
