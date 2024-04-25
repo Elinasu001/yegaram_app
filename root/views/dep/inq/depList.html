@@ -116,12 +116,17 @@ function fnProdJoin(pdcd){
 </head>
 <body>
 	<!-- header -->
-	<header class="headerWrap">
-		<div class="header">
-			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
-			<h2><span>예적금 상품목록</span></h2>
+	<header class="headerWrap">  <!--D: bg-color02 클래스 : 뒤에 색상 들어갈 경우  -->
+		<div class="headerLeft">
+			<a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a> <!--D: 이전버튼 -->
 		</div>
-		<div class="menu-wrap"></div>
+		<div class="headerCenter">
+			<h2 class="text"><span>예적금</span></h2> 
+		</div>
+		<div class="headerRight">
+			<a href="javascript:void(0)" class="btn btn-interest"><img src="/resources/images/header/btn_interest.png" alt="관심상품"><em class="count-flag">3</em></a>  <!--D: 관심상품버튼 -->
+			<a href="javascript:void(0)" class="btn btn-like"><img src="/resources/images/header/btn_like.png" alt="좋아요"><em class="count-flag">3</em></a>  <!--D: 좋아요버튼 -->
+		</div>
 	</header>
 	<!-- //header -->
 
@@ -138,19 +143,97 @@ function fnProdJoin(pdcd){
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<ul class="prod-box-list">
-										<li onclick="fnProdJoin('P000000013')"><!-- [검수리스트-225] (공통) 클릭 영역 변경 : li에 onclick 걸어주세요! -->
+										<li onclick="fnProdJoin('P000000013')">
 											<div class="prod-box">
-												<p class="icon-exp hand">.....</p>
+												<div class="icon-exp">
+													<p>가장 많이 주목을 받고 있어요</p>
+													<div class="tooltip-wrap type2 type-toast">
+														<span class="like active"></span>
+														<div class="tooltip-txt reg" style="display: block;">
+															<p>관심상품으로 등록되었어요</p>
+														</div>
+														<div class="tooltip-txt del">
+															<p>관심상품에서 제외했어요</p>
+														</div>
+													</div>
+													<div class="tooltip-wrap type2">
+														<span class="scale"></span>
+														<div class="tooltip-txt">
+															<p>비교상품으로 등록되었어요</p>
+														</div>
+													</div>
+													
+												</div>
 												<div class="flag-tit-wrap">
-													<em class="flag dep">
-													입출금
+													<em class="flag style2">
+													태그
 													</em>
 													<strong class="tit">보고파 파킹통장</strong>
-													<div class="tooltip-wrap type2">
-														<div class="tooltip-txt-off" style="display: block;">
-															<p>하트를 클릭하면<br>내 관심상품으로 표기가 가능해요</p>
-															<a href="javascript:void(0);" class="tooltip-close"></a>
+													
+												</div>
+												<ul class="text-bar-list mt10">
+													<li>입출금자유</li>
+													<li>매일이자지급</li>
+													<li>구간별차등금리</li>
+												</ul>
+												<div class="label-info-wrap">
+													<P>1일 ~</P>
+													<strong class="info">최고 연<span>2.30</span>%</strong>
+												</div>
+											</div>
+											<div class="btn-cont-wrap">
+												<a href="javascript:void(0);" class="btn btn-primary">가입하기</a>
+											</div>
+										</li>
+
+										<li>
+											<div class="prod-box">
+												<div class="icon-exp">
+													<p>가장 많이 주목을 받고 있어요</p>
+													<div class="tooltip-wrap type2 type-toast">
+														<span class="like"></span>
+														<div class="tooltip-txt reg">
+															<p>관심상품으로 등록되었어요</p>
 														</div>
+														<div class="tooltip-txt del">
+															<p>관심상품에서 제외했어요</p>
+														</div>
+													</div>
+													<div class="tooltip-wrap type2">
+														<span class="scale active"></span>
+														<div class="tooltip-txt">
+															<p>비교상품으로 등록되었어요</p>
+														</div>
+													</div>
+													
+												</div>
+												<div class="flag-tit-wrap">
+													<em class="flag style2">
+													태그
+													</em>
+													<strong class="tit">보고파 파킹통장</strong>
+													
+												</div>
+												<ul class="text-bar-list mt10">
+													<li>입출금자유</li>
+													<li>매일이자지급</li>
+													<li>구간별차등금리</li>
+												</ul>
+												<div class="label-info-wrap">
+													<P>1일 ~</P>
+													<strong class="info">최고 연<span>2.30</span>%</strong>
+												</div>
+											</div>
+											<div class="btn-cont-wrap">
+												<a href="javascript:void(0);" class="btn btn-primary">가입하기</a>
+											</div>
+										</li>
+
+										<li>
+											<div class="prod-box">
+												<div class="icon-exp">
+													<p>가장 많이 주목을 받고 있어요</p>
+													<div class="tooltip-wrap type2 type-toast">
 														<span class="like"></span>
 														<div class="tooltip-txt reg">
 															<p>관심상품으로 등록되었어요</p>
@@ -165,195 +248,31 @@ function fnProdJoin(pdcd){
 															<p>비교상품으로 등록되었어요</p>
 														</div>
 													</div>
+													
+												</div>
+												<div class="flag-tit-wrap">
+													<em class="flag style2">
+													태그
+													</em>
+													<strong class="tit">보고파 파킹통장</strong>
+													
 												</div>
 												<ul class="text-bar-list mt10">
-													<li>보고파파킹통장</li>
-													<li>저축예금</li>
+													<li>입출금자유</li>
+													<li>매일이자지급</li>
+													<li>구간별차등금리</li>
 												</ul>
 												<div class="label-info-wrap">
+													<P>1일 ~</P>
 													<strong class="info">최고 연<span>2.30</span>%</strong>
 												</div>
 											</div>
-											<!-- <div class="btn-cont-wrap">
-												<a href="#none" class="btn btn-confirm" onclick="fnProdJoin('P000000091');">가입하기</a>
-											</div> [검수리스트-225] (공통) 삭제 : onclick li로 이동 -->
-										</li>
-										<li>
-											<div class="prod-box">
-												<p class="icon-exp hand">보고파 정기적금</p>
-												<div class="flag-tit-wrap">
-													<em class="flag dep">
-													적금
-													</em>
-													<strong class="tit">보고파 정기적금</strong>
-													<div class="tooltip-wrap type2 type-toast">
-														<span class="like"></span>
-														<div class="tooltip-txt">
-															<p>관심상품으로 등록되었어요</p>
-														</div>
-													</div>
-												</div>
-												<ul class="text-bar-list mt10">
-													<li>목돈 </li>
-													<li>적립식예금 </li>
-													<li>가입대상제한없음</li>
-												</ul>
-												<div class="label-info-wrap">
-													<strong class="info">최고 연<span>5.80</span>%</strong>
-												</div>
-											</div>
 											<div class="btn-cont-wrap">
-												<a href="#none" class="btn btn-confirm" onclick="fnProdJoin('P000000040');">가입하기</a>
+												<a href="javascript:void(0);" class="btn btn-primary">가입하기</a>
 											</div>
 										</li>
-										<li>
-											<div class="prod-box">
-												<p class="icon-exp hand">일정기간 여유자금을 예금하고 확정금리로 고수익을 보장하는 예금</p>
-												<div class="flag-tit-wrap">
-													<em class="flag dep">예금</em>
-													<strong class="tit">e정기예금 복리</strong>
-													<div class="tooltip-wrap type2 type-toast">
-														<span class="like"></span>
-														<div class="tooltip-txt">
-															<p>관심상품으로 등록되었어요</p>
-														</div>
-													</div>
-												</div>
-												<div class="label-info-wrap">
-													<strong class="info">최고 연<span>9.99</span>%</strong>
-												</div>
-											</div>
-											<div class="btn-cont-wrap">
-												<a href="#none" class="btn btn-confirm" onclick="fnProdJoin('P000000083');">가입하기</a>
-											</div>
-										</li>
-										<li>
-											<div class="prod-box">
-												<p class="icon-exp hand">직장인이라면 더욱 우대해드리는 직장인 Plus정기적금</p>
-												<div class="flag-tit-wrap">
-													<em class="flag dep">적금</em>
-													<strong class="tit">정기적금</strong>
-													<div class="tooltip-wrap type2 type-toast">
-														<span class="like"></span>
-														<div class="tooltip-txt">
-															<p>관심상품으로 등록되었어요</p>
-														</div>
-													</div>
-												</div>
-												<ul class="text-bar-list mt10">
-													<li>정기적금 </li>
-													<li>적금 </li>
-													<li>직장인우대 </li>
-													<li>Plus </li>
-													<li>직장인</li>
-												</ul>
-												<div class="label-info-wrap">
-													<strong class="info">최고 연<span>2.50</span>%</strong>
-												</div>
-											</div>
-											<div class="btn-cont-wrap">
-												<a href="#none" class="btn btn-confirm" onclick="fnProdJoin('P000000022');">가입하기</a>
-											</div>
-										</li>
-										<li>
-											<div class="prod-box">
-												<p class="icon-exp hand">일정기간 여유자금을 예금하고 확정금리로 고수익을 보장하는 예금</p>
-												<div class="flag-tit-wrap">
-													<em class="flag dep">예금</em>
-													<strong class="tit">e정기예금 단리</strong>
-													<div class="tooltip-wrap type2 type-toast">
-														<span class="like"></span>
-														<div class="tooltip-txt">
-															<p>관심상품으로 등록되었어요</p>
-														</div>
-													</div>
-												</div>
-												<ul class="text-bar-list mt10">
-													<li> 가입제한없음 </li>
-													<li>인터넷전용 </li>
-													<li>1개월~36개월 </li>
-													<li>e-정기예금</li>
-												</ul>
-												<div class="label-info-wrap">
-													<strong class="info">최고 연<span>3.88</span>%</strong>
-												</div>
-											</div>
-											<div class="btn-cont-wrap">
-												<a href="#none" class="btn btn-confirm" onclick="fnProdJoin('P000000018');">가입하기</a>
-											</div>
-										</li>
-										<li>
-											<div class="prod-box">
-												<p class="icon-exp hand">13개월 이후 중도해지 시 예치기간별 높은 이율을 적용하는 예금</p>
-												<div class="flag-tit-wrap">
-													<em class="flag dep">예금
-													</em>
-													<strong class="tit">e회전정기예금 단리(매월 이자지급식)</strong>
-													<div class="tooltip-wrap type2 type-toast">
-														<span class="like"></span>
-														<div class="tooltip-txt">
-															<p>관심상품으로 등록되었어요</p>
-														</div>
-													</div>
-												</div>
-
-
-												<ul class="text-bar-list mt10">
-
-
-															<li>가입제한없음 </li>
-
-
-
-															<li>인터넷전용 </li>
-
-
-
-															<li>36개월</li>
-
-
-												</ul>
-
-
-												<div class="label-info-wrap">
-													<strong class="info">최고 연<span>5.20</span>%</strong>
-												</div>
-											</div>
-											<div class="btn-cont-wrap">
-												<a href="#none" class="btn btn-confirm" onclick="fnProdJoin('P000000037');">가입하기</a>
-											</div>
-										</li>
-
-										<li>
-											<div class="prod-box">
-
-												<p class="icon-exp hand">13개월 이후 중도해지 시 예치기간별 높은 이율을 적용하는 예금</p>
-
-												<div class="flag-tit-wrap">
-													<em class="flag dep">
-
-													예금
-
-													</em>
-													<strong class="tit">e회전정기예금 복리(회전주기별 일시 지급식)</strong>
-													<div class="tooltip-wrap type2 type-toast">
-														<span class="like"></span>
-														<div class="tooltip-txt">
-															<p>관심상품으로 등록되었어요</p>
-														</div>
-													</div>
-												</div>
-
-
-
-												<div class="label-info-wrap">
-													<strong class="info">최고 연<span>5.32</span>%</strong>
-												</div>
-											</div>
-											<div class="btn-cont-wrap">
-												<a href="#none" class="btn btn-confirm" onclick="fnProdJoin('P000000084');">가입하기</a>
-											</div>
-										</li>
+									
+									
 
 									</ul>
 								</div>
@@ -683,9 +602,9 @@ function fnProdJoin(pdcd){
 						<div class="sub-tit-wrap"><!--[퍼블] mt 삭제 -->
 							<p class="tit">금융계산기</p>
 						</div>
-						<section class="tabs-wrap">
-							<div class="tabs type2">
-								<ul class="tab-item">
+						<section class="tabs-wrap type2">
+							<div class="tabs">
+								<ul class="tab-item col-02">
 									<li class="on" data-tab="tab-cont001"><a href="#none">납입기간별</a></li>
 									<li data-tab="tab-cont002"><a href="#none">목표 금액별</a></li>
 								</ul>
@@ -694,34 +613,23 @@ function fnProdJoin(pdcd){
 									<!-- // D: 납입기간별 -->
 									<div id="tab-cont001" class="tab-content on">
 										<p class="s-txt ta-c">만기예상금액을 예측해 보세요</p>
-										<div class="form-wrap"><!--[퍼블] mt 삭제 -->
-											<div class="input">
-												<div class="select-wrap">
-													<div class="select-box" tabindex="1">
-														<label for=""><span class="color-F1108E"><strong><span>3.7</span>%</strong></span> 연 이율로</label><!--[퍼블] strong 추가-->
-														<span class="option">설정</span>
-													</div>
-												</div>
+										<div class="select-wrap">
+											<div id="" class="select-box" tabindex="1" >
+												<label for=""><span class="color-F1108E"><strong><span>3.7</span>%</strong></span> 연 이율로</label>
+												<span class="option">설정</span>
 											</div>
-											<div class="input">
-												<div class="select-wrap">
-													<div class="select-box" tabindex="1">
-														<label for=""><span class="color-F1108E"><strong><span>12</span>개월</strong></span> 동안</label><!--[퍼블] strong 추가-->
-														<span class="option">설정</span>
-													</div>
-												</div>
+											<div id="" class="select-box" tabindex="1" >
+												<span class="color-F1108E"><strong><span>12</span>개월</strong></span> 동안</label>
+												<span class="option">설정</span>
 											</div>
-											<div class="input">
-												<div class="select-wrap">
-													<div class="select-box" tabindex="1">
-														<label for=""><span class="color-F1108E"><strong><span>30</span>만원</strong></span>을 월 납입하면?</label><!--[퍼블] strong 추가-->
-														<span class="option">설정</span>
-													</div>
-												</div>
+											<div id="" class="select-box" tabindex="1" >
+												<label for=""><span class="color-F1108E"><strong><span>30</span>만원</strong></span>을 월 납입하면?</label>
+												<span class="option">설정</span>
 											</div>
 										</div>
-										<div class="bg-box ta-c"><!--[퍼블] mt 삭제 -->
-											<p><span class="color-F1108E"><span>10,376,340</span>원</span> 받아요<br>예상이자 : <span>376,340</span>원(만기일시 지급/세전)</p>
+										<div class="bg-box ta-c">
+											<p><span class="color-F1108E"><span>10,376,340</span>원</span> 받아요</p>
+											<p><sapn class="color-666666">예상이자 : 376,340원 (만기일시 지급/세전)</sapn></p>
 										</div>
 									</div>
 									<!-- D: 납입기간별 // -->
@@ -729,32 +637,26 @@ function fnProdJoin(pdcd){
 									<!-- // D: 목표금액별 -->
 									<div id="tab-cont002" class="tab-content dp-none">
 										<p class="s-txt ta-c">목표금액 달성 기간을 예측해 보세요</p>
-										<div class="form-wrap"><!--[퍼블] mt 삭제 -->
-											<div class="input">
-												<div class="select-wrap">
-													<div class="select-box" tabindex="1">
-														<label for=""><span class="color-F1108E"><strong><span>1000</span>만원</strong></span> 달성금액목표로</label><!--[퍼블] strong 추가-->
-														<span class="option">설정</span>
-													</div>
+										<div class="select-wrap">
+											<div class="select-box" tabindex="1">
+												<label for=""><span class="color-F1108E"><strong><span>1000</span>만원</strong></span> 달성금액목표로</label><!--[퍼블] strong 추가-->
+												<span class="option">설정</span>
+											</div>
+											<div class="select-wrap">
+												<div class="select-box" tabindex="1">
+													<label for=""><span class="color-F1108E"><strong><span>30</span>만원</strong></span>을 월납입하고</label><!--[퍼블] strong 추가-->
+													<span class="option">설정</span>
 												</div>
 											</div>
-											<div class="input">
-												<div class="select-wrap">
-													<div class="select-box" tabindex="1">
-														<label for=""><span class="color-F1108E"><strong><span>30</span>만원</strong></span>을 월납입하고</label><!--[퍼블] strong 추가-->
-														<span class="option">설정</span>
-													</div>
+											<div class="select-wrap">
+												<div class="select-box" tabindex="1">
+													<label for=""><span class="color-F1108E"><strong><span>3.7</span>%</strong></span> 연 이율을 적용하면?</label><!--[퍼블] strong 추가-->
+													<span class="option">설정</span>
 												</div>
 											</div>
-											<div class="input">
-												<div class="select-wrap">
-													<div class="select-box" tabindex="1">
-														<label for=""><span class="color-F1108E"><strong><span>3.7</span>%</strong></span> 연 이율을 적용하면?</label><!--[퍼블] strong 추가-->
-														<span class="option">설정</span>
-													</div>
-												</div>
-											</div>
+
 										</div>
+
 										<div class="bg-box ta-c"><!--[퍼블] mt 삭제 -->
 											<p>
 												<span class="color-F1108E"><span>33</span>개월</span> 걸려요<br/>
@@ -798,7 +700,7 @@ function fnProdJoin(pdcd){
     <!-- //e: contentsWrap -->
 
 	<!-- [퍼블] 상품 비교 팝업 추가 : loanList.html 내의 팝업과 동일 - 탭으로 예적금/대출 상품 변경-->
-	<div id="lyPullPop01" class="layerpopup laypop-all">
+	<div id="lyPullPop01" class="layerpopup laypop-all" style="display:none !important;">
 		<div class="pop-header">
 			<h2 class="pop-title">상품 비교하기</h2><!-- [퍼블] 텍스트 변경 -->
 			<button type="button" name="button" class="btn-layer-close" onclick="closePopup('lyPullPop01')">닫기</button>
@@ -955,7 +857,7 @@ function fnProdJoin(pdcd){
 		</div>
 	</div>
 	<script>
-	openPopup('lyPullPop01');
+	//openPopup('lyPullPop01');
 	// [퍼블-3] 테이블 관련 스크립트 삭제
 	</script>
 	<!-- // [퍼블] 상품 비교 팝업 추가 -->
