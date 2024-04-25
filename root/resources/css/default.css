@@ -1609,9 +1609,10 @@ body.on { position:fixed; top:0; }
 .swiper-pagination-bullet { width:auto; height:auto; border-radius:0; background:none; opacity:1; }
 
 /*** 아이콘 있는 list ***/
+.list-icon-wrap { margin-top:40px; }
 .list-icon > li { display:flex; flex-direction:column; position:relative; width:100%; margin-bottom:20px; padding-left:63px; }
 .list-icon > li:last-child { margin-bottom:0; }
-.list-icon > li::before { position:absolute; top:0; left:0; width:48px; height:48px; border-radius:15px; content:""; }
+.list-icon > li::before { content:""; position:absolute; top:0; left:0; width:42px; height:42px; border-radius:50%;  }
 /* .list-icon > li::after { content:''; display:inline-block; height:100%; vertical-align:middle; } */
 
 .list-icon > li > .flag { margin-right:0; margin-bottom:7px; }
@@ -1641,8 +1642,8 @@ body.on { position:fixed; top:0; }
 .list-icon.certification > li { margin:5px 0; }
 .list-icon.certification a { display:block; height:36px; height:36px; font-size:1rem; line-height:36px; }
 .list-icon.certification a:before { content:''; display:inline-block; position:absolute; top:0; left:0; width:36px; height:36px; background-color:#fff; }
-.list-icon > li > .tit { margin-bottom:7px; font-size:1rem; line-height:1.38889; font-weight:500; }
-.list-icon > li > .txt { color:#666666; font-size:0.88889rem; line-height:1.4375; }
+.list-icon > li > .tit { color:#333333; margin-bottom:5px; font-size:0.88889rem; line-height:1.278rem; font-weight:600; }
+.list-icon > li > .txt { color:#999999; font-size:0.77778rem; line-height: 1rem; }
 .list-icon > li > .tit:only-of-type,
 .list-icon > li > .txt:only-of-type { display:inline-block; }
 .list-icon .h-unset { height:unset; }
@@ -1682,12 +1683,13 @@ body.on { position:fixed; top:0; }
 .list-icon.bor-line { padding-bottom:40px; border-bottom:1px solid #EEEEEE; }
 
 /* 아이콘 리스트 image */
-.list-icon > li.camera::before { background:url("../images/common/ico-access-camera.png") center / 25px 26px no-repeat #F8F8FA; }
-.list-icon > li.space::before { background:url("../images/common/ico-access-space.png") center / 25px 24px no-repeat #F8F8FA; }
-.list-icon > li.place::before { background:url("../images/common/ico-access-place.png") center / 20px 27px no-repeat #F8F8FA; }
-.list-icon > li.phone::before { background:url("../images/common/ico-access-phone.png") center / 24px 24px no-repeat #F8F8FA; }
-.list-icon > li.sms::before { background:url("../images/common/ico-access-sms.png") center / 24px 23px no-repeat #F8F8FA; }
-.list-icon > li.photo::before { background:url("../images/common/ico-access-photo.png") center / 22px 21px no-repeat #F8F8FA; }
+.list-icon > li::before { width:42px; height:42px;  background: #FFFFFF; box-shadow: 0px 3px 6px rgb(162,142,199, 0.3) ; }
+.list-icon > li.camera::before { background:url("../images/common/ico-access-camera.png") center /24px no-repeat;   }
+.list-icon > li.space::before { background:url("../images/common/ico-access-space.png") center /24px no-repeat; }
+.list-icon > li.place::before { background:url("../images/common/ico-access-place.png") center /27px no-repeat; }
+.list-icon > li.phone::before { background:url("../images/common/ico-access-phone.png") center /24px no-repeat; }
+.list-icon > li.sms::before { background:url("../images/common/ico-access-sms.png") center /30px no-repeat; }
+.list-icon > li.photo::before { background:url("../images/common/ico-access-photo.png") center /25px no-repeat; }
 
 .list-icon > li.accept::before { background:url("../images/common/ico_accept.png") center / 28px no-repeat #F8F8FA; }
 .list-icon > li.notice::before { background:url("../images/common/ico_notice.png") center / 28px no-repeat #F8F8FA; }
