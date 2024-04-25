@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common" 
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm" 
+	data-serverTime="20230803152535"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+
+<body>
+    <!-- header -->
+    <div id="headerWrap">
+        <script>
+        $(document).ready(function(){
+            document.charset="euc-kr";
+            $("#headerWrap").load("../includes/header.html");
+        });
+        </script>
+    </div>
+	<!-- //header -->
+
+    <form>
+        <!--contentsWrap -->
+        <div class="contentsWrap">
+            <!--contents -->
+            <div class="contents">
+                <div class="default-wrap">
+                    <div class="inquiry-set-wrap">
+                        <div class="period-area">
+                            <h3 class="area-title">조회기간</h3>
+                            <!-- <ul class="radio-list">
+                                <li><button type="button">1주일</button></li>
+                                <li><button type="button">1개월</button></li>
+                                <li class="active"><button type="button">3개월</button></li>
+                                <li><button type="button">6개월</button></li>
+                                <li><button type="button">직접입력</button></li>
+                            </ul> -->
+            
+                            <ul class="radio-list" id="dateUl"><!-- [퍼블] 클래스 변경 : syle-button 삭제 -->
+                                <li><button type="button" onclick="javascript:${reqDs.id}_Func.addMonth(-7);">1주일</button></li>
+                                <li><button type="button" onclick="javascript:${reqDs.id}_Func.addMonth(-1);">1개월</button></li>
+                                <li class="active"><button type="button" onclick="javascript:${reqDs.id}_Func.addMonth(-3);">3개월</button></li>
+                                <li><button type="button" onclick="javascript:${reqDs.id}_Func.addMonth(-6);">6개월</button></li>
+                                <li><button type="button" onclick="javascript:${reqDs.id}_Func.addMonth();">직접입력</button></li>
+                            </ul>
+                            <div class="date-sel-wrap">
+                                <div class="form-wrap w50">
+                                    <div class="input">
+                                        <span id="period1" class="inp option"></span>
+                                        <input type="date" title="" id="inqStdt" name="" value="" required="">
+                                        <span class="inputTextHyphen">~</span>
+                                        <span id="period2" class="inp option"></span>
+                                        <input type="date" title="" id="inqEddt" name="" value="" placeholder="" required="">
+                                        <!-- <span id="period1">
+                                            <input type="date" title="" id="inqStdt" class="inp option" name="" value="" required="">
+                                        </span>
+                                        <span class="inputTextHyphen">~</span>
+                                        <span id="period2">
+                                            <input type="date" title="" id="inqEddt" class="inp option" name="" value="" placeholder="" required="">
+                                        </span> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="type-area" id="txGbnDiv" style="display:none;">
+                            <h3 class="area-title">거래유형</h3>
+                            <ul class="radio-list" id="txGbnUl">
+                                <li class="active"><button type="button" onclick="$('#inqTxGbn').val('A');">전체</button></li>
+                                <li><button type="button" onclick="$('#inqTxGbn').val('M');">입금</button></li>
+                                <li><button type="button" onclick="$('#inqTxGbn').val('W');">출금</button></li>
+                            </ul>
+                        </div>
+                        <div class="type-area" id="rsltGbnDiv" style="display:none;">
+                            <h3 class="area-title">거래유형</h3>
+                            <ul class="radio-list"  id="rsltGbnUl">
+                                <li class="active"><button type="button" onclick="$('#inqRsltGbn').val('A');">전체</button></li>
+                                <li><button type="button" onclick="$('#inqRsltGbn').val('S');">정상</button></li>
+                                <li><button type="button" onclick="$('#inqRsltGbn').val('E');">오류</button></li>
+                            </ul>
+                        </div>
+                        <div class="sort-area">
+                            <h3 class="area-title">정렬순서</h3>
+                            <ul class="radio-list" id="orderUl">
+                                <li class="active"><button type="button" onclick="$('#inqOrder').val('DESC');">최신순</button></li>
+                                <li><button type="button" onclick="$('#inqOrder').val('ASC');">과거순</button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- //contents -->
+
+        </div>
+        <!-- //contentsWrap -->
+    </form>
+</body>
+</html>
+
