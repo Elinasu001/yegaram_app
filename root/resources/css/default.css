@@ -405,7 +405,7 @@ input:autofill:active { -webkit-text-fill-color: #000 !important; -webkit-box-sh
 .form-wrap.type-box input:focus,
 .form-wrap.type-box input:-webkit-autofill:hover,
 .form-wrap.type-box input:-webkit-autofill:focus,
-.form-wrap.type-box input:-webkit-autofill:active  {  padding:15px !important;  border:1px solid #F8F8F8 !important;  border-radius: 8px;  -webkit-box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;   box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;  background: #F8F8F8; }
+.form-wrap.type-box input:-webkit-autofill:active  {  padding:15px !important;  border:1px solid #F8F8F8 !important;  border-radius: 10px;  -webkit-box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;   box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;  background: #F8F8F8; }
 .form-wrap.type-box .btn-input { right:10px; }
 
 
@@ -1491,6 +1491,17 @@ body.on { position:fixed; top:0; }
 .pop-header { display:flex; justify-content:center; align-items: center; padding:0 20px; height:65px; background:#fff;/* padding:54px 20px 30px 20px;*/ border-radius:20px 20px 0 0; text-align:left; }
 .layer-up .pop-header .pop-title {  display:inline-block; font-size:1rem; line-height:1.38889rem; font-weight:500; color:#26282C;  letter-spacing:-.4px; word-break:keep-all; }
 
+.layer-up .ly-select.login .ly-select-list li > button  { display:flex; align-items: center; justify-content: space-between; position:relative; text-align:left; padding:0 15px;  padding-left:49px; }
+.layer-up .ly-select.login .ly-select-list li > button::before { content:''; position:absolute; top:50%; transform:translateY(-50%  ); left:15px;  width:24px; height:24px;  }
+
+/* 간편인증관리 */
+.tit-icon::before { content:''; display:inline-block; margin-top:-4px; margin-right:3px; width:36px; height:36px; vertical-align:middle; }
+.pw::before { background:url("../images/common/ico_certi_pw.png") no-repeat 50%/22px auto; }
+.pattern::before { background:url("../images/common/ico_certi_pattern.png") no-repeat 50%/23px auto; }
+.bio::before { background:url("../images/common/ico_certi_bio.png") no-repeat 50%/23px auto; }
+.txt-list-wrap .txt-detail-area:has(.tit-icon) .txt-detail-tit { padding-bottom:30px; }
+.txt-list-wrap:has(.tit-icon) + .arrow-button-list { margin-top:20px; }
+
 
 /** _날짜선택 case **/
 .rolldate-container .rolldate-content .rolldate-dim { border:none; }
@@ -2446,7 +2457,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .main .login-id .default-wrap { padding-top:0; }
 .join-wrap { margin-top:40px; text-align: center; }
 .join-wrap .tit { color:#333333; font-size:0.88889rem; line-height:1.4375; }
-.join-wrap .btn-cont-wrap.join { margin-top:15px; }
+.join-wrap .btn-cont-wrap { margin-top:20px; }
 
 /* 약관 줌 인/아웃 버튼 */
 .plus-minus-wrap { position:fixed; right:20px; bottom:100px; z-index:10; }

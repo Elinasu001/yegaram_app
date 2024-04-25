@@ -1080,15 +1080,6 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .terms-notice-wrap .list-bull.type-large { margin-top:0; }
 .terms-notice-wrap .list-bull.type-large.num li { padding-left:25px; font-size:0.88889rem; line-height:1.4375; }
 
-/* 간편인증관리 */
-/* .default-wrap:has(.txt-list-wrap .tit-icon) { padding-top:30px; } */
-.tit-icon::before { content:''; display:inline-block; margin-top:-4px; margin-right:3px; width:36px; height:36px; vertical-align:middle; }
-.pw::before { background:url("../images/common/ico_certi_pw.png") no-repeat 50%/22px auto; }
-.pattern::before { background:url("../images/common/ico_certi_pattern.png") no-repeat 50%/23px auto; }
-.bio::before { background:url("../images/common/ico_certi_bio.png") no-repeat 50%/23px auto; }
-.txt-list-wrap .txt-detail-area:has(.tit-icon) .txt-detail-tit { padding-bottom:30px; }
-.txt-list-wrap:has(.tit-icon) + .arrow-button-list { margin-top:20px; }
-
 /* 휴면계좌 */
 .default-wrap > .alignment-both-side > .sub-tit-wrap { margin:10px 0 15px; }
 
