@@ -1086,3 +1086,10 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 /* 계좌해지 */
 .cnl-wrap { margin-top:40px; }
 
+
+/* 로그인  img_faceid */
+.icCerti { position: relative;  margin-top:100px; border:1p solid red; width:48px; height:48px; font-size:0; }
+.icCerti::after { content:''; position: absolute; top: 0;  width:48px; height:48px;  }
+.icCerti.faceId::after {  background:url(../images/common/ico_faceId.png) 100%/48px auto; }
+.icCerti.figPoint::after { background:url(../images/common/ico_figPoint.png) 100%/48px auto; }
+.icCerti.pattern::after { background:url(../images/common/ico_pattern.png) 100%/48px auto; }
