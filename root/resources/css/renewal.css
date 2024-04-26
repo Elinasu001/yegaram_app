@@ -138,7 +138,7 @@ body.fix { overflow:hidden; }
   }
 }
 
-.result-area::before { content:''; display:inline-block; width:64px; height:64px; }
+.result-area::before { content:''; display:inline-block; width:84px; height:64px; }
 /** write(서류ico) - 작성중, 정보변경  / exclamation(느낌표ico) - 심사중 / checking(체크ico) - 신청중 /  callcenter(콜센터ico) - 상담필요 **/
 .result-area.write::before { background:url("../images/common/ico_result_write.png") center no-repeat; background-size:100%; }
 .result-area.exclamation::before { background:url("../images/common/ico_result_exclamation.png") center no-repeat;background-size:100%; }
