@@ -321,7 +321,7 @@ body.fix { overflow:hidden; }
 .arrow-button-list li + li { margin-top:10px; }
 
 /* 공통-신분증촬영 */
-.imgbox-wrap { min-height:200px; padding:30px 47px; background:#F8F8F8; border-radius:15px; }
+.imgbox-wrap { min-height:200px; margin-top:40px; padding:30px 47px; background:#F8F8F8; border-radius:15px; }
 .imgbox-wrap.type-high { min-height:52vh; }/*2023-07-19 서류촬영용 추가*/
 .ocr-img { min-height:200px; border-radius:20px; border:solid 1px #eee; }
 .imgbox-wrap.crtf { padding:0 47px; background:transparent; text-align:center; }
@@ -333,6 +333,10 @@ body.fix { overflow:hidden; }
 .ocr-wrap + .list-bull dd { font-weight:400; color:#333333; font-size:0.88889rem; }
 .ocr-wrap + .list-bull dd:before { top:9px; }
 .ocr-wrap .img-line-wrap img { border-radius:15px;  }
+.imgbox-wrap.ocr-wrap #camera-area { height:270px; }
+.imgbox-wrap.ocr-wrap #camera-area .idcard-div,
+.imgbox-wrap.ocr-wrap #camera-area .idcard-cam-cont,
+.imgbox-wrap.ocr-wrap #camera-area .img-line-wrap  { height:100%; }
 
 @media screen and (max-width:359px) {
 	.imgbox-wrap { min-height:120px; padding:30px 20px; }

@@ -255,6 +255,9 @@ html.font-size-3{ font-size: 24px;}
 /* .exp-txt span { color:#808080; } */
 .form-wrap.type2 + .exp-txt { margin-top:15px; }
 .label-txt { color:#000; font-size:0.88889rem; line-height:1.4375; }
+.info-txt-wrap { margin-top:10px; }
+.info-txt-wrap .info-txt { margin-top:10px; }
+.info-txt-wrap .info-txt:first-child { margin-top:0px; }
 .info-txt { display:block; width:100%; margin-top:10px; padding-left:25px; background:url("../images/common/ico_info.png")top left no-repeat; background-size:20px; font-weight:300; color:#757575; font-size:0.77778rem; line-height:1.5; }
 .info-txt + .info-txt { margin-top:5px; }
 /* .info-txt + .form-wrap.password,
