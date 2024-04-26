@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common" 
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm" 
+	data-serverTime="20230803152535"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+<style>
+    .default-wrap h3.tit-h3 {  display:block; margin:20px 0; font-size:20px; }
+    .default-wrap h4.tit-h4 {  display:block; margin:20px 0; font-size:16px; }
+    .bg-txt { background:#DDDDDD; padding:20px; font-size:16px; }
+</style>
+
+<body>
+    <!-- header -->
+    <div id="headerWrap">
+        <script>
+        $(document).ready(function(){
+            document.charset="euc-kr";
+            $("#headerWrap").load("../includes/header.html");
+        });
+        </script>
+    </div>
+	<!-- //header -->
+
+    <form>
+        <!--contentsWrap -->
+        <div class="contentsWrap">
+            <!--contents -->
+            <div class="contents">
+                <div class="default-wrap">
+
+                    <h3 class="tit-h3">팝업/Alert</h3>
+
+                    <h4 class="tit-h4">• alert</h4>
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-primary" onclick="openPopupUp('lyAlert1');">버튼명</a>
+                    </div>
+
+                    <h4 class="tit-h4">• 팝업 버튼 없을 경우(팝업)</h4>
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-primary" onclick="openPopupUp('lyPop1');">버튼명</a>
+                    </div>
+
+                    <h4 class="tit-h4">• 팝업 버튼 있을 경우( has-button 클래스 : 버튼 추가)(팝업)</h4>
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-primary" onclick="openPopupUp('lyPop2');">버튼명</a>
+                    </div>
+
+                    <h4 class="tit-h4">• 팝업 버튼 있을 경우(has-button 클래스 추가) / (type-high 클래스 : 높이 추가)(팝업)</h4>
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-primary" onclick="openPopupUp('lyPop3');">버튼명</a>
+                    </div>
+
+                    <h4 class="tit-h4">• 셀렉트 (팝업)</h4>
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-primary" onclick="openPopupUp('lySel1');">버튼명</a>
+                    </div>
+
+                    <h4 class="tit-h4">• 약관 풀팝업(팝업)</h4>
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-primary" onclick="openPopupUp('lyTermsPop');">버튼명</a>
+                    </div>
+
+                    <h4 class="tit-h4">• 풀팝업(팝업)</h4>
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-primary" onclick="openPopupUp('lypullPop');">버튼명</a>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- //contents -->
+
+            <!--S: alert-->
+            <div id="lyAlert1" class="layerpopup type-alert on">
+                <div class="content-wrap">
+                    
+                    <div class="pop-con-wrap">
+                        <span class="pop-con">주소를 입력해주세요</span>
+                    </div>
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn btn-info" onclick="">버튼명</a>
+                        <a href="javascript:void(0);" class="btn close">확인</a>
+                    </div>
+                </div>
+            </div>
+            <!--E: alert-->
+
+            <!--S: 팝업 버튼 없을 경우-->
+            <div id="lyPop1" class="layerpopup layer-up" ><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">팝업 버튼</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con">
+                        1111111<br/>
+                        1111111<br/>
+                        1111111<br/>
+                        1111111<br/>
+                        1111111<br/>
+                        1111111<br/>
+                        1111111<br/>
+                        1111111<br/>
+                        1111111<br/>
+                        1111111<br/>
+                        1111111<br/>
+                    </div>
+                </div>
+            </div>
+            <!--E: 팝업 버튼 없을 경우-->
+
+            <!--S: 팝업 버튼 있을 경우-->
+            <div id="lyPop2" class="layerpopup layer-up has-button" ><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">팝업 버튼</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con">
+                        
+                    </div>
+                </div>
+                <!--D: fixed-btn-wrap 버튼은 content-wrap 밖으로 위치-->
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap flexCol">
+                        <a href="javascript:void(0);" class="btn close">확인</a>
+                        <a href="javascript:void(0);" class="btn txt">버튼명</a>
+                    </div>
+                </div>
+            </div>
+            <!--E: 팝업 버튼 있을 경우-->
+
+            <!--S: 팝업 버튼 있을 경우 - 높이 추가-->
+            <div id="lyPop3" class="layerpopup layer-up has-button" ><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">팝업 버튼</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con type-high">
+                       
+
+                    </div>
+                </div>
+                <!--D: fixed-btn-wrap 버튼은 content-wrap 밖으로 위치-->
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap flexCol">
+                        <a href="javascript:void(0);" class="btn close">확인</a>
+                        <a href="javascript:void(0);" class="btn txt">버튼명</a>
+                    </div>
+                </div>
+            </div>
+            <!--E: 팝업 버튼 있을 경우 - 높이 추가-->
+
+            <div id="lySel1" class="layerpopup layer-up show"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">등록구분</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con ly-select">
+                        <ul class="ly-select-list">
+                            <li><button>주민등록번호</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                            <li><button>법인(기업) 사업자번호</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- s: 약관풀팝업 -->
+            <div id="lyTermsPop" class="layerpopup laypop-all agree-layer">
+                <!-- s: contents -->
+                <div class="pop-header">
+                    <h2 class="pop-title">약관명</h2>
+                    <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lyTermsPop')">닫기</button>
+                </div>
+                
+                <div class="pop-con-wrap">
+                    <div class="default-wrap mb0">
+                        <div class="info-wrap">
+                            PDF솔루션 들어갈 예정
+                        </div>
+                        <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lyTermsPop')">닫기</button>
+                    </div>
+                </div>
+
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="#none" class="btn" onclick="closePopup('lyTermsPop')">동의</a>
+                    </div>
+                </div>
+            </div>
+            <!-- //e: 약관풀팝업 -->
+
+            <!-- s: 풀팝업 -->
+            <div id="lypullPop" class="layerpopup laypop-all agree-layer">
+                <!-- s: contents -->
+                <div class="pop-header">
+                    <h2 class="pop-title">풀팝업</h2>
+                    <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lypullPop')">닫기</button>
+                </div>
+                
+                <div class="pop-con-wrap">
+                    <div class="default-wrap">
+
+                    </div>
+                </div>
+
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="#none" class="btn" onclick="closePopup('lypullPop')">확인</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- //e: 풀팝업 -->
+
+
+        </div>
+        <!-- //contentsWrap -->
+    </form>
+</body>
+</html>
+
