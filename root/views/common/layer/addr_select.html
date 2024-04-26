@@ -84,7 +84,7 @@
 					<div class="pop-con-wrap">
 						<div class="default-wrap">
 
-							<!--주소 검색 영역-->
+							<!-- s: 주소 검색 영역-->
                             <div class="search-area">
                                 <div class="form-wrap form-line">
                                     <div class="input">
@@ -102,11 +102,74 @@
                                     <dd>초량동 흥국생명</dd>
                                 </dl>
                             </div>
-                            <!--주소 검색 영역-->
+                            <!-- e: 주소 검색 영역-->
+
+                            <!-- s: 주소 검색 결과-->
+                            <div class="search-result-area" id="" style="display:block;">
+                                <div class="result-box">
+                                    <a href="#none">
+                                        <span class="zipcode">12345</span>
+                                        <ul class="juso-list">
+                                            <li>
+                                                <em class="btn btn-sm purple">도로명</em>
+                                                <p>서울시 동작구 동작로 131 고려아파트 1154동 702호</p>
+                                            </li>
+                                            <li>
+                                                <em class="btn btn-sm gray">지&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;번</em>
+                                                <p>서울시 동작구 동작로 131</p>
+                                            </li>
+                                        </ul>
+                                    </a>
+                                </div>
+
+                                <div class="result-box">
+                                    <a href="#none">
+                                        <span class="zipcode">12345</span>
+                                        <ul class="juso-list">
+                                            <li>
+                                                <em class="btn btn-sm purple">도로명</em>
+                                                <p>서울시 동작구 동작로 131 고려아파트 1154동 702호</p>
+                                            </li>
+                                            <li>
+                                                <em class="btn btn-sm gray">지&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;번</em>
+                                                <p>서울시 동작구 동작로 131</p>
+                                            </li>
+                                        </ul>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="result-area nodata" id="" style="display:block;" ><!-- [퍼블] 클래스 변경 -->
+                                <p lass="desc">검색결과가 없어요</p>
+                                <!-- <p class="desc">도로명, 지번주소, 지역명(동/리) + 건물명으로<br>다시 검색하세요</p> -->
+                            </div>
+                            <!-- e: 주소 검색 결과-->
+
+                            <!-- s: 주소 검색 입력-->
+                            <div class="search-result-area"  id="" style="display:block;">
+                                <div class="form-wrap">
+                                    <label for="" class="formlabel">상세주소</label>
+                                    <div class="input">
+                                        <input type="text" title="상세주소" id="" class="inp" name="" value="" placeholder="상세주소" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- e: 주소 검색 입력-->
 
 						</div>
 					</div>
 				</div>
+
+
+                <div class="fixed-btn-wrap" id="" style="display:block;">
+                    <div class="btn-wrap">
+                        <!-- <a href="javascript:void(0);" class="btn">검색</a> -->
+                        <!-- <a href="javascript:void(0);" class="btn">재검색</a> -->
+                        <a href="javascript:void(0);" class="btn disabled">확인</a>
+                        <!-- <a href="javascript:void(0);" class="btn">확인</a> -->
+                    </div>
+                </div>
 
 			</div>
 
