@@ -1032,7 +1032,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 /* 약관 상세 */
 .default-wrap:has(.info-wrap.terms-view) { padding-top:0; }
 /* 추가인증 */
-.check-box + .form-wrap:has(.select-box) { margin-top:40px; }
+/* .check-box + .form-wrap:has(.select-box) { margin-top:40px; } */
 /* 타행본인계좌인증 */
 .check-account + .form-wrap { margin-top:10px; }
 .check-account + .form-wrap.password { margin-top:40px; }

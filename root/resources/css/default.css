@@ -471,10 +471,11 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .form-all-wrap .form-wrap { margin-top:30px; }
 .form-all-wrap .form-wrap.type-box { margin-top:10px;}
 
+.form-wrap .select-wrap { margin-top:0; }
 .form-wrap .check-account { margin-top:0; margin-bottom:20px; }
 
 /* 2023-10-06 onbasic 클래스 삭제, selet-form-wrap 클래스 추가 에 따른 수정 */
-.form-wrap + div > .form-wrap { margin-top: 30px; }
+/* .form-wrap + div > .form-wrap { margin-top: 30px; } */
 .form-wrap + div > .form-wrap.select-form-wrap { margin-top:10px; }
 .txt-list-wrap + div > .form-wrap { margin-top: 40px; }
 .select-form-wrap + .form-wrap,
@@ -736,7 +737,8 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .select-wrap .select-box:first-child,
 .select-wrap .check-box:first-child { margin-top:0;}
 .select-wrap .select-box,
-.select-wrap .check-box { margin-top:10px; }
+.select-wrap .check-box,
+.select-wrap .form-wrap { margin-top:10px; }
 .select-wrap .select-box{position:relative;height:50px;border-bottom:1px solid #DDDDDD;color:#333333; font-size:0.88889rem;}
 .select-wrap .select-box:after {content:'';position:absolute;right:0;top:0;width:50px;height:50px;background:url(../images/common/arrow_selbox.png) no-repeat 50%/24px auto;}
 .select-wrap .select-box .inputH{display:block;visibility:hidden;position:absolute;top:0;width:1px;height:1px;}
@@ -800,11 +802,11 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .toggle-wrap label { display:block; /*width:60px;*/ height:27px; }
 
 
-.check-box + .check-box,
-.check-box + .form-wrap:has(.select-wrap) { margin-top:10px; }
+/* .check-box + .check-box,
+.check-box + .form-wrap:has(.select-wrap) { margin-top:10px; } */
 .tit-wrap:has(+.check-box) { padding-bottom:0; }
 .sub-tit-wrap + .check-box { margin-top:15px; }
-.check-box + .form-wrap > .formlabel { margin-top:40px; }
+/* .check-box + .form-wrap > .formlabel { margin-top:40px; } */
 
 /* 50% */
 .form-wrap.w50 > label { position:relative; z-index:10; width:auto; } /*,오타삭제 - 깨지는 화면 있는지 확인 필요*/
