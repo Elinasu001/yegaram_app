@@ -1274,14 +1274,22 @@ left
 .contentsWrap:has(.fixed-btn-wrap.no-fixed) { padding-bottom:0; } */
 
 /* .default-wrap:has(.gray-wrap:only-child) { padding:0 20px !important; }iostest */
+
+form,
+.contentsWrap.grid,
+.contents {  height:100%; }
+.contentsWrap .contents > .default-wrap { padding-bottom:80px; }
+.contentsWrap.grid .contents > .default-wrap { padding-bottom:40px; }
+.contentsWrap.grid .contents .default-wrap { display:flex; flex-direction: column; justify-content:space-between; height:100%; overflow-y:scroll; }
+.contentsWrap.grid .contents .default-wrap { display:flex; flex-direction: column; justify-content:space-between;  height:100%; /*height:calc(100vh - 100px); */}
+
 .default-wrap.product { padding:0 20px; }
 .default-wrap { padding:0px 20px 40px; }
-.default-wrap.grid { display:flex; flex-direction: column; justify-content:space-between; height:calc(100vh - 50px); }
-.default-wrap.gridBtn { display:flex; flex-direction: column; justify-content:space-between; height:calc(100vh - 153px); }
 /* .default-wrap:has(> div.step-wrap) { padding-top:10px; } */
 /* .gray-wrap:has(.tabs-wrap) { padding-top:0; } */
 .default-wrap.product .gray-wrap { padding-top:0; } /*네이버앱 대응*/
 .layerpopup .default-wrap { padding-bottom:60px; }
+.layerpopup.laypop-all .default-wrap { padding-bottom:60px; margin-bottom:100px; }
 .pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap { padding-bottom:0; }
 .laypop-all .default-wrap:has(.tabs-wrap.type-uniform) { padding-top: 0; }
 .layerpopup.has-button .default-wrap { padding-bottom:40px; }

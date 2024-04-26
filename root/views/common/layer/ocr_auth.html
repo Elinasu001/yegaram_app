@@ -75,7 +75,7 @@
             <!-- //contents -->
 
             <!-- s: 신분증 촬영 팝업 -->
-			<div id="biz_6quggsm31co" class="layerpopup laypop-all has-button show" style="z-index: 322; display: block;">
+			<div id="biz_6quggsm31co" class="layerpopup laypop-all show" style="z-index: 322; display: block;">
 
 				<div class="content-wrap">
 					<div class="pop-header">
@@ -84,128 +84,131 @@
 					</div>
 					<div class="pop-con-wrap">
 
-                        <!-- s: ocr 촬영 안내 -->
-						<div class="default-wrap" style="display:block;">
+						<div class="default-wrap">
 
-							<div class="tit-wrap">
-								<p class="txt"><strong>주민등록증 또는 운전면허증을<br/>준비해 주세요</strong></p>
-							</div>
+                            <!-- s: ocr 촬영 안내 -->
+                            <section style="display:block;">
+                                <div class="tit-wrap">
+                                    <p class="txt"><strong>주민등록증 또는 운전면허증을<br/>준비해 주세요</strong></p>
+                                </div>
 
-                            <div class="imgbox-wrap">
-                                <img src="/resources/images/common/img_registrationcard.png" alt="주민등록증 예시이미지">
-                            </div>
-                            
-                            <div class="list-bull ico">
-                                <strong>촬영 전 확인해 주세요</strong>
-                                <ul>
-                                    <li>타인의 신분증으로 촬영하시면 관계 법령에 따라 처벌될 수 있어요</li>
-                                    <li>흔들림 없고,  빛 반사가 없도록 촬영해 주세요</li>
-                                    <li>신분증 정보가 식별이 어려울 경우, 진위확인이<br/>
-                                        불가능하여 비대면계좌개설 이용이 제한될 수 있어요</li>
-                                </ul>
-                            </div>
-						</div>
-                        <!-- e: ocr 촬영 -->
+                                <div class="imgbox-wrap">
+                                    <img src="/resources/images/common/img_registrationcard.png" alt="주민등록증 예시이미지">
+                                </div>
+                                
+                                <div class="list-bull ico">
+                                    <strong>촬영 전 확인해 주세요</strong>
+                                    <ul>
+                                        <li>타인의 신분증으로 촬영하시면 관계 법령에 따라 처벌될 수 있어요</li>
+                                        <li>흔들림 없고,  빛 반사가 없도록 촬영해 주세요</li>
+                                        <li>신분증 정보가 식별이 어려울 경우, 진위확인이<br/>
+                                            불가능하여 비대면계좌개설 이용이 제한될 수 있어요</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <!-- e: ocr 촬영 -->
 
-                        <!-- s: ocr 촬영 -->
-                        <div class="default-wrap" id="cameraDiv" style="display:none;">
-                            <div class="tit-wrap">
-                                <p class="txt"><b>신분증</b>을<br><b>기준선</b> 안에 맞춰주세요</p>
-                            </div>
-                            <div class="imgbox-wrap ocr-wrap mb40">
-                                <div id="camera-area">
-                                    <div class="idcard-div">
-                                        <div class="idcard-cam-cont">
-                                            <div class="img-line-wrap camera-area-body">
-                                                <img src="/resources/images/common/cam_line.png" alt="" id="capture-guide" />
-                                                <canvas class="camera-area-body-canvas"></canvas>
-                                                <video class="camera-area-body-video" playsinline autoplay></video>
+                            <!-- s: ocr 촬영 -->
+                            <section  id="cameraDiv" style="display:block;">
+                                <div class="tit-wrap">
+                                    <p class="txt"><b>신분증</b>을<br><b>기준선</b> 안에 맞춰주세요</p>
+                                </div>
+                                <div class="imgbox-wrap ocr-wrap mb40">
+                                    <div id="camera-area">
+                                        <div class="idcard-div">
+                                            <div class="idcard-cam-cont">
+                                                <div class="img-line-wrap camera-area-body">
+                                                    <img src="/resources/images/common/cam_line.png" alt="" id="capture-guide" />
+                                                    <canvas class="camera-area-body-canvas"></canvas>
+                                                    <video class="camera-area-body-video" playsinline autoplay></video>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div>
-                                        <canvas class="extract-image"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="list-bull">
-                                <strong>촬영 TIP</strong>
-                                <ul>
-                                    <li>글자에 초점을 맞추고, 빛 반사에 유의하세요</li>
-                                    <li>계속해서 촬영이 안 될 때는 카메라를 닫고 정보를 직접 입력해 주세요</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- e: ocr 촬영 -->
-
-                        <!-- s: ocr 촬영결과 -->
-                        <div class="default-wrap" id="resultDiv" style="display:none;">
-                            
-                            <div class="ocr-img">
-                                <img id="resultImg" src=""/>
-                            </div>
-
-                            <div class="btn-cont-wrap" id="retryCameraBtn" style="display:none;">
-                                <a href="#none" class="btn btn-add btn-camera">다시촬영</a>
-                            </div>
-
-                            <div class="form-all-wrap">
-                                <div class="form-wrap">
-                                    <label for="" class="formlabel">이름</label>
-                                    <div class="input">
-                                        <input type="text" title="이름" id="" class="inp" name="" value="" placeholder="이름 입력"  required="">
+                                        <div>
+                                            <canvas class="extract-image"></canvas>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="form-wrap password w50">
-                                    <label for="ipt02" class="formlabel">주민등록번호</label>
-                                    <div class="input">
-                                        <span>
-                                            <input type="number" title="주민등록번호 앞자리" id="ipt02" class="inp" name="" value="" maxlength="6" required="">
-                                        </span>
-                                        <span class="inputTextHyphen">-</span>
-                                        <span class="jummin" >
-                                            <input type="password" title="주민등록번호 뒷자리" id="jumin2" class="inp" name="jumin2" value="" maxlength="7" required=""  required disabled>
-                                            <!-- <span class="jumintext">●●●●●●●</span> -->
-                                        </span>
-                                    </div>
+                                <div class="list-bull">
+                                    <strong>촬영 TIP</strong>
+                                    <ul>
+                                        <li>글자에 초점을 맞추고, 빛 반사에 유의하세요</li>
+                                        <li>계속해서 촬영이 안 될 때는 카메라를 닫고 정보를 직접 입력해 주세요</li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <!-- e: ocr 촬영 -->
+
+                            <!-- s: ocr 촬영결과 -->
+                            <section  id="resultDiv" style="display:block;">
+                                
+                                <div class="ocr-img">
+                                    <img id="resultImg" src=""/>
                                 </div>
 
-
-                                <div class="form-wrap" style="display:none;" id="">
-                                    <label for="ocrISU_DT" class="formlabel">발급일자</label>
-                                    <div class="input">
-                                        <input type="date" title="발급일자" id="" class="inp" name="" value="" placeholder="발급일자를 입력해주세요." required readonly="readonly"/>
-                                    </div>
-                                    <p class="error-txt">발급일자를 입력해주세요</p>
+                                <div class="btn-cont-wrap" id="retryCameraBtn" style="display:none;">
+                                    <a href="#none" class="btn btn-add btn-camera">다시촬영</a>
                                 </div>
 
-                                <div class="form-wrap" style="display:none;" id="">
-                                    <label for="" class="formlabel">면허번호</label>
-                                    <div class="input">
-                                        <input type="text" title="면허번호" id="" class="inp" name="" value="" placeholder="면허번호를 입력해주세요." required readonly="readonly"/>
+                                <div class="form-all-wrap">
+                                    <div class="form-wrap">
+                                        <label for="" class="formlabel">이름</label>
+                                        <div class="input">
+                                            <input type="text" title="이름" id="" class="inp" name="" value="" placeholder="이름 입력"  required="">
+                                        </div>
                                     </div>
-                                    
+
+                                    <div class="form-wrap password w50">
+                                        <label for="ipt02" class="formlabel">주민등록번호</label>
+                                        <div class="input">
+                                            <span>
+                                                <input type="number" title="주민등록번호 앞자리" id="ipt02" class="inp" name="" value="" maxlength="6" required="">
+                                            </span>
+                                            <span class="inputTextHyphen">-</span>
+                                            <span class="jummin" >
+                                                <input type="password" title="주민등록번호 뒷자리" id="jumin2" class="inp" name="jumin2" value="" maxlength="7" required=""  required disabled>
+                                                <!-- <span class="jumintext">●●●●●●●</span> -->
+                                            </span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-wrap" style="display:none;" id="">
+                                        <label for="ocrISU_DT" class="formlabel">발급일자</label>
+                                        <div class="input">
+                                            <input type="date" title="발급일자" id="" class="inp" name="" value="" placeholder="발급일자를 입력해주세요." required readonly="readonly"/>
+                                        </div>
+                                        <p class="error-txt">발급일자를 입력해주세요</p>
+                                    </div>
+
+                                    <div class="form-wrap" style="display:none;" id="">
+                                        <label for="" class="formlabel">면허번호</label>
+                                        <div class="input">
+                                            <input type="text" title="면허번호" id="" class="inp" name="" value="" placeholder="면허번호를 입력해주세요." required readonly="readonly"/>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="form-wrap">
+                                        <label for="ocrLICENSE_CD" class="formlabel">식별번호</label>
+                                        <div class="input">
+                                            <input type="text" title="식별번호" id="" class="inp" name="" value="" placeholder="식별번호를 입력해주세요." required readonly="readonly"/>
+                                        </div>
+                                    </div>
+
                                 </div>
 
-                                <div class="form-wrap">
-                                    <label for="ocrLICENSE_CD" class="formlabel">식별번호</label>
-                                    <div class="input">
-                                        <input type="text" title="식별번호" id="" class="inp" name="" value="" placeholder="식별번호를 입력해주세요." required readonly="readonly"/>
-                                    </div>
+                                <div class="info-txt-wrap"  style="display: none;">
+                                    <p class="info-txt">인식된 신분증 정보를 확인해 주세요</p>
+                                    <p class="info-txt">신분증정보가 실제와 다른 경우 이용이 제한될 수 있어요</p>
                                 </div>
 
-                            </div>
+                            </sectio>
+                            <!-- e: ocr 촬영결과 -->
 
-                            <div class="info-txt-wrap"  style="display: none;">
-                                <p class="info-txt">인식된 신분증 정보를 확인해 주세요</p>
-                                <p class="info-txt">신분증정보가 실제와 다른 경우 이용이 제한될 수 있어요</p>
-                            </div>
-
-                        </div>
-                        <!-- e: ocr 촬영결과 -->
-
+						</div>
+                        
 					</div>
 				</div>
 
