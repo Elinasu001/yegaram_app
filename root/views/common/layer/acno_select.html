@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common" 
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm" 
+	data-serverTime="20230803152535"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+
+
+<body>
+    <!-- header -->
+    <div id="headerWrap">
+        <script>
+        $(document).ready(function(){
+            document.charset="euc-kr";
+            $("#headerWrap").load("../includes/header.html");
+        });
+        </script>
+    </div>
+	<!-- //header -->
+
+    <form>
+        <!--contentsWrap -->
+        <div class="contentsWrap">
+            <!--contents -->
+            <div class="contents">
+                <div class="default-wrap">
+
+
+                </div>
+            </div>
+            <!-- //contents -->
+
+            <div id="banklistSelect" class="layerpopup layer-up show" style="display:block;">
+                <div class="content-wrap banklistWrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title"></h2>
+                    </div>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    <div class="ly-scroll-con type-high non-scroll">
+        
+                        <section class="tabs-wrap"><!-- D: 클래스 vs-hidden 추가시 .tabs-wrap 영역 미노출 -->
+                            <div class="tabs">
+                                <ul class="tab-item">
+                                    <li class="on" data-tab="tab-cont01"><a href="javascript:void(0);" title="선택됨">최근입금</a></li>
+                                    <li data-tab="tab-cont02" class=""><a href="javascript:void(0);">자주 쓰는</a></li>
+                                    <li data-tab="tab-cont03" class=""><a href="javascript:void(0);">내 계좌</a></li>
+                                    <li data-tab="tab-cont04" class=""><a href="javascript:void(0);">입금지정</a></li>
+                                </ul>
+                                <div class="scroll-area">
+
+                                    <div id="tab-cont01" class="tab-content">
+
+                                        <!--s: 계좌 -->
+                                        <ul class="bank_list star">
+                                            <li class="active"><!-- D: active 클래스 star 체크됨 -->
+                                                <a href="#none">
+                                                    <strong class="tit">e-회전정기예금</strong>
+                                                    <span class="exp">101-23-45-6789012</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#none">
+                                                    <strong class="tit">e-회전정기예금</strong>
+                                                    <span class="exp">101-23-45-6789012</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#none">
+                                                    <strong class="tit">e-회전정기예금</strong>
+                                                    <span class="exp">101-23-45-6789012</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <!--e: 계좌 -->
+
+                                        <!--s: 입금계좌 결과 없음 -->
+                                        <div class="result-area">
+                                            <p class="txt">최근 입금 계좌가 없어요</p>
+                                        </div>
+                                        <!--e: 입금계좌 결과 없음 -->
+                                        
+                                    </div>
+
+                                    <div id="tab-cont02" class="tab-content dp-none">
+                                       
+                                    </div>
+
+                                    <div id="tab-cont03" class="tab-content dp-none">
+                                       
+                                    </div>
+
+                                    <div id="tab-cont04" class="tab-content dp-none">
+                                       
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- //contentsWrap -->
+    </form>
+</body>
+</html>
+

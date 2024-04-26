@@ -52,14 +52,14 @@
 
 <body>
     <!-- header -->
-    <!-- <div id="headerWrap">
+    <div id="headerWrap">
         <script>
         $(document).ready(function(){
             document.charset="euc-kr";
             $("#headerWrap").load("../includes/header.html");
         });
         </script>
-    </div> -->
+    </div>
 	<!-- //header -->
 
     <form>
@@ -68,48 +68,39 @@
             <!--contents -->
             <div class="contents">
                 <div class="default-wrap">
-                    <div class="tit-wrap">
-                        <p class="txt"><strong>GO BANK 앱 서비스 이용을 위해<br/>권한 허용이 필요해요</strong></p>
-                    </div>
 
-                    <div class="list-icon-wrap">
-                        <ul class="list-icon access">
-                            <li class="camera">
-                                <p class="tit">카메라</p>
-                                <p class="txt">실명확인을 위한 신분증 촬영</p>
-                            </li>
-                            <li class="space">
-                                <p class="tit">저장공간</p>
-                                <p class="txt">공동인증서 저장, 임시저장공간 사용</p>
-                            </li>
-                            <li class="place">
-                                <p class="tit">위치</p>
-                                <p class="txt">주변 영업점 검색 시 사용</p>
-                            </li>
-                            <li class="phone">
-                                <p class="tit">전화</p>
-                                <p class="txt">휴대전화 기기정보를 수집 시 사용</p>
-                            </li>
-                            <li class="sms">
-                                <p class="tit">SMS</p>
-                                <p class="txt">이체결과 등의 정보전송 시 사용</p>
-                            </li>
-                            <li class="photo">
-                                <p class="tit">사진</p>
-                                <p class="txt">신분확인을 위해 기기 내 저장된 사진을 사용</p>
-                            </li>
-                        </ul>
-                    </div>
 
                 </div>
             </div>
             <!-- //contents -->
 
-            <div class="fixed-btn-wrap"> 
-                <div class="btn-wrap flexCol">
-                    <a href="javascript:void(0);" class="btn">확인했어요</a>
+            <!--s: 준비사항 팝업 -->
+            <div id="readyItem" class="layerpopup layer-up has-button show" style="display:block">
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">준비사항</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con">
+                        <div class="prepare-area">
+                            <ul class="list-icon col3">
+                                <li class="phone">휴대폰</li>
+                                <li class="idcard">운전면허증<br>또는 주민등록증</li>
+                                <li class="joint-certi">공동인증서<br>금융인증서</li>
+                                <li class="private-certi">사설인증서<br><span>카카오페이,<br/>네이버,토스</span></li>
+                                <li class="business">타행<br/>입출금계좌</li>
+                            </ul>
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="#none" class="btn">알겠어요</a>
+                    </div>
                 </div>
             </div>
+            <!--e: 준비사항 팝업 -->
 
         </div>
         <!-- //contentsWrap -->

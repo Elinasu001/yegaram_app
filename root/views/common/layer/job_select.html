@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common" 
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm" 
+	data-serverTime="20230803152535"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+
+
+<body>
+    <!-- header -->
+    <div id="headerWrap">
+        <script>
+        $(document).ready(function(){
+            document.charset="euc-kr";
+            $("#headerWrap").load("../includes/header.html");
+        });
+        </script>
+    </div>
+	<!-- //header -->
+
+    <form>
+        <!--contentsWrap -->
+        <div class="contentsWrap">
+            <!--contents -->
+            <div class="contents">
+                <div class="default-wrap">
+
+
+                </div>
+            </div>
+            <!-- //contents -->
+
+            <!--s: 직종 선택 (팝업) -->
+            <div id="biz_6quggsm31co" class="layerpopup laypop-all has-button show" style="z-index: 322; display: block;">
+
+				<div class="content-wrap">
+					<div class="pop-header">
+						<h2 class="pop-title">직종선택</h2>
+						<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+					</div>
+					<div class="pop-con-wrap login-id">
+						<div class="default-wrap">
+
+                            <div class="search-area">
+                                <div class="form-wrap">
+                                    <div class="input">
+                                        <input type="search" title="" id="" class="" name="" value="" placeholder="직종을 검색하세요" required="">
+                                    </div>
+                                    <button type="button" class="btn-search">검색</button>
+                                    <button type="button" class="btn-delete">검색어 삭제</button>
+                                </div>
+                            </div>
+
+							<div class="tit-wrap">
+								<p class="txt"><strong>아래의 직군을 선택하거나<br/>업종을 검색해 보세요.</strong></p>
+							</div>
+
+                            <div class="arrow-button-wrap">
+                                <ul class="arrow-button-list" id="">
+                                    <li><a href="javascript:void(0);">임원 등 고위 <span class="point">관리자</span></a></li><!-- D: 검색어 활성화 필요시 span.point 로 감싸주세요 : 검색어가 '관리자'일 경우 -->
+                                    <li><a href="javascript:void(0);">전문가 및 관련종사자</a></li>
+                                    <li><a href="javascript:void(0);">사무 종사자</a></li>
+                                    <li><a href="javascript:void(0);">서비스 종사자</a></li>
+                                    <li><a href="javascript:void(0);">판매 종사자</a></li>
+                                    <li><a href="javascript:void(0);">농림·어업 숙련 종사자</a></li>
+                                    <li><a href="javascript:void(0);">기능원 및 관련 기능 종사자</a></li>
+                                    <li><a href="javascript:void(0);">장치·기계 조작 및 조립 종사자</a></li>
+                                    <li><a href="javascript:void(0);">단순노무 종사자</a></li>
+                                    <li><a href="javascript:void(0);">군인</a></li>
+                                    <li><a href="javascript:void(0);">기타</a></li>
+                                </ul>
+                            </div>
+							
+
+                            <!--s: 검색 결과가 없을 경우 -->
+							<div class="result-area nodata" id="" style="display:block; margin-top:0;">
+                                <p lass="desc">검색결과가 없어요</p>
+                                <div class="btn-cont-wrap flexCenter">
+                                    <a href="javascript:void(0);" class="btn-txt">처음으로</a>
+                                </div>
+                            </div>
+                            <!--e: 검색 결과가 없을 경우 -->
+
+						</div>
+					</div>
+				</div>
+
+				<div class="fixed-btn-wrap">
+					<div class="btn-wrap">
+						<a href="javascript:void(0);" class="btn">로그인</a>
+					</div>
+				</div>
+
+			</div>
+            <!--e: 직종 선택 (팝업) -->
+
+        </div>
+        <!-- //contentsWrap -->
+    </form>
+</body>
+</html>
+
