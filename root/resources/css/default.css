@@ -1471,7 +1471,7 @@ body.on { position:fixed; top:0; }
 /* .layerpopup .fixed-btn-wrap .btn-wrap { padding:20px; } */
 .layer-up.has-button { padding-bottom:99px; }
 /* .layer-up.has-button .fixed-btn-wrap:has(.btn.txt) { padding-bottom:143px; } */
-.layer-up.has-button .content-wrap { padding-bottom:0px; }
+.layer-up.has-button .content-wrap { padding-bottom:10px; }
 
 /* .layer-up .pop-header:has(.btn-layer-close:only-child) { padding-bottom:20px; } */
 

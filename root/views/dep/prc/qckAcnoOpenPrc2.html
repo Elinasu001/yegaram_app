@@ -188,9 +188,9 @@
                                 <div class="form-wrap">
                                     <div class="input">
                                         <div class="select-wrap type2" id="selDiv1">
-                                            <div class="select-box" onclick="openSelect('연락수단','O002000000','1');" tabindex="1">
+                                            <div class="select-box" tabindex="1">
                                                 <label for="qValue1">연락수단</label>
-                                                <span class="option" id="qText1">미선택</span>
+                                                <span class="option" id="">미선택</span>
                                                 <input type="hidden" name="CUST_CNTA_DVCD" class="validChk" id="qValue1">
                                             </div>
                                         </div>
@@ -200,7 +200,7 @@
                                 <div class="form-wrap">
                                     <div class="input">
                                         <div class="select-wrap type2" id="selDiv2">
-                                            <div class="select-box" onclick="openSelect('금융정보취약계층','O000900000','2');" tabindex="1">
+                                            <div class="select-box" tabindex="1">
                                                 <label for="qValue2">금융정보취약계층</label>
                                                 <span class="option" id="qText2">해당없음</span>
                                                 <input type="hidden" name="FINC_WEAK_TP_CD" class="" id="qValue2">
@@ -225,12 +225,93 @@
             </div>
             <!-- //contents -->
 
+            <!--s: fixed 버튼-->
             <div class="fixed-btn-wrap">
                 <div class="btn-wrap flexCol">
                     <a href="#none" class="btn disabled">다음</a> <!--D: disabled 일 경우 : disabled 추가 -->
                     <a href="#none" class="btn txt">그만하기</a>
                 </div>
             </div>
+            <!--e: fixed 버튼-->
+
+            <!-- s: 연락수단 클릭시 나오는 팝업 -->
+            <div id="certification_selBox" class="layerpopup layer-up" style="display:none;">
+                <div class="content-wrap ">
+                    <div class="pop-header">
+                        <h2 class="pop-title">연락수단</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    
+                    <div class="ly-scroll-con ly-select">
+                        <ul class="ly-select-list">
+                            <li><button type="button">연락거부</button></li>
+                            <li><button type="button">문자메시지</button></li>
+                            <li><button type="button">전화연락</button></li>
+                            <li><button type="button">이메일</button></li>
+                            <li><button type="button">우편물</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- e: 연락수단 클릭시 나오는 팝업 -->
+
+            <!-- s: 금융정보취약계층 선택 (팝업) -->
+            <div id="certification_selBox02" class="layerpopup layer-up" style="display:none;">
+                <div class="content-wrap ">
+                    <div class="pop-header">
+                        <h2 class="pop-title">금융정보취약계층</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    
+                    <div class="ly-scroll-con ly-select">
+                        <ul class="ly-select-list">
+                            <li><button type="button">해당없음</button></li>
+                            <li><button type="button">만 65세 이상</button></li>
+                            <li><button type="button">은퇴자</button></li>
+                            <li><button type="button">주부</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- e: 금융정보취약계층 선택 (팝업) -->
+
+            <!-- s: 금융정보취약계층  (팝업) -->
+            <div id="certification_selBox02_1" class="layerpopup layer-up has-button show" style="display:block;">
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">금융정보취약계층</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    
+                    <div class="ly-scroll-con ly-select type-high">
+                        <div class="txtbox-wrap">
+
+                            <ul class="ly-select-list">
+                                <li class="active"><button type="button" id="weakText">만 65세 이상</button></li>
+                            </ul>
+                            
+                            <div>
+                                <h3 class="sub-title">금융정보취약계층 안내</h3>
+                                <div class="txtbox-wrap">
+                                    <p>금융정보취약계층(만65세 이상인자, 은퇴자, 주부)등에 해당하시고 그 정보를 제공하기로 동의하신 고객께서는 '예금보험관계성립여부 및 보호한도'에 대해 다른 정보보다 우선적으로 설명 받으실 수 있습니다.</p>
+                                    <br>
+                                    <p>금융정보 취약계층(만 65세 이상인자, 은퇴자, 주부)등에 해당하여 '예금자보호여부 및 보호한도(원금과 소정의 이자를 합하여 1인당 5천만원에 대하여 확인하셨습니까?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap flexCol">
+                        <a href="#none" class="btn" >확인</a>
+                        <a href="#none" class="btn txt" onclick="">아니오</a>
+                    </div>
+                
+                </div>
+            </div>
+            <!-- e: 금융정보취약계층  (팝업) -->
 
         </div>
         <!-- //contentsWrap -->
