@@ -214,53 +214,47 @@ $(document).ready(function(){
         <div class="contents">
             <div class="default-wrap"> <!-- [퍼블] .mt0 삭제 -->
 				<div class="step-wrap">
-                    <div class="step-line" aria-label="총 6단계 중 1단계 진행중">
+                    <div class="step-line" aria-label="총 6단계 중 5단계 진행중">
                         <div class="step-bar" style="width: 33.3333%;"></div>
                     </div>
-                    <div class="num"><strong class="current">2</strong>/<span class="tot">6</span></div>
+                    <div class="num"><strong class="current">5</strong>/<span class="tot">6</span></div>
                 </div>
                 <div class="tit-wrap">
+					<em class="flag style2">E-RUN 파킹통장</em>
                     <p class="txt"><strong>개설하실 계좌</strong>의<br/><strong>비밀번호</strong>를 입력해주세요</p>
                 </div>
-
-				<div class="form-wrap password"><!-- [퍼블-공통] 비밀번호 인풋에 password 클래스 추가 -->
-					<!-- <strong class="form-tit"><span>신규 계좌비밀번호(4자리)</span></strong> [퍼블] 기획 삭제 -->
-					<label for="PWD01" class="formlabel">계좌비밀번호</label><!-- [퍼블-공통] 비밀번호 인풋에서 삭제했던 label태그 공통으로 살리고, 클래스 변경(onbasic 삭제) -->
-					<div class="input">
-						<span>
-							<input type="hidden" id="E2E_PWD01" />
-							<input type="password" title="신규 계좌비밀번호" id="PWD01" class="inp" name="" value="" maxlength="4" required="" onclick="PageFunc.password01(); removeErr(this);">
-						</span>
+				<section class="form-all-wrap">
+					<div class="form-wrap">
+						<label for="" class="formlabel essential">신규 계좌비밀번호(4자리)</label>
+						<div class="input">
+							<input type="password" title="비밀번호" id="USR_PWD" class="inp" name="" value="" placeholder="비밀번호 입력" required="" maxlength="50">
+						</div>
 					</div>
-					<p class="error-txt">신규 계좌비밀번호를 입력해주세요</p>
-				</div>
-				<div class="form-wrap mt40"><!-- [퍼블-공통] 비밀번호 인풋에 password 클래스 추가 -->
-					<!-- <strong class="form-tit"><span>신규 계좌비밀번호 확인(4자리)</span></strong> [퍼블] 기획 삭제 -->
-					<label for="PWD02" class="formlabel">계좌비밀번호 확인</label><!-- [퍼블-공통] 비밀번호 인풋에서 삭제했던 label태그 공통으로 살리고, 클래스 변경(onbasic 삭제) -->
-					<div class="input">
-						<span>
-							<input type="hidden" id="E2E_PWD02" />
-							<input type="password" title="신규 계좌비밀번호 확인" id="PWD02" class="inp" name="" value="" maxlength="4" required="" onclick="PageFunc.password02(); removeErr(this);" readonly>
-						</span>
+					<div class="form-wrap password ok"><!-- [D] 비밀번호 일치시 클래스 ok 추가 / 비밀번호 불일치시 클래스 error 추가 -->
+						<label for="" class="formlabel essential">신규 계좌비밀번호 확인(4자리)</label>
+						<div class="input">
+							<input type="password" id="" class="inp" name="" value="" placeholder="비빌번호 확인" required="" minlength="4" maxlength="50">
+						</div>
+						<span class="valid-ok">일치</span><!-- [D] 비밀번호 일치시 노출 -->
+						<span class="valid-txt">불일치</span><!-- [D] 비밀번호 불일치시 노출 -->
 					</div>
-					<p class="error-txt">신규 계좌비밀번호를 입력해주세요</p>
-				</div>
+				</section>
             </div>
         </div>
         <!-- //e: contents -->
-        <!-- s: btn-wrap -->
-        <div class="fixed-btn-wrap">
-			<div class="btn-wrap">
-				<a href="#none" class="btn" onclick="PageFunc.proc();">다음</a>
-			</div>
+		<!-- s: btn-wrap -->
+		<div class="fixed-btn-wrap">
+		<div class="btn-wrap flexCol">
+		<a href="javascript:void(0);" class="btn">다음</a>
+		<a href="javascript:void(0);" class="btn txt">그만하기</a>
+		</div>
 		</div>
         <!-- //e: btn-wrap -->
 	</form>
     </div>
     <!-- //e: contentsWrap -->
-					
 	<!-- footer -->
-	
+
 
 
 
