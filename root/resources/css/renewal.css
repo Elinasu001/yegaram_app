@@ -327,16 +327,16 @@ body.fix { overflow:hidden; }
 .imgbox-wrap.crtf { padding:0 47px; background:transparent; text-align:center; }
 .imgbox-wrap.crtf > img { max-width:320px; }
 .imgbox-wrap.crtf .s-txt { margin: 10px 0; }
-.ocr-wrap { padding:0; background:transparent; }
+.ocr-wrap { max-height:290px; padding:0; background:transparent; }
 .ocr-wrap + .list-bull { margin-top:40px; }
 .ocr-wrap + .list-bull dt {  font-size:1rem; }
 .ocr-wrap + .list-bull dd { font-weight:400; color:#333333; font-size:0.88889rem; }
 .ocr-wrap + .list-bull dd:before { top:9px; }
 .ocr-wrap .img-line-wrap img { border-radius:15px;  }
-.imgbox-wrap.ocr-wrap #camera-area { height:270px; }
+.imgbox-wrap.ocr-wrap #camera-area {  }
 .imgbox-wrap.ocr-wrap #camera-area .idcard-div,
 .imgbox-wrap.ocr-wrap #camera-area .idcard-cam-cont,
-.imgbox-wrap.ocr-wrap #camera-area .img-line-wrap  { height:100%; }
+.imgbox-wrap.ocr-wrap #camera-area .img-line-wrap  { height:100%; width:100%; max-width:490px; }
 
 @media screen and (max-width:359px) {
 	.imgbox-wrap { min-height:120px; padding:30px 20px; }

@@ -79,7 +79,7 @@
 
 				<div class="content-wrap">
 					<div class="pop-header">
-						<h2 class="pop-title">본인인증</h2>
+						<h2 class="pop-title">신분증 촬영</h2>
 						<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
 					</div>
 					<div class="pop-con-wrap">
@@ -108,19 +108,62 @@
                             </section>
                             <!-- e: ocr 촬영 -->
 
+                            <!--s: 신분증촬영 직장정보-->
+                            <section  style="display:block;">
+                                <div class="tit-wrap">
+                                    <p class="txt"><strong>대출신청을 위해<br/>직장정보가 필요해요</strong></p>
+                                </div>
+                                <div class=" select-wrap">
+
+                                    <div class="select-box" tabindex="1">
+                                        <label for="">직종</label>
+                                        <span class="option">미선택</span>
+                                    </div>
+
+                                    <div class="form-wrap">
+                                        <label for="" class="formlabel">직장명</label>
+                                        <div class="input">
+                                            <input type="text" title="직장명" id="" class="inp" name="" value="" placeholder="직장명 입력" required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="select-box" tabindex="1">
+                                        <label for="">근로자유형</label>
+                                        <span class="option">미선택</span>
+                                    </div>
+
+                                    <div class="select-box" tabindex="1">
+                                        <label for="">입사연월일</label>
+                                        <span class="option">미선택</span>
+                                    </div>
+
+                                    <div class="form-wrap">
+                                        <label for="" class="formlabel">직장전화</label>
+                                        <div class="input">
+                                            <input type="number" title="직장전화" id="" class="inp" name="" value="" placeholder="직장전화 입력" required="">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                
+
+
+                            </section>
+                            <!--e: 신분증촬영 직장정보-->
+
                             <!-- s: ocr 촬영 -->
                             <section  id="cameraDiv" style="display:block;">
                                 <div class="tit-wrap">
                                     <p class="txt"><b>신분증</b>을<br><b>기준선</b> 안에 맞춰주세요</p>
                                 </div>
-                                <div class="imgbox-wrap ocr-wrap mb40">
+                                <div class="imgbox-wrap ocr-wrap">
                                     <div id="camera-area">
                                         <div class="idcard-div">
                                             <div class="idcard-cam-cont">
                                                 <div class="img-line-wrap camera-area-body">
                                                     <img src="/resources/images/common/cam_line.png" alt="" id="capture-guide" />
-                                                    <canvas class="camera-area-body-canvas"></canvas>
-                                                    <video class="camera-area-body-video" playsinline autoplay></video>
+                                                    <!-- <canvas class="camera-area-body-canvas"></canvas>
+                                                    <video class="camera-area-body-video" playsinline autoplay></video> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -147,7 +190,7 @@
                                     <img id="resultImg" src=""/>
                                 </div>
 
-                                <div class="btn-cont-wrap" id="retryCameraBtn" style="display:none;">
+                                <div class="btn-cont-wrap" id="retryCameraBtn" style="display:block;">
                                     <a href="#none" class="btn btn-add btn-camera">다시촬영</a>
                                 </div>
 
@@ -168,43 +211,42 @@
                                             <span class="inputTextHyphen">-</span>
                                             <span class="jummin" >
                                                 <input type="password" title="주민등록번호 뒷자리" id="jumin2" class="inp" name="jumin2" value="" maxlength="7" required=""  required disabled>
-                                                <!-- <span class="jumintext">●●●●●●●</span> -->
+                                                <span class="jumintext">●●●●●●●</span>
                                             </span>
                                         </div>
                                     </div>
 
 
-                                    <div class="form-wrap" style="display:none;" id="">
+                                    <div class="form-wrap" style="display:block;" id="">
                                         <label for="ocrISU_DT" class="formlabel">발급일자</label>
                                         <div class="input">
-                                            <input type="date" title="발급일자" id="" class="inp" name="" value="" placeholder="발급일자를 입력해주세요." required readonly="readonly"/>
+                                            <input type="date" title="발급일자" id="" class="inp" name="" value="" placeholder="발급일자를 입력" required readonly="readonly"/>
                                         </div>
-                                        <p class="error-txt">발급일자를 입력해주세요</p>
                                     </div>
 
-                                    <div class="form-wrap" style="display:none;" id="">
+                                    <div class="form-wrap" style="display:block;" id="">
                                         <label for="" class="formlabel">면허번호</label>
                                         <div class="input">
-                                            <input type="text" title="면허번호" id="" class="inp" name="" value="" placeholder="면허번호를 입력해주세요." required readonly="readonly"/>
+                                            <input type="text" title="면허번호" id="" class="inp" name="" value="" placeholder="면허번호를 입력" required readonly="readonly"/>
                                         </div>
                                         
                                     </div>
 
-                                    <div class="form-wrap">
+                                    <!-- <div class="form-wrap">
                                         <label for="ocrLICENSE_CD" class="formlabel">식별번호</label>
                                         <div class="input">
                                             <input type="text" title="식별번호" id="" class="inp" name="" value="" placeholder="식별번호를 입력해주세요." required readonly="readonly"/>
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                 </div>
 
-                                <div class="info-txt-wrap"  style="display: none;">
+                                <div class="info-txt-wrap"  style="display: block;">
                                     <p class="info-txt">인식된 신분증 정보를 확인해 주세요</p>
                                     <p class="info-txt">신분증정보가 실제와 다른 경우 이용이 제한될 수 있어요</p>
                                 </div>
 
-                            </sectio>
+                            </section>
                             <!-- e: ocr 촬영결과 -->
 
 						</div>
@@ -213,11 +255,9 @@
 				</div>
 
 				<div class="fixed-btn-wrap">
-					<div class="btn-wrap">
-						<a href="javascript:void(0);" class="btn btn-camera">신분증 촬영</a>
-                        <a href="#none" class="btn camera-area-footer-capture-button" id="cameraBtn" style="display:none;">촬영하기</a>
-                        <a href="#none" class="btn" id="" style="display:none;">완료</a>
-                        <a href="#none" class="btn" id="" style="display:none;">수정 제출</a>
+					<div class="btn-wrap flexCol"> <!--D: flexCol : 버튼 두개일 경우-->
+						<a href="javascript:void(0);" class="btn btn-camera">신분증 촬영</a><!--D : btn-camera : 카메라 이미지 -->
+						<a href="javascript:void(0);" class="btn txt">취소</a>
 					</div>
 				</div>
 
