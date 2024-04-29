@@ -102,9 +102,9 @@
                             </div>
 
                             <div class="select-wrap">
-                                <div class="select-box on" tabindex="1" onclick="openPopupUp('lySel01');"><!--D: on 선택 됐을 경우 값 적용-->
+                                <div class="select-box on" tabindex="1" onclick="openPopupUp('lySel01');"><!--D: on 클래스 : 값 적용 됐을 경우 , disabled 클래스 : 적용 됐을 경우  -->
                                     <label for="" class="essential">등록구분</label>
-                                    <span class="option">미선택</span>
+                                    <span class="option">123-324-234352</span>
                                 </div>
                             </div>
                             <p class="exp-txt">잔액 : <span id="Acct_Amt">50,000,000원</span></p>
@@ -154,7 +154,7 @@
                                 </div>
                             </div>
 
-                            <div class="select-wrap">
+                            <div class="select-wrap mt0">
                                 <div class="check-account">
                                     <input type="checkbox" id="scheduleChk" name="scheduleChk" value="">
                                     <label for="scheduleChk">
@@ -184,24 +184,24 @@
 				</div>
 			</div>
 
-
-            <div id="lypullPop" class="layerpopup laypop-all agree-layer show" style="display: block;">
+            <!--S:이체예약 시 프로세스_이체 예정 정보 확인 -->
+            <div id="lypullPop" class="layerpopup laypop-all" style="display:block;">
                 <!-- s: contents -->
                 <div class="pop-header">
-                    <h2 class="pop-title">이체 예정 1건</h2>
-                    <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lypullPop')">닫기</button>
+                    <h2 class="pop-title">이체 예정 <span>2</span>건</h2> <!--D:이체 예정 리스트 1건/ 2건... 건수에 따라 숫자 변경됨  -->
+                    <button type="button" name="button" class="btn-layer-close">닫기</button>
                 </div>
                 
-                <div class="pop-con-wrap" style="padding-bottom: 60px;">
+                <div class="pop-con-wrap">
                     <div class="default-wrap">
                         <div class="txt-list-wrap" id="trnAcntList_{idx}">
                             <div class="txt-detail-area">
                                 <div class="txt-detail-tit">
                                     <strong>타이틀</strong>
-                                    <button type="button" class="btn btn-sm" onclick="deleteAcnoList({idx});" style="display:block;">취소하기</button><!-- [D] 다건이체일 경우에만 노출 (단건에서 노출 X)-->
+                                    <button type="button" class="btn btn-sm">취소하기</button><!-- [D] 다건이체일 경우에만 노출 (단건에서 노출 X)-->
                                 </div>
                                 <ul class="txt-list">
-                                    <li class="" style="display:block;">
+                                    <li>
                                         <span class="tit">예약이체일</span>
                                         <p class="txt" id="">2023.08.08</p>
                                     </li>
@@ -240,10 +240,10 @@
                             <div class="txt-detail-area">
                                 <div class="txt-detail-tit">
                                     <strong>타이틀</strong>
-                                    <button type="button" class="btn btn-sm" onclick="deleteAcnoList({idx});" style="display:block;">취소하기</button><!-- [D] 다건이체일 경우에만 노출 (단건에서 노출 X)-->
+                                    <button type="button" class="btn btn-sm">취소하기</button><!-- [D] 다건이체일 경우에만 노출 (단건에서 노출 X)-->
                                 </div>
                                 <ul class="txt-list">
-                                    <li class="" style="display:block;">
+                                    <li>
                                         <span class="tit">예약이체일</span>
                                         <p class="txt" id="">2023.08.08</p>
                                     </li>
@@ -291,8 +291,9 @@
                 </div>
 
             </div>
+            <!--E:이체예약 시 프로세스_이체 예정 정보 확인 -->
 
-
+            
 
         </div>
         <!-- //contentsWrap -->

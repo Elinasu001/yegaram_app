@@ -2019,7 +2019,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .inquiry-set-wrap .radio-list.style-button li:nth-last-child(n+4) ~ li { width:calc((100% - 20px) / 4); }
 .inquiry-set-wrap .radio-list.style-button li:nth-last-child(n+5),
 .inquiry-set-wrap .radio-list.style-button li:nth-last-child(n+5) ~ li { width:calc((100% - 20px) / 5); }
-.inquiry-set-wrap .radio-list.style-button li button { border:1px solid #DDDDDD; border-radius:17px; }
+.inquiry-set-wrap .radio-list.style-button li button { border:1px solid #DDDDDD; border-radius:8px; }
 .inquiry-set-wrap .radio-list.style-button li.active button { border-color:#F2F4F6; background:#F2F4F6; }
 .inquiry-set-wrap .radio-list.style-button li.active button:before { content:none; }
 .inquiry-set-wrap .radio-list.style-button li button:active { border-color:#F2F4F6; background:#F2F4F6; color:#26282C; }

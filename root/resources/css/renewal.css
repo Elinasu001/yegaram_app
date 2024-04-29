@@ -247,10 +247,10 @@ body.fix { overflow:hidden; }
 .txt-list li:last-child { padding-bottom:10px; border-bottom:0; }
 .txt-list li.none-bor:first-child { padding-top:0; }
 /* .txt-list li .tit{ display:inline-block; width:50%; font-size:0.9rem; color:#666666; } (청)flex test-아래와같이수정*/
-.txt-list li .tit { font-weight:300; font-size:1rem; color:#454545; }/*2023-07-14 스타일가이드 반영*/
+.txt-list li .tit { font-weight:300; font-size:0.88889rem; line-height:1.278rem; color:#454545; }/*2023-07-14 스타일가이드 반영*/
 .txt-list li .tit .ref { font-size:0.77778rem; line-height:1.5;}
 /* .txt-list li .txt{ display:inline-block; width:50%; font-weight:500; vertical-align:top; text-align:right; font-size:0.9rem; color:#260F54; word-break:break-all; } (청)flex test-아래와같이수정*/
-.txt-list li .txt{ flex:1; padding-left:30px; font-weight:500; vertical-align:top; text-align:right; font-size:1rem; color:#333333; word-break:break-all; }
+.txt-list li .txt{ flex:1; padding-left:30px; font-weight:500; vertical-align:top; text-align:right; font-size:0.88889rem; line-height:1.278rem; color:#333333; word-break:break-all; }
 .txt-list li .txt a[href*="tel"] { color:#333333; word-break:break-all; }
 .txt-list li .txt.point { color:#4E32A5; }
 .txt-list .cusnm { color:#000!important; }
