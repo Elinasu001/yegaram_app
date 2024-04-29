@@ -250,7 +250,7 @@ html.font-size-3{ font-size: 24px;}
 
 /*** 타이포 ***/
 .desc-txt { font-weight:400; color:#333333; font-size:0.88889rem; line-height:1.4375; }
-.exp-txt { margin-top:10px; font-weight:400; color:#260F54; font-size:0.88889rem; line-height:1.4375; }
+.exp-txt { margin-top:10px; font-weight:400; color:#4E32A5; font-size:0.88889rem; line-height:1.4375; }
 .exp-txt + .select-form-wrap { margin-top:40px; }
 /* .exp-txt span { color:#808080; } */
 .form-wrap.type2 + .exp-txt { margin-top:15px; }
@@ -845,7 +845,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 
 /* form-wrap 내의 타이틀 */
 .form-wrap .form-tit { display:flex; align-items:center; }
-.form-wrap .form-tit span { flex:1; }
+.form-wrap .form-tit span { flex:1; font-weight:600; font-size:0.88889rem; line-height:1.278rem; color:#333333; }
 .form-wrap.form-line .form-tit button { position:static; transform:none; }
 /* .form-wrap.form-line .form-tit .btn-gray { border-color:#F2F4F6; } */
 

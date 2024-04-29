@@ -68,6 +68,7 @@
             <!--contents -->
             <div class="contents">
                 <div class="default-wrap">
+                    <!--S: 이체예약 시 프로세스_이체금액 입력-->
                     <section style="display:block">
                         <div class="tit-wrap">
                             <p class="txt"><strong>얼마를 이체하시겠어요?</strong></p>
@@ -101,14 +102,32 @@
                                     <span class="option">미선택</span>
                                 </div>
                             </div>
+                            <p class="exp-txt">잔액 : <span id="Acct_Amt">50,000,000원</span></p>
                      
                             
                         
 
                         </div>
+                    </section>
+                    <!--E: 이체예약 시 프로세스_이체금액 입력-->
+
+                    <!--S: 이체예약 시 프로세스_이체계좌 정보 입력-->
+                    <section>
+                        <div class="form-wrap form-line">
+                            <strong class="form-tit">
+                                <span>입금계좌</span>
+                                <button type="button" class="btn btn-sm">최근 입금계좌</button>
+                            </strong>
+                            <div class="input">
+                                <div class="select-box" tabindex="1" onclick="biz.bank(selBankCd);">
+                                    <label for="" class="essential">은행선택</label>
+                                    <span class="option" id="">미선택</span>
+                                </div>
+                            </div>
+                        </div>
 
                     </section>
-                    
+                    <!--E: 이체예약 시 프로세스_이체계좌 정보 입력-->
 
 
                 </div>
