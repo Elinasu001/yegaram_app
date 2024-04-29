@@ -52,14 +52,19 @@
 
 <body>
     <!-- header -->
-    <div id="headerWrap">
-        <script>
-        $(document).ready(function(){
-            document.charset="euc-kr";
-            $("#headerWrap").load("../includes/header.html");
-        });
-        </script>
-    </div>
+    <header class="headerWrap">
+        <div class="headerLeft">
+            <!--D: 이전버튼-->
+            <a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+        </div>
+        <div class="headerCenter">
+            <h2 class="text"><span>이체</span></h2> <!--D: TEXT -->
+        </div>
+        <div class="headerRight">
+            <!--D: 전체메뉴버튼 -->
+            <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>
+        </div>
+    </header>
 	<!-- //header -->
 
     <form>
@@ -68,36 +73,122 @@
             <!--contents -->
             <div class="contents">
                 <div class="default-wrap">
-
-
+                   
                 </div>
             </div>
             <!-- //contents -->
+          
 
-            <div id="lyPop2" class="layerpopup layer-up has-button show" style="position: fixed; top: 570px; left: 0px; display: block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
-                <div class="content-wrap">
-                    <div class="pop-header">
-                        <h2 class="pop-title">보이스피싱 피해주의</h2>
-                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-                    </div>
-                    <div class="ly-scroll-con">
-                        <div class="txtbox-wrap">
-                            <p>이체하기 전 <span class="color-FF0000">N건</span>에 대한 보이스피싱 사기 위험 확인 후 진행해주세요.</p>
-                            <br/>
-                            <p><span class="color-FF0000">수사기관, 공공기관</span>이라며 전화로 출금 및 이체 요구를 받으셨나요?</p>
-                            <br/>
-                            <p><span class="color-FF0000">신용등급을 올려야 한다면 송금 요구</span>를 받으셨나요?</p>
+            <!--S:이체예약 시 프로세스_이체 예정 정보 확인 -->
+            <div id="lypullPop" class="layerpopup laypop-all" style="display:block;">
+                <!-- s: contents -->
+                <div class="pop-header">
+                    <h2 class="pop-title">이체 예정 <span>2</span>건</h2> <!--D:이체 예정 리스트 1건/ 2건... 건수에 따라 숫자 변경됨  -->
+                    <button type="button" name="button" class="btn-layer-close">닫기</button>
+                </div>
+                
+                <div class="pop-con-wrap">
+                    <div class="default-wrap">
+                        <div class="txt-list-wrap" id="trnAcntList_{idx}">
+                            <div class="txt-detail-area">
+                                <div class="txt-detail-tit">
+                                    <strong>타이틀</strong>
+                                    <button type="button" class="btn btn-sm">취소하기</button><!-- [D] 다건이체일 경우에만 노출 (단건에서 노출 X)-->
+                                </div>
+                                <ul class="txt-list">
+                                    <li>
+                                        <span class="tit">예약이체일</span>
+                                        <p class="txt" id="">2023.08.08</p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">입금계좌</span>
+                                        <p class="txt">
+                                            <span>김예가람 예가람저축은행</span><br/>
+                                        <span>01012345678</span>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">입금계좌</span>
+                                        <p class="txt point">500,000원</p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">수수료</span>
+                                        <p class="txt point">$0$원</p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">출금계좌</span>
+                                        <p class="txt">
+                                            <span>보고파 파킹통장(개인)</span><br>
+                                            <span>123-45-67-890</span>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">받는분 통장표시</span>
+                                        <p class="txt">홍예가람 예가람저축은행</p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">내 통장표시</span>
+                                        <p class="txt">김예가람</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="txt-detail-area">
+                                <div class="txt-detail-tit">
+                                    <strong>타이틀</strong>
+                                    <button type="button" class="btn btn-sm">취소하기</button><!-- [D] 다건이체일 경우에만 노출 (단건에서 노출 X)-->
+                                </div>
+                                <ul class="txt-list">
+                                    <li>
+                                        <span class="tit">예약이체일</span>
+                                        <p class="txt" id="">2023.08.08</p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">입금계좌</span>
+                                        <p class="txt">
+                                            <span>김예가람 예가람저축은행</span><br/>
+                                        <span>01012345678</span>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">입금계좌</span>
+                                        <p class="txt point">500,000원</p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">수수료</span>
+                                        <p class="txt point">$0$원</p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">출금계좌</span>
+                                        <p class="txt">
+                                            <span>보고파 파킹통장(개인)</span><br>
+                                            <span>123-45-67-890</span>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">받는분 통장표시</span>
+                                        <p class="txt">홍예가람 예가람저축은행</p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">내 통장표시</span>
+                                        <p class="txt">김예가람</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!--D: fixed-btn-wrap 버튼은 content-wrap 밖으로 위치-->
+
                 <div class="fixed-btn-wrap">
-                    <div class="btn-wrap ">
-                        <a href="javascript:void(0);" class="btn btn-info">예</a>
-                        <a href="javascript:void(0);" class="btn">아니오(계속하기)</a>
+                    <div class="btn-wrap flexCol">
+                        <a href="javascript:void(0)" class="btn" onclick="closePopup('lypullPop')">확인</a>
+                        <a href="javascript:void(0)" class="btn txt">추가 이체하기</a>
                     </div>
                 </div>
+
             </div>
+            <!--E:이체예약 시 프로세스_이체 예정 정보 확인 -->
+
+            
 
         </div>
         <!-- //contentsWrap -->

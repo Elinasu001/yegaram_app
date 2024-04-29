@@ -80,7 +80,7 @@
                         </div>
                         <div class="form-all-wrap">
                             <div class="form-wrap type2">
-                                <label for="PYMN_AMT">저축금액</label>
+                                <label for="PYMN_AMT">이체금액</label>
                                 <div class="input">
                                     <input type="tel" title="" class="validChk" id="PYMN_AMT" name="PYMN_AMT" value="0" placeholder="예치금액을 입력해주세요." required="">
                                     <div class="value-wrap">
@@ -95,7 +95,7 @@
                                             <li><button type="button" onclick="incrsAmt(this, 5);">5만</button></li>
                                             <li><button type="button" onclick="incrsAmt(this, 10);">10만</button></li>
                                             <li><button type="button" onclick="incrsAmt(this, 100);">100만</button></li>
-                                            <li><button type="button" onclick="incrsAmt(this, 0);">초기화</button></li>
+                                            <li><button type="button" onclick="incrsAmt(this, 0);">전액</button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -185,116 +185,6 @@
 				</div>
 			</div>
 
-            <!--S:이체예약 시 프로세스_이체 예정 정보 확인 -->
-            <div id="lypullPop" class="layerpopup laypop-all" style="display:block;">
-                <!-- s: contents -->
-                <div class="pop-header">
-                    <h2 class="pop-title">이체 예정 <span>2</span>건</h2> <!--D:이체 예정 리스트 1건/ 2건... 건수에 따라 숫자 변경됨  -->
-                    <button type="button" name="button" class="btn-layer-close">닫기</button>
-                </div>
-                
-                <div class="pop-con-wrap">
-                    <div class="default-wrap">
-                        <div class="txt-list-wrap" id="trnAcntList_{idx}">
-                            <div class="txt-detail-area">
-                                <div class="txt-detail-tit">
-                                    <strong>타이틀</strong>
-                                    <button type="button" class="btn btn-sm">취소하기</button><!-- [D] 다건이체일 경우에만 노출 (단건에서 노출 X)-->
-                                </div>
-                                <ul class="txt-list">
-                                    <li>
-                                        <span class="tit">예약이체일</span>
-                                        <p class="txt" id="">2023.08.08</p>
-                                    </li>
-                                    <li>
-                                        <span class="tit">입금계좌</span>
-                                        <p class="txt">
-                                            <span>김예가람 예가람저축은행</span><br/>
-                                        <span>01012345678</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <span class="tit">입금계좌</span>
-                                        <p class="txt point">500,000원</p>
-                                    </li>
-                                    <li>
-                                        <span class="tit">수수료</span>
-                                        <p class="txt point">$0$원</p>
-                                    </li>
-                                    <li>
-                                        <span class="tit">출금계좌</span>
-                                        <p class="txt">
-                                            <span>보고파 파킹통장(개인)</span><br>
-                                            <span>123-45-67-890</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <span class="tit">받는분 통장표시</span>
-                                        <p class="txt">홍예가람 예가람저축은행</p>
-                                    </li>
-                                    <li>
-                                        <span class="tit">내 통장표시</span>
-                                        <p class="txt">김예가람</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="txt-detail-area">
-                                <div class="txt-detail-tit">
-                                    <strong>타이틀</strong>
-                                    <button type="button" class="btn btn-sm">취소하기</button><!-- [D] 다건이체일 경우에만 노출 (단건에서 노출 X)-->
-                                </div>
-                                <ul class="txt-list">
-                                    <li>
-                                        <span class="tit">예약이체일</span>
-                                        <p class="txt" id="">2023.08.08</p>
-                                    </li>
-                                    <li>
-                                        <span class="tit">입금계좌</span>
-                                        <p class="txt">
-                                            <span>김예가람 예가람저축은행</span><br/>
-                                        <span>01012345678</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <span class="tit">입금계좌</span>
-                                        <p class="txt point">500,000원</p>
-                                    </li>
-                                    <li>
-                                        <span class="tit">수수료</span>
-                                        <p class="txt point">$0$원</p>
-                                    </li>
-                                    <li>
-                                        <span class="tit">출금계좌</span>
-                                        <p class="txt">
-                                            <span>보고파 파킹통장(개인)</span><br>
-                                            <span>123-45-67-890</span>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <span class="tit">받는분 통장표시</span>
-                                        <p class="txt">홍예가람 예가람저축은행</p>
-                                    </li>
-                                    <li>
-                                        <span class="tit">내 통장표시</span>
-                                        <p class="txt">김예가람</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="fixed-btn-wrap">
-                    <div class="btn-wrap flexCol">
-                        <a href="javascript:void(0)" class="btn" onclick="closePopup('lypullPop')">확인</a>
-                        <a href="javascript:void(0)" class="btn txt">추가 이체하기</a>
-                    </div>
-                </div>
-
-            </div>
-            <!--E:이체예약 시 프로세스_이체 예정 정보 확인 -->
-
-            
 
         </div>
         <!-- //contentsWrap -->

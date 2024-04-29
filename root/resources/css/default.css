@@ -1875,8 +1875,8 @@ body.on { position:fixed; top:0; }
 .list-bull + table { margin-top:20px; }
 
 
-.list-bull .border{ margin-left:-20px; margin-right:-20px; height:8px; border-top:1px solid rgb(0,0,0,0.1); background:#F9FAFC; }
-.layerpopup .list-bull .border{ margin-left:-40px; margin-right:-40px; height:8px; border-top:1px solid rgb(0,0,0,0.1); background:#F9FAFC; }
+.list-bull .border{ margin-left:-20px; margin-right:-20px; margin-bottom:20px; height:8px; border-top:1px solid rgb(0,0,0,0.1); background:#F9FAFC; }
+.layerpopup:not(.layerpopup.laypop-all) .list-bull .border{ margin-left:-40px; margin-right:-40px; margin-bottom:20px; height:8px; border-top:1px solid rgb(0,0,0,0.1); background:#F9FAFC; }
 
 .list-bull.ico strong { margin-bottom:15px; padding-left:30px; position:relative; font-weight:700; color:#333333; font-size:1rem; line-height:1.38889rem; }
 .list-bull.ico strong:before { content:""; position:absolute; left:0px; top:47%; transform: translateY(-50%); width:24px; height:24px; background:url("../images/common/ic-bull-warning.png") no-repeat 100%/24px auto;}
@@ -2214,7 +2214,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 /* 회색 박스 */
 .gray-box-wrap { display:inline-block; width:100%; margin:20px 0; padding:25px 0; border-radius:15px; background:#f8f8f8; text-align:center; }
 .gray-box-wrap .txt { font-size:0.88889rem; line-height:1.4375; }
-.gray-box-wrap .num { margin-top:10px; line-height:1; font-size:2rem; font-weight:bold; color:#260F54; }
+.gray-box-wrap .num { margin-top:13px; line-height:1; font-size:2rem; font-weight:bold; color:#4E32A5; }
 
 /* 회색 border 박스 */
 .bor-box-wrap { display:inline-block; width:100%; padding:30px 0; border:1px solid #E5E5E5; border-radius:15px; }
