@@ -2093,8 +2093,9 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .bank_list .exp { font-weight:400; color:#999999; font-size:0.77778rem; line-height:1.5; }
 .bank_list.star li a::after { content:""; position:absolute; top:50%; right:0; width:24px; height:24px; background:url("../images/common/ico-star_off.png") no-repeat center; background-size:100%; transform:translateY(-50%); }
 .bank_list.star li.active a::after { background-image:url("../images/common/ico-star_on.png"); }
-
+.bank_list.logo li.active a strong { color:#4E32A5; }
 /* 230630 뱅크코드 수정 */
+.bank_list.logo li a::before { background:url(../images/bank_logo/logo_gb.png) no-repeat center; background-size: 100%; }
 .bank_list li.jt a::before { background:url("../images/bank_logo/logo_jt.png") no-repeat center; background-size:100%; }/**jt**/
 .bank_list li.bank_000 a::before { background:url("../images/bank_logo/logo_goryo.png") no-repeat center; background-size:100%; }/**기업은행**/
 .bank_list li.bank_003 a::before { background:url("../images/bank_logo/logo_ibk.png") no-repeat center; background-size:100%; }/**기업은행**/
