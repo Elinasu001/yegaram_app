@@ -757,7 +757,7 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .select-box .option[id^="rolldate"],
 #transRolldate{ width:100%; max-width:100%; right:0; padding-right:20px; }
 /* .select-wrap.on .select-box label { color:#0.select-wrap:not(.type-line) .select-box .option, .select-wrap:not(.type-line) .select-box .amount-off00000; } */
-.select-box.on .option { font-weight:500; color:#260F54; }
+.select-box.on .option { font-weight:500; color:#4E32A5; }
 .select-box.disabled { border-color:#F4F4F4; background:#F4F4F4; }
 .select-box.disabled label { color:#666666; }
 /* .select-wrap.di.check-box .switch-btnsabled .select-box .option { font-weight:500; color:#240E4F; } */
