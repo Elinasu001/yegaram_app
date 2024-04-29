@@ -741,34 +741,33 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .select-wrap .select-box,
 .select-wrap .check-box,
 
-.select-wrap .select-box{position:relative;height:50px; margin-top:10px; border-bottom:1px solid #DDDDDD;color:#333333; font-size:0.88889rem;}
-.select-wrap .select-box:after {content:'';position:absolute;right:0;top:0;width:50px;height:50px;background:url(../images/common/arrow_selbox.png) no-repeat 50%/24px auto;}
+.select-wrap .select-box{position:relative;height:58px; margin-top:10px; border-bottom:1px solid #DDDDDD;color:#333333; font-size:0.88889rem;}
+.select-wrap .select-box.form-line:after {content:'';position:absolute;right:0;top:0;width:50px;height:50px;background:url(../images/common/arrow_selbox.png) no-repeat 50%/24px auto;}
 .select-wrap .select-box .inputH{display:block;visibility:hidden;position:absolute;top:0;width:1px;height:1px;}
 
 
 /** type2(사용X) : 박스 스타일의 셀렉트박스 => 셀렉트는 박스스타일만 있습니다! **/
-.select-wrap:not(.type-line) .select-box { height:60px; padding-left:20px; border-radius:15px; border:1px solid #DDDDDD; background:#fff; }
+.select-box { height:60px; padding-left:20px; border-radius:15px; border:1px solid #DDDDDD; background:#fff; }
 .txt-list-wrap + div.select-wrap:not(.type-line) .select-box { margin-top:40px; }
-
-.select-wrap .select-box:after { content:none; }
-.select-wrap .select-box label, .check-box label > span { position: absolute; top:50%; left:20px; transform: translateY(-50%); font-size:0.88889rem; font-weight:300; color:#454545; }
-.select-wrap:not(.type-line) .select-box .option, 
-.select-wrap:not(.type-line) .select-box .amount-off { overflow:hidden; position:absolute; top:50%; right:20px; max-width:50%; font-weight:400; color:#999999; font-size:0.88889rem; transform:translateY(-50%); white-space:nowrap; text-overflow:ellipsis; text-align: right; }
-.select-wrap:not(.type-line) .select-box .option[id^="rolldate"] { width:100%; max-width:100%; right:0; padding-right:20px; }
-.select-wrap:not(.type-line) .select-box .option[id^="rolldate"],
+.select-box:after { content:none; }
+.select-box label, .check-box label > span { position: absolute; top:50%; left:20px; transform: translateY(-50%); font-size:0.88889rem; font-weight:300; color:#454545; }
+.select-box .option, 
+.select-box .amount-off { overflow:hidden; position:absolute; top:50%; right:20px; max-width:50%; font-weight:400; color:#999999; font-size:0.88889rem; transform:translateY(-50%); white-space:nowrap; text-overflow:ellipsis; text-align: right; }
+.select-box .option[id^="rolldate"] { width:100%; max-width:100%; right:0; padding-right:20px; }
+.select-box .option[id^="rolldate"],
 #transRolldate{ width:100%; max-width:100%; right:0; padding-right:20px; }
-/* .select-wrap.on .select-box label { color:#000000; } */
-.select-wrap .select-box.on .option { font-weight:500; color:#260F54; }
-.select-wrap .select-box.disabled { border-color:#F4F4F4; background:#F4F4F4; }
-.select-wrap .select-box.disabled label { color:#666666; }
+/* .select-wrap.on .select-box label { color:#0.select-wrap:not(.type-line) .select-box .option, .select-wrap:not(.type-line) .select-box .amount-off00000; } */
+.select-box.on .option { font-weight:500; color:#260F54; }
+.select-box.disabled { border-color:#F4F4F4; background:#F4F4F4; }
+.select-box.disabled label { color:#666666; }
 /* .select-wrap.di.check-box .switch-btnsabled .select-box .option { font-weight:500; color:#240E4F; } */
-.select-wrap.type-dd.on .option:after { content:'일'; display:inline-block; margin-left:4px; }
-.select-wrap.type-mm.on .option:after { content:'개월'; display:inline-block; margin-left:4px; }
+.select-box.type-dd.on .option:after { content:'일'; display:inline-block; margin-left:4px; }
+.select-box.type-mm.on .option:after { content:'개월'; display:inline-block; margin-left:4px; }
 
 /* 휴대폰번호 선택 셑텍트 */
-.select-wrap.type-line .select-box { padding-right:30px; }
-.select-wrap.type-line .select-box:after { content:''; position:absolute; right:10px; top:0; width:24px; height:50px; background:url(../images/common/arrow_selbox.png) no-repeat 50%/24px auto; }
-.select-wrap.type-line + span { flex:1; }
+.select-box.type-line { flex:1; padding:0; border:none; border-radius: 0;  border-bottom:1px solid #DDDDDD;}
+.select-box.type-line :after { content:''; position:absolute; right:10px; top:0; width:24px; height:50px; background:url(../images/common/arrow_selbox.png) no-repeat 50%/24px auto; }
+.select-box.type-line .option { max-width: inherit; right:0; left:0; text-align: left !important; }
 
 /* checkbox : on / off 스위치 토글 버튼 */
 .check-all-wrap { margin-top:40px;}
@@ -839,7 +838,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 /* 버튼형*/
 .form-wrap.address input::placeholder { color:#CCCCCC; }
 /* .form-wrap.form-line div.input > span { position:relative; display:block; margin-bottom:15px; } 아래와같이 변경*/
-.form-wrap div.input > span { position:relative; display:block; /*margin-bottom:10px;*/ }
+.form-wrap div.input > span { position:relative; display:block; width:100%; /*margin-bottom:10px;*/ }
 .form-wrap.form-line button.btnInput { z-index:2; position:absolute; top:50%; right:0; transform:translate(0, -50%); }
 .form-wrap.form-line .btn-certi,
 .form-wrap.form-line .btnInput { padding:5px 16px; border-radius:15px; font-size:0.77778rem; line-height: 1rem; letter-spacing:-0.5px;  border:1px solid #DDDDDD; background:#FFFFFF; color:#26282C; }
@@ -1318,7 +1317,7 @@ form,
 .tit-wrap:has(+.list-bull) { padding-bottom:0; }
 .tit-wrap + .sub-tit-wrap { margin-top:0; }
 .form-wrap.phone:has(.select-wrap) { margin-bottom:0; }
-.form-wrap.phone .select-wrap { min-width:110px; margin-top:0;}
+.form-wrap.phone .select-wrap {  min-width:110px; margin-top:0;}
 .tit-wrap + .visaul-info-box { margin-top:0; }
 .tit-wrap + .table-type .sub-tit-wrap { margin-top:0px; }
 /* .tit-wrap:has(+.form-wrap.address, .form-wrap.password) { padding-bottom:10px; } */
@@ -1922,7 +1921,7 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 .btn-search { width:24px; height:24px; padding:0; background:url("../images/common/ico_search.png") no-repeat 50%/24px auto; text-indent:-9999px; }
 .btn-search:after { content:''; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:120%; height:120%; }
 .btn-delete { width:24px; height:24px; padding:0; background:url("../images/common/ico_delete.png") no-repeat 50%/24px auto; text-indent:-9999px; }
-.form-wrap button:not(.btn-input button),
+.form-wrap button:not(.btn-input button, .radio-list button),
 .form-wrap .btn-input { position:absolute; top:50%; right:10px; transform:translateY(-50%); }
 .form-wrap button:not(.btn-input button) + button { right:44px; }
 .form-wrap.type-box button { right:44px; }
