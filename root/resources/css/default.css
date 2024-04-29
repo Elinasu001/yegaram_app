@@ -106,6 +106,8 @@ html.font-size-3{ font-size: 24px;}
 .color-333333 { color:#333333!important; }
 .color-FF0000 { color:#FF0000 !important }
 .color-2B66F6 { color:#2B66F6 !important; }
+.color-4E32A5 { color:#4E32A5 !important; }
+
 
 .fw-500 { font-weight:500 !important; }
 .s-txt { display:inline-block; width:100%; font-size:0.77778rem; line-height:1.5; }
@@ -1280,7 +1282,7 @@ form,
 .contentsWrap.grid,
 .contents {  height:100%; }
 .contentsWrap .contents > .default-wrap { padding-bottom:100px; }
-.contentsWrap.grid .contents > .default-wrap { padding-bottom:40px; }
+.contentsWrap.grid .contents > .default-wrap { padding-bottom:30px; }
 /* .contentsWrap.grid { padding-bottom:150px !important; } */
 .contentsWrap.grid .contents .default-wrap { display:flex; flex-direction: column; justify-content:space-between; height:100%; overflow-y:scroll; }
 .contentsWrap.grid .contents .default-wrap { display:flex; flex-direction: column; justify-content:space-between;  height:100%; /*height:calc(100vh - 100px); */}
@@ -1298,6 +1300,7 @@ form,
 .layerpopup .sub-tit-wrap:first-child { margin-top:0; }
 .layerpopup .default-wrap > .list-bull:first-child { margin-top:0; }
 .layerpopup .default-wrap > .list-icon:first-child { padding-top:0; }
+.layerpopup.laypop-all .default-wrap > ul:first-of-type{ margin-top:40px; }
 /* .default-wrap:has(.tit-wrap) { padding-top:0; } renewal.css로 옮김 */
 /* .default-wrap:has(.visaul-info-section) { padding-top:0; } */
 /* .default-wrap.bg-gray { padding-top:20px; background-color:#F7F8FA; } 안쓰는듯한데 삭제해도되는지test(청)*/
@@ -1584,7 +1587,7 @@ body.on { position:fixed; top:0; }
 .tabs.swiper .swiper-slide > *:first-child { margin-top:30px; }
 .tabs.swiper .swiper-slide:has(.visaul-info-box) .form-wrap + div { margin-top:0; }
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction { top:0; }
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet { margin:0 15px 0 0; color:#666666;}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet { margin:0 15px 0 0; color:#999;}
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:last-child, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:last-child { margin-right:0; }
 
 
@@ -2304,7 +2307,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 /* 보호금융상품 */
 .kdic-wrap { margin:40px 0; }
 .kdic-wrap > img { display:inline-block; width:60px; padding-right:10px; }
-.kdic-wrap > p { display:inline-block; width:calc(100% - 70px); color:#666666; font-size:0.77778rem; line-height:1.5; }
+.kdic-wrap > p { display:inline-block; width:calc(100% - 70px); color:#999; font-size:0.77778rem; line-height:1.5; }
 
 /* 준법감사인 */
 .txt-junbub { /*margin-top:50px;*/ color:#999;  font-size:0.77778rem; line-height:1.5; font-weight:300; }
@@ -2361,6 +2364,9 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .prod-box-list .btn-set { top:0; right: 0; }
 .prod-box .icon-exp { display:flex; margin-bottom:8px; }
 .prod-box .icon-exp p { flex:1; }
+.prod-box .icon-ex .tooltip-wrap:nth-child(2){ order:3; }
+.prod-box .icon-ex .tooltip-wrap:nth-child(3){ order:2; }
+
 .prod-box .label-info-wrap { padding:16px 0 24px; }
 .prod-box:last-child .label-info-wrap { padding-bottom:5px; }/*상품상세버튼 삭제시*/
 .prod-box:last-child .label-info-wrap:last-child { padding-bottom:0; }

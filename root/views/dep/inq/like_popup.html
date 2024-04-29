@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<!--
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+ -->
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152139"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152139"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152139"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152139"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152139"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152139"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152139"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152139"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152139" id="biz_common"
+	data-menuId="dep/inq"
+	data-frameId="depList"
+	data-serviceCd="depList.frm"
+	data-serverTime="20230803152139"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+<script type="text/javascript">
+var PageFunc = function() {
+	// dep/inq/depList.frm?LINK_ACT=BBS_SELECT&txGbnCd=P&PRD_TYCD=D
+	var _back = function() { // 뒤로가기
+		history.back();
+	}
+
+	var _proc = function() { // 본처리
+
+	}
+
+	var _cancel = function() { // 그만하기
+		goMainPage();
+	}
+
+	var _validate = function() { // 유효성검증
+		return true;
+	}
+
+	return {
+		back : _back,
+		proc : _proc,
+		cancel : _cancel
+	};
+}();
+
+$(document).ready(function(){
+	/* [퍼블-관심상품툴팁] 수정 : 하트 버튼 클릭 시 토스트 팝업 노출  */
+	$('.like').on('click', function (e) {
+		e.preventDefault();
+		var $tooltipWrap = $(this).parents('.tooltip-wrap');
+		var $regText  = $(this).siblings('.tooltip-txt.reg');
+		var $delText = $(this).siblings('.tooltip-txt.del');
+
+		if ($tooltipWrap.hasClass('type2')) {
+			if ($(this).hasClass('active')) {
+				$(this).removeClass('active');
+				$delText.fadeIn();
+				setTimeout(function () {
+					$delText.fadeOut();
+				}, 1000);
+			} else {
+				$(this).addClass('active');
+				$regText.fadeIn();
+				setTimeout(function () {
+					$regText.fadeOut();
+				}, 1000);
+			}
+		}
+	});
+	/* // [퍼블-관심상품툴팁] 수정 : 하트 버튼 클릭 시 토스트 팝업 노출  */
+});
+
+/*상품가입하기*/
+function fnProdJoin(pdcd){
+	var reqForm = makeForm("reqForm");
+	addFormData(reqForm, "LINK_ACT", "BBS_SELECT");
+	addFormData(reqForm, "txGbnCd", "P");  // 상품조회
+	addFormData(reqForm, "PRD_TYCD", "D"); // 상품타입코드
+	addFormData(reqForm, "PDCD", pdcd);
+	doActionFrame("dep/inq/depDetail", reqForm);
+}
+
+</script>
+</head>
+<body>
+	<!-- header -->
+	<header class="headerWrap">  <!--D: bg-color02 클래스 : 뒤에 색상 들어갈 경우  -->
+		<div class="headerLeft">
+			<a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a> <!--D: 이전버튼 -->
+		</div>
+		<div class="headerCenter">
+			<h2 class="text"><span>예적금</span></h2> 
+		</div>
+		<div class="headerRight">
+			<a href="javascript:void(0)" class="btn btn-interest"><img src="/resources/images/header/btn_interest.png" alt="관심상품"><em class="count-flag">3</em></a>  <!--D: 관심상품버튼 -->
+			<a href="javascript:void(0)" class="btn btn-like"><img src="/resources/images/header/btn_like.png" alt="좋아요"><em class="count-flag">3</em></a>  <!--D: 좋아요버튼 -->
+		</div>
+	</header>
+	<!-- //header -->
+
+ <!-- s: contentsWrap -->
+    <div class="contentsWrap">
+        <!-- s: contents -->
+        <div class="contents">
+			<div class="default-wrap product gray-wrap">
+
+            </div>
+        </div>
+        <!-- //e: contents -->
+    </div>
+    <!-- //e: contentsWrap -->
+
+
+	<!-- s : 관심상품 팝업-->
+    <div id="lypullPop" class="layerpopup laypop-all show" style="display:block;">
+        <!-- s: contents -->
+        <div class="pop-header">
+            <h2 class="pop-title">관심상품</h2>
+            <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lypullPop')">닫기</button>
+        </div>
+        
+        <div class="pop-con-wrap">
+            <div class="default-wrap product gray-wrap mb0">
+                <ul class="prod-box-list">
+                    <li>
+                        <div class="prod-box">
+                            <div class="icon-exp">
+                                <p>가장 많이 주목을 받고 있어요</p>
+                                <div class="tooltip-wrap type2 type-toast">
+                                    <span class="like active"></span>
+                                    <div class="tooltip-txt reg">
+                                        <p>관심상품으로 등록되었어요</p>
+                                    </div>
+                                    <div class="tooltip-txt del">
+                                        <p>관심상품에서 제외했어요</p>
+                                    </div>
+                                </div>
+                                <div class="tooltip-wrap type2">
+                                    <span class="scale"></span>
+                                    <div class="tooltip-txt">
+                                        <p>비교상품으로 등록되었어요</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flag-tit-wrap">
+                                <em class="flag style2">
+                                입출금
+                                </em>
+                                <strong class="tit">E-RUN 파킹통장</strong>
+                            </div>
+                            <ul class="text-bar-list mt10">
+                                <li>입출금자유</li>
+                                <li>매일이자지급</li>
+                                <li>구간별차등금리</li>
+                            </ul>
+                            <div class="label-info-wrap">
+                                <P>1일 ~</P>
+                                <strong class="info">최고 연<span>3.35</span>%</strong>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- e : 관심상품 팝업-->
+
+
+
+
+
+
+
+
+
+
+<footer>
+<!-- 푸터 타입별 정의 -->
+</footer>
+
+<!-- 업무공통 -->
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

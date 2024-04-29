@@ -10,9 +10,7 @@
 <meta name="keywords" content="예가람저축은행keywords" />
 <meta name="description" content="예가람저축은행description" />
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-<!--
-<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
- -->
+
 <meta name="apple-mobile-web-app-status-bar-style" content="white" />
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -20,10 +18,11 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Cache-Control" content="No-Cache">
 
-<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
 <link href="/resources/css/default.css" rel="stylesheet" />
 <link href="/resources/css/renewal.css" rel="stylesheet" />
 
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
 <link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
 <link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
 
@@ -33,666 +32,235 @@
 <script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152139"></script>
-<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152139"></script>
-<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152139"></script>
-<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152139"></script>
-<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152139"></script>
-<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152139"></script>
-<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152139"></script>
-<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152139"></script>
-<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152139" id="biz_common"
-	data-menuId="dep/inq"
-	data-frameId="depList"
-	data-serviceCd="depList.frm"
-	data-serverTime="20230803152139"
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803151753"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803151753"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803151753"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803151753"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803151753"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803151753"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803151753"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803151753"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803151753" id="biz_common" 
+	data-menuId="dep/prc"
+	data-frameId="qckAcnoOpenPrc4"
+	data-serviceCd="qckAcnoOpenPrc4.frm" 
+	data-serverTime="20230803151753"
 	data-activeMode="local"
 	data-activeEnv="${active.env">
 </script>
 <script type="text/javascript">
 var PageFunc = function() {
-	// dep/inq/depList.frm?LINK_ACT=BBS_SELECT&txGbnCd=P&PRD_TYCD=D
+	
 	var _back = function() { // 뒤로가기
 		history.back();
 	}
-
-	var _proc = function() { // 본처리
-
+	
+	// 계좌비밀번호 입력 후에 상품신청
+	var _proc = function() {
+		
+		var pwd01 = $("#E2E_PWD01").val();
+		var pwd02 = $("#E2E_PWD02").val();
+		//비밀번호 매칭여부 확인
+		var confirmForm = makeForm("confirmForm");
+		addFormData(confirmForm, "E2E_PSWD1", pwd01);
+		addFormData(confirmForm, "E2E_PSWD2", pwd02);
+		doAction("PSWD_MNG", confirmForm, function(resDs){
+			if (resDs.MATCH_YN == 'Y') {
+				var procForm = makeForm("procForm");
+				addFormData(procForm, "txGbnCd", "A");	// 거래구분코드 P:전처리 R:고객등록  A:상품신청 C:개설완료처리
+				addFormData(procForm, "E2E_NECT_CMMD_ACCO_PWD", $("#E2E_PWD01").val());
+				doAction("ACNO_OPEN_PRC", procForm, function(resJson) {
+					console.log(resJson);
+					if(resJson.API_RS_MSG === "SUCCESS") {
+						// TODO 전자금융 가입-> 가입되어있는고객인지 확인하고서 가입??
+						biz.confirm("전자금융에 가입하실래요?",function(resJson){
+							_usrIdRegProc(resJson);	
+						}, function(resJson){
+							_proc2(resJson);
+						});
+					}else{
+						biz.alert(resJson.API_RS_MSG, "확인", function(){goMainPage();});
+					} 
+				});
+			} else {
+				biz.alert("입력하신 비밀번호가 일치하지 않습니다.");
+			}
+		});	
+		
 	}
-
+	
+	// 전자금융신청
+	var _usrIdRegProc = function(data) {
+		
+		biz.usrIdReg('N',function(data){
+			if("Y" == data){
+				_proc2(data);
+			}
+		});
+	}
+	
+	// 1원송금
+	var _proc2 = function(data) {
+		biz.fsbAcnoAuth(_proc3);	
+	}
+	
+	// 인증등록 후 5번 화면으로 이동
+	var _proc3 = function(data) {
+		if("Y" == data){
+			var procForm3 = makeForm("procForm3");
+			addFormData(procForm3, "txGbnCd", "C");	// 거래구분코드 P:전처리 R:고객등록  A:상품신청 C:개설완료처리
+			addFormData(procForm3, "PROD_KNCD", "10");	// 비대면상품세부종류코드 10:보통예금 20:정기예금 30:적금 40:BC카드 41:롯데카드 50:사잇돌 60:신용 70:종합통장 80:햇살론 
+			
+			// TODO 개발인경우
+			if(ACTIVE_MODE != 'prod') {
+				addFormData(procForm3, "BKCD", "296"); 
+				addFormData(procForm3, "ACNO", "11101111111");
+			}
+			doAction("ACNO_OPEN_PRC", procForm3, function(resJson) {
+				console.log(resJson);
+				if(resJson.API_RS_MSG === "SUCCESS") {
+					addFormData(procForm3, "SUCC_YN", "Y");
+				}else{
+					addFormData(procForm3, "SUCC_YN", "N");
+					
+					var errConvert = "";
+					errConvert = resJson.API_RS_MSG;
+					addFormData(procForm3, "ERR_CODE", errConvert.substring(0,errConvert.indexOf(",")));
+					addFormData(procForm3, "ERR_MSG", errConvert.substring(errConvert.indexOf(",")+1, errConvert.length));
+				}
+				
+				doActionFrame("dep/prc/qckAcnoOpenPrc5", procForm3)
+			}); 
+		}
+	}
+	
 	var _cancel = function() { // 그만하기
 		goMainPage();
 	}
-
+	
 	var _validate = function() { // 유효성검증
+		// TODO 
 		return true;
 	}
+	
+	var _password01 = function() { // 비밀번호
+		// 초기화
+		$("#PWD01").val("");
+		$("label[for='PWD01']").removeClass("action");
+		
+		// 보안키패드호출
+		biz.keypad("계좌비밀번호", 4, function(encData){
+			console.log(encData);
+			if (!UtilFunc.isEmpty(encData)) {
+				$("#E2E_PWD01").val(encData);
+				$("#PWD01").val("●●●●");
+				$("label[for='PWD01']").addClass("action");
+				validChk();
+			} 
+		});
+	}	
+
+	var _password02 = function() { // 비밀번호
+		// 초기화
+		$("#PWD02").val("");
+		$("label[for='PWD02']").removeClass("action");
+		
+		// 보안키패드호출
+		biz.keypad("계좌비밀번호", 4, function(encData){
+			console.log(encData);
+			if (!UtilFunc.isEmpty(encData)) {
+				$("#E2E_PWD02").val(encData);
+				$("#PWD02").val("●●●●");
+				$("label[for='PWD02']").addClass("action");
+				validChk();
+			} 
+		});
+	}	
 
 	return {
 		back : _back,
 		proc : _proc,
-		cancel : _cancel
+		cancel : _cancel,
+		password01 : _password01,
+		password02 : _password02
 	};
 }();
 
-$(document).ready(function(){
-	/* [퍼블-관심상품툴팁] 수정 : 하트 버튼 클릭 시 토스트 팝업 노출  */
-	$('.like').on('click', function (e) {
-		e.preventDefault();
-		var $tooltipWrap = $(this).parents('.tooltip-wrap');
-		var $regText  = $(this).siblings('.tooltip-txt.reg');
-		var $delText = $(this).siblings('.tooltip-txt.del');
 
-		if ($tooltipWrap.hasClass('type2')) {
-			if ($(this).hasClass('active')) {
-				$(this).removeClass('active');
-				$delText.fadeIn();
-				setTimeout(function () {
-					$delText.fadeOut();
-				}, 1000);
-			} else {
-				$(this).addClass('active');
-				$regText.fadeIn();
-				setTimeout(function () {
-					$regText.fadeOut();
-				}, 1000);
-			}
-		}
-	});
-	/* // [퍼블-관심상품툴팁] 수정 : 하트 버튼 클릭 시 토스트 팝업 노출  */
+$(document).ready(function(){
+	
 });
 
-/*상품가입하기*/
-function fnProdJoin(pdcd){
-	var reqForm = makeForm("reqForm");
-	addFormData(reqForm, "LINK_ACT", "BBS_SELECT");
-	addFormData(reqForm, "txGbnCd", "P");  // 상품조회
-	addFormData(reqForm, "PRD_TYCD", "D"); // 상품타입코드
-	addFormData(reqForm, "PDCD", pdcd);
-	doActionFrame("dep/inq/depDetail", reqForm);
-}
 
 </script>
 </head>
 <body>
 	<!-- header -->
-	<header class="headerWrap">  <!--D: bg-color02 클래스 : 뒤에 색상 들어갈 경우  -->
-		<div class="headerLeft">
-			<a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a> <!--D: 이전버튼 -->
+	<header class="headerWrap">
+		<div class="header">
+			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+			<h2><span>비대면계좌개설</span></h2>
 		</div>
-		<div class="headerCenter">
-			<h2 class="text"><span>예적금</span></h2> 
-		</div>
-		<div class="headerRight">
-			<a href="javascript:void(0)" class="btn btn-interest"><img src="/resources/images/header/btn_interest.png" alt="관심상품"><em class="count-flag">3</em></a>  <!--D: 관심상품버튼 -->
-			<a href="javascript:void(0)" class="btn btn-like"><img src="/resources/images/header/btn_like.png" alt="좋아요"><em class="count-flag">3</em></a>  <!--D: 좋아요버튼 -->
-		</div>
+		<div class="menu-wrap"></div>
 	</header>
 	<!-- //header -->
-
- <!-- s: contentsWrap -->
-    <div class="contentsWrap">
+	
+  <!-- s: contentsWrap -->
+	 <!-- s: contentsWrap -->
+    <div class="contentsWrap" style="padding-bottom: 146px;">
+    <form id="frm" name="frm" method="post">
+    
         <!-- s: contents -->
         <div class="contents">
-			<div class="default-wrap product gray-wrap"><!-- [퍼블-2] div.difault-wrap 위치 변경 -->
-				<!-- //s: gray-wrap -->
-				<section class="tabs-wrap">
-					<div class="tabs swiper"><!-- [퍼블-2] 클래스 변경 -->
-						<ul class="swiper-pager"></ul>
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<ul class="prod-box-list">
-									<li>
-										<div class="prod-box">
-											<div class="icon-exp">
-												<p>가장 많이 주목을 받고 있어요</p>
-												<div class="tooltip-wrap type2 type-toast">
-													<span class="like active"></span>
-													<div class="tooltip-txt reg" style="display: block;">
-														<p>관심상품으로 등록되었어요</p>
-													</div>
-													<div class="tooltip-txt del">
-														<p>관심상품에서 제외했어요</p>
-													</div>
-												</div>
-												<div class="tooltip-wrap type2">
-													<span class="scale"></span>
-													<div class="tooltip-txt">
-														<p>비교상품으로 등록되었어요</p>
-													</div>
-												</div>
-											</div>
-											<div class="flag-tit-wrap">
-												<em class="flag style2">
-												입출금
-												</em>
-												<strong class="tit">E-RUN 파킹통장</strong>
-											</div>
-											<ul class="text-bar-list mt10">
-												<li>입출금자유</li>
-												<li>매일이자지급</li>
-												<li>구간별차등금리</li>
-											</ul>
-											<div class="label-info-wrap">
-												<P>1일 ~</P>
-												<strong class="info">최고 연<span>3.35</span>%</strong>
-											</div>
-										</div>
-									</li>
+            <div class="default-wrap"> <!-- [퍼블] .mt0 삭제 -->
+				<div class="step-wrap">
+                    <div class="step-line" aria-label="총 6단계 중 1단계 진행중">
+                        <div class="step-bar" style="width: 33.3333%;"></div>
+                    </div>
+                    <div class="num"><strong class="current">2</strong>/<span class="tot">6</span></div>
+                </div>
+                <div class="tit-wrap">
+                    <p class="txt"><strong>개설하실 계좌</strong>의<br/><strong>비밀번호</strong>를 입력해주세요</p>
+                </div>
 
-									<li>
-										<div class="prod-box">
-											<div class="icon-exp">
-												<p>30, 40대가 가장 많이 계좌를 개설했어요</p>
-												<div class="tooltip-wrap type2 type-toast">
-													<span class="like"></span>
-													<div class="tooltip-txt reg">
-														<p>관심상품으로 등록되었어요</p>
-													</div>
-													<div class="tooltip-txt del">
-														<p>관심상품에서 제외했어요</p>
-													</div>
-												</div>
-												<div class="tooltip-wrap type2">
-													<span class="scale active"></span>
-													<div class="tooltip-txt">
-														<p>비교상품으로 등록되었어요</p>
-													</div>
-												</div>
-											</div>
-											<div class="flag-tit-wrap">
-												<em class="flag style2">
-												적금
-												</em>
-												<strong class="tit">E-RUN 정기적금</strong>
-											</div>
-											<ul class="text-bar-list mt10">
-												<li>목돈마련</li>
-												<li>대표상품</li>
-												<li>비대면전용</li>
-											</ul>
-											<div class="label-info-wrap">
-												<P>1일 ~</P>
-												<strong class="info">최고 연<span>4.3</span>%</strong>
-											</div>
-										</div>
-									</li>
-
-									<li>
-										<div class="prod-box">
-											<div class="icon-exp">
-												<p>30, 40대가 가장 많이 계좌를 개설했어요</p>
-												<div class="tooltip-wrap type2 type-toast">
-													<span class="like"></span>
-													<div class="tooltip-txt reg">
-														<p>관심상품으로 등록되었어요</p>
-													</div>
-													<div class="tooltip-txt del">
-														<p>관심상품에서 제외했어요</p>
-													</div>
-												</div>
-												<div class="tooltip-wrap type2">
-													<span class="scale"></span>
-													<div class="tooltip-txt">
-														<p>비교상품으로 등록되었어요</p>
-													</div>
-												</div>
-												
-											</div>
-											<div class="flag-tit-wrap">
-												<em class="flag style2">
-												적금
-												</em>
-												<strong class="tit">챌린지 적금</strong>
-												
-											</div>
-											<ul class="text-bar-list mt10">
-												<li>목돈마련</li>
-												<li>대표상품</li>
-												<li>비대면전용</li>
-											</ul>
-											<div class="label-info-wrap">
-												<P>10개월 ~</P>
-												<strong class="info">최고 연<span>4.3</span>%</strong>
-											</div>
-										</div>
-									</li>
-								
-								
-
-								</ul>
-							</div>
-
-							<div class="swiper-slide">
-								<ul class="prod-box-list">
-									<li>
-										<div class="prod-box">
-											<div class="icon-exp">
-												<p>가장 많이 주목을 받고 있어요</p>
-												<div class="tooltip-wrap type2 type-toast">
-													<span class="like active"></span>
-													<div class="tooltip-txt reg" style="display: block;">
-														<p>관심상품으로 등록되었어요</p>
-													</div>
-													<div class="tooltip-txt del">
-														<p>관심상품에서 제외했어요</p>
-													</div>
-												</div>
-												<div class="tooltip-wrap type2">
-													<span class="scale"></span>
-													<div class="tooltip-txt">
-														<p>비교상품으로 등록되었어요</p>
-													</div>
-												</div>
-											</div>
-											<div class="flag-tit-wrap">
-												<em class="flag style2">
-												입출금
-												</em>
-												<strong class="tit">E-RUN 파킹통장</strong>
-											</div>
-											<ul class="text-bar-list mt10">
-												<li>입출금자유</li>
-												<li>매일이자지급</li>
-												<li>구간별차등금리</li>
-											</ul>
-											<div class="label-info-wrap">
-												<P>1일 ~</P>
-												<strong class="info">최고 연<span>3.35</span>%</strong>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-
-							<div class="swiper-slide">
-								<ul class="prod-box-list">
-									<li>
-										<div class="prod-box">
-											<div class="icon-exp">
-												<p>가장 많이 주목을 받고 있어요</p>
-												<div class="tooltip-wrap type2 type-toast">
-													<span class="like active"></span>
-													<div class="tooltip-txt reg" style="display: block;">
-														<p>관심상품으로 등록되었어요</p>
-													</div>
-													<div class="tooltip-txt del">
-														<p>관심상품에서 제외했어요</p>
-													</div>
-												</div>
-												<div class="tooltip-wrap type2">
-													<span class="scale"></span>
-													<div class="tooltip-txt">
-														<p>비교상품으로 등록되었어요</p>
-													</div>
-												</div>
-											</div>
-											<div class="flag-tit-wrap">
-												<em class="flag style2">
-												입출금
-												</em>
-												<strong class="tit">E-RUN 파킹통장</strong>
-											</div>
-											<ul class="text-bar-list mt10">
-												<li>입출금자유</li>
-												<li>매일이자지급</li>
-												<li>구간별차등금리</li>
-											</ul>
-											<div class="label-info-wrap">
-												<P>1일 ~</P>
-												<strong class="info">최고 연<span>3.35</span>%</strong>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-
-							<div class="swiper-slide">
-								<ul class="prod-box-list">
-									<li>
-										<div class="prod-box">
-											<div class="icon-exp">
-												<p>가장 많이 주목을 받고 있어요</p>
-												<div class="tooltip-wrap type2 type-toast">
-													<span class="like active"></span>
-													<div class="tooltip-txt reg" style="display: block;">
-														<p>관심상품으로 등록되었어요</p>
-													</div>
-													<div class="tooltip-txt del">
-														<p>관심상품에서 제외했어요</p>
-													</div>
-												</div>
-												<div class="tooltip-wrap type2">
-													<span class="scale"></span>
-													<div class="tooltip-txt">
-														<p>비교상품으로 등록되었어요</p>
-													</div>
-												</div>
-											</div>
-											<div class="flag-tit-wrap">
-												<em class="flag style2">
-												입출금
-												</em>
-												<strong class="tit">E-RUN 파킹통장</strong>
-											</div>
-											<ul class="text-bar-list mt10">
-												<li>입출금자유</li>
-												<li>매일이자지급</li>
-												<li>구간별차등금리</li>
-											</ul>
-											<div class="label-info-wrap">
-												<P>1일 ~</P>
-												<strong class="info">최고 연<span>3.35</span>%</strong>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
+				<div class="form-wrap password"><!-- [퍼블-공통] 비밀번호 인풋에 password 클래스 추가 -->
+					<!-- <strong class="form-tit"><span>신규 계좌비밀번호(4자리)</span></strong> [퍼블] 기획 삭제 -->
+					<label for="PWD01" class="formlabel">계좌비밀번호</label><!-- [퍼블-공통] 비밀번호 인풋에서 삭제했던 label태그 공통으로 살리고, 클래스 변경(onbasic 삭제) -->
+					<div class="input">
+						<span>
+							<input type="hidden" id="E2E_PWD01" />
+							<input type="password" title="신규 계좌비밀번호" id="PWD01" class="inp" name="" value="" maxlength="4" required="" onclick="PageFunc.password01(); removeErr(this);">
+						</span>
 					</div>
-				</section>
-				<script>
-					var pager = ['전체', '입출금', '예금', '적금'];
-					var swiper = new Swiper('.tabs.swiper', {
-						spaceBetween: 20,
-						autoHeight: true,
-						pagination: {
-							el: '.tabs  > ul',
-							clickable: true,
-							renderBullet: function (index, className) {
-							return '<li class="' + className + '">' + (pager[index]) + '</li>';
-							}
-						},
-						observer: true, // [검수리스트-223] 추가
-						observeParents: true // [검수리스트-223] 추가
-					});
-				</script>
-
-				<div class="fin-cal-wrap">
-					<div class="sub-tit-wrap"><!--[퍼블] mt 삭제 -->
-						<p class="tit">금융계산기</p>
-					</div>
-					<section class="tabs-wrap type2">
-						<div class="tabs">
-							<ul class="tab-item col-02">
-								<li class="on" data-tab="tab-cont001"><a href="#none">납입기간별</a></li>
-								<li data-tab="tab-cont002"><a href="#none">목표 금액별</a></li>
-							</ul>
-							<div class="tab-content-area"><!--[퍼블] mt 삭제 -->
-
-								<!-- // D: 납입기간별 -->
-								<div id="tab-cont001" class="tab-content on">
-									<p class="s-txt ta-c">만기예상금액을 예측해 보세요</p>
-									<div class="select-wrap">
-										<div id="" class="select-box" tabindex="1" >
-											<label for=""><span class="color-F1108E"><strong><span>3.7</span>%</strong></span> 연 이율로</label>
-											<span class="option">설정</span>
-										</div>
-										<div id="" class="select-box" tabindex="1" >
-											<span class="color-F1108E"><strong><span>12</span>개월</strong></span> 동안</label>
-											<span class="option">설정</span>
-										</div>
-										<div id="" class="select-box" tabindex="1" >
-											<label for=""><span class="color-F1108E"><strong><span>30</span>만원</strong></span>을 월 납입하면?</label>
-											<span class="option">설정</span>
-										</div>
-									</div>
-									<div class="bg-box ta-c">
-										<p><span class="color-4E32A5"><span>10,376,340</span>원</span> 받아요</p>
-										<p><sapn class="color-999999">예상이자 : 376,340원 (만기일시 지급/세전)</sapn></p>
-									</div>
-								</div>
-								<!-- D: 납입기간별 // -->
-
-								<!-- // D: 목표금액별 -->
-								<div id="tab-cont002" class="tab-content dp-none">
-									<p class="s-txt ta-c">목표금액 달성 기간을 예측해 보세요</p>
-									<div class="select-wrap">
-										<div class="select-box" tabindex="1">
-											<label for=""><span class="color-F1108E"><strong><span>1000</span>만원</strong></span> 달성금액목표로</label><!--[퍼블] strong 추가-->
-											<span class="option">설정</span>
-										</div>
-										<div class="select-box" tabindex="1">
-											<label for=""><span class="color-F1108E"><strong><span>30</span>만원</strong></span>을 월납입하고</label><!--[퍼블] strong 추가-->
-											<span class="option">설정</span>
-										</div>
-										<div class="select-box" tabindex="1">
-											<label for=""><span class="color-F1108E"><strong><span>3.7</span>%</strong></span> 연 이율을 적용하면?</label><!--[퍼블] strong 추가-->
-											<span class="option">설정</span>
-										</div>
-									</div>
-
-									<div class="bg-box ta-c">
-										<p><span class="color-4E32A5"><span>33</span>개월</span> 걸려요</p>
-										<p>
-											<sapn class="color-999999">
-											만기예상금액 : <span>10,345,000</span>원<br/>
-											예상이자 : <span>376,000</span>원(만기일시 지급/세전)
-											</sapn>
-										</p>
-									</div>
-								</div>
-								<!-- D: 목표금액별 // -->
-
-							</div>
-						</div>
-					</section>
+					<p class="error-txt">신규 계좌비밀번호를 입력해주세요</p>
 				</div>
-
-				<!-- s:보호금융상품 -->
-				<div class="kdic-wrap">
-						<img src="../../../resources/images/common/img-kdic.png" alt="예금보험공사 보호금융상품 1인당 최고 5천만원">
-						<p>이 예금은 예금자보호법에 따라 예금보험공사가 보호하되, 보호 한도는 본 예가람저축은행에 있는 귀하의 모든 예금보호 대상 금융상품의 원금과 소정의 이자를 합하여 1인당 "최고 5천만원"이며,  5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</p>
+				<div class="form-wrap mt40"><!-- [퍼블-공통] 비밀번호 인풋에 password 클래스 추가 -->
+					<!-- <strong class="form-tit"><span>신규 계좌비밀번호 확인(4자리)</span></strong> [퍼블] 기획 삭제 -->
+					<label for="PWD02" class="formlabel">계좌비밀번호 확인</label><!-- [퍼블-공통] 비밀번호 인풋에서 삭제했던 label태그 공통으로 살리고, 클래스 변경(onbasic 삭제) -->
+					<div class="input">
+						<span>
+							<input type="hidden" id="E2E_PWD02" />
+							<input type="password" title="신규 계좌비밀번호 확인" id="PWD02" class="inp" name="" value="" maxlength="4" required="" onclick="PageFunc.password02(); removeErr(this);" readonly>
+						</span>
 					</div>
-				<!-- E:보호금융상품 -->
-
-                <!-- //e: gray-wrap -->
+					<p class="error-txt">신규 계좌비밀번호를 입력해주세요</p>
+				</div>
             </div>
         </div>
         <!-- //e: contents -->
+        <!-- s: btn-wrap -->
+        <div class="fixed-btn-wrap">
+			<div class="btn-wrap">
+				<a href="#none" class="btn" onclick="PageFunc.proc();">다음</a>
+			</div>
+		</div>
+        <!-- //e: btn-wrap -->
+	</form>
     </div>
     <!-- //e: contentsWrap -->
-
-	<!--s : 상품비교관련 알럿 3개-->
-	<div id="lyAlert" class="layerpopup type-alert">
-		<div class="content-wrap">
-			<div class="pop-con-wrap">
-				<span class="pop-con">상품비교 담기는<br>
-					3개 까지 할 수 있어요</span>
-			</div>
-			<div class="btn-wrap">
-				<a href="javascript:void(0);" class="btn close">확인</a>
-			</div>
-		</div>
-	</div>
-	<div id="lyAlert2" class="layerpopup type-alert">
-		<div class="content-wrap">
-			<div class="pop-con-wrap">
-				<span class="pop-con">비교하실 상품이<br> 2개 이상이어야 해요</span>
-			</div>
-			<div class="btn-wrap">
-				<a href="javascript:void(0);" class="btn close">확인</a>
-			</div>
-		</div>
-	</div>
-	<div id="lyAlert2" class="layerpopup type-alert">
-		<div class="content-wrap">
-			<div class="pop-con-wrap">
-				<span class="pop-con">비교하실 상품이<br> 2개 이상이어야 해요</span>
-			</div>
-			<div class="btn-wrap">
-				<a href="javascript:void(0);" class="btn close">확인</a>
-			</div>
-		</div>
-	</div>
-	<!--e : 상품비교관련 알럿 3개-->
-
-	<!-- [퍼블] 상품 비교 팝업 추가 : loanList.html 내의 팝업과 동일 - 탭으로 예적금/대출 상품 변경-->
-	<div id="lyPullPop01" class="layerpopup laypop-all" style="display:none !important;">
-		<div class="pop-header">
-			<h2 class="pop-title">상품 비교하기</h2><!-- [퍼블] 텍스트 변경 -->
-			<button type="button" name="button" class="btn-layer-close" onclick="closePopup('lyPullPop01')">닫기</button>
-		</div>
-		<div class="pop-con-wrap">
-			<div class="default-wrap mt0">
-				<section class="tabs-wrap type-uniform"><!-- [퍼블] 클래스 추가 -->
-					<div class="tabs">
-						<ul class="tab-item">
-							<li class="on" data-tab="tab-cont0001"><a href="#none">예적금상품</a></li>
-							<li data-tab="tab-cont0002"><a href="#none">대출상품</a></li>
-						</ul>
-						<div class="tab-content-area"><!-- [퍼블] 클래스 변경 -->
-							<div id="tab-cont0001" class="tab-content">
-								<div class="tit-wrap">
-									<p class="txt"><strong>예적금상품을 비교</strong>해 보세요</p>
-								</div>
-
-								<!-- 상품 비교 테이블 -->
-								<div class="fixtable-area">
-									<div class="fixtable-wrap"><!-- [퍼블-3] 클래스 변경 -->
-										<table class="fixtable compare">
-											<colgroup>
-											</colgroup>
-											<tbody>
-												<tr>
-													<th>상품명</th>
-													<td>보고파 정기적금</td>
-													<td>e 정기예금단리</td>
-												</tr>
-												<tr>
-													<th>약정이율</th>
-													<td>최고 연 4.30%</td>
-													<td>최고 연 4.00%</td>
-												</tr>
-												<tr>
-													<th>가입대상</th>
-													<td>
-														<ul class="list-bull hyphen">
-															<li>만 19세 이상 개인고객 (내국인만 가능)</li>
-															<li>1인1계좌만 가입 가능</li>
-														</ul>
-													</td>
-													<td>
-														<ul class="list-bull hyphen">
-															<li>비거주 외국인 외 제한없음</li>
-														</ul>
-													</td>
-												</tr>
-												<tr>
-													<th>가입금액</th>
-													<td>최소 1만원 이상 ~ 최대 100만원 이하</td>
-													<td>10만원 이상</td>
-												</tr>
-												<tr>
-													<th>가입기간</th>
-													<td>6개월 ~ 36개월</td>
-													<td>최대 30년</td>
-												</tr>
-												<tr>
-													<th>이자지급<br>방법</th>
-													<td>만기 시 원금과 함께 한 번에 지급</td>
-													<td>매월 이자지급</td>
-												</tr>
-												<tr>
-													<th>일부해지<br>(출금)</th>
-													<td>만기 시 원금과 함께 한 번에 지급</td>
-													<td>일부 금액을 해지하여 출금할 수 있어요<br>(최대 3회)</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-								<!-- // 상품 비교 테이블 -->
-							</div>
-
-							<div id="tab-cont0002" class="tab-content">
-								<div class="tit-wrap">
-									<p class="txt"><strong>대출상품을 비교</strong>해 보세요</p>
-								</div>
-
-								<!-- 상품 비교 테이블 -->
-								<div class="fixtable-area">
-									<div class="fixtable-wrap"><!-- [퍼블-3] 클래스 변경 -->
-										<table class="fixtable compare">
-											<colgroup>
-											</colgroup>
-											<tbody>
-												<tr>
-													<th>상품명</th>
-													<td>보고파 정기적금</td>
-													<td>e 정기예금단리</td>
-													<td>e 정기예금단리</td>
-												</tr>
-												<tr>
-													<th>약정이율</th>
-													<td>최고 연 4.30%</td>
-													<td>최고 연 4.00%</td>
-													<td>최고 연 4.00%</td>
-												</tr>
-												<tr>
-													<th>가입대상</th>
-													<td>
-														<ul class="list-bull hyphen">
-															<li>만 19세 이상 개인고객 (내국인만 가능)</li>
-															<li>1인1계좌만 가입 가능</li>
-														</ul>
-													</td>
-													<td>
-														<ul class="list-bull hyphen">
-															<li>비거주 외국인 외 제한없음</li>
-														</ul>
-													</td>
-													<td>
-														<ul class="list-bull hyphen">
-															<li>비거주 외국인 외 제한없음</li>
-														</ul>
-													</td>
-												</tr>
-												<tr>
-													<th>가입금액</th>
-													<td>최소 1만원 이상 ~ 최대 100만원 이하</td>
-													<td>10만원 이상</td>
-													<td>10만원 이상</td>
-												</tr>
-												<tr>
-													<th>가입기간</th>
-													<td>6개월 ~ 36개월</td>
-													<td>최대 30년</td>
-													<td>최대 30년</td>
-												</tr>
-												<tr>
-													<th>이자지급<br>방법</th>
-													<td>만기 시 원금과 함께 한 번에 지급</td>
-													<td>매월 이자지급</td>
-													<td>매월 이자지급</td>
-												</tr>
-												<tr>
-													<th>일부해지<br>(출금)</th>
-													<td>만기 시 원금과 함께 한 번에 지급</td>
-													<td>일부 금액을 해지하여 출금할 수 있어요<br>(최대 3회)</td>
-													<td>일부 금액을 해지하여 출금할 수 있어요<br>(최대 3회)</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-								<!-- // 상품 비교 테이블 -->
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-		</div>
-	</div>
-
-
-	<script>
-	//openPopup('lyPullPop01');
-	// [퍼블-3] 테이블 관련 스크립트 삭제
-	</script>
-	<!-- // [퍼블] 상품 비교 팝업 추가 -->
+					
 	<!-- footer -->
-
+	
 
 
 
@@ -710,17 +278,17 @@ function fnProdJoin(pdcd){
 
 <script type="text/javascript">
 var biz = function() {
-
+	
 	var biz_states = {
 	   zindex : 0,
 	   keypadOpenFlag : false
 	};
-
+	
 	var _makeId = function(srcId) {
-
+		
 		if (typeof(closeMenu) == 'function') closeMenu();
 		progressBar(true);
-
+		
 		var id = "biz_" + Math.random().toString(32).substr(2);
 		$("#biz_layer_area").append("<div id='"+id+"'></div>");
 		$("#"+id).attr("class", $("#"+srcId).attr("class"));
@@ -733,14 +301,14 @@ var biz = function() {
 		}
 		return id;
 	};
-
+	
 	/*
 	 *	biz.alert("알림문구:필수", "버튼문구:선택 기본값'확인'", "다음실행펑션:선택");
 	 */
 	var _alert = function(alertText, btnText, nextFunc) {
-
-		var id = _makeId("biz_alert");
-		$("#"+id).find("[data-id=biz_alert_txt]").html(alertText);
+		
+		var id = _makeId("biz_alert"); 
+		$("#"+id).find("[data-id=biz_alert_txt]").html(alertText); 
 		if (typeof(btnText) == 'string') {
 			$("#"+id).find("[data-id=biz_alert_btn]").html(btnText);
 		} else {
@@ -760,10 +328,10 @@ var biz = function() {
 	 *	biz.confirm("컨펌문구:필수", "확인펑션", "거절펑션:선택", "확인버튼문구:선택", "거절버튼문구:선택");
 	 */
 	var _confirm = function(confirmText, confirmFunc, refuseFunc, confirmTxt, refuseTxt) {
-
-		var id = _makeId("biz_confirm");
-
-		$("#"+id).find("[data-id=biz_confirm_txt]").html(confirmText);
+		
+		var id = _makeId("biz_confirm"); 
+		
+		$("#"+id).find("[data-id=biz_confirm_txt]").html(confirmText); 
 		if (typeof (confirmTxt) == 'string') {
 			$("#"+id).find("[data-id=biz_confirm_btn_one]").html(confirmTxt);
 		} else {
@@ -776,7 +344,7 @@ var biz = function() {
 			$('body').removeClass('fix');
 			confirmFunc();
 		});
-
+		
 		if (typeof (refuseTxt) == 'string') {
 			$("#"+id).find("[data-id=biz_confirm_btn_two]").html(refuseTxt);
 		} else {
@@ -793,12 +361,12 @@ var biz = function() {
 		$('body').addClass('fix');
 		progressBar(false);
 	};
-
+	
 	/*
 	 * biz.select("코드명(타이틀)", "그룹코드:필수", 콜백펑션({CODE, NAME}));
 	 */
 	var _select = function(upperCodeName, upperCode, callbackFunc) {
-		var id = _makeId("biz_layer_select");
+		var id = _makeId("biz_layer_select"); 
 		var url = "/common/layer/code_select.frm"; 	// 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -812,7 +380,7 @@ var biz = function() {
 			// 완료 시 콜백 처리
 			eval(id + "_Func").callback = function(data) {
 				callback(data);
-				closePopupUp(id);
+				closePopupUp(id); 
 				$('body').removeClass('fix');
 			};
 			// 닫기버튼 이벤트 처리
@@ -832,12 +400,12 @@ var biz = function() {
 			progressBar(false);
 		});
 	};
-
+	
 	/*
 	 * biz.certSelect("코드명(타이틀)", "그룹코드:필수", 콜백펑션({CODE, NAME}));
 	 */
 	var _certSelect = function(upperCodeName, upperCode, callbackFunc) {
-		var id = _makeId("biz_layer_select");
+		var id = _makeId("biz_layer_select"); 
 		var url = "/common/layer/cert_code_select.frm"; 	// 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -846,12 +414,12 @@ var biz = function() {
 			,"upperCode" : upperCode
 			,"LINK_ACT" : "CODE_SELECT"
 		};
-
+  
 		$("#"+id).load(url, loadParam, function(data1) {
 			// 완료 시 콜백 처리
 			eval(id + "_Func").callback = function(data) {
 				callback(data);
-				closePopupUp(id);
+				closePopupUp(id); 
 				$('body').removeClass('fix');
 			};
 			// 닫기버튼 이벤트 처리
@@ -871,15 +439,15 @@ var biz = function() {
 			progressBar(false);
 		});
 	};
-
-
-
+	
+	
+	
 	/*
 	 * biz.input("콜백펑션(입력값)");
 	 */
 	var _input = function(callbackFunc, title) {
-
-		var id = _makeId("biz_layer");
+		
+		var id = _makeId("biz_layer"); 
 		var url = "/common/layer/input.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -917,7 +485,7 @@ var biz = function() {
 	 * biz.ocr("콜백펑션(OCR결과)");
 	 */
 	var _ocrAuth = function(callbackFunc) {
-		var id = _makeId("biz_layer_full");
+		var id = _makeId("biz_layer_full"); 
 		var url = "/common/layer/ocr_auth.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -950,9 +518,9 @@ var biz = function() {
 			progressBar(false);
 		});
 	};
-
+	
 	var _addrSelect = function(callbackFunc) {
-		var id = _makeId("biz_layer_full");
+		var id = _makeId("biz_layer_full"); 
 		var url = "/common/layer/addr_select.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -985,9 +553,9 @@ var biz = function() {
 			progressBar(false);
 		});
 	};
-
+	
 	var _bank = function(callbackFunc) {
-		var id = _makeId("biz_layer_select");
+		var id = _makeId("biz_layer_select"); 
 		var url = "/common/layer/bank.frm"; 	// 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1022,9 +590,9 @@ var biz = function() {
 			progressBar(false);
 		});
 	};
-
+	
 	var _jobSelect = function(callbackFunc) {
-		var id = _makeId("biz_layer_full");
+		var id = _makeId("biz_layer_full"); 
 		var url = "/common/layer/job_select.frm"; 	// 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1057,17 +625,17 @@ var biz = function() {
 			progressBar(false);
 		});
 	};
-
+	
 	var _selectYn = function(callbackFunc, title, btnNmY, btnNmN) {
-		var id = _makeId("biz_layer_select");
+		var id = _makeId("biz_layer_select"); 
 		var url = "/common/layer/select_yn.frm"; 	// 호출 layer url
 		var callback = callbackFunc;
-
+		
 		if (typeof (title) == 'undefined' || typeof (title) != 'string') title = "선택하세요";
 		if (typeof (btnNmY) == 'undefined' || typeof (btnNmY) != 'string') btnNmY = "예";
 		if (typeof (btnNmN) == 'undefined' || typeof (btnNmN) != 'string') btnNmN = "아니오";
-
-
+		
+		
 		var loadParam = {
 			 "id" : id
 			,"title" : title
@@ -1100,9 +668,9 @@ var biz = function() {
 			progressBar(false);
 		});
 	};
-
+	
 	var _mydata = function(callbackFunc) {
-		var id = _makeId("biz_layer");
+		var id = _makeId("biz_layer"); 
 		var url = "/common/layer/mydata.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1135,9 +703,9 @@ var biz = function() {
 			progressBar(false);
 		});
 	};
-
+	
 	var _mydataTaxfree = function(callbackFunc) {
-		var id = _makeId("biz_layer");
+		var id = _makeId("biz_layer"); 
 		var url = "/common/layer/mydata_taxfree.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1170,21 +738,21 @@ var biz = function() {
 			progressBar(false);
 		});
 	};
-
+	
 	var _amt = function() {
-
+		
 	};
-
-	// 약관동의
+	
+	// 약관동의 
 	var _terms = function(terms_cd, checkbox) {
-		var id = _makeId("biz_layer_full");
+		var id = _makeId("biz_layer_full"); 
 		var url = "/common/layer/terms.frm"; // 호출 layer url
 		var procBtn = $("#procBtn");
 		var loadParam = {
 			 "id" : id
 			,"terms_cd" : terms_cd
 		};
-
+		
 		//체크 시에 약관팝업 호출
 		if($(checkbox).is(":checked")){
 			$("#"+id).load(url, loadParam, function() {
@@ -1192,7 +760,7 @@ var biz = function() {
 				eval(id + "_Func").callback = function(data) {
 					$(checkbox).prop('checked', data);
 					if (procBtn.hasClass("disabled")) procBtn.removeClass("disabled");
-
+					
 					closePopup(id);
 					$("#"+id).html("");
 					$('body').removeClass('fix');
@@ -1208,7 +776,7 @@ var biz = function() {
 						$("#allChk01").prop('checked', false); //TODO 필수값일 경우에만 해제하는 요건 나오면 validChk 클래스확인조건추가
 					}
 					if (!procBtn.hasClass("disabled")) procBtn.addClass("disabled");
-
+					
 					closePopup(id);
 					$("#"+id).html("");
 					$('body').removeClass('fix');
@@ -1225,10 +793,10 @@ var biz = function() {
 			});
 		}
 	};
-
+	
 	// 본인인증
 	var _userAuth = function(callbackFunc) {
-		var id = _makeId("biz_layer_full");
+		var id = _makeId("biz_layer_full"); 
 		var url = "/common/layer/user_auth.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1261,31 +829,31 @@ var biz = function() {
 			progressBar(false);
 		});
 	};
-
+	
 	/*
 	 *	biz.keypad(키패드타이틀:필수, 자릿수:필수, 콜백펑션:필수);
-	 */
+	 */ 
 	var _keypad = function(title, len, callbackFunc) {
-
+		 
 		 if (!biz_states.keypadOpenFlag) {
-
+			 
 			biz_states.keypadOpenFlag = true;
-
-			var id = _makeId("biz_layer_full");
+			 
+			var id = _makeId("biz_layer_full");	 
 			var url = "/common/layer/keypad.frm"; // 호출 layer url
 			var callback = callbackFunc;
 			var loadParam = {
 				 "id" : id
 				,"title" : title
 				,"len" : len
-			};
+			}; 
 
 			$("#"+id).load(url, loadParam, function() {
 				// 완료 시 콜백 처리
 				eval(id + "_Func").callback = function(data) {
 					nshc.close();
 					callback(data);
-					closePopup(id);
+					closePopup(id); 
 					$("#"+id).html("");
 					$('body').removeClass('fix');
 					biz_states.keypadOpenFlag = false;
@@ -1313,11 +881,11 @@ var biz = function() {
 		 } else {
 			 console.log("keypad already open");
 		 }
-
+		
 	};
-
+	
 	var _selectAuth = function(title, type, callbackFunc) {
-		var id = _makeId("biz_layer_select");
+		var id = _makeId("biz_layer_select"); 
 		var url = "/common/layer/select_auth.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1351,18 +919,18 @@ var biz = function() {
 			progressBar(false);
 		});
 	}
-
+	
 	// 계좌인증 1원송금
 	var _acnoAuth = function(callbackFunc) {
-		var id = _makeId("biz_layer_full");
+		var id = _makeId("biz_layer_full"); 
 		var url = "/common/layer/acno_auth.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
 			 "id" : id
 			 ,"title" : "타행본인계좌인증"
-
+			 
 		};
-
+		
 		$("#"+id).load(url, loadParam, function() {
 			// 완료 시 콜백 처리
 			eval(id + "_Func").callback = function(data) {
@@ -1388,10 +956,10 @@ var biz = function() {
 			progressBar(false);
 		});
 	}
-
+	
 	// 계좌인증 1원송금 - 인증
 	var _acnoAuthConfirm = function(callbackFunc, bkcd, bknm, acno) {
-		var id = _makeId("biz_layer_full");
+		var id = _makeId("biz_layer_full"); 
 		var url = "/common/layer/acno_auth_confirm.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1400,7 +968,7 @@ var biz = function() {
 			 ,"bkcd" : bkcd
 			 ,"bknm" : bknm
 			 ,"acno" : acno
-
+			 
 		};
 
 		$("#"+id).load(url, loadParam, function() {
@@ -1428,10 +996,10 @@ var biz = function() {
 			progressBar(false);
 		});
 	}
-
+	
 	// 전체화면 layer
 	var _fullLayer = function(url, title, callbackFunc, cancelFunc) {
-		var id = _makeId("biz_layer_full");
+		var id = _makeId("biz_layer_full"); 
 		var callback = callbackFunc;
 		var loadParam = {
 			 "id" : id
@@ -1458,17 +1026,17 @@ var biz = function() {
 				closePopup(id);
 				$("#"+id).html("");
 				$('body').removeClass('fix');
-
+				
 			};
 			openPopup(id);
 			$('body').addClass('fix');
 			progressBar(false);
 		});
 	}
-
+	
 	// 계좌선택 layer accoKncd:0.수신전계좌 1.요구성 2.적금 3.정기예금 4.대출 // selectTab: 1.최근입금 2.자주쓰는 3.내계좌 4.입금지정
 	var _acnoSelect = function(accoKncd, selectTab, callbackFunc) {
-		var id = _makeId("biz_layer_select");
+		var id = _makeId("biz_layer_select"); 
 		var url = "/common/layer/acno_select.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1503,10 +1071,10 @@ var biz = function() {
 			progressBar(false);
 		});
 	}
-
+	
 	// 계좌선택 layer 내계좌 목적별
 	var _acnoList = function(accoKncd, callbackFunc) {
-		var id = _makeId("biz_layer_select");
+		var id = _makeId("biz_layer_select"); 
 		var url = "/common/layer/acno_list.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1539,10 +1107,10 @@ var biz = function() {
 			progressBar(false);
 		});
 	}
-
+	
 	// 전자금융가입 (전자금융만가입여부, callback(SUCC Y/N))
 	var _usrIdReg = function(usrIdOnlyYn, callbackFunc) {
-		var id = _makeId("biz_layer_full");
+		var id = _makeId("biz_layer_full"); 
 		var url = "/common/layer/usr_id_reg.frm"; // 호출 layer url TODO 화면작업후 변경
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1575,18 +1143,18 @@ var biz = function() {
 			progressBar(false);
 		});
 	}
-
+	
 	// 계좌인증 1원송금(중앙회)
 	var _fsbAcnoAuth = function(callbackFunc) {
-		var id = _makeId("biz_layer_full");
+		var id = _makeId("biz_layer_full"); 
 		var url = "/common/layer/fsb_acno_auth.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
 			 "id" : id
 			 ,"title" : "타행본인계좌인증"
-
+			 
 		};
-
+		
 		$("#"+id).load(url, loadParam, function() {
 			// 완료 시 콜백 처리
 			eval(id + "_Func").callback = function(data) {
@@ -1612,10 +1180,10 @@ var biz = function() {
 			progressBar(false);
 		});
 	}
-
+	
 	// 계좌인증 1원송금 - 인증(중앙회)
 	var _fsbAcnoAuthConfirm = function(callbackFunc, bkcd, acno) {
-		var id = _makeId("biz_layer_full");
+		var id = _makeId("biz_layer_full"); 
 		var url = "/common/layer/fsb_acno_auth_confirm.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1650,17 +1218,17 @@ var biz = function() {
 			progressBar(false);
 		});
 	}
-
+	
 	var _dateInq = function(callbackFunc, flag) {
 		if (typeof(flag) != 'string') flag = "H";
-
-		var id = _makeId("biz_layer");
+		
+		var id = _makeId("biz_layer"); 
 		var url = "/common/layer/date_inq.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
 			 "id" : id
 			,"title" : "조회기간 설정"
-			,"flag" : flag //거래유형 T:거래유형, R:결과유형 , H:hide,
+			,"flag" : flag //거래유형 T:거래유형, R:결과유형 , H:hide, 
 		};
 
 		$("#"+id).load(url, loadParam, function() {
@@ -1688,11 +1256,11 @@ var biz = function() {
 			progressBar(false);
 		});
 	};
-
-	// 직원조회
+	
+	// 직원조회 
 	var _empInq = function(callbackFunc) {
-
-		var id = _makeId("biz_layer");
+		
+		var id = _makeId("biz_layer"); 
 		var url = "/common/layer/emp_inq.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1725,11 +1293,11 @@ var biz = function() {
 			progressBar(false);
 		});
 	};
-
-	// 이메일
+	
+	// 이메일 
 	var _email = function(callbackFunc) {
-
-		var id = _makeId("biz_layer");
+		
+		var id = _makeId("biz_layer"); 
 		var url = "/common/layer/email.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1762,10 +1330,10 @@ var biz = function() {
 			progressBar(false);
 		});
 	};
-
+	
 	// 로그인
 	var _login = function(callbackFunc) {
-		var id = _makeId("biz_layer_full");
+		var id = _makeId("biz_layer_full"); 
 		var url = "/common/layer/login.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1799,9 +1367,9 @@ var biz = function() {
 			progressBar(false);
 		});
 	}
-
+	
 	var _passbook = function(acno, accoKncd, callbackFunc) {
-		var id = _makeId("biz_layer_select");
+		var id = _makeId("biz_layer_select"); 
 		var url = "/common/layer/passbook.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1837,10 +1405,10 @@ var biz = function() {
 			progressBar(false);
 		});
 	}
-
-	// 추가인증 인증타입,인증상세,콜백
+	
+	// 추가인증 인증타입,인증상세,콜백 
 	var _doubleAuth = function(authType, authDetail, callbackFunc) {
-		var id = _makeId("biz_layer_full");
+		var id = _makeId("biz_layer_full"); 
 		var url = "/common/layer/double_auth.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1875,10 +1443,10 @@ var biz = function() {
 			progressBar(false);
 		});
 	}
-
+	
 	// 보안카드 인증
 	var _secuCard = function(callbackFunc) {
-		var id = _makeId("biz_layer_full");
+		var id = _makeId("biz_layer_full"); 
 		var url = "/common/layer/secu_card.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1911,10 +1479,10 @@ var biz = function() {
 			progressBar(false);
 		});
 	}
-
+	
 	// OTP인증
 	var _otpAuth = function(callbackFunc) {
-		var id = _makeId("biz_layer_full");
+		var id = _makeId("biz_layer_full"); 
 		var url = "/common/layer/otp_auth.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1947,9 +1515,9 @@ var biz = function() {
 			progressBar(false);
 		});
 	}
-
+	
 	var _camera = function(callbackFunc) {
-		var id = _makeId("biz_layer_full");
+		var id = _makeId("biz_layer_full"); 
 		var url = "/common/layer/camera.frm"; // 호출 layer url
 		var callback = callbackFunc;
 		var loadParam = {
@@ -1982,7 +1550,7 @@ var biz = function() {
 			progressBar(false);
 		});
 	}
-
+	
 	return {
 			alert : _alert,
 			confirm : _confirm,
@@ -2070,21 +1638,21 @@ var biz = function() {
 
 
 <script type="text/javascript">
-var EFN_CSNO = '10100523399';								// 중앙회고객번호
-var EFN_USR_ID = 'test000819';							// 인뱅ID
-var EFN_SECU_MEDI_DVCD = 'M';			// 보안매체구분코드 C:보안카드 O:OTP M:MOTP
-var EFN_INDV_CORP_DSTC_CD = '1';	// 개인법인구분 1:개인 2:법인
-var EFN_OTP_VNDR_CD = '*';				// OTP 벤더코드
-var EFN_OTP_SRNO_VAL = '*';				// OTP 시리얼넘버
-var EFN_INDV_BUSI_DVCD = 'N';			// 개인/법인사업자구분 1:법인사업자 2:개인사업자
-var EFN_FRST_PSWD_REG_YN = 'N';		// 최초패스워드등록여부
-var EFN_ACNT_RS = '[{"SIGN_DVCD":"+","NEW_DT":"20230717","LFTM_ACNO":"","ACCO_KNCD":"1","ACCO_NICK":"","CMPH_BNKB_YN":"N","ACNT_BLNC":"650000","BNKB_WTCH_POSB_YN":"1","ACCO_STS_NM":"활동계좌","ACCO_STS_CD":"00","NECT_ENTR_EXUS_ACCO_YN":"N","ACNO":"10161210000690","PROD_NM":"보고파 파킹통장(개인)","EXPT_DT":""},{"SIGN_DVCD":"+","NEW_DT":"20230726","LFTM_ACNO":"","ACCO_KNCD":"1","ACCO_NICK":"","CMPH_BNKB_YN":"N","ACNT_BLNC":"0","BNKB_WTCH_POSB_YN":"1","ACCO_STS_NM":"활동계좌","ACCO_STS_CD":"00","NECT_ENTR_EXUS_ACCO_YN":"N","ACNO":"10161210000789","PROD_NM":"저축예금(MMDA)","EXPT_DT":""},{"SIGN_DVCD":"+","NEW_DT":"20230718","LFTM_ACNO":"","ACCO_KNCD":"1","ACCO_NICK":"","CMPH_BNKB_YN":"N","ACNT_BLNC":"0","BNKB_WTCH_POSB_YN":"0","ACCO_STS_NM":"활동계좌","ACCO_STS_CD":"00","NECT_ENTR_EXUS_ACCO_YN":"N","ACNO":"10161210000713","PROD_NM":"저축예금(MMDA)","EXPT_DT":""},{"SIGN_DVCD":"+","NEW_DT":"20230802","LFTM_ACNO":"","ACCO_KNCD":"2","ACCO_NICK":"","CMPH_BNKB_YN":"N","ACNT_BLNC":"100000","BNKB_WTCH_POSB_YN":"1","ACCO_STS_NM":"활동계좌","ACCO_STS_CD":"00","NECT_ENTR_EXUS_ACCO_YN":"N","ACNO":"10161310111594","PROD_NM":"보고파 정기적금","EXPT_DT":"20240802"},{"SIGN_DVCD":"+","NEW_DT":"20230802","LFTM_ACNO":"","ACCO_KNCD":"2","ACCO_NICK":"","CMPH_BNKB_YN":"N","ACNT_BLNC":"30000","BNKB_WTCH_POSB_YN":"1","ACCO_STS_NM":"활동계좌","ACCO_STS_CD":"00","NECT_ENTR_EXUS_ACCO_YN":"N","ACNO":"10161310111560","PROD_NM":"보고파 정기적금","EXPT_DT":"20240802"},{"SIGN_DVCD":"+","NEW_DT":"20230802","LFTM_ACNO":"","ACCO_KNCD":"2","ACCO_NICK":"","CMPH_BNKB_YN":"N","ACNT_BLNC":"20000","BNKB_WTCH_POSB_YN":"1","ACCO_STS_NM":"활동계좌","ACCO_STS_CD":"00","NECT_ENTR_EXUS_ACCO_YN":"N","ACNO":"10161310111586","PROD_NM":"보고파 정기적금","EXPT_DT":"20240802"},{"SIGN_DVCD":"+","NEW_DT":"20230802","LFTM_ACNO":"","ACCO_KNCD":"3","ACCO_NICK":"","CMPH_BNKB_YN":"N","ACNT_BLNC":"100000","BNKB_WTCH_POSB_YN":"1","ACCO_STS_NM":"활동계좌","ACCO_STS_CD":"00","NECT_ENTR_EXUS_ACCO_YN":"N","ACNO":"10161240711141","PROD_NM":"정기복리(SB톡톡)","EXPT_DT":"20240802"},{"SIGN_DVCD":"+","NEW_DT":"20230801","LFTM_ACNO":"","ACCO_KNCD":"3","ACCO_NICK":"","CMPH_BNKB_YN":"N","ACNT_BLNC":"100000","BNKB_WTCH_POSB_YN":"1","ACCO_STS_NM":"활동계좌","ACCO_STS_CD":"00","NECT_ENTR_EXUS_ACCO_YN":"N","ACNO":"10161240711133","PROD_NM":"정기복리(SB톡톡)","EXPT_DT":"20240801"}]'; 						// 계좌목록
+var EFN_CSNO = '';								// 중앙회고객번호
+var EFN_USR_ID = '';							// 인뱅ID    
+var EFN_SECU_MEDI_DVCD = '';			// 보안매체구분코드 C:보안카드 O:OTP M:MOTP
+var EFN_INDV_CORP_DSTC_CD = '';	// 개인법인구분 1:개인 2:법인    
+var EFN_OTP_VNDR_CD = '';				// OTP 벤더코드        
+var EFN_OTP_SRNO_VAL = '';				// OTP 시리얼넘버      
+var EFN_INDV_BUSI_DVCD = '';			// 개인/법인사업자구분 1:법인사업자 2:개인사업자
+var EFN_FRST_PSWD_REG_YN = '';		// 최초패스워드등록여부
+var EFN_ACNT_RS = ''; 						// 계좌목록
 
 var efn = function() {
-
-	// 인뱅ID 프로세스
+	
+	// 인뱅ID 프로세스 
 	var _usrIdProc = function(callbackFunc) {
-
+		
 		if (EFN_CSNO == '') {
 			biz.alert('로그인 후 이용가능한 거래에요', '확인', function(){
 				biz.userAuth(function(){
@@ -2092,9 +1660,9 @@ var efn = function() {
 					window.location.reload();
 				});
 			});
-
+			
 		} else if (EFN_USR_ID == '') {
-
+			
 			biz.confirm('서비스 이용을 위해서는 전자금융 가입이 필요해요'
 					, function(){
 						// 전자금융가입 레이어 호출
@@ -2108,56 +1676,56 @@ var efn = function() {
 					}
 					, '전자금융가입'
 					, '다음에');
-
+			
 		} else if (EFN_FRST_PSWD_REG_YN == 'Y'){
 			// 최초패스워드 등록해야 사용가능
-
+			
 		} else {
 			// 인뱅ID 다음 프로세스
 			callbackFunc();
 		}
 	}
-
+	
 	// 추가인증
 	var _addAuth = function() {
-
+		
 	}
-
+	
 	// 보안매체인증
 	var _secuMediProc = function() {
-
+		
 	}
-
+	
 	// OTP 인증
 	var _otpAuth = function() {
-
+		
 	}
-
+	
 	// 보안카드 인증
 	var _secuCardAuth = function() {
-
+		
 	}
-
+	
 	// ARS 인증
 	var _arsAuth = function() {
-
+		
 	}
-
-	// 계좌상세 (계좌번호, 콜백펑션)
+	
+	// 계좌상세 (계좌번호, 콜백펑션) 
 	var _acnoDetail = function(acno, callbackFunc) {
 		var acnoDetailForm = makeForm("acnoDetailForm");
 		//addFormData(acnoDetailForm, "txGbnCd", txGbnCd);
 		addFormData(acnoDetailForm, "acno", acno);
 		doAction("ACNO_DETAIL", acnoDetailForm, callbackFunc);
 	}
-
+	
 	// 이체계좌상세 (계좌번호, 콜백펑션)
 	var _transAcnoDetail = function(acno, callbackFunc) {
 		var transAcnoDetailForm = makeForm("transAcnoDetailForm");
 		addFormData(transAcnoDetailForm, "acno", acno);
 		doAction("TRANS_ACNO_DETAIL", transAcnoDetailForm, callbackFunc);
 	}
-
+	
 	// 계좌수취조회
 	var _acctHldrInq = function(acno, bkcd, txGbnCd, callbackFunc) {
 		var acctHldrInqForm = makeForm("acctHldrInqForm");
@@ -2166,14 +1734,14 @@ var efn = function() {
 		addFormData(acctHldrInqForm, "txGbnCd", txGbnCd); // W:출금계좌 M:입금계좌
 		doAction("ACCT_HLDR_INQ", acctHldrInqForm, callbackFunc);
 	}
-
+	
 	// 지연이체가입상태조회
 	var _delayTransInq = function(callbackFunc) {
 		var usrIdInqForm = makeForm("usrIdInqForm");
 		addFormData(usrIdInqForm, "txGbnCd", "D"); // D 지연이체
 		doAction("USR_ID_INQ", usrIdInqForm, callbackFunc);
 	}
-
+	
 	// 패스워드 검증
 	var _pswdConfirm = function(pswd1, pswd2, callbackFunc) {
 		var pswdConfirmForm = makeForm("pswdConfirmForm");
@@ -2181,7 +1749,7 @@ var efn = function() {
 		addFormData(pswdConfirmForm, "E2E_PSWD2", pswd2);
 		doAction("PSWD_MNG", pswdConfirmForm, callbackFunc);
 	}
-
+	
 	// 계좌 패스워드 검증
 	var _acnoPswdConfirm = function(pswd, acno, callbackFunc) {
 		var pwDataForm = makeForm("pwDataForm");
@@ -2190,8 +1758,8 @@ var efn = function() {
 		doAction("ACNO_PSWD_CFM", pwDataForm, function(res) {
 		if (res.API_RS_MSG == "SUCCESS" && res.PROCS_RSLT == "0") {
 			callbackFunc();
-
-		} else {
+			
+		} else {				
 			var resCd = res.API_RS_MSG.split(",")[0];
 			if ( resCd == "ECB12208" || resCd == "ECB10115") {
 				biz.alert("계좌 비밀번호 3회 오류입니다.<br> 서비스를 종료하고 계좌비밀번호 오류해제 메뉴로 이동합니다.", "확인"
@@ -2199,16 +1767,16 @@ var efn = function() {
 						// TODO 오류해제 메뉴로 이동
 							doActionFrame("");
 						});
-
+			
 			} else {
 				biz.alert("계좌비밀번호 입력 오류입니다.");
 			}
 			return false;
 		}
 	});
-
+		
 	}
-
+	
 	return {
 		usrIdProc : _usrIdProc,
 		acnoDetail : _acnoDetail,
@@ -2232,19 +1800,19 @@ var efn = function() {
 
 
 <script type="text/javascript">
-
-
+	
+	
 		var _SITE_SystemMode = "test"; // real, test
-
+	
     var _SITE_SystemLang = "KOR"; // KOR, ENG, CHN, JPN
     var _SITE_SiteName = "delfino";     // pc, mobile, tablet
     var _SITE_ModuleType = ""; // "", G2, G3, G4
 
 </script>
-<script src="/resources/wizvera/delfino/delfino_config.js?230803_1521" charset="utf-8"></script>
-<script src="/resources/wizvera/delfino/delfino_internal.min.js?230803_1521" charset="utf-8"></script>
-<script src="/resources/wizvera/delfino/delfino.js?230803_1521" charset="utf-8"></script>
-<script src="/resources/wizvera/delfino/delfino_site.js?230803_1521" charset="utf-8"></script>
+<script src="/resources/wizvera/delfino/delfino_config.js?230803_1517" charset="utf-8"></script>
+<script src="/resources/wizvera/delfino/delfino_internal.min.js?230803_1517" charset="utf-8"></script>
+<script src="/resources/wizvera/delfino/delfino.js?230803_1517" charset="utf-8"></script>
+<script src="/resources/wizvera/delfino/delfino_site.js?230803_1517" charset="utf-8"></script>
 <!-- Open Web nFilter 가상키패드 -->
 
 
