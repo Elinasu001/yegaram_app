@@ -23,7 +23,7 @@
     font-weight: 400;
     src: local('Spoqa Han Sans Neo Regular'),
     url('../font/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
-    url('../font/SpoqaHanSansNeo-Regular.woff') format('woff'),
+url('../font/SpoqaHanSansNeo-Regular.woff') format('woff'),
     url('../font/SpoqaHanSansNeo-Regular.ttf') format('truetype');
 }
 
@@ -115,8 +115,8 @@ html.font-size-3{ font-size: 24px;}
 
 :root {
 
-    --font-size18:1rem; 
-    --font-size16;:0.88889rem;
+    --font-size18:1rem;
+    --font-size16:0.88889rem;
     --font-size14:0.77778rem;
     --font-size13:0.72222rem;
     --font-size12:0.66667rem;
@@ -969,7 +969,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 .q-wrap > ul > li:first-child { margin-left:0; }
 .q-wrap > ul > li label { display:inline-block; width:100%; height:48px; line-height:48px; font-weight:500; color:#26282C; text-align:center; border-radius:27px; }
 .q-wrap > ul > li input[type="radio"] + label { border:1px solid #DDDDDD; background-color:#fff; }
-.q-wrap > ul > li input[type="radio"]:checked + label { border-color:#948CF5; background-color:#948CF5; color:#FFFFFF; }
+.q-wrap > ul > li input[type="radio"]:checked + label { border-color:#260F54; background-color:#260F54; color:#FFFFFF; }
 .q-wrap .list-bull { margin-top:15px; }
 .q-wrap .list-bull + ul { margin-top:15px; }
 
@@ -1569,9 +1569,9 @@ body.on { position:fixed; top:0; }
 /**Case 1 - 상단에 위치**/
 .tabs-wrap.vs-hidden { visibility:hidden; }
 .tabs-wrap .tab-item { display:flex; align-items:center; position:relative; background:#fff; font-size:0; }
-.tabs-wrap .tab-item li { display:inline-block; position:relative;  margin-right:20px; padding:10px 0; font-size:1rem; color:#666666; }
+.tabs-wrap .tab-item li { display:inline-block; position:relative;  margin-right:20px; padding:14px 0; font-size:1rem; color:#999; }
 .tabs-wrap .tab-item li:last-child { margin-right:0; }
-.tabs-wrap .tab-item li a { display:block; padding:0 2px; line-height:inherit; text-align:center; }
+.tabs-wrap .tab-item li a { display:block; padding:0 2px; line-height:inherit; text-align:center; color:#999; }
 .tabs-wrap .tab-item li.on,
 .tabs-wrap .swiper-pager li.swiper-pagination-bullet-active { color:#4E32A5; border-bottom:2px solid #4E32A5; font-weight:600; color:#4E32A5; }
 .tabs-wrap .tab-item li.on a,
@@ -1835,7 +1835,7 @@ body.on { position:fixed; top:0; }
 
 .list-bull { color:#757575; font-size:0.77778rem; line-height:1.5; }
 .list-bull dt,
-.list-bull > strong  { display:block; margin:20px 0 15px; font-weight:500; color:#26282C; font-weight:500; font-size:0.88889rem; line-height:1.278rem; }
+.list-bull > strong  { display:block; margin:0 0 15px; font-weight:500; color:#26282C; font-weight:500; font-size:0.88889rem; line-height:1.278rem; }
 .list-bull li,
 .list-bull dd { font-weight:300; }
 .list-bull p { color:#757575; font-size:0.77778rem; line-height:1.5; margin-bottom:10px; }
@@ -1946,6 +1946,7 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 /*** 타이틀 ***/
 /** 싱글화면 - 상단 타이틀 **/
 .tit-wrap { margin-top:40px; }
+.tit-wrap + section { margin-top:40px; }
 .tit-wrap .flag { margin-bottom:10px; }
 .tit-wrap > span { display:inline-block; margin-bottom:10px; padding:4px 15px; border-radius:20px; background:#EBF2FF; font-size:0.88889rem; line-height:1.4375; color:#2968CF; }
 .tit-wrap > .txt { font-size:1.22222rem; line-height:1.5rem; }

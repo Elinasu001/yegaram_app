@@ -459,18 +459,21 @@ body.fix { overflow:hidden; }
 
 
 /* 추천인찾기 */
-.recommender-wrap { width:100%; margin-top:30px; border-top:solid 1px #EEEEEE; }
-.recommender-wrap > li { display:table; width:100%; text-align:center; border-bottom:solid 1px #eee; }
+.recommender-wrap { width:100%; margin-top:30px; border-top:solid 1px #EEEEEE; color:#666; }
+.recommender-wrap > li { display:table; width:100%; text-align:center; border-bottom:solid 1px #eee; font-size:0.88889rem; }
 
-.recommender-wrap > li > span { display:inline-block; padding:15px 10px 15px 0; color:#333333; font-size:0.9rem; }
+.recommender-wrap > li > span { display:inline-block; padding:15px 10px 15px 0; color:#333333; font-size:0.83334rem; }
 .recommender-wrap > li > span:first-child { width:40%; }
 .recommender-wrap > li > span:last-child { width:60%; }
 
 .recommender-wrap > li.tbl-header { background:#F8F8f8; }
-.recommender-wrap > li.tbl-header > span { font-weight:bold; }
-.recommender-wrap > li button { float:right; padding:5px 10px; font-size:0.8rem; color:#260F54; background:#EEEBFF; border-radius:5px; }
+.recommender-wrap > li.tbl-header > span { font-weight:500; }
+.recommender-wrap > li.tbl-header > span:last-child  { padding-right:40px; }
+.recommender-wrap > li button { float:right; padding:0; width:20px; height:20px; font-size:0; background:url(../images/common/chk_all_off.png) no-repeat center/100%; }
+.recommender-wrap > li button.active { background:url(../images/common/chk_all_on.png) no-repeat center/100%; }
 
-.recommender-wrap .search-before { padding:20px 0; }
+
+.recommender-wrap .search-before { padding:50px 0; }
 
 /* 예적금 상품리스트 잉여생활자금 */
 .sub-cal-wrap { margin-top:40px; padding:20px; border-radius:15px; background:url("../images/common/visual_obj_cal.png") no-repeat bottom 72px right 35px; background-color:#FFF5DE; background-size:80px; }

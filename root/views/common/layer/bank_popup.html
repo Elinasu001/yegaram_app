@@ -75,87 +75,20 @@
             <!-- //contents -->
 
             <!-- s:  은행선택 팝업 -->
-            <div id="banklistSelect" class="layerpopup layer-up show" style="display:block;">
-                <div class="content-wrap banklistWrap">
+            <div id="banklistSelect" class="layerpopup layer-up show" style="display:block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+                <div class="content-wrap">
                     <div class="pop-header">
-                        <h2 class="pop-title">은행 선택</h2>
+                        <h2 class="pop-title">은행선택</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
                     </div>
-                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
                     <div class="ly-scroll-con type-high non-scroll">
-        
-                        <!-- s: 검색 영역 -->
-                        <div class="search-area type3">
-                            <div class="form-wrap type-box">
-                                <div class="input">
-                                    <input type="search" title="" id="ipt01" class="" name="" value="" placeholder="은행검색" required="">
-                                </div>
-                                <button type="button" class="btn-search">검색</button>
-                                <button type="button" class="btn-delete">검색어 삭제</button>
-        
-                                <!-- // D: 검색 리스트 영역, 검색어 입력 시 입력된 검색어로 결과값 노출 -->
-                                <ul class="bank_list"><!-- D: 클래스 active 추가시 .bank_list 영역 노출 -->
-                                    <li class="bank_050"><a href="#none">저축은행</a></li>
-                                    <li class="bank_004"><a href="#none">국민은행</a></li>
-                                    <li class="bank_090"><a href="#none">카카오뱅크</a></li>
-                                    <li class="bank_003"><a href="#none">기업은행</a></li>
-                                    <li class="bank_081"><a href="#none">KEB하나은행</a></li>
-                                    <li class="bank_092"><a href="#none">토스뱅크</a></li>
-                                    <li class="bank_020"><a href="#none">우리은행</a></li>															
-                                    <li class="bank_011"><a href="#none">농협은행</a></li>
-                                    <li class="bank_088"><a href="#none">신한은행</a></li>									
-                                    <li class="bank_027"><a href="#none">한국씨티은행</a></li>
-                                    <li class="bank_023"><a href="#none">SC은행</a></li>
-                                    <li class="bank_039"><a href="#none">경남은행</a></li>
-                                    <li class="bank_034"><a href="#none">광주은행</a></li>
-                                    <li class="bank_031"><a href="#none">대구은행</a></li>
-                                    <li class="bank_055"><a href="#none">도이치</a></li>
-                                    <li class="bank_032"><a href="#none">부산은행</a></li>
-                                    <li class="bank_061"><a href="#none">BNPP</a></li><!--비엔피파리바은행-->
-                                    <li class="bank_067"><a href="#none">중국건설은행</a></li>
-                                    <li class="bank_064"><a href="#none">산림조합중앙회</a></li>
-                                    <li class="bank_002"><a href="#none">산업은행</a></li>
-                                    <li class="bank_045"><a href="#none">새마을금고</a></li>
-                                    <li class="bank_089"><a href="#none">케이뱅크</a></li>
-                                    <li class="bank_008"><a href="#none">수출입</a></li>
-                                    <li class="bank_007"><a href="#none">수협</a></li>
-                                    <li class="bank_048"><a href="#none">신협</a></li>
-                                    <li class="bank_037"><a href="#none">전북은행</a></li>
-                                    <li class="bank_071"><a href="#none">우체국</a></li>
-                                    <li class="bank_035"><a href="#none">제주은행</a></li><!--신한은행과 로고 동일-->
-                                    <li class="bank_062"><a href="#none">중국공상은행</a></li>									
-                                    <li class="bank_060"><a href="#none">BOA</a></li>
-                                    <li class="bank_054"><a href="#none">HSBC</a></li>
-                                    <li class="bank_057"><a href="#none">JP모간</a></li>
-                                    <li class="bank_247"><a href="#none">NH투자증권</a></li>
-                                    <li class="bank_261"><a href="#none">교보증권</a></li>
-                                    <li class="bank_267"><a href="#none">대신증권</a></li>
-                                    <li class="bank_287"><a href="#none">메리츠증권</a></li>
-                                    <li class="bank_238"><a href="#none">미래에셋대우</a></li>
-                                    <li class="bank_240"><a href="#none">삼성증권</a></li>
-                                    <li class="bank_291"><a href="#none">신영증권</a></li>
-                                    <li class="bank_278"><a href="#none">신한금융투자</a></li>
-                                    <li class="bank_209"><a href="#none">유안타증권</a></li>
-                                    <li class="bank_280"><a href="#none">유진투자증권</a></li>
-                                    <li class="bank_265"><a href="#none">이베스트증권</a></li>
-                                    <li class="bank_292"><a href="#none">케이프투자증권</a></li>
-                                    <li class="bank_264"><a href="#none">키움증권</a></li>
-                                    <li class="bank_270"><a href="#none">하나금융투자</a></li>
-                                    <li class="bank_262"><a href="#none">하이투자증권</a></li>
-                                    <li class="bank_243"><a href="#none">한국투자증권</a></li>
-                                    <li class="bank_269"><a href="#none">한화증권</a></li>
-                                    <li class="bank_263"><a href="#none">현대차증권</a></li>
-                                    <li class="bank_279"><a href="#none">DB증권</a></li>
-                                    <li class="bank_218"><a href="#none">KB증권</a></li>
-                                    <li class="bank_227"><a href="#none">KTB투자증권</a></li>
-                                    <li class="bank_266"><a href="#none">SK증권</a></li>
-                                    <li class="bank_224"><a href="#none">BNK투자증권</a></li>
-                                    <li class="bank_297"><a href="#none">한국포스증권</a></li>
-                                    <li class="bank_290"><a href="#none">부국증권</a></li>
-                                    <li class="bank_296"><a href="#none">가상증권사</a></li>
-                                </ul>
-                                <!-- D: 검색 리스트 영역, 검색어 입력 시 입력된 검색어로 결과값 노출 // -->
-        
+                         <!-- s: 검색 영역 -->
+                         <div class="form-wrap type-box">
+                            <div class="input">
+                                <input type="email" id="" class="inp" pattern=".+@\." placeholder="이메일 입력" name="" value="" required="">
                             </div>
+                            <button type="button" class="btn-search">검색</button>
+                            <button type="button" class="btn-delete">검색어 삭제</button>
                         </div>
                         <!-- // e: 검색 영역 -->
         
@@ -234,11 +167,21 @@
                                 </div>
                             </div>
                         </section>
-        
                     </div>
                 </div>
             </div>
-            <!-- e: 은행선택 팝업-->
+
+
+
+            <!-- e: 은행선택 -->
+
+        </div>
+        <!-- //contentsWrap -->
+    </form>
+</body>
+</html>
+
+
 
         </div>
         <!-- //contentsWrap -->
