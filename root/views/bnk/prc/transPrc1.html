@@ -52,14 +52,19 @@
 
 <body>
     <!-- header -->
-    <div id="headerWrap">
-        <script>
-        $(document).ready(function(){
-            document.charset="euc-kr";
-            $("#headerWrap").load("../includes/header.html");
-        });
-        </script>
-    </div>
+    <header class="headerWrap">
+        <div class="headerLeft">
+            <!--D: 이전버튼-->
+            <a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+        </div>
+        <div class="headerCenter">
+            <h2 class="text"><span>이체</span></h2> <!--D: TEXT -->
+        </div>
+        <div class="headerRight">
+            <!--D: 전체메뉴버튼 -->
+            <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>
+        </div>
+    </header>
 	<!-- //header -->
 
     <form>
@@ -103,36 +108,191 @@
                                 </div>
                             </div>
                             <p class="exp-txt">잔액 : <span id="Acct_Amt">50,000,000원</span></p>
-                     
-                            
-                        
 
                         </div>
                     </section>
                     <!--E: 이체예약 시 프로세스_이체금액 입력-->
 
                     <!--S: 이체예약 시 프로세스_이체계좌 정보 입력-->
-                    <section>
-                        <div class="form-wrap form-line">
-                            <strong class="form-tit">
-                                <span>입금계좌</span>
-                                <button type="button" class="btn btn-sm">최근 입금계좌</button>
-                            </strong>
-                            <div class="input">
-                                <div class="select-box" tabindex="1" onclick="biz.bank(selBankCd);">
-                                    <label for="" class="essential">은행선택</label>
-                                    <span class="option" id="">미선택</span>
+                    <section  style="display: block;">
+                        <div class="tit-wrap">
+                            <p class="txt"><strong>얼마를 이체하시겠어요?</strong></p>
+                        </div>
+                        <div class=form-all-wrap>
+
+                            <div class="form-wrap form-line">
+                                <strong class="form-tit">
+                                    <span>입금계좌</span>
+                                    <button type="button" class="btn btn-sm">최근 입금계좌</button>
+                                </strong>
+                                <div class="input">
+                                    <div class="select-box" tabindex="1">
+                                        <label for="" class="essential">은행선택</label>
+                                        <span class="option" id="">미선택</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
+                            <div class="form-wrap">
+                                <label for="" class="formlabel">계좌번호</label>
+                                <div class="input">
+                                    <input type="number" title="계좌번호" id="" class="inp" name="" value="" placeholder="계좌번호를 입력" maxlength="14" required="">
+                                </div>
+                            </div>
+
+                            <div class="form-wrap">
+                                <label for="" class="formlabel">받는분 통장 표시</label>
+                                <div class="input">
+                                    <input type="text" title="받는 분 통장 표시" id="" class="inp" name="" value="" placeholder="김예가람(예가람저축은행)" maxlength="10" required="">
+                                </div>
+                            </div>
+
+                            <div class="form-wrap">
+                                <label for="" class="formlabel">내 통장 표시</label>
+                                <div class="input">
+                                    <input type="text" title="내 통장 표시" id="" class="inp" name="" value="" placeholder="10자 이내로 입력" maxlength="10">
+                                </div>
+                            </div>
+
+                            <div class="select-wrap">
+                                <div class="check-account">
+                                    <input type="checkbox" id="scheduleChk" name="scheduleChk" value="">
+                                    <label for="scheduleChk">
+                                        <span>예약이체</span>
+                                    </label>
+                                </div>
+                                <div id="" class="select-box" tabindex="1">
+                                    <label for="">예약이체일자</label>
+                                    <span class="option" id="">미선택</span><!-- [D] 두줄처리 필요할때 클래스 ellipse-none 추가 -->
+                                </div>
+                                <p class="info-txt">예약이체는 오늘 기준 3개월 이내만 등록이 가능해요</p>
+                            </div>
+                            
+
+                        
+
+                        </div>
                     </section>
                     <!--E: 이체예약 시 프로세스_이체계좌 정보 입력-->
-
 
                 </div>
             </div>
             <!-- //contents -->
+            <div class="fixed-btn-wrap">
+				<div class="btn-wrap">
+					<a href="javascript:void(0);" class="btn " id="" >다음</a>
+				</div>
+			</div>
+
+
+            <div id="lypullPop" class="layerpopup laypop-all agree-layer show" style="display: block;">
+                <!-- s: contents -->
+                <div class="pop-header">
+                    <h2 class="pop-title">이체 예정 1건</h2>
+                    <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lypullPop')">닫기</button>
+                </div>
+                
+                <div class="pop-con-wrap" style="padding-bottom: 60px;">
+                    <div class="default-wrap">
+                        <div class="txt-list-wrap" id="trnAcntList_{idx}">
+                            <div class="txt-detail-area">
+                                <div class="txt-detail-tit">
+                                    <strong>타이틀</strong>
+                                    <button type="button" class="btn btn-sm" onclick="deleteAcnoList({idx});" style="display:block;">취소하기</button><!-- [D] 다건이체일 경우에만 노출 (단건에서 노출 X)-->
+                                </div>
+                                <ul class="txt-list">
+                                    <li class="" style="display:block;">
+                                        <span class="tit">예약이체일</span>
+                                        <p class="txt" id="">2023.08.08</p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">입금계좌</span>
+                                        <p class="txt">
+                                            <span>김예가람 예가람저축은행</span><br/>
+                                        <span>01012345678</span>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">입금계좌</span>
+                                        <p class="txt point">500,000원</p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">수수료</span>
+                                        <p class="txt point">$0$원</p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">출금계좌</span>
+                                        <p class="txt">
+                                            <span>보고파 파킹통장(개인)</span><br>
+                                            <span>123-45-67-890</span>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">받는분 통장표시</span>
+                                        <p class="txt">홍예가람 예가람저축은행</p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">내 통장표시</span>
+                                        <p class="txt">김예가람</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="txt-detail-area">
+                                <div class="txt-detail-tit">
+                                    <strong>타이틀</strong>
+                                    <button type="button" class="btn btn-sm" onclick="deleteAcnoList({idx});" style="display:block;">취소하기</button><!-- [D] 다건이체일 경우에만 노출 (단건에서 노출 X)-->
+                                </div>
+                                <ul class="txt-list">
+                                    <li class="" style="display:block;">
+                                        <span class="tit">예약이체일</span>
+                                        <p class="txt" id="">2023.08.08</p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">입금계좌</span>
+                                        <p class="txt">
+                                            <span>김예가람 예가람저축은행</span><br/>
+                                        <span>01012345678</span>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">입금계좌</span>
+                                        <p class="txt point">500,000원</p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">수수료</span>
+                                        <p class="txt point">$0$원</p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">출금계좌</span>
+                                        <p class="txt">
+                                            <span>보고파 파킹통장(개인)</span><br>
+                                            <span>123-45-67-890</span>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">받는분 통장표시</span>
+                                        <p class="txt">홍예가람 예가람저축은행</p>
+                                    </li>
+                                    <li>
+                                        <span class="tit">내 통장표시</span>
+                                        <p class="txt">김예가람</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap flexCol">
+                        <a href="javascript:void(0)" class="btn" onclick="closePopup('lypullPop')">확인</a>
+                        <a href="javascript:void(0)" class="btn txt">추가 이체하기</a>
+                    </div>
+                </div>
+
+            </div>
+
+
 
         </div>
         <!-- //contentsWrap -->

@@ -32,7 +32,7 @@ body.fix { overflow:hidden; }
 .btn-cont-wrap { display:flex; gap:10px; /*width:100%;*/ padding:0; text-align:center; align-items:start; }
 .btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:14px 5px; border-radius:30px; background:linear-gradient(320deg, rgba(38,15,84,1) 0%, rgba(61,18,146,1) 100%); color:#fff; font-size:1rem; font-weight:700; text-align:center; }
 .btn.btn-add {display:inline-block; width:unset; height:48px;  padding:12px 54px; background:#FFFFFF; border:1px solid #4E32A5; font-size:1rem; line-height:1.38889rem; font-weight:500; color:#4E32A5; }
-.btn.btn-sm { display:inline-block; width:unset; height:30px; padding:5px 16px;  background:#FFFFFF; border:1px solid #DDDDDD; border-radius:17px;  font-size:0.77778rem; line-height: 1rem; font-weight:400; color:#26282C; letter-spacing: -0.5px;}
+.btn.btn-sm { display:inline-block; width:unset; height:30px; padding:5px 16px;  background:#FFFFFF; border:1px solid #DDDDDD; border-radius:17px;  font-size:0.77778rem; /*line-height: 1rem;*/ font-weight:400; color:#26282C; letter-spacing: -0.5px;}
 .btn.btn-sm.gray { background: #F1F1F1; border:1px solid #F1F1F1; color:#666666; }
 .btn.btn-sm.green { background: #E3F6F8; border:1px solid #E3F6F8; color:#00A2C4; }
 .btn.btn-sm.pink { background: #FFE9F5; border:1px solid #FFE9F5; color:#F648AA; }
@@ -235,7 +235,7 @@ body.fix { overflow:hidden; }
 /* .txt-list-wrap .txt-detail-area .txt-list li { align-items:flex-start; } 높이 가운데로 정렬 하기로해서 주석처리함 */
 
 .txt-detail-area .txt-detail-tit { display:flex; align-items:center; /*position:unset;*/ padding:10px 0; font-size:0; color:#333333; } /*0626 | (청)flex test*/
-.txt-detail-area .txt-detail-tit strong { /*display:inline-block; width:50%;*/ flex:1;  font-weight:700; font-size:1rem; } /*0626 | (청)flex test*/
+.txt-detail-area .txt-detail-tit strong { /*display:inline-block; width:50%;*/ flex:1;  font-weight:500; font-size:1rem; } /*0626 | (청)flex test*/
 .txt-detail-area .txt-detail-tit span { /*display:inline-block; width:50%; text-align:right; */font-size:0.8rem; font-weight:500; color: #FF0000; } /*0626 | (청)flex test*/
 .txt-detail-area .txt-detail-tit span .btn-gray,
 .txt-detail-area .txt-detail-tit span .normal-btn { /*padding: 8px 16px;230724test*/ color:#454545; }
@@ -250,8 +250,9 @@ body.fix { overflow:hidden; }
 .txt-list li .tit { font-weight:300; font-size:1rem; color:#454545; }/*2023-07-14 스타일가이드 반영*/
 .txt-list li .tit .ref { font-size:0.77778rem; line-height:1.5;}
 /* .txt-list li .txt{ display:inline-block; width:50%; font-weight:500; vertical-align:top; text-align:right; font-size:0.9rem; color:#260F54; word-break:break-all; } (청)flex test-아래와같이수정*/
-.txt-list li .txt{ flex:1; padding-left:30px; font-weight:500; vertical-align:top; text-align:right; font-size:1rem; color:#260F54; word-break:break-all; }
-.txt-list li .txt a[href*="tel"] { color:#260F54; word-break:break-all; }
+.txt-list li .txt{ flex:1; padding-left:30px; font-weight:500; vertical-align:top; text-align:right; font-size:1rem; color:#333333; word-break:break-all; }
+.txt-list li .txt a[href*="tel"] { color:#333333; word-break:break-all; }
+.txt-list li .txt.point { color:#4E32A5; }
 .txt-list .cusnm { color:#000!important; }
 
 
