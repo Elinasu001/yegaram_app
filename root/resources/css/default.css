@@ -2037,7 +2037,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 /** [공통] 조회기간 결과 리스트 **/
 .inquiry-result-area + * { margin-top:60px; }
-.inquiry-summary { display:flex; align-items:center; /*width:100%;*/ padding-top:15px; padding-bottom:15px; border-bottom:1px solid #EEEEEE; }
+.inquiry-summary { display:flex !important; align-items:center; /*width:100%;*/ padding-top:15px; padding-bottom:15px; border-bottom:1px solid #EEEEEE; }
 .inquiry-summary .period { font-weight:400; color:#666666; font-size:0.88889rem; line-height:1.4375; }
 .inquiry-summary .period.tit { font-size:1rem; font-weight:700; color:#000000; }
 .inquiry-summary .num { flex:auto; font-weight:400; color:#000000; font-size:0.88889rem; line-height:1.4375; text-align:right; }
@@ -2475,7 +2475,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .data-list-wrap > li:last-of-type { border-bottom:0; }
 .data-list-wrap .data-tit { padding-bottom:20px; font-weight:400; }
 .data-list-wrap .data-tit > strong { font-size:1rem; line-height:1.38889; }
-.data-list-wrap .data-list li { display:flex; width:100%; margin-bottom:12px; font-size:1rem; line-height:1.38889; }
+.data-list-wrap .data-list li { display:flex; width:100%; margin-bottom:12px;  font-size:0.88889rem; line-height:1.278rem; }
 .data-list-wrap .data-list li:last-child { margin-bottom:0; }
 .data-list-wrap .data-list li .tit { color:#454545; font-weight:300; }
 .data-list-wrap .data-list li .txt { flex:1; padding-left:30px; font-weight:400; vertical-align:top; text-align:right; word-break:break-all; }
