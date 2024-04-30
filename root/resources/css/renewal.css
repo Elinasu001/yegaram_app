@@ -63,7 +63,7 @@ body.fix { overflow:hidden; }
 .btn.btn-info { background:#FFFFFF; border:1px solid #DDDDDD; font-weight:500; color:#2B0F62; }
 .btn.btn-primary { background:#260F54; font-weight:500; color:#fff; }
 .btn.btn-sub { background:#F2F4F6; color:#26282C; }
-.btn-cont-wrap .btn.btn-border { border:1px solid #DDDDDD; background:#fff; font-weight:500; color:#454545; }
+/* .btn-cont-wrap .btn.btn-border { border:1px solid #DDDDDD; background:#fff; font-weight:500; color:#454545; } */
 
 /* 공통 - layerpopup 텍스트영역*/
 .txtbox-wrap { /*padding-bottom:30px;*/ color:#333333; font-size:0.88889rem; line-height:1.4375; }

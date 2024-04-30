@@ -518,7 +518,7 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .form-wrap > div.input input:focus { color:#DDDDDD; border-color:#B088FF; }
 .form-wrap > div.input input:valid { color:#333333; }
 .form-wrap > div.input input[type="password"]:focus { color:#DDDDDD !important; }
-.form-wrap > div.input input[type="password"]:valid {  height:50px; caret-color:transparent; font-size:30px; color:#4E32A5; }
+.form-wrap > div.input input[type="password"]:valid {  height:50px; caret-color:transparent; font-size:30px; color:#4E32A5 !important; }
 .form-wrap > div.input input[type="password"]:disabled { height:50px;  font-size:30px; color:#CCCCCC; }
 
 
@@ -1483,12 +1483,10 @@ body.on { position:fixed; top:0; }
 .layerpopup.on { z-index:105; }
 
 .layerpopup .fixed-btn-wrap { margin-top:10px; background:#fff; bottom:1px; }
-/* .layerpopup .fixed-btn-wrap .btn-wrap { padding:20px; } */
+.layerpopup.has-button .ly-scroll-con.ly-select { padding:0 20px 0px !important; }
 .layer-up.has-button { padding-bottom:99px; }
-/* .layer-up.has-button .fixed-btn-wrap:has(.btn.txt) { padding-bottom:143px; } */
 .layer-up.has-button .content-wrap { padding-bottom:10px; }
 
-/* .layer-up .pop-header:has(.btn-layer-close:only-child) { padding-bottom:20px; } */
 
 .layerpopup .pop-desc { padding-bottom:30px; color:#666666; font-size:0.88889rem; line-height:1.4375; }
 .prepare-area { overflow-y:scroll; max-height:350px; /*padding-bottom:20px;청test*/ }
@@ -1506,15 +1504,15 @@ body.on { position:fixed; top:0; }
 .layerpopup .subtxt-wrap { font-size:0.88889rem; line-height:1.4375; color:#666; }
 .layerpopup .ly-select-list + div .sub-title { padding-top:30px; }
 .layerpopup .txtbox-wrap { color:#666666; }
-
+.layerpopup .txtbox-wrap + .ly-select-list { margin-top:30px; }
 
 /** _스크롤 컨텐츠 레이어 **/
-.layer-up .ly-scroll-con { overflow:hidden; overflow-y:auto; max-height:287px; /*margin-bottom:10px; padding:0 20px 10px;*/ padding:0 20px 30px; }
+.layer-up .ly-scroll-con { overflow:hidden; overflow-y:auto; max-height:287px; /*margin-bottom:10px; padding:0 20px 10px;*/ padding:0 20px 30px; background:#FFFFFF; }
 .layer-up .default-wrap { /*margin-bottom:10px; padding:0 20px 10px;*/ padding:0 20px 10px; }
 .layer-up:has(.fixed-btn-wrap) .default-wrap { padding-bottom:10px; }
 .layer-up .ly-scroll-con.type-high { max-height:58vh; }
 .layer-up .ly-scroll-con .qt-tit{ display:inline-block; margin-top:40px; margin-bottom:15px; font-weight:500; }
-.layer-up .ly-select { /*margin-bottom:10px; padding:0 20px 10px;*/ /*padding:0 20px 20px;*/ background:#fff; }
+.layer-up .ly-select { /*margin-bottom:10px; padding:0 20px 10px;*/ /*padding:0 20px 0px !important;background:#fff; */  }
 .layer-up .ly-select .ly-select-list li:not(:first-child) { margin-top:10px; }
 .layer-up .ly-select .ly-select-list li > button { display:block; width:100%; height:54px; border:1px solid #DDDDDD; border-radius:10px; background:#FFFFFF; font-size:1rem; font-weight:400; color:#26282C; line-height:50px; letter-spacing:-0.4px; text-align:center; }
 .layer-up .ly-select .ly-select-list li.active > button { border-color:#4E32A5; background:#F4F5FB; font-weight:500; color:#4E32A5; }

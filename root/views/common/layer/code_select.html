@@ -52,22 +52,14 @@
 
 <body>
     <!-- header -->
-    <header class="headerWrap"> <!--D: bg-color02 클래스 : 뒤에 색상 들어갈 경우  -->
-        <div class="headerLeft">
-    
-        </div>
-        <div class="headerCenter">
-            <h2 class="text"><span>자동이체 등록</span></h2> <!--D: TEXT -->
-        </div>
-        <div class="headerRight">
-            
-            <!--D: 홈버튼 -->
-            <a href="javascript:void(0)" class="btn btn-home"><img src="/resources/images/header/btn_home.png" alt="홈"></a>
-    
-            <!--D: 전체메뉴버튼 -->
-            <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>
-        </div>
-    </header>
+    <div id="headerWrap">
+        <script>
+        $(document).ready(function(){
+            document.charset="euc-kr";
+            $("#headerWrap").load("../includes/header.html");
+        });
+        </script>
+    </div>
 	<!-- //header -->
 
     <form>
@@ -77,27 +69,35 @@
             <div class="contents">
                 <div class="default-wrap">
 
-                    <!-- S: 자동이체등록완료 -->
-                    <div class="result-area checking">
-                        <p class="tit"><b>자동이체를 등록했어요</b></p>
-                        <div class="txtbox-wrap">
-                            <p>자세한 내용은<br>이체 결과 조회 화면에서 확인해 주세요</p>
-                            <a href="#none" class="btn-txt">자동이체 등록 현황</a>
-                        </div>
-                    </div>
-                    <!-- E: 자동이체등록완료 -->
 
                 </div>
             </div>
             <!-- //contents -->
 
-            <div class="fixed-btn-wrap">
-                <div class="btn-wrap flexCol">
-                    <a href="#none" class="btn">자동이체 추가 등록하기</a>
-                    <a href="#none" class="btn txt">그만하기</a>
+            <!--S: 자동이체 인증서 선택-->
+            <div id="lySel1" class="layerpopup layer-up has-button show" style="position: fixed; top: 359.5px; left: 0px; display: block;"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">인증서 선택</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con ly-select">
+                        <div class="txtbox-wrap">
+                            <p class="txt">자동이체 등록에 사용할 인증서를 선택하세요</p>
+                        </div>
+                        <ul class="ly-select-list">
+                            <li><button>금융인증서</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                            <li><button>금융인증서</button></li>
+                        </ul>
+                    </div>
                 </div>
-                
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn">계속하기</a>
+                    </div>
+                </div>
             </div>
+            <!--E: 자동이체 인증서 선택-->
 
         </div>
         <!-- //contentsWrap -->
