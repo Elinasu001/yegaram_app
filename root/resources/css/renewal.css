@@ -472,7 +472,7 @@ body.fix { overflow:hidden; }
 .recommender-wrap > li.tbl-header > span { font-weight:500; }
 .recommender-wrap > li.tbl-header > span:last-child  { padding-right:40px; }
 .recommender-wrap > li button { float:right; padding:0; width:20px; height:20px; font-size:0; background:url(../images/common/chk_all_off.png) no-repeat center/100%; }
-.recommender-wrap > li button.active { background:url(../images/common/chk_all_on.png) no-repeat center/100%; }
+.recommender-wrap > li.active button { background:url(../images/common/chk_all_on.png) no-repeat center/100%; }
 
 
 .recommender-wrap .search-before { padding:50px 0; }
@@ -671,7 +671,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .table-type + .btn-cont-wrap { margin-top:40px; }/*영업점안내:branch.html - 전화문의하기버튼*/
 .info-txt + .form-wrap.type2 { margin-top:40px; }
 .form-wrap.type2 + .form-wrap.type2 { margin-top:40px; }
-
+.form-wrap.type-box + .tabs-wrap { margin-top:15px; }
 /*.default-wrap > .form-wrap:has(.select-wrap):first-child { padding-top: 40px; }[공통] 타이틀없이form-wrap이 처음으로 나오는 case*/
 /* .default-wrap > .form-wrap.password:first-child,
 .default-wrap > .form-wrap.address:first-child,
