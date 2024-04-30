@@ -227,6 +227,10 @@ body.fix { overflow:hidden; }
 
 
 /*메뉴-확인리스트*/
+.txt-list-wrap { margin-top:40px; }
+.txt-list-wrap .txt-list-area:first-child { margin-top:0; }
+.txt-list-wrap .txt-list-area{ margin-top:15px;; }
+
 .txt-list-area { position:relative; }
 .txt-list-wrap .txt-detail-area { padding:20px; border-radius:15px; border:1px solid #DDDDDD; }
 .txt-list-wrap .txt-detail-area + .txt-detail-area { margin-top:20px; }
@@ -680,7 +684,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 /* .default-wrap > .form-wrap:has(>.form-tit):first-child { padding-top:40px; } */
 .default-wrap > .list-icon:first-child { padding-top:40px; }
 .default-wrap > .visaul-info-box:first-child { padding-top:40px; }
-.default-wrap > .txt-list-wrap:first-child { padding-top:40px; }
+/* .default-wrap > .txt-list-wrap:first-child { padding-top:40px; } */
 .default-wrap > .terms-area:first-child { padding-top:40px; }
 /* .default-wrap > .terms-area { padding-top:40px; } */
 /* .default-wrap > .form-wrap:has(+.select-box) { padding-top:30px; } */
