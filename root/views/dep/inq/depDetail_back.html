@@ -129,55 +129,27 @@ function fnProdJoin(prodKncd, pdcd, pdNm){
 </head>
 <body>
 	<!-- header -->
-	<div id="headerWrap"><header class="headerWrap"> <!--D: bg-color02 클래스 : 뒤에 색상 들어갈 경우  -->
-		<div class="headerLeft">
-	
-			<!--D: 이전버튼-->
-			<a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
-	
-			<!--D: User -->
-			<!-- <a href="javascript:void(0)" class="user"><img src="/resources/images/header/user.png" alt="사용자이름"><span>김예가람</span></a> -->
-	
-			<!--D: 예가람로고 -->
-			<!-- <a href="javascript:void(0)" class="logoImg"><img src="/resources/images/header/logo.png" alt="예가람저축은행로고" /></a> -->
-	
+	<header class="headerWrap">
+		<div class="header">
+			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+			<h2><span>보고파 파킹통장</span></h2> <!-- [퍼블] 텍스트 변경 -->
 		</div>
-		<div class="headerCenter">
-			<h2 class="text"><span>E-RUN파킹통장</span></h2> <!--D: TEXT -->
-		</div>
-		<div class="headerRight">
-			
-			<!--D: 홈버튼 -->
-			<!--<a href="javascript:void(0)" class="btn btn-home"><img src="/resources/images/header/btn_home.png" alt="홈"></a>-->
-	
-			<!--D: 전체메뉴버튼 -->
-			<a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>
-	
-			<!--D: 닫기버튼 -->
-			<!-- <a href="javascript:void(0)" class="btn btn-menu-close"><img  src="/resources/images/header/btn_close.png" alt="닫기버튼"></a> -->
-	
-			<!--D: 알림버튼 -->
-			<!-- <a href="javascript:void(0)" class="btn btn-notify"><img src="/resources/images/header/btn_notify.png" alt="알림"><em class="count-flag"><span>3</span></em></a> -->
-	
-			<!--D: 좋아요버튼 -->
-			<!-- <a href="javascript:void(0)" class="btn btn-like"><img src="/resources/images/header/btn_like.png" alt="좋아요"><em class="count-flag">3</em></a> -->
-	
-			<!--D: 관심상품버튼 -->
-			<!-- <a href="javascript:void(0)" class="btn btn-interest"><img src="/resources/images/header/btn_interest.png" alt="관심상품"><em class="count-flag">3</em></a> -->
-	
-		</div>
+		<div class="menu-wrap"></div>
 	</header>
+	<!-- //header -->
+	
  <!-- s: contentsWrap -->
 		<div class="contentsWrap product-detail dep01"> <!-- [퍼블-4] dep01, dep02, dep03 클래스 변경시 .visual-area 아이콘 변경 -->
 			<!-- s: contents -->
 			<div class="contents">
 			
 				<!-- s: default-wrap -->
-				<div class="default-wrap"> 
+				<div class="default-wrap"> <!-- [퍼블-4] .mt0 삭제 -->
 					<div class="visual-area">
+						<p class="icon-exp">가장 많이 주목을 받고 있어요</p> <!-- [퍼블] 텍스트 변경 -->
 						<div class="flag-tit-wrap">
-							<p><em class="flag style2">입출금</em></p>
-							<strong class="tit">E-RUN파킹통장</strong> 
+							<em class="flag dep">입출금</em> <!-- [퍼블] 텍스트 변경 -->
+							<strong class="tit">보고파 파킹통장</strong> <!-- [퍼블] 텍스트 변경 -->
 							<div class="tooltip-wrap type2">
 								<span class="like"></span>
 								<div class="tooltip-txt">
@@ -191,9 +163,23 @@ function fnProdJoin(prodKncd, pdcd, pdNm){
 								<!-- // [퍼블-2] 추가 -->
 							</div>
 						</div>
-						<p class="desc-txt">#높은금리의 #입출금 #파킹통장 #최대1억원까지 #개인고객</p> 
 
-						<ul>
+						<!-- [퍼블] 텍스트 변경 -->
+						<p class="desc-txt">입출금 자유! 하루만 맡겨도<br>확정금리를 드려요</p> 
+						<ul class="text-bar-list">
+							<li>입출금자유</li>
+							<li>매일확정금리</li>
+							<li>차등이율</li>
+						</ul>
+						<!-- // [퍼블] 텍스트 변경 -->
+
+						<div class="label-info-wrap">
+							<span class="label">최고 연</span>
+							<strong class="info">5.20%</strong>
+						</div>
+
+						<!-- [퍼블] 텍스트 변경, li 마지막 삭제 -->
+						<ul class="text-bar-list type-box">
 							<li>
 								<strong class="tit">가입기간</strong>
 								<span class="exp">제한없음</span>
@@ -203,125 +189,107 @@ function fnProdJoin(prodKncd, pdcd, pdNm){
 								<span class="exp">제한없음</span>
 							</li>
 						</ul>
+						<!-- // [퍼블] 텍스트 변경, li 마지막 삭제 -->
 					</div>
 					<ul class="button-list">
 						<li><a href="#none">친구에게 공유하기</a></li>
 						<li class="active"><a href="#none">상품비교 담기</a></li> <!-- [퍼블-2] li에 active 클래스 추가시 체크 활성화 --> 
 					</ul>
-					<div class="visual-area img01">
-						<div class="tit-wrap">
-							<ul class="tag">
-								<li>높은금리</li>
-								<li>인터넷</li>
-								<li>모바일</li>
-							</ul>
-							<p class="txt">
-								<strong>하루만 맡겨도</strong><br>
-								<em class="color-F1108E">높은 금리</em>를 드리는<br>
-								<em class="color-F1108E">E-RUN파킹통장</em>에 가입 해보세요
-							</p>
-						</div>
-					</div>
-					<div class="visual-area img02">
-						<div class="tit-wrap">
-							<ul class="tag">
-								<li>가입제한없음</li>
-								<li>가입금액 제한없는</li>
-							</ul>
-							<p class="txt">
-								가입제한<em class="color-F1108E">없는,</em><br>
-								가입금액<em class="color-F1108E">제한없는,</em><br>
-								모바일 가입전용 입출금통장!
-							</p>
-						</div>
-					</div>
+					<dl class="point-list">
+						<dt>이 상품의 핵심 포인트!</dt>
+						<dd>필요할 때마다 입출금이 자유로워요!</dd> <!-- [퍼블] 추가 -->
+						<dd>결산기준일로부터 매일의 잔액을 기준으로<br>매일 확정금리를 드려요</dd> <!-- [퍼블] 추가 -->
+						<dd>금액 구간별 차등 이율이 적용돼요</dd> <!-- [퍼블] 추가 -->
+					</dl>
 					
-					<div class="product-info">
-						<h3>상품안내</h3>
-						<dl class="point-list">
-							<dt>이 상품의 핵심 포인트!</dt>
-							<dd>필요할 때마다 입출금이 자유로워요!</dd> <!-- [퍼블] 추가 -->
-							<dd>결산기준일로부터 매일의 잔액을 기준으로<br>매일 확정금리를 드려요</dd> <!-- [퍼블] 추가 -->
-							<dd>금액 구간별 차등 이율이 적용돼요</dd> <!-- [퍼블] 추가 -->
-						</dl>
-						<div class="sub-tit-wrap">
-							<p class="tit">약정이율</p> 
-							<p class="txt">연 1.0% ~ 최고 연3.35%<br>(금액구간별 차등이율 적용/우대금리 포함/세전)</p>
-						</div>
-						<div class="sub-tit-wrap">
-							<p class="tit">가입기간</p>
-							<p class="txt">제한 없음</p>
-						</div>
-						<div class="sub-tit-wrap">
-							<p class="tit">가입금액</p>
-							<p class="txt">제한 없음</p>
-						</div>
-						<div class="sub-tit-wrap">
-							<p class="tit">비과세종합저축</p>
-							<p class="txt">가입 가능</p>
-						</div>
-						<div class="sub-tit-wrap">
-							<p class="tit">가입대상</p>
-							<ul class="txt hyphen">
-								<li>만 19세 이상 개인고객(내국인만 가능)</li>
-								<li>1인 1계좌만 가입 가능</li>
-							</ul>
-						</div>
-
-						<div class="sub-tit-wrap">
-							<p class="tit">이자 지급 시기 및 방법</p>
-							<div class="bg-box">
-								<ul class="list-bull type-large num">
-									<li>
-										<em>1.</em>
-										예금일로부터 지급일 전날 또는 결산 기준일까지를 매일의 잔액을 기준으로 예가람저축은행에서 게재한 잔액별 이율을 적용하여 계산<!--[퍼블-5] p태그 삭제-->
-									</li>
-									<li>
-										<em>2.</em>
-										매월 셋째주 토요일을 결산기준일로 하여 다음날 원금에 가산
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="sub-tit-wrap">
-							<p class="tit">유의사항</p>
-							<div class="bg-box">
-								<ul class="list-bull type-large">
-									<li>계약 체결 전 상품설명서 및 약관을 확인하세요</li>
-									<li>해당 상품에 대해 충분한 사전 설명을 받을 권리가 있으며 설명을 이해한 후 거래하세요</li>
-									<li class="red">보고파 파킹통장 해지는 영업점에서만 할 수 있어요</li>
-								</ul>
-							</div>
-						</div>
-						<div class="sub-tit-wrap">
-							<p class="tit">쉽고 빠르게 계좌를 개설하실 수 있어요</p>
-							<ol class="list-icon num">
-								<li>
-									<p class="tit">약관동의</p>
-									<p class="txt">약관을 확인하고 약관에 동의하는 절차가 필요해요</p>
-								</li>
-								<li>
-									<p class="tit">계좌개설 정보입력</p>
-									<p class="txt">계좌개설에 필요한 기본정보, 직장정보, 고객확인정보, 금융거래정보를 입력해요</p>
-								</li>
-								<li>
-									<p class="tit">계좌비밀번호 설정</p>
-									<p class="txt">개설할 계좌의 비밀번호를 입력해요</p>
-								</li>
-								<li>
-									<p class="tit">신분증제출 및 <br>타금융사 본인계좌 인증</p>
-									<p class="txt">계좌개설을 위해 신분증과 타 금융사의 본인계좌를 인증해요</p>
-								</li>
-							</ol>
-						</div>
+					<div class="sub-tit-wrap">
+						<p class="tit">약정이율</p> <!-- [퍼블] 텍스트 변경 -->
+						<p class="txt">연 1.0% ~ 최고 연 3.35%<br>(금액구간별 차등이율 적용/우대금리 포함/세전)</p>
+					</div>
+					<div class="sub-tit-wrap">
+						<p class="tit">가입기간</p>
+						<p class="txt">제한 없음</p> <!-- [퍼블] 추가 -->
+					</div>
+					<div class="sub-tit-wrap">
+						<p class="tit">가입금액</p>
+						<p class="txt">제한 없음</p> <!-- [퍼블] 추가 -->
+					</div>
+					<div class="sub-tit-wrap">
+						<p class="tit">비과세종합저축</p> <!-- [퍼블] 추가 -->
+						<p class="txt">가입 가능</p> <!-- [퍼블] 추가 -->
+					</div>
+					<div class="sub-tit-wrap">
+						<p class="tit">가입대상</p>
+						<ul class="txt hyphen">
+							<li>만 19세 이상 개인고객(내국인만 가능)</li> <!-- [퍼블] 추가 -->
+							<li>1인 1계좌만 가입 가능</li> <!-- [퍼블] 추가 -->
+						</ul>
 					</div>
 
-					<ul class="arrow-button-list"> 
+					<div class="sub-tit-wrap"> <!-- [퍼블] .mb15 삭제 -->
+						<p class="tit">이자 지급 시기 및 방법</p> <!-- [퍼블] 텍스트 변경 -->
+					</div>
+					<div class="bg-box">
+						<!-- [퍼블] 추가 -->
+						<ul class="list-bull type-large num"><!-- [퍼블-5] 클래스 변경 -->
+							<li>
+								<em>1.</em><!--[퍼블-5] 태그변경-->
+								예금일로부터 지급일 전날 또는 결산 기준일까지를 매일의 잔액을 기준으로 예가람저축은행에서 게재한 잔액별 이율을 적용하여 계산<!--[퍼블-5] p태그 삭제-->
+							</li>
+							<li>
+								<em>2.</em><!--[퍼블-5] 태그변경-->
+								매월 셋째주 토요일을 결산기준일로 하여 다음날 원금에 가산<!--[퍼블-5] p태그 삭제-->
+							</li>
+						</ul>
+						<!-- // [퍼블] 추가 -->
+					</div>
+
+					<div class="sub-tit-wrap"> <!-- [퍼블] .mb15 삭제 -->
+						<p class="tit">유의사항</p>
+					</div>
+					<div class="bg-box">
+						<!-- [퍼블] 텍스트 삭제, 변경 -->
+						<ul class="list-bull type-large"><!-- [퍼블-3] 클래스 변경 -->
+							<li>계약 체결 전 상품설명서 및 약관을 확인하세요</li>
+							<li>해당 상품에 대해 충분한 사전 설명을 받을 권리가 있으며 설명을 이해한 후 거래하세요</li>
+							<li class="red">보고파 파킹통장 해지는 영업점에서만 할 수 있어요</li>
+						</ul>
+						<!-- // [퍼블] 텍스트 삭제, 변경 -->
+					</div>
+
+					<!-- [퍼블] 텍스트, 순서 변경 -->
+					<ul class="arrow-button-list"> <!-- [퍼블] .mb0 삭제 -->
 						<li><a href="#none">예금거래 기본약관</a></li>
 						<li><a href="#none">정기예금 특약</a></li>
-						<li><a href="#none">금리안내</a></li>
-						<li><a href="#none">비과세종합저축 안내</a></li>
+						<li><a href="#none" onclick="openPopupUp('lyPullPop02');">금리안내</a></li>
+						<li><a href="#none" onclick="openPopupUp('lyPullPop');">비과세종합저축 안내</a></li>
 					</ul>
+					<!-- // [퍼블] 텍스트, 순서 변경 -->
+
+					<!-- [퍼블] 추가 -->
+					<div class="sub-tit-wrap">
+						<p class="tit">쉽고 빠르게 계좌를 개설하실 수 있어요</p>
+					</div>
+
+					<ol class="list-icon num">
+						<li>
+							<p class="tit">약관동의</p>
+							<p class="txt">약관을 확인하고 약관에 동의하는 절차가 필요해요</p>
+						</li>
+						<li>
+							<p class="tit">계좌개설 정보입력</p>
+							<p class="txt">계좌개설에 필요한 기본정보, 직장정보, 고객확인정보, 금융거래정보를 입력해요</p>
+						</li>
+						<li>
+							<p class="tit">계좌비밀번호 설정</p>
+							<p class="txt">개설할 계좌의 비밀번호를 입력해요</p>
+						</li>
+						<li>
+							<p class="tit">신분증제출 및 <br>타금융사 본인계좌 인증</p>
+							<p class="txt">계좌개설을 위해 신분증과 타 금융사의 본인계좌를 인증해요</p>
+						</li>
+					</ol>
+					<!-- // [퍼블] 추가 -->
 
 					<div class="kdic-wrap">
 						<img src="../../../resources/images/common/img-kdic.png" alt="예금보험공사 보호금융상품 1인당 최고 5천만원" />

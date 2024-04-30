@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common" 
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm" 
+	data-serverTime="20230803152535"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+</head>
+<body>
+
+	<!-- s: 2023-06-12 재추가, 계좌인증 클릭 시 인증번호 팝업(#bankAccountNum) 노출 -->
+	
+<div class="content-wrap">
+	<div class="pop-header">
+		<h2 class="pop-title">${reqDs.title }</h2>
+		<button type="button" name="button" class="btn-layer-close" onclick="javascript:${reqDs.id}_Func.close();">닫기</button>
+	</div>
+	<div class="pop-con-wrap">
+		<form id="${reqDs.id}_frm" name="${reqDs.id}_frm" method="post">
+		<input type="hidden" name="BANK_CD" id="BANK_CD"> 
+		<input type="hidden" name="ACCT_NO" id="ACCT_NO"> 
+		
+		<div class="default-wrap"><!-- [퍼블] 클래스 변경 -->
+
+			<div class="tit-wrap"><!-- [퍼블] 클래스 변경 -->
+				<p class="txt"><strong>타행본인계좌인증</strong>을<br>같이 진행할게요</p>
+			</div>
+
+			<!-- s: 대출금 입금 계좌 정보 -->
+			<div class="bank-input-warp">
+				<!-- <p class="s-txt">대출금이 입금될 계좌정보를 입력해주세요</p> [퍼블] 삭제 -->
+				<div class="form-wrap">
+					<!-- <label for="ipt03" class="formlabel onbasic">은행</label> 2023-06-15 삭제 -->
+					<div class="select-wrap" id="div_RCV_BANK_NM"><!-- 2023-06-15 클래스 type2 추가 -->
+						<div class="select-box" tabindex="1" onclick="removeErr(this); biz.bank(srchRcvBankCallback);">
+							<label for="RCV_BANK_CD">은행</label><!-- 2023-06-16 구조 추가 -->
+							<span class="option" id="RCV_BANK_NM">미선택</span>
+						</div>
+						<input type="hidden" class="${reqDs.id}_validChk" name="RCV_BANK_CD" id="RCV_BANK_CD" value=""/>
+					</div>
+					<p class="error-txt">은행을 선택하세요</p>
+				</div>
+				<div class="form-wrap form-line mt0"><!-- 2023-06-15 클래스 mt0 추가 -->
+					<label for="RCV_ACCT_NO" class="formlabel onbasic">계좌번호</label>
+					<div class="input">
+						<input type="tel" title="계좌번호" id="RCV_ACCT_NO" class="inp ${reqDs.id}_validChk" name="RCV_ACCT_NO" value="" placeholder="계좌번호을 입력해주세요" numberOnly pattern="[0-9]*" oninput="UtilFunc.inputMaxLength(this);" onkeyup="removeErr(this); validChk('${reqDs.id}'); keyupVal('RCV');" onclick="removeErr(this);" onchange="validChk('${reqDs.id}');" maxlength="20" required="">
+						<button type="button" class="btn-certi" id="RCV_ACCT_NO_BTN" onclick="${reqDs.id}_Func.checkAccount('RCV');" >계좌인증</button>
+					</div>
+					<p class="error-txt">계좌번호를 입력해주세요</p>
+				</div>
+				<p class="info-txt">타행 본인인증계좌도 동시에 진행돼요</p>
+			</div>
+			<!-- e: 대출금 입금 계좌 정보 -->
+
+			<!-- s: 이자 등 출금 계좌 정보 -->
+			<div class="bank-input-warp">
+				<!-- <p class="s-txt">이자 등이 출금될 계좌정보를 입력해주세요</p> [퍼블] 삭제 -->
+				<div class="check-account"><!-- [퍼블] 클래스 변경 -->
+					<input type="checkbox" id="CMS_ACCT_SET" name="check" value="">
+					<label for="CMS_ACCT_SET">
+						<span>계좌 같이 사용하기</span>
+					</label>
+				</div>
+
+				<div class="form-wrap">
+					<!-- <label for="ipt03" class="formlabel onbasic">은행</label> 2023-06-15 삭제 -->
+					<div class="select-wrap" id="div_CMS_BANK_NM"><!-- 2023-06-15 클래스 type2 추가 -->
+						<div class="select-box" tabindex="1" onclick="removeErr(this); biz.bank(srchCmsBankCallback);">
+							<label for="CMS_BANK_CD">은행</label><!-- 2023-06-16 구조 추가 -->
+							<span class="option" id="CMS_BANK_NM">미선택</span>
+						</div>
+						<input type="hidden" class="${reqDs.id}_validChk" name="CMS_BANK_CD" id="CMS_BANK_CD" value=""/>
+					</div>
+					<p class="error-txt">은행을 선택하세요</p>
+				</div>
+				<div class="form-wrap form-line mt0"><!-- 2023-06-15 클래스 mt0 추가 -->
+					<label for="CMS_ACCT_NO" class="formlabel onbasic">계좌번호</label>
+					<div class="input">
+						<input type="tel" title="계좌번호" id="CMS_ACCT_NO" class="inp ${reqDs.id}_validChk" name="CMS_ACCT_NO" value="" placeholder="계좌번호을 입력해주세요" pattern="[0-9]*" oninput="UtilFunc.inputMaxLength(this);" onkeyup="removeErr(this); validChk('${reqDs.id}'); keyupVal('RCV');" onclick="removeErr(this);" onchange="validChk('${reqDs.id}');" maxlength="20" numberOnly required="">
+						<button type="button" class="btn-certi" id="CMS_ACCT_NO_BTN" onclick="${reqDs.id}_Func.checkAccount('CMS');">계좌인증</button>
+					</div>
+					<p class="error-txt">계좌번호를 입력해주세요</p>
+				</div>
+				<p class="info-txt">이자등이 자동이체될 계좌(CMS계좌정보)를 입력해주세요</p>
+			</div>
+
+			<!-- s: 2023-06-14 버튼영역 수정 후 위치이동 -->
+			<!--<div class="fixed-btn-wrap">
+				<div class="btn-wrap">
+					<a href="#none" class="btn disabled">다음</a>
+				</div>
+			</div>-->
+			<!-- e: 2023-06-14 버튼영역 수정 후 위치이동 -->
+			<!-- e: 이자 등 출금 계좌 정보 -->
+		</div>
+		</form>
+	</div>
+	<div class="fixed-btn-wrap">
+           <div class="btn-wrap">
+               <a href="#none" class="btn disabled" id="${reqDs.id}_procBtn" onclick="${reqDs.id}_Func.chkValid();">다음</a>
+           </div>
+       </div>
+</div>
+</body>
+</html>
