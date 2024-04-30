@@ -321,7 +321,8 @@ body.fix { overflow:hidden; }
 
 /* 공통-직종선택 */
 .arrow-button-list li { position:relative; }
-.arrow-button-list li a { display:block; width:100%; padding:0 20px; height:60px; line-height:60px; border-radius:15px; font-weight:300; color:#454545; border:solid 1px #DDDDDD; background:#fff;}
+.arrow-button-list li a { display:block; width:100%; padding:0 20px; height:60px; line-height:60px; font-weight:400; color:#454545; border-bottom:solid 1px #DDDDDD; background:#fff;}
+.arrow-button-list li:first-of-type a { border-top:1px solid #dddddd; }
 .arrow-button-list li a:after{ content: ''; display: block; position: absolute; width: 16px; height: 16px; transform: translateY(-50%); border-radius: 10px; right: 18px; top: 50%; background: url("../images/common/ic-arrow-right.png")no-repeat center/100%; }
 .arrow-button-list li + li { margin-top:10px; }
 
@@ -776,8 +777,8 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 }
 
 /* 예적금상품모두보기 > 금리안내팝업 */
-.bg-box.small-txt > ul.dot > li { margin-bottom:2px; font-size:0.88889rem; line-height:1.4375; }
-.bg-box.small-txt > ul.dot > li:last-child { margin-bottom:0; }
+.bg-box.small-txt > ul > li { margin-bottom:2px; font-size:0.88889rem; font-weight:400; color:#454545; }
+.bg-box.small-txt > ul > li:last-child { margin-bottom:0; }
 .txt-style > ul > li { margin-bottom:10px; font-size:0.88889rem; line-height:1.4375; }
 .txt-style > ul > li > div:nth-of-type(1) { display:inline-block; width:22px; padding-right:5px; vertical-align:top; }
 .txt-style > ul > li > div:nth-of-type(2) { display:inline-block; width:calc(100% - 26px); }

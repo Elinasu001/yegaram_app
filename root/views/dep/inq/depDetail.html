@@ -238,12 +238,6 @@ function fnProdJoin(prodKncd, pdcd, pdNm){
 					
 					<div class="product-info">
 						<h3>상품안내</h3>
-						<dl class="point-list">
-							<dt>이 상품의 핵심 포인트!</dt>
-							<dd>필요할 때마다 입출금이 자유로워요!</dd> <!-- [퍼블] 추가 -->
-							<dd>결산기준일로부터 매일의 잔액을 기준으로<br>매일 확정금리를 드려요</dd> <!-- [퍼블] 추가 -->
-							<dd>금액 구간별 차등 이율이 적용돼요</dd> <!-- [퍼블] 추가 -->
-						</dl>
 						<div class="sub-tit-wrap">
 							<p class="tit">약정이율</p> 
 							<p class="txt">연 1.0% ~ 최고 연3.35%<br>(금액구간별 차등이율 적용/우대금리 포함/세전)</p>
@@ -286,10 +280,10 @@ function fnProdJoin(prodKncd, pdcd, pdNm){
 						<div class="sub-tit-wrap">
 							<p class="tit">유의사항</p>
 							<div class="bg-box">
-								<ul class="list-bull type-large">
-									<li>계약 체결 전 상품설명서 및 약관을 확인하세요</li>
-									<li>해당 상품에 대해 충분한 사전 설명을 받을 권리가 있으며 설명을 이해한 후 거래하세요</li>
-									<li class="red">보고파 파킹통장 해지는 영업점에서만 할 수 있어요</li>
+								<ul class="list-bull type-large ">
+									<li class="color-FF0000">계약 체결 전 상품설명서 및 약관을 확인하세요</li>
+									<li class="color-FF0000">해당 상품에 대해 충분한 사전 설명을 받을 권리가 있으며 설명을 이해한 후 거래하세요</li>
+									<li class="color-FF0000">보고파 파킹통장 해지는 영업점에서만 할 수 있어요</li>
 								</ul>
 							</div>
 						</div>
@@ -315,29 +309,28 @@ function fnProdJoin(prodKncd, pdcd, pdNm){
 							</ol>
 						</div>
 					</div>
-
-					<ul class="arrow-button-list"> 
-						<li><a href="#none">예금거래 기본약관</a></li>
-						<li><a href="#none">정기예금 특약</a></li>
-						<li><a href="#none">금리안내</a></li>
-						<li><a href="#none">비과세종합저축 안내</a></li>
-					</ul>
+					<div class="product-info">
+						<ul class="arrow-button-list"> 
+							<li><a href="#none">예금거래 기본약관</a></li>
+							<li><a href="#none">금리안내</a></li>
+							<li><a href="#none">비과세종합저축 안내</a></li>
+						</ul>
+					</div>
 
 					<div class="kdic-wrap">
 						<img src="../../../resources/images/common/img-kdic.png" alt="예금보험공사 보호금융상품 1인당 최고 5천만원" />
-						<p>이 예금은 예금자보호법에 따라 예금보험공사가 보호하되, 보호 한도는 본 예가람저축은행에 있는 귀하의 모든 예금보호 대상 금융상품의 원금과 소정의 이자를 합하여 1인당
-							"최고 5천만원"이며, 5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</p>
+						<p>이 예금은 예금자보호법에 따라 예금보험공사가 보호하되, 보호 한도는 본 예가람저축은행에 있는 귀하의 모든 예금보호 대상 금융상품의 원금과 소정의 이자를 합하여 1인당 "최고 5천만원"이며,  5천만원을 초과하는 나머지 금액은 보호하지 않습니다.</p>
 					</div>
-					<p class="txt-junbub">준법감시인 심의필 제 230679호<br>(2023.05.17-2024.05.16)</p> <!-- [퍼블] 텍스트 변경 -->
+					<p class="txt-junbub">준법감시인 심의필 제 230679호<br>(2023.05.17-2024.05.16)</p>
 				</div>
 				<!-- //e: default-wrap -->
 
 				<!-- s: btn-wrap -->
 				<div class="fixed-btn-wrap">
-					<div class="btn-wrap type-multi"><!-- [D] 한줄에 버튼 들어갈 경우 div.btn-wrap에 type-multi 클래스 추가 -->
-						<a href="#none" class="btn">상담하기</a>
-						<a href="#none" class="btn" onclick="fnProdJoin('20', '240043', 'e회전정기예금 단리(매월 이자지급식)');">계좌개설 신청하기</a> <!-- [퍼블] 텍스트 변경 -->
-					</div>
+					<div class="btn-wrap flexRow">
+                        <a href="javascript:void(0);" class="btn btn-info">상담</a>
+                        <a href="javascript:void(0);" class="btn">계좌개설 가입하기</a>
+                    </div>
 				</div>
 				<!-- //e: btn-wrap -->
 
@@ -428,20 +421,18 @@ function fnProdJoin(prodKncd, pdcd, pdNm){
 			<!-- e: 비과세 종합저축 클릭시 풀팝업 -->
 
 			<!-- s: 금리 안내 클릭시 풀팝업 -->
-			<div id="lyPullPop02" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close">
+			<div id="lyPullPop02" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display:block;">
 				<div class="pop-header">
 					<h2 class="pop-title">금리안내</h2>
 					<a class="btn-back" onclick="backKeyAction();"><span class="blind">이전페이지 이동하기</span></a>
 					<button type="button" name="button" class="btn-layer-close" onclick="closePopup('lyPullPop')">닫기</button>
 				</div>
 				<div class="pop-con-wrap">
-					<div class="default-wrap"> <!-- [퍼블] .mt0 삭제 -->
-						<div class="txtbox-wrap"> <!-- [퍼블] .mt30 삭제 -->
-							<h3 class="color-333333">1. 기본금리</h3>
-
-							<div>(기준일 : 2023.05.25)</div> <!-- [퍼블] 추가 -->
-
-							<div class="table-type table-row"> <!-- [퍼블] .mt20 삭제 -->
+					<div class="default-wrap">
+						<div class="txtbox-wrap bt1"> 
+							<h3>1. 기본금리</h3>
+							<div class="table-type table-row">
+								<div class="ta-r">(기준일 : 2023.05.25)</div>
 								<table>
 									<caption>예치금액, 금리로 구성되어 있는 보고파팡킹통장 금리 안내 표</caption>
 									<colgroup>
@@ -470,29 +461,27 @@ function fnProdJoin(prodKncd, pdcd, pdNm){
 									</tbody>
 								</table>
 							</div>
+							<div class="list-bull">
+                                <ul>
+                                    <li>[예시] 55백만원 예치 시</li>
+                                    <li class="hyphen">1백만원은 <strong>1.00%</strong> 이율적용</li>
+									<li class="hyphen">1백만원 초과 ~ 5천만원까지 <strong>3.05%</strong>이율적용</li>
+									<li class="hyphen">5천만원 초과 ~ 55백만원은 <strong>3.00%</strong> 이율적용</li>
 
-							<ul class="list-bull"><!-- [퍼블] 클래스 변경 -->
-								<li>[예시] 55백만원 예치 시</li>
-							</ul>
-
-							<ul class="list-bull"><!-- [퍼블] 클래스 변경 -->
-								<li>1백만원은 <strong>1.00%</strong> 이율적용</li> <!-- [퍼블] strong 태그 추가 -->
-								<li>1백만원 초과~5천만원까지 <strong>3.35%</strong> 이율적용</li> <!-- [퍼블] strong 태그 추가 -->
-								<li>5천만원 초과~55백만원은 <strong>3.00%</strong> 이율적용</li> <!-- [퍼블] strong 태그 추가 -->
-							</ul>
+                                </ul>
+                            </div>
 						</div>
 
 						<!-- [퍼블] 디자인 변경, 새로 추가 -->
 						<div class="cond-wrap">
-							<h3 class="color-333333">1. 우대금리 조건</h3>
-
+							<h3>2. 우대금리 조건</h3>
 							<div class="txt-style">
 								<ul>
 									<li>
 										<div>①</div>
 										<div>
 											파킹통장 개설일 이후 흥국생명, 흥국화재 월 10만원 이상 또는 연 100만원 이상 보험 신규가입 및 
-											<strong>보험가입증명서 당행 제출시 우대금리적용</strong>
+											<strong>보험가입증명서 당행 제출시 우대금리적용></strong>
 										</div>
 									</li>
 									<li>
@@ -506,7 +495,7 @@ function fnProdJoin(prodKncd, pdcd, pdNm){
 										<div>③</div>
 										<div>
 											당행 대출이용자중 보고파 파킹통장으로 자동이체 신청 시
-											<ul class="list-bull"><!-- [퍼블] 클래스 변경 -->
+											<ul class="list-bull">
 												<li>이체동의서 작성 후 당행 제출시 익일부터 우대 금리 적용</li>
 											</ul>
 										</div>
@@ -516,7 +505,9 @@ function fnProdJoin(prodKncd, pdcd, pdNm){
 										<div>
 											업무 제휴카드 발급시
 											<ul class="list-bull"><!-- [퍼블] 클래스 변경 -->
-												<li>가입 URL, QR코드 제공받아 카드발급 후 <strong>익월 첫 영업일부터 우대금리적용</strong></li>
+												<li>
+													가입 URL, QR코드 제공받아 카드발급 후 <strong>익월 첫 영업일부터 우대금리적용</strong>
+												</li>
 												<li>직전 6개월 이내 제휴사 카드 미사용 고객만 해당</li>
 											</ul>
 										</div>
@@ -532,14 +523,13 @@ function fnProdJoin(prodKncd, pdcd, pdNm){
 								</ul>
 							</div>
 
-							<div class="bg-box small-txt">
-								<ul class="dot">
+							<div class="bg-box list-bull small-txt">
+								<ul>
 									<li>각 항목별 <span class="color-FF0000">우대금리</span> + 0.10%씩 추가</li>
 									<li><strong>최대 +0.30%까지만 우대금리 적용</strong></li>
 								</ul>
 							</div>
 						</div>
-						<!-- // [퍼블] 기존 .requ-wrap 주석 처리, 디자인 변경, 새로 추가 -->
 
 						<!-- <dl class="requ-wrap">
 							<dt>요건</dt>
