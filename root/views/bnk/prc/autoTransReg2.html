@@ -80,7 +80,9 @@
                     <div class="form-all-wrap">
 
                         <div class="form-wrap type2">
-                            <label for="">이체금액</label>
+                            <div class="form-tit">
+                                <span>이체금액</span>
+                            </div>
                             <div class="input">
                                 <input type="tel" title="" class="validChk" id="" name="" value="0" placeholder="예치금액을 입력해주세요." required="">
                                 <div class="value-wrap">
@@ -102,10 +104,10 @@
                         </div>
                         <p class="info-txt">정기예금 및 대출계좌는 이체를 설정할 수 없어요</p>
 
-                        <div class="sub-tit-wrap">
-                            <p class="tit">자동이체 일자</p>
-                        </div>
                         <div class="form-wrap w50">
+                            <div class="form-tit">
+                                <span>자동이체 일자</span>
+                            </div>
                             <div class="input">
                                 <span id="period1">
                                     <input type="month" title="" id="TRNF_STRN_YM_TXT" class="inp option validChk" onclick="validChk();" name="" value="" placeholder="자동이체 시작일을 선택해주세요" required numberonly>
@@ -116,19 +118,18 @@
                                 </span>
                             </div>
                         </div>
+                        <ul class="radio-list">
+                            <li>
+                                <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked" class="monthly">
+                                <label for="radio01_2" class="">납입일 선택</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="radio01" id="radio01_1" value="" onclick="">
+                                <label for="radio01_1" class="">매월 말일</label>
+                            </li>
+                        </ul>
 
                         <div class="select-wrap">
-
-                            <ul class="radio-list">
-                                <li>
-                                    <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked" class="monthly">
-                                    <label for="radio01_2" class="">납입일 선택</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="radio01" id="radio01_1" value="" onclick="">
-                                    <label for="radio01_1" class="">매월 말일</label>
-                                </li>
-                            </ul>
 
                             <div id="rolldate2" class="select-box type2 type-dd" tabindex="1">
                                 <label for="">납입일</label>

@@ -110,7 +110,9 @@
                     <section class="form-all-wrap">
                         <!-- 금액입력 -->
                         <div class="form-wrap type2">
-                            <label for="PYMN_AMT">저축금액</label>
+                            <div class="form-tit">
+                                <span>이체금액</span>
+                            </div>
                             <div class="input">
                                 <input type="tel" title="" class="validChk" id="PYMN_AMT" name="PYMN_AMT" value="0" placeholder="예치금액을 입력해주세요." required="">
                                 <div class="value-wrap">
@@ -136,21 +138,24 @@
 
                         <!--// 금액입력 -->
 
-                        <div class="form-wrap date-sel-wrap w50">
+                        <div class="form-wrap ">
+                            <label for="" class="formlabel">가가가</label>
                             <div class="input">
-                                <input type="date" title="발급일자" id="period3" class="inp" name="" value="" placeholder="발급일자를 입력해주세요." required="" readonly>
+                                <input type="month" title="" id="" class="inp option validChk" name="" value="" placeholder="자동이체 시작일을 선택해주세요" required="" numberonly="">
                             </div>
                         </div>
 
-                        
-                        <div class="form-wrap date-sel-wrap w50">
+                        <div class="form-wrap w50">
+                            <div class="form-tit">
+                                <span>자동이체 일자</span>
+                            </div>
                             <div class="input">
                                 <span id="period1">
-                                    <input type="month" title="" id="" class="inp option" name="" value="" placeholder="자동이체 시작일을 선택해주세요" required="" readonly>
+                                    <input type="month" title="" id="" class="inp option validChk"  name="" value="" placeholder="자동이체 시작일을 선택해주세요" required="" numberonly="">
                                 </span>
                                 <span class="inputTextHyphen">~</span>
                                 <span id="period2">
-                                    <input type="month" title="" id="" class="inp option" name="" value="" placeholder="자동이체 종료일을 선택해주세요" required="" readonly>
+                                    <input type="month" title="" id="" class="inp option validChk" name="" value="" placeholder="자동이체 종료일을 선택해주세요" required="" numberonly="">
                                 </span>
                             </div>
                         </div>
@@ -165,7 +170,15 @@
                                 <label for="radio01_1" class="">매월 말일</label>
                             </li>
                         </ul>
-                        
+
+                        <div class="select-wrap">
+                            <div id="rolldate2" class="select-box type2 type-dd" tabindex="1">
+                                <label for="">납입일</label>
+                                <span class="option">미선택</span>
+                            </div>
+                            <p class="info-txt">이체 시작일은 다음 영업일부터 가능해요</p>
+
+                        </div>
                     
                         <!-- 이메일 검색 -->
                         <div class="form-wrap type-box">

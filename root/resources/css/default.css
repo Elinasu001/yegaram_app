@@ -477,9 +477,8 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .form-all-wrap .select-wrap + .form-wrap { margin-top:20px; }
 .form-wrap .select-wrap { margin-top:0; }
 .form-wrap .check-account { margin-top:0; margin-bottom:20px; }
+.form-wrap + .radio-list { margin-top:20px; }
 
-/* 2023-10-06 onbasic 클래스 삭제, selet-form-wrap 클래스 추가 에 따른 수정 */
-/* .form-wrap + div > .form-wrap { margin-top: 30px; } */
 .form-wrap + div > .form-wrap.select-form-wrap { margin-top:10px; }
 .txt-list-wrap + div > .form-wrap { margin-top: 40px; }
 .form-wrap + .select-wrap { margin-top:20px; }
@@ -984,10 +983,10 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 .radio-list li { flex:1; position:relative; /*margin:10px 0;*/ }
 .radio-list li input { margin-right:10px; }
 .radio-list input[type="radio"] { display:none; }
-.radio-list input[type="radio"] + label { padding-left:25px; }
+.radio-list input[type="radio"] + label { padding-left:25px; font-weight: 400; font-size:0.88889rem; line-height:1.278rem; color:#333333; }
 .radio-list input[type="radio"] + label::before { content:''; position:absolute; top:50%; transform: translateY(-50%); left:0; width:18px; height:21px; background:url("../images/common/ico-radio_off.png") no-repeat center/100%; cursor:pointer; }
 .radio-list input[type="radio"]:checked + label::before { content:''; position:absolute; top:50%; transform: translateY(-50%); left:0; width:18px; height:21px; background:url("../images/common/ico-radio_on.png") no-repeat center/100%; cursor:pointer; }
-
+.radio-list + .select-wrap { margin-top:20px; }
 /* _매월/매월 말일 선택시 */
 /* .radio-list:has(.monthly) { margin:10px 0; } */
 .radio-list + .form-wrap:has(.type-dd) { display:none; }
