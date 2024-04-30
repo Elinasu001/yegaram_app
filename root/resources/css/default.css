@@ -62,9 +62,15 @@ hr.line { height:10px; border-top:solid 1px #DDDFE9; background:#F8F8FA; }
 h3 { font-size:0.88889rem; font-weight:600; }
 h3 + div{ margin-top:15px; }
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 h3 { font-size:0.88889rem; font-weight:600; }
 h3 + div{ margin-top:15px; }
 
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 .flexLeft { display:flex; justify-content:flex-start; }
 .flexCenter { display:flex; justify-content: center; }
 .flexRight { display:flex; justify-content: flex-end; }
@@ -122,7 +128,13 @@ html.font-size-3{ font-size: 24px;}
 
 
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 :root {
 
     --font-size18:1rem;
@@ -237,8 +249,6 @@ html.font-size-3{ font-size: 24px;}
 
 .col-02 li { width:calc(100% / 2); }
 .col-03 li { width:calc(100% / 3); }
-
-
 
 
 
@@ -1106,7 +1116,13 @@ left
 
 /*** 테이블 table ***/
 .table-type + div + table{ margin-top:12px; }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .table-type + div + table{ margin-top:12px; }
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 .table-type table, .table-type01 { border:solid #EEEEEE; border-width:1px 0; }
 .table-type.table-col table { border-bottom:none; }
 .table-type th, 
@@ -1306,10 +1322,20 @@ form,
 .layerpopup .default-wrap { padding-bottom:60px; }
 .layerpopup.laypop-all .default-wrap { padding-bottom:60px; margin-bottom:100px; }
 .layerpopup.laypop-all .default-wrap ~ div { margin-top:30px; }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .layerpopup.laypop-all .default-wrap ~ div { margin-top:30px; }
 .pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap { padding-bottom:0; }
 .pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap > div { margin-top:40px; }
 .pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap > div { margin-top:40px; }
+=======
+.pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap { padding-bottom:0; }
+.pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap > div { margin-top:40px; }
+>>>>>>> Stashed changes
+=======
+.pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap { padding-bottom:0; }
+.pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap > div { margin-top:40px; }
+>>>>>>> Stashed changes
 .laypop-all .default-wrap:has(.tabs-wrap.type-uniform) { padding-top: 0; }
 .layerpopup.has-button .default-wrap { padding-bottom:40px; }
 .layerpopup .sub-tit-wrap:first-child { margin-top:0; }
@@ -1520,7 +1546,14 @@ body.on { position:fixed; top:0; }
 .layerpopup .ly-select-list + div .sub-title { padding-top:30px; }
 .layerpopup .txtbox-wrap > div { margin-top:15px; }
 .layerpopup .txtbox-wrap.bt1 { padding-bottom:15px; border-bottom:1px solid #ddd; }
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .layerpopup .txtbox-wrap + .ly-select-list { margin-top:30px; }
+=======
+=======
+>>>>>>> Stashed changes
+
+>>>>>>> Stashed changes
 
 /** _스크롤 컨텐츠 레이어 **/
 .layer-up .ly-scroll-con { overflow:hidden; overflow-y:auto; max-height:287px; /*margin-bottom:10px; padding:0 20px 10px;*/ padding:0 20px 30px; background:#FFFFFF; }
