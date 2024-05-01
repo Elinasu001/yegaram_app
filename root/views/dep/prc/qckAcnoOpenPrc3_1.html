@@ -157,14 +157,23 @@ function jobResultCallBack(result) {
 </head>
 <body>
 	<!-- header -->
-	<header class="headerWrap">
-		<div class="header">
-			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
-			<h2><span>빠른 계좌개설</span></h2> <!-- [퍼블] 텍스트 변경 -->
-		</div>
-		<div class="menu-wrap"></div>
-	</header>
+    <header class="headerWrap"> <!--D: bg-color02 클래스 : 뒤에 색상 들어갈 경우  -->
+        <div class="headerLeft">
+            <!--D: 이전버튼-->
+            <a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+            <!--D: User -->
+            <!-- <a href="javascript:void(0)" class="user"><img src="/resources/images/header/user.png" alt="사용자이름"><span>김예가람</span></a> -->
+            <!--D: 예가람로고 -->
+            <!-- <a href="javascript:void(0)" class="logoImg"><img src="/resources/images/header/logo.png" alt="예가람저축은행로고" /></a> -->
+        </div>
+        <div class="headerCenter">
+            <h2 class="text"><span>빠른계좌개설</span></h2> <!--D: TEXT -->
+        </div>
+        <div class="headerRight">
+        </div>
+    </header>
 	<!-- //header -->
+
 
 	<!-- [퍼블] 팝업에서 페이지로 전체 변경 -->
 	<!-- s: contentsWrap -->
@@ -173,72 +182,56 @@ function jobResultCallBack(result) {
 		<div class="contents">
 			<div class="default-wrap "> <!-- [퍼블] .mt0 삭제 -->
 				<div class="step-wrap">
-					<div class="step-line" aria-label="총 6단계 중 1단계 진행중">
+					<div class="step-line" aria-label="총 6단계 중 3단계 진행중">
 						<div class="step-bar" style="width: 33.3333%;"></div>
 					</div>
-					<div class="num"><strong class="current">2</strong>/<span class="tot">6</span></div>
+					<div class="num"><strong class="current">3</strong>/<span class="tot">6</span></div>
 				</div>
 				<div class="tit-wrap">
-					<p class="txt"><strong>추가 정보</strong>를 선택해 주세요</p> <!-- [퍼블] 변경 -->
+                    <em class="flag style2">E-RUN 파킹통장</em>
+					<p class="txt"><strong>추가 정보</strong>를 입력해 주세요</p>
 				</div>
 
-				<div class="form-wrap"> <!-- [퍼블] .mt0 삭제 -->
-					<div class="input">
-						<div class="select-wrap" id="selDiv1">
-							<div class="select-box" onclick="openSelect('직업','O000800000','1');" tabindex="1">
-								<label for="qValue1">직업</label>
-								<span class="option" id="qText1">미선택</span>
-								<input type="hidden" name="CDD_OCPT_DVCD" class="validChk" id="qValue1">
-							</div>
-						</div>
-					</div>
-					<p class="error-txt">직업을 선택해주세요</p>
-				</div>
-
-				<div class="form-wrap"> <!-- [퍼블] .mt0 삭제 -->
-					<div class="input">
-						<div class="select-wrap" id="div_job">
-							<div class="select-box" tabindex="1" onclick="openJob(this);">
-								<label for="JOB_KIND_CD">직종</label>
-								<span class="option" id="sel_jopNm">미선택</span>
-								<input type="hidden" id="JOB_CD" name="JOB_CD">					<!-- 직장구분코드 -->
-								<input type="hidden" id="JOB_DETAIL_CD" name="JOB_DETAIL_CD">		<!-- 직업구분 상세코드 -->
-								<input type="hidden" id="INDV_STND_OCPT_CLCD" name="INDV_STND_OCPT_CLCD" class="validChk">	<!-- 업종코드 -->
-								
-							</div>
-						</div>
-					</div>
-					<p class="error-txt">직종을 선택해주세요</p>
-				</div>
-
-				<div class="form-wrap"> <!-- [퍼블] .mt0 삭제 -->
-					<div class="input">
-						<div class="select-wrap" id="selDiv2">
-							<div class="select-box" onclick="openSelect('개인거래목적','O000600000','2');" tabindex="1">
-								<label for="qValue2">개인 거래목적</label> <!-- [퍼블] 텍스트 변경 -->
-								<span class="option" id="qText2">미선택</span>
-								<input type="hidden" name="INDV_NEW_TRN_PRPS_DVCD" class="validChk" id="qValue2">
-							</div>
-						</div>
-					</div>
-					<p class="error-txt">개인거래목적을 선택해주세요</p>
-				</div>
-
-				<div class="form-wrap"> <!-- [퍼블] .mt0 삭제 -->
-					<div class="input">
-						<div class="select-wrap" id="selDiv3">
-							<div class="select-box" onclick="openSelect('거래자금원천','O000700000','3');" tabindex="1">
-								<label for="qValue3">거래자금원천</label> <!-- [퍼블] 텍스트 변경 -->
-								<span class="option" id="qText3">미선택</span>
-								<input type="hidden" name="INDV_TRN_CPT_DVCD" class="validChk" id="qValue3">
-							</div>
-						</div>
-					</div>
-					<p class="error-txt">거래자금원천을 선택해주세요</p>
-				</div>
+                <div class="select-wrap">
+                    <div id="" class="select-box" tabindex="1">
+                        <label for="">직업</label>
+                        <span class="option ellipse-none" id="">미선택</span>
+                    </div>
+                    <div class="select-box" tabindex="1">
+                        <label for="JOB_KIND_CD">직종</label>
+                        <span class="option" id="sel_jopNm">미선택</span><!-- 직장구분코드 -->
+                        <input type="hidden" id="JOB_DETAIL_CD" name="JOB_DETAIL_CD"><!-- 직업구분 상세코드 -->
+                        <input type="hidden" id="INDV_STND_OCPT_CLCD" name="INDV_STND_OCPT_CLCD" class="validChk"><!-- 업종코드 -->
+                    </div>
+                    <div class="select-box" tabindex="1">
+                        <label for="qValue2">개인 거래목적</label> 
+                        <span class="option" id="qText2">미선택</span>
+                        <input type="hidden" name="INDV_NEW_TRN_PRPS_DVCD" class="validChk" id="qValue2">
+                    </div>
+                    <div class="select-box" tabindex="1">
+                        <label for="qValue3">거래자금원천</label>
+                        <span class="option" id="qText3">미선택</span>
+                        <input type="hidden" name="INDV_TRN_CPT_DVCD" class="validChk" id="qValue3">
+                    </div>
+                </div>
 
 			</div>
 		</div>
+
+        <div id="lySel01" class="layerpopup layer-up show" style="position: fixed; top: 500px; left: 0px; display: block;"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">등록구분</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>주민등록번호</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                        <li><button>법인(기업) 사업자번호</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 		<!-- //e: contents -->
 
 		<div class="fixed-btn-wrap">
@@ -247,12 +240,95 @@ function jobResultCallBack(result) {
 			</div>
 			<a href="#none" class="btn-txt" onclick="PageFunc.cancel();">그만하기</a>
 		</div>
+        <!--s:직업선택 -->
+        <div id="lySel01" class="layerpopup layer-up">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">직업</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>급여소득자</button></li>
+                        <li><button>개인사업자</button></li>
+                        <li><button>연금소득자</button></li>
+                        <li><button>주부</button></li>
+                        <li><button>학생</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+         <!--e:직업선택 -->
+        <!--s:개인거래목적-->
+        <div id="lySel02" class="layerpopup layer-up has-button">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">개인거래목적</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>급여 및 생활비</button></li>
+                        <li><button>저축 및 투자</button></li>
+                        <li><button>사업상 거래</button></li>
+                        <li><button>부동산 매매</button></li>
+                        <li><button>상속 증여성 거래</button></li>
+                        <li><button>급여 및 생활비</button></li>
+                        <li class="active">
+                            <button>기타</button>
+                            <div class="form-wrap  view-wrap form-type2">
+                                <div class="input">
+                                    <input type="text" title="기타" id="ipt02" class="inp" name="" value="" placeholder="대출목적을 입력해 주세요" required="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap ">
+                        <a href="#none" class="btn disabled">확인</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--e:개인거래목적-->
+        <!--s:거래자금원천-->
+        <div id="lySel03" class="layerpopup layer-up has-button" style="display:block">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">거래자금원천</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>근로 및 연금소득</button></li>
+                        <li><button>퇴직소득</button></li>
+                        <li><button>사업소득</button></li>
+                        <li><button>부동산 임대소득</button></li>
+                        <li><button>부동산 양도소득</button></li>
+                        <li class="active">
+                            <button>기타</button>
+                            <div class="form-wrap  view-wrap form-type2">
+                                <div class="input">
+                                    <input type="text" title="기타" id="ipt02" class="inp" name="" value="" placeholder="대출목적을 입력해 주세요" required="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap ">
+                        <a href="#none" class="btn disabled">확인</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--e:거래자금원천-->
+
 	</div>
 	<!-- //e: contentsWrap -->
-	<!-- // [퍼블] 팝업에서 페이지로 전체 변경 -->
-					
+
 	<!-- footer -->
-	
 
 
 

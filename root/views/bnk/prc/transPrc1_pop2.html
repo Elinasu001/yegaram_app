@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common" 
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm" 
+	data-serverTime="20230803152535"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+
+
+<body>
+    <!-- header -->
+    <div id="headerWrap">
+        <script>
+        $(document).ready(function(){
+            document.charset="euc-kr";
+            $("#headerWrap").load("../includes/header.html");
+        });
+        </script>
+    </div>
+	<!-- //header -->
+
+    <form>
+        <!--contentsWrap -->
+        <div class="contentsWrap">
+            <!--contents -->
+            <div class="contents">
+                <div class="default-wrap">
+                    <div class="result-area exclamation">
+                        <p class="tit"><b>전자금융사기예방서시스<br/>가입이 필요해요</b></p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- //contents -->
+
+            <!--S: 그만하기 (팝업)-->
+            <div id="lyPop1" class="layerpopup layer-up has-button show" style="display: block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title"></h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con">
+                        <div class="txtbox-wrap">
+                            <p>그만 진행하시겠어요?<br/>확인 버튼을 누르면 처음 화면으로 이동해요</p>
+                        </div>
+                    </div>
+                </div>
+                <!--D: fixed-btn-wrap 버튼은 content-wrap 밖으로 위치-->
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn">확인</a>
+                    </div>
+                </div>
+            </div>
+            <!--E: 그만하기 (팝업)-->
+
+            <!--S: 추가 인증 안내 (팝업)-->
+            <div id="lyPop2" class="layerpopup layer-up has-button show" style=" display: block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">추가 인증 안내</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con">
+                        <div class="txtbox-wrap">
+                            <p>이체를 하려면 추가인증 등록이 필요합니다</p>
+                        </div>
+                    </div>
+                </div>
+                <!--D: fixed-btn-wrap 버튼은 content-wrap 밖으로 위치-->
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn">추가인증등록하기</a>
+                    </div>
+                </div>
+            </div>
+            <!--E: 추가 인증 안내 (팝업)-->
+
+            <!--S: 단말기지정서비스 미등록 기기 안내 (팝업)-->
+            <div id="lyPop3" class="layerpopup layer-up has-button show" style=" display: block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">단말기지정서비스 미등록 기기 안내</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con">
+                        <div class="txtbox-wrap">
+                            <p>이체를 하려면 현재 사용중인 단말기 지정 등록이 필요해요</p>
+                        </div>
+                    </div>
+                </div>
+                <!--D: fixed-btn-wrap 버튼은 content-wrap 밖으로 위치-->
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn">단말기 등록하기</a>
+                    </div>
+                </div>
+            </div>
+            <!--E: 단말기지정서비스 미등록 기기 안내 (팝업)-->
+
+            <!--S: 지연이체 신청자 안내 (팝업)-->
+            <div id="lyPop4" class="layerpopup layer-up has-button show" style="display: block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">지연이체 신청자 안내</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con">
+                        <div class="txtbox-wrap">
+                            <p>지연이체 신청 고객이시네요<br/>지연이체로 진행하시겠어요?</p>
+                            <br/>
+                            <p>
+                                즉시이체를 원할 경우 그만하기를 눌러 주세요<br/>
+                                (단, 즉시이체 진행 시 <span class="color-FF0000">1일 누적 100만원</span>까지<br/>
+                                가능하며, <span  class="color-FF0000">추가 인증</span> 필요)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--D: fixed-btn-wrap 버튼은 content-wrap 밖으로 위치-->
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn">단말기 등록하기</a>
+                    </div>
+                </div>
+            </div>
+            <!--E: 지연이체  신청자 안내 (팝업)-->
+
+            <!--S: 보이스피싱 피해주의 (팝업)-->
+            <div id="lyPop5" class="layerpopup layer-up has-button show" style="display: none;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">보이스피싱 피해주의</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con">
+                        <div class="txtbox-wrap">
+                            <p>이체하기 전 <span class="color-FF0000">N건</span>에 대한 보이스피싱 사기 위험 확인 후 진행해주세요.</p>
+                            <br/>
+                            <p><span class="color-FF0000">수사기관, 공공기관</span>이라며 전화로 출금 및 이체 요구를 받으셨나요?</p>
+                            <br/>
+                            <p><span class="color-FF0000">신용등급을 올려야 한다면 송금 요구</span>를 받으셨나요?</p>
+                        </div>
+                    </div>
+                </div>
+                <!--D: fixed-btn-wrap 버튼은 content-wrap 밖으로 위치-->
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap ">
+                        <a href="javascript:void(0);" class="btn btn-info">예</a>
+                        <a href="javascript:void(0);" class="btn">아니오(계속하기)</a>
+                    </div>
+                </div>
+            </div>
+            <!--E: 보이스피싱 피해주의 (팝업)-->
+
+            <!--S: 보이스피싱 사고신고 안내 (팝업)-->
+            <div id="lyPop6" class="layerpopup layer-up has-button show" style=" display: block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">보이스피싱 사고신고 안내</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con">
+                        <div class="txtbox-wrap">
+                            <p>고객님, 현재 보이스피싱이 의심되어 해당 거래는 중지되어요</p>
+                            <br/>
+                            <p><span class="color-FF0000">보이스피싱 신고(경찰청 122) / 상담(금융감독원 1332)</span>로 문의해주세요</p>
+                        </div>
+                    </div>
+                </div>
+                <!--D: fixed-btn-wrap 버튼은 content-wrap 밖으로 위치-->
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap ">
+                        <a href="javascript:void(0);" class="btn">확인</a>
+                    </div>
+                </div>
+            </div>
+            <!--E: 보이스피싱 사고신고 안내 (팝업)-->
+
+        </div>
+        <!-- //contentsWrap -->
+    </form>
+</body>
+</html>
+
