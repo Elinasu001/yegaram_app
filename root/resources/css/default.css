@@ -62,6 +62,10 @@ hr.line { height:10px; border-top:solid 1px #DDDFE9; background:#F8F8FA; }
 h3 { font-size:0.88889rem; font-weight:600; }
 h3 + div{ margin-top:15px; }
 
+
+h3 { font-size:0.88889rem; font-weight:600; }
+h3 + div{ margin-top:15px; }
+
 .flexLeft { display:flex; justify-content:flex-start; }
 .flexCenter { display:flex; justify-content: center; }
 .flexRight { display:flex; justify-content: flex-end; }
@@ -117,6 +121,7 @@ html.font-size-3{ font-size: 24px;}
 .s-txt { display:inline-block; width:100%; font-size:0.88889rem; line-height:1.278rem; }
 
 .bg-fff { background-color:#fff!important; }
+
 
 :root {
 
@@ -539,7 +544,7 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .form-wrap.password + .info-txt + .btn-txt { margin:20px 0 40px 0; }
 /* .form-wrap:(.select-wrap) + .form-wrap:has(.select-wrap) { margin-top:10px; } has빠져있어서일단주석처리*/
 /* .form-wrap:has(.select-wrap) ~ div .form-wrap:has(.select-wrap) { margin-top:10px; } */
-.form-wrap:has(.select-wrap) ~ div .form-wrap:has(.select-wrap) { /*padding-top:10px;*/ }
+/* .form-wrap:has(.select-wrap) ~ div .form-wrap:has(.select-wrap) {  } */
 /* .form-wrap + * { margin-top:10px; } */
 /* .form-wrap:has(.formlabel) + .form-wrap:has(.select-wrap),
 .form-wrap:has(.formlabel) + .form-wrap:has(.check-box) { margin-top:30px; } */
@@ -724,7 +729,7 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 /* selectbox */
 /* .form-wrap:has(.select-wrap) { margin-bottom:10px; } 청test*/
 /* .form-wrap:has(.select-wrap) + .form-wrap:has(.select-wrap) { margin-top:10px; } */
-.form-wrap:has(.select-wrap) + .form-wrap:has(.select-wrap) {/* padding-top:10px; */}
+/* .form-wrap:has(.select-wrap) + .form-wrap:has(.select-wrap) {} */
 
 /* .form-wrap:has(.formlabel.) + .form-wrap:has(.select-wrap), */
 /* .form-wrap:has(.formlabel) + .form-wrap:has(.select-wrap) { padding-top:30px; } */
@@ -974,7 +979,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 .q-wrap > ul > li:first-child { margin-left:0; }
 .q-wrap > ul > li label { display:inline-block; width:100%; height:48px; line-height:48px; font-weight:500; color:#26282C; text-align:center; border-radius:27px; }
 .q-wrap > ul > li input[type="radio"] + label { border:1px solid #DDDDDD; background-color:#fff; }
-.q-wrap > ul > li input[type="radio"]:checked + label { border-color:#260F54; background-color:#260F54; color:#FFFFFF; }
+.q-wrap > ul > li input[type="radio"]:checked + label { border:1px solid #260F54; background-color:#260F54; color:#FFFFFF; }
 .q-wrap .list-bull { margin-top:15px; }
 .q-wrap .list-bull + ul { margin-top:15px; }
 
@@ -1098,6 +1103,8 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 
 /*** 테이블 table ***/
 .table-type + div + table{ margin-top:12px; }
+.table-type + div + table{ margin-top:12px; }
+
 .table-type table, .table-type01 { border:solid #EEEEEE; border-width:1px 0; }
 .table-type.table-col table { border-bottom:none; }
 .table-type th,
@@ -1297,6 +1304,15 @@ form,
 .layerpopup .default-wrap { padding-bottom:60px; }
 .layerpopup.laypop-all .default-wrap { padding-bottom:60px; margin-bottom:100px; }
 .pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap { padding-bottom:0; }
+.layerpopup.laypop-all .default-wrap ~ div { margin-top:30px; }
+.layerpopup.laypop-all .default-wrap ~ div { margin-top:30px; }
+.pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap { padding-bottom:0; }
+.pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap > div { margin-top:40px; }
+.pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap > div { margin-top:40px; }
+.pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap { padding-bottom:0; }
+.pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap > div { margin-top:40px; }
+.pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap { padding-bottom:0; }
+.pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap > div { margin-top:40px; }
 .laypop-all .default-wrap:has(.tabs-wrap.type-uniform) { padding-top: 0; }
 .layerpopup.has-button .default-wrap { padding-bottom:40px; }
 .layerpopup .sub-tit-wrap:first-child { margin-top:0; }
@@ -1507,6 +1523,9 @@ body.on { position:fixed; top:0; }
 .layerpopup .ly-select-list + div .sub-title { padding-top:30px; }
 .layerpopup .txtbox-wrap { padding-bottom:15px;  color:#666666; }
 .layerpopup .default-wrap > div { margin-top:40px;  }
+.layerpopup .txtbox-wrap > div { margin-top:15px; }
+.layerpopup .txtbox-wrap.bt1 { padding-bottom:15px; border-bottom:1px solid #ddd; }
+.layerpopup .txtbox-wrap + .ly-select-list { margin-top:30px; }
 
 
 /** _스크롤 컨텐츠 레이어 **/
