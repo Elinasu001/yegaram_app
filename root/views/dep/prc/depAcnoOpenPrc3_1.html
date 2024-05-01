@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common" 
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm" 
+	data-serverTime="20230803152535"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+
+</head>
+<body>
+	 <!-- header -->
+	 <header class="headerWrap">
+        <div class="headerLeft">
+            <!--D: 이전버튼-->
+            <a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+        </div>
+        <div class="headerCenter">
+            <h2 class="text"><span>e정기예금</span></h2> <!--D: TEXT -->
+        </div>
+        <div class="headerRight">
+            <!--D: 전체메뉴버튼 -->
+            <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>
+        </div>
+    </header>
+	<!-- //header -->
+	
+ 	<!-- s: contentsWrap -->
+	<div class="contentsWrap">
+		<!--contents -->
+		<div class="contents">
+			<div class="default-wrap">
+				<!--S: 이체예약 시 프로세스_이체금액 입력-->
+				<section>
+					<div class="tit-wrap">
+						<p class="txt"><strong>얼마를 저축</strong>하시겠어요?</p>
+					</div>
+					<div class="form-all-wrap">
+						<div class="form-wrap type2">
+							<label for="PYMN_AMT">저축금액</label>
+							<div class="input">
+								<input type="tel" title="" class="validChk" id="PYMN_AMT" name="PYMN_AMT" value="0" placeholder="예치금액을 입력해주세요." required="">
+								<div class="value-wrap">
+									<strong class="value PYMN_AMT">0</strong>
+									<span class="unit">만원</span>
+									<button type="reset" class="btn-delete">삭제</button>
+								</div>
+							</div>
+							<div class="inquiry-set-wrap">
+								<div class="type-area">
+									<ul class="radio-list style-button">
+										<li><button type="button" onclick="incrsAmt(this, 1);">1만</button></li>
+										<li><button type="button" onclick="incrsAmt(this, 5);">5만</button></li>
+										<li><button type="button" onclick="incrsAmt(this, 10);">10만</button></li>
+										<li><button type="button" onclick="incrsAmt(this, 100);">100만</button></li>
+									</ul>
+								</div>
+								<p class="info-txt">10,000원 ~ 10,000,000원까지 저축 할 수 있어요</p>
+							</div>
+						</div>
+						<div class="select-wrap">
+							<div class="select-box" tabindex="1">
+								<label for="" class="essential">가입기간</label>
+								<span class="option" id="">미선택</span>
+							</div>
+							<p class="info-txt">6개월 ~ 36개월까지 가입할 수 있어요</p>
+						</div>
+						<div class="select-wrap">
+							<div class="select-box on" tabindex="1"><!--D: on 클래스 : 값 적용 됐을 경우 , disabled 클래스 : 적용 됐을 경우  -->
+								<label for="" class="essential">출금계좌</label>
+								<span class="option">123-324-234352</span>
+							</div>
+                            <p class="exp-txt">잔액 : <span id="Acct_Amt">50,000,000원</span></p>
+						</div>
+                        <div class="form-wrap">
+                            <label for="ipt02" class="formlabel">매월이자 받으실 계좌번호</label>
+                            <div class="input">
+                                <span>
+                                    <input type="text" title="은행선택" id="ipt02" class="inp" name="" value="" maxlength="6" required="">
+                                </span>
+                                <span></span>
+                                <span class="jummin">
+                                    <input type="text" title="은행계좌비밀번호" id="jumin1" class="inp" name="jumin1" value="101-23-456789" maxlength="0" required="">
+                                </span>
+                            </div>
+                        </div>
+
+
+					</div>
+					<div class="alignment-both-side">
+						<p class="txt">추천인이 있으세요?</p>
+						<button type="button" class="btn btn-sm" >추천인 등록</button>
+					</div>
+				</section>
+				<!--E: 이체예약 시 프로세스_이체금액 입력-->
+			</div>
+		</div>
+		<!-- //contents -->
+		<div class="fixed-btn-wrap">
+			<div class="btn-wrap flexCol">
+				<a href="javascript:void(0);" class="btn">다음</a>
+				<a href="javascript:void(0);" class="btn txt">그만하기</a>
+			</div>
+		</div>
+	<!-- //e: contentsWrap -->
+
+
+
+
+<footer>
+<!-- 푸터 타입별 정의 -->
+</footer>
+
+<!-- 업무공통 -->
+
+</body>
+</html>
