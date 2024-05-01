@@ -416,7 +416,7 @@ body.fix { overflow:hidden; }
 .check-box > .ars label::after { background:url("../images/common/ico-access-phone.png") no-repeat 100%/48px auto; }
 .check-box > .app label::after { background:url("../images/common/ico-access-app.png") no-repeat 100%/48px auto; }
 .check-box > .mydata label::after { background:url("../images/common/ico_mydata.png") center no-repeat; background-size:100%; }
-.check-box > .idcard label::after { background:url("../images/common/ico_readyitem_idcard.png") no-repeat 50% / 36px auto; }
+.check-box > .idcard label::after { background:url("../images/common/ico_idcard.png") no-repeat 50% / 36px auto; }
 .check-box > .camera label::after { background:url("../images/common/ico-access-camera.png") no-repeat center / 35px auto; }
 .check-box > .phone label::after { background:url("../images/common/ico_readyitem_phone.png") no-repeat 50% / 36px auto; }
 .check-box > .ohter label::after { background:url("../images/common/ico_readyitem_other.png") no-repeat 50% / 36px auto; }
