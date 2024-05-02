@@ -796,7 +796,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .step-box { display:flex; position:relative; }
 .step-box::before { content:''; display:inline-block; position:absolute; top:24px; left:50%; transform:translateX(-50%); width:70%; height:2px; background:#EEEBFF; }
 .step-box > li { flex:1; text-align:center; }
-.step-box > li > div { width:48px; height:48px; margin:0 auto 8px; border-radius:15px; background:#EEEBFF; font-weight:700; color:#260F54; font-size:1.22222rem; line-height:48px; }
+.step-box > li > div { width:48px; height:48px; margin:0 auto 8px; border-radius:50px; background:#EEEBFF; font-weight:600; color:#260F54; font-size:1.111111rem; line-height:48px; }
 .step-box > li > span { font-weight:400; font-size:0.88889rem; line-height:1.4375; }
 .step-box + .txt-style { margin:40px 0; }
 .txt-group .bg-box > ul.dot > li { color:#454545; font-size:0.88889rem; line-height:1.4375; }
