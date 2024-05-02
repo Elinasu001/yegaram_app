@@ -745,12 +745,15 @@ window.onload = function() {
 			title: '연월일을 선택해주세요', // 팝업 타이틀
 		},
 		moveEnd: function(scroll) {
+			document.body.style.overflow = 'hidden';
 		},
 		confirm: function(date) {
 			var $el = $(this.config.el);
 			removeErr($el);
 			$el.closest('.select-wrap').addClass('on');
 			$el.find("input").val(date.replaceAll(".",""));
+
+			document.body.style.overflow = 'auto';
 			validChk();
 		}
 	})
@@ -762,6 +765,7 @@ window.onload = function() {
 			title: '일자를 선택해주세요', // 팝업 타이틀
 		},
 		moveEnd: function(scroll) {
+			document.body.style.overflow = 'hidden';
 		},
 		confirm: function(date) {
 			var $el = $(this.config.el);
@@ -771,8 +775,11 @@ window.onload = function() {
 			if (typeof $el[0].onclick == "function") {
 				typeof $el[0].onclick();
 			}
+			document.body.style.overflow = 'auto';
+
 			validChk();
 		}
+	
 	})
 
 	new Rolldate({
@@ -782,6 +789,7 @@ window.onload = function() {
 			title: '월을 선택해주세요', // 팝업 타이틀
 		},
 		moveEnd: function(scroll) {
+			document.body.style.overflow = 'hidden';
 		},
 		confirm: function(date) {
 			var $el = $(this.config.el);
@@ -791,9 +799,15 @@ window.onload = function() {
 			if (typeof $el[0].onclick == "function") {
 				typeof $el[0].onclick();
 			}
+
+			document.body.style.overflow = 'auto';
 			validChk();
 		}
-	})
+
+		
+	
+        
+	});
 
 	new Rolldate({
 		el: '#rolldate4', // div.select-box 의 id
@@ -803,15 +817,17 @@ window.onload = function() {
 			title: '년도를 선택해주세요', // 팝업 타이틀
 		},
 		moveEnd: function(scroll) {
+			document.body.style.overflow = 'hidden';
 		},
 		confirm: function(date) {
 			removeErr($(this.config.el));
 			$(this.config.el).closest('.select-wrap').addClass('on');
+			
+			document.body.style.overflow = 'auto';
 			validChk();
 		}
+		
 	})
-
-
 
 	
 }
