@@ -114,20 +114,38 @@
 							</div>
                             <p class="exp-txt">잔액 : <span id="Acct_Amt">50,000,000원</span></p>
 						</div>
-                        <div class="form-wrap">
-                            <label for="ipt02" class="formlabel">매월이자 받으실 계좌번호</label>
+                        <div class="form-wrap phone">
+                            <label for="" class="formlabel essential">매월이자 받으실 계좌번호</label>
                             <div class="input">
-                                <span>
-                                    <input type="text" title="은행선택" id="ipt02" class="inp" name="" value="" maxlength="6" required="">
+                                <span class="select-wrap">
+                                    <div class="select-box type-line" tabindex="1">
+                                        <span class="option">저축은행</span>
+                                    </div>
                                 </span>
-                                <span></span>
-                                <span class="jummin">
-                                    <input type="text" title="은행계좌비밀번호" id="jumin1" class="inp" name="jumin1" value="101-23-456789" maxlength="0" required="">
+                                <span>
+                                    <input type="text" title="" class="inp " id="" name="" value="101-23-456789" placeholder="계좌번호" maxlength="11" required="" numberonly="">
                                 </span>
                             </div>
+							<div class="check-account">
+                                <input type="checkbox" id="chk01" name="check" value="" checked>
+                                <label for="chk01">
+                                    <span>출금계좌와 동일</span>
+                                </label>
+                            </div>
                         </div>
-
-
+						<div class="select-wrap on">
+							<div class="select-box" tabindex="1">
+								<label for="" class="essential">매월 이자지급일</label>
+								<span class="option" id="">5일</span>
+							</div>
+						</div>
+						<div class="select-wrap">
+							<div class="select-box" tabindex="1">
+								<label for="" class="essential">비과세</label>
+								<span class="option" id="">미선택</span>
+							</div>
+							<p class="info-txt">비과세종합저축의 경우 자격요건 및 한도초과 여부에 따라 변경될 수 있어요</p>
+						</div>
 					</div>
 					<div class="alignment-both-side">
 						<p class="txt">추천인이 있으세요?</p>
