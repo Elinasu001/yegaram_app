@@ -289,7 +289,7 @@ html.font-size-3{ font-size: 24px;}
 .point-red{ color:#FF0000; }
 
 /* 기타 -그레이 */
-.flag { display:inline-block; width:auto; height:23px; margin-right:6px; padding:3px 8px; border-radius:13px; border:1px solid #999999; background:#FFFFFF; font-size:0.66667rem; font-weight:400; color:#666666; letter-spacing:-.5px; text-align:center; vertical-align:middle; } /* 접수완료, 긍정 - 파랑 */
+.flag { display:inline-flex; align-items: center; width:auto; height:23px; margin-right:6px; padding:3px 8px; border-radius:13px; border:1px solid #999999; background:#FFFFFF; font-size:0.66667rem; line-height:1.056rem; font-weight:400; color:#666666; letter-spacing:-.5px; vertical-align:middle; } /* 접수완료, 긍정 - 파랑 */
 .flag.style2 { border:1px solid #9F7CE3; color:#612AD0; } /* 예적금 - 보라색 */
 .flag.style3 {border:1px solid #D00F7B; color:#D00F7B;  }/* 대출- 핑크 */
 
@@ -1979,7 +1979,7 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 /*아이콘 있는 case*/
 .tit-wrap > .txt.has-icon b { font-weight:700; position:relative; }
 .tit-wrap > .txt.has-icon b:before { content:''; display:inline-block; width:24px; height:24px; margin:-5px 6px 0 0; background:url("../images/common/ico_siren.png") no-repeat 50%/24px auto; vertical-align:middle; }
-.tit-wrap > .txt.has-icon strong { font-weight:700; position:relative; }
+.tit-wrap > .txt.has-icon strong { font-weight:600; position:relative; }
 .tit-wrap > .txt.has-icon strong:before { content:''; display:inline-block; width:24px; height:24px; margin:-5px 6px 0 0; background:url("../images/common/ico_siren.png") no-repeat 50%/24px auto; vertical-align:middle; }
 
 .tit-wrap > .s-txt { margin-top:40px; font-size:1rem; line-height:1.38889; }
@@ -2207,10 +2207,10 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .tooltip-form-wrap { margin-left:15px; display:flex; flex-direction:row-reverse; }
 .tooltip-wrap.type2 .tooltip-txt { display:none; left:inherit; top:-53px; right:-10px; padding:12px 15px; background:#F1EBFD; font-weight:400; color:#612AD0; font-size:0.66667rem; line-height:1.58334; transform:none; transition:none; opacity:1; }
 .tooltip-wrap.type2 .tooltip-txt:before { left:inherit; right:13px; border-left-color:#F1EBFD; }
-.like { display:block; width:28px; height:28px; /*margin-top:-5px;*/ background:url("../images/common/ico_heart.png") no-repeat 50% / 28px auto; }
+.like { display:block; width:28px; height:28px; font-size:0; /*margin-top:-5px;*/ background:url("../images/common/ico_heart.png") no-repeat 50% / 28px auto; }
 .like.active { background-image:url("../images/common/ico_heart_on.png"); }
 
-.scale { display:block; width:28px; height:28px; /*margin-top:-5px;*/ background:url("../images/common/ico_scale.png") no-repeat 50% / 28px auto; }
+.scale { display:block; width:28px; height:28px; font-size:0; /*margin-top:-5px;*/ background:url("../images/common/ico_scale.png") no-repeat 50% / 28px auto; }
 .scale.active { background-image:url("../images/common/ico_scale_on.png"); }
 .tooltip-wrap.type2:has(.scale) { /*right:34px;*/ }
 

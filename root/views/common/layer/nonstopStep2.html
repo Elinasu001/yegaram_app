@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common" 
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm" 
+	data-serverTime="20230803152535"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+
+
+<body>
+    <!-- header -->
+    <div id="headerWrap">
+        <script>
+        $(document).ready(function(){
+            document.charset="euc-kr";
+            $("#headerWrap").load("../includes/header.html");
+        });
+        </script>
+    </div>
+	<!-- //header -->
+
+    <form>
+        <!--contentsWrap -->
+        <div class="contentsWrap">
+            <!--contents -->
+            <div class="contents">
+                <div class="default-wrap">
+
+
+                </div>
+            </div>
+            <!-- //contents -->
+
+            <!--S: 보이스피싱 예방 사전점검표 (팝업)-->
+            <div id="voicePop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-layer-close" style="display:block;">
+                <div class="pop-header">
+                    <h2 class="pop-title">보이스피싱 예방 사전점검표</h2>
+                    <button type="button" name="button" class="btn-layer-close" onclick="closePopup('voicePop');">닫기</button>
+                </div>
+                <div class="pop-con-wrap">
+                    <div class="default-wrap">
+                        <div class="tit-wrap">
+                            <p class="txt has-icon"><strong>보이스피싱 주의하세요!</strong></p> <!-- [퍼블] 추가 -->
+                        </div>
+                        <div class="sub-tit-wrap">
+                            <p class="tit">대출빙자 보이스피싱 예방을 위한 사전 점검표</p>
+                        </div>
+                        <section class="terms-area">
+                            <div class="q-wrap">
+                                <p>1. 혹시 지금 진행하시는 대출이, 금융회사직원이라며 전화나 문자를 받아 진행하고 계신가요?</p>
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="q1" id="q11" value="Y" onclick="PageFunc.checkNext(this)">
+                                        <label for="q11" class="rd">예</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="q1" id="q12" value="N" onclick="PageFunc.checkNext(this)">
+                                        <label for="q12" class="rd">아니오</label>
+                                    </li>
+                                </ul>
+                            </div>
+            
+                            <div class="q-wrap">
+                                <p>2. 햇살론 등 저금리의 서민지원대출로 바꿔준다고 해서 대출을 받으라고 하던가요?</p>
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="q2" id="q21" value="Y" onclick="PageFunc.checkNext(this)">
+                                        <label for="q21" class="rd">예</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="q2" id="q22" value="N" onclick="PageFunc.checkNext(this)">
+                                        <label for="q22" class="rd">아니오</label>
+                                    </li>
+                                </ul>
+                            </div>
+            
+                            <div class="q-wrap">
+                                <p>3. 혹시 대출을 받고 바로 상환하면 신용등급이 올라 저금리 대출이 가능하다고 하던가요?</p>
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="q3" id="q31" value="Y" onclick="PageFunc.checkNext(this)">
+                                        <label for="q31" class="rd">예</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="q3" id="q32" value="N" onclick="PageFunc.checkNext(this)">
+                                        <label for="q32" class="rd">아니오</label>
+                                    </li>
+                                </ul>
+                            </div>
+            
+                            <div class="q-wrap">
+                                <p>4. 출처가 불분명한 어플리케이션을 설치하셨나요?</p>
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="q4" id="q41" value="Y" onclick="PageFunc.checkNext(this)">
+                                        <label for="q41" class="rd">예</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="q4" id="q42" value="N" onclick="PageFunc.checkNext(this)">
+                                        <label for="q42" class="rd">아니오</label>
+                                    </li>
+                                </ul>
+                            </div>
+            
+                            <div class="q-wrap">
+                                <p>5. 검찰 등을 사칭하는 자에게 개인정보를 제공하셨나요?</p>
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="q5" id="q51" value="Y" onclick="PageFunc.checkNext(this)">
+                                        <label for="q51" class="rd">예</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="q5" id="q52" value="N" onclick="PageFunc.checkNext(this)">
+                                        <label for="q52" class="rd">아니오</label>
+                                    </li>
+                                </ul>
+                            </div>
+            
+                            <div class="confirm-wrap">
+                                <p class="confirm-txt">상기 보이스피싱 예방 문진 내용을 읽어보고 해당사항이 있는지 여부를 직접 입력하였음을 확인합니다</p>
+                                <span class="confirm-date">2024년 04월 01일</span>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap type-popup">
+                        <a href="#none" class="btn">사전 점검표 확인</a>
+                    </div>
+                </div>
+            </div>
+            <!--E: 보이스피싱 예방 사전점검표 (팝업)-->
+
+            <!--S: 보이스피싱 위험 안내 (팝업)-->
+            <div id="voiceConfirmPop" class="layerpopup layer-up has-button show" style="display:block">
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">보이스피싱 위험 안내</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close" onclick="closePopup('voiceConfirmPop');">닫기</button>
+                    </div>
+                    <div class="default-wrap">
+                        <div class="txtbox-wrap">
+                            <p>대출 빙자 보이스피싱 예방을 위한 사점 점검표 항목 중 단 하나라도 해당이 된다면 금융사기(보이스피싱)가 의심됩니다.</p>
+                            <p> 금융사기예방을 위해 주변 지인에게 금융사기(보이스피싱)여부를 확인 받거나 당행 고객지원팀(1877-7788)으로 연락하여 직원에게 상담을 요청하거나 아래 연락처로 문의주세요.</p>
+                        </div>
+                        <ul class="list-bull">
+                            <li>예가람저축은행 고객지원팀 <strong class="point">1877-7788</strong></li>
+                            <li>금융감독원 콜센터 <strong class="point">1332</strong></li>
+                            <li>경찰청 <strong class="point">112</strong></li>
+                        </ul>
+                    </div>
+                    <div class="fixed-btn-wrap">
+                        <div class="btn-wrap type-popup">
+                            <a href="#none" class="btn" onclick="closePopupUp('voiceConfirmPop');">확인</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--S: 보이스피싱 위험 안내 (팝업)-->
+
+        </div>
+        <!-- //contentsWrap -->
+    </form>
+</body>
+</html>
+
