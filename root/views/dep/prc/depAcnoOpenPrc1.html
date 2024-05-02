@@ -120,36 +120,28 @@ $(document).ready(function(){
 <body>
 	<!-- header -->
 	<header class="headerWrap">
-		<div class="header">
-			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
-			<h2><span>예적금 약관 팝업</span></h2>
-		</div>
-		<div class="menu-wrap"></div>
-	</header>
+        <div class="headerLeft">
+            <a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>  <!--D: 이전버튼-->
+        </div>
+        <div class="headerCenter">
+            <h2 class="text"><span>e-회전정기예금</span></h2>
+        </div>
+        <div class="headerRight">
+        </div>
+    </header>
 	<!-- //header -->
-	
- <!-- s: contentsWrap -->
+	<!-- s: contentsWrap -->
 	<div class="contentsWrap">
-	<form id="frm" name="frm" method="post">
-	<input type="hidden" id="PROD_KNCD" name="PROD_KNCD" value=""/>	<!-- TODO 상품선택: 비대면상품세부종류코드 10:보통예금 20:정기예금 30:적금 40:BC카드 41:롯데카드 50:사잇돌 60:신용 70:종합통장 80:햇살론 -->
-	<input type="hidden" id="PDCD"     	name="PDCD" value=""/>   			<!-- TODO 상품선택: 비대면통합상품코드 (중앙회 상품코드) -->
-	<input type="hidden" id="SINT_CMIN_DVCD"	name="SINT_CMIN_DVCD" value=""/>   <!-- TODO 상품선택: 단리복리구분코드(1:단리  2:복리) -->
-	
         <!-- s: contents -->
         <div class="contents">
 			<div class="default-wrap">
-				<div class="tit-wrap">
-					<p class="txt"><strong>예/적금 가입을 위해</strong><br/><strong>약관에 동의</strong>해 주세요</p>
-				</div>
 				<section class="terms-area">
-					<!--//[퍼블-2]추가 -->
 					<div class="terms-wrap level1 chk-all">
 						<fieldset>
 							<input type="checkbox" id="Chk" name="Chk" value="" class="">
-							<label for="Chk"><a href="#none" onclick="openPopup('lyPullPop01')">금융상품 중요사항 안내</a></label>
+							<label for="Chk"><a href="#none">금융상품 중요사항 안내</a></label>
 						</fieldset>
 					</div>
-					<!--[퍼블-2]추가// -->
 					<div class="terms-wrap level1 chk-all">
 						<fieldset>
 							<input type="checkbox" id="allChk01" name="allChk01" value="" class="check all">
@@ -160,7 +152,7 @@ $(document).ready(function(){
 					<div class="terms-wrap level2">
 						<fieldset>
 							<input type="checkbox" id="chkEach01" name="check" value="" class="check">
-							<label for="chkEach01"><span>[필수] 보고파정기적금 상품설명서</span></label>
+							<label for="chkEach01"><span>[필수] e-회전정기예금 상품설명서</span></label>
 						</fieldset>
 					</div>
 
@@ -174,28 +166,28 @@ $(document).ready(function(){
 					<div class="terms-wrap level2">
 						<fieldset>
 							<input type="checkbox" id="chkEach03" name="check" value="" class="check">
-							<label for="chkEach03"><span>[필수] 적립식 예금약관</span></label>
+							<label for="chkEach03"><span>[필수] 예금자 보호 안내</span></label>
 						</fieldset>
 					</div>
 
 					<div class="terms-wrap level2">
 						<fieldset>
 							<input type="checkbox" id="chkEach04" name="check" value="" class="check">
-							<label for="chkEach04"><span>[필수] 금융실명법에 의한 고객주의의무</span></label>
+							<label for="chkEach04"><span>[필수] 비과세종합저축 소득요건 관련 동의서</span></label>
 						</fieldset>
 					</div>
 
 					<div class="terms-wrap level2">
 						<fieldset>
 							<input type="checkbox" id="chkEach05" name="check" value="" class="check">
-							<label for="chkEach05"><span>[필수] 예금자보호안내</span></label>
+							<label for="chkEach05"><span>[필수] 비과세종합저축 소득요건 관련 동의서</span></label>
 						</fieldset>
 					</div>
 
 					<div class="terms-wrap level2">
 						<fieldset>
 							<input type="checkbox" id="chkEach06" name="check" value="" class="check">
-							<label for="chkEach06"><span>[필수] 예금보험관계 설명확인(예금)</span></label>
+							<label for="chkEach06"><span>[필수] 비과세종합저축 소득요건 관련 동의서</span></label>
 						</fieldset>
 					</div>
 
@@ -219,42 +211,37 @@ $(document).ready(function(){
 							<label for="chkEach09"><span>약관 및 상품설명서를 이메일로  제공받는것에 동의합니다</span></label>
 						</fieldset>
 					</div>
+
 				</section>
 
-				<div class="form-wrap"><!--[퍼블] 클래스 변경-->
-					<label for="email" class="formlabel onbasic">이메일</label><!--[퍼블] 추가-->
-					<div class="input">
-						<input type="text" id="email" class="inp validChk" pattern=".+@\." placeholder="이메일을 입력해주세요" name="" value="" required="">
+				<div class="form-all-wrap">
+					<div class="form-wrap">
+						<label for="ipt15" class="formlabel">이메일</label>
+						<div class="input">
+							<input type="text" title="이메일" id="ipt15" class="inp" name="" value="" placeholder="이메일을 입력" required="">
+							<button type="button" class="btn-delete">검색어 삭제</button>
+						</div>
+						<p class="info-txt">계좌개설 후 입력하신 이메일로 약관 및 상품설명서가 발송돼요</p>
 					</div>
-					<!-- [퍼블] 삭제<button type="button" class="btn-delete">검색어 삭제</button> -->
 
-					<!-- <ul class="email-list active">
-						<li><a href="#none"><span>aaaa</span>@gmail.com</a></li>
-						<li><a href="#none"><span>aaaa</span>@naver.com</a></li>
-						<li><a href="#none"><span>aaaa</span>@nate.com</a></li>
-						<li><a href="#none"><span>aaaa</span>@daum.net</a></li>
-						<li><a href="#none"><span>aaaa</span>@nate.com</a></li>
-					</ul> -->
-
-					<p class="error-txt">이메일을 입력해주세요</p>
 				</div>
 			</div>
         </div>
         <!-- //e: contents -->
 
-		<div class="fixed-btn-wrap">
-			<div class="btn-wrap">
-				<a href="#none" class="btn" onclick="PageFunc.proc();">확인</a>
+		<div class="fixed-btn-wrap"> 
+			<div class="btn-wrap flexCol">
+				<a href="javascript:void(0);" class="btn">확인</a>
+				<a href="javascript:void(0);" class="btn txt">그만하기</a>
 			</div>
-			<a href="#none" class="btn-txt" onclick="PageFunc.cancel();">그만하기</a>
 		</div>
 
-	</form>
+
     </div>
 		<!-- //e: contentsWrap -->
-					
+
 	<!-- footer -->
-	
+
 
 
 
