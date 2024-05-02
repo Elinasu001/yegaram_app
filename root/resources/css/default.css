@@ -1333,6 +1333,7 @@ form,
 
 
 /* _폼 여백 test(청) */
+.form-wrap.phone .select-wrap { width:40%;  }
 
 /* .tit-wrap:has(+ .form-wrap) { padding-bottom:13px; } test*/
 /* .tit-wrap:has(+ .form-wrap:has(.action)) + .form-wrap:has(.action) { margin-bottom:40px; }
