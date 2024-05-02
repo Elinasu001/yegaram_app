@@ -1055,7 +1055,7 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 .btn-txt.login { height:17px; color:#4E32A5; font-weight:500;  }
 .btn-txt.login:after { content:''; border-radius: 0.1em;  display:inline-block; width:6px; height:6px; margin:-2px 0 0 4px; border:solid #4E32A5; border-width:2px 2px 0 0; vertical-align:middle; transform:rotate(45deg);  }
 /** type-popup : 바텀시트에서 사용하는 버튼 **/
-.btn-wrap.type-popup .btn { /*border:2px solid #E6E2FB;*/ font-size:1rem; font-weight:700; background:#EEEBFF; color:#260F54; box-shadow:none; }
+.btn-wrap.type-popup .btn { /*border:2px solid #E6E2FB;*/ font-size:1rem; font-weight:700; background:#4E32A5; color:#FFFFFF; box-shadow:none; }
 .btn-wrap.type-popup .btn:before { content:none; }
 
 /** sm-alert : alert팝업에서 사용하는 버튼 **/

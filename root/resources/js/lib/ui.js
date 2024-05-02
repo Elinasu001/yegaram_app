@@ -716,9 +716,29 @@ function dynamicInput() {
 
 window.onload = function() {
 
+	
+//	new Rolldate({
+//		el: '#rolldate3', 
+//		format: 'YYYY.MM.DD',
+//		beginYear: 1980,
+//		endYear: 2023,
+//		lang: {
+//			title: '입사연월일 선택', // 팝업 타이틀
+//		},
+//		moveEnd: function(scroll) {
+//		},
+//		confirm: function(date) {
+//			removeErr($(this.config.el));
+//			$(this.config.el).closest('.select-wrap').addClass('on');
+//			$(this.config.el).siblings("input").val(date.replace(".",""));
+//			validChk();
+//		}
+//	})
+//	
+
 	new Rolldate({
 		el: '#rolldate', // div.select-box 의 id
-		format: 'YYYY.MM.DD',
+		format: 'YYYY/MM/DD',
 		beginYear: 1980,
 		endYear: 2023,
 		lang: {
@@ -755,24 +775,26 @@ window.onload = function() {
 		}
 	})
 
-//	new Rolldate({
-//		el: '#rolldate3', 
-//		format: 'YYYY.MM.DD',
-//		beginYear: 1980,
-//		endYear: 2023,
-//		lang: {
-//			title: '입사연월일 선택', // 팝업 타이틀
-//		},
-//		moveEnd: function(scroll) {
-//		},
-//		confirm: function(date) {
-//			removeErr($(this.config.el));
-//			$(this.config.el).closest('.select-wrap').addClass('on');
-//			$(this.config.el).siblings("input").val(date.replace(".",""));
-//			validChk();
-//		}
-//	})
-//	
+	new Rolldate({
+		el: '#rolldate3', // div.select-box 의 id
+		format: 'MM',
+		lang: {
+			title: '월을 선택해주세요', // 팝업 타이틀
+		},
+		moveEnd: function(scroll) {
+		},
+		confirm: function(date) {
+			var $el = $(this.config.el);
+			removeErr($el);
+			$el.closest('.select-wrap').addClass('on');
+			
+			if (typeof $el[0].onclick == "function") {
+				typeof $el[0].onclick();
+			}
+			validChk();
+		}
+	})
+
 	new Rolldate({
 		el: '#rolldate4', // div.select-box 의 id
 		format: 'YYYY',
