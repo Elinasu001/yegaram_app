@@ -326,7 +326,7 @@ function fnAutoFocusing(){
 				<span> 
 					<input type="hidden" title="주민등록번호 뒷자리(암호화)" id="A_SSN2" class="inp ${reqDs.id}_validChk" name="A_SSN2" value="" readonly="readonly"
 					onclick="javascript:removeErr(this); biz.keypad('주민번호 뒷자리', 7, setKeypadData);" onchange="javascript:validChk('${reqDs.id}');" placeholder="주민등록번호 뒷자리를 입력해주세요">
-					<span class="jumintext" id="jumintextId" onclick="javascript:removeErr(this); biz.keypad('주민번호 뒷자리', 7, setKeypadData);">●●●●●●●</span>
+					<span class="jumintextjumintextId" id="jumintextId" onclick="javascript:removeErr(this); biz.keypad('주민번호 뒷자리', 7, setKeypadData);">●●●●●●●</span>
 				</span>
 			</div>
 			<p class="error-txt">주민등록번호를 입력해주세요.</p>

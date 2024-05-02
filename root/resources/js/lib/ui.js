@@ -740,7 +740,7 @@ window.onload = function() {
 		el: '#rolldate', // div.select-box 의 id
 		format: 'YYYY/MM/DD',
 		beginYear: 1980,
-		endYear: 2023,
+		endYear: 2025,
 		lang: {
 			title: '연월일을 선택해주세요', // 팝업 타이틀
 		},

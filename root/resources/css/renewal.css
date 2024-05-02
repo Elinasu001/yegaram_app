@@ -1116,3 +1116,11 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .icCerti.faceId::after {  background:url(../images/common/ico_faceId.png) 100%/48px auto; }
 .icCerti.figPoint::after { background:url(../images/common/ico_figPoint.png) 100%/48px auto; }
 .icCerti.pattern::after { background:url(../images/common/ico_pattern.png) 100%/48px auto; }
+
+
+/* 키패드 */
+.showFormBx ul li { border-radius: 50% !important;   }
+.showFormBx ul li.on { background-color: #492BA2; }
+.popup2 .btnSection .btnCustom.exchange .exchangeBox { background:url() }
+.popup2 .btnSection .btnCustom span{ color:#26282C !important; }
+.popup2 .btnSection .btnCustom:hover { background:#F6F2FF; }
