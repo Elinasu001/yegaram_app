@@ -321,10 +321,16 @@ body.fix { overflow:hidden; }
 
 /* 공통-직종선택 */
 .arrow-button-list li { position:relative; }
-.arrow-button-list li a { display:block; width:100%; padding:0 20px; height:60px; line-height:60px; font-weight:400; color:#454545; border-bottom:solid 1px #DDDDDD; background:#fff;}
-.arrow-button-list li:first-of-type a { border-top:1px solid #dddddd; }
+.arrow-button-list li a { display:block; width:100%; padding:0 20px; height:60px; line-height:60px; font-weight:400; color:#454545; border-radius:15px; border:solid 1px #DDDDDD; background:#fff;}
 .arrow-button-list li a:after{ content: ''; display: block; position: absolute; width: 16px; height: 16px; transform: translateY(-50%); border-radius: 10px; right: 18px; top: 50%; background: url("../images/common/ic-arrow-right.png")no-repeat center/100%; }
 .arrow-button-list li + li { margin-top:10px; }
+
+/**상품안내 변경**/
+.product-info .arrow-button-list li a { border-radius:0; border:0; border-bottom:1px solid #dddddd;  }
+.arrow-button-list li a:after{ content: ''; display: block; position: absolute; width: 16px; height: 16px; transform: translateY(-50%); border-radius: 10px; right: 18px; top: 50%; background: url("../images/common/ic-arrow-right2.png")no-repeat center/100%; }
+.product-info .arrow-button-list li:first-of-type a { border-top:1px solid #dddddd; }
+.product-info .arrow-button-list li + li { margin-top:0; }
+
 
 /* 공통-신분증촬영 */
 .imgbox-wrap { min-height:200px; margin-top:40px; padding:30px 47px; background:#F8F8F8; border-radius:15px; }
