@@ -289,7 +289,8 @@ html.font-size-3{ font-size: 24px;}
 .point-red{ color:#FF0000; }
 
 /* 기타 -그레이 */
-.flag { display:inline-flex; align-items: center; width:auto; height:23px; margin-right:6px; padding:3px 8px; border-radius:13px; border:1px solid #999999; background:#FFFFFF; font-size:0.66667rem; line-height:1.056rem; font-weight:400; color:#666666; letter-spacing:-.5px; vertical-align:middle; } /* 접수완료, 긍정 - 파랑 */
+.flag { display:inline-flex; align-items: center; width:auto; height:23px;/*margin-right:6px;*/ padding:3px 8px; border-radius:13px; border:1px solid #999999; background:#FFFFFF; font-size:0.66667rem; line-height:1.056rem; font-weight:400; color:#666666; letter-spacing:-.5px; vertical-align:middle; } /* 접수완료, 긍정 - 파랑 */
+.flag + .flag { margin-right:6px; }
 .flag.style2 { border:1px solid #9F7CE3; color:#612AD0; } /* 예적금 - 보라색 */
 .flag.style3 {border:1px solid #D00F7B; color:#D00F7B;  }/* 대출- 핑크 */
 
@@ -2206,9 +2207,10 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 /** [공통] 상품리스트 템플릿 **/
 .tooltip-form-wrap { margin-left:15px; display:flex; flex-direction:row-reverse; }
+.tooltip-wrap.type2 { z-index:13; }
 .tooltip-wrap.type2 .tooltip-txt { display:none; left:inherit; top:-53px; right:-10px; padding:12px 15px; background:#F1EBFD; font-weight:400; color:#612AD0; font-size:0.66667rem; line-height:1.58334; transform:none; transition:none; opacity:1; }
 .tooltip-wrap.type2 .tooltip-txt:before { left:inherit; right:13px; border-left-color:#F1EBFD; }
-.like { display:block; width:28px; height:28px; font-size:0; /*margin-top:-5px;*/ background:url("../images/common/ico_heart.png") no-repeat 50% / 28px auto; }
+.like { z-index:10;  display:block; width:28px; height:28px; font-size:0; /*margin-top:-5px;*/ background:url("../images/common/ico_heart.png") no-repeat 50% / 28px auto; }
 .like.active { background-image:url("../images/common/ico_heart_on.png"); }
 
 .scale { display:block; width:28px; height:28px; font-size:0; /*margin-top:-5px;*/ background:url("../images/common/ico_scale.png") no-repeat 50% / 28px auto; }
@@ -2246,8 +2248,10 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .visual-area .desc-txt + ul{ display:flex; justify-content:center;}
 .product-detail .visual-area .desc-txt + ul > li { width:50%; }
 .product-detail .visual-area .desc-txt + ul > li::before { content:""; display:inline-block; width:64px; height:64px; border-radius:50%; background-color:#fff; background-position:center; background-repeat:no-repeat; background-size:48px;  }
-.product-detail .visual-area .desc-txt + ul > li.limit::before { background-image:url("../images/common/ico_product01.png"); }
-.product-detail .visual-area .desc-txt + ul > li.rate::before { background-image:url("../images/common/ico_product02.png"); }
+.product-detail.dep01 .visual-area .desc-txt + ul > li:nth-of-type(1)::before  { background-image:url("../images/common/ico_product01.png"); }
+.product-detail.dep01 .visual-area .desc-txt + ul > li:nth-of-type(2)::before { background-image:url("../images/common/ico_product02.png"); }
+.product-detail.dep02 .visual-area .desc-txt + ul > li:nth-of-type(1)::before  { background-image:url("../images/common/ico_product_limit.png"); }
+.product-detail.dep02 .visual-area .desc-txt + ul > li:nth-of-type(2)::before { background-image:url("../images/common/ico_product_rate.png"); }
 .product-detail .visual-area .desc-txt + ul > li > strong.tit { display:block; margin:8px 0 4px; color:#666666; font-size:0.77778rem; }
 .product-detail .visual-area .desc-txt + ul > li > span.exp { display:block; font-size:0.88889rem; font-weight:500; color:#033333;  }
 .product-detail .visual-area .flag-tit-wrap { display:block; margin-top:5px; }
@@ -2274,8 +2278,9 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .visual-area .flag-tit-wrap { display:block; margin-top:5px; }
 .product-detail .visual-area .icon-exp + .flag-tit-wrap { margin-top:15px; /*padding-right:40px;*/ }
 .product-detail .visual-area .icon-exp + .flag-tit-wrap:has(.tooltip-wrap.type2+.tooltip-wrap.type2) { /*padding-right:28px;*/ }
-.product-detail .visual-area .flag-tit-wrap .tit { display:block; margin-top:10px; font-size:1.22222rem; font-weight:600; color:#260F54; word-break:normal; }
-.product-detail .visual-area .flag-tit-wrap .tooltip-wrap.type2 { z-index:12; position:absolute; right:0; top:0; }
+.product-detail.dep01 .visual-area .flag-tit-wrap .tit { display:block; margin-top:10px; font-size:1.22222rem; font-weight:600; color:#260F54; word-break:normal; }
+.product-detail.dep02 .visual-area .flag-tit-wrap .tit { color:#ED008D; }
+.product-detail .visual-area .flag-tit-wrap .tooltip-wrap.type2 {position:absolute; right:0; top:0; }
 .product-detail .visual-area .flag-tit-wrap .tit { display:block; margin-top:10px; font-size:1.22222rem; font-weight:600; color:#260F54; word-break:normal; }
 .product-detail .visual-area .flag-tit-wrap .tooltip-wrap.type2 { position:absolute; right:0; top:0; }
 .product-detail .visual-area .label-info-wrap { padding:50px 0 40px; }
@@ -2320,7 +2325,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .sub-tit-wrap { display:block; margin:40px 0; font-size:0 }
 .sub-tit-wrap .tit { display:block; font-size:0.88889rem; line-height:1.38889; font-weight:600; }
 .sub-tit-wrap .txt { display:block; margin-top:15px; font-size:0.88889rem; line-height:1.38889; font-weight:300; }
-.sub-tit-wrap .tit  + .txt { margin-top:0; }
+/* .sub-tit-wrap .tit  + .txt { margin-top:0; } */
 .sub-tit-wrap .txt.hyphen > li { position:relative; padding-left:15px; }
 .sub-tit-wrap .txt.hyphen > li::before { content:"-"; position:absolute; top:0; left:0;  }
 /* .sub-tit-wrap .txt.dot > li { position:relative; padding-left:10px; }
@@ -2335,7 +2340,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 /* .sub-tit-wrap:has(+.form-wrap):not(:has(.txt)),
 .sub-tit-wrap:has(+.check-box):not(:has(.txt)),
 .sub-tit-wrap:has(+.date-sel-wrap):not(:has(txt)) { margin-bottom:15px; } */
-
+.sub-tit-wrap .table-type { margin-top:15px; }
 .sub-tit-wrap .toggle-wrap { display:flex; align-items:center;}
 .sub-tit-wrap .toggle-wrap .tit { flex:1; text-align:left; }
 

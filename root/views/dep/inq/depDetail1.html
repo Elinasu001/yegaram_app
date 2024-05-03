@@ -141,15 +141,15 @@ function fnProdJoin(prodKncd, pdcd, pdNm){
 		</div>
 	</header>
         <!-- s: contentsWrap -->
-		<div class="contentsWrap product-detail dep01"> <!-- [퍼블-4] dep01, dep02, dep03 클래스 변경시 .visual-area 아이콘 변경 -->
+		<div class="contentsWrap product-detail dep01"> <!-- D: dep01, dep02 클래스 변경시 .visual-area 아이콘 변경 -->
 			<!-- s: contents -->
 			<div class="contents">
 				<!-- s: default-wrap -->
 				<div class="default-wrap">
 					<div class="visual-area">
 						<div class="flag-tit-wrap">
-							<p><em class="flag style2">목돈굴리기</em></p>
-							<strong class="tit">e-회전정기예금</strong> 
+							<p><em class="flag style2">목돈굴리기</em></p><!--D: style2 클래스 : 목돈굴리기/입출금자유/목돈마련상품, style3 클래스 : 대출상품 -->
+							<strong class="tit">e-회전정기예금</strong>
 							<div class="tooltip-wrap type2">
 								<span class="like"></span>
 								<div class="tooltip-txt">
@@ -166,11 +166,11 @@ function fnProdJoin(prodKncd, pdcd, pdNm){
 						<p class="desc-txt">#회전정기예금 #변동금리 #2년,3년 #인터넷,모바일가입</p> 
 
 						<ul>
-							<li class="limit">
+							<li class="amount">
 								<strong class="tit">가입금액</strong>
 								<span class="exp">제한없음</span>
 							</li>
-							<li class="rate">
+							<li class="term">
 								<strong class="tit">가입기간</strong>
 								<span class="exp">제한없음</span>
 							</li>
@@ -330,7 +330,7 @@ function fnProdJoin(prodKncd, pdcd, pdNm){
 			<!-- //e: contents -->
 
 			<!-- s: 비과세 종합저축 클릭시 풀팝업 -->
-			<div id="lyPullPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display:block;">
+			<div id="lyPullPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display:none;">
 				<div class="pop-header">
                     <h2 class="pop-title">비과세종합저축 가입안내</h2>
                     <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lypullPop')">닫기</button>
@@ -540,7 +540,7 @@ function fnProdJoin(prodKncd, pdcd, pdNm){
 			<!-- e: 금리 안내 클릭시 풀팝업 -->
 
 			<!-- s: 계좌개설 신청 클릭시 팝업 -->
-            <div id="lySel03" class="layerpopup layer-up show has-button" style="display:block">
+            <div id="lySel03" class="layerpopup layer-up show has-button" style="display:none">
                 <div class="content-wrap">
                     <div class="pop-header">
                         <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
@@ -584,7 +584,7 @@ function fnProdJoin(prodKncd, pdcd, pdNm){
 				</div>
 			</div>
 			<!-- e: 서비스 이용 불가 시간 안내 알럿 -->
-            <div id="lyAlert" class="layerpopup type-alert on" style="display: block;">
+            <div id="lyAlert" class="layerpopup type-alert on" style="display: none;">
                 <div class="content-wrap">
                     
                     <div class="pop-con-wrap">
