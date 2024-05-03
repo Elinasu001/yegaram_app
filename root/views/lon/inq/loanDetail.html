@@ -56,16 +56,24 @@ $(document).ready(function(){
 		var $tooltipWrap = $(this).parents('.tooltip-wrap');
 		var $regText  = $(this).siblings('.tooltip-txt.reg');
 		var $delText = $(this).siblings('.tooltip-txt.del');
+		var $toolLike = $(this).siblings('.like');
+
 
 		if ($tooltipWrap.hasClass('type2')) {
+            
+
 			if ($(this).hasClass('active')) {
 				$(this).removeClass('active');
+                // $tooltipWrap.css('z-index', 13);
+                // $toolLike.css('z-index', 10);
 				$delText.fadeIn();
 				setTimeout(function () {
 					$delText.fadeOut();
 				}, 1000);
 			} else {
 				$(this).addClass('active');
+                // $tooltipWrap.css('z-index', 13);
+                $toolLike.css('z-index', 10);
 				$regText.fadeIn();
 				setTimeout(function () {
 					$regText.fadeOut();

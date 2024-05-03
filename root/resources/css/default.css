@@ -2207,10 +2207,12 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 /** [공통] 상품리스트 템플릿 **/
 .tooltip-form-wrap { margin-left:15px; display:flex; flex-direction:row-reverse; }
-.tooltip-wrap.type2 { z-index:13; }
-.tooltip-wrap.type2 .tooltip-txt { display:none; left:inherit; top:-53px; right:-10px; padding:12px 15px; background:#F1EBFD; font-weight:400; color:#612AD0; font-size:0.66667rem; line-height:1.58334; transform:none; transition:none; opacity:1; }
-.tooltip-wrap.type2 .tooltip-txt:before { left:inherit; right:13px; border-left-color:#F1EBFD; }
-.like { z-index:10;  display:block; width:28px; height:28px; font-size:0; /*margin-top:-5px;*/ background:url("../images/common/ico_heart.png") no-repeat 50% / 28px auto; }
+/* .tooltip-wrap.type2 { z-index:13; } */
+.tooltip-wrap.type2 .tooltip-txt  { display:none; left:inherit; top:-53px; right:-10px; padding:12px 15px; background:#F1EBFD; font-weight:400; color:#612AD0; font-size:0.66667rem; line-height:1.58334; transform:none; transition:none; opacity:1; }
+.tooltip-wrap.type2 .tooltip-txt:before {  left:inherit; right:13px; border-left-color:#F1EBFD; }
+/* .tooltip-wrap.type2 .tooltip-txt::before  { z-index:13; }
+.tooltip-wrap.type2 .tooltip-txt  { z-index:13; } */
+.like {  z-index:10; display:block; width:28px; height:28px; font-size:0; /*margin-top:-5px;*/ background:url("../images/common/ico_heart.png") no-repeat 50% / 28px auto; }
 .like.active { background-image:url("../images/common/ico_heart_on.png"); }
 
 .scale { display:block; width:28px; height:28px; font-size:0; /*margin-top:-5px;*/ background:url("../images/common/ico_scale.png") no-repeat 50% / 28px auto; }
@@ -2282,7 +2284,6 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail.dep02 .visual-area .flag-tit-wrap .tit { color:#ED008D; }
 .product-detail .visual-area .flag-tit-wrap .tooltip-wrap.type2 {position:absolute; right:0; top:0; }
 .product-detail .visual-area .flag-tit-wrap .tit { display:block; margin-top:10px; font-size:1.22222rem; font-weight:600; color:#260F54; word-break:normal; }
-.product-detail .visual-area .flag-tit-wrap .tooltip-wrap.type2 { position:absolute; right:0; top:0; }
 .product-detail .visual-area .label-info-wrap { padding:50px 0 40px; }
 .product-detail .visual-area .label-info-wrap:has(+ .text-bar-list.type-box) { padding-bottom:30px; }
 .product-detail .product-info { margin:0 -20px; padding:0; width:calc(100% + 40px); }
