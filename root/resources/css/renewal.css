@@ -397,7 +397,7 @@ body.fix { overflow:hidden; }
 .check-account input[type="checkbox"] { display:block; position:absolute; top:0; left:0; width:100%; height:100%; appearance:none; background-color:transparent; -webkit-appearance:none; cursor:pointer; }
 .check-account input[type="checkbox"] + label span:before { content:""; position:absolute; left:0; top:50%; transform:translateY(-50%); width:20px; height:20px; background:url("../images/common/chk-off.png") no-repeat center/100%; cursor:pointer; }
 .check-account input[type="checkbox"]:checked + label span:before{ background:url("../images/common/chk-on.png") no-repeat center/100%; }
-.check-account span { /* display:inline-block; width:100%; 2023-07-07, 주석*/ padding-left:28px; font-size:1rem; line-height:1.38889rem; }
+.check-account span { /* display:inline-block; width:100%; 2023-07-07, 주석*/ padding-left:28px; font-size:0.88889rem; line-height:1.278rem; }
 .check-account + .select-wrap { margin-top:20px; }
 
 /* select table 체크 */

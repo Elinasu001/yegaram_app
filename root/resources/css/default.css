@@ -483,7 +483,7 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .form-all-wrap .form-wrap { margin-top:30px; }
 .form-all-wrap .form-wrap.type-box { margin-top:10px;}
 
-.form-all-wrap .select-wrap + .form-wrap { margin-top:20px; }
+/*.form-all-wrap .select-wrap + .form-wrap { margin-top:20px; }*/
 .form-wrap .select-wrap { margin-top:0; }
 .form-wrap .check-account { margin-top:0; margin-bottom:20px; }
 .form-wrap .input + .check-account { margin-top:10px; }
