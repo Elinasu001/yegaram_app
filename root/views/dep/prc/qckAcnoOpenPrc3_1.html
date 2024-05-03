@@ -48,112 +48,6 @@
 	data-activeMode="local"
 	data-activeEnv="${active.env">
 </script>
-<script type="text/javascript">
-var PageFunc = function() {
-	
-	var _back = function() { // 뒤로가기 
-		history.back();
-	}
-	
-	// 본처리
-	var _proc = function() {
-		if(_validate()) {
-			addFormData($("#frm"), "LINK_ACT", "FORM_MNG"); // 등록데이터 세션 누적
-			doActionFrame('dep/prc/qckAcnoOpenPrc3', $("#frm"));
-		}
-	}
-	
-	
-	var _cancel = function() { // 그만하기
-		goMainPage();
-	}
-	
-	var _validate = function() { // 유효성검증
-		if (finalValidChk()) {
-			
-			return true;
-		}
-	}
-
-	return {
-		back : _back,
-		proc : _proc,
-		cancel : _cancel
-	};
-}();
-
-
-$(document).ready(function(){
-	
-	
-});
-
-/**************************
-* 셀렉트박스 레이어 호출
-***************************/
-var idNum = "";	// 선택한 항목 인덱스
-function openSelect(title, groupCd, num) {
-	idNum = num;
-	var divId = "#selDiv"+idNum;// 셀렉트박스 영역
-	
-	// error 비활성화
-	var parentDiv = $(divId).closest(".form-wrap");
-	parentDiv.removeClass("error");
-	
-	// 자동 호출여부 체크
-	if (!$(divId).hasClass("autoPass")) {
-		$(divId).addClass("autoPass");			
-	} 
-	
-	// 레이어 호출
-	biz.select(title, groupCd, function(selData){
-		selectCallback(selData);
-	});
-}
-
-/**************************
-* 셀렉트박스 콜백 : 선택값 세팅
-***************************/
-function selectCallback(data) {
-	var divId = "#selDiv"+idNum;// 셀렉트박스 영역
-	var txtId = "#qText"+idNum;	// 고객화면에 노출되는 텍스트
-	var valId = "#qValue"+idNum;// 선택값
-	var resId = "";				// 기타사유
-	var nameVal = data.name;
-	
-	// 선택값 세팅
-	$(txtId).html(nameVal);
-	$(valId).val(data.code);
-	if (!$(divId).hasClass("on")) $(divId).addClass("on");
-	
-	//하단 다음버튼 활성화
-	validChk();
-}
-
-//직종선택
-function openJob(obj){
-	removeErr(obj);
-	biz.jobSelect(jobResultCallBack);
-};
-
-//표준직업선택 callBack
-function jobResultCallBack(result) {
-	event.preventDefault();
-	console.log("직종선택 callback::["+result.JOBCD+"]:["+result.JOBNM+"]");
-	//var selJobNm = result.JOBNM;
-	if(result.JOBNM.length > 12){
-		result.JOBNM = result.JOBNM.substring(0,12)+"..."
-	}
-	$("#sel_jopNm").text(result.JOBNM);		//표준직업명
-	$("#INDV_STND_OCPT_CLCD").val(result.JOBCD);	//업종코드 
-	
-	//스크립트 컨트롤
-	$("#div_job").addClass("on");
-	
-	validChk();	// 하단버튼 활성화
-}
-
-</script>
 </head>
 <body>
 	<!-- header -->
@@ -218,20 +112,6 @@ function jobResultCallBack(result) {
 			</div>
 		</div>
 
-        <div id="lySel01" class="layerpopup layer-up show" style="position: fixed; top: 500px; left: 0px; display: block;"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
-            <div class="content-wrap">
-                <div class="pop-header">
-                    <h2 class="pop-title">등록구분</h2>
-                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-                </div>
-                <div class="ly-scroll-con ly-select">
-                    <ul class="ly-select-list">
-                        <li><button>주민등록번호</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                        <li><button>법인(기업) 사업자번호</button></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 		<!-- //e: contents -->
 
 		<div class="fixed-btn-wrap">
@@ -308,11 +188,6 @@ function jobResultCallBack(result) {
                         <li><button>부동산 양도소득</button></li>
                         <li class="active">
                             <button>기타</button>
-                            <div class="form-wrap  view-wrap form-type2">
-                                <div class="input">
-                                    <input type="text" title="기타" id="ipt02" class="inp" name="" value="" placeholder="대출목적을 입력해 주세요" required="">
-                                </div>
-                            </div>
                         </li>
                     </ul>
                 </div>
