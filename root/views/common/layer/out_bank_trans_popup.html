@@ -51,113 +51,91 @@
 </head>
 
 <body>
-    <!-- header -->
-    <div id="headerWrap">
-        <script>
-        $(document).ready(function(){
-            document.charset="euc-kr";
-            $("#headerWrap").load("../includes/header.html");
-        });
-        </script>
+
+
+<!--contentsWrap -->
+<div class="contentsWrap">
+    <!--contents -->
+    <div class="contents">
+        <div class="default-wrap">
+
+
+        </div>
     </div>
-	<!-- //header -->
+    <!-- //contents -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
+    <!-- s: 타은행 본인계좌 인증 - 타은행 계좌번호 입력 -->
+    <div id="inc_outBankTransCrtf01" class="layerpopup laypop-all" style="display:block;">
+        <div class="pop-header">
+            <h2 class="pop-title">타행 본인계좌 인증</h2>
+            <button type="button" name="button" class="btn-layer-close">닫기</button>
+        </div>
 
-
+        <!-- s: content -->
+        <div class="pop-con-wrap">
+            <div class="default-wrap">
+                <div class="tit-wrap">
+                    <p class="txt">
+                        <strong>타행 본인 계좌 인증</strong>으로<br>본인 확인을 진행해요
+                    </p>
                 </div>
-            </div>
-            <!-- //contents -->
-
-            <!-- s: 타은행 본인계좌 인증 - 타은행 계좌번호 입력 -->
-            <div id="inc_outBankTransCrtf01" class="layerpopup laypop-all" style="display:block;">
-                <div class="pop-header">
-                    <h2 class="pop-title">타행 본인계좌 인증</h2>
-                    <button type="button" name="button" class="btn-layer-close">닫기</button>
-                </div>
-
-                <!-- s: content -->
-                <div class="pop-con-wrap">
-                    <div class="default-wrap">
-                        <div class="tit-wrap">
-                            <p class="txt">
-                                <strong>타행 본인 계좌 인증</strong>으로<br>본인 확인을 진행해요
-                            </p>
+                <section class="form-all-wrap">
+                    <div class="form-wrap">
+                        <div class="input">
+                            <div class="select-wrap type2">
+                                <div class="select-box" tabindex="1"><!-- D: 클릭 시 은행선택 팝업 노출 -->
+                                    <label for="">입금은행</label>
+                                    <span class="option">미선택</span>
+                                </div>
+                            </div>
                         </div>
-                        <section class="form-all-wrap">
-                            <div class="form-wrap">
-                                <div class="input">
-                                    <div class="select-wrap type2">
-                                        <div class="select-box" tabindex="1"><!-- D: 클릭 시 은행선택 팝업 노출 -->
-                                            <label for="">입금은행</label>
-                                            <span class="option">미선택</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-wrap">
-                                <label for="ipt01" class="formlabel onbasic">계좌번호</label>
-                                <div class="input">
-                                    <input type="text" title="계좌번호" id="ipt01" class="inp" name="" value="" placeholder="계좌번호를 입력" required="">
-                                </div>
-                            </div>
-                        </section>
                     </div>
-                </div>
-                <!-- e: content -->
+                    <div class="form-wrap">
+                        <label for="ipt01" class="formlabel onbasic">계좌번호</label>
+                        <div class="input">
+                            <input type="text" title="계좌번호" id="ipt01" class="inp" name="" value="" placeholder="계좌번호를 입력" required="">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- e: content -->
 
-                <!-- s: button -->
-                <div class="fixed-btn-wrap">
-                    <div class="btn-wrap">
-                        <a href="#none" class="btn disable">확인</a>
+        <!-- s: button -->
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <a href="#none" class="btn disable">확인</a>
+            </div>
+        </div>
+        <!-- e: button -->
+
+    </div>
+    <!-- e: 타은행 본인계좌 인증 - 타은행 계좌번호 입력 -->
+    <!-- s : 전자금융가입안내 레이어 팝업-->
+    <div id="lySel03" class="layerpopup layer-up show has-button" style="display:block">
+        <div class="content-wrap">
+            <div class="pop-header">
+                <h2 class="pop-title">전자금융가입안내</h2>
+                <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+            </div>
+            <div class="ly-scroll-con ly-select type-high">
+                <div class="txtbox-wrap">
+                    <div>
+                        <p>전자금융에 가입하시면 APP에서 각종 이체 업무가 가능하세요.<br>전자금융에 가입을 하시겠어요?</p>
                     </div>
                 </div>
-                <!-- e: button -->
 
             </div>
-            <!-- e: 타은행 본인계좌 인증 - 타은행 계좌번호 입력 -->
-            <!-- s : 정보수집 근거 안내 레이어 팝업-->
-		<div id="lySel03" class="layerpopup layer-up show has-button" style="display:block">
-			<div class="content-wrap">
-				<div class="pop-header">
-					<h2 class="pop-title">전자금융가입안내</h2>
-					<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-				</div>
-				<div class="ly-scroll-con ly-select type-high">
-					<div class="txtbox-wrap">
-						<div>
-                            <p>전자금융에 가입하시면 APP에서 각종 이체 업무가 가능하세요.<br>전자금융에 가입을 하시겠어요?</p>
-						</div>
-					</div>
-
-				</div>
-				<div class="fixed-btn-wrap">
-					<div class="btn-wrap ">
-						<a href="#none" class="btn">전자금융가입</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- e : 정보수집 근거 안내 레이어 팝업-->
-
-       
-
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap ">
+                    <a href="#none" class="btn">전자금융가입</a>
+                </div>
+            </div>
         </div>
-        <!-- //contentsWrap -->
-    </form>
+    </div>
+<!-- e : 전자금융가입안내 레이어 팝업-->
+</div>
+<!-- //contentsWrap -->
+
 </body>
 </html>
-
-
-
-        </div>
-        <!-- //contentsWrap -->
-    </form>
-</body>
-</html>
-
