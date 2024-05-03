@@ -827,7 +827,28 @@ window.onload = function() {
 			validChk();
 		}
 		
-	})
+	});
+
+	new Rolldate({
+		el: '#rolldate5', // div.select-box 의 id
+		format: 'YYYY/MM',
+		beginYear: 1980,
+		endYear: 2025,
+		lang: {
+			title: '연월을 선택해주세요', // 팝업 타이틀
+		},
+		moveEnd: function(scroll) {
+			document.body.style.overflow = 'hidden';
+		},
+		confirm: function(date) {
+			removeErr($(this.config.el));
+			$(this.config.el).closest('.select-wrap').addClass('on');
+			
+			document.body.style.overflow = 'auto';
+			validChk();
+		}
+		
+	});
 
 	
 }

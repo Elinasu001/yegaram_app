@@ -738,7 +738,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .list-style2::before { background:#FF8EA4; }
 .list-style3::before { background:#AFECEF; }
 .list-txt { font-size:1rem;line-height:1.38889; margin-top:5px; }
-.prod-box-wrap { margin-top:45px; }
+.prod-box-wrap { margin-top:40px; }
 .prod-box-wrap .flag { margin-top:-5px; }
 .prod-box-wrap .more-btn { display:block; margin-top:19px; text-align:right; }
 .prod-tit { font-size:1rem; line-height:1.38889; }

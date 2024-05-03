@@ -720,9 +720,9 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .form-wrap.type2 input .unit { display:none; }
 .form-wrap.type2 input:valid ~ .value-wrap .unit { display:inline; }
 
-/** _위치 고정된 unit case **/
-.form-wrap .input:has(.static-unit) input { padding-right:65px; }
-.form-wrap .input .static-unit { display:none; position:absolute; top:50%; right:10px; transform:translateY(-50%); }
+/** _위치 고정된 unit case **/ 
+.form-wrap .input:has(.static-unit) input { position:relative; }
+.static-unit { display:block; position:absolute; top:50%; right:0; transform:translateY(-50%); }
 .form-wrap .input input:focus + .static-unit,
 .form-wrap .input input:valid + .static-unit { display:inline-block; }
 .form-wrap .input input:disabled + .static-unit { display:block; color:#999999; }
@@ -866,11 +866,11 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 .error .error-txt { display:none; }
 .error .formlabel { color:#FF0000; }
 .error.form-wrap > div.input input,
-.error .select-wrap .select-box { border-color:#FF0000; }
+.select-box.error { border-color:#FF0000; }
 
 
 /*** 체크박스/라디오 ***/
-.terms-wrap { margin-top:40px; }
+.terms-area { margin-top:40px; }
 .terms-wrap .terms-area { margin-top:30px; }
 .terms-wrap .terms-area:first-child { margin-top:0; }
 .terms-area { display:inline-block; width:100%; }
@@ -1973,7 +1973,7 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 /*** 타이틀 ***/
 /** 싱글화면 - 상단 타이틀 **/
 .tit-wrap { margin-top:40px; }
-.tit-wrap + section { margin-top:40px; }
+/* .tit-wrap + section { margin-top:40px; } */
 .tit-wrap .flag { margin-bottom:10px; }
 .tit-wrap > span { display:inline-block; margin-bottom:10px; padding:4px 15px; border-radius:20px; background:#EBF2FF; font-size:0.88889rem; line-height:1.4375; color:#2968CF; }
 .tit-wrap > .txt { font-size:1.22222rem; line-height:1.5rem; }
@@ -2414,6 +2414,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 /* 상품상세 list */
 .prod-box-list { margin:10px 0 0; }
+.prod-box-list.line li {  border:1px solid #DDDDDD; }
 .prod-box-list > li { display:block; position:relative; width:100%; margin-bottom:16px; padding:24px 20px; border-radius:20px; background:#fff; box-shadow:0px 5px 15px #6E76810D; }
 .prod-box-list > li:last-child { margin-bottom:0; }
 .prod-box-list .btn-set { top:0; right: 0; }
