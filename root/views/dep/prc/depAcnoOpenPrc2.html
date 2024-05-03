@@ -121,6 +121,46 @@
 							<!--<p class="info-txt">비과세종합저축의 경우 자격요건 및 한도초과 여부에 따라
 								변경될 수 있어요</p>-->
 						</div>
+						<div class="select-wrap">
+							<div class="select-box on" tabindex="1">
+								<label for="" class="essential">자동이체은행선택</label>
+								<span class="option" id="">저축은행</span>
+							</div>
+							<p class="info-txt">매월 이자를 받으실 계좌정보에요</p>
+						</div>
+						<div class="form-wrap form-line"><!--D: form-line클래스 : input에 버튼(btnInput) 있을 경우-->
+                            <label for="ipt05" class="formlabel">계좌번호</label>
+                            <div class="input">
+                                <input type="number" title="계좌번호 입력" id="ipt05" class="inp" name="" value="" required="" placeholder="계좌번호 입력">
+                                <div class="btn-input">
+                                    <button type="button" class="btn btn-sm">계좌인증</button>
+                                </div>
+                            </div>
+							<div class="check-account">
+                                <input type="checkbox" id="chk01" name="check" value="" checked>
+                                <label for="chk01">
+                                    <span>출금계좌와 동일</span>
+                                </label>
+                            </div>
+                        </div>
+						<div class="select-wrap">
+							<div class="select-box" tabindex="1"><!--D: on 클래스 : 값 적용 됐을 경우 , disabled 클래스 : 적용 됐을 경우  -->
+								<label for="" class="essential">만기해지 후 송금</label>
+								<span class="option">미선택</span>
+							</div>
+							<p class="info-txt">만기 당일 발생한 원금과 세후 이자를 등록하신 계좌로 자동 송금해 드려요</p>
+						</div>
+						<div class="check-box toggle mt40">
+							<input type="checkbox" id="smsChk">
+							<label for="smsChk">
+								<span>만기 SMS 알림</span>
+								<div class="switch-btn">
+									<span class="off">OFF</span>
+									<span class="on">ON</span>
+									<div class="inside"></div>
+								</div>
+							</label>
+						</div>
 					</div>
 					<div class="alignment-both-side">
 						<p class="txt">추천인이 있으세요?</p>
