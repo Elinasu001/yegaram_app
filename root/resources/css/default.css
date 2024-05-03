@@ -2301,6 +2301,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .sub-tit-wrap:first-of-type { margin-top:25px; }
 
 .flag-tit-wrap { /*padding-right:40px;*/ display: flex; }
+.flag-tit-wrap .flag { margin-right:6px; }
 .flag-tit-wrap:has(.tooltip-wrap.type2+.tooltip-wrap.type2) { /*padding-right:66px;*/ }
 .flag-tit-wrap .tit { font-size:1rem; line-height:1.38889rem; flex:1; }
 /* .flag-tit-wrap .tit { overflow:hidden; display:inline-block; width:62%; vertical-align:middle; white-space:nowrap; text-overflow:ellipsis; } */

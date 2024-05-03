@@ -991,7 +991,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 
 .fixtable-wrap { width:100%; margin:0 auto; overflow-x:scroll; /*border-top:1px solid #EEEEEE;*/ }
 .fixtable { border-collapse:separate; border-spacing: 0; width:120%; border-top:1px solid #E5E5E5; border-bottom:1px solid #E5E5E5; border-top-right-radius:15px; border-bottom-right-radius:15px; }
-.fixtable th { position:sticky; left:0; z-index:3; width:100px; min-width:100px; height:50px; padding:15px 20px; background:#F4F5FB; font-weight:700; color:#260F54; font-size:0.89rem; text-align:center; }
+.fixtable th { position:sticky; left:0; z-index:3; width:100px; min-width:100px; height:50px; padding:17px; background:#F4F5FB; font-weight:700; color:#260F54; font-size:0.89rem; text-align:center; }
 .fixtable th::after { content:''; position:absolute; bottom:0; left:50%; transform:translate(-50%, 0); width:80%; border-bottom:1px solid #E0DBF9; }
 .fixtable tr:last-of-type td { border-bottom:none; }
 .fixtable td { min-width:172px; border-right:1px solid #EEEEEE; border-bottom:1px solid #EEEEEE; padding:10px; font-weight:300; color:#666666; font-size:0.88889rem; line-height:1.4375; text-align:left; }

@@ -49,7 +49,6 @@
 	data-activeEnv="${active.env">
 </script>
 
-
 <body>
     <!-- header -->
 	<header class="headerWrap">  <!--D: bg-color02 클래스 : 뒤에 색상 들어갈 경우  -->
@@ -119,7 +118,7 @@
                                                             <p>관심상품에서 제외했어요</p>
                                                         </div>
                                                     </div>
-                                                    <div class="tooltip-wrap type2">
+                                                    <div class="tooltip-wrap type2  type-toast">
                                                         <span class="scale ">비교하기</span><!--D: active 클래스 : 클릭 했을 경우 -->
                                                         <div class="tooltip-txt reg" ><!--D:  클릭 했을 경우 -->
                                                             <p>비교상품으로 등록되었어요</p>
@@ -158,7 +157,7 @@
                                                             <p>관심상품에서 제외했어요</p>
                                                         </div>
                                                     </div>
-                                                    <div class="tooltip-wrap type2">
+                                                    <div class="tooltip-wrap type2 type-toast">
                                                         <span class="scale active">비교하기</span><!--D: active 클래스 : 클릭 했을 경우 -->
                                                         <div class="tooltip-txt reg" style="display:block;"><!--D:  클릭 했을 경우 -->
                                                             <p>비교상품으로 등록되었어요</p>
@@ -197,7 +196,7 @@
                                                             <p>관심상품에서 제외했어요</p>
                                                         </div>
                                                     </div>
-                                                    <div class="tooltip-wrap type2">
+                                                    <div class="tooltip-wrap type2 type-toast">
                                                         <span class="scale ">비교하기</span><!--D: active 클래스 : 클릭 했을 경우 -->
                                                         <div class="tooltip-txt reg"><!--D:  클릭 했을 경우 -->
                                                             <p>비교상품으로 등록되었어요</p>
@@ -647,7 +646,7 @@
             <!-- //contents -->
 
             <!--S: 상품비교 담기 3개 (Alert)-->
-            <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
+            <div id="lyAlert1" class="layerpopup type-alert on">
                 <div class="content-wrap">
                     
                     <div class="pop-con-wrap">
@@ -661,7 +660,7 @@
             <!--E: 상품비교 담기 3개(Alert)-->
 
             <!--S: 상품비교 없을 경음 (Alert)-->
-            <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
+            <div id="lyAlert1" class="layerpopup type-alert on">
                 <div class="content-wrap">
                     
                     <div class="pop-con-wrap">
@@ -673,6 +672,292 @@
                 </div>
             </div>
             <!--E: 상품비교 없을 경음 (Alert)-->
+
+            <!-- // D: 찜한 상품 (팝업) -->
+            <div id="lyPullPop02" class="layerpopup laypop-all"  style="display:block;">
+                <div class="pop-header">
+                    <h2 class="pop-title">관심 대출상품</h2>
+                    <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lyPullPop02')">닫기</button>
+                </div>
+                <div class="pop-con-wrap">
+                    <div class="default-wrap gray-wrap">
+                        <ul class="prod-box-list type2">
+
+                            <li>
+                                <div class="prod-box">
+                                    <div class="icon-exp">
+                                        <p>직장인, 자영어바, 프리랜서를 위한</p>
+                                        <div class="tooltip-wrap type2 type-toast">
+                                            <span class="like active">좋아요</span><!--D: active 클래스 : 클릭 했을 경우 -->
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="flag-tit-wrap">
+                                        <em class="flag style3 ">대환대출</em>
+                                        <strong class="tit">빅머니U론</strong>
+                                    </div>
+                                    <ul class="text-bar-list">
+                                        <li>직장인</li>
+                                        <li>자영업자</li>
+                                        <li>프리랜서</li>
+                                    </ul>
+                                    <div class="label-info-wrap">
+                                        <p>최대 1억원</p>
+                                        <strong class="info">연<span>6.80</span>% ~ <span>18.20</span>%</strong>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="prod-box">
+                                    <div class="icon-exp">
+                                        <p>타사 채무 상환과 추가대출을 동시에</p>
+                                        <div class="tooltip-wrap type2 type-toast">
+                                            <span class="like active">좋아요</span><!--D: active 클래스 : 클릭 했을 경우 -->
+                                        </div>
+                                    </div>
+                                    <div class="flag-tit-wrap">
+                                        <em class="flag style3">대환대출</em>
+                                        <strong class="tit">라이브U론</strong>
+                                    </div>
+                                    <ul class="text-bar-list">
+                                        <li>전직군</li>
+                                        <li>20세 이상</li>
+                                        <li>최대 5,000만원</li>
+                                    </ul>
+                                    <div class="label-info-wrap">
+                                        <p>최대 1억원</p>
+                                        <strong class="info">연<span>15.60</span>% ~ <span>19.90</span>%</strong>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- D: 찜한 상품 (팝업) // -->
+
+
+            <!-- s : 상품 비교 (팝업)-->
+            <div id="lypullPop" class="layerpopup laypop-all show" style="display:block;">
+                <!-- s: contents -->
+                <div class="pop-header">
+                    <h2 class="pop-title">상품 비교하기</h2>
+                    <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lypullPop')">닫기</button>
+                </div>
+                
+                <div class="pop-con-wrap">
+                    <div class="default-wrap mb0">
+                        <section class="tabs-wrap type-uniform">
+                            <div class="tabs">
+                                <ul class="tab-item">
+                                    <li data-tab="tab-cont0001"><a href="#none">예적금상품</a></li>
+                                    <li class="on" data-tab="tab-cont0002"><a href="#none">대출상품</a></li>
+                                </ul>
+                                <div class="tab-content-area">
+                                    <div id="tab-cont0001" class="tab-content dp-none">
+                                        <div class="tit-wrap">
+                                            <p class="txt"><strong>대출상품을 비교</strong>해 보세요</p>
+                                        </div>
+
+                                        <!-- 상품 비교 테이블 -->
+                                        <div class="fixtable-area">
+                                            <div class="fixtable-wrap">
+                                                <table class="fixtable compare">
+                                                    <colgroup>
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>상품명</th>
+                                                            <td>
+                                                                상품명1
+                                                                <button type="reset" class="btn-delete">상품명 삭제</button>
+                                                            </td>
+                                                            <td>
+                                                                상품명2
+                                                                <button type="reset" class="btn-delete">상품명 삭제</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>약정이율</th>
+                                                            <td>최고 연 4.30%</td>
+                                                            <td>최고 연 4.00%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>가입대상</th>
+                                                            <td>
+                                                                <ul class="list-bull hyphen">
+                                                                    <li>만 19세 이상 개인고객 (내국인만 가능)</li>
+                                                                    <li>1인1계좌만 가입 가능</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <ul class="list-bull hyphen">
+                                                                    <li>비거주 외국인 외 제한없음</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>가입금액</th>
+                                                            <td>최소 1만원 이상 ~ 최대 100만원 이하</td>
+                                                            <td>10만원 이상</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>가입기간</th>
+                                                            <td>6개월 ~ 36개월</td>
+                                                            <td>최대 30년</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>이자지급<br>방법</th>
+                                                            <td>만기 시 원금과 함께 한 번에 지급</td>
+                                                            <td>매월 이자지급</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>일부해지<br>(출금)</th>
+                                                            <td>불가</td>
+                                                            <td>일부 금액을 해지하여 출금할 수 있어요<br>(최대 3회)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>가입</th>
+                                                            <td>
+                                                                <div class="btn-cont-wrap">
+                                                                    <a href="javascript:void(0);" class="btn btn-primary">가입하기</a>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="btn-cont-wrap">
+                                                                    <a href="javascript:void(0);" class="btn btn-primary">가입하기</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <!-- // 상품 비교 테이블 -->
+                                    </div>
+
+                                    <div id="tab-cont0002" class="tab-content">
+                                        <div class="tit-wrap">
+                                            <p class="txt"><strong>대출상품을 비교</strong>해 보세요</p>
+                                        </div>
+
+                                        <!-- 상품 비교 테이블 -->
+                                        <div class="fixtable-area">
+                                            <div class="fixtable-wrap">
+                                                <table class="fixtable compare">
+                                                    <colgroup>
+                                                    </colgroup>
+
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>상품명</th>
+                                                            <td>
+                                                                스크린골프<br/>동산담보 대출
+                                                                <button type="reset" class="btn-delete">상품명 삭제</button>
+                                                            </td>
+                                                            <td>
+                                                                일반부동산<br/>담보대출
+                                                                <button type="reset" class="btn-delete">상품명 삭제</button>
+                                                            </td>
+                                                            <td>
+                                                                일반부동산<br/>담보대출
+                                                                <button type="reset" class="btn-delete">상품명 삭제</button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>금리</th>
+                                                            <td>최고 연 6.50%<br/>최고 연 10.90%</td>
+                                                            <td>최고 연 6.50%<br/>최고 연 10.90%</td>
+                                                            <td>최고 연 6.50%<br/>최고 연 10.90%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>대출한도</th>
+                                                            <td>
+                                                                <ul class="list-bull hyphen">
+                                                                    <li>개인: 최대 8억원</li>
+                                                                    <li>개인사업자: 최대 60억원</li>
+                                                                    <li>법인사업자: 최대 120억원</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <ul class="list-bull hyphen">
+                                                                    <li>개인: 최대 8억원</li>
+                                                                    <li>개인사업자: 최대 60억원</li>
+                                                                    <li>법인사업자: 최대 120억원</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <ul class="list-bull hyphen">
+                                                                    <li>개인: 최대 8억원</li>
+                                                                    <li>개인사업자: 최대 60억원</li>
+                                                                    <li>법인사업자: 최대 120억원</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>대출기간</th>
+                                                            <td>최대 30년</td>
+                                                            <td>최대 30년</td>
+                                                            <td>최대 30년</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>대출유형</th>
+                                                            <td>담보대출</td>
+                                                            <td>담보대출</td>
+                                                            <td>담보대출</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>상환방식</th>
+                                                            <td>
+                                                                <ul class="list-bull">
+                                                                    <li>원리금균등분할상환</li>
+                                                                    <li>만기일시상환</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <ul class="list-bull">
+                                                                    <li>원리금균등분할상환</li>
+                                                                    <li>만기일시상환</li>
+                                                                </ul>
+                                                            </td>
+                                                            <td>
+                                                                <ul class="list-bull">
+                                                                    <li>원리금균등분할상환</li>
+                                                                    <li>만기일시상환</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                       
+                                                        <!-- <tr>
+                                                            <th>가입</th>
+                                                            <td>
+                                                                <div class="btn-cont-wrap">
+                                                                    <a href="javascript:void(0);" class="btn btn-primary">가입하기</a>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="btn-cont-wrap">
+                                                                    <a href="javascript:void(0);" class="btn btn-primary">가입하기</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr> -->
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <!-- // 상품 비교 테이블 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!-- e : 상품 비교 (팝업)-->
+
+
 
         </div>
         <!-- //contentsWrap -->
