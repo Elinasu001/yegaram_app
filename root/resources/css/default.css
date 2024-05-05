@@ -1932,7 +1932,7 @@ body.on { position:fixed; top:0; }
 .guide-txt-wrap .cont { padding-top:10px; }
 
 /*** 스텝 프로그레스 바 ***/
-.step-wrap { position:relative; margin:20px 0 0; text-align:center;}
+.step-wrap { position:relative; margin:20px -20px; text-align:center;}
 .step-wrap .step-line{position:relative;height:8px;background:#EEEEEE}
 /*.step-wrap .step-line:before,*/
 .step-wrap .step-line:after { content:''; position:absolute; top:50%; left:-4px; width:6px; height:6px; background:#260F54; -webkit-transform:rotate(45deg) translateY(-80%); -ms-transform:rotate(45deg) translateY(-80%); transform:rotate(45deg) translateY(-80%); }
