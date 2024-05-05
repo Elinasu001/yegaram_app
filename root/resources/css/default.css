@@ -866,6 +866,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 .error .error-txt { display:none; }
 .error .formlabel { color:#FF0000; }
 .error.form-wrap > div.input input,
+.error.form-wrap > div .select-box.type-line,
 .select-box.error { border-color:#FF0000; }
 
 
@@ -1335,8 +1336,8 @@ form,
 
 
 /* _폼 여백 test(청) */
-.form-wrap.phone .select-wrap { width:40%;  }
-
+.form-wrap.phone .select-wrap { width:35%;  }
+.form-wrap.phone > .input span { width:100%; }
 /* .tit-wrap:has(+ .form-wrap) { padding-bottom:13px; } test*/
 /* .tit-wrap:has(+ .form-wrap:has(.action)) + .form-wrap:has(.action) { margin-bottom:40px; }
 .tit-wrap:has(+.list-bull) { padding-bottom:0; }
