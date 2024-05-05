@@ -850,7 +850,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 /* 버튼형*/
 .form-wrap.address input::placeholder { color:#CCCCCC; }
 /* .form-wrap.form-line div.input > span { position:relative; display:block; margin-bottom:15px; } 아래와같이 변경*/
-.form-wrap div.input > span { position:relative; display:block; width:100%; /*margin-bottom:10px;*/ }
+/* .form-wrap div.input > span { position:relative; display:block; width:100%;  } */
 .form-wrap.form-line button.btnInput { z-index:2; position:absolute; top:50%; right:0; transform:translate(0, -50%); }
 .form-wrap.form-line .btn-certi,
 .form-wrap.form-line .btnInput { padding:5px 16px; border-radius:15px; font-size:0.77778rem; line-height: 1rem; letter-spacing:-0.5px;  border:1px solid #DDDDDD; background:#FFFFFF; color:#26282C; }
@@ -1949,8 +1949,10 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 .btn-search:after { content:''; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:120%; height:120%; }
 .btn-delete { width:24px; height:24px; padding:0; background:url("../images/common/ico_delete.png") no-repeat 50%/24px auto; text-indent:-9999px; }
 .form-wrap button:not(.btn-input button, .radio-list button),
-.form-wrap .btn-input { position:absolute; top:50%; right:10px; transform:translateY(-50%); }
-.form-wrap button:not(.btn-input button) + button { right:44px; }
+.form-wrap .btn-input,
+.static-unit { position:absolute; top:50%; right:10px; transform:translateY(-50%); }
+.form-wrap button:not(.btn-input button) + button,
+.form-wrap .static-unit + button:not(.btn-input button) { right:44px; }
 .form-wrap.type-box button { right:44px; }
 .form-wrap.type2 .btn-delete { bottom:10px; }
 /* .form-wrap.searchInput .btn-delete { bottom:inherit; top:50%; right:35px; transform:translateY(-50%); } */
