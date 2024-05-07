@@ -60,7 +60,7 @@ body.fix { overflow:hidden; }
 .normal-btn { height:34px; border:solid 1px #ddd; background:#fff; color:#454545; padding:0 16px; font-weight:400; font-size:0.77777rem; border-radius:8px; line-height:34px; }
 .btn-gray { padding:7px 16px; border-radius:8px; border:1px solid #F2F4F6; background:#F2F4F6; font-size:0.77778rem; line-height:1.5; font-weight:400; color:#454545; }
 .btn.btn-gray { background:#F2F4F6; color:#454545; font-weight:500; }
-.btn.btn-info { background:#FFFFFF; border:1px solid #DDDDDD; font-weight:500; color:#2B0F62; }
+.btn.btn-info { background:#FFFFFF; border:1px solid #DDDDDD; font-size:0.88889rem; font-weight:500; color:#2B0F62; }
 .btn.btn-primary { background:#260F54; font-weight:500; color:#FFFFFF; border:1px solid #260F54; }
 .btn.btn-sub { background:#F2F4F6; color:#26282C; }
 /* .btn-cont-wrap .btn.btn-border { border:1px solid #DDDDDD; background:#fff; font-weight:500; color:#454545; } */
@@ -234,6 +234,7 @@ body.fix { overflow:hidden; }
 
 .txt-list-area { position:relative; }
 .txt-list-wrap .txt-detail-area { padding:20px; border-radius:15px; border:1px solid #DDDDDD; }
+.txt-list-wrap .txt-detail-area p.txt { margin-bottom:20px; text-align:center; font-size:0.88889rem; color:#666666; }
 .txt-list-wrap .txt-detail-area + .txt-detail-area { margin-top:20px; }
 .txt-list-wrap .txt-detail-area:has(.txt-list) { padding:10px 20px 18px; }
 .txt-list-wrap .txt-detail-area:has(.txt-detail-tit) { padding-top:20px; }
