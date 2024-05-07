@@ -95,6 +95,7 @@ body.fix { overflow:hidden; }
 .result-area  + .bg-box { margin-top:30px; }
 .result-area + .txt-list-wrap { margin-top:30px; }
 #acnoList > div + div { margin-top:10px; }
+.result-area .txt-list-wrap .txt-detail-tit {text-align:left;} 
 
 /* 완료화면 svg 애니메이션 */
 #check-group { animation: 0.32s ease-in-out 1.03s check-group; transform-origin: center; }
@@ -238,7 +239,7 @@ body.fix { overflow:hidden; }
 .txt-list-wrap .txt-detail-area:has(.txt-detail-tit) { padding-top:17px; }
 /* .txt-list-wrap .txt-detail-area .txt-list li { align-items:flex-start; } 높이 가운데로 정렬 하기로해서 주석처리함 */
 
-.txt-detail-area .txt-detail-tit { display:flex; align-items:center; /*position:unset;*/ padding:10px 0; font-size:0; color:#333333; } /*0626 | (청)flex test*/
+.txt-detail-area .txt-detail-tit { display:flex; align-items:center; /*position:unset;*/ padding:10px 0; font-size:0; color:#333333; border-bottom:1px solid #DDDDDD;  } /*0626 | (청)flex test*/
 .txt-detail-area .txt-detail-tit strong { /*display:inline-block; width:50%;*/ flex:1;  font-weight:500; font-size:1rem; } /*0626 | (청)flex test*/
 .txt-detail-area .txt-detail-tit span { /*display:inline-block; width:50%; text-align:right; */font-size:0.8rem; font-weight:500; color: #FF0000; } /*0626 | (청)flex test*/
 .txt-detail-area .txt-detail-tit span .btn-gray,
