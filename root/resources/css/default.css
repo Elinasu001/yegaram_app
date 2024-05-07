@@ -300,6 +300,8 @@ html.font-size-3{ font-size: 24px;}
 .flag.style7 { color:#999999; background:#EFF0F2; }/* 공지사항,이벤트 - 회색 */
 .flag.style8   { color:#FF0000; background:#FEEFEF; } /* 거절,부정,사고신고 - 빨강 */
 .flag.style9 { color:#757575; background:#FFFFFF; border:1px solid #DDDDDD; }/* 공지사항 - 화이트 */ 
+.flag.style10 { border:1px solid #EBAF29; color:#EBAF29; }/* 마이뱅킹 - 주황색 */
+
 .flag.dep { background:#FFF0C8; color:#DC7D10; }
 .flag.loan { background:#DFF1FF; color:#2B66F6; }
 
@@ -807,7 +809,7 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .check-box input:checked ~ label .switch-btn .on,
 .toggle-wrap input:checked ~ label .switch-btn .on { opacity:1; }
 .check-box input:checked ~ label .switch-btn .inside,
-.toggle-wrap input:checked ~ label .switch-btn .inside { left:36px; }
+.toggle-wrap input:checked ~ label .switch-btn .inside { left:38px; }
 .check-box input[type="checkbox"],
 .toggle-wrap input[type="checkbox"] { display:none; }
 .toggle-wrap span { margin-right:6px; font-weight:300; color:#666666; font-size:0.77778rem; line-height:1.5;  }
@@ -2087,7 +2089,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .account-amount .amount-desc { font-weight:400; color:#666666; font-size:0.77778rem; line-height:1.5; }
 .account-amount .amount-on + .amount-desc { margin-top:3px; }
 .account-amount > p.amount-off { font-weight:400; color:#999999; font-size:1.11111rem; line-height:1.35; }
-.inquiry-result-area .inquiry-summary .toggle-wrap { flex:1 1 auto; }
+.inquiry-result-area .inquiry-summary .toggle-wrap { margin-top:0; flex:1 1 auto; }
 .inquiry-result-area .inquiry-summary .toggle-wrap label { display:flex; align-items:center; justify-content: flex-end; }
 .month-divide { padding:10px 20px; background:#F8F8F8; font-weight:400; color:#666666; font-size:0.88889rem; line-height:1.58334; }
 /* .inquiry-summary + .month-divide { margin-top:20px; } */
@@ -2435,15 +2437,19 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .prod-box .desc { margin-top:20px; color:#666666; font-size:0.88889rem; line-height:1.4375; }
 
 /** [공통?] 계좌 조회 상세 **/
-.visaul-info-section { margin:0 -20px; padding:20px; background:#EEEBFF; }
+.visaul-info-section { margin:0 -20px; padding:20px; background:#F5F8FA; }
 * + .visaul-info-box { margin: 10px 0 0; }
 .visaul-info-section + .txt-list-wrap { margin-top:30px; }
 .visaul-info-section + .txt-list-wrap + .arrow-button-list { margin-top:40px; }
 .visaul-info-section + .inquiry-choice-area.type-spread { margin-top:0; }
-.visaul-info-box { position: relative; padding:18px 20px 20px; border-radius:15px; background:#fff; box-shadow:0 5px 15px 0px rgba(30,35,87,.1); }
+.visaul-info-box { position: relative; padding:18px 20px 20px; border-radius:20px; background:#fff; box-shadow:0px 5px 15px #6E76810D; }
+.prod-box-list > li { display:block; position:relative; width:100%; margin-bottom:16px; padding:24px 20px; border-radius:20px; background:#fff; box-shadow:0px 5px 15px #6E76810D; }
+
 .visaul-info-box + .visaul-info-box { margin-top:20px; }
 /* .visaul-info-box .tag { display:block; font-weight:400; color:#999999; font-size:0.66667rem; line-height:1.58334; } */
-.visaul-info-box .info-tit { position:relative; display:inline-block; width:100%; /*margin-bottom:5px;*/ padding-right:35px; font-weight:700; color:#333333; font-size:0.88889rem; line-height:1.4375; }
+.visaul-info-box .info-tit { position:relative; display:inline-block; width:100%; padding-right:35px; font-weight:700; color:#333333; font-size:1rem; line-height:1.38889rem; }
+
+
 .visaul-info-box .info-tit + *, .flag-tit-wrap + * { margin-top:5px; }
 .visaul-info-box:has(.btn-set) .info-tit {width: 80%}
 .visaul-info-section .visaul-info-box { margin-top:0; }
@@ -2459,13 +2465,13 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .visaul-info-box .info-tit .set { display:inline-block; float:right; font-size:0.88889rem; line-height:1.4375; font-weight:400; color:#757575; }
 /*.visaul-info-box .info-tit.ico-arrow::after { content:''; display:inline-block; position:absolute; right:0; top:50%; transform:Translate(0, -50%); width:16px; height:16px; background:url("../images/common/ic-arrow-right.png") no-repeat center/100%; } 2023-07-16 카드 관리 텍스트 테스트 */
 
-.visaul-info-box .btn-set { text-indent:0; top:20px; right:20px; background:none; font-weight: 500;}
-.visaul-info-box .btn-set::after{ content:''; display:inline-block; position:absolute; padding-left:60px; right:0; top:0; width:24px; height:24px; font-weight:500; font-size:.88889rem; line-height:1.4375; color:#757575; background:url(../images/common/btn_setting.png) no-repeat 50%/24px auto; }
+.visaul-info-box .btn-set { text-indent:0; top:20px; right:20px; width:24px; height:24px; background:none; font-size:0; }
+.visaul-info-box .btn-set::after{ content:''; display:inline-block; position:absolute; right:0; top:0; width:24px; height:24px; font-weight:500; font-size:.88889rem; line-height:1.4375; color:#757575; background:url(../images/common/btn_setting2.png) no-repeat 50%/24px auto; }
 /* .visaul-info-box .btn-set.star { text-indent:-9999px; top:8px; right:5px; } */
 .visaul-info-box .btn-set.star::after { display:none; }
 
 .account-area{ font-size:0.77778rem; line-height:1.5; letter-spacing:-.5px; }
-.account-area .account { display:inline-block; font-weight:400; color:#757575; }
+.account-area .account { display:inline-block; font-size:0.77778rem; line-height:1rem; color:#757575; }
 .btn-copy { display:inline-block; margin-top:4px; width:16px; height:16px; margin-left:2px; background:url("../images/common/btn_copy.png") no-repeat 50%/16px auto; text-indent:-9999px; vertical-align:top; }
 .btn-modi { display:inline-block; width:24px; height:24px; margin-left:2px; background:url("../images/common/btn_modi.png") no-repeat 50%/24px auto; text-indent:-9999px; vertical-align:top; }
 .btn-request { display:inline-block; height:34px; padding:0 16px; border-radius:8px; background:#EEEBFF; color:#260F54; font-size:0.77778rem; line-height:1.5; line-height:34px }
@@ -2487,8 +2493,8 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 
 .account-amount { margin-top:13px; }
-.account-amount > p { font-size:0.88889rem; line-height:1.4375; font-weight:700; }
-.amount-on { color:#F1108E;  }
+.account-amount > p { font-size:0.88889rem; line-height:1.4375; font-weight:600; }
+.amount-on { color:#4E32A5;  }
 .amount-off { font-weight:400 !important; color:#999999; }
 
 .btn-set { position:absolute; top:24px; right:20px; font-size:0.88889rem; line-height:1.4375; color: #757575; /*width:24px; height:24px;*/ /*background:url("../images/common/btn_setting.png") no-repeat 50%/24px auto;*/}
