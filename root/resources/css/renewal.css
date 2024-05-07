@@ -30,7 +30,7 @@ body.fix { overflow:hidden; }
 
 /* 공통 - 컨텐츠 in 버튼 */
 .btn-cont-wrap { display:flex; gap:10px; /*width:100%;*/ padding:0; text-align:center; align-items:start; }
-.btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:14px 5px; border-radius:30px; background:linear-gradient(320deg, rgba(38,15,84,1) 0%, rgba(61,18,146,1) 100%); color:#fff; font-size:1rem; font-weight:700; text-align:center; }
+.btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:10px 5px; border-radius:30px; background:linear-gradient(320deg, rgba(38,15,84,1) 0%, rgba(61,18,146,1) 100%); color:#fff; font-size:1rem; font-weight:700; text-align:center; }
 .btn.btn-add {display:inline-block; width:unset; height:48px;  padding:12px 54px; background:#FFFFFF; border:1px solid #4E32A5; font-size:1rem; line-height:1.38889rem; font-weight:500; color:#4E32A5; }
 .btn.btn-sm { display:inline-flex; align-items: center; /*display:inline-block;*/ width:unset; height:30px; padding:5px 16px;  background:#FFFFFF; border:1px solid #DDDDDD; border-radius:17px;  font-size:0.77778rem; line-height: 1rem; font-weight:400; color:#26282C; letter-spacing: -0.5px;}
 .btn.btn-sm.gray { background: #F1F1F1; border:1px solid #F1F1F1; color:#666666; }
@@ -753,9 +753,9 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
  /* 수입등록 버튼 클릭시 예상수입 팝업 */
 .inquiry-set-wrap.list-style-wrap .radio-list.txt-button { background:none; padding:0; }
 .inquiry-set-wrap.list-style-wrap .radio-list.txt-button li button { border:1px solid #DDDDDD; border-radius:7px; background:#FFFFFF; }
-.inquiry-set-wrap.list-style-wrap .radio-list.txt-button li.active button { border-color:#6836CB; background:#EEEBFF; font-weight:500; color:#6836CB; font-size:0.77778rem; }
+.inquiry-set-wrap.list-style-wrap .radio-list.txt-button li.active button { border-color:#9F7CE3; background:#ffffff; font-weight:500; color:#612AD0; font-size:0.77778rem; }
 .inquiry-set-wrap.list-style-wrap .radio-list.txt-button li.active button:before { content:none; }
-.inquiry-set-wrap.list-style-wrap .radio-list.txt-button li button:active { border-color:#6836CB; background:#EEEBFF; font-weight:500; color:#6836CB; font-size:0.77778rem; }
+.inquiry-set-wrap.list-style-wrap .radio-list.txt-button li button:active { border-color:#9F7CE3; background:#ffffff; font-weight:500; color:#612AD0; font-size:0.77778rem; }
 .inquiry-set-wrap.list-style-wrap .radio-list.txt-button li button:active:before { border:1px solid #EEEBFF;}
 .inquiry-set-wrap.list-style-wrap .radio-list.txt-button li + li { margin-left:5px; }
 .inquiry-set-wrap.list-style-wrap .radio-list.txt-button.two-line { flex-wrap: wrap; }
