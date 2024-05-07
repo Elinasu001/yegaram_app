@@ -47,11 +47,16 @@
 			<div class="default-wrap">
 
 				<!-- [퍼블] 계좌 나온 경우 -->
-				<section>
+				<section  style="display:none;">
 					<div class="tit-wrap">
 						<p class="txt"><strong>즉시이체 지정계좌</strong>를 <br>확인하세요</p>
 					</div>
-
+					<div class="txt-list-wrap">
+						<div class="txt-detail-area flex">
+							<p class="tit">즉시이체 1일 한도</p>
+							<strong><span>10,000,000</span>원</strong>
+						</div>
+					</div>
 					<div class="txt-list-wrap">
 						<div class="txt-detail-area">
 							<div class="txt-detail-tit">
@@ -82,37 +87,45 @@
 						</div>
 					</div>
 
-					<div class="btn-cont-wrap btn-add">
-						<a href="#none" class="btn"> + 추가 </a>
-					</div>
+					<div class="btn-cont-wrap flexCenter">
+                        <a href="javascript:void(0);" class="btn btn-add">+추가</a>
+                    </div>
 
-					<dl class="list-bull type-caption has-border">
-						<dt>알아두세요</dt>
-						<dd>지정계좌로 등록하지 않아도 즉시이체가 가능하지만, 1일 100만원 한도로 제한돼요</dd>
-					</dl>
+					<div class="list-bull">
+                        <div class="border"></div>
+                        <strong>알아두세요</strong>
+                        <ul>
+                            <li>지정계좌로 등록하지 않아도 즉시이체가 가능하지만, 1일
+								100만원 한도로 제한돼요</li>
+                        </ul>
+                    </div>
 				</section>
 				<!-- // [퍼블] 계좌 나온 경우 -->
 
 				<!-- [퍼블] 계좌 없는 경우 -->
-				<section style="display:none;">
+				<section>
 					<div class="tit-wrap">
 						<p class="txt"><strong>즉시이체 지정계좌</strong>가<br>없어요</p>
 					</div>
 
 					<div class="txt-list-wrap">
-						<div class="txt-detail-area">
+						<div class="txt-detail-area flex">
 							<p class="tit">즉시이체 1일 한도</p>
 							<strong><span>10,000,000</span>원</strong>
 						</div>
 					</div>
 
-					<div class="btn-cont-wrap btn-add">
-						<a href="#none" class="btn" onclick="javascript:fnAddAcno();"> + 추가 </a>
-					</div>
-					<dl class="list-bull type-caption has-border">
-						<dt>알아두세요</dt>
-						<dd>지정계좌로 등록하지 않아도 즉시이체가 가능하지만, 1일 100만원 한도로 제한돼요</dd>
-					</dl>
+					<div class="btn-cont-wrap flexCenter">
+                        <a href="javascript:void(0);" class="btn btn-add">+추가</a>
+                    </div>
+					<div class="list-bull">
+                        <div class="border"></div>
+                        <strong>알아두세요</strong>
+                        <ul>
+                            <li>지정계좌로 등록하지 않아도 즉시이체가 가능하지만, 1일
+								100만원 한도로 제한돼요</li>
+                        </ul>
+                    </div>
 				</section>
 				<!-- // [퍼블] 계좌 없는 경우 -->
 			</div>
@@ -123,7 +136,7 @@
         <!-- s: fixedBtnWrap -->
 		<div class="fixed-btn-wrap">
             <div class="btn-wrap">
-                <a href="#none" class="btn">홈으로</a>
+                <a href="#none" class="btn">해지하기</a>
             </div>
         </div>
         <!-- //e: fixedBtnWrap -->
