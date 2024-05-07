@@ -466,10 +466,10 @@ body.fix { overflow:hidden; }
  */
 .mydata-wrap > p { margin-bottom:40px; text-align:center; }
 .mydata-wrap > p img { width:170px; }
-.mydata-wrap dd { display:table!important; position:relative; width:auto!important; padding-right:20px; }
-.mydata-wrap dd.ic-pass.on::after { content:""; position:absolute; right:0px; top:0px; width:16px; height:16px; background:url("../images/common/ic-pass.png") center center no-repeat; background-size:100%; opacity:1; }
-.mydata-wrap dd.ic-pass::after { content:""; position:absolute; right:0px; top:0px; width:16px; height:16px; background:url("../images/common/ic-pass.png") center center no-repeat; background-size:100%; opacity:0.2; }
-.mydata-wrap dd.ic-clo::after { content:""; position:absolute; right:0px; top:0px; width:16px; height:16px; background:url("../images/common/ic-close.png") center center no-repeat; background-size:100%; }
+.mydata-wrap li { display:table!important; position:relative; width:auto!important; padding-right:20px; }
+.mydata-wrap .ic-pass.on::after { content:""; position:absolute; right:0px; top:0px; width:16px; height:16px; background:url("../images/common/ic-pass.png") center center no-repeat; background-size:100%; opacity:1; }
+.mydata-wrap li.ic-pass::after { content:""; position:absolute; right:0px; top:0px; width:16px; height:16px; background:url("../images/common/ic-pass.png") center center no-repeat; background-size:100%; opacity:0.2; }
+.mydata-wrap li.ic-clo::after { content:""; position:absolute; right:0px; top:0px; width:16px; height:16px; background:url("../images/common/ic-close.png") center center no-repeat; background-size:100%; }
 
 
 /* 추천인찾기 */
