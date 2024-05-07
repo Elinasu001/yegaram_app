@@ -73,14 +73,17 @@
             <!--contents -->
             <div class="contents">
                 <div class="default-wrap">
+                    
+                    <div class="tit-wrap">
+                        <p class="txt"><strong>얼마를 이체하시겠어요?</strong></p>
+                    </div>
                     <!--S: 이체예약 시 프로세스_이체금액 입력-->
                     <section style="display:block">
-                        <div class="tit-wrap">
-                            <p class="txt"><strong>얼마를 이체하시겠어요?</strong></p>
-                        </div>
                         <div class="form-all-wrap">
                             <div class="form-wrap type2">
-                                <label for="PYMN_AMT">이체금액</label>
+                                <div  for="PYMN_AMT" class="form-tit">
+                                    <span>이체금액</span>
+                                </div>
                                 <div class="input">
                                     <input type="tel" title="" class="validChk" id="PYMN_AMT" name="PYMN_AMT" value="0" placeholder="예치금액을 입력해주세요." required="">
                                     <div class="value-wrap">
@@ -116,9 +119,6 @@
 
                     <!--S: 이체예약 시 프로세스_이체계좌 정보 입력-->
                     <section  style="display: block;">
-                        <div class="tit-wrap">
-                            <p class="txt"><strong>얼마를 이체하시겠어요?</strong></p>
-                        </div>
                         <div class=form-all-wrap>
 
                             <div class="select-wrap">
