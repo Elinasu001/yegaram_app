@@ -30,6 +30,7 @@ body.fix { overflow:hidden; }
 
 /* 공통 - 컨텐츠 in 버튼 */
 .btn-cont-wrap { display:flex; gap:10px; /*width:100%;*/ padding:0; text-align:center; align-items:start; }
+.btn-cont-wrap.flex-end { justify-content:flex-end;}
 .btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:10px 5px; border-radius:30px; background:linear-gradient(320deg, rgba(38,15,84,1) 0%, rgba(61,18,146,1) 100%); color:#fff; font-size:1rem; font-weight:700; text-align:center; }
 .btn.btn-add {display:inline-block; width:unset; height:48px;  padding:12px 54px; background:#FFFFFF; border:1px solid #4E32A5; font-size:1rem; line-height:1.38889rem; font-weight:500; color:#4E32A5; }
 .btn.btn-sm { display:inline-flex; align-items: center; /*display:inline-block;*/ width:unset; height:30px; padding:5px 16px;  background:#FFFFFF; border:1px solid #DDDDDD; border-radius:17px;  font-size:0.77778rem; line-height: 1rem; font-weight:400; color:#26282C; letter-spacing: -0.5px;}
@@ -39,7 +40,6 @@ body.fix { overflow:hidden; }
 .btn.btn-sm.red { background: #FFEFEF; border:1px solid #FFEFEF; color:#FF0000; }
 .btn.btn-sm.blue { background: #EFF4FF; border:1px solid #EFF4FF; color:#2B66F6; }
 .btn.btn-sm.purple {  border:1px solid #E7DBFF; background:#E7DBFF; color:#612AD0; }
-
 .btn.btn-sm.other { height:34px; background: #F2F4F6; border:1px solid #F2F4F6; color:#26282C; }
  
 .btn.sq { border-radius:6px; }
