@@ -130,6 +130,92 @@
                 </div>
             </div>
 
+            <!--S: 대출금리 확인 (팝업)-->
+            <div id="lyPop1" class="layerpopup layer-up has-button show" style=" display: block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">대출 금리</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con pb0">
+                        <div class="txtbox-wrap">
+                            <p>대출 금리를 확인하셨나요?</p>
+                        </div>
+                        <div class="select-wrap">
+                            <div class="select-box disabled on" tabindex="1">
+                                <label for="">대출금리</label>
+                                <span class="option">00.00%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--D: fixed-btn-wrap 버튼은 content-wrap 밖으로 위치-->
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn">해지하기</a>
+                    </div>
+                </div>
+            </div>
+            <!--E: 대출금리 확인 (팝업)-->
+
+            <!--S: 대출신청금액 입력 (Alert)-->
+            <div id="lyAert1" class="layerpopup type-alert on" style="display: block;">
+                <div class="content-wrap">
+                    
+                    <div class="pop-con-wrap">
+                        <span class="pop-con">대출신청금액을 입력해주세요</span>
+                    </div>
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn">확인</a>
+                    </div>
+                </div>
+            </div>
+            <!--E: 대출신청금액 입력 (Alert)-->
+
+            <!--S: 대출기간 (팝업)-->
+            <div id="lySel2" class="layerpopup layer-up show" style="display: block;">
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">대출기간</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con ly-select">
+                        <ul class="ly-select-list">
+                            <li><button>12개월</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                            <li><button>24개월</button></li>
+                            <li><button>36개월</button></li>
+                            <li><button>48개월</button></li>
+                            <li><button>60개월</button></li>
+                            <li><button>72개월</button></li>
+                            <li><button>84개월</button></li>
+                            <li><button>96개월</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--E: 대출기간 (팝업)-->
+
+            <!--S: 상환방법 (팝업)-->
+            <div id="lySel3" class="layerpopup layer-up show" style="display: block;">
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">상환방법</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con ly-select">
+                        <ul class="ly-select-list">
+                            <li><button>원리균등상환</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                            <li><button>원리금균등상환</button></li>
+                            <li><button>원금만기일시상환</button></li>
+                    
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--E: 상환방법 (팝업)-->
+
+            
+
         </div>
         <!-- //contentsWrap -->
     </form>
