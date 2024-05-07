@@ -74,51 +74,31 @@
             </div>
             <!-- //contents -->
 
-            <div id="lyPop2" class="layerpopup layer-up has-button show" style="position: fixed; top: 421.5px; left: 0px; display: block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+            <div id="lySel6" class="layerpopup layer-up show" style="display:block;">
                 <div class="content-wrap">
                     <div class="pop-header">
-                        <h2 class="pop-title">마이데이터 조회</h2>
+                        <h2 class="pop-title">본인인증 방식</h2>
                         <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
                     </div>
-                    <div class="ly-scroll-con">
-                        <div class="pop-desc">직접서류를 제출하지 않아도 마이데이터로 간편하게 금융서비스 이용이 가능해요</div>
-    	                <div class="mydata-wrap">
-                            <p id="mydata_icon_stop"><img src="/resources/images/common/ico-mydata-bg.png" alt="마이데이터 송수신"></p><!-- D: STOP -->
-                            <p id="mydata_icon_start" style="display: block;"><img src="/resources/images/common/ico-mydata-bg.gif" alt="마이데이터 송수신"></p><!-- D: 수신중 -->
+                    <div class="ly-scroll-con ly-select">
+                        <ul class="list-icon certification"><!-- 인증수단 노출방식 변경 : 클래스 변경 적용 필요 -->
+                            <!-- <li class="pw"><a href="#none">간편비밀번호</a></li>
+                            <li class="pattern"><a href="#none">패턴인증</a></li>
+                            <li class="bio"><a href="#none">바이오인증</a></li>
+                            <li class="joint"><a href="#none" >공동인증서</a></li> -->
                             
-                            <div class="list-bull">
-                                <strong>조회목록</strong>
-                                <ul>
-                                     <!-- D: default : ic-pass 성공 : ic-pass on, 실패 : ic-clo 사용  //-->
-                                    <li class="ic-pass">보험료 납부확인서</li>
-                                    <li class="ic-pass on">자격득실 확인서</li>
-                                    <li class="ic-clo">주민등록표등·초본</li>
-                                </ul>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="fixed-btn-wrap" style="display:block;">
-                        <div class="btn-wrap">
-                            <a href="javascript:void(0);" class="btn">마이데이터 이용동의</a>
-                        </div>
-                    </div>
-                    <div class="fixed-btn-wrap" style="display:none;">
-                        <div class="btn-wrap flexCol">
-                            <a href="javascript:void(0);" class="btn">제출</a>
-                            <a href="javascript:void(0);" class="btn txt">제출</a>
-                        </div>
-                    </div>
-                    <div class="fixed-btn-wrap" style="display:none;">
-                        <div class="btn-wrap flexCol">
-                            <a href="javascript:void(0);" class="btn">마이데이터 재시도</a>
-                            <a href="javascript:void(0);" class="btn txt">조회없이진행</a>
-                        </div>
+                            <li class="phone"><a href="#none">휴대폰 본인인증</a></li>
+                            <li class="joint"><a href="#none" >공동인증서</a></li>
+                            <li class="finance"><a href="#none">금융인증서</a></li>
+                            <li class="toss"><a href="#none">토스인증</a></li>
+                            <li class="kakao"><a href="#none">카카오인증</a></li>
+                            <li class="naver"><a href="#none">네이버인증</a></li>
+                        </ul>
+
                     </div>
                 </div>
-              
             </div>
-            
+
         </div>
         <!-- //contentsWrap -->
     </form>

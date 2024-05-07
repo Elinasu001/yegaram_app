@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common"
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm"
+	data-serverTime="20230803152535"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+
+
+<body>
+    <!-- header -->
+    <header class="headerWrap">
+		<div class="headerLeft">
+			<a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+		</div>
+		<div class="headerCenter">
+			<h2 class="text"><span>대출신청</span></h2> <!--D: TEXT -->
+		</div>
+		<div class="headerRight">
+			<!-- <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a> -->
+		</div>
+	</header>
+	<!-- //header -->
+
+    <form>
+        <!--contentsWrap -->
+        <div class="contentsWrap">
+            <!--contents -->
+            <div class="contents">
+                <div class="default-wrap">
+
+                    <div class="step-wrap">
+                        <div class="step-line" aria-label="총 8단계 중 7단계 진행중">
+                            <div class="step-bar" style="width:87.5%;"></div>
+                        </div>
+                        <div class="num">
+                            <strong class="current">8</strong>/<span class="tot">7</span>
+                        </div>
+                    </div>
+
+                    <div class="tit-wrap">
+                        <p class="txt"><strong>소득정보조회를 위해 본인확인이<br/> 필요해요</strong></p>
+                    </div>
+
+                    <div class="select-wrap">
+
+                        <div class="form-tit">
+                            <span>주소(초본)정보 입력</span>
+                        </div>
+                        <div class="select-box" tabindex="1">
+                            <label for="" class="">시/도</label>
+                            <span class="option" id="">미선택</span>
+                        </div>
+
+                        <div class="select-box" tabindex="1">
+                            <label for="" class="">시/군/구</label>
+                            <span class="option" id="">미선택</span>
+                        </div>
+                        <p class="info-txt">주민등록초본 조회를 위해 시/도 와 시/군/구를 선택해 주세요</p>
+
+                    </div>
+
+                    <div class="list-bull">
+                        <strong>소득정보 자동화 조회목록</strong>
+                        <ul>
+                            <li>주민등록표등본</li>
+                            <li>주민등록표초본</li>
+                            <li>보험료 납부확인서</li>
+                            <li>자격득실 확인서</li>
+                        </ul>
+                    </div>
+                
+                </div>
+            </div>
+            <!-- //contents -->
+
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap flexCol">
+                    <a href="javascript:void(0);" class="btn">본인인증</a>
+                    <a href="javascript:void(0);" class="btn txt">그만하기</a>
+                </div>
+            </div>
+
+
+            <!--S: 시/도 (팝업)-->
+            <div id="lySel1" class="layerpopup layer-up show" style="display: block;">
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">시/도</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con ly-select">
+                        <ul class="ly-select-list">
+                            <li><button>시/도</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                            <li><button>시/도</button></li>
+                            <li><button>시/도</button></li>
+                            <li><button>시/도</button></li>
+                            <li><button>시/도</button></li>
+                            <li><button>시/도</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--E: 시/도 (팝업)-->
+
+            <!--S: 시/군/구 (팝업)-->
+            <div id="lySel1" class="layerpopup layer-up show" style=" display: block;">
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">시/군/구</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con ly-select">
+                        <ul class="ly-select-list">
+                            <li><button>시/군/구</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                            <li><button>시/군/구</button></li>
+                            <li><button>시/군/구</button></li>
+                            <li><button>시/군/구</button></li>
+                            <li><button>시/군/구</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--E: 시/군/구 (팝업)-->
+        </div>
+        <!-- //contentsWrap -->
+    </form>
+</body>
+</html>
+
