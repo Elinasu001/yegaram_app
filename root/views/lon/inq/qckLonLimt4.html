@@ -52,14 +52,26 @@
 
 <body>
     <!-- header -->
-    <div id="headerWrap">
-        <script>
-        $(document).ready(function(){
-            document.charset="euc-kr";
-            $("#headerWrap").load("../includes/header.html");
-        });
-        </script>
-    </div>
+    <header class="headerWrap"> <!--D: bg-color02 클래스 : 뒤에 색상 들어갈 경우  -->
+        <div class="headerLeft">
+    
+            <!--D: 이전버튼-->
+            <a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+    
+        </div>
+        <div class="headerCenter">
+            <h2 class="text"><span>간편대출한도조회</span></h2> <!--D: TEXT -->
+        </div>
+        <div class="headerRight">
+            
+            <!--D: 홈버튼 -->
+            <a href="javascript:void(0)" class="btn btn-home"><img src="/resources/images/header/btn_home.png" alt="홈"></a>
+    
+            <!--D: 전체메뉴버튼 -->
+            <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>
+    
+        </div>
+    </header>
 	<!-- //header -->
 
     <form>
@@ -67,31 +79,49 @@
         <div class="contentsWrap grid">
             <!--contents -->
             <div class="contents">
+                
                 <div class="default-wrap">
-                    
-                    <section>
+
+                    <!--S: 대출한도 조회결과-->
+                    <section style="display:block;">
                         <div class="tit-wrap">
                             <p class="txt"><strong>대출한도조회 결과입니다</strong></p>
                         </div>
                         <ul class="prod-box-list line">
-
+                            <!--S: 반복-->
                             <li>
                                 <div class="prod-box">
                                     <div class="icon-exp">
                                         <p>직장인, 자영어바, 프리랜서를 위한</p>
                                     </div>
                                     <div class="flag-tit-wrap">
-                                        <em class="flag style3 ">대환대출</em>
+                                        <em class="flag style3 ">신용대출</em>
                                         <strong class="tit">빅머니U론</strong>
                                     </div>
                                     <ul class="text-bar-list">
-                                        <li>직장인</li>
-                                        <li>자영업자</li>
-                                        <li>프리랜서</li>
+                                        <li>고금리</li>
+                                        <li>비대면</li>
+                                        <li>대출통합</li>
                                     </ul>
                                     <div class="label-info-wrap">
                                         <p>최대 1억원</p>
                                         <strong class="info">연<span>6.80</span>% ~ <span>18.20</span>%</strong>
+                                    </div>
+                                    <div class="account-ex">
+                                        <div>
+                                            월 상환금 예시
+                                            <div class="tooltip-wrap">
+                                                <a href="#none" class="tooltip-btn">?</a>
+                                                <div class="tooltip-txt">
+                                                    <p>월 상환금은 예시로 실제 대출<br>월 상환금액과는 다를 수 있어요</p>
+                                                    <button href="#none" class="tooltip-close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p><span>(최대금액)</span>원/5년/이율 10% 빌릴때<br>(원금+이자)</p>
+                                            <p>월 <span>87,674</span>원</p>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -99,36 +129,121 @@
                             <li>
                                 <div class="prod-box">
                                     <div class="icon-exp">
-                                        <p>타사 채무 상환과 추가대출을 동시에</p>
+                                        <p>요즘 관심받는 상품이에요</p>
                                     </div>
                                     <div class="flag-tit-wrap">
-                                        <em class="flag style3">대환대출</em>
-                                        <strong class="tit">라이브U론</strong>
+                                        <em class="flag style3">햇살론</em>
+                                        <strong class="tit">햇살론</strong>
                                     </div>
                                     <ul class="text-bar-list">
-                                        <li>전직군</li>
-                                        <li>20세 이상</li>
-                                        <li>최대 5,000만원</li>
+                                        <li>서민금융대출</li>
+                                        <li>저신용소득</li>
+                                        <li>최대 5년 분할상환</li>
                                     </ul>
                                     <div class="label-info-wrap">
-                                        <p>최대 1억원</p>
-                                        <strong class="info">연<span>15.60</span>% ~ <span>19.90</span>%</strong>
+                                        <p>최대 2,000만원</p>
+                                        <strong class="info">연<span>8.7</span>%</strong>
+                                    </div>
+                                    <div class="account-ex">
+                                        <div>
+                                            월 상환금 예시
+                                            <div class="tooltip-wrap">
+                                                <a href="#none" class="tooltip-btn">?</a>
+                                                <div class="tooltip-txt">
+                                                    <p>월 상환금은 예시로 실제 대출<br>월 상환금액과는 다를 수 있어요</p>
+                                                    <button href="#none" class="tooltip-close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p><span>1,500</span>만원/5년 빌릴때<br>(원금+이자)</p>
+                                            <p>월 <span>87,674</span>원</p>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
-
+                            <!--E: 반복-->
                         </ul>
                     </section>
 
-                    <section class="sub-info-wrap">
-                        <div class="tel">이용문의 <strong>1877-9900</strong></div>
-                        <p>평일 09:00 ~ 18:00<br>(주말 및 공휴일 휴무)</p>
+                    <section  style="display:block;">
+                        <div class="sub-info-wrap">
+                            <div class="tel">이용문의 <strong>1877-7788</strong></div>
+                            <p>평일 09:00 ~ 18:00<br>(주말 및 공휴일 휴무)</p>
+                        </div>
+
+                        <div class="list-bull">
+                            <div class="border"></div>
+                            <strong>알아두세요</strong>
+                            <ul>
+                                <li>보다 정확한 한도를 확인하시려면 상품상세 버튼을 눌러주세요</li>
+                            </ul>
+                        </div>
                     </section>
-                    
+                    <!--E: 대출한도 조회결과-->
+
+                    <!--S: 대출한도 조회결과 (대출 신청 불가)-->
+                    <section  style="display:block;">
+                        <div class="result-area exclamation">
+                            <p class="tit"><strong>아쉽게도 대출한도가<br/>조회되지 않았어요</strong></p>
+                        </div>
+                    </section>
+
+                    <section  style="display:block;">
+                        <div class="sub-info-wrap">
+                            <div class="tel">이용문의 <strong>1877-7788</strong></div>
+                            <p>평일 09:00 ~ 18:00<br>(주말 및 공휴일 휴무)</p>
+                        </div>
+                    </section>
+                    <!--E: 대출한도 조회결과 (대출 신청 불가)-->
+
+                    <!--S: 대출한도 조회결과 (신청중인 대출 존재)-->
+                    <section style="display:block;">
+                        <div class="result-area exclamation">
+                            <p class="tit"><strong>이미 <spn>햇살론</spn>대출<br/>신청 중이세요</strong></p>
+                        </div>
+                        <div class="txt-list-wrap">
+                            <div class="txt-detail-area">
+                                <div class="txt-detail-tit">
+                                    <strong>대출상품명</strong>
+                                </div>
+                                <ul class="txt-list">
+                                    <li>
+                                        <span class="tit">신청일시</span>
+                                        <span class="txt">YYYY.MM.DD hh:ss</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section style="display:block;">
+                        <div class="sub-info-wrap">
+                            <div class="tel">이용문의 <strong>1877-7788</strong></div>
+                            <p>평일 09:00 ~ 18:00<br>(주말 및 공휴일 휴무)</p>
+                        </div>
+                        <div class="list-bull">
+                            <div class="border"></div>
+                            <strong>알아두세요</strong>
+                            <ul>
+                                <li>고객님의 정보는 안전하게 암호화하여 보호되고 있어요</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!--E: 대출한도 조회결과 (신청중인 대출 존재)-->
 
                 </div>
+
             </div>
             <!-- //contents -->
+
+            <!--S: 대출한도 조회결과 (대출 신청 불가) / 대출한도 조회결과 (신청중인 대출 존재)-->
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn">홈으로</a>
+                </div>
+            </div>
+             <!--E: 대출한도 조회결과 (대출 신청 불가) / 대출한도 조회결과 (신청중인 대출 존재)-->
 
         </div>
         <!-- //contentsWrap -->

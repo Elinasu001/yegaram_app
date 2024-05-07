@@ -207,7 +207,7 @@ body.fix { overflow:hidden; }
 .account-prod > p:first-of-type { margin-top:20px; }
 .account-prod > p:last-child { font-size:1.1rem; font-weight:bold; }
 
-.account-ex { display:inline-block; width:100%; padding:20px 0; color:#999; font-size:0.8rem; }
+.account-ex { display:inline-block; width:100%; padding:20px 0; color:#999; font-size:0.8rem; border-top:1px solid #EEEEEE;  } 
 .account-ex:last-child { padding-bottom:10px; }
 .account-ex > div { width:100%; font-size:0.8rem; }
 .account-ex > div > p:first-child { float:left; width:65%; }
@@ -376,7 +376,7 @@ body.fix { overflow:hidden; }
 .tooltip-wrap .tooltip-txt::before { content: ''; position: absolute; transform:translate(-50%, 0) rotate(90deg); bottom:-9px; left:50%; border-top:5px solid transparent; border-right:5px solid transparent; border-bottom:5px solid transparent; border-left:5px solid #9F7CE3; }
 .tooltip-wrap .tooltip-close { position:absolute; right:8px; top:8px; width:12px; height:12px; background:url("../images/common/btn_close_white.png") no-repeat 50%/12px auto; font-size:0; }
 .tooltip-wrap.on .tooltip-txt { /* opacity:1; */ display:block; }
-.tooltip-wrap > a { display:flex; align-items:center; justify-content:center; width:16px; height:17px; border:1px solid #8052DC; border-radius:50%; color:#8052DC; font-size:0.66667rem; font-weight:bold; text-align:center; }
+.tooltip-wrap > a { display:flex; align-items:center; justify-content:center; width:20px; height:20px; border:1px solid #26282C; border-radius:50%; color:#26282C; font-size:0.66667rem; line-height:1.056rem; font-weight:600; text-align:center; }
 /* .tooltip-wrap > div { display:none; } */
 /* _on/off 토글에서 사용되는 툴팁 */
 .check-box .tooltip-wrap {/* margin-top:-2px;*/ font-size:0; /*vertical-align:middle;*/ }
@@ -638,7 +638,7 @@ body.fix { overflow:hidden; }
 .thumb-wrap > li > a img { height:100%; border-radius:10px; }
 
 /* 2023-07-14~ space test(청) */
-.default-wrap > .result-area { margin-top:12vh; /*margin-top:16vh;*/ } /*에러페이지 ex)transfer01.html*/
+.default-wrap .result-area { margin-top:12vh; /*margin-top:16vh;*/ } /*에러페이지 ex)transfer01.html*/
 
 /*.form-wrap:has(.select-wrap) + .exp-txt { margin-top:0; } 이체-셀렉트+잔액 ex)immedTransferStep1.html*/
 .toggle-area .list-bull { margin-top:0; }
