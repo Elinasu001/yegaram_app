@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230804090319"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230804090319"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230804090319"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230804090319"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230804090319"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230804090319"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230804090319"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230804090319"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230804090319" id="biz_common" 
+	data-menuId="etc/inq"
+	data-frameId="faq2"
+	data-serviceCd="faq2.frm" 
+	data-serverTime="20230804090319"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+<script type="text/javascript">
+var PageFunc = function() {
+	
+	var _back = function() { // 뒤로가기
+		history.back();
+	}
+	
+	var _proc = function() { // 본처리
+		// TODO 
+		return true;
+	}
+	
+	var _cancel = function() { // 그만하기
+		goMainPage();
+	}
+	
+	var _validate = function() { // 유효성검증
+		// TODO 
+		return true;
+	}
+	
+	/**************************
+	* 사전점검표 체크
+	***************************/
+	var _checkNext = function(el){
+		
+	}
+	
+	return {
+		back : _back,
+		proc : _proc,
+		cancel : _cancel,
+		checkNext : _checkNext
+	};
+}();
+
+
+$(document).ready(function(){
+	
+});
+function goDetail(seq){
+	var faqDetailForm = makeForm("faqDetailForm");
+	addFormData(faqDetailForm, "LINK_ACT", "BBS_SELECT");
+	addFormData(faqDetailForm, "txGbnCd", '');
+	addFormData(faqDetailForm, "SEQ", seq);
+	doActionFrame("etc/inq/faq2", faqDetailForm);
+
+}
+</script>
+</head>
+<body>
+	<!-- header -->
+	
+
+
+
+
+
+	<header class="headerWrap">
+		<div class="header">
+			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+			<h2><span>자주묻는 질문</span></h2>
+		</div>
+		<div class="menu-wrap">
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- s: contentsWrap -->
+        <div class="contentsWrap">
+            <!-- s: contents -->
+            <div class="contents customer"><!-- [퍼블-2] 클래스 변경 -->
+                <div class="default-wrap">
+
+                    <!-- <ul class="event-list">
+                        <li> [퍼블] 삭제 -->
+                            <div class="list-tit-wrap">
+                                <em class="flag style9">예적금</em>
+                                <p><strong>금액 별 필요한 인증 단계가 어떻게 되나요?</strong></p>
+                                <!--D:상세페이지로 들어올 경우 event-list-txt 클래스 추가-->
+                            </div>
+                            <div class="notice_contents"><!--D:게시글 본문 들어가는 부분-->
+                            	<p></p>
+                            </div>
+                        <!-- </li>
+                    </ul> [퍼블] 삭제 -->
+
+                    <div class="btn-cont-wrap btn-add">
+                        <a href="javascript:void(0);" class="btn" onclick="PageFunc.back();">목록으로</a><!-- [퍼블-2] 클래스 변경 -->
+                    </div>
+                </div>
+            </div>
+            <!-- //e: contents -->
+
+        </div>
+        <!-- e: contentsWrap -->
+</body>
+</html>

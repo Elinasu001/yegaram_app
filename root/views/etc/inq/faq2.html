@@ -32,117 +32,69 @@
 <script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/default.js?v=20230804090319"></script>
-<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230804090319"></script>
-<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230804090319"></script>
-<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230804090319"></script>
-<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230804090319"></script>
-<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230804090319"></script>
-<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230804090319"></script>
-<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230804090319"></script>
-<script type="text/javascript" src="/resources/js/biz_common.js?version=20230804090319" id="biz_common" 
-	data-menuId="etc/inq"
-	data-frameId="faq2"
-	data-serviceCd="faq2.frm" 
-	data-serverTime="20230804090319"
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common"
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm"
+	data-serverTime="20230803152535"
 	data-activeMode="local"
 	data-activeEnv="${active.env">
 </script>
-<script type="text/javascript">
-var PageFunc = function() {
-	
-	var _back = function() { // 뒤로가기
-		history.back();
-	}
-	
-	var _proc = function() { // 본처리
-		// TODO 
-		return true;
-	}
-	
-	var _cancel = function() { // 그만하기
-		goMainPage();
-	}
-	
-	var _validate = function() { // 유효성검증
-		// TODO 
-		return true;
-	}
-	
-	/**************************
-	* 사전점검표 체크
-	***************************/
-	var _checkNext = function(el){
-		
-	}
-	
-	return {
-		back : _back,
-		proc : _proc,
-		cancel : _cancel,
-		checkNext : _checkNext
-	};
-}();
 
 
-$(document).ready(function(){
-	
-});
-function goDetail(seq){
-	var faqDetailForm = makeForm("faqDetailForm");
-	addFormData(faqDetailForm, "LINK_ACT", "BBS_SELECT");
-	addFormData(faqDetailForm, "txGbnCd", '');
-	addFormData(faqDetailForm, "SEQ", seq);
-	doActionFrame("etc/inq/faq2", faqDetailForm);
-
-}
-</script>
-</head>
 <body>
-	<!-- header -->
-	
-
-
-
-
-
-	<header class="headerWrap">
-		<div class="header">
-			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
-			<h2><span>자주묻는 질문</span></h2>
-		</div>
-		<div class="menu-wrap">
-		</div>
-	</header>
+    <!-- header -->
+    <header class="headerWrap">
+        <div class="headerLeft">
+            <!--D: 이전버튼-->
+            <a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+        </div>
+        <div class="headerCenter">
+            <h2 class="text"><span>자주 묻는 질문</span></h2> <!--D: TEXT -->
+        </div>
+        <div class="headerRight">
+            <!--D: 전체메뉴버튼 -->
+            <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>
+        </div>
+    </header>
 	<!-- //header -->
 
-	<!-- s: contentsWrap -->
+    <form>
+        <!--contentsWrap -->
         <div class="contentsWrap">
-            <!-- s: contents -->
-            <div class="contents customer"><!-- [퍼블-2] 클래스 변경 -->
+            <!--contents -->
+            <div class="contents">
                 <div class="default-wrap">
-
-                    <!-- <ul class="event-list">
-                        <li> [퍼블] 삭제 -->
-                            <div class="list-tit-wrap">
-                                <em class="flag style9">예적금</em>
-                                <p><strong>금액 별 필요한 인증 단계가 어떻게 되나요?</strong></p>
-                                <!--D:상세페이지로 들어올 경우 event-list-txt 클래스 추가-->
-                            </div>
-                            <div class="notice_contents"><!--D:게시글 본문 들어가는 부분--><!--[퍼블] 클래스 변경-->
-                            	<p></p>
-                            </div>
-                        <!-- </li>
-                    </ul> [퍼블] 삭제 -->
-
-                    <div class="btn-cont-wrap btn-add">
-                        <a href="javascript:void(0);" class="btn" onclick="PageFunc.back();">목록으로</a><!-- [퍼블-2] 클래스 변경 -->
+                    
+                    <div class="list-tit-wrap">
+                        <em class="flag style9">예/적금</em>
+                        <p><strong>금액 별 필요한 인증 단계가 어떻게 되나요?</strong></p>
+                        <!--D:상세페이지로 들어올 경우 event-list-txt 클래스 추가-->
                     </div>
+                    
+                    <div class="notice_contents"><!--D:게시글 본문 들어가는 부분--><!--[퍼블] 클래스 변경-->
+                        본문 들어가는 부분
+                    </div>
+                    
+                    <div class="btn-cont-wrap flexCenter"><!--D: 클래스 변경-->
+                        <a href="javascript:void(0);" class="btn btn-add">목록으로</a><!--D: 클래스 추가-->
+                    </div>
+
                 </div>
             </div>
-            <!-- //e: contents -->
+            <!-- //contents -->
 
         </div>
-        <!-- e: contentsWrap -->
+        <!-- //contentsWrap -->
+    </form>
 </body>
 </html>
+
