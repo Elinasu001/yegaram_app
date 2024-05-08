@@ -264,6 +264,7 @@ body.fix { overflow:hidden; }
 .txt-list-wrap .txt-detail-area.account-info .txt-list li { display:flex; }
 .txt-list-wrap .txt-detail-area.account-info .txt-list li .tit { flex:1 1 fit-content; }
 .txt-list-wrap .txt-detail-area.account-info .txt-list li .txt { flex:1 1 auto; }
+.txt-detail-area strong { margin-top:10px; font-weight:500; color:#666666; }
 .txt-detail-area.flex { display:flex; justify-content:space-between; }
 .txt-detail-area.flex strong { font-weight:500; color:#4E32A5; }
 .txt-detail-area .desc { color:#757575; font-size:0.88889rem; line-height:1.4375; }
