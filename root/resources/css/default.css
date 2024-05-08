@@ -288,31 +288,33 @@ html.font-size-3{ font-size: 24px;}
 .point { /* font-weight:500; */ font-weight:500; color:#492BA2; }
 .point-red{ color:#FF0000; }
 
-/* 기타 -그레이 */
-.flag { display:inline-flex; align-items: center; width:auto; height:23px;/*margin-right:6px;*/ padding:3px 8px; border-radius:13px; background:#FFFFFF; border:1px solid #DDDDDD; font-size:0.66667rem; line-height:1.056rem; font-weight:400; color:#666666; letter-spacing:-.5px; vertical-align:middle; } /* 접수완료, 긍정 - 파랑 */
+/* flag */
+/*  */
+.flag { display:inline-flex; align-items: center; width:auto; height:30px; /*margin-right:6px;*/ padding:6px 7px; border-radius:15px; background:#FFFFFF; border:1px solid #DDDDDD; font-size:0.77778rem; line-height: 1rem;  font-weight:400; color:#26282C; letter-spacing:-.5px; vertical-align:middle; } /* 접수완료, 긍정 - 파랑 */
 .flag + .flag { margin-right:6px; }
 
-.flag.style4  { color:#00A2C4; background:#E3F6F8; } /* 심사중 - 초록 */ 
-.flag.style5 { color:#C1016C; background:#FFE6F4; } /* 대출상품표기 - 빨강 */
-.flag.style6 { color:#2B66F6; background:#F5F8FE; }/* 공지사항,이벤트  - 파랑 */ 
-.flag.style7 { color:#999999; background:#EFF0F2; }/* 공지사항,이벤트 - 회색 */
-.flag.style8   { color:#FF0000; background:#FEEFEF; } /* 거절,부정,사고신고 - 빨강 */
-.flag.style9 { color:#757575; background:#FFFFFF; border:1px solid #DDDDDD; }/* 공지사항 - 화이트 */ 
-.flag.style10 { border:1px solid #EBAF29; color:#EBAF29; }/* 마이뱅킹 - 주황색 */
+/*.flag.style4  { color:#00A2C4; background:#E3F6F8; }*/ /* 심사중 - 초록 */ 
+ /*.flag.style5 { color:#C1016C; background:#FFE6F4; }*/ /* 대출상품표기 - 빨강 */
+ /*.flag.style6 { color:#2B66F6; background:#F5F8FE; }*//* 공지사항,이벤트  - 파랑 */ 
+ /*.flag.style7 { color:#999999; background:#EFF0F2; }*//* 공지사항,이벤트 - 회색 */
+ /*.flag.style8   { color:#FF0000; background:#FEEFEF; } *//* 거절,부정,사고신고 - 빨강 */
+/*.flag.style9 { color:#757575; background:#FFFFFF; border:1px solid #DDDDDD; }*/ /* 공지사항 - 화이트 */ 
+/*.flag.style10 { border:1px solid #EBAF29; color:#EBAF29; }*//* 마이뱅킹 - 주황색 */
 
 
-.flag.style2 { border:1px solid #9F7CE3; color:#612AD0; } /* 예적금 - 보라색 */
-.flag.style3 { border:1px solid #D00F7B; color:#D00F7B;  }/* 대출- 핑크 */
+.flag.style2,
+.flag.style3,
+.flag.style4 { height:23px; padding:1px 8px; font-size:0.66667rem; line-height:1.056rem; }
 
-.flag.style4 {  height:30px; border:1px solid #FFE9F5;  color:#F648AA; background: #FFE9F5; } /* 전자민원신청 조회내역 - 접수 */
-.flag.style5 {  height:30px;  border:1px solid #E3F6F8; color:#00A2C4; background: #E3F6F8; } /* 전자민원신청 조회내역 - 처리중 */
-.flag.style6 {  height:30px; border:1px solid #EFF4FF; color:#2B66F6; background: #EFF4FF; } /* 전자민원신청 조회내역 - 완료 */
+.flag.style2 { border:1px solid #9F7CE3; color:#612AD0; } /* 예적금 */
+.flag.style3 { border:1px solid #D00F7B; color:#D00F7B; } /* 대출 */
+.flag.style4 { border:1px solid #EBAF29; color:#EBAF29; } /* 종합통장대출 */
 
-
-
-
-.flag.dep { background:#FFF0C8; color:#DC7D10; }
-.flag.loan { background:#DFF1FF; color:#2B66F6; }
+.flag.style5{  border:1px solid #FFE9F5;  color:#F648AA; background: #FFE9F5; } /* 접수/대기 */
+.flag.style6 { border:1px solid #E3F6F8; color:#00A2C4; background: #E3F6F8; }  /* 처리중/진행중 */
+.flag.style7 { border:1px solid #EFF4FF; color:#2B66F6; background: #EFF4FF; }  /* 완료 */
+.flag.style8   { border:1px solid #FFEFEF; color:#FF0000; background:#FFEFEF; } /* 거절/분실 */
+.flag.style9   { border:1px solid #EFF0F2; color:#666666; background:#EFF0F2; } /* 취소 */
 
 .success { font-weight:500; color:#2B66F6; }/* 내역조회완료 - 파랑  */
 .error { font-weight:500; color:#FF0000; }/* 내역조회실패 - 빨강  */
@@ -326,7 +328,7 @@ html.font-size-3{ font-size: 24px;}
 .button-list li + li:before { content:''; position:absolute; top:50%; left:0; width:1px; height:14px; background:#DDDDDD; transform:translateY(-50%); }
 .button-list li.active a::after { content:''; display:inline-block; width:20px; height:20px; margin-top:15px; margin-left:5px; background:url("../images/common/chk_on.png") no-repeat 50% / 18px auto; vertical-align:middle; transform:translateY(-50%); }
 .button-list a { display:block; font-size:0.77778rem; font-weight:400; color:#666666; }
-
+.terms-list .flag { align-items:initial; }
 /** 텍스트 | 텍스트 | 텍스트 case **/
 .text-bar-list { font-size:0; color:#757575; }
 /* .text-bar-list li { display:inline-block; position:relative; padding:0 10px; font-weight:400; font-size:0.77778rem; line-height:1.5; text-align:center; } */
