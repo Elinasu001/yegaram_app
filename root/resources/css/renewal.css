@@ -171,6 +171,9 @@ body.fix { overflow:hidden; }
 
 
 /** 처리결과화면 - 메세지노출영역 **/
+
+section > .result-wrap{ margin-top:40px; }
+.result-wrap .sub-tit-wrap { margin:0 0 15px; }
 .result-msg { display:inline-block; width:100%;  }
 .result-msg {  margin-top:30px; padding:20px; background:#F8F8FA; border-radius:20px; border:0; color:#666; text-align:left; }
 .result-area .result-msg > p { font-size:0.88889rem; line-height:1.4375; font-weight:normal; word-break: keep-all; }

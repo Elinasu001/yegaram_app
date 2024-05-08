@@ -1643,6 +1643,13 @@ body.on { position:fixed; top:0; }
 .tabs-wrap.type2 .tab-item.square,
 .tabs-wrap.type2 .tab-item.square li { height:auto; border-radius:10px; }
 
+.tabs-wrap.type3 { margin-top:15px; }
+.tabs-wrap.type3 .tab-item { display:inline-block; }
+.tabs-wrap.type3 .tab-item:before { content:none; }
+.tabs-wrap.type3 .tab-item li { line-height:inherit; height:inherit; border-radius:23px; margin-right:10px; margin-top:10px; padding:0; background:#F4F5FB; }
+.tabs-wrap.type3 .tab-item li a { padding:8px 15px; font-size:0.66667rem; line-height:1.58334; }
+.tabs-wrap.type3 .tab-item li.on { border-bottom:none; font-weight:500; background:#260F54!important;}
+.tabs-wrap.type3 .tab-item li.on a { color:#FFFFFF; }
 
 
 
