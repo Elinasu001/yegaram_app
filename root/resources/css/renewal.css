@@ -236,7 +236,7 @@ body.fix { overflow:hidden; }
 .txt-list-wrap .txt-detail-area { padding:20px; border-radius:15px; border:1px solid #DDDDDD; }
 .txt-list-wrap .txt-detail-area p.txt { margin-bottom:20px; text-align:center; font-size:0.88889rem; color:#666666; }
 .txt-list-wrap .txt-detail-area + .txt-detail-area { margin-top:20px; }
-.txt-list-wrap .txt-detail-area:has(.txt-list) { padding:10px 20px 18px; }
+.txt-list-wrap .txt-detail-area:has(.txt-list) { padding:0 20px 18px; }
 .txt-list-wrap .txt-detail-area:has(.txt-detail-tit) { padding-top:20px; }
 /* .txt-list-wrap .txt-detail-area .txt-list li { align-items:flex-start; } 높이 가운데로 정렬 하기로해서 주석처리함 */
 
