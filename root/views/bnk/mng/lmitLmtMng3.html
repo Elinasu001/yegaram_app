@@ -67,114 +67,18 @@
 
     <form>
         <!--contentsWrap -->
+        <!--D : grid 클래스 추가 -->
         <div class="contentsWrap grid">
             <!--contents -->
             <div class="contents">
                 <div class="default-wrap">
-
-                    <!--S: 신청중인경우-->
-                    <section class="result-area ing"  style="display:block;">
-                        <p class="tit"><strong>이미 대출을<br/>신청 중이세요</strong></p>
-                    </section>
-                    <!--E: 신청중인경우-->
-
-                    <!--S: 상담연결대기-->
-                    <section class="result-area exclamation"  style="display:block;">
-                        <p class="tit"><strong>신청해주신 대출은<br/>상담이 필요해요</strong></p>
+                    <section class="result-area checking">
+                        <p class="tit"><strong>한도계좌해제를 신청했어요</strong></p>
                         <div class="bg-box">
-                            <p class="box-tit"><strong>논스톱 자동대출</strong></p>
-                            <p class="box-desc">보다 정확한 상담을 위해<br/>빠른시간 내에 당행 상담원이 연락 드릴게요</p>
+                            <p class="box-desc">제출하신 서류에 대한 심사는 영업일 기준
+                                평균 2~3일이 필요해요</p>
                         </div>
                     </section>
-                    <!--E: 상담연결대기-->
-
-                    <!--S: 제휴사(혁신채널)대출신청 중인 경우-->
-                    <section class="result-area ing"  style="display:block;">
-                        <p class="tit"><strong>제휴사를 통해<br/>접수된 대출신청이 있어요</strong></p>
-                        <div class="txtbox-wrap">
-                            <p>접수하신 대출을 진행하시려면 "이어서 대출하기"<br/>버튼을 눌러주세요</p>
-                        </div>
-                    </section>
-                    <!--E: 제휴사(혁신채널)대출신청 중인 경우-->
-
-                    <!--S: 대출심사중인 경우-->
-                    <section class="result-area ing"  style="display:block;">
-                        <p class="tit"><strong>신청하신 대출이<br/>심사 중이세요</strong></p>
-                        <div class="txtbox-wrap">
-                            <p>상담원이 연락 드릴 예정이에요</p>
-                        </div>
-                        <div class="txt-list-wrap">
-                            <div class="txt-detail-area">
-                                <div class="txt-detail-tit">
-                                    <strong>XX론</strong>
-                                </div>
-                                <ul class="txt-list">
-                                    <li>
-                                        <span class="tit">신청일시</span>
-                                        <span class="txt">YYYY.MM.DD hh:ss</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    <!--E: 대출심사중인 경우-->
-
-                    <!--S: 전자계약서 작성 중인 경우-->
-                    <section class="result-area ing"  style="display:block;">
-                        <p class="tit"><strong>작성중인<br/>전자계약서가 있어요</strong></p>
-                        <div class="txtbox-wrap">
-                            <p>전자계약서 작성 완료 후 대출을 신청하세요</p>
-                        </div>
-                    </section>
-                    <!--E: 전자계약서 작성 중인 경우-->
-
-                    <!--S: 대출승인거절-->
-                    <section class="result-area exclamation"  style="display:block;">
-                        <p class="tit"><strong>아쉽게도 대출이<br/> 승인되지 않았어요</strong></p>
-                    </section>
-                    <!--E: 대출승인거절-->
-
-                    <!--S: 상담대출가능-->
-                    <section class="result-area exclamation"  style="display:block;">
-                        <p class="tit"><strong>아쉽게도 대출이<br/> 승인되지 않았어요</strong></p>
-                        <div class="bg-box">
-                            <p class="box-desc">다른 대출상품을 상담이 필요하세요?<br/>대출상담 신청하기를 버튼을 누르세요</p>
-                        </div>
-                    </section>
-                    <!--E: 상담대출가능-->
-
-                    <!--S: 대출진행불가(중복거래)-->
-                    <section class="result-area exclamation"  style="display:block;">
-                        <p class="tit"><strong>중복거래가 확인되어<br/>대출진행이 중지되었어요</strong></p>
-                    </section>
-                    <!--E: 대출진행불가(중복거래)-->
-
-                    <!--S: 상담원대출진행-->
-                    <section class="result-area exclamation"  style="display:block;">
-                        <p class="tit"><strong>중복거래가 확인되어<br/>대출진행이 중지되었어요</strong></p>
-                        <div class="txtbox-wrap">
-                            <p>상담원이 연락드릴 예정이에요</p>
-                        </div>
-                    </section>
-                    <!--E: 상담원대출진행-->
-
-                    <!--S: 대출신청 완료-->
-                    <div class="result-area checking">
-                        <p class="tit"><strong>대출을 신청했어요</strong></p>
-                        <div class="txtbox-wrap">
-                            <p>10분 내로 등록하신 계좌에<br/> 입금할게요</p>
-                        </div>
-                    </div>
-                    <!--E: 대출신청 완료-->
-
-                    <!--S: 대출신청 완료(상담원 전황 예정)-->
-                    <div class="result-area checking">
-                        <p class="tit"><strong>대출을 신청했어요</strong></p>
-                        <div class="txtbox-wrap">
-                            <p>대출심사 및 입금을 위해</br/>상담원이 전화 드릴 예정이에요</p>
-                        </div>
-                    </div>
-                    <!--E: 대출신청 완료(상담원 전황 예정)-->
 
                     <!--S: 이용문의 (고정)-->
                     <section class="sub-info-wrap">
@@ -186,72 +90,14 @@
             </div>
             <!-- //contents -->
 
-            <!--S: 상담연결대기/대출심사중인경우/대출승인거절/대출진행불가(중복거래)/상담원대출진행/대출신청 완료-->
             <div class="fixed-btn-wrap">
                 <div class="btn-wrap">
                     <a href="javascript:void(0);" class="btn">홈으로</a>
                 </div>
             </div>
-            <!--E: 상담연결대기/대출심사중인경우/대출승인거절/대출진행불가(중복거래)/상담원대출진행/대출신청 완료-->
 
-            <!--S: 신청중인경우-->
-            <div class="fixed-btn-wrap">
-                <div class="btn-wrap flexCol">
-                    <a href="javascript:void(0);" class="btn">대출계속하기</a>
-                    <a href="javascript:void(0);" class="btn txt">홈으로</a>
-                </div>
-            </div>
-            <!--E: 신청중인경우-->
 
-            <!--S: 제휴사(혁신채널) 대출신청 중인 경우-->
-            <div class="fixed-btn-wrap">
-                <div class="btn-wrap flexCol">
-                    <a href="javascript:void(0);" class="btn">이어서 대출하기</a>
-                    <a href="javascript:void(0);" class="btn txt">홈으로</a>
-                </div>
-            </div>
-            <!--E: 제휴사(혁신채널) 대출신청 중인 경우-->
 
-            <!--S: 전자계약서작성중인경우-->
-            <div class="fixed-btn-wrap">
-                <div class="btn-wrap flexCol">
-                    <a href="javascript:void(0);" class="btn">전자계약서 작성하기</a>
-                    <a href="javascript:void(0);" class="btn txt">홈으로</a>
-                </div>
-            </div>
-            <!--E: 전자계약서작성중인경우-->
-
-            <!--S: 상담대출가능-->
-            <div class="fixed-btn-wrap">
-                <div class="btn-wrap flexCol">
-                    <a href="javascript:void(0);" class="btn">대출상담 신청하기</a>
-                    <a href="javascript:void(0);" class="btn txt">홈으로</a>
-                </div>
-            </div>
-            <!--E: 상담대출가능-->
-
-            <!--S: 대출신청 완료(상담원 전황 예정)-->
-            <div class="fixed-btn-wrap">
-                <div class="btn-wrap flexCol">
-                    <a href="javascript:void(0);" class="btn">대출신청 상태보기</a>
-                    <a href="javascript:void(0);" class="btn txt">홈으로</a>
-                </div>
-            </div>
-            <!--E: 대출신청 완료(상담원 전황 예정)-->
-
-            <!--S: 상담대출가능 (Alert)-->
-            <div id="lyAlert1" class="layerpopup type-alert on" style="display:none;">
-                <div class="content-wrap">
-                    
-                    <div class="pop-con-wrap">
-                        <span class="pop-con">대출상담 예약 신청이 완료되었어요<br/>상담원이 연락 드릴 예정이에요</span>
-                    </div>
-                    <div class="btn-wrap">
-                        <a href="javascript:void(0);" class="btn">확인</a>
-                    </div>
-                </div>
-            </div>
-            <!--E: 상담대출가능 (Alert)-->
 
         </div>
         <!-- //contentsWrap -->
