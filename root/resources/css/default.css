@@ -619,6 +619,8 @@ input[type="file"]::file-selector-button { display:none; }
 .terms-list li{ position:relative; padding:12px 0px 14px 0; border-bottom:1px solid#EEEEEE; background: #fff;}/*7/7수정*/
 .terms-list li:has(.flag) { padding-top:20px; padding-bottom:16px; }
 .terms-list li a:after { position:absolute; content:""; top:50%; right:0; transform: translate(0%, -50%);  width:16px; height:16px; background:url(../images/common/ic-arrow-right.png) no-repeat 50%/16px auto; }
+.terms-list li.fix p,
+.terms-list li.fix span { color:#4E32A5; font-weight:500; }
 .event-list { margin-top:30px; }
 .event-list li + li { margin-top:40px; }
 .event-list li p { padding-top:20px; font-weight:500; color:#333333; font-size:1rem; line-height:1.38889; white-space:pre-line; }
@@ -1620,7 +1622,7 @@ body.on { position:fixed; top:0; }
 
 /** _탭리스트 swiper 적용 case **/
 .default-wrap.product .tabs.swiper { margin:0 -20px; } /*네이버앱 대응*/
-.tabs.swiper .swiper-pager { padding:0 20px; }
+.tabs.swiper .swiper-pager { padding:0 20px; background:#FFFFFF; }
 .tabs.swiper .swiper-slide > * { padding:0 20px 20px; }
 .tabs.swiper .swiper-slide > *:first-child { margin-top:30px; }
 .tabs.swiper .swiper-slide:has(.visaul-info-box) .form-wrap + div { margin-top:0; }
