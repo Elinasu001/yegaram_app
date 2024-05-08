@@ -1080,11 +1080,11 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .inquiry-set-wrap + .form-wrap.type2 { margin-top:30px; }
 
 /* 대출상품모두보기 */
-.question-more-wrap { padding:0 12px 0 8px; text-align:center;}
-.question-more-wrap::before{ content:''; display:inline-block; width:80px; height:58px; background:url("../images/common/ico_que.png") no-repeat 50%/80px auto; }
-.question-more-wrap .tit { font-size:0.77778rem; line-height:1.5; }
-.question-more-wrap .txt { color:#666666; font-size:0.66667rem; line-height:1.58334; }
-.question-more-wrap .more-btn { color:#2A0F5F; font-size:0.66667rem; line-height:1.58334; }
+.question-more-wrap { display:flex; text-align: center; align-items: center; flex-direction: column; padding:0 12px 0 8px; text-align:center;}
+.question-more-wrap::before{ content:''; display:inline-block; width:80px; height:80px; background:url("../images/common/ico_que.png") no-repeat 100%/80px auto; }
+.question-more-wrap .tit {  font-size:1.11111rem; line-height:1.5; }
+.question-more-wrap .txt { color:#666666; font-size:0.88889rem; line-height:1.278rem; }
+.question-more-wrap .more-btn { color:#666666; font-size:0.77778rem; line-height: 1rem;}
 .question-more-wrap  .more-btn::after { margin-bottom:-2px; }
 .question-more-box { display:inline-block; margin-left:13px; letter-spacing:0; vertical-align:top; }
 

@@ -83,87 +83,76 @@
                         </div>
                     </div>
 
-                    <!--//D: 핫 키워드 버튼-->
+                    <!--//D: 핫 키워드 버튼--><!--D: 텍스트 변경-->
                     <div class="fix-tag">
                         <span>#추천검색어</span>
-                        <a href="#none" onclick="fnSelectList('F','01','','대출'); $('#FAQ_SEARCH_KEYWORD').val('대출');" >#대출</a>
-                        <a href="#none" onclick="fnSelectList('F','01','','자동이율'); $('#FAQ_SEARCH_KEYWORD').val('자동이율');" >#자동이율</a>
-                        <a href="#none" onclick="fnSelectList('F','01','','예금'); $('#FAQ_SEARCH_KEYWORD').val('예금');">#예금</a>
-                        <a href="#none" onclick="fnSelectList('F','01','', '이체'); $('#FAQ_SEARCH_KEYWORD').val('이체');">#이체</a>
+                        <a href="#none">#대출</a>
+                        <a href="#none">#자동이체</a>
+                        <a href="#none">#예금</a>
+                        <a href="#none">#적금</a>
+                        <a href="#none">#고객센터</a>
                     </div>
                     <!--D: 핫 키워드 버튼//-->
 
                     <section class="tabs-wrap type3">
                         <div class="tabs">
                             <ul class="tab-item">
-                                <li class="on" data-tab="tab-cont01"><a href="#none" title="선택됨" onclick="fnSelectList('F','01',''); srchInit();">전체</a></li>
-                                <li data-tab="tab-cont02" class=""><a href="#none" onclick="fnSelectList('F','02','H003000002'); srchInit();">홈페이지&앱</a></li>
-                                <li data-tab="tab-cont03" class=""><a href="#none" onclick="fnSelectList('F','03','H003000003'); srchInit();">공통</a></li>
-                                <li data-tab="tab-cont04" class=""><a href="#none" onclick="fnSelectList('F','04','H003000004'); srchInit();">대출</a></li>
-                                <li data-tab="tab-cont05" class=""><a href="#none" onclick="fnSelectList('F','05','H003000005'); srchInit();">예적금</a></li>
-                                <li data-tab="tab-cont06" class=""><a href="#none" onclick="fnSelectList('F','06','H003000006'); srchInit();">기타</a></li>
+                                <li class="on" data-tab="tab-cont01"><a href="#none" title="선택됨">전체</a></li>
+                                <li data-tab="tab-cont02" class=""><a href="#none">홈페이지&앱</a></li>
+                                <li data-tab="tab-cont03" class=""><a href="#none">공통</a></li>
+                                <li data-tab="tab-cont04" class=""><a href="#none">대출</a></li>
+                                <li data-tab="tab-cont05" class=""><a href="#none">예적금</a></li>
+                                <li data-tab="tab-cont06" class=""><a href="#none">기타</a></li>
                             </ul>
                             <div class="tab-content-area">
                                 <div id="tab-cont01" class="tab-content"> <!-- 전체 -->
                                     <!--//D:자주묻는 질문 목록 (10건 씩 노출,하단으로 스크롤 할 경우 10개 씩 추가 노출)-->
-                                    <!--//D:2023-07-07 span 버튼  em으로 수정-->
     
-                                    <ul class="terms-list" id="FAQ_SELECT_LIST_01"><!--[퍼블] 클래스 변경-->
+                                    <ul class="terms-list" id="FAQ_SELECT_LIST_01">
     
                                         <li>
                                             <a href="javascript:void(0);">
                                                 <em class="flag style9">예적금</em>
-                                                <p>금액 별 필요한 인증 단계가 어떻게 되나요?</p><!--[퍼블] 추가-->
+                                                <p>금액 별 필요한 인증 단계가 어떻게 되나요?</p>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="javascript:void(0);">
-                                                <em class="flag style9">예적금</em>
-                                                <p>금액 별 필요한 인증 단계가 어떻게 되나요?</p><!--[퍼블] 추가-->
+                                                <em class="flag style9">대출</em>
+                                                <p>금액 별 필요한 인증 단계가 어떻게 되나요?</p>
                                             </a>
                                         </li>
     
                                     </ul>
-    
-                                    <!--//D: 게시글이 없는 경우-->
-                                    <div class="result-area nodata" id="FAQ_SELECT_LIST_EMPTY_01" style="display:none;"><!--[퍼블] 클래스 변경-->
-                                        <p>등록된 게시글이 없어요</p>
-                                    </div>
-                                    <!--D: 게시글이 없는 경우//-->
-                                    <!--//D: 검색어에 해당하는 내용이 없는 경우-->
-                                    <div class="result-area nodata" id="FAQ_SELECT_SEARCH_EMPTY" style="display:none;"><!--[퍼블] 클래스 변경-->
-                                        <p>입력하신 검색어에<br>해당하는 결과가 없어요</p>
-                                    </div>
-                                    <!--D: 검색어에 해당하는 내용이 없는 경우//-->
-    
+                                    
                                 </div>
                                 <div id="tab-cont02" class="tab-content"> <!-- 홈페이지&앱 -->
-                                    <ul class="terms-list" id="FAQ_SELECT_LIST_02"><!--[퍼블] 클래스 변경-->
+                                    <ul class="terms-list" id="FAQ_SELECT_LIST_02">
                                     </ul>
     
                                     <!--// 게시글이 없는 경우-->
-                                    <div class="result-area nodata" id="FAQ_SELECT_LIST_EMPTY_02" style="display:none;"><!--[퍼블] 클래스 변경-->
+                                    <div class="result-area nodata" id="FAQ_SELECT_LIST_EMPTY_02" style="display:none;">
                                         <p>등록된 게시글이 없어요</p>
                                     </div>
                                     <!--D: 게시글이 없는 경우//-->
                                     <!--//D: 검색어에 해당하는 내용이 없는 경우-->
-                                    <div class="result-area nodata" id="FAQ_SELECT_SEARCH_EMPTY" style="display:none;"><!--[퍼블] 클래스 변경-->
+                                    <div class="result-area nodata" id="FAQ_SELECT_SEARCH_EMPTY" style="display:block;">
                                         <p>입력하신 검색어에<br>해당하는 결과가 없어요</p>
                                     </div>
                                     <!--D: 검색어에 해당하는 내용이 없는 경우//-->
     
                                 </div>
                                 <div id="tab-cont03" class="tab-content"> <!-- 공통 -->
-                                    <ul class="terms-list" id="FAQ_SELECT_LIST_03"><!--[퍼블] 클래스 변경-->
+                                    <ul class="terms-list" id="FAQ_SELECT_LIST_03">
                                     </ul>
     
                                     <!--// 게시글이 없는 경우-->
-                                    <div class="result-area nodata" id="FAQ_SELECT_LIST_EMPTY_03" style="display:none;"><!--[퍼블] 클래스 변경-->
+                                    <div class="result-area nodata" id="FAQ_SELECT_LIST_EMPTY_03" style="display:none;">
                                         <p>등록된 게시글이 없어요</p>
                                     </div>
                                     <!--D: 게시글이 없는 경우//-->
                                     <!--//D: 검색어에 해당하는 내용이 없는 경우-->
-                                    <div class="result-area nodata" id="FAQ_SELECT_SEARCH_EMPTY" style="display:none;"><!--[퍼블] 클래스 변경-->
+                                    <div class="result-area nodata" id="FAQ_SELECT_SEARCH_EMPTY" style="display:none;">
                                         <p>입력하신 검색어에<br>해당하는 결과가 없어요</p>
                                     </div>
                                     <!--D: 검색어에 해당하는 내용이 없는 경우//-->
@@ -172,40 +161,40 @@
                                     <ul class="terms-list" id="FAQ_SELECT_LIST_04"><!--[퍼블] 클래스 변경-->
                                     </ul>
                                     <!--// 게시글이 없는 경우-->
-                                    <div class="result-area nodata" id="FAQ_SELECT_LIST_EMPTY_04" style="display:none;"><!--[퍼블] 클래스 변경-->
+                                    <div class="result-area nodata" id="FAQ_SELECT_LIST_EMPTY_04" style="display:none;">
                                         <p>등록된 게시글이 없어요</p>
                                     </div>
                                     <!--D: 게시글이 없는 경우//-->
                                     <!--//D: 검색어에 해당하는 내용이 없는 경우-->
-                                    <div class="result-area nodata" id="FAQ_SELECT_SEARCH_EMPTY" style="display:none;"><!--[퍼블] 클래스 변경-->
+                                    <div class="result-area nodata" id="FAQ_SELECT_SEARCH_EMPTY" style="display:none;">
                                         <p>입력하신 검색어에<br>해당하는 결과가 없어요</p>
                                     </div>
                                     <!--D: 검색어에 해당하는 내용이 없는 경우//-->
                                 </div>
                                 <div id="tab-cont05" class="tab-content"> <!-- 예적금 -->
-                                    <ul class="terms-list" id="FAQ_SELECT_LIST_05"><!--[퍼블] 클래스 변경-->
+                                    <ul class="terms-list" id="FAQ_SELECT_LIST_05">
                                     </ul>
                                     <!--// 게시글이 없는 경우-->
-                                    <div class="result-area nodata" id="FAQ_SELECT_LIST_EMPTY_05" style="display:none;"><!--[퍼블] 클래스 변경-->
+                                    <div class="result-area nodata" id="FAQ_SELECT_LIST_EMPTY_05" style="display:none;">
                                         <p>등록된 게시글이 없어요</p>
                                     </div>
                                     <!--D: 게시글이 없는 경우//-->
                                     <!--//D: 검색어에 해당하는 내용이 없는 경우-->
-                                    <div class="result-area nodata" id="FAQ_SELECT_SEARCH_EMPTY" style="display:none;"><!--[퍼블] 클래스 변경-->
+                                    <div class="result-area nodata" id="FAQ_SELECT_SEARCH_EMPTY" style="display:none;">
                                         <p>입력하신 검색어에<br>해당하는 결과가 없어요</p>
                                     </div>
                                     <!--D: 검색어에 해당하는 내용이 없는 경우//-->
                                 </div>
                                 <div id="tab-cont06" class="tab-content"> <!-- 기타 -->
-                                    <ul class="terms-list" id="FAQ_SELECT_LIST_06"><!--[퍼블] 클래스 변경-->
+                                    <ul class="terms-list" id="FAQ_SELECT_LIST_06">
                                     </ul>
                                     <!--// 게시글이 없는 경우-->
-                                    <div class="result-area nodata" id="FAQ_SELECT_LIST_EMPTY_06" style="display:none;"><!--[퍼블] 클래스 변경-->
+                                    <div class="result-area nodata" id="FAQ_SELECT_LIST_EMPTY_06" style="display:none;">
                                         <p>등록된 게시글이 없어요</p>
                                     </div>
                                     <!--D: 게시글이 없는 경우//-->
                                     <!--//D: 검색어에 해당하는 내용이 없는 경우-->
-                                    <div class="result-area nodata " id="FAQ_SELECT_SEARCH_EMPTY" style="display:none;"><!--[퍼블] 클래스 변경-->
+                                    <div class="result-area nodata " id="FAQ_SELECT_SEARCH_EMPTY" style="display:none;">
                                         <p>입력하신 검색어에<br>해당하는 결과가 없어요</p>
                                     </div>
                                     <!--D: 검색어에 해당하는 내용이 없는 경우//-->
