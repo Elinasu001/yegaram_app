@@ -485,6 +485,12 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .form-all-wrap .select-wrap:first-child { margin-top:0; }
 .form-all-wrap .form-wrap { margin-top:30px; }
 .form-all-wrap .form-wrap.type-box { margin-top:10px;}
+.form-all-wrap > .sub-tit-wrap,
+.txt-wrap > .sub-tit-wrap{ margin:0 0 15px; }
+.form-all-wrap > .sub-tit-wrap + .form-wrap,
+.form-all-wrap > .sub-tit-wrap + ul,
+.form-all-wrap > .sub-tit-wrap + div { margin-top:0; }
+
 
 /*.form-all-wrap .select-wrap + .form-wrap { margin-top:20px; }*/
 .form-wrap .select-wrap { margin-top:0; }
@@ -509,7 +515,8 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .sub-tit-wrap + .bg-box { margin-top:-15px; }/*네이버앱 대응으로 인한 음수 마진 추가*/
 .terms-area + .form-wrap { margin-top:20px; }
 .result-area + .sub-info-wrap { margin-top:30px; }
-.default-wrap > .form-wrap:first-child { margin-top:40px; }
+.default-wrap > .form-wrap:first-child,
+.default-wrap > .txt-wrap { margin-top:40px; }
 .layer-up .default-wrap > .form-wrap:first-child { margin-top:0; }
 
 .form-wrap > div.input { /*display:inline-block;*/ position:relative; /*width:100%;*/ }

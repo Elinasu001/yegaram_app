@@ -52,16 +52,9 @@
 
 <body>
     <!-- header -->
-    <header class="headerWrap">
-        <div class="headerLeft">
-        </div>
-        <div class="headerCenter">
-            <h2 class="text"><span>지연이체 서비스 관리</span></h2> <!--D: TEXT -->
-        </div>
-        <div class="headerRight">
-            <a href="javascript:void(0)" class="btn btn-menu"><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>  <!--D: 전체메뉴버튼 -->
-        </div>
-    </header>
+    <div id="headerWrap">
+      
+    </div>
 	<!-- //header -->
 
     <form>
@@ -70,20 +63,29 @@
             <!--contents -->
             <div class="contents">
                 <div class="default-wrap">
-                    <!-- D : div -> section으로 변경 -->
-                    <section class="result-area checking">
-						<p class="tit"><strong>지연이체 서비스를<br>해지했어요</strong></p>
-					</section>
 
                 </div>
             </div>
             <!-- //contents -->
-            <div class="fixed-btn-wrap">
-                <div class="btn-wrap">
-                    <a href="javascript:void(0);" class="btn">홈으로</a>
+
+            <!--S: 즉시이체 지정계좌 해지(팝업-->
+            <div id="lyPop2" class="layerpopup layer-up  show" style=" display: block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">즉시입금지정계좌 안내</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con">
+                        <div class="txtbox-wrap">
+                            <p>즉시입금지정계좌 서비스는 전자금융 사기를 사전에 방지하기 
+                                위해 지정한 계좌로만 입금이 실행되는 서비스예요</p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-    
+            <!--E: 즉시이체 지정계좌 해지 (팝업)-->
+
 
         </div>
         <!-- //contentsWrap -->
