@@ -2087,7 +2087,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .inquiry-summary { display:flex !important; align-items:center; /*width:100%;*/ padding-top:15px; padding-bottom:15px; border-bottom:1px solid #EEEEEE; }
 .inquiry-summary .period { font-weight:400; color:#666666; font-size:0.88889rem; line-height:1.4375; }
 .inquiry-summary .period.tit { font-size:1rem; font-weight:700; color:#000000; }
-.inquiry-summary .num { flex:auto; font-weight:400; color:#000000; font-size:0.88889rem; line-height:1.4375; text-align:right; }
+.inquiry-summary .num { flex:auto; font-weight:500; color:#000000; font-size:0.88889rem; line-height:1.4375; text-align:right; }
 .inquiry-summary .num strong { font-weight:700; color:#F1108E; }
 .inquiry-result-area .result-list li { position:relative; padding:10px 0 20px; border-bottom:1px solid #EEEEEE; }
 .inquiry-result-area .result-list li:first-child { padding:20px 0; }
@@ -2121,7 +2121,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .inquiry-result-area .result-list .amount-wrap .amount .tit { margin-right:3px; font-weight:300; color:#333333; }
 .inquiry-result-area .result-list .amount-wrap .balance { display:block; margin-top:2px; font-weight:300; font-size:0.88889rem; line-height:1.4375; }
 .inquiry-result-area .result-list .amount-wrap .balance .tit { font-weight:inherit; color:inherit; font-size:inherit; }
-.inquiry-summary:has(+.thumb-wrap) .period { font-weight:700; color:#000000; font-size:1rem; line-height:1.38889; }
+.inquiry-summary:has(+.thumb-wrap) .period { font-weight:600; color:#000000; font-size:1rem; line-height:1.38889; }
 
 .date-sel-wrap .form-wrap.w50:has(.option) { padding-top:0; }
 .date-sel-wrap + .select-wrap { margin-top:0; }

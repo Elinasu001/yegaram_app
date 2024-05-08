@@ -237,7 +237,7 @@ section > .result-wrap{ margin-top:40px; }
 
 .txt-list-area { position:relative; }
 .txt-list-wrap .txt-detail-area { padding:20px; border-radius:15px; border:1px solid #DDDDDD; }
-.txt-list-wrap .txt-detail-area p.txt { margin-bottom:20px; text-align:center; font-size:0.88889rem; color:#666666; }
+.txt-list-wrap .txt-detail-area p.txt { margin-bottom:20px; font-size:0.88889rem; color:#666666; }
 .txt-list-wrap .txt-detail-area + .txt-detail-area { margin-top:20px; }
 .txt-list-wrap .txt-detail-area:has(.txt-list) { padding:0 20px 18px; }
 .txt-list-wrap .txt-detail-area:has(.txt-detail-tit) { padding-top:20px; }
@@ -641,7 +641,7 @@ section > .result-wrap{ margin-top:40px; }
 .thumb-wrap > li > a { display:inline-block; position:relative; width:100%; height:100%; border-radius:10px; color:#CCCCCC; font-size:0.77778rem; line-height:calc((100vw - 15px)/3); text-align:center; background:#F8F8F8; }
 .thumb-wrap > li.plus > a { padding-top:55%; line-height:normal; border:1px solid #DDD; background:url("../images/common/ico_add.png") no-repeat top 30% center/20px 20px #fff; color:#999999; font-size:0.88889rem; }/* 2023-07-11 수정 */
 .thumb-wrap > li.plus > a::after { display:none; }
-.thumb-wrap > li > a::after { content:''; display:inline-block; position:absolute; right:8px; top:8px; width:18px; height:18px; background:url("../images/common/ic-delete.png") no-repeat; background-size:100%; }
+.thumb-wrap > li > a::after { content:''; display:inline-block; position:absolute; right:8px; top:8px; width:18px; height:18px; background:url("../images/common/ico_delete.png") no-repeat; background-size:100%; }
 .thumb-wrap > li > a img { height:100%; border-radius:10px; }
 
 /* 2023-07-14~ space test(청) */
