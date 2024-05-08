@@ -69,7 +69,69 @@
 		<!-- s: contents -->
 		<div class="contents">
 			<!-- s: default-wrap -->
-			
+			<div class="default-wrap">
+                <!-- 퍼블 변경 숨김, 표시 영역  div 대신 sectioin으로 확인  -->
+                <!--s : 이체한도 증액_성공  -->
+                <section class="result-area checking" style="display:block;">
+                    <p class="tit"><strong>요청하신 이체한도 증액이<br> 완료되었어요</strong></p>
+                    <div class="result-wrap">
+                        <div class="sub-tit-wrap">
+                            <p class="tit ta-l">이체한도 변경내역</p>
+                        </div>
+                        <div class="result-msg mt0">
+                            <p class="tit">1회 이체한도</p>
+                            <ul class="alter-list">
+                                <li>500,000원</li>
+                                <li class="arrow"></li>
+                                <li>1,500,000원</li>
+                            </ul>
+                        </div>
+                        <div class="result-msg">
+                            <p class="tit ">1일 이체한도</p>
+                            <ul class="alter-list">
+                                <li>500,000원</li>
+                                <li class="arrow"></li>
+                                <li>1,500,000원</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+               <!--e : 이체한도 증액_성공  -->
+                <!-- s : 이체한도 증액_실패 -->
+                <section class="result-area exclamation">
+                    <p class="tit"><strong>요청하신 이체한도 변경 중<br>오류로 실패하였어요</strong></p>
+                    <div class="txtbox-wrap">
+                        <p>잠시 후 다시 시도해주세요</p>
+                    </div>
+                </section>
+                <!-- e : 이체한도 증액_실패 -->
+                <!--s : 이체한도 감액_성공  -->
+                <section class="result-area checking" style="display:block;">
+                    <p class="tit"><strong>요청하신 이체한도 감액이<br>완료되었어요</strong></p>
+                    <div class="result-wrap">
+                        <div class="sub-tit-wrap">
+                            <p class="tit ta-l">이체한도 변경내역</p>
+                        </div>
+                        <div class="result-msg mt0">
+                            <p class="tit">1회 이체한도</p>
+                            <ul class="alter-list">
+                                <li>500,000원</li>
+                                <li class="arrow"></li>
+                                <li>1,500,000원</li>
+                            </ul>
+                        </div>
+                        <div class="result-msg">
+                            <p class="tit ">1일 이체한도</p>
+                            <ul class="alter-list">
+                                <li>500,000원</li>
+                                <li class="arrow"></li>
+                                <li>1,500,000원</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <!--s : 이체한도 감액_성공  -->
+            </div>
 			<!-- //s: default-wrap -->
 		</div>
 		<!-- //e: contents -->
@@ -77,7 +139,7 @@
 		<!-- s: fixed-btn-wrap -->
 		<div class="fixed-btn-wrap">
             <div class="btn-wrap">
-                <a href="#none" class="btn">이체한도 변경</a>
+                <a href="#none" class="btn">홈으로</a>
             </div>
         </div>
 		<!-- //e: fixed-btn-wrap -->
