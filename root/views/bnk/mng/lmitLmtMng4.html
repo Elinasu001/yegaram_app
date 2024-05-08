@@ -71,44 +71,29 @@
 			<!-- s: default-wrap -->
 			<div class="default-wrap">
 				<div class="tit-wrap">
-					<p class="txt">신규 입출금 통장 개설 시<br><strong>한도제한으로 설정</strong>돼요</p> <!-- [퍼블] 변경 -->
-				</div>
-                <!-- D : mt40클래스 추가 -->
-				<div class="bg-box-wrap mt40">
-					<div class="bg-box">
-						<strong class="box-tit">한도제한계좌</strong>
-						<p class="box-desc">대포통장 근절을 위한 금융거래 목적 확인 제도 시행으로 1일 1회출금 및 이체한도가 제한된 계좌예요</p><!-- 클래스 추가 -->
-					</div>
-	
-					<div class="bg-box">
-						<p class="box-desc">한도제한계좌를 해제 하시기 위해서는 본인 확인 및 증빙서류제출 등 거래 목적 확인이 필요해요</p><!-- 클래스 추가 -->
-					</div>
-	
-					<div class="bg-box">
-						<p class="box-desc">확인이 끝나면 한도가 제한 없는 일반계좌로 전환이 가능해요</p><!-- 클래스 추가 -->
-					</div>
-				</div>
-                <!-- D : sub-tit-wrap, list-icon 그룹묵기 -->
-                <div class="txt-wrap">
-                    <div class="sub-tit-wrap">
-                        <p class="tit">한도제한 해제방법</p>
-                    </div>
-                    <ul class="list-icon">
-                        <li class="accept">
-                            <p class="tit">STEP 1</p>
-                            <p class="txt">마이데이터 서비스 동의</p>
-                        </li>
-                        <li class="handle">
-                            <p class="tit">STEP 2</p>
-                            <p class="txt">해제신청완료</p>
-                        </li>
-                        <li class="confirm">
-                            <p class="tit">STEP 3</p>
-                            <p class="txt">서류심사</p>
-                        </li>
-                    </ul>
+                    <p class="txt"><strong>증빙자료 확인 </strong>후 재 촬영하거나<br/><strong>제출을 완료</strong>하세요</p> 
                 </div>
+                <!--D : mt40 클래스 추가 -->
+				<div class="inquiry-summary type-spread mt40">
+					<p class="period tit">촬영서류</p>
+					<span class="num"><strong id="imgCnt">4</strong>/10</span>
+					<input type="hidden" id="cnt" name="cnt" class="validChk">
+				</div>
 
+				<ul class="thumb-wrap" id="imgUl">
+					<li><a href="javascript:void(0);">img</a></li>
+					<li><a href="javascript:void(0);">img</a></li>
+					<li><a href="javascript:void(0);">img</a></li>
+					<li><a href="javascript:void(0);">img</a></li>
+					<li class="plus"><a href="javascript:void(0);" onclick="callCamera(this);">추가촬영</a></li>
+                    <!-- s: 리스트 포맷 -->
+					<li class="plus" id="liFormat" style="display:none;">
+						<a href="javascript:void(0);" onclick="callCamera(this);">촬영</a>
+					</li>
+					<!-- e: 리스트 포맷 -->
+				</ul>
+
+					
 			</div>
 			<!-- //s: default-wrap -->
 		</div>
@@ -117,7 +102,7 @@
 		<!-- s: fixed-btn-wrap -->
 		<div class="fixed-btn-wrap">
             <div class="btn-wrap">
-                <a href="#none" class="btn">다음</a>
+                <a href="#none" class="btn">해지신청</a>
             </div>
         </div>
 		<!-- //e: fixed-btn-wrap -->
