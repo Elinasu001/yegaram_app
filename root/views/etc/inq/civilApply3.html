@@ -73,86 +73,166 @@
         <div class="contents">
             <div class="default-wrap">
 
+                <!-- D: step_bar 단계 삭제 -->
+
                 <div class="tit-wrap">
                     <p class="txt"><strong>전자민원 신청</strong>를 위한<br /><strong>정보</strong>를 입력해 주세요</p>
                 </div>
 
-                <section class="terms-area" id="validateArea">
+                <div class="terms-area" id="validateArea">
                     <div class="terms-wrap level1 chk-all">
                         <fieldset>
                             <input type="checkbox" id="Chk01" class="check">
                             <label for="Chk01"><span>[필수] 개인정보 수집·이용 동의</span></label>
                         </fieldset>
                     </div>
-                </section>
+                </div>
                 <p class="info-txt">
                     개인정보 취급방침(수집·이용에 관한 동의)는 본 서비스를
                     이용하기 위한 필수 사항이므로, 위 사항에 동의하셔야만
                     민원센터에 글을 등록하실 수 있어요
                 </p>
 
-                <div class="form-all-wrap"><!--D: 영역 추가-->
+                <div class="select-wrap "><!--D: select-wrap 안에 select-box 구조 반복-->
 
-                    <div class="select-wrap ">
-
-                        <div class="select-box on" tabindex="1"><!--D: form-wrap / input 영역 삭제 , on 클래스 추가-->
-                            <label for="" class="essential">민원신청 구분</label>
-                            <span class="option">일반문의</span>
-                        </div>
-
-                        <div class="select-box" tabindex="1">
-                            <label for=""  class="essential">회신방법</label>
-                            <span class="option">이메일</span>
-                        </div>
-                        
+                    <div class="select-box on" tabindex="1"><!--D: form-wrap / input 영역 삭제 , on 클래스 추가-->
+                        <label for="" class="essential">민원신청 구분</label><!--D: essential 추가-->
+                        <span class="option">일반문의</span>
                     </div>
+
+                    <div class="select-box" tabindex="1">
+                        <label for=""  class="essential">회신방법</label><!--D: essential 추가-->
+                        <span class="option">이메일</span>
+                    </div>
+                    
+                </div>
+
+                <div class="form-all-wrap"><!--D: 영역 추가-->
 
                     <div class="form-wrap"><!--D:이메일-->
                         <label for="ipt02" class="formlabel onbasic">이메일</label>
-                        <div class="input">
-                            <span>
-                                <input type="text" title="이메일" id="ipt02" class="inp" pattern=".+@\." value="" placeholder="이메일 주소를 입력해주세요" required="">
-                            </span>
+                        <div class="input"><!--D: span 삭제 -->
+                            <input type="text" title="이메일" id="ipt02" class="inp" pattern=".+@\." value="" placeholder="이메일주소 입력" required="" readonly>
                         </div>
                     </div>
-    
-                    <div class="form-wrap form-line address">
+
+                    <div class="form-wrap form-line address"><!--D: 주소-->
                         <label for="ipt04" class="formlabel">주소</label>
-                        <div class="input">
-                            <span>
-                                <input type="text" title="주소검색" id="ipt04" class="inp" name="" value="" required=""  placeholder="우편번호를 입력해주세요.">
-                                <button type="button" class="btn-certi" onclick="openPopupUp('');">우편번호찾기</button>
-                            </span>
-                            <span>
-                                <input type="text" id="" class="inp" name="" value="" required="" placeholder="기본주소를 입력해주세요." >
-                            </span>
-                            <span>
-                                <input type="text" id="" class="inp" name="" value="" placeholder="상세주소를 입력해주세요."
-                                    required="" style="display:none;">
-                            </span>
+                        <div class="input"><!-- D: <div class="input"> 구조로만 묶음 -->
+                            <input type="text" title="주소검색" id="ipt04" class="inp" name="" value="" required=""  placeholder="우편번호 입력" readonly>
+                            <button type="button" class="btn btn-sm" onclick="openPopupUp('');">우편번호찾기</button>
+                        </div>
+                        <div  class="input">
+                            <input type="text" id="" class="inp" name="" value="" required="" placeholder="기본주소 입력" readonly>
+                        </div>
+                        <div  class="input">
+                            <input type="text" id="" class="inp" name="" value="" placeholder="상세주소 직접입력" required="" style="display:block;">
                         </div>
                     </div>
-    
+                        
                     <div class="form-wrap phone"><!--D:전화번호-->
                         <label for="A_PHONE_NO" class="formlabel">전화번호</label>
                         <div class="input">
-                            <div class="select-box  type-line"  tabindex="1">
+                            <div class="select-box type-line"  tabindex="1">
                                 <span class="option" id="A_TELECOM">선택</span>
                             </div>
                             <span>
-                                <input type="tel" title="" class="inp" id="A_PHONE_NO" name="A_PHONE_NO" value="" placeholder="전화번호를 입력해주세요" maxlength="9" required="" >
+                                <input type="tel" title="" class="inp" id="A_PHONE_NO" name="A_PHONE_NO" value="" placeholder="전화번호 입력" maxlength="9" required="" >
                             </span>
                         </div>
                     </div>
 
-
-
                 </div>
-
+    
             </div>
 
         </div>
         <!-- //contents -->
+
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap flexCol"><!--D: flexCol 클래스 추가-->
+                <a href="#none" class="btn disabled">다음</a><!--D: disabled 삭제 시 활성화-->
+                <a href="#none" class="btn txt">그만하기</a><!--D: btn txt로 변경-->
+            </div>
+        </div>
+
+        <!--S:약관동의 (Alert)-->
+        <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
+            <div class="content-wrap">
+                
+                <div class="pop-con-wrap">
+                    <span class="pop-con">약관에 동의해 주세요</span>
+                </div>
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn">확인</a>
+                </div>
+            </div>
+        </div>
+        <!--S:약관동의 (Alert)-->
+
+        <!-- S: 민원신청 구분 -->
+        <div id="lySel1" class="layerpopup layer-up show" style="position: fixed; top: 399px; left: 0px; display: block;">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">민원신청 구분</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>일반문의</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                        <li><button>민원신청</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- E: 민원신청 구분 -->
+
+        <!-- S: 회신방법 -->
+        <div id="lySel2" class="layerpopup layer-up show" style="position: fixed; top: 399px; left: 0px; display: block;">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">회신방법</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>이메일</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                        <li><button>전화</button></li>
+                        <li><button>우편</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- E: 회신방법 -->
+
+        <!-- S: 이메일주소 -->
+        <div id="lySel3" class="layerpopup layer-up show has-button" style="position: fixed; top: 399px; left: 0px; display: block;">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">이메일 주소</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list non-click">
+                        <li class="active">
+                            <button type="button">이메일</button>
+                            <div class="form-wrap  view-wrap form-type2">
+                                <div class="input">
+                                    <input type="text" title="이메일" id="ipt02" class="inp" name="" value="" placeholder="이메일주소 입력" required="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn disabled">확인</a><!--D: disabled 삭제 시 활성화-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- E: 이메일주소 -->
+
 
     </div>
     <!-- //contentsWrap -->

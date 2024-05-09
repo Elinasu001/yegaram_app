@@ -52,14 +52,19 @@
 
 <body>
     <!-- header -->
-    <div id="headerWrap">
-        <script>
-        $(document).ready(function(){
-            document.charset="euc-kr";
-            $("#headerWrap").load("../includes/header.html");
-        });
-        </script>
-    </div>
+    <header class="headerWrap">
+        <div class="headerLeft">
+            <!--D: 이전버튼-->
+            <a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+        </div>
+        <div class="headerCenter">
+            <h2 class="text"><span>전자민원신청</span></h2> <!--D: TEXT -->
+        </div>
+        <div class="headerRight">
+            <!--D: 전체메뉴버튼 -->
+            <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>
+        </div>
+    </header>
 	<!-- //header -->
 
     <form>
@@ -72,8 +77,9 @@
                     <div id="mwDetail">
 
                         <div class="list-tit-wrap">
-                            <em class="flag style4">접수</em>
-                            <em class="flag style6">완료</em>
+                            <em class="flag style5">접수</em>
+                            <em class="flag style6">처리중</em>
+                            <em class="flag style7">완료</em>
                             <p><strong>대출신청 문의 드립니다</strong></p>
                         </div>
                         <div class="notice_contents"><!--D:게시글 본문 들어가는 부분-->
@@ -100,11 +106,28 @@
             <!-- //contents -->
 
             <div class="fixed-btn-wrap">
-                <div class="btn-wrap flexCol">
+                <div class="btn-wrap flexCol"><!--D: flexCol 클래스 추가-->
                     <a href="#none" class="btn">수정하기</a>
-                    <a href="#none" class="btn txt">삭제하기</a>
+                    <a href="#none" class="btn txt">삭제하기</a><!--D: btn txs 클래스 변경-->
                 </div>
             </div>
+
+            <!-- S: 전자민원신청 중단(Alert) -->
+            <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
+                <div class="content-wrap">
+                    
+                    <div class="pop-con-wrap">
+                        <span class="pop-con">전자민원신청을 중단할까요?</span>
+                    </div>
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn btn-info" onclick="">취소</a>
+                        <a href="javascript:void(0);" class="btn" onclick="">확인</a>
+                    </div>
+                </div>
+            </div>
+            <!-- E: 전자민원신청 중단(Alert) -->
+
+
 
         </div>
         <!-- //contentsWrap -->

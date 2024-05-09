@@ -52,92 +52,108 @@
 
 <body>
     <!-- header -->
-    <div id="headerWrap">
-        <script>
-        $(document).ready(function(){
-            document.charset="euc-kr";
-            $("#headerWrap").load("../includes/header.html");
-        });
-        </script>
-    </div>
+    <header class="headerWrap">
+        <div class="headerLeft">
+            <!--D: 이전버튼-->
+            <a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+        </div>
+        <div class="headerCenter">
+            <h2 class="text"><span>전자민원신청</span></h2> <!--D: TEXT -->
+        </div>
+        <div class="headerRight">
+            <!--D: 전체메뉴버튼 -->
+            <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>
+        </div>
+    </header>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
-                    <div class="tit-wrap">
-                        <p class="txt"><strong>전자민원 신청을</strong>을 위한<br/><strong>정보</strong>를 입력해주세요</p>
-                    </div>
-    
-                    <div class="form-wrap">
-                        <label for="ipt01" class="formlabel onbasic">제목</label>
-                        <div class="input">
-                            <input type="text" title="성명" id="ipt01" class="inp" name="" value="" placeholder="제목을 입력해주세요." maxlength="100" required="">
-                        </div>
-                    </div>
-    
-                    <div class="form-wrap">
-                        <div class="input">
-                            <textarea type="text" title="성명" id="ipt02" class="inp" name="" value="" placeholder="내용을 입력해주세요" maxlength="" required="">
-    내용을 입력해주세요
-                            </textarea>
-                        </div>
-                    </div>
-    
-                    <div class="sub-tit-wrap">
-                        <p class="tit">첨부파일</p>
-                    </div>
-    
-                    <div class="form-wrap">
-                        <div class="input">
-                            <div class="file-box added"><!-- [D] 클래스 added 추가시 파일삭제 버튼 노출, 파일추가 버튼 히든 -->
-                                <span class="file-name">대출신청화면.jpg</span>
-                                <label for="file" class="file-label">파일 추가</label>
-                                <input type="file" id="file" class="ip-file">
-                                <button type="button" class="btn-file-del">파일 삭제</button>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="info-txt">이미지(jpg, png, gif 등) 파일 또는 PDF 파일만 첨부 가능해요</p>
-                    <p class="info-txt">첨부파일은 10MB 이하만 등록이 가능해요</p>
-
-                    <div class="list-bull"><!--D: 구조 변경-->
-                        <div class="border"></div>
-                        <strong>알아두세요</strong>
-                        <ul>
-                            <li>민원 처리기간 : 접수일부터 14영업일 이내</li>
-                            <li>민원센터 연락처 : 051-640-9105(준법지원팀)</li>
-                            <li>단순 문의에 대한 답변은 대표 전화번호(1877-9900)로만
-                                안내 전화를 드릴 수도 있어요</li>
-                        </ul>
-                    </div>
-
-                    <div class="list-bull"><!--D: 구조 변경-->
-                        <strong>전자민원신청 내역 확인 방법</strong>
-                        <ul>
-                            <li>'전자민원신청 안내' 화면에서 '신청 및 조회하기' 선택
-                                → 본인인증 → 전자민원신청 내역확인</li>
-                        </ul>
-                    </div>
-    
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+                <div class="tit-wrap">
+                    <p class="txt"><strong>전자민원 신청을</strong>을 위한<br/><strong>정보</strong>를 입력해주세요</p>
                 </div>
-    
-            </div>
-            <!-- //contents -->
 
-            <div class="fixed-btn-wrap">
-				<div class="btn-wrap flexCol"><!--D: 클래스 추가-->
-					<a href="#none" class="btn">등록하기</a>
-                    <a href="#none" class="btn txt">그만하기</a><!--D : 클래스 변경-->
+                <div class="form-wrap">
+                    <label for="ipt01" class="formlabel onbasic">제목</label>
+                    <div class="input">
+                        <input type="text" title="성명" id="ipt01" class="inp" name="" value="" placeholder="제목을 입력해주세요." maxlength="100" required="">
+                    </div>
+                </div>
+
+                <div class="form-wrap">
+                    <div class="input">
+                        <textarea type="text" title="성명" id="ipt02" class="inp" name="" value="" placeholder="내용을 입력해주세요" maxlength="" required="">
+내용을 입력해주세요
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="sub-tit-wrap">
+					<p class="tit">첨부파일</p>
 				</div>
-			</div>
+
+                <div class="form-wrap">
+                    
+                    <div class="input">
+                        <div class="file-box added"><!-- D : added 클래스 추가시 파일삭제 버튼 노출, 파일추가 버튼 히든 -->
+                            <span class="file-name">대출신청화면.jpg</span>
+                            <label for="file" class="file-label">파일 추가</label>
+                            <input type="file" id="file" class="ip-file">
+                            <button type="button" class="btn-file-del">파일 삭제</button>
+                        </div>
+                    </div>
+                </div>
+                <p class="info-txt">이미지(jpg, png, gif 등) 파일 또는 PDF 파일만 첨부 가능해요</p>
+                <p class="info-txt">첨부파일은 10MB 이하만 등록이 가능해요</p>
+
+                <div class="list-bull"><!--D: 구조 변경 및 텍스트 변경-->
+                    <div class="border"></div>
+                    <strong>알아두세요</strong>
+                    <ul>
+                        <li>민원 처리기간 : 접수일로부터 1개월 이내</li>
+                        <li>민원센터 연락처 : 02-6906-7065/7083(준법감시팀)</li>
+                    </ul>
+                </div>
+
+                <div class="list-bull"><!--D: 구조 변경-->
+                    <strong>전자민원신청 내역 확인 방법</strong>
+                    <ul>
+                        <li>'전자민원신청 안내' 화면에서 '신청 및 조회하기' 선택 → 본인인증 → 전자민원신청 내역확인</li>
+                    </ul>
+                </div>
+
+            </div>
 
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- //contents -->
+
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap flexCol"><!--D: 클래스 추가-->
+                <a href="#none" class="btn">등록하기</a>
+                <a href="#none" class="btn txt">그만하기</a><!--D : 클래스 변경-->
+            </div>
+        </div>
+
+        <!--S: 제목 입력 (Alert)-->
+        <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
+            <div class="content-wrap">
+                
+                <div class="pop-con-wrap">
+                    <span class="pop-con">제목을 입력해 주세요</span>
+                </div>
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn" onclick="">확인</a>
+                </div>
+            </div>
+        </div>
+        <!--E: 제목 입력 (Alert)-->
+
+    </div>
+    <!-- //contentsWrap -->
+
 </body>
 </html>
 
