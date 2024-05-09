@@ -32,50 +32,87 @@
 <script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common"
-	data-menuId="dep/prc"
-	data-frameId="depAcnoOpenPrc2"
-	data-serviceCd="depAcnoOpenPrc2.frm"
-	data-serverTime="20230803152535"
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803181716"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803181716"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803181716"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803181716"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803181716"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803181716"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803181716"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803181716"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803181716" id="biz_common" 
+	data-menuId="etc/inq"
+	data-frameId="elecFinance"
+	data-serviceCd="elecFinance.frm" 
+	data-serverTime="20230803181716"
 	data-activeMode="local"
 	data-activeEnv="${active.env">
 </script>
+<script type="text/javascript">
+var PageFunc = function() {
+	
+	var _back = function() { // 뒤로가기
+		history.back();
+	}
+	
+	var _proc = function() { // 본처리
+		// TODO 
+		return true;
+	}
+	
+	var _cancel = function() { // 그만하기
+		goMainPage();
+	}
+	
+	var _validate = function() { // 유효성검증
+		// TODO 
+		return true;
+	}
+	
+	/**************************
+	* 사전점검표 체크
+	***************************/
+	var _checkNext = function(el){
+		
+	}
+	
+	return {
+		back : _back,
+		proc : _proc,
+		cancel : _cancel,
+		checkNext : _checkNext
+	};
+}();
 
 
+$(document).ready(function(){
+	
+});
+</script>
+</head>
 <body>
-    <!-- header -->
-    <header class="headerWrap">
-        <div class="headerLeft">
-            <!--D: 이전버튼-->
-            <a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
-        </div>
-        <div class="headerCenter">
-            <h2 class="text"><span>금리인하요구권 안내</span></h2> <!--D: TEXT -->
-        </div>
-        <div class="headerRight">
-            <!--D: 전체메뉴버튼 -->
-            <!-- <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a> -->
-        </div>
-    </header>
+	<!-- header -->
+	<header class="headerWrap">
+		<div class="header">
+			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+			<h2><span>전자금융거래 기본약관</span></h2>
+		</div>
+		<div class="menu-wrap">
+		</div>
+	</header>
 	<!-- //header -->
 
-    <!--contentsWrap -->
+	<!-- s: contentsWrap -->
     <div class="contentsWrap">
-        <!--contents -->
+        <!-- s: contents -->
         <div class="contents">
-            <div class="default-wrap">
-
-                <section class="tabs-wrap type2"><!--D: type2 클래스 추가-->
+            <div class="default-wrap"><!--[퍼블] 클래스 변경-->
+				<!-- [퍼블] 삭제 <div class="tit-wrap mt40">
+					<p class="txt">고객님께서 필요하신<br/><b>이용약관</b>을 확인해 보세요</p>
+				</div> -->
+				<section class="tabs-wrap type-box">
                     <div class="tabs">
-                        <ul class="tab-item square col-03"><!--D: square / col-03 클래스 추가-->
+                        <ul class="tab-item">
                             <li class="on" data-tab="tab-cont09"><a href="#none">전자금융거래<br/>기본약관</a></li> <!--  P00006 -->
                             <li data-tab="tab-cont10" class=""><a href="#none">전자금융서비스<br/>이용약관</a></li> <!-- P00005 -->
                             <li data-tab="tab-cont11" class=""><a href="#none">전자금융거래<br/>유의사항</a></li>
@@ -84,15 +121,16 @@
                         <div class="tab-content-area">
                             <div id="tab-cont09" class="">
                                 <div class="info-wrap"><!--D:약관 불러 올 경우 info-wrap 사용-->
-                                    <iframe src="/resources/pdfjs/web/viewer.html?file=/resources/terms/P00006.pdf" style="width:100%; height:100%;"></iframe>  
+                                	<iframe src="/resources/pdfjs/web/viewer.html?file=/resources/terms/P00006.pdf" style="width:100%; height:100%;"></iframe>  
                                 </div>
                             </div>
                             <div id="tab-cont10" class="">
                                 <div  class="info-wrap"><!--D:약관 불러 올 경우 info-wrap 사용-->
-                                    <iframe src="/resources/pdfjs/web/viewer.html?file=/resources/terms/P00005.pdf" style="width:100%; height:100%;"></iframe>
+                                	<iframe src="/resources/pdfjs/web/viewer.html?file=/resources/terms/P00005.pdf" style="width:100%; height:100%;"></iframe>
                                 </div>
                             </div>
                             <div id="tab-cont11" class="">
+								<!-- [퍼블-2] 추가 -->
                                 <div  class="terms-notice-wrap">
 									<div class="sub-tit-wrap">
                                         <p class="tit">전자금융거래 유의사항</p>
@@ -136,6 +174,7 @@
 
 
                                 </div>
+								<!-- // [퍼블-2] 추가 -->
                             </div>
                         </div>
                     </div>
@@ -143,10 +182,9 @@
 
             </div>
         </div>
-        <!-- //contents -->
+        <!-- //e: contents -->
 
     </div>
-    <!-- //contentsWrap -->
+    <!-- e: contentsWrap -->				
 </body>
 </html>
-

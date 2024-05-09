@@ -1106,7 +1106,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 
 /* 유의사항 관련 */
 .terms-notice-wrap { height:80vh; overflow:auto; }
-.terms-notice-wrap .sub-tit-wrap { margin:0 0 20px; }
+/* .terms-notice-wrap .sub-tit-wrap { margin:0 0 20px; } */
 .terms-notice-wrap .list-bull.type-large { margin-top:0; }
 .terms-notice-wrap .list-bull.type-large.num li { padding-left:25px; font-size:0.88889rem; line-height:1.4375; }
 
