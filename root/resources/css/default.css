@@ -269,7 +269,7 @@ html.font-size-3{ font-size: 24px;}
 .info-txt-wrap { margin-top:10px; }
 .info-txt-wrap .info-txt { margin-top:10px; }
 .info-txt-wrap .info-txt:first-child { margin-top:0px; }
-.info-txt { display:block; width:100%; margin-top:10px; padding-left:25px; background:url("../images/common/ico_info.png")top left no-repeat; background-size:20px; font-weight:300; color:#757575; font-size:0.77778rem; line-height:1.5; }
+.info-txt { display:block; width:100%; margin-top:10px; padding-left:25px; background:url("../images/common/ico_info.png")top left no-repeat; background-size:20px; text-align:left; font-weight:300; color:#757575; font-size:0.77778rem; line-height:1.5; }
 .info-txt + .info-txt { margin-top:5px; }
 /* .info-txt + .form-wrap.password,
 .info-txt + .form-wrap.address { padding-top:30px; } */
@@ -497,6 +497,7 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .form-all-wrap .form-wrap { margin-top:30px; }
 .form-all-wrap .form-wrap.type-box { margin-top:10px;}
 .form-all-wrap > .sub-tit-wrap,
+.txt-wrap > .sub-tit-wrap,
 .txt-wrap > .sub-tit-wrap{ margin:0 0 15px; }
 .form-all-wrap > .sub-tit-wrap + .form-wrap,
 .form-all-wrap > .sub-tit-wrap + ul,
@@ -1781,6 +1782,7 @@ body.on { position:fixed; top:0; }
 .list-icon.access  > li.photo::before { background:url("../images/common/ico-access-photo.png") center /25px no-repeat; }
 
 .list-icon > li.accept::before { background:url("../images/common/ico_accept.png") center / 22px no-repeat #F8F8FA; }
+.list-icon > li.accept2::before { background:url("../images/common/ico_accept2.png") center / 28px no-repeat #F8F8FA; }
 .list-icon > li.notice::before { background:url("../images/common/ico_notice.png") center / 22px no-repeat #F8F8FA; }
 .list-icon > li.confirm::before { background:url("../images/common/ico_confirm.png") center / 22px no-repeat #F8F8FA; }
 .list-icon > li.found::before { background:url("../images/common/ico_found.png") center / 22px no-repeat #F8F8FA; }
@@ -1894,7 +1896,6 @@ body.on { position:fixed; top:0; }
 
 .list-bull .list-bull.hyphen { margin-top:0; }
 
-.list-bull { color:#333; font-size:0.77778rem; line-height:1.5; }
 .list-bull dt,
 .list-bull > strong  { display:block; margin:0 0 15px; font-weight:500; color:#26282C; font-weight:500; font-size:0.88889rem; line-height:1.278rem; }
 .list-bull li,

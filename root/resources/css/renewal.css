@@ -31,7 +31,7 @@ body.fix { overflow:hidden; }
 /* 공통 - 컨텐츠 in 버튼 */
 .btn-cont-wrap { display:flex; gap:10px; /*width:100%;*/ padding:0; text-align:center; align-items:start; }
 .btn-cont-wrap.flex-end { justify-content:flex-end;}
-.btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:10px 5px; border-radius:30px; background:#9F7CE3; color:#fff; font-size:0.88889rem; line-height:1.278rem; font-weight:500; text-align:center; }
+.btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:10px 5px; border-radius:30px; background:linear-gradient(320deg, rgba(38,15,84,1) 0%, rgba(61,18,146,1) 100%); color:#fff; font-size:1rem; font-weight:700; text-align:center; }
 .btn.btn-add {display:inline-block; width:unset; height:48px;  padding:12px 54px; background:#FFFFFF; border:1px solid #4E32A5; font-size:1rem; line-height:1.38889rem; font-weight:500; color:#4E32A5; }
 .btn.btn-sm { display:inline-flex; align-items: center; /*display:inline-block;*/ width:unset; height:30px; padding:5px 16px;  background:#FFFFFF; border:1px solid #DDDDDD; border-radius:17px;  font-size:0.77778rem; line-height: 1rem; font-weight:400; color:#26282C; letter-spacing: -0.5px;}
 .btn.btn-sm.gray { background: #F1F1F1; border:1px solid #F1F1F1; color:#666666; }
@@ -438,7 +438,7 @@ section > .result-wrap{ margin-top:40px; }
 .check-box > .app label::after { background:url("../images/common/ico-access-app.png") no-repeat 100%/48px auto; }
 .check-box > .mydata label::after { background:url("../images/common/ico_mydata.png") center no-repeat; background-size:100%; }
 .check-box > .idcard label::after { background:url("../images/common/ico_idcard.png") no-repeat 50% / 36px auto; }
-.check-box > .camera label::after { background:url("../images/common/ico-access-camera.png") no-repeat center / 35px auto; }
+.check-box > .camera label::after { background:url("../images/common/ico-access-camera.png") no-repeat center / 48px auto; }
 .check-box > .phone label::after { background:url("../images/common/ico_readyitem_phone.png") no-repeat 50% / 36px auto; }
 .check-box > .ohter label::after { background:url("../images/common/ico_readyitem_other.png") no-repeat 50% / 36px auto; }
 
