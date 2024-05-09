@@ -71,11 +71,13 @@
             <!--contents -->
             <div class="contents">
                 <div class="default-wrap">
-                    <div class="tit-wrap"><!-- [퍼블] 클래스 변경 -->
+
+                    <!--D: step_bar 단게 구조 삭제-->
+                    <div class="tit-wrap">
                         <p class="txt"><strong>대출신청을 위해<br/>직장정보가 필요해요</strong></p>
                     </div>
 
-                    <div class="select-wrap">
+                    <div class="select-wrap"><!--D: select-wrap 안에 select-box 반복 / *표시는 essential 추가 / error-txt는 사용하지 않아서 삭제 -->
 
                         <div class="select-box" tabindex="1">
                             <label for="" class="essential">직종</label>
@@ -92,14 +94,14 @@
                             <span class="option">미선택</span>
                         </div>
 
-                        <div id="rolldate" class="select-box type2" tabindex="1">
+                        <div id="rolldate" class="select-box type2" tabindex="1"><!--D: rolldate 입사연월일 -->
                             <label for="" class="essential">입사연월일</label>
                             <span class="option">미선택</span>
                         </div>
 
                     </div>
 
-                    <div class="form-all-wrap">
+                    <div class="form-all-wrap"><!--D: form-all-wrap 태그 추가 -->
 
                         <div class="form-wrap">
                             <label for="" class="formlabel essential">직장명</label>

@@ -72,11 +72,11 @@
             <div class="contents">
                 <div class="default-wrap">
 
-                    <div class="tit-wrap"><!--D: b 태그 strong 태그로 변경-->
+                    <div class="tit-wrap">
                         <p class="txt"><strong>대출한도조회</strong>를 위해<br/><strong>정보를 입력</strong>해 주세요</p>
                     </div>
 
-                    <div class="select-wrap"><!--D: 레이아웃 변경 -->
+                    <div class="select-wrap"><!--D: .form-wrap / input 레이아웃 삭제 후 slect-wrap 안에 select-box 반복-->
 
                         <div class="select-box">
                             <label for="" class="formlabel essential">직업선택</label><!--D: essential 클래스 추가 -->
@@ -93,7 +93,6 @@
                             <div class="input">
                                 <input type="tel" title="연소득" id="" class="inp"  value="" placeholder="연소득 입력" required="">
                                 <span class="static-unit">만원</span>
-                                <!-- <button type="reset" class="btn-delete">검색어 삭제</button> -->
                             </div>
                         </div>
 
@@ -114,7 +113,7 @@
 
 
             <!--S: 직업선택 (팝업)-->
-            <div id="lySel1" class="layerpopup layer-up show" style="display:block;">
+            <div id="lySel1" class="layerpopup layer-up show" style="display: block;">
                 <div class="content-wrap">
                     <div class="pop-header">
                         <h2 class="pop-title">직업선택</h2>

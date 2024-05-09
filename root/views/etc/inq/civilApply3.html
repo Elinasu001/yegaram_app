@@ -52,107 +52,110 @@
 
 <body>
     <!-- header -->
-    <div id="headerWrap">
-        <script>
-        $(document).ready(function(){
-            document.charset="euc-kr";
-            $("#headerWrap").load("../includes/header.html");
-        });
-        </script>
-    </div>
+    <header class="headerWrap">
+        <div class="headerLeft">
+            <!--D: 이전버튼-->
+            <a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+        </div>
+        <div class="headerCenter">
+            <h2 class="text"><span>전자민원신청</span></h2> <!--D: TEXT -->
+        </div>
+        <div class="headerRight">
+            <!--D: 전체메뉴버튼 -->
+            <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>
+        </div>
+    </header>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
 
-                    <div class="tit-wrap">
-                        <p class="txt"><strong>전자민원 신청</strong>를 위한<br /><strong>정보</strong>를 입력해 주세요</p>
+                <div class="tit-wrap">
+                    <p class="txt"><strong>전자민원 신청</strong>를 위한<br /><strong>정보</strong>를 입력해 주세요</p>
+                </div>
+
+                <section class="terms-area" id="validateArea">
+                    <div class="terms-wrap level1 chk-all">
+                        <fieldset>
+                            <input type="checkbox" id="Chk01" class="check">
+                            <label for="Chk01"><span>[필수] 개인정보 수집·이용 동의</span></label>
+                        </fieldset>
+                    </div>
+                </section>
+                <p class="info-txt">
+                    개인정보 취급방침(수집·이용에 관한 동의)는 본 서비스를
+                    이용하기 위한 필수 사항이므로, 위 사항에 동의하셔야만
+                    민원센터에 글을 등록하실 수 있어요
+                </p>
+
+                <div class="form-all-wrap"><!--D: 영역 추가-->
+
+                    <div class="select-wrap ">
+
+                        <div class="select-box on" tabindex="1"><!--D: form-wrap / input 영역 삭제 , on 클래스 추가-->
+                            <label for="" class="essential">민원신청 구분</label>
+                            <span class="option">일반문의</span>
+                        </div>
+
+                        <div class="select-box" tabindex="1">
+                            <label for=""  class="essential">회신방법</label>
+                            <span class="option">이메일</span>
+                        </div>
+                        
                     </div>
 
-                    <section class="terms-area" id="validateArea">
-                        <div class="terms-wrap level1 chk-all">
-                            <fieldset>
-                                <input type="checkbox" id="Chk01" class="check">
-                                <label for="Chk01"><span>[필수] 개인정보 수집·이용 동의</span></label>
-                            </fieldset>
+                    <div class="form-wrap"><!--D:이메일-->
+                        <label for="ipt02" class="formlabel onbasic">이메일</label>
+                        <div class="input">
+                            <span>
+                                <input type="text" title="이메일" id="ipt02" class="inp" pattern=".+@\." value="" placeholder="이메일 주소를 입력해주세요" required="">
+                            </span>
                         </div>
-                    </section>
-                    <p class="info-txt">
-                        개인정보 취급방침(수집·이용에 관한 동의)는 본 서비스를
-                        이용하기 위한 필수 사항이므로, 위 사항에 동의하셔야만
-                        민원센터에 글을 등록하실 수 있어요
-                    </p>
-
-                    <div class="form-all-wrap"><!--D: 영역 추가-->
-
-                        <div class="select-wrap ">
-
-							<div class="select-box on" tabindex="1" onclick="openPopupUp('');"><!--D: form-wrap / input 영역 삭제 , on 클래스 추가-->
-								<label for="">민원신청 구분</label>
-								<span class="option">일반문의</span>
-							</div>
-
-                            <div class="select-box" tabindex="1" onclick="openPopupUp('');">
-								<label for="">회신방법</label>
-								<span class="option">이메일</span>
-							</div>
-                            
-						</div>
-
-                        <div class="form-wrap"><!--D:이메일-->
-                            <label for="ipt02" class="formlabel onbasic">이메일</label>
-                            <div class="input">
-                                <span>
-                                    <input type="text" title="이메일" id="ipt02" class="inp" pattern=".+@\." value="" placeholder="이메일 주소를 입력해주세요" required="">
-                                </span>
-                            </div>
-                        </div>
-        
-                        <div class="form-wrap form-line address">
-                            <label for="ipt04" class="formlabel">주소</label>
-                            <div class="input">
-                                <span>
-                                    <input type="text" title="주소검색" id="ipt04" class="inp" name="" value="" required=""  placeholder="우편번호를 입력해주세요.">
-                                    <button type="button" class="btn-certi" onclick="openPopupUp('');">우편번호찾기</button>
-                                </span>
-                                <span>
-                                    <input type="text" id="" class="inp" name="" value="" required="" placeholder="기본주소를 입력해주세요." >
-                                </span>
-                                <span>
-                                    <input type="text" id="" class="inp" name="" value="" placeholder="상세주소를 입력해주세요."
-                                        required="" style="display:none;">
-                                </span>
-                            </div>
-                        </div>
-        
-                        <div class="form-wrap phone"><!--D:전화번호-->
-                            <label for="A_PHONE_NO" class="formlabel">전화번호</label>
-                            <div class="input">
-                                <div class="select-box  type-line"  tabindex="1">
-                                    <span class="option" id="A_TELECOM">선택</span>
-                                </div>
-                                <span>
-                                    <input type="tel" title="" class="inp" id="A_PHONE_NO" name="A_PHONE_NO" value="" placeholder="전화번호를 입력해주세요" maxlength="9" required="" >
-                                </span>
-                            </div>
-                        </div>
-
-
-
                     </div>
+    
+                    <div class="form-wrap form-line address">
+                        <label for="ipt04" class="formlabel">주소</label>
+                        <div class="input">
+                            <span>
+                                <input type="text" title="주소검색" id="ipt04" class="inp" name="" value="" required=""  placeholder="우편번호를 입력해주세요.">
+                                <button type="button" class="btn-certi" onclick="openPopupUp('');">우편번호찾기</button>
+                            </span>
+                            <span>
+                                <input type="text" id="" class="inp" name="" value="" required="" placeholder="기본주소를 입력해주세요." >
+                            </span>
+                            <span>
+                                <input type="text" id="" class="inp" name="" value="" placeholder="상세주소를 입력해주세요."
+                                    required="" style="display:none;">
+                            </span>
+                        </div>
+                    </div>
+    
+                    <div class="form-wrap phone"><!--D:전화번호-->
+                        <label for="A_PHONE_NO" class="formlabel">전화번호</label>
+                        <div class="input">
+                            <div class="select-box  type-line"  tabindex="1">
+                                <span class="option" id="A_TELECOM">선택</span>
+                            </div>
+                            <span>
+                                <input type="tel" title="" class="inp" id="A_PHONE_NO" name="A_PHONE_NO" value="" placeholder="전화번호를 입력해주세요" maxlength="9" required="" >
+                            </span>
+                        </div>
+                    </div>
+
+
 
                 </div>
 
             </div>
-            <!-- //contents -->
 
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- //contents -->
+
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

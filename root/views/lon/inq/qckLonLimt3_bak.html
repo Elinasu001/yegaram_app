@@ -141,8 +141,8 @@ function jobCdCallback(data){
 
 				<div class="form-wrap"><!-- [퍼블] 클래스 변경 -->
 					<div class="input">
-						<div class="select-wrap" id="jobCdDiv">
-							<div class="select-box" tabindex="1" onclick="biz.select('직업선택','C002000000',jobCdCallback);">
+						<div class="select-wrap">
+							<div  id="jobCdDiv" class="select-box" tabindex="1" onclick="biz.select('직업선택','C002000000',jobCdCallback);">
 								<label for="">직업</label><!-- [퍼블] 텍스트 변경 -->
 								<span class="option" id="jobCdText">미선택</span>
 								<input type="hidden" id="JOB_CD" name="JOB_CD">
@@ -176,6 +176,7 @@ function jobCdCallback(data){
 					</div>
 					<p class="error-txt">금액을 입력해주세요</p><!--[퍼블-2] 텍스트 수정-->
 				</div>
+				
             </div>
         </div>
         <!-- //e: contents -->
