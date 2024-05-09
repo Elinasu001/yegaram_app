@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>예가람저축은행</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="keywords" content="예가람저축은행keywords">
+	<meta name="description" content="예가람저축은행description">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	
+	<meta name="apple-mobile-web-app-status-bar-style" content="white">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="No-Cache">
+	
+	<link href="/resources/css/default.css" rel="stylesheet">
+	<link href="/resources/css/renewal.css" rel="stylesheet">
+	
+	
+	<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="/resources/favicon.ico">
+	
+	<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+	
+	<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+	<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+	<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+	<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+	<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+	<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+	<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+	<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+	<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+	<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+	<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common" data-menuid="dep/prc" data-frameid="depAcnoOpenPrc2" data-servicecd="depAcnoOpenPrc2.frm" data-servertime="20230803152535" data-activemode="local" data-activeenv="${active.env">
+	</script>
+	
+	
+	</head>
+
+<body>
+
+<div class="wrap">
+	<!-- s:header -->
+	<header class="headerWrap">
+		<div class="headerLeft">
+			<a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+		</div>
+		<div class="headerCenter">
+			<h2 class="text"><span>전자금융가입</span></h2> <!--D: TEXT -->
+		</div>
+		<div class="headerRight">
+			<!-- <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a> -->
+		</div>
+	</header>
+    <!-- e:header -->
+
+    <!-- s: contentsWrap -->
+    <div class="contentsWrap">
+		<!-- s: contents -->
+		<div class="contents">
+			<!-- s: default-wrap -->
+			<div class="default-wrap">
+                <section class="terms-area">
+                    <div class="terms-wrap level1 chk-all">
+                        <fieldset>
+                            <input type="checkbox" id="allChk01" name="allChk01" value="" class="check all">
+                            <label for="allChk01"><span>약관에 모두 동의할게요</span></label>
+                        </fieldset>
+                    </div>
+
+                    <div class="terms-wrap level2">
+                        <fieldset>
+                            <input type="checkbox" id="chkEach01" name="check" value="" class="check">
+                            <label for="chkEach01"><span>[필수] 전자금융서비스 이용약관</span></label>
+                        </fieldset>
+                    </div>
+
+                    <div class="terms-wrap level2">
+                        <fieldset>
+                            <input type="checkbox" id="chkEach02" name="check" value="" class="check">
+                            <label for="chkEach02"><span>[선택] 개인(신용)정보 수집·이용 동의(비여신 금융거래)</span></label>
+                        </fieldset>
+                    </div>
+
+                    <div class="terms-wrap level2">
+                        <fieldset>
+                            <input type="checkbox" id="chkEach03" name="check" value="" class="check">
+                            <label for="chkEach03"><span>[선택] 개인(신용)정보 제3자 제공동의서(비여신 여신공통)</span></label>
+                        </fieldset>
+                    </div>
+
+                    <div class="terms-wrap level2">
+                        <fieldset>
+                            <input type="checkbox" id="chkEach04" name="check" value="" class="check all">
+                            <label for="chkEach04"><span>[선택] 개인(신용)정보 수집·이용 동의(상품서비스 안내 등)</span></label>
+                        </fieldset>
+
+                        <div class="etc level3">
+                            <div class="terms-wrap">
+                                <input type="checkbox" id="SMS_YN" name="SMS_YN" value="" class="check">
+                                <label for="svcCheck01">문자메세지</label>
+                            </div>
+                            <div class="terms-wrap">
+                                <input type="checkbox" id="TEL_YN" name="TEL_YN" value="" class="check">
+                                <label for="svcCheck03">휴대전화</label>
+                            </div>
+                            <div class="terms-wrap">
+                                <input type="checkbox" id="EMAIL_YN" name="EMAIL_YN" value="" class="check">
+                                <label for="svcCheck02">이메일</label>
+                            </div>
+                            <div class="terms-wrap">
+                                <input type="checkbox" id="DM_YN" name="DM_YN" value="" class="check">
+                                <label for="svcCheck04">DM</label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+			<!-- //s: default-wrap -->
+		</div>
+		<!-- //e: contents -->
+
+		<!-- s: fixed-btn-wrap -->
+		<div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <a href="#none" class="btn">다음</a>
+            </div>
+        </div>
+		<!-- //e: fixed-btn-wrap -->
+	</div>
+    <!-- e: contentsWrap -->
+</div>
+
+</body>
+
+</html>
