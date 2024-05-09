@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803180009"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803180009"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803180009"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803180009"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803180009"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803180009"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803180009"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803180009"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803180009" id="biz_common" 
+	data-menuId="etc/inq"
+	data-frameId="rtCut"
+	data-serviceCd="rtCut.frm" 
+	data-serverTime="20230803180009"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+<script type="text/javascript">
+var PageFunc = function() {
+	
+	var _back = function() { // 뒤로가기
+		history.back();
+	}
+	
+	var _proc = function() { // 본처리
+		// TODO 
+		return true;
+	}
+	
+	var _cancel = function() { // 그만하기
+		goMainPage();
+	}
+	
+	var _validate = function() { // 유효성검증
+		// TODO 약관불러오기 
+		return true;
+	}
+	
+	/**************************
+	* 사전점검표 체크
+	***************************/
+	var _checkNext = function(el){
+		
+	}
+	
+	return {
+		back : _back,
+		proc : _proc,
+		cancel : _cancel,
+		checkNext : _checkNext
+	};
+}();
+
+
+$(document).ready(function(){
+	
+});
+</script>
+</head>
+<body>
+	<!-- header -->
+    <jsp:include page="/WEB-INF/views/includes/header.jsp">
+		<jsp:param value="금리인하요구권 안내" name="title"/>
+		<jsp:param value="none" name="type"/>
+	</jsp:include> 
+	<!-- //header -->
+	
+	  <!-- s: contentsWrap -->
+     <!-- s: contentsWrap -->
+    <div class="contentsWrap">
+     <!-- s: contents -->
+        <div class="contents">
+            <div class="default-wrap"><!-- [퍼블] 클래스 변경 -->
+				<div class="tit-wrap"><!-- [퍼블] 클래스 변경 -->
+					<p class="txt">금리인하요구권 <strong>신청조건<br/>및 신청방법을 확인</strong>하세요</p>
+				</div>
+				<section class="tabs-wrap type-box">
+                    <div class="tabs">
+                        <ul class="tab-item">
+                            <li class="on" data-tab="tab-cont09"><a href="#none">금리인하<br/>요구권이란?</a></li>
+                            <li data-tab="tab-cont10" class=""><a href="#none">신청방법</a></li>
+                            <li data-tab="tab-cont11" class=""><a href="#none">비금융정보 신용평가 반영제도 안내</a></li>
+						</ul>
+
+                        <div class="tab-content-area">
+
+                            <div id="tab-cont09">
+                                <div class="pri-wrap">
+
+                                    <div class="sub-tit-wrap">
+                                        <p class="tit">금리인하요구권이란?</p>
+                                        <p class="txt">신용상태의 개선이 있는 경우 차주(고객)이 저축 은행에 금리인하를 모구할 수 있는 법 상 권리를 말해요</p>
+                                    </div>
+
+                                    <div class="guide-txt-wrap">
+                                        <p class="tit">금리인하 적용대상</p>
+                                        <div class="cont">
+                                            <p>
+                                                차주(가계·기업) 및 대출 종류(신용·담보대출)등에
+                                                관계없이 금리인하요구 행사가 가능해요
+                                            </p>
+                                            <p>
+                                                단, 집단대출, 신차 할부 등 차주의 신용 상태와 관계없이 금리가 결정되는 대출상품 및 햇살론, BIG3등대론 등의 경우 적용 대상에서 제외되어요
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="guide-txt-wrap">
+                                        <p class="tit">금리인하 행사(청구) 요건</p>
+                                        <div class="cont">
+                                            <p>금리인하요구제도에 따라 금리인하를 요구할 수 있는 요건은 다음과 같아요</p>
+                                        </div>
+                                    </div>
+
+                                    <!--[퍼블-2] 수정-->
+                                    <dl class="list-bull">
+                                        <dt>가계대출</dt>
+                                        <dd>소득이 증가(취업, 승진, 이직, 전문자격 취득 등) 하였거나, 재산증가(자산증가, 부채감소) 등 개인의 재무상태가 개선된 것으로 판단되는 경우</dd>
+                                        <dd>신용평가회사의 신용평점이 상승하거나 기타 본인의 신용도가 상승하였다고 판단되는 경우</dd>
+                                        <dd>기타 차주가 신용상태 개선으로 판단하는 경우</dd>
+                                        <dd>기타 대표이사가 별도로 정하는 경우</dd>
+                                    </dl>
+
+                                    <dl class="list-bull">
+                                        <dt>기업대출</dt>
+                                        <dd>이익증가, 부채감소 등 재무상태의 개선이 확인되는 경우</dd>
+                                        <dd>회사채 등급(개인사업자는 신용등급 또는 개인신용평점)상승, 추가 담보 제공, 특허권을 취득한 경우 등 신용도가 상승하였다고 판단되는 경우</dd>
+                                        <dd>기타 차주가 신용상태 개선으로 판단하는 경우</dd>
+                                        <dd>기타 대표이사가 별도로 정하는 경우</dd>
+                                    </dl>
+
+                                    <div class="bg-box">
+                                        <ul class="list-bull">
+                                            <li>신용상태 개선이 금리 산정에 영향을 주지 않는 경우 등 저축은행의 심사결과에 따라 금리가 인하되지 않을 수도 있어요</li>
+                                        </ul>
+                                    </div>
+                                    <!--// [퍼블-2] 수정-->
+
+                                </div>
+                            </div>
+
+                            <!-- [퍼블] 삭제 <div id="tab-cont09" class="">
+                                <div class="pri-wrap">
+                                    <div class="sub-tit-wrap mb20 mt40">
+                                        <p class="tit">금리인하요구권이란?</p>
+                                    </div>
+
+                                    <div class="txtbox-wrap">
+                                        <p class="color-333333">
+                                            신용상태의 개선이 있는 경우 차주(고객)이 저축 은행에 금리인하를 모구할 수 있는 법 상 권리를
+                                            말해요
+                                        </p>
+                                    </div>
+
+                                    <div class="sub-tit-wrap mb20 mt40">
+                                        <p class="tit">금리인하 적용대상</p>
+                                    </div>
+                                    <ul class="pop-cts dot">
+                                        <li>
+                                            차주(가계 기업) 및 대출 종류(신용 담보대출)
+                                            들에 관계없이 금리인하요구 행사가 가능해요 단, 집단대출, 신자 할부 등 자주의 신용 상태 와 관계없이 금리가 결정되는 대출상품 및 햇살론, BIG3등대론 등의 경우 적용 대상에서 제외되어요
+                                        </li>
+                                    </ul>
+
+                                    <div class="sub-tit-wrap mb20 mt40">
+                                        <p class="tit">금리인하 행사(청구) 요건</p>
+                                    </div>
+                                    <ul class="pop-cts dot">
+                                        <li>
+                                            금리인하요구제도에 따라 금리인하를 요구힐 수 있는 요건은 다음과 같아요
+                                        </li>
+                                    </ul>
+
+                                    <ul class="pop-cts dot">
+                                        <li>
+                                            <strong>가계대출</strong>
+                                            <ul class="pop-cts hippen">
+                                                <li>
+                                                    소득이 증가(취업, 승진, 이직, 전문자격, 취득 등)하였거나, 재산증가(자산증가, 부재감소)등 개인의 재무상태가 개선된 것으로 판단되는 경우
+                                                </li>
+                                                <li>
+                                                    신용평가회사의 신용평점이 삼슬하거나 기타 분인의 신용도가 상승하였다고 판단되는 경우
+                                                </li>
+                                                <li>
+                                                    기타 차주가 신용상태 개선으로 판단되는 경우
+                                                </li>
+                                                <li>
+                                                    기타 대표이사가 별도로 정하는 경우
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="pop-cts dot">
+                                        <li>
+                                            <strong>기업대출</strong>
+                                            <ul class="pop-cts hippen">
+                                                <li>
+                                                    이익증가 부채감소 등 재무상태의 개선이 확인되는 경우
+                                                </li>
+                                                <li>
+                                                    회사채 등급(개인사업자는 신용등급 또는 개인신용평점) 상승, 추가 담보 제공, 특허권을 취득한 경우 등 신용도가 상승하였다고 판단 되는 경우
+                                                </li>
+                                                <li>
+                                                    기타 대표이사가 별도로 정하는 경우
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="list-bull">
+                                        <li>신용상태 개선이 금리 산정에 영향을 주지 않는 경무 등 저축은행의 심사결과에 따라 금리가 인하되지 않을 수도 있어요</li>
+                                    </ul>
+                                </div>
+                            </div> -->
+
+                            <!-- [퍼블] 삭제 <div id="tab-cont10" class="">
+                                <div  class="pri-wrap">
+                                    <div class="sub-tit-wrap mb20 mt40">
+                                        <p class="tit">신청방법</p>
+                                    </div>
+
+                                    <div class="txtbox-wrap pb0">
+                                        <p class="color-333333 ">
+                                            행사 요건을 증빙할 수 있는 서류를 첨부한 금리인하요구 신청서를 작성하여 거래하는 영업점에 제출(유선, SMS, 서면 등)해야 합니다.
+                                        </p>
+                                    </div>
+                                    <ul class="list-bull">
+                                        <li>재직증명서, 근로소득원천징수영수증. 해당자격증, 기타 직위변동확인서, 기타 신용상태 변동을 입증할 수 있는 서류 등</li>
+                                    </ul>
+
+
+                                    <ul class="pop-cts dot">
+                                        <li>
+                                            <strong>신청시기 및 횟수</strong>
+                                            <ul class="pop-cts hippen">
+                                                <li>
+                                                    신용상태 개선이 발생한 경우 신청회수, 신청시점에 관계없이 금리인하 요구 행사를 할 수 있어요
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="pop-cts dot">
+                                        <li>
+                                            <strong>심사 및 통보</strong>
+                                            <ul class="pop-cts hippen">
+                                                <li>
+                                                    신청 접수일로부터 10영업일 이내(단, 금리인하대상 여부 판단 필요자료의 보완에 걸리는 기간은 제외)에 처리 결과를 고객 본인에게 통지(유선, SMS. Email 등)합니다.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="pop-cts dot">
+                                        <li>
+                                            <strong>문의사항</strong>
+                                            <ul class="pop-cts hippen">
+                                                <li>
+                                                    당행 각 영업점(대표번호 : 1877-9900)및 디지털뱅킹 고객센터(1544-3637)
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>-->
+
+                            <div id="tab-cont10" class="">
+                                <div  class="pri-wrap">
+                                    <div class="sub-tit-wrap">
+                                        <p class="tit">신청방법</p>
+                                        <p class="txt">행사 요건을 증빙할 수 있는 서류를 첨부한 금리
+                                            인하요구 신청서를 작성하여 거래하는 영업점에 
+                                            제출(유선, SMS, 서면 등)해야 합니다</p>
+                                    </div>
+
+                                    <div class="guide-txt-wrap">
+                                        <p class="tit">신청시기 및 회수</p>
+                                        <div class="cont">
+                                            <p>신용상태 개선이 발생한 경우 신청횟수, 신청시점에 관계없이 금리인하 요구 행사를 할 수 있어요</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="guide-txt-wrap">
+                                        <p class="tit">심사 및 통보</p>
+                                        <div class="cont">
+                                            <p>신청 접수일로부터 10영업일 이내(단, 금리인하대상 여부 판단 필요 자료의 보완에 걸리는 기간은 제외)에 처리 결과를 고객본인에게 통지(유선, SMS, E-mail 등) 합니다</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="guide-txt-wrap">
+                                        <p class="tit">문의사항</p>
+                                        <div class="cont">
+                                            <p>당행 각 영업점(대표번호 1877-9900) 및 디지털뱅킹 고객센터(1544-3637)</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div id="tab-cont11" class="">
+                                <div  class="pri-wrap">
+
+                                    <div class="sub-tit-wrap">
+                                        <p class="tit">비금융정보 신용평가 반영 제도란?</p>
+                                        <p class="txt">개인이 직접 비금융 정보를 신용 조회회사에 제공
+                                            하고 신용 조회회사는 개인이 제공한 정보를 기반
+                                            으로 개인신용평가에 반영하는 제도에요</p>
+                                    </div>
+                                    <!-- [퍼블] 수정범위 -->
+                                    <div class="table-type table-row type-left">
+                                        <div class="sub-tit-wrap">
+                                            <p class="tit">통신·공공요금 성실납부정보 등 개인신용평가 반영 안내</p>
+                                        </div>
+                                        <table>
+                                            <caption>
+                                                통신·공공요금 성실남부정보 등 개인신용평가 반영 안내 표이며 구분, 주요내용 항목이 있습니다.
+                                            </caption>
+                                            <colgroup>
+                                                <col width="25%"><!--[퍼블] width수정-->
+                                                <col width="*%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col">주요내용</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>반영대상자</td>
+                                                    <td>CB 신용평가시 비금융거래정보 반영을 희망하는 자로서 최근 6개월 이상의 성실납부실적 제출자</td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="3">반영정보 (증빙자료)</td>
+                                                    <td>국민연금공단
+                                                        <ul class="list-bull hyphen">
+                                                            <li>국민연금공단에서 발부한 납부 실적자료</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>건강보험료
+                                                        <ul class="list-bull hyphen">
+                                                            <li>건강보험공단에서 발부한 납부 실적자료</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>공공요금(도시가스, 수도, 전기)
+                                                        <ul class="list-bull hyphen">
+                                                            <li>해당기관에서 발부한 납부 실적자료</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>성실납부 실적자료 발급방법</td>
+                                                    <td>해당 공공기관, 통신회사 등 홈페이지나 사무소를 방문하여 발급 신청</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>증빙자료 제출방법</td>
+                                                    <td>국민연금 및 건강보험납부실적
+                                                        <ul class="list-bull hyphen">
+                                                            <li>NICE(나이스지킴이 http://credit.co.kr) 및 KCB(올크레딧 http://allcredit.co.kr)에 접속하여 웹스크래핑 방식으로 직접 제출</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>반영방법</td>
+                                                    <td>CB의 확인절차를 거쳐 신용평가시 5~15점의 가점 부여</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>유의사항</td>
+                                                    <td>성실납부실적 증빙자료를 매 6개월마다 지속 제출하여야만 가점 효력 유지</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!--// [퍼블] 수정범위 -->
+                                    <div class="table-type table-row type-left"><!-- [퍼블] 클래스 변경 -->
+                                        <div class="sub-tit-wrap">
+                                            <p class="tit">제출방법</p>
+                                        </div>
+                                        <table>
+                                            <caption>
+                                                    제출방법 안내 표이며 나이스평가정보 항목이 있습니다.
+                                            </caption>
+                                            <colgroup>
+                                                <col width="20%"><!--[퍼블] width수정-->
+                                                <col width="*%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" colspan="2">나이스평가정보</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>주소</td>
+                                                    <td>우)07237<br/><!-- [퍼블] 수정 , br태그 추가-->
+                                                        서울시 영등포구 국회대로 66길 9<br/>
+                                                        NICE평가정보 고객센터<br/>
+                                                        비금융정보 개인신용평가 담당자 앞
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>전화</td>
+                                                    <td>02-1588-2486</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>FAX</td>
+                                                    <td>02-1588-2486</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="table-type table-row type-left"><!-- [퍼블] 클래스 변경 -->
+                                        <table class="border-top-none"><!--[퍼블] 추가-->
+                                            <caption>
+                                                    제출방법 안내 표이며 코리아크레딧뷰 항목이 있습니다.
+                                            </caption>
+                                            <colgroup>
+                                                <col width="20%"><!--[퍼블] width수정-->
+                                                <col width="*%">
+                                                <col>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" colspan="2">코리아크레딧뷰로</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>주소</td>
+                                                    <td>우)03128<br/><!-- [퍼블] 수정 , br태그 추가-->
+                                                        서울시 종로구 김상옥로29 서울보증보험 B/D 19층 KCB고객센터<br/>
+                                                        비금융정보 개인신용평가 담당자 앞
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>전화</td>
+                                                    <td>02-708-1000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>FAX</td>
+                                                    <td>02-708-1111</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- [퍼블] 추가 -->
+                                    <dl class="list-bull type-caption">
+                                        <dt>알아두세요</dt>
+                                        <dd>자세한 내용은 NICE평가정보(주) 홈페이지 credit.co.kr 또는 KCB(코리아크레딧뷰로) 홈페이지 allcredit.co.kr에서 확인하실 수 있어요</dd>
+                                    </dl>
+                                    <!-- //[퍼블] 추가 -->
+                                </div>
+                            </div>
+
+                            <!-- [퍼블] 삭제 <div id="tab-cont11" class="">
+                                <div  class="pri-wrap">
+                                    <div class="sub-tit-wrap mb20 mt40">
+                                        <p class="tit"><비금융정보 신용평가 반영>제도란?</p>
+                                    </div>
+
+                                    <div class="txtbox-wrap pb0">
+                                        <p class="color-333333 ">
+                                            개인이 직접 비금융정보를 신용조회회사에 제공하고 신용조회회사는 개인이 제공한 정보를 기반으로 개인신용평가에 반영하는 제도예요
+                                        </p>
+                                    </div>
+
+                                    <div class="sub-tit-wrap mb20 mt40">
+                                        <p class="tit">통신·공공요금 성실납부정보 등 개인신용 평가 반영 안내</p>
+                                    </div>
+                                    <div class="table-type table-row">
+                                        <table>
+                                            <caption class="sr-only">
+                                                통신·공공요금 성실남부정보 등 개인신용평가 반영 안내 표이며 구분, 주요내용 항목이 있습니다.
+                                            </caption>
+                                            <colgroup>
+                                                <col>
+                                                <col>
+                                                <col>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col" colspan="2">주요내용</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="session">
+                                                    <td>반영대상자</td>
+                                                    <td colspan="2" class="tal">CB 신용평가시 비금융거래정보 반영을 희망하는 자로서 최근 6개월 이상의 성실납부실적 제출자</td>
+                                                </tr>
+                                                <tr class="session">
+                                                    <td>반영정보 (증빙자료)</td>
+                                                    <td colspan="2" class="tal">
+                                                        <div class="notice-list-wrap type02">
+                                                            <ul class="notice-list">
+                                                                <li>- 국민연금 - 건강보험료 
+                                                                    <p class="common-textstyle03">: 국민연금공단, 건강보험공단에서 발부한 납부실적 자료</p>
+                                                                </li>
+                                                                <li>- 공공요금(도시가스, 수도, 전기)
+                                                                    <p class="common-textstyle03">: 해당 기관에서 발부한 납부실적 자료</p>
+                                                                </li>
+                                                                <li>- 통신요금(휴대폰)
+                                                                    <p class="common-textstyle03">: 통신회사 등에서 발부한 납부실적 자료</p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="session">
+                                                    <td>증빙자료 제출방법</td>
+                                                    <td colspan="2" class="tal">
+                                                        <div class="notice-list-wrap type02">
+                                                            <ul class="notice-list">
+                                                                <li>- 해당 공공기관, 통신회사 등 홈페이지나 사무소를 방문, 성실납부실적자료를 발급받아 NICE, KCB에 우편 - FAX - 방문 제출</li>
+                                                                <li>- 국민연금 및 건강보험 납부실적은 나이스(나이스지킴이 : <a href="http://www.credit.co.kr" target="_blank" title="새창 열림">http://credit.co.kr</a>) 및 KCB(올크레딧 : <a href="http://allcredit.co.kr" target="_blank" title="새창 열림">http://allcredit.co.kr</a>)에 접속하여 웹스크래핑 방식으로 직접 제출 가능</li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="session">
+                                                    <td>반영방법</td>
+                                                    <td colspan="2" class="tal">CB의 확인절차를 거쳐 신용평가시 5~15점의 가점 부여</td>
+                                                </tr>
+                                                <tr class="session">
+                                                    <td>유의사항</td>
+                                                    <td colspan="2" class="tal">성실납부실적 증빙자료를 매 6개월마다 지속 제출하여야만 가점 효력 유지</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="sub-tit-wrap mb20 mt40">
+                                        <p class="tit">제출방법</p>
+                                    </div>
+                                    <div class="table-type table-row">
+                                        <table>
+                                            <caption class="sr-only">
+                                                    제출방법 안내 표이며 구분, 나이스평가정보, 코리아크레딧뷰로 항목이 있습니다.
+                                            </caption>
+                                            <colgroup>
+                                                <col>
+                                                <col>
+                                                <col>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col">나이스평가정보</th>
+                                                    <th scope="col">코리아크레딧뷰로</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="session">
+                                                    <td>주소</td>
+                                                    <td class="tal">서울시 영등포구 국회대로 66길 9 NICE평가정보 고객센터 비금융정보 개인신용평가 담당자 앞 (우)07237</td>
+                                                    <td class="tal">서울시 종로구 김상옥로 29 서울보증보험 B/D 19층 KCB고객센터 비금융정보 개인신용평가 담당자 앞 (우)03128</td>
+                                                </tr>
+                                                <tr class="session">
+                                                    <td>전화</td>
+                                                    <td class="tal">02-1588-2486</td>
+                                                    <td class="tal">02-708-1000</td>
+                                                </tr>
+                                                <tr class="session">
+                                                    <td>FAX</td>
+                                                    <td class="tal">02-2122-5008</td>
+                                                    <td class="tal">02-708-1111</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <p class="info-txt">
+                                        자세한 내용은 NICE평가정보(주) 홈페이지(credit.co.kr) 또는 KCB(코리아크레딧뷰로) 홈페이지(allcredit.co.kr) 에서 확인하실 수 있어요
+                                    </p>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+        <!-- //e: contents -->
+    </div>
+    <!-- e: contentsWrap -->
+    <!-- e: contentsWrap -->
+</body>
+</html>
