@@ -1781,14 +1781,13 @@ body.on { position:fixed; top:0; }
 .list-icon.access  > li.sms::before { background:url("../images/common/ico-access-sms.png") center /30px no-repeat; }
 .list-icon.access  > li.photo::before { background:url("../images/common/ico-access-photo.png") center /25px no-repeat; }
 
-.list-icon > li.accept::before { background:url("../images/common/ico_accept.png") center / 22px no-repeat #F8F8FA; }
-.list-icon > li.accept2::before { background:url("../images/common/ico_accept2.png") center / 28px no-repeat #F8F8FA; }
-.list-icon > li.notice::before { background:url("../images/common/ico_notice.png") center / 22px no-repeat #F8F8FA; }
-.list-icon > li.confirm::before { background:url("../images/common/ico_confirm.png") center / 22px no-repeat #F8F8FA; }
-.list-icon > li.found::before { background:url("../images/common/ico_found.png") center / 22px no-repeat #F8F8FA; }
-.list-icon > li.report::before { background:url("../images/common/ico_report.png") center / 22px no-repeat #F8F8FA; }
-.list-icon > li.review::before { background:url("../images/common/ico_review.png") center / 22px no-repeat #F8F8FA; }
-.list-icon > li.handle::before { background:url("../images/common/ico_handle.png") center / 22px no-repeat #F8F8FA; }
+.list-icon > li.accept::before { background:url("../images/common/ico_accept.png") center / 28px no-repeat #F8F8FA; }
+.list-icon > li.notice::before { background:url("../images/common/ico_notice.png") center / 28px no-repeat #F8F8FA; }
+.list-icon > li.confirm::before { background:url("../images/common/ico_confirm.png") center / 28px no-repeat #F8F8FA; }
+.list-icon > li.found::before { background:url("../images/common/ico_found.png") center / 28px no-repeat #F8F8FA; }
+.list-icon > li.report::before { background:url("../images/common/ico_report.png") center / 28px no-repeat #F8F8FA; }
+.list-icon > li.review::before { background:url("../images/common/ico_review.png") center / 28px no-repeat #F8F8FA; }
+.list-icon > li.handle::before { background:url("../images/common/ico_handle.png") center / 28px no-repeat #F8F8FA; }
 .list-icon > li.join::before { background:url("../images/common/ico_join.png") center / 28px no-repeat #F8F8FA; }
 
 .list-icon > li.security::before { background:url("../images/common/ico_security.png") center / 28px no-repeat #F8F8FA; }
