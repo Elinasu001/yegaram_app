@@ -2384,7 +2384,8 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .sub-tit-wrap .toggle-wrap .tit { flex:1; text-align:left; }
 
 .sub-tit-wrap:has(+.more-box-list) { margin-bottom:20px; }
-.sub-tit-wrap:has(+.terms-list) { margin-bottom:15px; }
+/* .sub-tit-wrap:has(+.terms-list) { margin-bottom:15px; } */
+.sub-tit-wrap.contTxt { border-bottom:1px solid #DDDDDD; padding-bottom:15px; margin-bottom:0; color:#999999;  }
 
 .sub-tit-wrap:has(+.map-area) { margin-bottom:15px; }
 

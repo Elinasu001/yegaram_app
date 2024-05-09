@@ -52,14 +52,19 @@
 
 <body>
     <!-- header -->
-    <div id="headerWrap">
-        <script>
-        $(document).ready(function(){
-            document.charset="euc-kr";
-            $("#headerWrap").load("../includes/header.html");
-        });
-        </script>
-    </div>
+    <header class="headerWrap">
+        <div class="headerLeft">
+            <!--D: 이전버튼-->
+            <a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+        </div>
+        <div class="headerCenter">
+            <h2 class="text"><span>전자민원신청 조회내역</span></h2> <!--D: TEXT -->
+        </div>
+        <div class="headerRight">
+            <!--D: 전체메뉴버튼 -->
+            <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>
+        </div>
+    </header>
 	<!-- //header -->
 
     <form>
@@ -73,38 +78,42 @@
                         <p class="txt">신청한<b> 전자민원 내역</b>을<br>확인해보세요</p>
                     </div>
 
-                    <div class="sub-tit-wrap">
+                    <div class="sub-tit-wrap contTxt"><!--D: contTxt 클래스 추가 -->
                         <p class="tit">전자민원 내역</p>
                     </div>
-
+                    
                     <!--//D: 신청내역이 있는 경우-->
                     <ul class="terms-list" id="MW_LIST">
                         <li>
                             <a href="#none">
-                                <em class="flag style4">접수</em><!--D: style4 접수-->
-                                <p>대출신청 문의 드립니다</p>
+                                <em class="flag style5">접수</em><!--D: style5 접수-->
+                                <p>금액 별 필요한 인증 단계가 어떻게 되나요?</p>
                                 <input type="hidden" id="SEQ" value=""/>
                             </a>
                         </li>
                         <li>
                             <a href="#none">
-                                <em class="flag style5">처리중</em><!--D: style5 처리중-->
-                                <p>결제 대금을 확인하고 싶습니다</p>
-                                <input type="hidden" id="SEQ" value="" />
+                                <em class="flag style6">처리중</em><!--D: style6 처리중-->
+                                <p>회원가입 시 어떤 메뉴들을 사용할 수 있나요?</p>
+                                <input type="hidden" id="SEQ" value=""/>
                             </a>
                         </li>
                         <li>
                             <a href="#none">
-                                <em class="flag style6">완료</em><!--D: style5 완료-->
-                                <p>결제 취소 건에 대해 문의드려요<span class="file-clip"></span></p>
+                                <em class="flag style7">완료</em><!--D: style7 완료-->
+                                <p>결제 취소 건에 대해 문의드려요<span class="file-clip"></span></p><!--D: 파일이 있을 경우 .file-clip 태그 추가 필요-->
                                 <input type="hidden" id="SEQ" value="" />
                             </a>
                         </li>
                     </ul>
                     <!--D: 신청내역이 있는 경우//-->
+                    
+                    <!--D: 신청내역이 없는 경우-->
                     <div class="result-area nodata">
                         <p>신청하신 전자민원이 없어요</p>
                     </div>
+                    <!--D: 신청내역이 없는 경우//-->
+
                 </div>
             </div>
             <!-- //contents -->
