@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230804093335"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230804093335"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230804093335"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230804093335"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230804093335"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230804093335"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230804093335"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230804093335"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230804093335" id="biz_common" 
+	data-menuId="etc/inq"
+	data-frameId="branch"
+	data-serviceCd="branch.frm" 
+	data-serverTime="20230804093335"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+
+<script type="text/javascript">
+var PageFunc = function() {
+	
+	var _back = function() { // 뒤로가기
+		history.back();
+	}
+	
+	var _proc = function() { // 본처리
+		// TODO 
+		return true;
+	}
+	
+	var _cancel = function() { // 그만하기
+		goMainPage();
+	}
+	
+	
+	return {
+		back : _back,
+		proc : _proc,
+		cancel : _cancel
+	};
+}();
+
+
+$(document).ready(function(){
+	
+
+    if(matchMedia("screen and (min-width: 375px)").matches){
+        document.querySelector('meta[name="viewport"]').setAttribute("content", "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" );
+        console.log('remove');
+    }else{
+        document.querySelector('meta[name="viewport"]').setAttribute("content","user-scalable=no, width=375");
+        console.log('add');
+    }
+
+});
+$(document).ready(function(){
+	
+
+    if(matchMedia("screen and (min-width: 375px)").matches){
+        document.querySelector('meta[name="viewport"]').setAttribute("content", "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" );
+        console.log('remove');
+    }else{
+        document.querySelector('meta[name="viewport"]').setAttribute("content","user-scalable=no, width=375");
+        console.log('add');
+    }
+
+    const x = window.matchMedia("screen and (min-width: 375px)")
+    x.addListener((a) => {
+
+        
+    })
+
+
+
+});
+ 
+</script>
+</head>
+<body>
+	<!-- header -->
+    <header class="headerWrap">
+        <div class="header">
+            <a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+            <h2><span>영업점안내</span></h2>
+        </div>
+        <div class="menu-wrap">
+        </div>
+    </header>
+	<!-- //header -->
+
+    <!-- s: contentsWrap -->
+    <div class="contentsWrap">
+        <!-- s: contents -->
+        <div class="contents">
+            <div class="default-wrap"><!--[퍼블] 클래스 변경-->
+
+                <!--[퍼블-2] 삭제 <div class="tit-wrap">
+                    <p class="txt"><strong>예가람저축은행</strong><br/><strong>영업점</strong>을 안내해 드려요</p>
+                </div> -->
+
+                <section class="tabs-wrap">
+                    <div class="tabs">
+                        <ul class="tab-item">
+                            <li data-tab="tab-cont01"><a href="#none" title="선택됨">본점</a></li>
+                            <li data-tab="tab-cont02" class=""><a href="#none">중앙지점</a></li>
+                            <li data-tab="tab-cont03"><a href="#none">센텀지점</a></li>
+                        </ul>
+                        <div class="tab-content-area">
+                            <div id="tab-cont01" class="tab-content">
+                                <div class="tit-wrap"><!--[퍼블-2]추가-->
+                                    <p class="txt"><strong>본점</strong></p>
+                                </div>
+                                <div class="sub-tit-wrap">
+                                    <p class="tit">영업점 위치</p>
+                                </div>
+                                <div class="map-area">
+                                    <div class="map" id="daumMap">
+                                    	<!-- TODO 지도 -->
+                                    </div>
+                                </div>
+
+                                <div class="table-type table-col"> <!-- [퍼블] .mt15삭제 -->
+                                    <div class="sub-tit-wrap"> <!-- [퍼블] .mb15삭제/ 위치변경 -->
+                                        <p class="tit">영업점 정보</p>
+                                    </div>
+                                    <div class="map-info-area head">
+                                        <div class="map-img"></div>
+                                    </div>
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col width="40%">
+                                            <col width="*">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="col">전화번호</th>
+                                                <td>1877-9900</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">팩스번호</th>
+                                                <td>051-637-9070</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">주소</th>
+                                                <td>부산시 동구 중앙대로 244
+                                                    흥국생명빌딩 3~5F<button type="button" class="btn-copy">복사하기</button></td><!--[퍼블] 버튼 추가-->
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">영업시간</th>
+                                                <td>평일 9:00 ~ 18:00<br/>주말, 공휴일 휴무</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="btn-cont-wrap btn-add type2 ta-c"><!--[퍼블] 클래스 변경-->
+                                    <a href="#none" class="btn">전화문의하기</a><!--[퍼블] 클래스 변경-->
+                                </div>
+                            </div>
+
+                            <div id="tab-cont02" class="tab-content dp-none">
+                                <div class="tit-wrap"><!--[퍼블-2]추가-->
+                                    <p class="txt"><strong>중앙지점</strong></p>
+                                </div>
+                                <div class="sub-tit-wrap"><!--[퍼블] 클래스 변경-->
+                                    <p class="tit">영업점 위치</p>
+                                </div>
+                                <div class="map-area">
+                                    <div class="map" id="daumMap">
+                                    </div>
+                                </div>
+
+                                <div class="table-type table-col"> <!-- [퍼블] .mt15삭제 -->
+                                    <div class="sub-tit-wrap"> <!-- [퍼블] .mb15삭제/ 위치변경 -->
+                                        <p class="tit">영업점 정보</p>
+                                    </div>
+                                    <div class="map-info-area center">
+                                        <div class="map-img"></div>
+                                    </div>
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col width="40%">
+                                            <col width="*">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="col">전화번호</th>
+                                                <td>051-640-9100</td><!-- [퍼블] 텍스트 변경 -->
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">팩스번호</th>
+                                                <td>051-637-9030</td><!-- [퍼블] 텍스트 변경 -->
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">주소</th>
+                                                <td>부산시 중구 해관로 17<button type="button" class="btn-copy">복사하기</button></td><!-- [퍼블] 텍스트 변경 --><!--[퍼블-2] 버튼 추가-->
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">영업시간</th>
+                                                <td>평일 9:00 ~ 18:00<br/>주말, 공휴일 휴무</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="btn-cont-wrap btn-add type2 ta-c"><!--[퍼블] 클래스 변경-->
+                                    <a href="#none" class="btn">전화문의하기</a><!--[퍼블] 클래스 변경-->
+                                </div>
+                            </div>
+
+                            <div id="tab-cont03" class="tab-content dp-none">
+                                <div class="tit-wrap"><!--[퍼블-2]추가-->
+                                    <p class="txt"><strong>센텀지점</strong></p>
+                                </div>
+                                <div class="sub-tit-wrap"><!-- [퍼블] 클래스 변경 -->
+                                    <p class="tit">영업점 위치</p>
+                                </div>
+                                <div class="map-area">
+                                     <div class="map" id="daumMap">
+                                    </div>
+                                </div>
+
+                                <!-- <div class="sub-tit-wrap">
+                                    <p class="tit">영업점 정보</p>
+                                </div> [퍼블] 삭제-->
+
+                                <div class="table-type table-col"><!-- [퍼블] .mt15삭제 -->
+                                    <div class="sub-tit-wrap"><!-- [퍼블] .mb15삭제/ 위치변경 -->
+                                        <p class="tit">영업점 정보</p>
+                                    </div>
+                                    <div class="map-info-area centum">
+                                        <div class="map-img"></div>
+                                    </div>
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col width="40%">
+                                            <col width="*">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="col">전화번호</th>
+                                                <td>051-640-9120</td><!-- [퍼블] 클래스 변경 -->
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">팩스번호</th>
+                                                <td>051-637-9040</td><!-- [퍼블] 클래스 변경 -->
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">주소</th>
+                                                <td>부산시 해운대구 센텀동로9
+                                                    트럼프월드센텀 212호<button type="button" class="btn-copy">복사하기</button></td><!-- [퍼블] 클래스 변경 --><!--[퍼블-2] 버튼 추가-->
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">영업시간</th>
+                                                <td>평일 9:00 ~ 18:00<br/>주말, 공휴일 휴무</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="btn-cont-wrap btn-add type2 ta-c"><!--[퍼블] 클래스 변경-->
+                                    <a href="#none" class="btn">전화문의하기</a><!--[퍼블] 클래스 변경-->
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+        <!-- //e: contents -->
+
+    </div>
+    <!-- //e: contentsWrap -->
+					
+</body>
+</html>
