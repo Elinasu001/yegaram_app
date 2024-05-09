@@ -1312,7 +1312,7 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 
 /* .default-wrap:has(.gray-wrap:only-child) { padding:0 20px !important; }iostest */
 
-form,
+.contentsWrap form,
 .contentsWrap.grid,
 .contents {  height:100%; }
 .contentsWrap .contents > .default-wrap { padding-bottom:100px; }
