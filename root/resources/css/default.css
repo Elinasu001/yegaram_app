@@ -512,7 +512,8 @@ textarea:read-only { border-color:#DDDDDD !important; }
 
 .form-wrap + div > .form-wrap.select-form-wrap { margin-top:10px; }
 .txt-list-wrap + div > .form-wrap { margin-top: 40px; }
-.form-wrap + .select-wrap { margin-top:20px; }
+.form-wrap + .select-wrap,
+.form-all-wrap > .select-wrap + .select-wrap { margin-top:20px; }
 /* .select-form-wrap + .select-form-wrap { margin-top:10px; } */
 .select-form-wrap + .check-account { margin-top:20px; }
 .select-form-wrap + div > .txt-list-wrap { margin-top:20px; }
