@@ -229,6 +229,8 @@ html.font-size-3{ font-size: 24px;}
 
 .pr30 { padding-right:30px !important; }
 
+.ht80 { height:80px !important; }
+
 .type-spread { margin:0 -20px; padding:0 20px; }
 
 .toast { position:fixed; right:50%; bottom:-10%; transform:translateX(50%); z-index:9999; width:max-content; max-width:calc(100% - 20px * 2); }
