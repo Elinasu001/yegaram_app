@@ -1150,3 +1150,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .amount-wrap .num-area .num { font-weight:600; color:#000000; }
 .amount-wrap .num-area .num span { color:#4E32A5; }
 .amount-wrap .num-area .txt { color:#666666; font-size:0.77778rem; line-height: 1rem; }
+
+
+
+.layerpopup.laypop-all .default-wrap.grid {}
