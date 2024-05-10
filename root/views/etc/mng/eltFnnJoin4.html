@@ -56,7 +56,7 @@
 			<a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
 		</div>
 		<div class="headerCenter">
-			<h2 class="text"><span>비과세종합저축 증빙자료제출</span></h2> <!--D: TEXT -->
+			<h2 class="text"><span>전자금융가입</span></h2> <!--D: TEXT -->
 		</div>
 		<div class="headerRight">
 			<!-- <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a> -->
@@ -70,31 +70,62 @@
 		<div class="contents">
 			<!-- s: default-wrap -->
 			<div class="default-wrap">
-				<div class="tit-wrap">
-                    <p class="txt"><strong>증빙자료(국가유공자)</strong>를<br/><strong>촬영하여 제출을 완료</strong>하세요</p> 
-                </div>
-                <!--D : mt40 클래스 추가 -->
-				<div class="inquiry-summary type-spread mt40">
-					<p class="period tit">촬영서류</p>
-					<span class="num"><strong id="imgCnt">4</strong>/10</span>
-					<input type="hidden" id="cnt" name="cnt" class="validChk">
-				</div>
+                <section class="terms-area">
+                    <div class="terms-wrap level1 chk-all">
+                        <fieldset>
+                            <input type="checkbox" id="allChk01" name="allChk01" value="" class="check all">
+                            <label for="allChk01"><span>약관에 모두 동의할게요</span></label>
+                        </fieldset>
+                    </div>
 
-				<ul class="thumb-wrap" id="imgUl">
-					<li><a href="javascript:void(0);">img</a></li>
-					<li><a href="javascript:void(0);">img</a></li>
-					<li><a href="javascript:void(0);">img</a></li>
-					<li><a href="javascript:void(0);">img</a></li>
-					<li class="plus"><a href="javascript:void(0);" onclick="callCamera(this);">추가촬영</a></li>
-                    <!-- s: 리스트 포맷 -->
-					<li class="plus" id="liFormat" style="display:none;">
-						<a href="javascript:void(0);" onclick="callCamera(this);">촬영</a>
-					</li>
-					<!-- e: 리스트 포맷 -->
-				</ul>
+                    <div class="terms-wrap level2">
+                        <fieldset>
+                            <input type="checkbox" id="chkEach01" name="check" value="" class="check">
+                            <label for="chkEach01"><span>[필수] 전자금융서비스 이용약관</span></label>
+                        </fieldset>
+                    </div>
 
-					
-			</div>
+                    <div class="terms-wrap level2">
+                        <fieldset>
+                            <input type="checkbox" id="chkEach02" name="check" value="" class="check">
+                            <label for="chkEach02"><span>[선택] 개인(신용)정보 수집·이용 동의(비여신 금융거래)</span></label>
+                        </fieldset>
+                    </div>
+
+                    <div class="terms-wrap level2">
+                        <fieldset>
+                            <input type="checkbox" id="chkEach03" name="check" value="" class="check">
+                            <label for="chkEach03"><span>[선택] 개인(신용)정보 제3자 제공동의서(비여신 여신공통)</span></label>
+                        </fieldset>
+                    </div>
+
+                    <div class="terms-wrap level2">
+                        <fieldset>
+                            <input type="checkbox" id="chkEach04" name="check" value="" class="check all">
+                            <label for="chkEach04"><span>[선택] 개인(신용)정보 수집·이용 동의(상품서비스 안내 등)</span></label>
+                        </fieldset>
+
+                        <div class="etc level3">
+                            <div class="terms-wrap">
+                                <input type="checkbox" id="SMS_YN" name="SMS_YN" value="" class="check">
+                                <label for="svcCheck01">문자메세지</label>
+                            </div>
+                            <div class="terms-wrap">
+                                <input type="checkbox" id="TEL_YN" name="TEL_YN" value="" class="check">
+                                <label for="svcCheck03">휴대전화</label>
+                            </div>
+                            <div class="terms-wrap">
+                                <input type="checkbox" id="EMAIL_YN" name="EMAIL_YN" value="" class="check">
+                                <label for="svcCheck02">이메일</label>
+                            </div>
+                            <div class="terms-wrap">
+                                <input type="checkbox" id="DM_YN" name="DM_YN" value="" class="check">
+                                <label for="svcCheck04">DM</label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
 			<!-- //s: default-wrap -->
 		</div>
 		<!-- //e: contents -->
@@ -102,7 +133,7 @@
 		<!-- s: fixed-btn-wrap -->
 		<div class="fixed-btn-wrap">
             <div class="btn-wrap">
-                <a href="#none" class="btn">제출</a>
+                <a href="#none" class="btn">다음</a>
             </div>
         </div>
 		<!-- //e: fixed-btn-wrap -->

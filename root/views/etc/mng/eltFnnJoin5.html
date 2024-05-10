@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common" 
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm" 
+	data-serverTime="20230803152535"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+
+
+<body>
+    <!-- header -->
+    <header class="headerWrap">
+		<div class="headerLeft">
+			<a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+		</div>
+		<div class="headerCenter">
+			<h2 class="text"><span>전자금융가입</span></h2> <!--D: TEXT -->
+		</div>
+		<div class="headerRight">
+			<!-- <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a> -->
+		</div>
+	</header>
+	<!-- //header -->
+
+    <form>
+        <!--contentsWrap -->
+        <div class="contentsWrap">
+            <!--contents -->
+            <div class="contents">
+                <div class="default-wrap">
+
+                    <div class="tit-wrap">
+                        <p class="txt"><strong>고객정보</strong>를 입력해주세요</p>
+                    </div>
+
+                    <div class="form-all-wrap">
+
+                        <div class="form-wrap">
+                            <label for="ipt01" class="formlabel essential">이름</label>
+                            <div class="input">
+                                <input type="text" title="이름" id="" class="inp" name="" value="" placeholder="이가람" required="">
+                            </div>
+                        </div>
+
+                        <div class="form-wrap phone">
+                            <label for="" class="formlabel essential">휴대폰번호</label>
+                            <div class="input">
+                                <input type="tel" title="" class="inp " id="" name="" value="" placeholder="01012345678" maxlength="11" required  numberonly/>
+                            </div>
+                        </div>
+
+                        <div class="select-wrap">
+
+                            <div class="check-box toggle">
+                                <input type="checkbox" id="check01">
+                                <label for="check01">
+                                    <span>SMS 수신동의</span>
+                                    <div class="switch-btn">
+                                        <span class="off">OFF</span>
+                                        <span class="on">ON</span>
+                                        <div class="inside"></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <p class="info-txt">SMS미수신일 경우 기존 고객님도 SMS 수신이 거부돼요</p>
+                            
+
+                            <div class="check-box toggle">
+                                <input type="checkbox" id="kakaoChk">
+                                <label for="kakaoChk">
+                                    <span>카카오 알림톡 수신동의</span>
+                                    <div class="switch-btn">
+                                        <span class="off">OFF</span>
+                                        <span class="on">ON</span>
+                                        <div class="inside"></div>
+                                    </div>
+                                </label>
+                            </div>
+            
+                            <div class="check-box toggle">
+                                <input type="checkbox" id="emailChk">
+                                <label for="emailChk">
+                                    <span>이메일 수신동의</span>
+                                    <div class="switch-btn">
+                                        <span class="off">OFF</span>
+                                        <span class="on">ON</span>
+                                        <div class="inside"></div>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="form-wrap">
+                                <label for="" class="formlabel">이메일</label>
+                                <div class="input">
+                                    <input type="email" id="" class="inp" pattern=".+@\." placeholder="이메일 입력" name="" value="" required="">
+                                    <button type="reset" class="btn-delete">검색어 삭제</button>
+                                </div>
+                            </div>
+
+                            <div class="select-wrap">
+
+                                <div class="check-box toggle">
+                                    <input type="checkbox" id="dmChk">
+                                    <label for="dmChk">
+                                        <span>우편물 수신동의 </span>
+                                        <div class="switch-btn">
+                                            <span class="off">OFF</span>
+                                            <span class="on">ON</span>
+                                            <div class="inside"></div>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <div class="form-wrap">
+                                    <div class="input">
+                                        <div class="select-wrap type2" id="selDiv1">
+                                            <div class="select-box" tabindex="1">
+                                                <label for="qValue1">연락수단</label>
+                                                <span class="option" id="">미선택</span>
+                                                <input type="hidden" name="CUST_CNTA_DVCD" class="validChk" id="qValue1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- //contents -->
+
+            <!--s: fixed 버튼-->
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap flexCol">
+                    <a href="#none" class="btn">다음</a> 
+                </div>
+            </div>
+            <!--e: fixed 버튼-->
+            <!--s: sms 수신동의 알럿-->
+            <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
+                <div class="content-wrap">
+                    <div class="pop-con-wrap">
+                        <span class="pop-con">SMS 수신동의를 하셔야<br>카카오 알림톡 수신동의가 가능해요</span>
+                    </div>
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn close">확인</a>
+                    </div>
+                </div>
+            </div>
+            <!--e: sms 수신동의 알럿-->
+            <!-- s: 연락수단 클릭시 나오는 팝업 -->
+            <div id="certification_selBox" class="layerpopup layer-up show" style="display:block;">
+                <div class="content-wrap ">
+                    <div class="pop-header">
+                        <h2 class="pop-title">연락수단</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    
+                    <div class="ly-scroll-con ly-select">
+                        <ul class="ly-select-list">
+                            <li><button type="button">연락거부</button></li>
+                            <li><button type="button">문자메시지</button></li>
+                            <li><button type="button">전화연락</button></li>
+                            <li><button type="button">이메일</button></li>
+                            <li><button type="button">우편물</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- e: 연락수단 클릭시 나오는 팝업 -->
+        </div>
+        <!-- //contentsWrap -->
+    </form>
+</body>
+</html>
+

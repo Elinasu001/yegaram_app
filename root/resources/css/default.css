@@ -1732,7 +1732,7 @@ body.on { position:fixed; top:0; }
 .list-icon.certification a { display:block; height:36px; height:36px; font-size:1rem; line-height:36px; }
 .list-icon.certification a:before { content:''; display:inline-block; position:absolute; top:0; left:0; width:36px; height:36px; background-color:#fff; }
 .list-icon > li > .tit { color:#333333; margin-bottom:5px; font-size:0.88889rem; line-height:1.278rem; font-weight:600; }
-.list-icon > li > .txt { color:#999999; font-size:0.77778rem; line-height: 1rem; }
+.list-icon > li > .txt { margin-top:0; color:#999999; font-size:0.77778rem; line-height: 1rem; }
 .list-icon > li > .tit:only-of-type,
 .list-icon > li > .txt:only-of-type { display:inline-block; }
 .list-icon .h-unset { height:unset; }

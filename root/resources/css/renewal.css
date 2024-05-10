@@ -467,6 +467,16 @@ section > .result-wrap{ margin-top:40px; }
 .check-box.flex-col.type2 > li.phoneCerti label::after {  background:url("../images/common/ico_phoneCerti.png") no-repeat 100%/36px auto;  }
 .check-box.flex-col.type2 > li.etcCerti label::after { background:url("../images/common/ico_etcCerti.png") no-repeat 100%/36px auto;   }
 
+/**계좌비밀번호 오류해제 선택 추가**/
+.check-box.bank_list { display:block; }
+.check-box.bank_list > li { width:100%; margin-bottom:15px; }
+.check-box.bank_list > li:last-child { margin-bottom:0; }
+.check-box.bank_list > li label{ text-align:left !important; padding:20px 20px 20px 88px !important; }
+.check-box.bank_list > li label::after { content:''; display: inline-block; position:absolute; left:20px;top: 50%; transform: translate(0, -50%); width:48px; height:48px; border-radius:50%;  }
+.check-box.bank_list.logo > li label::after { background:url(../images/bank_logo/logo_gb.png) no-repeat center; background-size:100%; }
+.check-box.bank_list > li label strong.tit{ font-weight:600; }
+.check-box.bank_list > li label span{ position:relative; top:inherit; left:inherit; transform:none; }
+
 /* 마이데이터 */
 /* .mydata-wrap::before { content:''; display:inline-block; width:170px; height:60px; margin-bottom:10px; background:url("../../images/common/ico-mydata-bg.png") no-repeat left top; background-size:100%; }
  */
