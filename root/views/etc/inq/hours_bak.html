@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230804084730"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230804084730"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230804084730"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230804084730"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230804084730"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230804084730"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230804084730"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230804084730"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230804084730" id="biz_common" 
+	data-menuId="etc/inq"
+	data-frameId="hours"
+	data-serviceCd="hours.frm" 
+	data-serverTime="20230804084730"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+<script type="text/javascript">
+var PageFunc = function() {
+	
+	var _back = function() { // 뒤로가기
+		history.back();
+	}
+	
+	var _proc = function() { // 본처리
+		// TODO 
+		return true;
+	}
+	
+	var _cancel = function() { // 그만하기
+		goMainPage();
+	}
+	
+	return {
+		back : _back,
+		proc : _proc,
+		cancel : _cancel,
+	};
+}();
+
+
+$(document).ready(function(){
+	
+});
+</script>
+</head>
+<body>
+	<!-- header -->
+
+	<header class="headerWrap">
+		<div class="header">
+			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+			<h2><span>이용시간</span></h2>
+		</div>
+		<div class="menu-wrap">
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- s: contentsWrap -->
+    <div class="contentsWrap">
+        <!-- s: contents -->
+        <div class="contents">
+            <div class="default-wrap"><!-- [퍼블] 클래스 변경 -->
+
+                <div class="tit-wrap"><!-- [퍼블] 클래스 변경 -->
+                    <p class="txt">금융 서비스<strong> 이용시간</strong>을<br/>안내해 드려요</p><!-- [퍼블] 수정 -->
+                </div>
+                <!-- [퍼블] 삭제 <p class="s-txt">저축은행 영업점을 방문하지 않아도 휴대전화를 통한 실명확인으로 <b>(예금)계좌개설, 대출신청, 전자금융 신청</b>을 할 수 있어요</p> -->
+
+                <div class="table-type table-row "><!--[퍼블-2] 클래스 추가-->
+					<div class="sub-tit-wrap"> <!-- [퍼블] .mb15 삭제 / 위치변경 -->
+						<p class="tit">인터넷뱅킹 이용시간</p>
+					</div>
+					<div class="table-scroll"><!--[퍼블-2]구조추가-->
+						<table>
+							<colgroup>
+								<col width="*">
+								<col width="*">
+								<col width="*">
+							</colgroup>
+							<thead>
+								<!--//[퍼블-2] 테이블 구조수정-->
+								<tr>
+									<th scope="col" colspan="2" rowspan="2">구분</th>
+									<th scope="col" colspan="2">이용시간</th>
+								</tr>
+								<tr>
+									<th scope="col">토,일요일/공휴일</th>
+									<th scope="col">평일</th>
+								</tr>
+								<!--[퍼블-2] 테이블 구조수정//-->
+							</thead>
+							<tbody>
+								<tr>
+									<td>조회</td>
+									<td>각종조회</td>
+									<td>00:10 ~ 23:50</td>
+									<td>00:10 ~ 23:50</td>
+								</tr>
+								<tr>
+									<td>이체</td>
+									<td>타행</td>
+									<td>00:10 ~ 23:50</td>
+									<td>00:10 ~ 23:50</td>
+								</tr>
+								<tr>
+									<td>사고신고</td>
+									<td></td>
+									<td>00:10 ~ 23:50</td><!-- [퍼블] 텍스트 변경 -->
+									<td>00:00 ~ 23:59</td>
+								</tr>
+								<tr>
+									<td rowspan="2">예금</td>
+									<td>신규</td>
+									<td>00:10 ~ 23:50</td><!-- [퍼블] 텍스트 변경 -->
+									<td>00:10 ~ 23:45</td>
+								</tr>
+								<tr>
+									<td>해지</td>
+									<td>00:10 ~ 23:50</td><!-- [퍼블] 텍스트 변경 -->
+									<td>이용불가</td>
+								</tr>
+								<tr>
+									<td rowspan="4">대출 및 상환</td>
+									<td>대출신청</td>
+									<td>00:10 ~ 23:50</td><!-- [퍼블] 텍스트 변경 -->
+									<td>이용불가</td>
+								</tr>
+								<tr>
+									<td>대출실행</td>
+									<td>00:10 ~ 23:50</td><!-- [퍼블] 텍스트 변경 -->
+									<td>이용불가</td>
+								</tr>
+								<tr>
+									<td>상환</td>
+									<td>00:10 ~ 23:50</td>
+									<td>00:10 ~ 23:50</td>
+								</tr>
+								<tr>
+									<td>상계</td>
+									<td>00:10 ~ 23:50</td>
+									<td>이용불가</td>
+								</tr>
+								<tr>
+									<td>고객정보 변경</td>
+									<td></td>
+									<td>00:10 ~ 23:50</td>
+									<td>00:10 ~ 23:50</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+                <p class="info-txt">토, 일요일/공휴일에는 예/적금 해지가 불가능해요</p>
+                <p class="info-txt">공동인증서 발급/재발급/갱신 및 타기관 인증서 등록 등의
+					업무는 각종 조회가 가능한 시간에만 제공돼요</p><!-- [퍼블] 텍스트 변경 -->
+            </div>
+        </div>
+        <!-- //e: contents -->
+    </div>
+    <!-- e: contentsWrap -->					
+</body>
+</html>
