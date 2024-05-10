@@ -248,153 +248,154 @@ function empInqCallBack(data) {
                 <div class="tit-wrap"> <!-- [퍼블] .mt40 삭제 -->
                     <p class="txt"><strong>고객정보</strong>를 입력해주세요</p>
                 </div>
-				
-				<!-- [퍼블] 텍스트 변경, .mt0 삭제 -->
-				<div class="form-wrap">
-					<label for="ipt01" class="formlabel onbasic">이름</label><!--[퍼블-3] action 삭제 및 placeholder 추가-->
-					<div class="input">
-						<input type="text" title="이름" id="CUST_NM" class="inp" name="CUST_NM" value="" placeholder="김고려" required=""><!--[퍼블-3] disabled 삭제 및 placeholder 추가-->
-					</div>
-					<p class="error-txt">이름을 입력해주세요</p>
-				</div>
-				<!-- // [퍼블] 텍스트 변경, .mt0 삭제 -->
-
-				<div class="form-wrap">
-					<label for="ipt02" class="formlabel onbasic">휴대폰번호</label><!--[퍼블-3] action 삭제-->
-					<div class="input">
-						<span>
-							<input type="tel" title="휴대폰번호" id="PHONE_NO" class="inp" name="PHONE_NO" value="" maxlength="6" placeholder="01012345678" required=""><!--[퍼블-3] disabled 삭제 -->
-						</span>
-					</div>
-					<p class="error-txt">휴대폰번호를 입력해주세요</p>
-				</div>
-
-				<!-- [퍼블] .form-tit 추가, 텍스트 변경 -->
-				<div class="form-wrap form-line address"><!-- [퍼블-3] (공통) address 클래스 추가 : 주소에 공통으로 클래스 추가 부탁드립니다! -->
-					<!-- [퍼블-3] 삭제 <strong class="form-tit">
-						<span>주소</span>
-					</strong> -->
-					<label for="ipt04" class="formlabel">주소</label><!--[퍼블-3] 추가-->
-					<div class="input">
-						<span onclick="biz.addrSelect(jusoRoadResultCallBack_home);">
-							<input type="text" title="주소검색" class="inp validChk" name="PSNT_RSDC_ZPCD" value="" id="ZIP_CODE" onkeyup="validChk();" onclick="removeErr(this);" placeholder="우편번호를 입력해주세요." required readonly>
-							<button type="button" class="btn-certi">우편번호찾기</button>
-						</span>
-						<span>
-							<input type="text" class="inp validChk" name="PSNT_RSDC_BSIC_ADDR" value="" id="ADDR" onkeyup="validChk();" onclick="removeErr(this);" placeholder="기본주소를 입력해주세요." required readonly>
-						</span>
-						<span>
-							<input type="text" class="inp validChk" name="PSNT_RSDC_DTAD" value="" id="ADDR_DETAIL" onkeyup="validChk();" onclick="removeErr(this);" placeholder="상세주소를 입력해주세요." required style="display:none">
-							<input type="hidden" id="PSNT_RSDC_BLDG_MNGNO" name="PSNT_RSDC_BLDG_MNGNO"><!-- 건물관리번호 -->
-							<input type="hidden" id="PSNT_RSDC_REF_ITEM_NM" name="PSNT_RSDC_REF_ITEM_NM"><!-- 참조항목명 -->
-						</span>
-					</div>
-					<p class="error-txt">주소을 입력해주세요</p>
-				</div>
-				<!-- [퍼블] .form-tit 추가, 텍스트 변경 -->
-
-				<div class="check-box toggle">
-					<input type="checkbox" id="smsChk">
-					<label for="smsChk">
-						<span>SMS 수신동의</span>
-						<div class="switch-btn">
-							<span class="off">OFF</span>
-							<span class="on">ON</span>
-							<div class="inside"></div>
+				<div class="form-all-wrap">
+					<!-- [퍼블] 텍스트 변경, .mt0 삭제 -->
+					<div class="form-wrap">
+						<label for="ipt01" class="formlabel onbasic">이름</label><!--[퍼블-3] action 삭제 및 placeholder 추가-->
+						<div class="input">
+							<input type="text" title="이름" id="CUST_NM" class="inp" name="CUST_NM" value="" placeholder="김고려" required=""><!--[퍼블-3] disabled 삭제 및 placeholder 추가-->
 						</div>
-					</label>
-				</div>
-				<!-- [퍼블] 마크업 변경 -->
-				<p class="info-txt">SMS미수신일 경우 기존 고객님도 SMS 수신이 거부돼요</p>
-				<!-- <ul class="list-bull pl10">
-					<li>SMS미수신일 경우 기존 고객님도 SMS 수신이 거부돼요</li>
-				</ul> -->
-				<!-- // [퍼블] 마크업 변경 -->
+						<p class="error-txt">이름을 입력해주세요</p>
+					</div>
+					<!-- // [퍼블] 텍스트 변경, .mt0 삭제 -->
 
-				<div class="check-box toggle">
-					<input type="checkbox" id="kakaoChk">
-					<label for="kakaoChk">
-						<span>카카오 알림톡 수신동의</span>
-						<div class="switch-btn">
-							<span class="off">OFF</span>
-							<span class="on">ON</span>
-							<div class="inside"></div>
+					<div class="form-wrap">
+						<label for="ipt02" class="formlabel onbasic">휴대폰번호</label><!--[퍼블-3] action 삭제-->
+						<div class="input">
+							<span>
+								<input type="tel" title="휴대폰번호" id="PHONE_NO" class="inp" name="PHONE_NO" value="" maxlength="6" placeholder="01012345678" required=""><!--[퍼블-3] disabled 삭제 -->
+							</span>
 						</div>
-					</label>
-				</div>
+						<p class="error-txt">휴대폰번호를 입력해주세요</p>
+					</div>
 
-				<div class="check-box toggle">
-					<input type="checkbox" id="emailChk">
-					<label for="emailChk">
-						<span>이메일 수신동의</span>
-						<div class="switch-btn">
-							<span class="off">OFF</span>
-							<span class="on">ON</span>
-							<div class="inside"></div>
+					<!-- [퍼블] .form-tit 추가, 텍스트 변경 -->
+					<div class="form-wrap form-line address"><!-- [퍼블-3] (공통) address 클래스 추가 : 주소에 공통으로 클래스 추가 부탁드립니다! -->
+						<!-- [퍼블-3] 삭제 <strong class="form-tit">
+							<span>주소</span>
+						</strong> -->
+						<label for="ipt04" class="formlabel">주소</label><!--[퍼블-3] 추가-->
+						<div class="input">
+							<span onclick="biz.addrSelect(jusoRoadResultCallBack_home);">
+								<input type="text" title="주소검색" class="inp validChk" name="PSNT_RSDC_ZPCD" value="" id="ZIP_CODE" onkeyup="validChk();" onclick="removeErr(this);" placeholder="우편번호를 입력해주세요." required readonly>
+								<button type="button" class="btn-certi">우편번호찾기</button>
+							</span>
+							<span>
+								<input type="text" class="inp validChk" name="PSNT_RSDC_BSIC_ADDR" value="" id="ADDR" onkeyup="validChk();" onclick="removeErr(this);" placeholder="기본주소를 입력해주세요." required readonly>
+							</span>
+							<span>
+								<input type="text" class="inp validChk" name="PSNT_RSDC_DTAD" value="" id="ADDR_DETAIL" onkeyup="validChk();" onclick="removeErr(this);" placeholder="상세주소를 입력해주세요." required style="display:none">
+								<input type="hidden" id="PSNT_RSDC_BLDG_MNGNO" name="PSNT_RSDC_BLDG_MNGNO"><!-- 건물관리번호 -->
+								<input type="hidden" id="PSNT_RSDC_REF_ITEM_NM" name="PSNT_RSDC_REF_ITEM_NM"><!-- 참조항목명 -->
+							</span>
 						</div>
-					</label>
-				</div>
+						<p class="error-txt">주소을 입력해주세요</p>
+					</div>
+					<!-- [퍼블] .form-tit 추가, 텍스트 변경 -->
 
-				<div class="form-wrap">
-
-					<!-- [퍼블-3] 태그삭제 <div class="txtbox-wrap"> -->
-						<!-- TODO 이메일 biz.input ? span쪽 뜨게하는것도 공통?? -->
-						<div class="form-wrap"><!--[퍼블-3] 클래스 삭제-->
-							<label for="ipt02" class="formlabel onbasic">이메일</label><!--[퍼블-3] 추가-->
-							<div class="input">
-								<input type="text" id="email" class="inp" pattern=".+@\." placeholder="이메일을 입력해주세요" name="" value="" required="">
+					<div class="check-box toggle">
+						<input type="checkbox" id="smsChk">
+						<label for="smsChk">
+							<span>SMS 수신동의</span>
+							<div class="switch-btn">
+								<span class="off">OFF</span>
+								<span class="on">ON</span>
+								<div class="inside"></div>
 							</div>
-							<!-- [퍼블-3] 삭제 <button type="button" class="btn-delete">검색어 삭제</button> -->
-
-							<!-- <ul class="email-list active">
-								<li><a href="#none"><span>aaaa</span>@gmail.com</a></li>
-								<li><a href="#none"><span>aaaa</span>@naver.com</a></li>
-								<li><a href="#none"><span>aaaa</span>@nate.com</a></li>
-								<li><a href="#none"><span>aaaa</span>@daum.net</a></li>
-								<li><a href="#none"><span>aaaa</span>@nate.com</a></li>
-							</ul> -->
-
-							<p class="error-txt">이메일을 입력해주세요</p>
-						</div>
-					<!-- [퍼블-3] txtbox-wrap 태그삭제 </div> -->
-				</div>
-				<!--D: 우편물 수신동의 > 연락 수단 > 금융 정보 취야계층 순서-->
-				<div class="check-box toggle">
-					<input type="checkbox" id="dmChk">
-					<label for="dmChk">
-						<span>우편물 수신동의 </span>
-						<div class="switch-btn">
-							<span class="off">OFF</span>
-							<span class="on">ON</span>
-							<div class="inside"></div>
-						</div>
-					</label>
-				</div>
-
-				<div class="form-wrap">
-					<div class="input">
-						<div class="select-wrap type2" id="selDiv1">
-							<div class="select-box" onclick="openSelect('연락수단','O002000000','1');" tabindex="1">
-								<label for="qValue1">연락수단</label>
-								<span class="option" id="qText1">미선택</span>
-								<input type="hidden" name="CUST_CNTA_DVCD" class="validChk" id="qValue1">
-							</div>
-						</div>
+						</label>
 					</div>
-					<p class="error-txt">연락수단을 선택해주세요</p>
-				</div>
+					<!-- [퍼블] 마크업 변경 -->
+					<p class="info-txt">SMS미수신일 경우 기존 고객님도 SMS 수신이 거부돼요</p>
+					<!-- <ul class="list-bull pl10">
+						<li>SMS미수신일 경우 기존 고객님도 SMS 수신이 거부돼요</li>
+					</ul> -->
+					<!-- // [퍼블] 마크업 변경 -->
 
-				<div class="form-wrap">
-					<div class="input">
-						<div class="select-wrap type2" id="selDiv2">
-							<div class="select-box" onclick="openSelect('금융정보취약계층','O000900000','2');" tabindex="1">
-								<label for="qValue2">금융정보취약계층</label>
-								<span class="option" id="qText2">해당없음</span>
-								<input type="hidden" name="FINC_WEAK_TP_CD" class="" id="qValue2">
+					<div class="check-box toggle">
+						<input type="checkbox" id="kakaoChk">
+						<label for="kakaoChk">
+							<span>카카오 알림톡 수신동의</span>
+							<div class="switch-btn">
+								<span class="off">OFF</span>
+								<span class="on">ON</span>
+								<div class="inside"></div>
+							</div>
+						</label>
+					</div>
+
+					<div class="check-box toggle">
+						<input type="checkbox" id="emailChk">
+						<label for="emailChk">
+							<span>이메일 수신동의</span>
+							<div class="switch-btn">
+								<span class="off">OFF</span>
+								<span class="on">ON</span>
+								<div class="inside"></div>
+							</div>
+						</label>
+					</div>
+
+					<div class="form-wrap">
+
+						<!-- [퍼블-3] 태그삭제 <div class="txtbox-wrap"> -->
+							<!-- TODO 이메일 biz.input ? span쪽 뜨게하는것도 공통?? -->
+							<div class="form-wrap"><!--[퍼블-3] 클래스 삭제-->
+								<label for="ipt02" class="formlabel onbasic">이메일</label><!--[퍼블-3] 추가-->
+								<div class="input">
+									<input type="text" id="email" class="inp" pattern=".+@\." placeholder="이메일을 입력해주세요" name="" value="" required="">
+								</div>
+								<!-- [퍼블-3] 삭제 <button type="button" class="btn-delete">검색어 삭제</button> -->
+
+								<!-- <ul class="email-list active">
+									<li><a href="#none"><span>aaaa</span>@gmail.com</a></li>
+									<li><a href="#none"><span>aaaa</span>@naver.com</a></li>
+									<li><a href="#none"><span>aaaa</span>@nate.com</a></li>
+									<li><a href="#none"><span>aaaa</span>@daum.net</a></li>
+									<li><a href="#none"><span>aaaa</span>@nate.com</a></li>
+								</ul> -->
+
+								<p class="error-txt">이메일을 입력해주세요</p>
+							</div>
+						<!-- [퍼블-3] txtbox-wrap 태그삭제 </div> -->
+					</div>
+					<!--D: 우편물 수신동의 > 연락 수단 > 금융 정보 취야계층 순서-->
+					<div class="check-box toggle">
+						<input type="checkbox" id="dmChk">
+						<label for="dmChk">
+							<span>우편물 수신동의 </span>
+							<div class="switch-btn">
+								<span class="off">OFF</span>
+								<span class="on">ON</span>
+								<div class="inside"></div>
+							</div>
+						</label>
+					</div>
+
+					<div class="form-wrap">
+						<div class="input">
+							<div class="select-wrap type2" id="selDiv1">
+								<div class="select-box" onclick="openSelect('연락수단','O002000000','1');" tabindex="1">
+									<label for="qValue1">연락수단</label>
+									<span class="option" id="qText1">미선택</span>
+									<input type="hidden" name="CUST_CNTA_DVCD" class="validChk" id="qValue1">
+								</div>
 							</div>
 						</div>
+						<p class="error-txt">연락수단을 선택해주세요</p>
 					</div>
-					<p class="error-txt">연락수단을 선택해주세요</p>
+
+					<div class="form-wrap">
+						<div class="input">
+							<div class="select-wrap type2" id="selDiv2">
+								<div class="select-box" onclick="openSelect('금융정보취약계층','O000900000','2');" tabindex="1">
+									<label for="qValue2">금융정보취약계층</label>
+									<span class="option" id="qText2">해당없음</span>
+									<input type="hidden" name="FINC_WEAK_TP_CD" class="" id="qValue2">
+								</div>
+							</div>
+						</div>
+						<p class="error-txt">연락수단을 선택해주세요</p>
+					</div>
 				</div>
 
 				<!-- [퍼블-2] 변경 -->

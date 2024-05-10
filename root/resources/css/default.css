@@ -491,7 +491,6 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .essential::after { content:"*"; position:absolute; padding-left:3px; color:#ff0000;}
 
 /*** 폼 form ***/
-
 .form-all-wrap { margin-top:40px; }
 .form-all-wrap .form-wrap.type-box:first-child,
 .form-all-wrap .form-wrap:first-child,
@@ -613,6 +612,10 @@ input[type="file"]::file-selector-button { display:none; }
 .btn-file-del { display:none; position:absolute; top:50%; right:20px; width:20px; height:20px; background: #FFFFFF; border:none; border-radius: 10px; background:url("../images/common/ico_minus.png") no-repeat 50%/20px auto; color:transparent; font-size:0; transform:translateY(-50%); }
 .added .btn-file-del { display:block; }
 .form-wrap:has(textarea) + .sub-tit-wrap { margin-bottom:15px !important; }
+
+.form-all-wrap .form-wrap + .check-box.toggle { margin-top:30px; }
+.form-all-wrap .check-box.toggle { margin-top:10px;}
+.form-all-wrap .form-wrap { margin-top:10px; }
 
 /* .search-area.type-box { padding-top:0; }
 .form-wrap.email-wrap > div.input input,
@@ -771,7 +774,6 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 /* .form-wrap + .form-wrap:has(+ .form-wrap.address, .form-wrap.password, .form-wrap.phone) { margin-top:20px; } */
 
 .select-wrap { overflow:hidden; position:relative; z-index:1; line-height:50px; vertical-align:middle;  margin-top:40px; }
-.select-wrap .form-wrap,
 .select-wrap .form-wrap + .select-box { margin-top:20px; }
 .select-wrap .select-box:first-child,
 .select-wrap .check-box:first-child { margin-top:0;}s
@@ -891,6 +893,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 .error .formlabel { color:#FF0000; }
 .error.form-wrap > div.input input,
 .error.form-wrap > div .select-box.type-line,
+.form-wrap.error .select-box,
 .select-box.error { border-color:#FF0000; }
 
 
