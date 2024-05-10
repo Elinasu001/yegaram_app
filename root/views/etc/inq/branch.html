@@ -52,14 +52,20 @@
 
 <body>
     <!-- header -->
-    <div id="headerWrap">
-        <script>
-        $(document).ready(function(){
-            document.charset="euc-kr";
-            $("#headerWrap").load("../includes/header.html");
-        });
-        </script>
-    </div>
+    <header class="headerWrap"> <!--D: bg-color02 클래스 : 뒤에 색상 들어갈 경우  -->
+		<div class="headerLeft">
+			<!--D: 이전버튼-->
+			<a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+	
+		</div>
+		<div class="headerCenter">
+			<h2 class="text"><span>영업점안내</span></h2> <!--D: TEXT -->
+		</div>
+		<div class="headerRight">
+			<!--D: 전체메뉴버튼 -->
+			<a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>
+		</div>
+	</header>
 	<!-- //header -->
 
     <!--contentsWrap -->
@@ -73,7 +79,7 @@
                         <ul class="tab-item">
                             <li data-tab="tab-cont01" class="on"><a href="#none" title="선택됨">남대문본점</a></li>
                             <li data-tab="tab-cont02"><a href="#none">강남지점</a></li>
-                            <li data-tab="tab-cont03"><a href="#none">창원지점</a></li>
+                            <li data-tab="tab-cont03" ><a href="#none">창원지점</a></li>
                             <li data-tab="tab-cont04"><a href="#none">울산지점</a></li>
                         </ul>
                         <div class="tab-content-area">
@@ -171,15 +177,19 @@
                                         <tbody>
                                             <tr>
                                                 <th scope="col">전화번호</th>
-                                                <td>051-640-9100</td>
+                                                <td>02-2678-4377</td>
                                             </tr>
                                             <tr>
                                                 <th scope="col">팩스번호</th>
-                                                <td>051-637-9030</td>
+                                                <td>02-2672-4378</td>
                                             </tr>
                                             <tr>
                                                 <th scope="col">주소</th>
-                                                <td>부산시 중구 해관로 17<button type="button" class="btn-copy">복사하기</button></td>
+                                                <td>서울 강남구 테헤란로 337<br/>화남타워 2층<button type="button" class="btn-copy">복사하기</button></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">교통편</th>
+                                                <td>1) 지하철 2호선/수인분당선 선릉역 6번 출구 4m 이내</td>
                                             </tr>
                                             <tr>
                                                 <th scope="col">영업시간</th>
@@ -193,7 +203,7 @@
                                 </div>
                             </div>
 
-                            <div id="tab-cont03" class="tab-content dp-none">
+                            <div id="tab-cont03" class="tab-content dp-none "><!--D: 창원지점 -->
                                 <!-- D: 삭제-->
                                 <!-- <div class="tit-wrap">
                                     <p class="txt"><strong>센텀지점</strong></p>
@@ -208,7 +218,7 @@
                                 </div>
 
 
-                                <div class="table-type table-col">
+                                <div class="table-type table-col ">
                                     <div class="sub-tit-wrap">
                                         <p class="tit">영업점 정보</p>
                                     </div>
@@ -225,15 +235,21 @@
                                         <tbody>
                                             <tr>
                                                 <th scope="col">전화번호</th>
-                                                <td></td>
+                                                <td>070-4589-5386</td>
                                             </tr>
                                             <tr>
                                                 <th scope="col">팩스번호</th>
-                                                <td></td>
+                                                <td>055-285-8424</td>
                                             </tr>
                                             <tr>
                                                 <th scope="col">주소</th>
-                                                <td><button type="button" class="btn-copy">복사하기</button></td>
+                                                <td>강남 창원시 성산구 용지로 56 1층<button type="button" class="btn-copy">복사하기</button></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">교통편</th>
+                                                <td>1) 751, 102, 107, 115, 503, 507번 버스 탑승 후  '창원호텔 정류장' 하차<br/>
+                                                    2) 정류장에서 84m 전방에 위치
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th scope="col">영업시간</th>
@@ -248,7 +264,7 @@
                             </div>
 
                             <!--D:탭추가-->
-                            <div id="tab-cont04" class="tab-content dp-none">
+                            <div id="tab-cont04" class="tab-content dp-none"><!--D: 울산지점 -->
                                 <div class="sub-tit-wrap">
                                     <p class="tit">영업점 위치</p>
                                 </div>
@@ -276,15 +292,21 @@
                                         <tbody>
                                             <tr>
                                                 <th scope="col">전화번호</th>
-                                                <td></td>
+                                                <td>070-4589-5396</td>
                                             </tr>
                                             <tr>
                                                 <th scope="col">팩스번호</th>
-                                                <td></td>
+                                                <td>052-939-1248</td>
                                             </tr>
                                             <tr>
                                                 <th scope="col">주소</th>
-                                                <td><button type="button" class="btn-copy">복사하기</button></td>
+                                                <td>울산 남구 삼산로 231 울산센트럴자이 상가 401호<button type="button" class="btn-copy">복사하기</button></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">교통편</th>
+                                                <td>1) 432, 417, 401, 127, 126번 버스 탑승 후 '좋은의사들안과병원 정류장' 하차<br/>
+                                                    2) 정류장에서 현대백화점 방향 230m 부근에 위치
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th scope="col">영업시간</th>
