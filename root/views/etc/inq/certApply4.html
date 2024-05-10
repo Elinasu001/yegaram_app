@@ -32,849 +32,115 @@
 <script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803175552"></script>
-<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803175552"></script>
-<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803175552"></script>
-<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803175552"></script>
-<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803175552"></script>
-<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803175552"></script>
-<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803175552"></script>
-<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803175552"></script>
-<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803175552" id="biz_common" 
-	data-menuId="etc/inq"
-	data-frameId="certApply4"
-	data-serviceCd="certApply4.frm" 
-	data-serverTime="20230803175552"
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common"
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm"
+	data-serverTime="20230803152535"
 	data-activeMode="local"
 	data-activeEnv="${active.env">
 </script>
-<script type="text/javascript">
-var PageFunc = function() {
-	
-	var _back = function() { // 뒤로가기
-		history.back();
-	}
-	
-
-	var _proc = function() { // 본처리
-		var dataForm = makeForm("dataForm");
-		var bzwrDvcd = "" //거래구분
-		addFormData(dataForm, "TRN_DSTC", "2"); // 거래구분  1:대상조회, 2:발급
-		addFormData(dataForm, "bzwrDvcd", bzwrDvcd); // 거래구분 
-		addFormData(dataForm, "txGbnCd", "R"); // 거래구분  P:전조회, R:발급
-		addFormData(dataForm,"EML_C50" , ''); // 이메일
-		addFormData(dataForm,"ISS_BSDT" , ""); //발급기준일
-		addFormData(dataForm,"FEE" , ""); //수수료
-		addFormData(dataForm, "LINK_ACT", "CERT_ISSU_MNG");
-		
-			if(bzwrDvcd == "04"){//부채잔액증명
-				addFormData(dataForm, "bzwrDvcd", "04");
-				addFormData(dataForm, "INTG_MCF_USE_USG_CNTN", ""); // 통합제증명사용용도내용
-				addFormData(dataForm, "INTG_MCF_USE_USG_CNTN_TEXT", "");// 통합제증명사용용도내용
-				addFormData(dataForm, "INTG_MCF_PRPL_NM", "");// 통합제증명제출처명
-				addFormData(dataForm, "INTG_MCF_PRPL_NM_TEXT", "");// 통합제증명제출처명
-				doAction("CERT_ISSU_MNG", dataForm, function(res){
-				if(res.APP_HEADER.respCd == "N00000"){
-					doActionFrame("etc/inq/certApply5", dataForm);
-					}
-				else {
-					biz.alert(resDs.API_RS_MSG);
-					}
-				});
-			} else if(bzwrDvcd == "03"){//금융거래
-				addFormData(dataForm, "bzwrDvcd", "03");
-				addFormData(dataForm, "INTG_MCF_USE_USG_CNTN", "");
-				addFormData(dataForm, "INTG_MCF_USE_USG_CNTN_TEXT", "");// 통합제증명사용용도내용
-				doAction("CERT_ISSU_MNG", dataForm, function(res){
-				if(res.APP_HEADER.respCd == "N00000"){
-					doActionFrame("etc/inq/certApply5", dataForm);
-					}
-				else {
-					biz.alert(resDs.API_RS_MSG);
-				}
-			  });
-				
-			} else if (bzwrDvcd == "02") {//원천징수
-				addFormData($("#dataForm"), "ACNO", "");
-				addFormData($("#dataForm"), "INQ_STDT", "");
-				addFormData($("#dataForm"), "INQ_EDDT", "");
-				doAction("CERT_ISSU_MNG", dataForm, function(res){
-					if(res.APP_HEADER.respCd == "N00000"){
-						doActionFrame("etc/inq/certApply5", dataForm);
-						}
-					else {
-						biz.alert(resDs.API_RS_MSG);
-					}
-				  });
-			} else if (bzwrDvcd == "01") {//금융소득종합
-				addFormData($("#dataForm"),"RVRS_YR", "");// 귀속년도
-				addFormData($("#dataForm"), "INDV_CORP_DSTC_CD", ""); 
-				doAction("CERT_ISSU_MNG", dataForm, function(res){
-					if(res.APP_HEADER.respCd == "N00000"){
-						doActionFrame("etc/inq/certApply5", dataForm);
-						}
-					else {
-						biz.alert(resDs.API_RS_MSG);
-					}
-				  });
-			}
-		
-	}
-	
-	var _cancel = function() { // 그만하기
-		goMainPage();
-	}	
-	
-	// 인증
-	var _auth = function() {
-		// TODO 임시주석
-		
-		
-		// TODO 임시코드
-		biz.alert("서명처리 공통펑션 호출", "확인", _proc);
-		
-	};
-	
-	return {
-		back : _back,
-		proc : _proc,
-		cancel : _cancel,
-		auth : _auth
-	};
-}();
 
 
-$(document).ready(function(){
-})
-
-
-</script>
-</head>
 <body>
-	<!-- header -->
-	<header class="headerWrap">
-		<div class="header">
-			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
-			<h2><span>증명서 발급신청</span></h2>
+    <!-- header -->
+    <header class="headerWrap"> <!--D: bg-color02 클래스 : 뒤에 색상 들어갈 경우  -->
+		<div class="headerLeft">
+			<!--D: 이전버튼-->
+			<a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+	
 		</div>
-		<div class="menu-wrap">
+		<div class="headerCenter">
+			<h2 class="text"><span>증명서 발급신청</span></h2> <!--D: TEXT -->
+		</div>
+		<div class="headerRight">
+			<!--D: 전체메뉴버튼 -->
+			<a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>
 		</div>
 	</header>
 	<!-- //header -->
 
-    <!-- s: contentsWrap -->
+    <!--contentsWrap -->
     <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
 
-		<!-- s:contents -->
-		<div class="contents"><!--[퍼블] 클래스 변경-->
-			<!--s:예금잔액증명서_증명서 발급신청(완료)_상세보기-->
-			<div class="default-wrap"><!--[퍼블] 추가-->
-				<div class="visaul-info-box">
-					<strong class="info-tit">
-						정기예금(복리)
-					</strong>
-					<div class="account-area">
-						<p class="account">123-12-12-1234567</p>
+			<!--s:상세보기-->
+			<div class="visaul-info-box style2"><!--D: 클래스 추가-->
+				<strong class="info-tit">
+					정기예금(복리)
+				</strong>
+				<div class="account-area">
+					<p class="account">123-12-12-1234567</p>
+					<button type="button" class="btn-copy">복사하기</button><!--D: 추가-->
+				</div>
+				<ul class="amount-area border-none">
+					<li>
+						<span class="num"><em>500,000원</em></span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="txt-list-wrap type-result">
+				<div class="txt-detail-area">
+					<div class="txt-detail-tit">
+						<strong>발급내역</strong>
 					</div>
-					<ul class="amount-area border-none">
+					<ul class="txt-list">
 						<li>
-							<span class="num"><em>500,000원</em></span>
+							<span class="tit">발행번호</span>
+							<span class="txt">123</span>
+						</li>
+						<li>
+							<span class="tit">발급기준일</span>
+							<p class="txt">YYY.MM.DD</p>
+						</li>
+						<li>
+							<span class="tit">발급목적</span>
+							<span class="txt">결산용</span>
+						</li>
+						<li>
+							<span class="tit">예금종류</span>
+							<span class="txt">정기예금(복리)</span>
+						</li>
+						<li>
+							<span class="tit">개설일</span>
+							<span class="txt">YYY.MM.DD</span>
+						</li>
+						<li>
+							<span class="tit">이메일</span>
+							<span class="txt">
+								yegaram1234<br/>
+								@yegaramsb.co.kr</span>
 						</li>
 					</ul>
 				</div>
 
-				<div class="txt-list-wrap type-result">
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>발급내역</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">발행번호</span>
-								<span class="txt"></span>
-							</li>
-							<li>
-								<span class="tit">발급기준일</span>
-								<p class="txt"></p>
-							</li>
-							<li>
-								<span class="tit">발급목적</span>
-								<span class="txt"></span>
-							</li>
-							<li>
-								<span class="tit">예금종류</span>
-								<span class="txt"></span>
-							</li>
-							<li>
-								<span class="tit">개설일</span>
-								<span class="txt"></span>
-							</li>
-							<li>
-								<span class="tit">이메일</span>
-								<span class="txt"></span>
-							</li>
-						</ul>
-					</div>
-
-				</div>
 			</div>
 			<!--e:예금잔액증명서_증명서 발급신청(완료)_상세보기-->
 
-			<!-- s: 부채잔액증명서 -->
-			<div class="default-wrap">
+            </div>
+        </div>
+        <!-- //contents -->
 
-				<div class="tit-wrap">
-					<p class="txt">발급하실 <strong>부채잔액증명서</strong> 내용을<br/>확인하세요</p><!-- [퍼블] 텍스트 변경 -->
-				</div>
-
-				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>발급내역</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">발급기준일</span>
-								<span class="txt"><ft:format type="date" value="${reqDs.ISS_BSDT}"></ft:format></span>
-							</li>
-							<li>
-								<span class="tit">발급목적</span>
-								<p class="txt">${reqDs.INTG_MCF_USE_USG_CNTN_TEXT}</p>
-							</li>
-							<li>
-								<span class="tit">제출처 선택</span><!-- [퍼블] 텍스트 변경 -->
-								<span class="txt">${reqDs.INTG_MCF_PRPL_NM_TEXT}</span>
-							</li>
-							<li>
-								<span class="tit">이메일</span>
-								<span class="txt">${reqDs.EML_C50}</span>
-							</li>
-						</ul>
-					</div>
-
-				</div>
-
-				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>대출내용</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">대출일자</span>
-								<span class="txt"><ft:format type="date" value="${item.LOAN_DT}"/></span>
-							</li>
-							<li>
-								<span class="tit">대출과목</span>
-								<p class="txt">${item.LOAN_SUBJ}</p>
-							</li>
-							<li>
-								<span class="tit">대출잔액</span>
-								<span class="txt"><ft:format type="comma" value="${item.LOAN_BLNC}"/>원</span>
-							</li>
-							<li>
-								<span class="tit">비고</span>
-								<span class="txt">${item.RMRK}</span>
-							</li>
-						</ul>
-					</div>
-
-				</div>
-				<!--[퍼블] 추가-->
-				<div class="txt-list-wrap type-result">
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>담보내용</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">종류</span>
-								<span class="txt">정기적금(정기/장학)</span>
-							</li>
-							<li>
-								<span class="tit">유효담보가</span>
-								<p class="txt">500,000원</p>
-							</li>
-							<li>
-								<span class="tit">소재지</span>
-								<span class="txt">서울시 강동구</span>
-							</li>
-							<li>
-								<span class="tit">소유자</span>
-								<span class="txt">김고려</span>
-							</li>
-						</ul>
-					</div>
-
-				</div>
-
-				<div class="txt-list-wrap type-result">
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>미보유 채권 현황</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">채권구분</span>
-								<span class="txt"></span>
-							</li>
-							<li>
-								<span class="tit">계좌번호</span>
-								<p class="txt"></p>
-							</li>
-							<li>
-								<span class="tit">최초 대출일</span>
-								<span class="txt"></span>
-							</li>
-							<li>
-								<span class="tit">매각 회사명</span>
-								<span class="txt"></span>
-							</li>
-						</ul>
-					</div>
-
-				</div>
-
-				<!--D:해당사항 없을 경우-->
-				<div class="txt-list-wrap type-result">
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>미보유 채권 현황</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">해당사항없음</span>
-								<span class="txt"></span>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<!--//[퍼블] 추가-->
-			</div>
-			<!-- e: 부채잔액증명서 -->
-
-			<!-- s: 금융거래확인서 -->
-			<div class="default-wrap">
-				<div class="tit-wrap">
-					<p class="txt">발급하실 <strong>금융거래확인서</strong> 내용을 <br/> 확인하세요</p><!--[퍼블] 수정-->
-				</div>
-
-				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>대출금 거래현황</strong><!--[퍼블] 텍스트 변경-->
-						</div>
-						<c:forEach var="item" items="${resDs.REC1 }">
-						<ul class="txt-list">
-							<li>
-								<span class="tit">종별</span>
-								<span class="txt">${item.CLSC }</span>
-							</li>
-							<li>
-								<span class="tit">용도</span>
-								<p class="txt">${item.USG }</p>
-							</li>
-							<li>
-								<span class="tit">대출기한</span>
-								<span class="txt"><ft:format type="date" value="${item.LOAN_DLN}"/></span>
-							</li>
-							<li>
-								<span class="tit">이율</span>
-								<span class="txt">${item.INRT}"%</span>
-							</li>
-							<li>
-								<span class="tit">잔액</span>
-								<span class="txt"><ft:format type="comma" value="${item.LOAN_BLNC}"/>원</span>
-							</li>
-							<li>
-								<span class="tit">비고</span>
-								<span class="txt">${item.RMRK}</span>
-							</li>
-						</ul>
-						</c:forEach>
-					</div>
-
-				</div>
-				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>담보내용</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">소재지</span>
-								<span class="txt">${item.LCTN}</span>
-							</li>
-							<li>
-								<span class="tit">소유자</span>
-								<p class="txt">${item.OWNR}</p>
-							</li>
-							<li>
-								<span class="tit">채무자와의 관계</span>
-								<span class="txt">${item.LCTN}</span>
-							</li>
-							<li>
-								<span class="tit">종류</span>
-								<span class="txt">${item.KIND}</span>
-							</li>
-							<li>
-								<span class="tit">수량</span>
-								<span class="txt">${item.QTY}</span>
-							</li>
-							<li>
-								<span class="tit">감정가격</span>
-								<span class="txt"><ft:format type="comma" value="${item.ESTT_PRC}"/>원</span>
-							</li>
-							<li>
-								<span class="tit">감정일자</span>
-								<span class="txt"><ft:format type="date" value="${item.ESTT_DT}"/></span>
-							</li>
-							<li>
-								<span class="tit">비고</span>
-								<span class="txt">${item.RMRK}</span>
-							</li>
-						</ul>
-						</div>
-					</div>
-
-				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>기준일로부터 1년 이내 당좌부도 발생 유무</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">유무</span>
-								<span class="txt">있음</span>
-							</li>
-						</ul>
-					</div>
-
-				</div>
-				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>기준일 현재 원금 또는 이자의 납입지체 여부</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">여부</span><!--[퍼블] 텍스트 변경-->
-								<span class="txt">없음</span>
-							</li>
-						</ul>
-					</div>
-
-				</div>
-
-				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>최근 3개월 이내 10일 이상 계속된 연체 명세</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">대출종류</span>
-								<span class="txt">${item.CLSC}</span>
-							</li>
-							<li>
-								<span class="tit">연체발생일</span>
-								<p class="txt"><ft:format type="date" value="${item.OVRD_OCRN_DT}"/></p>
-							</li>
-							<li>
-								<span class="tit">연체원금</span>
-								<span class="txt"><ft:format type="comma" value="${item.OVRD_PRNC}"/>원</span>
-							</li>
-							<li>
-								<span class="tit">연체이자</span>
-								<span class="txt"><ft:format type="comma" value="${item.OVRD_INTS}"/>원</span>
-							</li>
-							<li>
-								<span class="tit">연체정리일</span>
-								<span class="txt"><ft:format type="date" value="${item.OVRD_ARR_DT}"/></span>
-							</li>
-							<li>
-								<span class="tit">연체일수</span>
-								<span class="txt">${item.ODYCNT}일</span>
-							</li>
-							<li>
-								<span class="tit">비고</span>
-								<span class="txt">${item.RMRK}</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- e: 금융거래확인서 -->
-
-			<!-- s: 원천징수영수증 -->
-			<div class="default-wrap">
-
-				<div class="tit-wrap">
-					<p class="txt">발급하실 <strong>원천징수영수증</strong> 내용을<br/> 확인하세요</p><!--[퍼블] 수정-->
-				</div>
-
-				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>소득자 인적사항</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">고객명</span>
-								<span class="txt">${resDs.INCR_NM }</span>
-							</li>
-							<li>
-								<span class="tit">주민등록번호</span>
-								<p class="txt">${resDs.INCR_RNNO }</p>
-							</li>
-							<li>
-								<span class="tit">소득자 구분코드</span>
-								<span class="txt">${resDs.INCR_DVCD}</span>
-							</li>
-							<li>
-								<span class="tit">계좌번호</span>
-								<span class="txt"><ft:format type="acno" value="${reqDs.ACNO}"/></span>
-							</li>
-							<li>
-								<span class="tit">주소</span>
-								<span class="txt">${resDs.INCR_ADDR }</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>계좌별 소득 발생명세</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">소득 귀속기간</span>
-								<span class="txt"><ft:format type="date" value="${reqDs.INQ_STDT}"/>~<ft:format type="date" value="${reqDs.INQ_EDDT }"/></span>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>지급일자</strong>
-						</div>
-						<ul class="txt-list">
-							<!--[퍼블] 추가-->
-							<li>
-								<span class="tit">지급일자</span>
-								<span class="txt"></span>
-							</li>
-							<!--//[퍼블] 추가-->
-							<li>
-								<span class="tit">귀속년월</span>
-								<span class="txt"><ft:format type="date" value="${item.INCM_RVRS_YM }"/></span>
-							</li>
-							<li>
-								<span class="tit">과세구분</span>
-								<span class="txt">${item.NTS_RPT_TXTN_DVCD }</span>
-							</li>
-							<li>
-								<span class="tit">지급대상기간</span>
-								<span class="txt"><ft:format type="date" value="${item.TXTN_STDT}"/>~<ft:format type="date" value="${item.TXTN_EDDT }"/></span>
-							</li>
-							<li>
-								<span class="tit">이자율</span>
-								<span class="txt">${item.APL_INRT}%</span>
-							</li>
-							<li>
-								<span class="tit">지급액</span>
-								<span class="txt"><ft:format type="comma" value="${item.INCM_AMT }"/>원</span>
-							</li>
-							<li>
-								<span class="tit">세율</span>
-								<span class="txt">${item.INCM_TXRT }%</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>원천징수액</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">소득세</span>
-								<span class="txt"><ft:format type="comma" value="${item.INTX }"/>원</span>
-							</li>
-							<li>
-								<span class="tit">법인세</span>
-								<span class="txt"><ft:format type="comma" value="${item.CRTX }"/>원</span>
-							</li>
-							<li>
-								<span class="tit">지방소득세</span>
-								<span class="txt"><ft:format type="comma" value="${item.LOCL_INTX }"/>원</span>
-							</li>
-							<li>
-								<span class="tit">농어촌특별세</span>
-								<span class="txt"><ft:format type="comma" value="${tem.ASTX }"/>원</span>
-							</li>
-							<li>
-								<span class="tit">계</span>
-								<span class="txt"><ft:format type="comma" value="${item.TAX_SAMT }"/>원</span>
-							</li>
-
-						</ul>
-					</div>
-				</div>
-				<!-- s: 원천징수영수증 "지급일자 해당없음"인 경우 -->
-
-				<!--[퍼블] 추가-->
-				<div class="txt-list-wrap type-result">
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>소득자 인적사항</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">고객명</span>
-								<span class="txt"></span>
-							</li>
-							<li>
-								<span class="tit">주민등록번호</span>
-								<span class="txt"></span>
-							</li>
-							<li>
-								<span class="tit">소득자 구분코드</span>
-								<span class="txt"></span>
-							</li>
-							<li>
-								<span class="tit">계좌번호</span>
-								<span class="txt"></span>
-							</li>
-							<li>
-								<span class="tit">주소</span>
-								<span class="txt"></span>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="txt-list-wrap type-result">
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>계좌별 소득 발생명세</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">소득 귀속기간</span>
-								<span class="txt"></span>
-							</li>
-						</ul>
-					</div>
-			</div>
-				<!--//[퍼블] 추가-->
-
-				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>해당사항 없음</strong><!--[퍼블-2] -텍스트 변경-->
-						</div>
-						<!-- [퍼블-2] 삭제<ul class="txt-list">
-							<li>
-								<span class="tit">해당사항 없음</span>
-							</li>
-						</ul> -->
-					</div>
-				</div>
-
-			</div>
-			<!-- e: 원천징수영수증 -->
-
-			<!-- s: 금융소득종합과세 -->
-			<div class="default-wrap">
-
-				<div class="tit-wrap">
-					<p class="txt">발급하실 <strong>금융소득종합과세 내용을</strong><br/>확인하세요</p><!--[퍼블] 수정-->
-				</div>
-
-				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>소득자 인적사항</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">고객명</span>
-								<span class="txt">${reqDs.CUST_NM}</span>
-							</li>
-							<li>
-								<span class="tit">주민등록번호</span>
-								<p class="txt">${resDs.NPBR_DVCD}</p>
-								<span class="tit">사업자등록번호</span>
-								<p class="txt">${resDs.NPBR_DVCD}</p>
-							</li>
-							<li>
-								<span class="tit">주소</span>
-								<span class="txt">${reqDs.CUST_ADDR1} ${reqDs.CUST_ADDR2} </span>
-							</li>
-						</ul>
-					</div>
-
-				</div>
-
-				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>연도별 소득 발생명세</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">소득년도</span>
-								<span class="txt">${reqDs.RVRS_YR}년</span>
-							</li>
-						</ul>
-					</div>
-
-				</div>
-
-				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>일련번호: ${item.SRNO}</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">소득 종류</span>
-								<span class="txt">이자소득</span>
-								<span class="txt">배당소득</span>
-							</li>
-							<li>
-								<span class="tit">소득 지급점</span>
-								<p class="txt">${item.INCM_PRVS_BO_NM }</p>
-							</li>
-							<li>
-								<span class="tit">소득 지급점 <br />사업자 등록번호</span>
-								<span class="txt">${item.INCM_PRVS_BO_NM }</span>
-							</li>
-							<li>
-								<span class="tit">계좌번호</span>
-								<span class="txt"><ft:format type="acno" value="${item.INCM_PRVS_BO_NM }"/></span>
-							</li>
-							<li>
-								<span class="tit">소득금액(세전)</span>
-								<span class="txt"><ft:format type="comma" value="${item.INCM_AMT }"/>원</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>원천징수액</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">소득세</span>
-								<span class="txt"><ft:format type="comma" value="${item.INCM_PRVS_BO_NM }"/>원</span>
-							</li>
-							<li>
-								<span class="tit">주민세</span>
-								<span class="txt"><ft:format type="comma" value="${item.LOCL_INTX }"/>원</span>
-							</li>
-							<li>
-								<span class="tit">농어촌특별세</span>
-								<span class="txt"><ft:format type="comma" value="${item.ASTX}"/>원</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<!--[퍼블] 추가-->
-				<div class="txt-list-wrap type-result">
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>일련번호 : 2</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">소득 종류</span>
-								<span class="txt"></span>
-							</li>
-							<li>
-								<span class="tit">소득 지급점</span>
-								<span class="txt"></span>
-							</li>
-							<li>
-								<span class="tit">소득 지급점 사업자등록번호</span>
-								<span class="txt"></span>
-							</li>
-							<li>
-								<span class="tit">계좌번호</span>
-								<span class="txt"></span>
-							</li>
-							<li>
-								<span class="tit">소득금액(세전)</span>
-								<span class="txt"></span>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="txt-list-wrap type-result">
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>원천징수액</strong>
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">소득세</span>
-								<span class="txt"></span>
-							</li>
-							<li>
-								<span class="tit">주민세</span>
-								<span class="txt"></span>
-							</li>
-							<li>
-								<span class="tit">농어촌특별세</span>
-								<span class="txt"></span>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<!--//[퍼블] 추가-->
-			</div>
-			<!-- e: 금융소득종합과세 -->
-
-		</div>
-			<!--D : 신청할 내용이 없는 경우 -->
-			<!-- [퍼블] 삭제<div class="default-wrap">
-				<div class="result-area exclamation">
-					<p class="tit"><b>발급 가능한<br/>금융소득종합과세가 없어요.</b></p>	
-					<p class="tit"><b>발급 가능한<br/>원천징수영수증이 없어요.</b></p>
-					<p class="tit"><b>발급 가능한<br/>금융거래확인서가 없어요.</b></p>
-					<p class="tit"><b>발급 가능한<br/>부채잔액증명서가 없어요.</b></p>
-					<div class="txtbox-wrap">
-					</div>
-				</div>
-			</div> -->
-				<!--D : 신청할 내용이 없는 경우 //-->
-		<!-- //e:contents -->
-        <!-- s: fixedBtnWrap -->
 		<div class="fixed-btn-wrap">
 			<div class="btn-wrap">
-				<a href="#none" class="btn" onclick="PageFunc.proc()">발급 신청하기</a>
+				<a href="#none" class="btn">확인</a>
 			</div>
-			<a href="#none" class="btn-txt" onclick="PageFunc.cancel()">그만하기</a><!--[퍼블] 텍스트 변경-->
-			<div class="btn-wrap">
-				<a href="#none" class="btn" onclick="PageFunc.cancel()">확인</a><!--[퍼블] 텍스트 변경-->
-			</div>
+			
 		</div>
-        <!-- //e: fixedBtnWrap -->
-	</div>
-<!-- e: contentsWrap -->
 
-	<footer>
-	<!-- 푸터 타입별 정의 -->
-	</footer>
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
+
