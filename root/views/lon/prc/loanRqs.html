@@ -65,200 +65,198 @@
 	</header>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
-                    <div class="tit-wrap">
-                        <p class="txt"><strong>추가적인 정보가<br/>더 필요해요</strong></p>
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+                <div class="tit-wrap">
+                    <p class="txt"><strong>추가적인 정보가<br/>더 필요해요</strong></p>
+                </div>
+
+                <div class="select-wrap">
+
+                    <div id="selDiv1" class="select-box openSel" tabindex="1">
+                        <label for="qValue1" class="essential">자금용도</label>
+                        <span class="option" id="qText1">미선택</span>
                     </div>
 
-                    <div class="select-wrap">
-
-                        <div id="selDiv1" class="select-box openSel" tabindex="1">
-                            <label for="qValue1" class="essential">자금용도</label>
-                            <span class="option" id="qText1">미선택</span>
-                        </div>
-
-                        <div id="selDiv2" class="select-box openSel" tabindex="1">
-                            <label for="qValue2"  class="essential">의료보험</label>
-                            <span class="option" id="qText2">미선택</span>
-                        </div>
-
-                        <div id="selDiv3" class="select-box openSel" tabindex="1">
-                            <label for="qValue3" class="essential">거주형태</label>
-                            <span class="option" id="qText3">미선택</span>
-                        </div>
-
-                        <div id="selDiv4" class="select-box openSel" tabindex="1">
-                            <label for="qValue4" class="essential">직업선택</label>
-                            <span class="option" id="qText4">미선택</span>
-                        </div>
-
-                        <div id="selDiv5" class="select-box openSel" tabindex="1">
-                            <label for="qValue5" class="essential">차량보유여부</label>
-                            <span class="option" id="qText5">미선택</span>
-                        </div>
-
+                    <div id="selDiv2" class="select-box openSel" tabindex="1">
+                        <label for="qValue2"  class="essential">의료보험</label>
+                        <span class="option" id="qText2">미선택</span>
                     </div>
+
+                    <div id="selDiv3" class="select-box openSel" tabindex="1">
+                        <label for="qValue3" class="essential">거주형태</label>
+                        <span class="option" id="qText3">미선택</span>
+                    </div>
+
+                    <div id="selDiv4" class="select-box openSel" tabindex="1">
+                        <label for="qValue4" class="essential">직업선택</label>
+                        <span class="option" id="qText4">미선택</span>
+                    </div>
+
+                    <div id="selDiv5" class="select-box openSel" tabindex="1">
+                        <label for="qValue5" class="essential">차량보유여부</label>
+                        <span class="option" id="qText5">미선택</span>
+                    </div>
+
                 </div>
             </div>
-            <!-- //contents -->
-
-            <div class="fixed-btn-wrap">
-				<div class="btn-wrap flexCol"><!--D: flexCol클래스 추가-->
-					<a href="javascript:void(0);" class="btn disabled">다음</a><!--D: disabled 삭제 시 활성화-->
-                    <a href="javascript:void(0);" class="btn txt">그만하기</a><!--D: btn txt클래스로 변경-->
-				</div>
-			</div>
-
-            <!--S: 자금용도(팝업)-->
-            <div id="lySel1" class="layerpopup layer-up show" style="display: block;">
-                <div class="content-wrap">
-                    <div class="pop-header">
-                        <h2 class="pop-title">자금용도</h2>
-                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-                    </div>
-                    <div class="ly-scroll-con ly-select">
-                        <ul class="ly-select-list">
-                            <li><button>주택구입</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                            <li><button>전세자금</button></li>
-                            <li><button>생활비</button></li>
-                            <li><button>부채상환</button></li>
-                            <li><button>경조사비용</button></li>
-                            <li><button>기타</button></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--E: 자금용도(팝업)-->
-
-            <!--S: 의료보험(팝업)-->
-            <div id="lySel2" class="layerpopup layer-up show" style="display: block;">
-                <div class="content-wrap">
-                    <div class="pop-header">
-                        <h2 class="pop-title">의료보험</h2>
-                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-                    </div>
-                    <div class="ly-scroll-con ly-select">
-                        <ul class="ly-select-list">
-                            <li><button>직장의료보험</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                            <li><button>지역의료보험</button></li>
-                            <li><button>없음</button></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--E: 의료보험(팝업)-->
-
-            <!--S: 거주형태(팝업)-->
-            <div id="lySel3" class="layerpopup layer-up show" style="display: block;">
-                <div class="content-wrap">
-                    <div class="pop-header">
-                        <h2 class="pop-title">거주형태</h2>
-                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-                    </div>
-                    <div class="ly-scroll-con ly-select">
-                        <ul class="ly-select-list">
-                            <li><button>자가</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                            <li><button>임대</button></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--E: 거주형태(팝업)-->
-
-            <!--S: 직업선택(팝업)-->
-            <div id="lySel4" class="layerpopup layer-up show" style="display: block;">
-                <div class="content-wrap">
-                    <div class="pop-header">
-                        <h2 class="pop-title">직업선택</h2>
-                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-                    </div>
-                    <div class="ly-scroll-con ly-select">
-                        <ul class="ly-select-list">
-                            <li><button>급여소득자</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                            <li><button>자영업자</button></li>
-                            <li><button>주부</button></li>
-                            <li><button>프리랜서</button></li>
-                            <li><button>연금소득자</button></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--E: 직업선택(팝업)-->
-
-            <!--S: 차량보유여부(팝업)-->
-            <div id="lySel5" class="layerpopup layer-up show" style="display: block;">
-                <div class="content-wrap">
-                    <div class="pop-header">
-                        <h2 class="pop-title">차량보유여부</h2>
-                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-                    </div>
-                    <div class="ly-scroll-con ly-select">
-                        <ul class="ly-select-list">
-                            <li><button>보유</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                            <li><button>미보유</button></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--E: 차량보유여부(팝업)-->
-
-            <!--S: 차량번호(팝업)-->
-            <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
-                <div class="content-wrap">
-                    <div class="pop-con-wrap">
-                        <span class="pop-con">차량번호를 입력해 주세요</span>
-                    </div>
-                    <div class="btn-wrap">
-                        <a href="javascript:void(0);" class="btn">확인</a>
-                    </div>
-                </div>
-            </div>
-            <!--E: 차량번호(팝업)-->
-
-            <!--S: 인증수단선택(팝업)-->
-            <div id="lySel6" class="layerpopup layer-up show" style="display: block;">
-                <div class="content-wrap">
-                    <div class="pop-header">
-                        <h2 class="pop-title">인증수단</h2>
-                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-                    </div>
-                    <div class="ly-scroll-con ly-select">
-                        <ul class="ly-select-list">
-                            <li><button>금융인증서</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                            <li><button>토스인증서</button></li>
-                            <li><button>카카오인증서</button></li>
-                            <li><button>네이버인증서</button></li>
-                            <li><button>공동인증서</button></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--E: 인증수단선택(팝업)-->
-
-            <!--S: 인증수단선택(Alert)-->
-            <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
-                <div class="content-wrap">
-                    <div class="pop-con-wrap">
-                        <span class="pop-con">
-                            Step1: 인증요청메시지를 보냈어요<br/>
-                            Step2: 인증완료 후, 하단의 인증 완료 클릭
-                        </span>
-                    </div>
-                    <div class="btn-wrap">
-                        <a href="javascript:void(0);" class="btn">확인</a>
-                    </div>
-                </div>
-            </div>
-            <!--E: 인증수단선택(Alert)-->
-
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- //contents -->
+
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap flexCol"><!--D: flexCol클래스 추가-->
+                <a href="javascript:void(0);" class="btn disabled">다음</a><!--D: disabled 삭제 시 활성화-->
+                <a href="javascript:void(0);" class="btn txt">그만하기</a><!--D: btn txt클래스로 변경-->
+            </div>
+        </div>
+
+        <!--S: 자금용도(팝업)-->
+        <div id="lySel1" class="layerpopup layer-up show" style="display: block;">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">자금용도</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>주택구입</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                        <li><button>전세자금</button></li>
+                        <li><button>생활비</button></li>
+                        <li><button>부채상환</button></li>
+                        <li><button>경조사비용</button></li>
+                        <li><button>기타</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--E: 자금용도(팝업)-->
+
+        <!--S: 의료보험(팝업)-->
+        <div id="lySel2" class="layerpopup layer-up show" style="display: block;">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">의료보험</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>직장의료보험</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                        <li><button>지역의료보험</button></li>
+                        <li><button>없음</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--E: 의료보험(팝업)-->
+
+        <!--S: 거주형태(팝업)-->
+        <div id="lySel3" class="layerpopup layer-up show" style="display: block;">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">거주형태</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>자가</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                        <li><button>임대</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--E: 거주형태(팝업)-->
+
+        <!--S: 직업선택(팝업)-->
+        <div id="lySel4" class="layerpopup layer-up show" style="display: block;">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">직업선택</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>급여소득자</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                        <li><button>자영업자</button></li>
+                        <li><button>주부</button></li>
+                        <li><button>프리랜서</button></li>
+                        <li><button>연금소득자</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--E: 직업선택(팝업)-->
+
+        <!--S: 차량보유여부(팝업)-->
+        <div id="lySel5" class="layerpopup layer-up show" style="display: block;">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">차량보유여부</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>보유</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                        <li><button>미보유</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--E: 차량보유여부(팝업)-->
+
+        <!--S: 차량번호(팝업)-->
+        <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
+            <div class="content-wrap">
+                <div class="pop-con-wrap">
+                    <span class="pop-con">차량번호를 입력해 주세요</span>
+                </div>
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn">확인</a>
+                </div>
+            </div>
+        </div>
+        <!--E: 차량번호(팝업)-->
+
+        <!--S: 인증수단선택(팝업)-->
+        <div id="lySel6" class="layerpopup layer-up show" style="display: block;">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">인증수단</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>금융인증서</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                        <li><button>토스인증서</button></li>
+                        <li><button>카카오인증서</button></li>
+                        <li><button>네이버인증서</button></li>
+                        <li><button>공동인증서</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--E: 인증수단선택(팝업)-->
+
+        <!--S: 인증수단선택(Alert)-->
+        <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
+            <div class="content-wrap">
+                <div class="pop-con-wrap">
+                    <span class="pop-con">
+                        Step1: 인증요청메시지를 보냈어요<br/>
+                        Step2: 인증완료 후, 하단의 인증 완료 클릭
+                    </span>
+                </div>
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn">확인</a>
+                </div>
+            </div>
+        </div>
+        <!--E: 인증수단선택(Alert)-->
+
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

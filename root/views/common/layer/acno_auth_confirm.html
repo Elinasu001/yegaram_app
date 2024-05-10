@@ -62,88 +62,86 @@
     </div>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+
+
+            </div>
+        </div>
+        <!-- //contents -->
+
+        <!--S: 타행계좌 본인인증-->
+        <div id="lypullPop" class="layerpopup laypop-all  show" style="display: block;">
+            <!-- s: contents -->
+            <div class="pop-header">
+                <h2 class="pop-title">추가인증</h2>
+                <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lypullPop')">닫기</button>
+            </div>
+            
+            <div class="pop-con-wrap">
                 <div class="default-wrap">
-
-
-                </div>
-            </div>
-            <!-- //contents -->
-
-            <!--S: 타행계좌 본인인증-->
-            <div id="lypullPop" class="layerpopup laypop-all  show" style="display: block;">
-                <!-- s: contents -->
-                <div class="pop-header">
-                    <h2 class="pop-title">추가인증</h2>
-                    <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lypullPop')">닫기</button>
-                </div>
-                
-                <div class="pop-con-wrap">
-                    <div class="default-wrap">
-                        <section class="tit-wrap">
-                            <p class="txt"><strong>입력하신 계좌로<br/>
-                                1원을</strong> 보내드렸어요<br/>
-                                입금자명 뒤쪽 <strong>4자리 숫자를</strong><br/>
-                                입력해 주세요</p>
-                        </section>
-                        <section>
-                            <div class="imgbox-wrap crtf">
-                                <img src="/resources/images/common/img_accountCrtf.png" alt="본인계좌 인증 예시이미지. 보낸사람:예가람저축은행1234, 입금:1원.">
+                    <section class="tit-wrap">
+                        <p class="txt"><strong>입력하신 계좌로<br/>
+                            1원을</strong> 보내드렸어요<br/>
+                            입금자명 뒤쪽 <strong>4자리 숫자를</strong><br/>
+                            입력해 주세요</p>
+                    </section>
+                    <section>
+                        <div class="imgbox-wrap crtf">
+                            <img src="/resources/images/common/img_accountCrtf.png" alt="본인계좌 인증 예시이미지. 보낸사람:예가람저축은행1234, 입금:1원.">
+                        </div>
+                        <p class="s-txt ta-c"><strong>입금자명 뒤쪽 4자리 숫자 입력하세요</strong></p>
+                        <div class="form-wrap form-crtf">
+                            <div class="input">
+                                <span>
+                                    <input type="tel" title="" id="REMARK1" placeholder="1" required="" numberonly maxlength="1" onkeyup="${reqDs.id}_Func.changeRemark(this)">
+                                </span>
+                                <span>
+                                    <input type="tel" title="" id="REMARK2" placeholder="2" required="" numberonly maxlength="1" onkeyup="${reqDs.id}_Func.changeRemark(this)">
+                                </span>
+                                <span>
+                                    <input type="tel" title="" id="REMARK3" placeholder="3" required="" numberonly maxlength="1" onkeyup="${reqDs.id}_Func.changeRemark(this)">
+                                </span>
+                                <span>
+                                    <input type="tel" title="" id="REMARK4" placeholder="4" required="" numberonly maxlength="1" onkeyup="${reqDs.id}_Func.changeRemark(this)">
+                                </span>
+                                <p class="verifi-time">남은 입력시간:<span class="txt-numb" id="otuAthnNoTimerTxt">4:52</span></p>
                             </div>
-                            <p class="s-txt ta-c"><strong>입금자명 뒤쪽 4자리 숫자 입력하세요</strong></p>
-                            <div class="form-wrap form-crtf">
-                                <div class="input">
-                                    <span>
-                                        <input type="tel" title="" id="REMARK1" placeholder="1" required="" numberonly maxlength="1" onkeyup="${reqDs.id}_Func.changeRemark(this)">
-                                    </span>
-                                    <span>
-                                        <input type="tel" title="" id="REMARK2" placeholder="2" required="" numberonly maxlength="1" onkeyup="${reqDs.id}_Func.changeRemark(this)">
-                                    </span>
-                                    <span>
-                                        <input type="tel" title="" id="REMARK3" placeholder="3" required="" numberonly maxlength="1" onkeyup="${reqDs.id}_Func.changeRemark(this)">
-                                    </span>
-                                    <span>
-                                        <input type="tel" title="" id="REMARK4" placeholder="4" required="" numberonly maxlength="1" onkeyup="${reqDs.id}_Func.changeRemark(this)">
-                                    </span>
-                                    <p class="verifi-time">남은 입력시간:<span class="txt-numb" id="otuAthnNoTimerTxt">4:52</span></p>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-
-                <div class="fixed-btn-wrap">
-                    <div class="btn-wrap">
-                        <a href="#none" class="btn disabled">확인</a>
-                    </div>
-                </div>
-
-            </div>
-            <!--E: 타행계좌 본인인증-->
-
-            <!--S: 타행계좌 본인인증 인증번호 오류-->
-            <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
-                <div class="content-wrap">
-                    
-                    <div class="pop-con-wrap">
-                        <span class="pop-con">입력하신 인증번호가 일치하지 않아요<br/>
-                            인증번호를 확인해 주세요
-                        </span>
-                    </div>
-                    <div class="btn-wrap">
-                        <a href="javascript:void(0);" class="btn close">확인</a>
-                    </div>
+                        </div>
+                    </section>
                 </div>
             </div>
-            <!--E: 타행계좌 본인인증 인증번호 오류-->
+
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap">
+                    <a href="#none" class="btn disabled">확인</a>
+                </div>
+            </div>
 
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!--E: 타행계좌 본인인증-->
+
+        <!--S: 타행계좌 본인인증 인증번호 오류-->
+        <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
+            <div class="content-wrap">
+                
+                <div class="pop-con-wrap">
+                    <span class="pop-con">입력하신 인증번호가 일치하지 않아요<br/>
+                        인증번호를 확인해 주세요
+                    </span>
+                </div>
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn close">확인</a>
+                </div>
+            </div>
+        </div>
+        <!--E: 타행계좌 본인인증 인증번호 오류-->
+
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

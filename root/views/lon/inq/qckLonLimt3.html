@@ -65,76 +65,74 @@
 	</header>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
 
-                    <div class="tit-wrap">
-                        <p class="txt"><strong>대출한도조회</strong>를 위해<br/><strong>정보를 입력</strong>해 주세요</p>
+                <div class="tit-wrap">
+                    <p class="txt"><strong>대출한도조회</strong>를 위해<br/><strong>정보를 입력</strong>해 주세요</p>
+                </div>
+
+                <div class="select-wrap"><!--D: .form-wrap / input 레이아웃 삭제 후 slect-wrap 안에 select-box 반복-->
+
+                    <div class="select-box">
+                        <label for="" class="formlabel essential">직업선택</label><!--D: essential 클래스 추가 -->
+                        <span class="option" id="">미선택</span>
                     </div>
 
-                    <div class="select-wrap"><!--D: .form-wrap / input 레이아웃 삭제 후 slect-wrap 안에 select-box 반복-->
-
-                        <div class="select-box">
-                            <label for="" class="formlabel essential">직업선택</label><!--D: essential 클래스 추가 -->
-                            <span class="option" id="">미선택</span>
-                        </div>
-
-                        <div id="rolldate5" class="select-box">
-                            <label for="" class="formlabel essential">입사연월</label><!--D: essential 클래스 추가 -->
-                            <span class="option" id="">미선택</span>
-                        </div>
-
-                        <div class="form-wrap">
-                            <label for="" class="formlabel essential">연소득</label><!--D: essential 클래스 추가 -->
-                            <div class="input">
-                                <input type="tel" title="연소득" id="" class="inp"  value="" placeholder="연소득 입력" required="">
-                                <span class="static-unit">만원</span>
-                            </div>
-                        </div>
-
-                        
+                    <div id="rolldate5" class="select-box">
+                        <label for="" class="formlabel essential">입사연월</label><!--D: essential 클래스 추가 -->
+                        <span class="option" id="">미선택</span>
                     </div>
-                    
+
+                    <div class="form-wrap">
+                        <label for="" class="formlabel essential">연소득</label><!--D: essential 클래스 추가 -->
+                        <div class="input">
+                            <input type="tel" title="연소득" id="" class="inp"  value="" placeholder="연소득 입력" required="">
+                            <span class="static-unit">만원</span>
+                        </div>
+                    </div>
+
                     
                 </div>
+                
+                
             </div>
-            <!-- //contents -->
-
-            <div class="fixed-btn-wrap">
-                <div class="btn-wrap flexCol">
-                    <a href="#none" class="btn">다음</a>
-                    <a href="#none" class="btn txt">그만하기</a>
-                </div>
-            </div>
-
-
-            <!--S: 직업선택 (팝업)-->
-            <div id="lySel1" class="layerpopup layer-up show" style="display: block;">
-                <div class="content-wrap">
-                    <div class="pop-header">
-                        <h2 class="pop-title">직업선택</h2>
-                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-                    </div>
-                    <div class="ly-scroll-con ly-select">
-                        <ul class="ly-select-list">
-                            <li><button>급여소득자</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                            <li><button>자영업자</button></li>
-                            <li><button>주부</button></li>
-                            <li><button>프리랜서</button></li>
-                            <li><button>연금소득자</button></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--S: 직업선택 (팝업)-->
-
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- //contents -->
+
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap flexCol">
+                <a href="#none" class="btn">다음</a>
+                <a href="#none" class="btn txt">그만하기</a>
+            </div>
+        </div>
+
+
+        <!--S: 직업선택 (팝업)-->
+        <div id="lySel1" class="layerpopup layer-up show" style="display: block;">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">직업선택</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>급여소득자</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                        <li><button>자영업자</button></li>
+                        <li><button>주부</button></li>
+                        <li><button>프리랜서</button></li>
+                        <li><button>연금소득자</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--S: 직업선택 (팝업)-->
+
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

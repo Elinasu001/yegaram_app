@@ -65,108 +65,106 @@
 	</header>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
 
-                    <!--D: step_bar 단게 구조 삭제-->
-                    <div class="tit-wrap">
-                        <p class="txt"><strong>대출신청을 위해<br/>직장정보가 필요해요</strong></p>
+                <!--D: step_bar 단게 구조 삭제-->
+                <div class="tit-wrap">
+                    <p class="txt"><strong>대출신청을 위해<br/>직장정보가 필요해요</strong></p>
+                </div>
+
+                <div class="select-wrap"><!--D: select-wrap 안에 select-box 반복 / *표시는 essential 추가 / error-txt는 사용하지 않아서 삭제 -->
+
+                    <div class="select-box" tabindex="1">
+                        <label for="" class="essential">직종</label>
+                        <span class="option">미선택</span>
                     </div>
 
-                    <div class="select-wrap"><!--D: select-wrap 안에 select-box 반복 / *표시는 essential 추가 / error-txt는 사용하지 않아서 삭제 -->
-
-                        <div class="select-box" tabindex="1">
-                            <label for="" class="essential">직종</label>
-                            <span class="option">미선택</span>
-                        </div>
-
-                        <div class="select-box" tabindex="1">
-                            <label for="" class="essential">근로자유형</label>
-                            <span class="option">미선택</span>
-                        </div>
-
-                        <div id="rolldate2" class="select-box type2" tabindex="1">
-                            <label for="" class="essential">급여일</label>
-                            <span class="option">미선택</span>
-                        </div>
-
-                        <div id="rolldate" class="select-box type2" tabindex="1"><!--D: rolldate 입사연월일 -->
-                            <label for="" class="essential">입사연월일</label>
-                            <span class="option">미선택</span>
-                        </div>
-
+                    <div class="select-box" tabindex="1">
+                        <label for="" class="essential">근로자유형</label>
+                        <span class="option">미선택</span>
                     </div>
 
-                    <div class="form-all-wrap"><!--D: form-all-wrap 태그 추가 -->
+                    <div id="rolldate2" class="select-box type2" tabindex="1">
+                        <label for="" class="essential">급여일</label>
+                        <span class="option">미선택</span>
+                    </div>
 
-                        <div class="form-wrap">
-                            <label for="" class="formlabel essential">직장명</label>
-                            <div class="input">
-                                <input type="text" title="직장명" class="inp validChk" name="" id="" value=""  placeholder="직장명 입력" required />
-                                <button type="reset" class="btn-delete">검색어 삭제</button>
-                            </div>
-                        </div>
-
-                        <div class="form-wrap">
-                            <label for="" class="formlabel essential">직장전화</label>
-                            <div class="input">
-                                <input type="tel" title="직장전화" class="inp" name="" id="" value="" maxLength="11" placeholder="직장전화 입력" required />
-                            </div>
-                        </div>
-
-
-                        <div class="form-wrap form-line address">
-                            <label for="" class="formlabel essential">직장주소</label>
-                            <div class="input" >
-                                <input type="text" title="주소검색" id="" class="inp" name="" value=""  placeholder="우편번호 입력"required readonly>
-                                <button type="button" class="btn-certi">우편번호찾기</button>
-                            </div>
-                            <div class="input">
-                                <input type="text" id="" class="inp" name="" value="" placeholder="주소 입력" required readonly>
-                            </div>
-                            <div class="input">
-                                <input type="text" id="" class="inp" name="" value=""  placeholder="상세주소 입력" required style="display:block;">
-                            </div>
-                        </div>
-
+                    <div id="rolldate" class="select-box type2" tabindex="1"><!--D: rolldate 입사연월일 -->
+                        <label for="" class="essential">입사연월일</label>
+                        <span class="option">미선택</span>
                     </div>
 
                 </div>
-            </div>
-            <!-- //contents -->
 
-            <div class="fixed-btn-wrap">
-                <div class="btn-wrap flexCol">
-                    <a href="#none" class="btn disabled" >다음</a><!--D: disabled 삭제시 활성화-->
-                    <a href="#none" class="btn txt">그만하기</a>
-                </div>
-            </div>
+                <div class="form-all-wrap"><!--D: form-all-wrap 태그 추가 -->
 
-
-            <!--S: 근로자유형-->
-            <div id="lySel1" class="layerpopup layer-up show" style=" display: none;">
-                <div class="content-wrap">
-                    <div class="pop-header">
-                        <h2 class="pop-title">근로자유형</h2>
-                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    <div class="form-wrap">
+                        <label for="" class="formlabel essential">직장명</label>
+                        <div class="input">
+                            <input type="text" title="직장명" class="inp validChk" name="" id="" value=""  placeholder="직장명 입력" required />
+                            <button type="reset" class="btn-delete">검색어 삭제</button>
+                        </div>
                     </div>
-                    <div class="ly-scroll-con ly-select">
-                        <ul class="ly-select-list">
-                            <li><button>정규직</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                            <li><button>비정규직</button></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--E: 근로자유형-->
 
+                    <div class="form-wrap">
+                        <label for="" class="formlabel essential">직장전화</label>
+                        <div class="input">
+                            <input type="tel" title="직장전화" class="inp" name="" id="" value="" maxLength="11" placeholder="직장전화 입력" required />
+                        </div>
+                    </div>
+
+
+                    <div class="form-wrap form-line address">
+                        <label for="" class="formlabel essential">직장주소</label>
+                        <div class="input" >
+                            <input type="text" title="주소검색" id="" class="inp" name="" value=""  placeholder="우편번호 입력"required readonly>
+                            <button type="button" class="btn-certi">우편번호찾기</button>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="" class="inp" name="" value="" placeholder="주소 입력" required readonly>
+                        </div>
+                        <div class="input">
+                            <input type="text" id="" class="inp" name="" value=""  placeholder="상세주소 입력" required style="display:block;">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- //contents -->
+
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap flexCol">
+                <a href="#none" class="btn disabled" >다음</a><!--D: disabled 삭제시 활성화-->
+                <a href="#none" class="btn txt">그만하기</a>
+            </div>
+        </div>
+
+
+        <!--S: 근로자유형-->
+        <div id="lySel1" class="layerpopup layer-up show" style=" display: none;">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">근로자유형</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>정규직</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                        <li><button>비정규직</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--E: 근로자유형-->
+
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

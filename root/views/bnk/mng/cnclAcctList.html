@@ -65,124 +65,122 @@
     </header>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
-                    <div class="top-sub-txt">
-                        <p>1회 조회가능기간은 최대 1년이에요.</p>
-                    </div>
-                    <!-- s: 조회기간 호출 영역 -->
-                    <div class="inquiry-choice-area type-spread">
-                        <button type="button" class="btn-inquiry-choice">
-                            <span id="termTxt">3개월</span>
-                            <span id="rstTxt">전체</span>
-                            <span id="orderTxt">최신순</span>
-                        </button>
-                    </div>
-                    <!-- e: 조회기간 호출 영역 -->
-                    
-                    <!-- s: 조회결과 노출 영역 -->
-                    <div class="inquiry-result-area">
-                        <div class="inquiry-summary type-spread">
-                            <p class="period">
-                                <span id="sttTxt">2023. 00. 00</span> 
-                                ~ 
-                                <span id="endTxt">2023. 00. 00</span>
-                            </p>
-                        </div>
-                        
-                        <!-- s: 해지계좌가 없는 경우 -->
-                        <div id="noDataDiv" class="result-area nodata" style="display:block;">
-                            <p>해지된 예금계좌가 없어요</p>
-                            <!-- [퍼블] 텍스트 변경 -->
-                        </div>
-                        <!-- e: 해지계좌가 없는 경우 -->
-                        
-                        <!-- s: 해지계좌가 있는 경우 -->
-                        <div id="dataDiv" class="txt-list-wrap" style="display:none;"> 
-                            
-                        </div>
-                        <!-- e: 해지계좌가 있는 경우 -->
-                    </div>
-                    <!-- e: 조회결과 노출 영역 -->
-                    
-                    <!-- s:조회결과 포맷 -->
-                    <div id="divFormat" style="display:block;">
-                               
-                                <!--D : txt-detail-tit 영역 li안으로 이동-->
-                                <ul class="data-list-wrap">
-                                    <li>
-                                        <div class="txt-detail-tit">
-                                            <strong>e정기예금 단리</strong> 
-                                        </div>
-                                        <ul class="data-list">
-                                            <li>
-                                                <span class="tit">계좌번호</span>
-                                                <span class="txt">123456-123-123456</span>
-                                            </li>
-                                            <li>
-                                                <span class="tit">적금만기일</span>
-                                                <p class="txt">YYYY.MM.DD</p>
-                                            </li>
-                                            <li>
-                                                <span class="tit">만기일</span>
-                                                <span class="txt">YYYY.MM.DD</span>
-                                            </li>
-                                            <li>
-                                                <span class="tit">계좌해지일</span>
-                                                <span class="txt">YYYY.MM.DD</span>
-                                            </li>
-                                            <li>
-                                                <span class="tit">해지금액</span>
-                                                <span class="txt">000,000,000원</span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <div class="txt-detail-tit">
-                                            <strong>예적금 담보대출</strong> 
-                                        </div>
-                                        <ul class="data-list">
-                                            <li>
-                                                <span class="tit">계좌번호</span>
-                                                <span class="txt">123456-123-123456</span>
-                                            </li>
-                                            <li>
-                                                <span class="tit">적금만기일</span>
-                                                <p class="txt">YYYY.MM.DD</p>
-                                            </li>
-                                            <li>
-                                                <span class="tit">만기일</span>
-                                                <span class="txt">YYYY.MM.DD</span>
-                                            </li>
-                                            <li>
-                                                <span class="tit">계좌해지일</span>
-                                                <span class="txt">YYYY.MM.DD</span>
-                                            </li>
-                                            <li>
-                                                <span class="tit">해지금액</span>
-                                                <span class="txt">000,000,000원</span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            <!-- </div> -->
-                        <!-- </div> -->
-                    </div>
-                    <!-- e:조회결과 포맷 -->
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+                <div class="top-sub-txt">
+                    <p>1회 조회가능기간은 최대 1년이에요.</p>
                 </div>
+                <!-- s: 조회기간 호출 영역 -->
+                <div class="inquiry-choice-area type-spread">
+                    <button type="button" class="btn-inquiry-choice">
+                        <span id="termTxt">3개월</span>
+                        <span id="rstTxt">전체</span>
+                        <span id="orderTxt">최신순</span>
+                    </button>
+                </div>
+                <!-- e: 조회기간 호출 영역 -->
+                
+                <!-- s: 조회결과 노출 영역 -->
+                <div class="inquiry-result-area">
+                    <div class="inquiry-summary type-spread">
+                        <p class="period">
+                            <span id="sttTxt">2023. 00. 00</span> 
+                            ~ 
+                            <span id="endTxt">2023. 00. 00</span>
+                        </p>
+                    </div>
+                    
+                    <!-- s: 해지계좌가 없는 경우 -->
+                    <div id="noDataDiv" class="result-area nodata" style="display:block;">
+                        <p>해지된 예금계좌가 없어요</p>
+                        <!-- [퍼블] 텍스트 변경 -->
+                    </div>
+                    <!-- e: 해지계좌가 없는 경우 -->
+                    
+                    <!-- s: 해지계좌가 있는 경우 -->
+                    <div id="dataDiv" class="txt-list-wrap" style="display:none;"> 
+                        
+                    </div>
+                    <!-- e: 해지계좌가 있는 경우 -->
+                </div>
+                <!-- e: 조회결과 노출 영역 -->
+                
+                <!-- s:조회결과 포맷 -->
+                <div id="divFormat" style="display:block;">
+                            
+                            <!--D : txt-detail-tit 영역 li안으로 이동-->
+                            <ul class="data-list-wrap">
+                                <li>
+                                    <div class="txt-detail-tit">
+                                        <strong>e정기예금 단리</strong> 
+                                    </div>
+                                    <ul class="data-list">
+                                        <li>
+                                            <span class="tit">계좌번호</span>
+                                            <span class="txt">123456-123-123456</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">적금만기일</span>
+                                            <p class="txt">YYYY.MM.DD</p>
+                                        </li>
+                                        <li>
+                                            <span class="tit">만기일</span>
+                                            <span class="txt">YYYY.MM.DD</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">계좌해지일</span>
+                                            <span class="txt">YYYY.MM.DD</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">해지금액</span>
+                                            <span class="txt">000,000,000원</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="txt-detail-tit">
+                                        <strong>예적금 담보대출</strong> 
+                                    </div>
+                                    <ul class="data-list">
+                                        <li>
+                                            <span class="tit">계좌번호</span>
+                                            <span class="txt">123456-123-123456</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">적금만기일</span>
+                                            <p class="txt">YYYY.MM.DD</p>
+                                        </li>
+                                        <li>
+                                            <span class="tit">만기일</span>
+                                            <span class="txt">YYYY.MM.DD</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">계좌해지일</span>
+                                            <span class="txt">YYYY.MM.DD</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">해지금액</span>
+                                            <span class="txt">000,000,000원</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        <!-- </div> -->
+                    <!-- </div> -->
+                </div>
+                <!-- e:조회결과 포맷 -->
             </div>
-            <!-- //contents -->
-
-           
-
-
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- //contents -->
+
+        
+
+
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

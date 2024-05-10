@@ -64,63 +64,61 @@
     </header>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!-- s:contents -->
-                <div class="contents">
-                    <div class="default-wrap">
-                        <!-- D : 변경 숨김, 표시 영역  div 대신 sectioin으로 확인  -->
-                        <!--s : 즉시입금지정계좌 등록시  -->
-                        <section class="result-area checking" style="display:block;">
-                            <p class="tit"><strong>즉시입금지정계좌가<br>등록됐어요</strong></p>
-                            <div class="txtbox-wrap">
-                                <a href="javascript:void(0);" class="btn-txt" onclick="">즉시입금지정계좌목록</a><!--[퍼블-2] p태그 삭제, 클래스 추가, 텍스트 변경-->
-                            </div>
-                        </section>
-                       <!--e : 즉시입금지정계좌 등록시  -->
-                        <!-- s : 즉시입금지정계좌 등록 중 오류시 -->
-                        <section class="result-area exclamation">
-                            <p class="tit"><strong>즉시입금지정계좌<br>등록 중 오류가 발생했어요</strong></p>
-                            <div class="txtbox-wrap">
-                                <p>잠시 후 다시 시도해주세요</p>
-                            </div>
-                        </section>
-                        <!-- e : 즉시입금지정계좌 등록 중 오류시 -->
-        
-                        <!-- s : 즉시입금지정계좌 해지시 -->
-                        <section class="result-area checking">
-                            <p class="tit"><strong>즉시입금지정계좌를<br>해지했어요</strong></p>
-                            <div class="txtbox-wrap">
-                                <a href="javascript:void(0);" class="btn-txt" onclick="">즉시입금지정계좌목록</a><!--[퍼블-2] p태그 삭제, 클래스 추가, 텍스트 변경-->
-                            </div>
-                        </section>
-                        <!-- e :  즉시입금지정계좌 해지시 -->
-        
-                        <!-- s : 즉시입금지정계좌 해지 중 오류시 -->
-                        <section class="result-area exclamation">
-                            <p class="tit"><strong>즉시입금지정계좌 해지 중<br>오류가 발생했어요</strong></p>
-                            <div class="txtbox-wrap">
-                                <p>잠시 후 다시 시도해주세요</p>
-                            </div>
-                        </section>
-                        <!-- e : 즉시입금지정계좌 해지 중 오류시 -->
-                    </div>
-        
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!-- s:contents -->
+            <div class="contents">
+                <div class="default-wrap">
+                    <!-- D : 변경 숨김, 표시 영역  div 대신 sectioin으로 확인  -->
+                    <!--s : 즉시입금지정계좌 등록시  -->
+                    <section class="result-area checking" style="display:block;">
+                        <p class="tit"><strong>즉시입금지정계좌가<br>등록됐어요</strong></p>
+                        <div class="txtbox-wrap">
+                            <a href="javascript:void(0);" class="btn-txt" onclick="">즉시입금지정계좌목록</a><!--[퍼블-2] p태그 삭제, 클래스 추가, 텍스트 변경-->
+                        </div>
+                    </section>
+                    <!--e : 즉시입금지정계좌 등록시  -->
+                    <!-- s : 즉시입금지정계좌 등록 중 오류시 -->
+                    <section class="result-area exclamation">
+                        <p class="tit"><strong>즉시입금지정계좌<br>등록 중 오류가 발생했어요</strong></p>
+                        <div class="txtbox-wrap">
+                            <p>잠시 후 다시 시도해주세요</p>
+                        </div>
+                    </section>
+                    <!-- e : 즉시입금지정계좌 등록 중 오류시 -->
+    
+                    <!-- s : 즉시입금지정계좌 해지시 -->
+                    <section class="result-area checking">
+                        <p class="tit"><strong>즉시입금지정계좌를<br>해지했어요</strong></p>
+                        <div class="txtbox-wrap">
+                            <a href="javascript:void(0);" class="btn-txt" onclick="">즉시입금지정계좌목록</a><!--[퍼블-2] p태그 삭제, 클래스 추가, 텍스트 변경-->
+                        </div>
+                    </section>
+                    <!-- e :  즉시입금지정계좌 해지시 -->
+    
+                    <!-- s : 즉시입금지정계좌 해지 중 오류시 -->
+                    <section class="result-area exclamation">
+                        <p class="tit"><strong>즉시입금지정계좌 해지 중<br>오류가 발생했어요</strong></p>
+                        <div class="txtbox-wrap">
+                            <p>잠시 후 다시 시도해주세요</p>
+                        </div>
+                    </section>
+                    <!-- e : 즉시입금지정계좌 해지 중 오류시 -->
                 </div>
-                <!-- //e:contents -->
-        
-                <!-- s: btn-wrap -->
-                <div class="fixed-btn-wrap">
-                    <div class="btn-wrap">
-                        <a href="javascript:void(0);" class="btn" onclick="PageFunc.cancel();">홈으로</a>
-                    </div>
-                </div>
-                <!-- e: btn-wrap -->
-        
+    
             </div>
-        <!-- //contentsWrap -->
-    </form>
+            <!-- //e:contents -->
+    
+            <!-- s: btn-wrap -->
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn" onclick="PageFunc.cancel();">홈으로</a>
+                </div>
+            </div>
+            <!-- e: btn-wrap -->
+    
+        </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

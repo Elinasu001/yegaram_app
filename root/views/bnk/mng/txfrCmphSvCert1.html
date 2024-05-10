@@ -65,119 +65,117 @@
 	</header>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
-                    <div class="tit-wrap">
-                        <p class="txt"><strong>비과세 증빙자료를 제출</strong>하시면<br/><strong>비과세 혜택</strong>을 받으실 수 있어요</p><!--[퍼블-2] strong 태그 삭제-->
-                    </div>
-                    <!--D:list-icon 부분 txt-wrap로 감싸기-->
-                    <div class="txt-wrap">
-                        <ul class="list-icon">
-                            <li class="accept">
-                                <p class="tit">STEP 1</p> <!-- [퍼블] 텍스트 변경 -->
-                                <p class="txt">증빙서류제출</p>
-                            </li>
-                            <li class="confirm">
-                                <p class="tit">STEP 2</p> <!-- [퍼블] 텍스트 변경 -->
-                                <p class="txt">접수/심사</p>
-                            </li>
-                            <li class="handle">
-                                <p class="tit">STEP 3</p> <!-- [퍼블] 텍스트 변경 -->
-                                <p class="txt">적용완료 및 SMS안내</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- 가입대상 및 증빙자료 table-type밖으로 빼고 유형 변경-->
-                    <div class="table-type table-row type-left02">
-                        <div class="sub-tit-wrap">
-                            <p class="tit">가입대상 및 증빙자료</p>
-                            <div class="list-bull">
-                                <ul>
-                                    <li>증빙서류 상 유효기간이 있는 경우 그 유효기간 이내, 증명서 또는 확인원은 최근 90일 이내 발급된 서류만 인정돼요</li>
-                                    <li>대상자별 증빙자료는 국가/지방자치단체의 장 또는 국가보훈처가 발행한 서류만 인정돼요</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <table>
-                            <caption>가입내상 및 증빙자료 안내표</caption>
-                            <colgroup>
-                                <col width="40%">
-                                <col width="*">
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th class="ta-c">가입대상</th>
-                                    <th class="ta-c">증빙자료</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>장애인</td>
-                                    <td>장애인증명서 (증명원), 장애인 등록증 (복지카드)</td>
-                                </tr>
-                                <tr>
-                                    <td>국가유공자</td>
-                                    <td>국가유공자확인원, 국가유공자증, 보훈보상대상사자증, 지원대상자 확인원</td>
-                                </tr>
-                                <tr>
-                                    <td>기초생활수급자</td>
-                                    <td>국민기초생활수습자증명서</td>
-                                </tr>
-                                <tr>
-                                    <td>5.18민주화운동 부상자</td>
-                                    <td>5.18민주유공자확인원, 5.19민주유공자증</td>
-                                </tr>
-                                <tr>
-                                    <td>독립유공자 및 유가족</td>
-                                    <td>독립유공자(유족)확인원, 독립유공자증, 독립유공자유족증</td>
-                                </tr>
-                                <tr>
-                                    <td>고엽제후유의 중환자</td>
-                                    <td>고엽제법적용대상확인원</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!--D: check-box, sub-tit-wrap안으로 이동 및 mt15 클래스 추가-->
-                    <!--
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+                <div class="tit-wrap">
+                    <p class="txt"><strong>비과세 증빙자료를 제출</strong>하시면<br/><strong>비과세 혜택</strong>을 받으실 수 있어요</p><!--[퍼블-2] strong 태그 삭제-->
+                </div>
+                <!--D:list-icon 부분 txt-wrap로 감싸기-->
+                <div class="txt-wrap">
+                    <ul class="list-icon">
+                        <li class="accept">
+                            <p class="tit">STEP 1</p> <!-- [퍼블] 텍스트 변경 -->
+                            <p class="txt">증빙서류제출</p>
+                        </li>
+                        <li class="confirm">
+                            <p class="tit">STEP 2</p> <!-- [퍼블] 텍스트 변경 -->
+                            <p class="txt">접수/심사</p>
+                        </li>
+                        <li class="handle">
+                            <p class="tit">STEP 3</p> <!-- [퍼블] 텍스트 변경 -->
+                            <p class="txt">적용완료 및 SMS안내</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 가입대상 및 증빙자료 table-type밖으로 빼고 유형 변경-->
+                <div class="table-type table-row type-left02">
                     <div class="sub-tit-wrap">
-                        <p class="tit">제출하실 방법을 선택해주세요</p>
-                        <ul class="check-box mt15">
-                            <li class="mydata">
-                                <fieldset>
-                                    <input type="radio" id="Chk01_1" name="Chk01" value="" class="" checked="">
-                                    <label for="Chk01_1">마이데이터 서류제출</label>
-                                </fieldset>
-                            </li>
-                            <li class="camera">
-                                <fieldset>
-                                    <input type="radio" id="Chk01_2" name="Chk01" value="" class="">
-                                    <label for="Chk01_2">서류직접 촬영제출</label>
-                                </fieldset>
-                            </li>
-                        </ul>
+                        <p class="tit">가입대상 및 증빙자료</p>
+                        <div class="list-bull">
+                            <ul>
+                                <li>증빙서류 상 유효기간이 있는 경우 그 유효기간 이내, 증명서 또는 확인원은 최근 90일 이내 발급된 서류만 인정돼요</li>
+                                <li>대상자별 증빙자료는 국가/지방자치단체의 장 또는 국가보훈처가 발행한 서류만 인정돼요</li>
+                            </ul>
+                        </div>
                     </div>
-                    -->
-                   
+                    <table>
+                        <caption>가입내상 및 증빙자료 안내표</caption>
+                        <colgroup>
+                            <col width="40%">
+                            <col width="*">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="ta-c">가입대상</th>
+                                <th class="ta-c">증빙자료</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>장애인</td>
+                                <td>장애인증명서 (증명원), 장애인 등록증 (복지카드)</td>
+                            </tr>
+                            <tr>
+                                <td>국가유공자</td>
+                                <td>국가유공자확인원, 국가유공자증, 보훈보상대상사자증, 지원대상자 확인원</td>
+                            </tr>
+                            <tr>
+                                <td>기초생활수급자</td>
+                                <td>국민기초생활수습자증명서</td>
+                            </tr>
+                            <tr>
+                                <td>5.18민주화운동 부상자</td>
+                                <td>5.18민주유공자확인원, 5.19민주유공자증</td>
+                            </tr>
+                            <tr>
+                                <td>독립유공자 및 유가족</td>
+                                <td>독립유공자(유족)확인원, 독립유공자증, 독립유공자유족증</td>
+                            </tr>
+                            <tr>
+                                <td>고엽제후유의 중환자</td>
+                                <td>고엽제법적용대상확인원</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-            <!-- //contents -->
-
-            <div class="fixed-btn-wrap">
-                <div class="btn-wrap">
-                    <a href="javascript:void(0);" class="btn">다음</a>
+                <!--D: check-box, sub-tit-wrap안으로 이동 및 mt15 클래스 추가-->
+                <!--
+                <div class="sub-tit-wrap">
+                    <p class="tit">제출하실 방법을 선택해주세요</p>
+                    <ul class="check-box mt15">
+                        <li class="mydata">
+                            <fieldset>
+                                <input type="radio" id="Chk01_1" name="Chk01" value="" class="" checked="">
+                                <label for="Chk01_1">마이데이터 서류제출</label>
+                            </fieldset>
+                        </li>
+                        <li class="camera">
+                            <fieldset>
+                                <input type="radio" id="Chk01_2" name="Chk01" value="" class="">
+                                <label for="Chk01_2">서류직접 촬영제출</label>
+                            </fieldset>
+                        </li>
+                    </ul>
                 </div>
+                -->
+                
             </div>
-
-
-
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- //contents -->
+
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <a href="javascript:void(0);" class="btn">다음</a>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

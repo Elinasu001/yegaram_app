@@ -65,105 +65,103 @@
     </header>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
-                    <!--D: section으로 계좌 있음 없음 제어하기 -->
-                    <!-- s:거래중지계좌내역없음 -->
-                    <section class="result-area exclamation" style="display:none;">
-                        <p class="tit"><b>거래중지 계좌가 없어요</b></p> <!-- [퍼블] 텍스트 변경 -->
-                    </section>
-                    <!-- e:거래중지계좌내역없음 -->
-                    <section>
-                        <div class="txt-list-wrap">
-                            <div class="txt-detail-area">
-                                <a href="#none">
-                                    <div class="txt-detail-tit">
-                                        <strong>E-RUN 파킹통장</strong>
-                                    </div>
-                                    <!--D: p class="txt" 경우 span class="txt" 태그 -->
-                                    <ul class="txt-list">
-                                        <li>
-                                            <span class="tit">계좌번호</span>
-                                            <span class="txt">123-12-12-1234567</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">계좌개설일</span>
-                                            <span class="txt">2023.01.01</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">최종거래일</span>
-                                            <span class="txt">2023.01.01</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">거래중지일</span>
-                                            <span class="txt">2023.01.01</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">계좌잔액</span>
-                                            <span class="txt"><span>20,000,000</span>원</span>
-                                        </li>
-                                    </ul>
-                                </a>
-                            </div>
-        
-                            <div class="txt-detail-area">
-                                <a href="#none">
-                                    <div class="txt-detail-tit">
-                                        <strong>E-RUN 정기적금</strong>
-                                    </div>
-                                    <ul class="txt-list">
-                                        <li>
-                                            <span class="tit">계좌번호</span>
-                                            <span class="txt">123-12-12-1234567</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">계좌개설일</span>
-                                            <span class="txt">2023.01.01</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">최종거래일</span>
-                                            <span class="txt">2023.01.01</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">거래중지일</span>
-                                            <span class="txt">2023.01.01</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">계좌잔액</span>
-                                            <span class="txt"><span>20,000,000</span>원</span>
-                                        </li>
-                                    </ul>
-                                </a>
-                            </div>
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+                <!--D: section으로 계좌 있음 없음 제어하기 -->
+                <!-- s:거래중지계좌내역없음 -->
+                <section class="result-area exclamation" style="display:none;">
+                    <p class="tit"><b>거래중지 계좌가 없어요</b></p> <!-- [퍼블] 텍스트 변경 -->
+                </section>
+                <!-- e:거래중지계좌내역없음 -->
+                <section>
+                    <div class="txt-list-wrap">
+                        <div class="txt-detail-area">
+                            <a href="#none">
+                                <div class="txt-detail-tit">
+                                    <strong>E-RUN 파킹통장</strong>
+                                </div>
+                                <!--D: p class="txt" 경우 span class="txt" 태그 -->
+                                <ul class="txt-list">
+                                    <li>
+                                        <span class="tit">계좌번호</span>
+                                        <span class="txt">123-12-12-1234567</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">계좌개설일</span>
+                                        <span class="txt">2023.01.01</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">최종거래일</span>
+                                        <span class="txt">2023.01.01</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">거래중지일</span>
+                                        <span class="txt">2023.01.01</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">계좌잔액</span>
+                                        <span class="txt"><span>20,000,000</span>원</span>
+                                    </li>
+                                </ul>
+                            </a>
                         </div>
-                    </section>
-                    <!--D: section 알아주세요 태그 전체변경 -->
-                    <section class="list-bull">
-                        <div class="border"></div>
-                        <strong>알아두세요</strong>
-                            <li>납부자 자동이체일 경우 이체 지정일 전 영업일에 출금되며,
-                                타행 자동이체일 경우 이체 지정일 당일에 출금돼요</li>
-                            <li>자타행계좌로 자동이체 시에는 자동이체 정상처리 여부를 직접 확인해 주세요</li>
-                            <li>해지는 본인명의의 계좌만 가능해요</li>
-                            <li>유선통화 후 재개 처리가 가능하니 연락처가 변경되신 경우는
-                                고객 정보를 수정해 주세요</li>
-                            <li>재개 신청 고객님은 [금융거래목적확인서]를 출력하여 작성
-                                하신 후 [신분증 사본]과 함께 해당 지점의 FAX 또는 E-mail로 보내주세요</li>
-                    </section>
-                </div>
+    
+                        <div class="txt-detail-area">
+                            <a href="#none">
+                                <div class="txt-detail-tit">
+                                    <strong>E-RUN 정기적금</strong>
+                                </div>
+                                <ul class="txt-list">
+                                    <li>
+                                        <span class="tit">계좌번호</span>
+                                        <span class="txt">123-12-12-1234567</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">계좌개설일</span>
+                                        <span class="txt">2023.01.01</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">최종거래일</span>
+                                        <span class="txt">2023.01.01</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">거래중지일</span>
+                                        <span class="txt">2023.01.01</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">계좌잔액</span>
+                                        <span class="txt"><span>20,000,000</span>원</span>
+                                    </li>
+                                </ul>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!--D: section 알아주세요 태그 전체변경 -->
+                <section class="list-bull">
+                    <div class="border"></div>
+                    <strong>알아두세요</strong>
+                        <li>납부자 자동이체일 경우 이체 지정일 전 영업일에 출금되며,
+                            타행 자동이체일 경우 이체 지정일 당일에 출금돼요</li>
+                        <li>자타행계좌로 자동이체 시에는 자동이체 정상처리 여부를 직접 확인해 주세요</li>
+                        <li>해지는 본인명의의 계좌만 가능해요</li>
+                        <li>유선통화 후 재개 처리가 가능하니 연락처가 변경되신 경우는
+                            고객 정보를 수정해 주세요</li>
+                        <li>재개 신청 고객님은 [금융거래목적확인서]를 출력하여 작성
+                            하신 후 [신분증 사본]과 함께 해당 지점의 FAX 또는 E-mail로 보내주세요</li>
+                </section>
             </div>
-            <!-- //contents -->
-
-           
-
-
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- //contents -->
+
+        
+
+
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

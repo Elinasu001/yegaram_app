@@ -67,106 +67,105 @@
     </header>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
-                    <div class="tit-wrap">
-                        <p class="txt"><b>이체금액과 자동이체 기간을<br>입력해주세요</b></p>
+    
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+                <div class="tit-wrap">
+                    <p class="txt"><b>이체금액과 자동이체 기간을<br>입력해주세요</b></p>
+                </div>
+
+                <div class="form-all-wrap">
+
+                    <div class="form-wrap type2">
+                        <div class="form-tit">
+                            <span>이체금액</span>
+                        </div>
+                        <div class="input">
+                            <input type="tel" title="" class="validChk" id="" name="" value="0" placeholder="예치금액을 입력해주세요." required="">
+                            <div class="value-wrap">
+                                <strong class="value">0</strong>
+                                <span class="unit">만원</span>
+                                <button type="reset" class="btn-delete">검색어 삭제</button>
+                            </div>
+                        </div>
+                        <div class="inquiry-set-wrap">
+                            <div class="type-area">
+                                <ul class="radio-list style-button">
+                                    <li><button type="button" onclick="incrsAmt(this, 1);">1만</button></li>
+                                    <li><button type="button" onclick="incrsAmt(this, 5);">5만</button></li>
+                                    <li><button type="button" onclick="incrsAmt(this, 10);">10만</button></li>
+                                    <li><button type="button" onclick="incrsAmt(this, 100);">100만</button></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+                    <p class="info-txt">정기예금 및 대출계좌는 이체를 설정할 수 없어요</p>
 
-                    <div class="form-all-wrap">
-
-                        <div class="form-wrap type2">
-                            <div class="form-tit">
-                                <span>이체금액</span>
-                            </div>
-                            <div class="input">
-                                <input type="tel" title="" class="validChk" id="" name="" value="0" placeholder="예치금액을 입력해주세요." required="">
-                                <div class="value-wrap">
-                                    <strong class="value">0</strong>
-                                    <span class="unit">만원</span>
-                                    <button type="reset" class="btn-delete">검색어 삭제</button>
-                                </div>
-                            </div>
-                            <div class="inquiry-set-wrap">
-                                <div class="type-area">
-                                    <ul class="radio-list style-button">
-                                        <li><button type="button" onclick="incrsAmt(this, 1);">1만</button></li>
-                                        <li><button type="button" onclick="incrsAmt(this, 5);">5만</button></li>
-                                        <li><button type="button" onclick="incrsAmt(this, 10);">10만</button></li>
-                                        <li><button type="button" onclick="incrsAmt(this, 100);">100만</button></li>
-                                    </ul>
-                                </div>
-                            </div>
+                    <div class="form-wrap w50">
+                        <div class="form-tit">
+                            <span>자동이체 일자</span>
                         </div>
-                        <p class="info-txt">정기예금 및 대출계좌는 이체를 설정할 수 없어요</p>
-
-                        <div class="form-wrap w50">
-                            <div class="form-tit">
-                                <span>자동이체 일자</span>
-                            </div>
-                            <div class="input">
-                                <span id="period1">
-                                    <input type="month" title="" id="TRNF_STRN_YM_TXT" class="inp option validChk" onclick="validChk();" name="" value="" placeholder="자동이체 시작일을 선택해주세요" required numberonly>
-                                </span>
-                                <span class="inputTextHyphen">~</span>
-                                <span id="period2">
-                                    <input type="month" title="" id="TRNF_END_YM_TXT" class="inp option validChk" onclick="validChk();" name="" value="" placeholder="자동이체 종료일을 선택해주세요" required numberonly>
-                                </span>
-                            </div>
+                        <div class="input">
+                            <span id="period1">
+                                <input type="month" title="" id="TRNF_STRN_YM_TXT" class="inp option validChk" onclick="validChk();" name="" value="" placeholder="자동이체 시작일을 선택해주세요" required numberonly>
+                            </span>
+                            <span class="inputTextHyphen">~</span>
+                            <span id="period2">
+                                <input type="month" title="" id="TRNF_END_YM_TXT" class="inp option validChk" onclick="validChk();" name="" value="" placeholder="자동이체 종료일을 선택해주세요" required numberonly>
+                            </span>
                         </div>
-                        <ul class="radio-list">
-                            <li>
-                                <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked" class="monthly">
-                                <label for="radio01_2" class="">납입일 선택</label>
-                            </li>
-                            <li>
-                                <input type="radio" name="radio01" id="radio01_1" value="" onclick="">
-                                <label for="radio01_1" class="">매월 말일</label>
-                            </li>
-                        </ul>
+                    </div>
+                    <ul class="radio-list">
+                        <li>
+                            <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked" class="monthly">
+                            <label for="radio01_2" class="">납입일 선택</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio01" id="radio01_1" value="" onclick="">
+                            <label for="radio01_1" class="">매월 말일</label>
+                        </li>
+                    </ul>
 
-                        <div class="select-wrap">
+                    <div class="select-wrap">
 
-                            <div id="rolldate2" class="select-box type2 type-dd" tabindex="1">
-                                <label for="">납입일</label>
-                                <span class="option">미선택</span>
-                            </div>
-                            <p class="info-txt">이체 시작일은 다음 영업일부터 가능해요</p>
-
+                        <div id="rolldate2" class="select-box type2 type-dd" tabindex="1">
+                            <label for="">납입일</label>
+                            <span class="option">미선택</span>
                         </div>
+                        <p class="info-txt">이체 시작일은 다음 영업일부터 가능해요</p>
 
                     </div>
 
                 </div>
-            </div>
-            <!-- //contents -->
 
-            <div class="fixed-btn-wrap">
-                <div class="btn-wrap flexCol">
-                    <a href="#none" class="btn" id="">다음</a>
-                    <a href="#none" class="btn txt">그만하기</a>
-                </div>
             </div>
-
-            
-            <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
-                <div class="content-wrap">
-                    <div class="pop-con-wrap">
-                        <span class="pop-con">자동이체 시작일과 종료일은 같을 수 없어요</span>
-                    </div>
-                    <div class="btn-wrap">
-                        <a href="javascript:void(0);" class="btn" onclick="">확인</a>
-                    </div>
-                </div>
-            </div>
-
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- //contents -->
+
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap flexCol">
+                <a href="#none" class="btn" id="">다음</a>
+                <a href="#none" class="btn txt">그만하기</a>
+            </div>
+        </div>
+
+        
+        <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
+            <div class="content-wrap">
+                <div class="pop-con-wrap">
+                    <span class="pop-con">자동이체 시작일과 종료일은 같을 수 없어요</span>
+                </div>
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn" onclick="">확인</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

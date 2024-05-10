@@ -68,196 +68,194 @@
     </div>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
-                    <!-- S: 자동이체 등록 현황 -->
-                    <section>
-                        <div class="tit-wrap">
-                            <p class="txt"><b>등록하신 자동이체 조회를 위해<br/>정보를 입력해 주세요</p>
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+                <!-- S: 자동이체 등록 현황 -->
+                <section>
+                    <div class="tit-wrap">
+                        <p class="txt"><b>등록하신 자동이체 조회를 위해<br/>정보를 입력해 주세요</p>
+                    </div>
+                    <div class="select-wrap">
+                        <div class="select-box on" tabindex="1"><!--D: on 클래스 : 값이 들어갈 경우 on 클래스 적용-->
+                            <label for="" class="essential">조회 계좌</label>
+                            <span class="option" id="">101-1245-1243-21</span>
                         </div>
-                        <div class="select-wrap">
-                            <div class="select-box on" tabindex="1"><!--D: on 클래스 : 값이 들어갈 경우 on 클래스 적용-->
-                                <label for="" class="essential">조회 계좌</label>
-                                <span class="option" id="">101-1245-1243-21</span>
-                            </div>
-                        </div>
-                        
-                    </section>
-                    <!-- E: 자동이체 등록 현황 -->
+                    </div>
+                    
+                </section>
+                <!-- E: 자동이체 등록 현황 -->
 
-                    <!-- S: 자동이체 등록 현황_당행/ 자동이체 등록 현황_타행 / 등록현황없음 -->
-                    <section>
+                <!-- S: 자동이체 등록 현황_당행/ 자동이체 등록 현황_타행 / 등록현황없음 -->
+                <section>
 
-                        <div class="select-wrap">
-                            <div class="select-box on" tabindex="1"><!--D: on 클래스 : 값이 들어갈 경우 on 클래스 적용-->
-                                <label for="" class="essential">조회 계좌</label>
-                                <span class="option" id="">101-1245-1243-21</span>
-                            </div>
+                    <div class="select-wrap">
+                        <div class="select-box on" tabindex="1"><!--D: on 클래스 : 값이 들어갈 경우 on 클래스 적용-->
+                            <label for="" class="essential">조회 계좌</label>
+                            <span class="option" id="">101-1245-1243-21</span>
                         </div>
-                        <div class="txt-list-wrap">
-                            <!--S: 반복문-->
-                            <div class="txt-detail-area">
-                                <ul class="txt-list">
-                                    <!--D : 당행일 경우 -->
-                                    <li id="liStts">
-                                        <span class="tit">상태</span>
-                                        <span class="txt">신규접수</span>
-                                    </li>
-                                    <!--D : 당행일 경우 // -->
-                                    <li>
-                                        <span class="tit">출금계좌</span>
-                                        <span class="txt">
-                                            홍길동<br/>
-                                            저축은행<br/>
-                                            01012345678
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="tit">입금계좌</span>
-                                        <span class="txt">
-                                            홍길동<br/>
-                                            저축은행<br/>
-                                            01012345678
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="tit">이체금액</span>
-                                        <span class="txt point">500,000원</span><!--D: point 클래스 : 색상 적용-->
-                                    </li>
-                                    <li>
-                                        <span class="tit">이체기간</span>
-                                        <span class="txt">
-                                            YYYY.MM.DD<br/>
-                                            ~ YYYY.MM.DD
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="tit">이체일</span>
-                                        <span class="txt">01일</span>
-                                    </li>
-                                </ul>
-                                <!--D : 상태 - 신규취소 or 해지정상일 경우 Hidden -->
-                                <div class="btn-cont-wrap" >
-                                    <a href="#none" class="btn btn-info">변경하기</a>
-                                    <a href="#none" class="btn" >해지하기</a>
-                                </div>
-                                <!--D : 상태 - 신규취소 or 해지정상일 경우 Hidden // -->
+                    </div>
+                    <div class="txt-list-wrap">
+                        <!--S: 반복문-->
+                        <div class="txt-detail-area">
+                            <ul class="txt-list">
+                                <!--D : 당행일 경우 -->
+                                <li id="liStts">
+                                    <span class="tit">상태</span>
+                                    <span class="txt">신규접수</span>
+                                </li>
+                                <!--D : 당행일 경우 // -->
+                                <li>
+                                    <span class="tit">출금계좌</span>
+                                    <span class="txt">
+                                        홍길동<br/>
+                                        저축은행<br/>
+                                        01012345678
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="tit">입금계좌</span>
+                                    <span class="txt">
+                                        홍길동<br/>
+                                        저축은행<br/>
+                                        01012345678
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="tit">이체금액</span>
+                                    <span class="txt point">500,000원</span><!--D: point 클래스 : 색상 적용-->
+                                </li>
+                                <li>
+                                    <span class="tit">이체기간</span>
+                                    <span class="txt">
+                                        YYYY.MM.DD<br/>
+                                        ~ YYYY.MM.DD
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="tit">이체일</span>
+                                    <span class="txt">01일</span>
+                                </li>
+                            </ul>
+                            <!--D : 상태 - 신규취소 or 해지정상일 경우 Hidden -->
+                            <div class="btn-cont-wrap" >
+                                <a href="#none" class="btn btn-info">변경하기</a>
+                                <a href="#none" class="btn" >해지하기</a>
+                            </div>
+                            <!--D : 상태 - 신규취소 or 해지정상일 경우 Hidden // -->
+                            
+                        </div>
+
+                        <div class="txt-detail-area">
+                            <ul class="txt-list">
+                                <!--D : 당행일 경우 -->
+                                <li id="liStts">
+                                    <span class="tit">상태</span>
+                                    <span class="txt">신규접수</span>
+                                </li>
+                                <!--D : 당행일 경우 // -->
+                                <li>
+                                    <span class="tit">출금계좌</span>
+                                    <span class="txt">
+                                        홍길동<br/>
+                                        저축은행<br/>
+                                        01012345678
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="tit">입금계좌</span>
+                                    <span class="txt">
+                                        홍길동<br/>
+                                        저축은행<br/>
+                                        01012345678
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="tit">이체금액</span>
+                                    <span class="txt point">500,000원</span><!--D: point 클래스 : 색상 적용-->
+                                </li>
+                                <li>
+                                    <span class="tit">이체기간</span>
+                                    <span class="txt">
+                                        YYYY.MM.DD<br/>
+                                        ~ YYYY.MM.DD
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="tit">이체일</span>
+                                    <span class="txt">01일</span>
+                                </li>
+                            </ul>
+                            
+                        </div>
+
+                        <div class="txt-detail-area">
+                            <ul class="txt-list">
                                 
+                            
+                                <li>
+                                    <span class="tit">입금계좌</span>
+                                    <span class="txt">
+                                        홍길동<br/>
+                                        저축은행<br/>
+                                        01012345678
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="tit">이체금액</span>
+                                    <span class="txt point">500,000원</span><!--D: point 클래스 : 색상 적용-->
+                                </li>
+                                <li>
+                                    <span class="tit">이체기간</span>
+                                    <span class="txt">
+                                        YYYY.MM.DD<br/>
+                                        ~ YYYY.MM.DD
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="tit">이체일</span>
+                                    <span class="txt">01일</span>
+                                </li>
+                            </ul>
+                            <div class="btn-cont-wrap" >
+                                <a href="#none" class="btn" >해지하기</a>
                             </div>
-
-                            <div class="txt-detail-area">
-                                <ul class="txt-list">
-                                    <!--D : 당행일 경우 -->
-                                    <li id="liStts">
-                                        <span class="tit">상태</span>
-                                        <span class="txt">신규접수</span>
-                                    </li>
-                                    <!--D : 당행일 경우 // -->
-                                    <li>
-                                        <span class="tit">출금계좌</span>
-                                        <span class="txt">
-                                            홍길동<br/>
-                                            저축은행<br/>
-                                            01012345678
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="tit">입금계좌</span>
-                                        <span class="txt">
-                                            홍길동<br/>
-                                            저축은행<br/>
-                                            01012345678
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="tit">이체금액</span>
-                                        <span class="txt point">500,000원</span><!--D: point 클래스 : 색상 적용-->
-                                    </li>
-                                    <li>
-                                        <span class="tit">이체기간</span>
-                                        <span class="txt">
-                                            YYYY.MM.DD<br/>
-                                            ~ YYYY.MM.DD
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="tit">이체일</span>
-                                        <span class="txt">01일</span>
-                                    </li>
-                                </ul>
-                               
-                            </div>
-
-                            <div class="txt-detail-area">
-                                <ul class="txt-list">
-                                 
-                                
-                                    <li>
-                                        <span class="tit">입금계좌</span>
-                                        <span class="txt">
-                                            홍길동<br/>
-                                            저축은행<br/>
-                                            01012345678
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="tit">이체금액</span>
-                                        <span class="txt point">500,000원</span><!--D: point 클래스 : 색상 적용-->
-                                    </li>
-                                    <li>
-                                        <span class="tit">이체기간</span>
-                                        <span class="txt">
-                                            YYYY.MM.DD<br/>
-                                            ~ YYYY.MM.DD
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span class="tit">이체일</span>
-                                        <span class="txt">01일</span>
-                                    </li>
-                                </ul>
-                                <div class="btn-cont-wrap" >
-                                    <a href="#none" class="btn" >해지하기</a>
-                                </div>
-                            </div>
-                            <!--E: 반복문-->
                         </div>
+                        <!--E: 반복문-->
+                    </div>
 
-                        <!-- S:등록현황없음 -->
-                        <div class="result-area nodata" id="transRsltNoData" style="display:block;">
-                            <p>등록하신 자동이체 내역이 없어요</p>
-                        </div>
-                        <!-- E:등록현황없음 -->
+                    <!-- S:등록현황없음 -->
+                    <div class="result-area nodata" id="transRsltNoData" style="display:block;">
+                        <p>등록하신 자동이체 내역이 없어요</p>
+                    </div>
+                    <!-- E:등록현황없음 -->
 
-                    </section>
-                    <!-- E:자동이체 등록 현황_당행/ 자동이체 등록 현황_타행 / 등록현황없음 -->
+                </section>
+                <!-- E:자동이체 등록 현황_당행/ 자동이체 등록 현황_타행 / 등록현황없음 -->
 
-                    <section class="list-bull">
-                        <div class="border"></div>
-                        <strong>알아두세요</strong>
-                            <li>납부자 자동이체일 경우 이체 지정일 전 영업일에 출금되며,
-                                타행 자동이체일 경우 이체 지정일 당일에 출금돼요</li>
-                            <li>자타행계좌로 자동이체 시에는 자동이체 정상처리 여부를 직접 확인해 주세요</li>
-                            <li>타행계좌로의 입금이 불가능할 경우 지정 이체일 +1 영업일에 출금계좌로 반환 입금돼요</li>
-                            <li>출금계좌 거래내역 조회로 입금 불가능(출금계좌 반환입금)
-                                여부를 확인하세요 (단, 저축은행은 입금 불가능에 대해 고객님께 별도 통지 없음)</li>
-                            <li>당/타행 자동이체 신청내용을 변경 또는 취소하고자 하실
-                                때에는 이체일 전 1영업일 까지 가능해요 (단, 납부자 자동이체의 경우 이체일 전 1영업일 19시 59분 전까지 변경 또는 취소 가능)</li>
-                            <li>계좌간 자동이체 미처리 건이 있으면 정보변경 시 유의하세요. 재 처리를 원치 않으면 자동이체 취소 후 신규 등록 하세요</li>
-                        </ul>
-                    </section>
+                <section class="list-bull">
+                    <div class="border"></div>
+                    <strong>알아두세요</strong>
+                        <li>납부자 자동이체일 경우 이체 지정일 전 영업일에 출금되며,
+                            타행 자동이체일 경우 이체 지정일 당일에 출금돼요</li>
+                        <li>자타행계좌로 자동이체 시에는 자동이체 정상처리 여부를 직접 확인해 주세요</li>
+                        <li>타행계좌로의 입금이 불가능할 경우 지정 이체일 +1 영업일에 출금계좌로 반환 입금돼요</li>
+                        <li>출금계좌 거래내역 조회로 입금 불가능(출금계좌 반환입금)
+                            여부를 확인하세요 (단, 저축은행은 입금 불가능에 대해 고객님께 별도 통지 없음)</li>
+                        <li>당/타행 자동이체 신청내용을 변경 또는 취소하고자 하실
+                            때에는 이체일 전 1영업일 까지 가능해요 (단, 납부자 자동이체의 경우 이체일 전 1영업일 19시 59분 전까지 변경 또는 취소 가능)</li>
+                        <li>계좌간 자동이체 미처리 건이 있으면 정보변경 시 유의하세요. 재 처리를 원치 않으면 자동이체 취소 후 신규 등록 하세요</li>
+                    </ul>
+                </section>
 
-                </div>
             </div>
-            <!-- //contents -->
-
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- //contents -->
+
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

@@ -65,238 +65,236 @@
     </header>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
-                    <!-- D : tit-box 부분 클래스 전체 변경 -->
-                    <div class="btn-cont-wrap flexRight mt40">
-                        <a href="#none" class="more-btn">금융거래목적 확인서 보기</a>
-                    </div>
-                    <!-- D : txt-list-wrap 부분 클래스 mt15 추가 -->
-                    <div class="txt-list-wrap mt15"> 
-                        <div class="txt-detail-area">
-                            <div class="txt-detail-tit">
-                                <strong>E-RUN 정기적금</strong>
-                            </div>
-                             <!-- D : <p class="txt">를 <span class="txt"> 변경 -->
-                            <ul class="txt-list">
-                                <li>
-                                    <span class="tit">계좌번호</span>
-                                    <span class="txt">123-12-12-1234567</span>
-                                </li>
-                                <li>
-                                    <span class="tit">계좌개설일</span>
-                                    <span class="txt">2023.01.01</span>
-                                </li>
-                                <li>
-                                    <span class="tit">최종거래일</span>
-                                    <span class="txt">2023.01.01</span>
-                                </li>
-                                <li>
-                                    <span class="tit">거래중지일</span>
-                                    <span class="txt">2023.01.01</span>
-                                </li>
-                                <li>
-                                    <span class="tit">계좌잔액</span>
-                                    <span class="txt"><span>20,000,000</span>원</span>
-                                </li>
-                            </ul>
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+                <!-- D : tit-box 부분 클래스 전체 변경 -->
+                <div class="btn-cont-wrap flexRight mt40">
+                    <a href="#none" class="more-btn">금융거래목적 확인서 보기</a>
+                </div>
+                <!-- D : txt-list-wrap 부분 클래스 mt15 추가 -->
+                <div class="txt-list-wrap mt15"> 
+                    <div class="txt-detail-area">
+                        <div class="txt-detail-tit">
+                            <strong>E-RUN 정기적금</strong>
                         </div>
+                            <!-- D : <p class="txt">를 <span class="txt"> 변경 -->
+                        <ul class="txt-list">
+                            <li>
+                                <span class="tit">계좌번호</span>
+                                <span class="txt">123-12-12-1234567</span>
+                            </li>
+                            <li>
+                                <span class="tit">계좌개설일</span>
+                                <span class="txt">2023.01.01</span>
+                            </li>
+                            <li>
+                                <span class="tit">최종거래일</span>
+                                <span class="txt">2023.01.01</span>
+                            </li>
+                            <li>
+                                <span class="tit">거래중지일</span>
+                                <span class="txt">2023.01.01</span>
+                            </li>
+                            <li>
+                                <span class="tit">계좌잔액</span>
+                                <span class="txt"><span>20,000,000</span>원</span>
+                            </li>
+                        </ul>
                     </div>
-    
-                    <!-- D : tabs에 있는 type2클래스를 tabs-wrap으로 이동 및 tabs 클래스 추가-->
-                    <div class="tabs-wrap type2">
-                        <div class="tabs">
-                            <ul class="tab-item square col-02">
-                                <li class="on" data-tab="tab-cont001"><a href="#none">계좌해지</a></li>
-                                <li data-tab="tab-cont002" class=""><a href="#none">재개신청</a></li>
-                            </ul>
-    
-                            <div class="tab-content-area">
-                                <div id="tab-cont001" class="tab-content on">
-                                    <!-- D : request-wrap 클래스 form-all-wrap로 변경 -->
-                                    <div class="form-all-wrap">
-                                        <div class="form-wrap">
-                                            <!-- D : strong 삭제 및 타이틀 변경-->
-                                            <label for="ipt01" class="formlabel essential">해지계좌 비밀번호</label>
-                                            <div class="input">
-                                                <input type="text" title="계좌비밀번호" id="ipt01" class="inp" name="" value="" placeholder="계좌의 비밀번호를 입력해 주세요" required="">
-                                            </div>
+                </div>
+
+                <!-- D : tabs에 있는 type2클래스를 tabs-wrap으로 이동 및 tabs 클래스 추가-->
+                <div class="tabs-wrap type2">
+                    <div class="tabs">
+                        <ul class="tab-item square col-02">
+                            <li class="on" data-tab="tab-cont001"><a href="#none">계좌해지</a></li>
+                            <li data-tab="tab-cont002" class=""><a href="#none">재개신청</a></li>
+                        </ul>
+
+                        <div class="tab-content-area">
+                            <div id="tab-cont001" class="tab-content on">
+                                <!-- D : request-wrap 클래스 form-all-wrap로 변경 -->
+                                <div class="form-all-wrap">
+                                    <div class="form-wrap">
+                                        <!-- D : strong 삭제 및 타이틀 변경-->
+                                        <label for="ipt01" class="formlabel essential">해지계좌 비밀번호</label>
+                                        <div class="input">
+                                            <input type="text" title="계좌비밀번호" id="ipt01" class="inp" name="" value="" placeholder="계좌의 비밀번호를 입력해 주세요" required="">
                                         </div>
-                                        <div class="form-wrap">
-                                            <div class="input">
-                                                <div class="select-wrap type2">
-                                                    <div class="select-box" tabindex="1">
-                                                        <label for="" class="essential">입금은행</label>
-                                                        <span class="option">미선택</span>
-                                                    </div>
+                                    </div>
+                                    <div class="form-wrap">
+                                        <div class="input">
+                                            <div class="select-wrap type2">
+                                                <div class="select-box" tabindex="1">
+                                                    <label for="" class="essential">입금은행</label>
+                                                    <span class="option">미선택</span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-wrap">
-                                            <!-- D : strong 삭제 및 타이틀 변경-->
-                                            <label for="ipt02" class="formlabel essential">입금 계좌번호</label>
-                                            <div class="input">
-                                                <input type="text" title="계좌비밀번호" id="ipt02" class="inp" name="" value="" placeholder="계좌번호를 입력해 주세요" required="">
+                                    </div>
+                                    <div class="form-wrap">
+                                        <!-- D : strong 삭제 및 타이틀 변경-->
+                                        <label for="ipt02" class="formlabel essential">입금 계좌번호</label>
+                                        <div class="input">
+                                            <input type="text" title="계좌비밀번호" id="ipt02" class="inp" name="" value="" placeholder="계좌번호를 입력해 주세요" required="">
+                                        </div>
+                                    </div>
+                                                    
+                                    <section class="terms-area">
+                                        <!-- D : strong 태그 div로 변경-->
+                                        <div class="form-tit"><span>금융거래목적 확인</span></div>
+                                        <div class="q-wrap">
+                                            <div class="bg-box">
+                                                <p class="txt-style3">
+                                                    타인으로부터 통장 대여를 요청받은 사실이 있습니까?<br>
+                                                    통장/현금카드 등을 타인에게 양도하여 범죄에 이용되는 경우 미성년자 여부와 상관없이 민·형사 책임을 질 수 있습니다
+                                                </p>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <input type="radio" name="q1" id="q01" value="Y">
+                                                    <label for="q01" class="rd">예</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="q1" id="q02" value="N">
+                                                    <label for="q02" class="rd">아니오</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    
+                                        <div class="q-wrap">
+                                            <div class="bg-box">
+                                                <p class="txt-style3">
+                                                    타인으로부터 신용등급 상향, 대출 등의 목적으로 통장 개설을 요청받은 사실이 있습니까?
+                                                </p>
+                                            </div>
+
+                                            <ul>
+                                                <li>
+                                                    <input type="radio" name="q2" id="q03" value="Y">
+                                                    <label for="q03" class="rd">예</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="q2" id="q04" value="N">
+                                                    <label for="q04" class="rd">아니오</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </section>
+                                    <!--D: 알아두세요. 클래스 전체 변경-->
+                                    <div class="list-bull">
+                                        <div class="border"></div>
+                                        <strong>알아두세요</strong>
+                                        <ul>
+                                            <li>팩스/이메일 신청 시, 입력된 이메일로 [금융거래목적확인서]를 출력 하여 작성하신 후 [신분증 사본]과 함께 해당 지점의 FAX 또는 E-mail로 보내주세요</li>
+                                            <li>즉시입금지정계좌 해지 후 해당계좌로 이체 시에는 설정하신
+                                                미지정 입금계좌 이체한도 내에서만 이체가 가능해요</li>
+                                            <li>유선통화 후 재개 처리가 가능하니 연락처가 변경되신 경우는 고객 정보를 수정해 주세요</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="tab-cont002" class="tab-content dp-none">
+                                    <!-- D : request-wrap 클래스 form-all-wrap로 변경 -->
+                                <div class="form-all-wrap">
+                                    <div class="form-wrap">
+                                        <div class="input">
+                                            <div class="select-wrap type2">
+                                                <div class="select-box" tabindex="1">
+                                                    <label for="" class="essential">재거래사유</label>
+                                                    <span class="option">미선택</span>
+                                                </div>
                                             </div>
                                         </div>
-                                                     
-                                        <section class="terms-area">
+                                    </div>
+                
+                                    <div class="form-wrap">
+                                        <!-- D : strong 삭제 및 타이틀 변경-->
+                                        <label for="ipt03" class="formlabel essential">금융거래목적안내서 받을 이메일</label>
+                                        <div class="input">
+                                            <input type="text" title="이메일" id="ipt03" class="inp" name="" value="" placeholder="이메일을 입력해 주세요" required="">
+                                        </div>
+                                    </div>
+                                    <section class="terms-area">
                                             <!-- D : strong 태그 div로 변경-->
                                             <div class="form-tit"><span>금융거래목적 확인</span></div>
-                                            <div class="q-wrap">
-                                                <div class="bg-box">
-                                                    <p class="txt-style3">
-                                                        타인으로부터 통장 대여를 요청받은 사실이 있습니까?<br>
-                                                        통장/현금카드 등을 타인에게 양도하여 범죄에 이용되는 경우 미성년자 여부와 상관없이 민·형사 책임을 질 수 있습니다
-                                                    </p>
-                                                </div>
-                                                <ul>
-                                                    <li>
-                                                        <input type="radio" name="q1" id="q01" value="Y">
-                                                        <label for="q01" class="rd">예</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="radio" name="q1" id="q02" value="N">
-                                                        <label for="q02" class="rd">아니오</label>
-                                                    </li>
-                                                </ul>
+                                        <div class="q-wrap">
+                                            <div class="bg-box">
+                                                <p class="txt-style3">
+                                                    타인으로부터 통장 대여를 요청받은 사실이 있습니까?<br>
+                                                    통장/현금카드 등을 타인에게 양도하여 범죄에 이용되는 경우 미성년자 여부와 상관없이 민·형사 책임을 질 수 있습니다
+                                                </p>
                                             </div>
-                                        
-                                            <div class="q-wrap">
-                                                <div class="bg-box">
-                                                    <p class="txt-style3">
-                                                        타인으로부터 신용등급 상향, 대출 등의 목적으로 통장 개설을 요청받은 사실이 있습니까?
-                                                    </p>
-                                                </div>
-    
-                                                <ul>
-                                                    <li>
-                                                        <input type="radio" name="q2" id="q03" value="Y">
-                                                        <label for="q03" class="rd">예</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="radio" name="q2" id="q04" value="N">
-                                                        <label for="q04" class="rd">아니오</label>
-                                                    </li>
-                                                </ul>
+                                            <ul>
+                                                <li>
+                                                    <input type="radio" name="q3" id="q05" value="Y">
+                                                    <label for="q05" class="rd">예</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="q3" id="q06" value="N">
+                                                    <label for="q06" class="rd">아니오</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="q-wrap">
+                                            <div class="bg-box">
+                                                <p class="txt-style3">
+                                                    타인으로부터 신용등급 상향, 대출 등의 목적으로 통장 개설을 요청받은 사실이 있습니까?
+                                                </p>
                                             </div>
-                                        </section>
+                                            <ul>
+                                                <li>
+                                                    <input type="radio" name="q4" id="q07" value="Y">
+                                                    <label for="q07" class="rd">예</label>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" name="q4" id="q08" value="N">
+                                                    <label for="q08" class="rd">아니오</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </section>
+                
                                         <!--D: 알아두세요. 클래스 전체 변경-->
                                         <div class="list-bull">
-                                            <div class="border"></div>
-                                            <strong>알아두세요</strong>
-                                            <ul>
-                                                <li>팩스/이메일 신청 시, 입력된 이메일로 [금융거래목적확인서]를 출력 하여 작성하신 후 [신분증 사본]과 함께 해당 지점의 FAX 또는 E-mail로 보내주세요</li>
-                                                <li>즉시입금지정계좌 해지 후 해당계좌로 이체 시에는 설정하신
-                                                    미지정 입금계좌 이체한도 내에서만 이체가 가능해요</li>
-                                                <li>유선통화 후 재개 처리가 가능하니 연락처가 변경되신 경우는 고객 정보를 수정해 주세요</li>
-                                            </ul>
-                                        </div>
+                                        <div class="border"></div>
+                                        <strong>알아두세요</strong>
+                                        <ul>
+                                            <li>팩스/이메일 신청 시, 입력된 이메일로 [금융거래목적확인서]를 출력 하여 작성하신 후 [신분증 사본]과 함께 해당 지점의 FAX 또는 E-mail로 보내주세요</li>
+                                            <li>즉시입금지정계좌 해지 후 해당계좌로 이체 시에는 설정하신
+                                                미지정 입금계좌 이체한도 내에서만 이체가 가능해요</li>
+                                            <li>유선통화 후 재개 처리가 가능하니 연락처가 변경되신 경우는 고객 정보를 수정해 주세요</li>
+                                        </ul>
                                     </div>
                                 </div>
-    
-                                <div id="tab-cont002" class="tab-content dp-none">
-                                     <!-- D : request-wrap 클래스 form-all-wrap로 변경 -->
-                                    <div class="form-all-wrap">
-                                        <div class="form-wrap">
-                                            <div class="input">
-                                                <div class="select-wrap type2">
-                                                    <div class="select-box" tabindex="1">
-                                                        <label for="" class="essential">재거래사유</label>
-                                                        <span class="option">미선택</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="form-wrap">
-                                            <!-- D : strong 삭제 및 타이틀 변경-->
-                                            <label for="ipt03" class="formlabel essential">금융거래목적안내서 받을 이메일</label>
-                                            <div class="input">
-                                                <input type="text" title="이메일" id="ipt03" class="inp" name="" value="" placeholder="이메일을 입력해 주세요" required="">
-                                            </div>
-                                        </div>
-                                        <section class="terms-area">
-                                             <!-- D : strong 태그 div로 변경-->
-                                             <div class="form-tit"><span>금융거래목적 확인</span></div>
-                                            <div class="q-wrap">
-                                                <div class="bg-box">
-                                                    <p class="txt-style3">
-                                                        타인으로부터 통장 대여를 요청받은 사실이 있습니까?<br>
-                                                        통장/현금카드 등을 타인에게 양도하여 범죄에 이용되는 경우 미성년자 여부와 상관없이 민·형사 책임을 질 수 있습니다
-                                                    </p>
-                                                </div>
-                                                <ul>
-                                                    <li>
-                                                        <input type="radio" name="q3" id="q05" value="Y">
-                                                        <label for="q05" class="rd">예</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="radio" name="q3" id="q06" value="N">
-                                                        <label for="q06" class="rd">아니오</label>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="q-wrap">
-                                                <div class="bg-box">
-                                                    <p class="txt-style3">
-                                                        타인으로부터 신용등급 상향, 대출 등의 목적으로 통장 개설을 요청받은 사실이 있습니까?
-                                                    </p>
-                                                </div>
-                                                <ul>
-                                                    <li>
-                                                        <input type="radio" name="q4" id="q07" value="Y">
-                                                        <label for="q07" class="rd">예</label>
-                                                    </li>
-                                                    <li>
-                                                        <input type="radio" name="q4" id="q08" value="N">
-                                                        <label for="q08" class="rd">아니오</label>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </section>
-                    
-                                         <!--D: 알아두세요. 클래스 전체 변경-->
-                                         <div class="list-bull">
-                                            <div class="border"></div>
-                                            <strong>알아두세요</strong>
-                                            <ul>
-                                                <li>팩스/이메일 신청 시, 입력된 이메일로 [금융거래목적확인서]를 출력 하여 작성하신 후 [신분증 사본]과 함께 해당 지점의 FAX 또는 E-mail로 보내주세요</li>
-                                                <li>즉시입금지정계좌 해지 후 해당계좌로 이체 시에는 설정하신
-                                                    미지정 입금계좌 이체한도 내에서만 이체가 가능해요</li>
-                                                <li>유선통화 후 재개 처리가 가능하니 연락처가 변경되신 경우는 고객 정보를 수정해 주세요</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-    
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- //contents -->
-            <!-- s: fixedBtnWrap -->
-             <!-- 계좌해지 탭일시 보이는 버튼-->
-            <div class="fixed-btn-wrap">
-                <div class="btn-wrap">
-                    <a href="#none" class="btn">계좌해지</a>
-                </div>
-            </div>
-             <!-- 재개신청 탭일시 보이는 버튼-->
-            <div class="fixed-btn-wrap" style="display:none">
-                <div class="btn-wrap">
-                    <a href="#none" class="btn">재개신청</a>
-                </div>
-            </div>
-            <!-- //e: fixedBtnWrap -->
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- //contents -->
+        <!-- s: fixedBtnWrap -->
+            <!-- 계좌해지 탭일시 보이는 버튼-->
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <a href="#none" class="btn">계좌해지</a>
+            </div>
+        </div>
+            <!-- 재개신청 탭일시 보이는 버튼-->
+        <div class="fixed-btn-wrap" style="display:none">
+            <div class="btn-wrap">
+                <a href="#none" class="btn">재개신청</a>
+            </div>
+        </div>
+        <!-- //e: fixedBtnWrap -->
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

@@ -74,87 +74,108 @@
     </header>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
 
-                    <div class="step-wrap">
-                        <div class="step-line" aria-label="총 6단계 중 2단계 진행중">
-                            <div class="step-bar" style="width: 33.3333%;"></div>
+                <div class="step-wrap">
+                    <div class="step-line" aria-label="총 6단계 중 2단계 진행중">
+                        <div class="step-bar" style="width: 33.3333%;"></div>
+                    </div>
+                    <div class="num"><strong class="current">2</strong>/<span class="tot">6</span></div>
+                </div>
+
+                <div class="tit-wrap">
+                    <em class="flag style2">E-RUN 파킹통장</em>
+                    <p class="txt"><strong>고객정보를 입력해주세요</strong></p>
+                </div>
+
+                <div class="form-all-wrap">
+
+                    <div class="form-wrap">
+                        <label for="ipt01" class="formlabel">이름</label>
+                        <div class="input">
+                            <input type="text" title="이름" id="" class="inp" name="" value="" placeholder="이가람" required="">
                         </div>
-                        <div class="num"><strong class="current">2</strong>/<span class="tot">6</span></div>
                     </div>
 
-                    <div class="tit-wrap">
-                        <em class="flag style2">E-RUN 파킹통장</em>
-                        <p class="txt"><strong>고객정보를 입력해주세요</strong></p>
+                    <div class="form-wrap phone">
+                        <label for="" class="formlabel">휴대폰번호</label>
+                        <div class="input">
+                            <input type="tel" title="" class="inp " id="" name="" value="" placeholder="01012345678" maxlength="11" required  numberonly/>
+                        </div>
                     </div>
 
-                    <div class="form-all-wrap">
+                    <div class="form-wrap form-line">
+                        <label for="" class="formlabel">주소</label>
+                        <div class="input">
+                            <input type="text" title="우편번호" id="" class="inp" name="" value="" placeholder="우편번호" required />
+                            <button type="button" class="btn btn-sm">우편번호찾기</button>
+                        </div>
+                        <div class="input">
+                            <input type="text" title="주소" id="" class="inp" name="" value="" placeholder="주소" required />
+                        </div>
+                        <div class="input">
+                            <input type="text" title="상세주소" id="" class="inp" name="" value="" placeholder="상세주소" required />
+                        </div>
+                    </div>
+
+                    <div class="select-wrap">
+
+                        <div class="check-box toggle">
+                            <input type="checkbox" id="check01">
+                            <label for="check01">
+                                <span>SMS 수신동의</span>
+                                <div class="switch-btn">
+                                    <span class="off">OFF</span>
+                                    <span class="on">ON</span>
+                                    <div class="inside"></div>
+                                </div>
+                            </label>
+                        </div>
+                        <p class="info-txt">SMS미수신일 경우 기존 고객님도 SMS 수신이 거부돼요</p>
+                        
+
+                        <div class="check-box toggle">
+                            <input type="checkbox" id="kakaoChk">
+                            <label for="kakaoChk">
+                                <span>카카오 알림톡 수신동의</span>
+                                <div class="switch-btn">
+                                    <span class="off">OFF</span>
+                                    <span class="on">ON</span>
+                                    <div class="inside"></div>
+                                </div>
+                            </label>
+                        </div>
+        
+                        <div class="check-box toggle">
+                            <input type="checkbox" id="emailChk">
+                            <label for="emailChk">
+                                <span>이메일 수신동의</span>
+                                <div class="switch-btn">
+                                    <span class="off">OFF</span>
+                                    <span class="on">ON</span>
+                                    <div class="inside"></div>
+                                </div>
+                            </label>
+                        </div>
 
                         <div class="form-wrap">
-                            <label for="ipt01" class="formlabel">이름</label>
+                            <label for="" class="formlabel">이메일</label>
                             <div class="input">
-                                <input type="text" title="이름" id="" class="inp" name="" value="" placeholder="이가람" required="">
-                            </div>
-                        </div>
-
-                        <div class="form-wrap phone">
-                            <label for="" class="formlabel">휴대폰번호</label>
-                            <div class="input">
-                                <input type="tel" title="" class="inp " id="" name="" value="" placeholder="01012345678" maxlength="11" required  numberonly/>
-                            </div>
-                        </div>
-
-                        <div class="form-wrap form-line">
-                            <label for="" class="formlabel">주소</label>
-                            <div class="input">
-                                <input type="text" title="우편번호" id="" class="inp" name="" value="" placeholder="우편번호" required />
-                                <button type="button" class="btn btn-sm">우편번호찾기</button>
-                            </div>
-                            <div class="input">
-                                <input type="text" title="주소" id="" class="inp" name="" value="" placeholder="주소" required />
-                            </div>
-                            <div class="input">
-                                <input type="text" title="상세주소" id="" class="inp" name="" value="" placeholder="상세주소" required />
+                                <input type="email" id="" class="inp" pattern=".+@\." placeholder="이메일 입력" name="" value="" required="">
+                                <button type="reset" class="btn-delete">검색어 삭제</button>
                             </div>
                         </div>
 
                         <div class="select-wrap">
 
                             <div class="check-box toggle">
-                                <input type="checkbox" id="check01">
-                                <label for="check01">
-                                    <span>SMS 수신동의</span>
-                                    <div class="switch-btn">
-                                        <span class="off">OFF</span>
-                                        <span class="on">ON</span>
-                                        <div class="inside"></div>
-                                    </div>
-                                </label>
-                            </div>
-                            <p class="info-txt">SMS미수신일 경우 기존 고객님도 SMS 수신이 거부돼요</p>
-                            
-
-                            <div class="check-box toggle">
-                                <input type="checkbox" id="kakaoChk">
-                                <label for="kakaoChk">
-                                    <span>카카오 알림톡 수신동의</span>
-                                    <div class="switch-btn">
-                                        <span class="off">OFF</span>
-                                        <span class="on">ON</span>
-                                        <div class="inside"></div>
-                                    </div>
-                                </label>
-                            </div>
-            
-                            <div class="check-box toggle">
-                                <input type="checkbox" id="emailChk">
-                                <label for="emailChk">
-                                    <span>이메일 수신동의</span>
+                                <input type="checkbox" id="dmChk">
+                                <label for="dmChk">
+                                    <span>우편물 수신동의 </span>
                                     <div class="switch-btn">
                                         <span class="off">OFF</span>
                                         <span class="on">ON</span>
@@ -164,166 +185,143 @@
                             </div>
 
                             <div class="form-wrap">
-                                <label for="" class="formlabel">이메일</label>
                                 <div class="input">
-                                    <input type="email" id="" class="inp" pattern=".+@\." placeholder="이메일 입력" name="" value="" required="">
-                                    <button type="reset" class="btn-delete">검색어 삭제</button>
-                                </div>
-                            </div>
-
-                            <div class="select-wrap">
-
-                                <div class="check-box toggle">
-                                    <input type="checkbox" id="dmChk">
-                                    <label for="dmChk">
-                                        <span>우편물 수신동의 </span>
-                                        <div class="switch-btn">
-                                            <span class="off">OFF</span>
-                                            <span class="on">ON</span>
-                                            <div class="inside"></div>
-                                        </div>
-                                    </label>
-                                </div>
-
-                                <div class="form-wrap">
-                                    <div class="input">
-                                        <div class="select-wrap type2" id="selDiv1">
-                                            <div class="select-box" tabindex="1">
-                                                <label for="qValue1">연락수단</label>
-                                                <span class="option" id="">미선택</span>
-                                                <input type="hidden" name="CUST_CNTA_DVCD" class="validChk" id="qValue1">
-                                            </div>
+                                    <div class="select-wrap type2" id="selDiv1">
+                                        <div class="select-box" tabindex="1">
+                                            <label for="qValue1">연락수단</label>
+                                            <span class="option" id="">미선택</span>
+                                            <input type="hidden" name="CUST_CNTA_DVCD" class="validChk" id="qValue1">
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
-                                <div class="form-wrap">
-                                    <div class="input">
-                                        <div class="select-wrap type2" id="selDiv2">
-                                            <div class="select-box" tabindex="1">
-                                                <label for="qValue2">금융정보취약계층</label>
-                                                <span class="option" id="qText2">해당없음</span>
-                                                <input type="hidden" name="FINC_WEAK_TP_CD" class="" id="qValue2">
-                                            </div>
+                            <div class="form-wrap">
+                                <div class="input">
+                                    <div class="select-wrap type2" id="selDiv2">
+                                        <div class="select-box" tabindex="1">
+                                            <label for="qValue2">금융정보취약계층</label>
+                                            <span class="option" id="qText2">해당없음</span>
+                                            <input type="hidden" name="FINC_WEAK_TP_CD" class="" id="qValue2">
                                         </div>
                                     </div>
                                 </div>
-    
                             </div>
 
+                        </div>
 
-                            <div class="alignment-both-side">
-                                <p class="txt">추천인이 있으세요?</p>
-                                <button type="button" class="btn btn-sm" >추천인 등록</button>
-                            </div>
-                            
+
+                        <div class="alignment-both-side">
+                            <p class="txt">추천인이 있으세요?</p>
+                            <button type="button" class="btn btn-sm" >추천인 등록</button>
                         </div>
                         
                     </div>
-
-                </div>
-            </div>
-            <!-- //contents -->
-
-            <!--s: fixed 버튼-->
-            <div class="fixed-btn-wrap">
-                <div class="btn-wrap flexCol">
-                    <a href="#none" class="btn disabled">다음</a> <!--D: disabled 일 경우 : disabled 추가 -->
-                    <a href="#none" class="btn txt">그만하기</a>
-                </div>
-            </div>
-            <!--e: fixed 버튼-->
-
-            <!-- s: 연락수단 클릭시 나오는 팝업 -->
-            <div id="certification_selBox" class="layerpopup layer-up" style="display:none;">
-                <div class="content-wrap ">
-                    <div class="pop-header">
-                        <h2 class="pop-title">연락수단</h2>
-                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-                    </div>
                     
-                    <div class="ly-scroll-con ly-select">
-                        <ul class="ly-select-list">
-                            <li><button type="button">연락거부</button></li>
-                            <li><button type="button">문자메시지</button></li>
-                            <li><button type="button">전화연락</button></li>
-                            <li><button type="button">이메일</button></li>
-                            <li><button type="button">우편물</button></li>
+                </div>
+
+            </div>
+        </div>
+        <!-- //contents -->
+
+        <!--s: fixed 버튼-->
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap flexCol">
+                <a href="#none" class="btn disabled">다음</a> <!--D: disabled 일 경우 : disabled 추가 -->
+                <a href="#none" class="btn txt">그만하기</a>
+            </div>
+        </div>
+        <!--e: fixed 버튼-->
+
+        <!-- s: 연락수단 클릭시 나오는 팝업 -->
+        <div id="certification_selBox" class="layerpopup layer-up" style="display:none;">
+            <div class="content-wrap ">
+                <div class="pop-header">
+                    <h2 class="pop-title">연락수단</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button type="button">연락거부</button></li>
+                        <li><button type="button">문자메시지</button></li>
+                        <li><button type="button">전화연락</button></li>
+                        <li><button type="button">이메일</button></li>
+                        <li><button type="button">우편물</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- e: 연락수단 클릭시 나오는 팝업 -->
+
+        <!-- s: 금융정보취약계층 선택 (팝업) -->
+        <div id="certification_selBox02" class="layerpopup layer-up show" style="display:block;">
+            <div class="content-wrap ">
+                <div class="pop-header">
+                    <h2 class="pop-title">금융정보취약계층</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button type="button">해당없음</button></li>
+                        <li><button type="button">만 65세 이상</button></li>
+                        <li><button type="button">은퇴자</button></li>
+                        <li><button type="button">주부</button></li>
+                    </ul>
+                    <div class="list-bull">
+                        <div class="border"></div>
+                        <strong>알아두세요</strong>
+                        <ul>
+                            <li>금융정보 취야계층(만 65세 이상인자, 은퇴자, 주부) 등에 해당하시고 그 정보를 제공하기로 동의하신 고객께서는 '예금보험관계성립여부 및 보호한도'에 대해 다른 정보보다 우선적으로 설명 받으실 수 있습니다.</li>
+                            <li>금융정보 취약계층(만 65세 이상인자, 은퇴자, 주부) 등에 해당하여, '예금자보호여부 및 보호한도 원금과 소정의 이자를 합하여 1인당 5천만원'에 대하여 확인하셨습니까?</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <!-- e: 연락수단 클릭시 나오는 팝업 -->
+        </div>
+        <!-- e: 금융정보취약계층 선택 (팝업) -->
 
-            <!-- s: 금융정보취약계층 선택 (팝업) -->
-            <div id="certification_selBox02" class="layerpopup layer-up show" style="display:block;">
-                <div class="content-wrap ">
-                    <div class="pop-header">
-                        <h2 class="pop-title">금융정보취약계층</h2>
-                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-                    </div>
-                    
-                    <div class="ly-scroll-con ly-select">
-                        <ul class="ly-select-list">
-                            <li><button type="button">해당없음</button></li>
-                            <li><button type="button">만 65세 이상</button></li>
-                            <li><button type="button">은퇴자</button></li>
-                            <li><button type="button">주부</button></li>
-                        </ul>
-                        <div class="list-bull">
-                            <div class="border"></div>
-                            <strong>알아두세요</strong>
-                            <ul>
-                                <li>금융정보 취야계층(만 65세 이상인자, 은퇴자, 주부) 등에 해당하시고 그 정보를 제공하기로 동의하신 고객께서는 '예금보험관계성립여부 및 보호한도'에 대해 다른 정보보다 우선적으로 설명 받으실 수 있습니다.</li>
-                                <li>금융정보 취약계층(만 65세 이상인자, 은퇴자, 주부) 등에 해당하여, '예금자보호여부 및 보호한도 원금과 소정의 이자를 합하여 1인당 5천만원'에 대하여 확인하셨습니까?</li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- s: 금융정보취약계층  (팝업) -->
+        <div id="certification_selBox02_1" class="layerpopup layer-up has-button show" style="display:none;">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">금융정보취약계층</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
                 </div>
-            </div>
-            <!-- e: 금융정보취약계층 선택 (팝업) -->
+                
+                <div class="ly-scroll-con ly-select type-high">
+                    <div class="txtbox-wrap">
 
-            <!-- s: 금융정보취약계층  (팝업) -->
-            <div id="certification_selBox02_1" class="layerpopup layer-up has-button show" style="display:none;">
-                <div class="content-wrap">
-                    <div class="pop-header">
-                        <h2 class="pop-title">금융정보취약계층</h2>
-                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-                    </div>
-                    
-                    <div class="ly-scroll-con ly-select type-high">
-                        <div class="txtbox-wrap">
-
-                            <ul class="ly-select-list">
-                                <li class="active"><button type="button" id="weakText">만 65세 이상</button></li>
-                            </ul>
-                            
-                            <div>
-                                <h3 class="sub-title">금융정보취약계층 안내</h3>
-                                <div class="txtbox-wrap">
-                                    <p>금융정보취약계층(만65세 이상인자, 은퇴자, 주부)등에 해당하시고 그 정보를 제공하기로 동의하신 고객께서는 '예금보험관계성립여부 및 보호한도'에 대해 다른 정보보다 우선적으로 설명 받으실 수 있습니다.</p>
-                                    <br>
-                                    <p>금융정보 취약계층(만 65세 이상인자, 은퇴자, 주부)등에 해당하여 '예금자보호여부 및 보호한도(원금과 소정의 이자를 합하여 1인당 5천만원에 대하여 확인하셨습니까?</p>
-                                </div>
+                        <ul class="ly-select-list">
+                            <li class="active"><button type="button" id="weakText">만 65세 이상</button></li>
+                        </ul>
+                        
+                        <div>
+                            <h3 class="sub-title">금융정보취약계층 안내</h3>
+                            <div class="txtbox-wrap">
+                                <p>금융정보취약계층(만65세 이상인자, 은퇴자, 주부)등에 해당하시고 그 정보를 제공하기로 동의하신 고객께서는 '예금보험관계성립여부 및 보호한도'에 대해 다른 정보보다 우선적으로 설명 받으실 수 있습니다.</p>
+                                <br>
+                                <p>금융정보 취약계층(만 65세 이상인자, 은퇴자, 주부)등에 해당하여 '예금자보호여부 및 보호한도(원금과 소정의 이자를 합하여 1인당 5천만원에 대하여 확인하셨습니까?</p>
                             </div>
                         </div>
-
                     </div>
-                </div>
 
-                <div class="fixed-btn-wrap">
-                    <div class="btn-wrap flexCol">
-                        <a href="#none" class="btn" >확인</a>
-                        <a href="#none" class="btn txt" onclick="">아니오</a>
-                    </div>
-                
                 </div>
             </div>
-            <!-- e: 금융정보취약계층  (팝업) -->
 
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap flexCol">
+                    <a href="#none" class="btn" >확인</a>
+                    <a href="#none" class="btn txt" onclick="">아니오</a>
+                </div>
+            
+            </div>
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- e: 금융정보취약계층  (팝업) -->
+
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

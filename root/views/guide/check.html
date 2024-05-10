@@ -63,400 +63,398 @@
 	<!-- //header -->
 
     <!--contentsWrap -->
-    <form>
-        <div class="contentsWrap">
-            <!-- s: contents -->
-            <div class="contents">
-                <div class="default-wrap">
+    <div class="contentsWrap">
+        <!-- s: contents -->
+        <div class="contents">
+            <div class="default-wrap">
+
+                <div class="select-wrap">
 
                     <div class="select-wrap">
-
-                        <div class="select-wrap">
-                            <div class="form-tit">
-                                <span>입금계좌</span>
-                                <button type="button" class="btn btn-sm">최근 입금계좌</button>
-                            </div>
-                            <div class="select-box" tabindex="1">
-                                <label for="" class="essential">은행선택</label>
-                                <span class="option" id="">미선택</span>
-                            </div>
+                        <div class="form-tit">
+                            <span>입금계좌</span>
+                            <button type="button" class="btn btn-sm">최근 입금계좌</button>
                         </div>
-
-                        <div class="select-box disabled" tabindex="1"><!--D: disabled-->
-                            <label for="">사용중인 보안매체</label>
-                            <span class="option">mOTP</span>
-                        </div>
-
-                        <div class="select-box on " tabindex="1" onclick="openPopupUp('lySel01');"><!--D: on 선택 됐을 경우-->
-                            <label for="">등록구분</label>
-                            <span class="option">주민등록번호</span>
-                        </div>
-
                         <div class="select-box" tabindex="1">
-                            <label for="">OTP일련번호</label>
-                            <span class="option">12⦁⦁⦁6780</span>
-                        </div>
-
-                        <div id="" class="select-box error" tabindex="1" >
-                            <label for="">출금계좌</label>
-                            <span class="option ellipse-none" id="">미선택</span><!-- [D] 두줄처리 필요할때 클래스 ellipse-none 추가 -->
-                        </div>
-
-                        <p class="exp-txt">출금 가능금액 : <span id="">50,000,000원</span></p>
-                        
-                        <div class="check-box toggle">
-                            <input type="checkbox" id="check01">
-                            <label for="check01">
-                                <span>대표계좌설정</span>
-                                <div class="switch-btn">
-                                    <span class="off">OFF</span>
-                                    <span class="on">ON</span>
-                                    <div class="inside"></div>
-                                </div>
-                            </label>
-                        </div>
-
-                        <div class="check-box toggle">
-                            <input type="checkbox" id="check02">
-                            <label for="check02">
-                                <span>
-                                    출금중지설정
-                                    <div class="tooltip-wrap">
-                                        <a href="#none" class="tooltip-btn">?</a>
-                                        <div class="tooltip-txt">
-                                            <p>
-                                                출금중지설정을 ON으로<br>
-                                                변경 시 해당계좌는 출금 및<br>
-                                                이체가 불가능해요
-                                            </p>
-                                            <button type="button" class="tooltip-close">닫기</button>
-                                        </div>
-                                    </div>
-                                </span>
-                                <div class="switch-btn">
-                                    <span class="off">OFF</span>
-                                    <span class="on">ON</span>
-                                    <div class="inside"></div>
-                                </div>
-                            </label>
-                        </div>
-
-                    </div>
-                    <div class="form-wrap phone">
-                        <label for="" class="formlabel">휴대폰번호</label>
-                        <div class="input">
-                            <div class="select-wrap ">
-                                <div class="select-box type-line" tabindex="1">
-                                    <span class="option">선택</span>
-                                </div>
-                            </div>
-                            <span>
-                                <input type="tel" title="" class="inp " id="" name="" value="" placeholder="휴대폰번호 입력" maxlength="11" required  numberonly/>
-                            </span>
+                            <label for="" class="essential">은행선택</label>
+                            <span class="option" id="">미선택</span>
                         </div>
                     </div>
 
-                    <div class="select-wrap">
-                        <div id="rolldate" class="select-box type2 type-dd" tabindex="1">
-                            <label for="">연월일</label>
-                            <span class="option">미선택</span>
-                        </div>
-
-                        <div id="rolldate2" class="select-box type2 type-dd" tabindex="1">
-                            <label for="">일</label>
-                            <span class="option">미선택</span>
-                        </div>
-                        
-                        <div id="rolldate3" class="select-box type2 type-mm" tabindex="1">
-                            <label for="">월</label>
-                            <span class="option">미선택</span>
-                        </div>
-
-                        <div id="rolldate4" class="select-box type2 type-yy" tabindex="1">
-                            <label for="">년도</label>
-                            <span class="option">미선택</span>
-                        </div>
-
-                        
-                        <div id="rolldate5" class="select-box type2 type-yy" tabindex="1">
-                            <label for="">연월</label>
-                            <span class="option">미선택</span>
-                        </div>
-
+                    <div class="select-box disabled" tabindex="1"><!--D: disabled-->
+                        <label for="">사용중인 보안매체</label>
+                        <span class="option">mOTP</span>
                     </div>
 
-
-                    <div class="check-wrap">
-                        <div class="check-box toggle">
-                            <input type="checkbox" id="check03">
-                            <label for="check03">
-                                <span>대표계좌설정</span>
-                                <div class="switch-btn">
-                                    <span class="off">OFF</span>
-                                    <span class="on">ON</span>
-                                    <div class="inside"></div>
-                                </div>
-                            </label>
-                        </div>
-
-                        <div class="check-box toggle">
-                            <input type="checkbox" id="check04">
-                            <label for="check04">
-                                <span>
-                                    출금중지설정
-                                    <div class="tooltip-wrap">
-                                        <a href="#none" class="tooltip-btn">?</a>
-                                        <div class="tooltip-txt">
-                                            <p>
-                                                출금중지설정을 ON으로<br>
-                                                변경 시 해당계좌는 출금 및<br>
-                                                이체가 불가능해요
-                                            </p>
-                                            <button type="button" class="tooltip-close">닫기</button>
-                                        </div>
-                                    </div>
-                                </span>
-                                <div class="switch-btn">
-                                    <span class="off">OFF</span>
-                                    <span class="on">ON</span>
-                                    <div class="inside"></div>
-                                </div>
-                            </label>
-                        </div>
+                    <div class="select-box on " tabindex="1" onclick="openPopupUp('lySel01');"><!--D: on 선택 됐을 경우-->
+                        <label for="">등록구분</label>
+                        <span class="option">주민등록번호</span>
                     </div>
 
-                    <div class="check-wrap">
-                        <ul class="radio-list">
-                            <li>
-                                <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked" class="monthly">
-                                <label for="radio01_2" class="">납입일 선택</label>
-                            </li>
-                            <li>
-                                <input type="radio" name="radio01" id="radio01_1" value="" onclick="">
-                                <label for="radio01_1" class="">매월 말일</label>
-                            </li>
-                        </ul>
-
-                        <div class="check-account">
-                            <input type="checkbox" id="chk01" name="check" value="">
-                            <label for="chk01">
-                                <span>주소(현재 거주지)와 동일</span>
-                            </label>
-                        </div>
+                    <div class="select-box" tabindex="1">
+                        <label for="">OTP일련번호</label>
+                        <span class="option">12⦁⦁⦁6780</span>
                     </div>
 
-                    <div class="toggle-wrap">
-                        <input type="checkbox" id="blncChk">
-                        <label for="blncChk">
-                            <!-- <span>잔액표기</span> -->
+                    <div id="" class="select-box error" tabindex="1" >
+                        <label for="">출금계좌</label>
+                        <span class="option ellipse-none" id="">미선택</span><!-- [D] 두줄처리 필요할때 클래스 ellipse-none 추가 -->
+                    </div>
+
+                    <p class="exp-txt">출금 가능금액 : <span id="">50,000,000원</span></p>
+                    
+                    <div class="check-box toggle">
+                        <input type="checkbox" id="check01">
+                        <label for="check01">
+                            <span>대표계좌설정</span>
                             <div class="switch-btn">
-                                <span class="off">숨김</span> <span class="on">표기</span>
+                                <span class="off">OFF</span>
+                                <span class="on">ON</span>
                                 <div class="inside"></div>
                             </div>
                         </label>
                     </div>
-                 
-                    <div class="check-wrap">
-                        <ul class="check-box">
-                            <li class="ars">
-                                <fieldset>
-                                    <input type="radio" id="Chk01_1" name="Chk01" value="" class="" >
-                                    <label for="Chk01_1">ARS인증</label>
-                                </fieldset>
-                            </li>
-                            <li class="app">
-                                <fieldset>
-                                    <input type="radio" id="Chk01_2" name="Chk01" value="" class="">
-                                    <label for="Chk01_2">스마트 앱인증</label>
-                                </fieldset>
-                            </li>
-                        </ul>
-                        <div class="txtbox-wrap">
-                            <p>전화번호를 선택 후 <strong>[ARS 요청]</strong> 버튼을 눌러주세요</p>
+
+                    <div class="check-box toggle">
+                        <input type="checkbox" id="check02">
+                        <label for="check02">
+                            <span>
+                                출금중지설정
+                                <div class="tooltip-wrap">
+                                    <a href="#none" class="tooltip-btn">?</a>
+                                    <div class="tooltip-txt">
+                                        <p>
+                                            출금중지설정을 ON으로<br>
+                                            변경 시 해당계좌는 출금 및<br>
+                                            이체가 불가능해요
+                                        </p>
+                                        <button type="button" class="tooltip-close">닫기</button>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="switch-btn">
+                                <span class="off">OFF</span>
+                                <span class="on">ON</span>
+                                <div class="inside"></div>
+                            </div>
+                        </label>
+                    </div>
+
+                </div>
+                <div class="form-wrap phone">
+                    <label for="" class="formlabel">휴대폰번호</label>
+                    <div class="input">
+                        <div class="select-wrap ">
+                            <div class="select-box type-line" tabindex="1">
+                                <span class="option">선택</span>
+                            </div>
                         </div>
+                        <span>
+                            <input type="tel" title="" class="inp " id="" name="" value="" placeholder="휴대폰번호 입력" maxlength="11" required  numberonly/>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="select-wrap">
+                    <div id="rolldate" class="select-box type2 type-dd" tabindex="1">
+                        <label for="">연월일</label>
+                        <span class="option">미선택</span>
                     </div>
 
-                    <div class="check-wrap">
-                        <ul class="check-box">
-                            <li class="mydata">
-                                <fieldset>
-                                    <input type="radio" id="Chk01_6" name="Chk01" value="" class="" checked="checked">
-                                    <label for="Chk01_6">마이데이터</label>
-                                </fieldset>
-                            </li>
-                            <li class="idcard">
-                                <fieldset>
-                                    <input type="radio" id="Chk01_7" name="Chk01" value="" class="">
-                                    <label for="Chk01_7">신분증</label>
-                                </fieldset>
-                            </li>
-                            <li class="camera">
-                                <fieldset>
-                                    <input type="radio" id="Chk01_8" name="Chk01" value="" class="">
-                                    <label for="Chk01_8">직접촬영</label>
-                                </fieldset>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="check-wrap">
-                        <ul class="check-box flex-col">
-                            <li class="certi">
-                                <fieldset>
-                                    <input type="radio" id="Chk01_3" name="Chk01" value="" >
-                                    <label for="Chk01_3">
-                                        <ul>
-                                            <li><span class="name">김예람(KIMYERAM)</span></li>
-                                            <li><span class="number">01223456789012</span></li>
-                                            <li><span class="issuer">발급자 : yessign</span></li>
-                                            <li><span class="deadline">만료일 : YYYY-MM-DD</span></li>
-                                        </ul>
-                                    </label>
-                                </fieldset>
-                            </li>
-                            <li class="certi">
-                                <fieldset>
-                                    <input type="radio" id="Chk01_4" name="Chk01" value="" class="" >
-                                    <label for="Chk01_4">
-                                        <ul>
-                                            <li><span class="name">김예람(KIMYERAM)</span></li>
-                                            <li><span class="number">01223456789012</span></li>
-                                            <li><span class="issuer">발급자 : yessign</span></li>
-                                            <li><span class="deadline">만료일 : YYYY-MM-DD</span></li>
-                                        </ul>
-                                    </label>
-                                </fieldset>
-                            </li>
-                            <li class="certi">
-                                <fieldset>
-                                    <input type="radio" id="Chk01_5" name="Chk01" value="" class="" >
-                                    <label for="Chk01_5">
-                                        <ul>
-                                            <li><span class="name">김예람(KIMYERAM)</span></li>
-                                            <li><span class="number">01223456789012</span></li>
-                                            <li><span class="issuer">발급자 : yessign</span></li>
-                                            <li><span class="deadline">만료일 : YYYY-MM-DD</span></li>
-                                        </ul>
-                                    </label>
-                                </fieldset>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="check-wrap">
-                        <ul class="check-box flex-col type2">
-                            <li class="elecId">
-                                <fieldset>
-                                    <input type="radio" id="Chk01_3" name="Chk01" value="">
-                                    <label for="Chk01_3">
-                                        전자금융 아이디
-                                    </label>
-                                </fieldset>
-                            </li>
-                            <li class="phoneCerti">
-                                <fieldset>
-                                    <input type="radio" id="Chk01_4" name="Chk01" value="" class="">
-                                    <label for="Chk01_4">
-                                        휴대폰 본인인증
-                                    </label>
-                                </fieldset>
-                            </li>
-                            <li class="etcCerti">
-                                <fieldset>
-                                    <input type="radio" id="Chk01_5" name="Chk01" value="" class="">
-                                    <label for="Chk01_5">
-                                       다른 인증수단
-                                    </label>
-                                </fieldset>
-                            </li>
-                        </ul>
+                    <div id="rolldate2" class="select-box type2 type-dd" tabindex="1">
+                        <label for="">일</label>
+                        <span class="option">미선택</span>
                     </div>
                     
-                    <div class="arrow-button-wrap">
-
-                        <ul class="arrow-button-list">
-                            <li><a href="#none" onclick="">종합통장대출 신청</a></li>
-                            <li style="display:none;"><a href="#none" onclick="">종합통장대출 해지</a></li> <!-- [퍼블] 종합통장대출 해지 버튼 -->
-                            <li><a href="#none" onclick="">계좌비밀번호 변경</a></li>
-                            <li><a href="#none" onclick="">통장사본</a></li>
-                        </ul>
-
+                    <div id="rolldate3" class="select-box type2 type-mm" tabindex="1">
+                        <label for="">월</label>
+                        <span class="option">미선택</span>
                     </div>
 
-                    <div class="terms-wrap">
-                        <div class="terms-area">
-                            <!-- <strong>금융거래목적 확인</strong> -->
-                            <div class="q-wrap">
-                                <div class="bg-box">
-                                    <p class="txt-style3">
-                                        타인으로부터 신용등급 상향, 대출 등의 목적으로 통장 개설을 요청받은 사실이 있습니까?
-                                    </p>
-                                </div>
-                                
-                                <ul>
-                                    <li>
-                                        <input type="radio" name="q4" id="q07" value="Y">
-                                        <label for="q07" class="rd">예</label>
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="q4" id="q08" value="N">
-                                        <label for="q08" class="rd">아니오</label>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div id="rolldate4" class="select-box type2 type-yy" tabindex="1">
+                        <label for="">년도</label>
+                        <span class="option">미선택</span>
                     </div>
 
-                    <div class="terms-wrap">
-                        <div class="terms-area">
-                            <!-- <strong>금융거래목적 확인</strong> -->
-                            <div class="q-wrap result-box">
-                                <p>타인에게서 통장 대여 요청을 받은 사실이 있으신가요?</p>
-                                <ul>
-                                    <li>
-                                        <input type="radio" name="q1" id="q31" value="Y">
-                                        <label for="q31" class="rd">예</label>
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="q1" id="q32" value="N">
-                                        <label for="q32" class="rd">아니오</label>
-                                    </li>
-                                </ul>
-                        
-                                <ul class="list-bull">
-                                    <li>가나다라</li>
-                                </ul>
-                                
-                            </div>
-                        </div>
+                    
+                    <div id="rolldate5" class="select-box type2 type-yy" tabindex="1">
+                        <label for="">연월</label>
+                        <span class="option">미선택</span>
                     </div>
 
                 </div>
 
-                <!-- // D: 등록구분 팝업 -->
-                <div id="lySel01" class="layerpopup layer-up"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
-                    <div class="content-wrap">
-                        <div class="pop-header">
-                            <h2 class="pop-title">등록구분</h2>
-                            <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+
+                <div class="check-wrap">
+                    <div class="check-box toggle">
+                        <input type="checkbox" id="check03">
+                        <label for="check03">
+                            <span>대표계좌설정</span>
+                            <div class="switch-btn">
+                                <span class="off">OFF</span>
+                                <span class="on">ON</span>
+                                <div class="inside"></div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="check-box toggle">
+                        <input type="checkbox" id="check04">
+                        <label for="check04">
+                            <span>
+                                출금중지설정
+                                <div class="tooltip-wrap">
+                                    <a href="#none" class="tooltip-btn">?</a>
+                                    <div class="tooltip-txt">
+                                        <p>
+                                            출금중지설정을 ON으로<br>
+                                            변경 시 해당계좌는 출금 및<br>
+                                            이체가 불가능해요
+                                        </p>
+                                        <button type="button" class="tooltip-close">닫기</button>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="switch-btn">
+                                <span class="off">OFF</span>
+                                <span class="on">ON</span>
+                                <div class="inside"></div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="check-wrap">
+                    <ul class="radio-list">
+                        <li>
+                            <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked" class="monthly">
+                            <label for="radio01_2" class="">납입일 선택</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio01" id="radio01_1" value="" onclick="">
+                            <label for="radio01_1" class="">매월 말일</label>
+                        </li>
+                    </ul>
+
+                    <div class="check-account">
+                        <input type="checkbox" id="chk01" name="check" value="">
+                        <label for="chk01">
+                            <span>주소(현재 거주지)와 동일</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="toggle-wrap">
+                    <input type="checkbox" id="blncChk">
+                    <label for="blncChk">
+                        <!-- <span>잔액표기</span> -->
+                        <div class="switch-btn">
+                            <span class="off">숨김</span> <span class="on">표기</span>
+                            <div class="inside"></div>
                         </div>
-                        <div class="ly-scroll-con ly-select">
-                            <ul class="ly-select-list">
-                                <li><button>주민등록번호</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                                <li><button>법인(기업) 사업자번호</button></li>
+                    </label>
+                </div>
+                
+                <div class="check-wrap">
+                    <ul class="check-box">
+                        <li class="ars">
+                            <fieldset>
+                                <input type="radio" id="Chk01_1" name="Chk01" value="" class="" >
+                                <label for="Chk01_1">ARS인증</label>
+                            </fieldset>
+                        </li>
+                        <li class="app">
+                            <fieldset>
+                                <input type="radio" id="Chk01_2" name="Chk01" value="" class="">
+                                <label for="Chk01_2">스마트 앱인증</label>
+                            </fieldset>
+                        </li>
+                    </ul>
+                    <div class="txtbox-wrap">
+                        <p>전화번호를 선택 후 <strong>[ARS 요청]</strong> 버튼을 눌러주세요</p>
+                    </div>
+                </div>
+
+                <div class="check-wrap">
+                    <ul class="check-box">
+                        <li class="mydata">
+                            <fieldset>
+                                <input type="radio" id="Chk01_6" name="Chk01" value="" class="" checked="checked">
+                                <label for="Chk01_6">마이데이터</label>
+                            </fieldset>
+                        </li>
+                        <li class="idcard">
+                            <fieldset>
+                                <input type="radio" id="Chk01_7" name="Chk01" value="" class="">
+                                <label for="Chk01_7">신분증</label>
+                            </fieldset>
+                        </li>
+                        <li class="camera">
+                            <fieldset>
+                                <input type="radio" id="Chk01_8" name="Chk01" value="" class="">
+                                <label for="Chk01_8">직접촬영</label>
+                            </fieldset>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="check-wrap">
+                    <ul class="check-box flex-col">
+                        <li class="certi">
+                            <fieldset>
+                                <input type="radio" id="Chk01_3" name="Chk01" value="" >
+                                <label for="Chk01_3">
+                                    <ul>
+                                        <li><span class="name">김예람(KIMYERAM)</span></li>
+                                        <li><span class="number">01223456789012</span></li>
+                                        <li><span class="issuer">발급자 : yessign</span></li>
+                                        <li><span class="deadline">만료일 : YYYY-MM-DD</span></li>
+                                    </ul>
+                                </label>
+                            </fieldset>
+                        </li>
+                        <li class="certi">
+                            <fieldset>
+                                <input type="radio" id="Chk01_4" name="Chk01" value="" class="" >
+                                <label for="Chk01_4">
+                                    <ul>
+                                        <li><span class="name">김예람(KIMYERAM)</span></li>
+                                        <li><span class="number">01223456789012</span></li>
+                                        <li><span class="issuer">발급자 : yessign</span></li>
+                                        <li><span class="deadline">만료일 : YYYY-MM-DD</span></li>
+                                    </ul>
+                                </label>
+                            </fieldset>
+                        </li>
+                        <li class="certi">
+                            <fieldset>
+                                <input type="radio" id="Chk01_5" name="Chk01" value="" class="" >
+                                <label for="Chk01_5">
+                                    <ul>
+                                        <li><span class="name">김예람(KIMYERAM)</span></li>
+                                        <li><span class="number">01223456789012</span></li>
+                                        <li><span class="issuer">발급자 : yessign</span></li>
+                                        <li><span class="deadline">만료일 : YYYY-MM-DD</span></li>
+                                    </ul>
+                                </label>
+                            </fieldset>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="check-wrap">
+                    <ul class="check-box flex-col type2">
+                        <li class="elecId">
+                            <fieldset>
+                                <input type="radio" id="Chk01_3" name="Chk01" value="">
+                                <label for="Chk01_3">
+                                    전자금융 아이디
+                                </label>
+                            </fieldset>
+                        </li>
+                        <li class="phoneCerti">
+                            <fieldset>
+                                <input type="radio" id="Chk01_4" name="Chk01" value="" class="">
+                                <label for="Chk01_4">
+                                    휴대폰 본인인증
+                                </label>
+                            </fieldset>
+                        </li>
+                        <li class="etcCerti">
+                            <fieldset>
+                                <input type="radio" id="Chk01_5" name="Chk01" value="" class="">
+                                <label for="Chk01_5">
+                                    다른 인증수단
+                                </label>
+                            </fieldset>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="arrow-button-wrap">
+
+                    <ul class="arrow-button-list">
+                        <li><a href="#none" onclick="">종합통장대출 신청</a></li>
+                        <li style="display:none;"><a href="#none" onclick="">종합통장대출 해지</a></li> <!-- [퍼블] 종합통장대출 해지 버튼 -->
+                        <li><a href="#none" onclick="">계좌비밀번호 변경</a></li>
+                        <li><a href="#none" onclick="">통장사본</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="terms-wrap">
+                    <div class="terms-area">
+                        <!-- <strong>금융거래목적 확인</strong> -->
+                        <div class="q-wrap">
+                            <div class="bg-box">
+                                <p class="txt-style3">
+                                    타인으로부터 신용등급 상향, 대출 등의 목적으로 통장 개설을 요청받은 사실이 있습니까?
+                                </p>
+                            </div>
+                            
+                            <ul>
+                                <li>
+                                    <input type="radio" name="q4" id="q07" value="Y">
+                                    <label for="q07" class="rd">예</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="q4" id="q08" value="N">
+                                    <label for="q08" class="rd">아니오</label>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <!-- D: 등록구분 팝업 // -->
 
-                
+                <div class="terms-wrap">
+                    <div class="terms-area">
+                        <!-- <strong>금융거래목적 확인</strong> -->
+                        <div class="q-wrap result-box">
+                            <p>타인에게서 통장 대여 요청을 받은 사실이 있으신가요?</p>
+                            <ul>
+                                <li>
+                                    <input type="radio" name="q1" id="q31" value="Y">
+                                    <label for="q31" class="rd">예</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="q1" id="q32" value="N">
+                                    <label for="q32" class="rd">아니오</label>
+                                </li>
+                            </ul>
+                    
+                            <ul class="list-bull">
+                                <li>가나다라</li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <!-- //e: contents -->
+
+            <!-- // D: 등록구분 팝업 -->
+            <div id="lySel01" class="layerpopup layer-up"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">등록구분</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con ly-select">
+                        <ul class="ly-select-list">
+                            <li><button>주민등록번호</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                            <li><button>법인(기업) 사업자번호</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- D: 등록구분 팝업 // -->
+
             
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- //e: contents -->
+        
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

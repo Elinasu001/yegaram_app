@@ -65,166 +65,164 @@
 	</header>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap grid"><!--D : 리스트 하단 고정으로 grid 추가 -->
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
+    <!--contentsWrap -->
+    <div class="contentsWrap grid"><!--D : 리스트 하단 고정으로 grid 추가 -->
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
 
-                    <section><!--D : section 추가 (타이틀/약관) -->
+                <section><!--D : section 추가 (타이틀/약관) -->
 
-                        <div class="tit-wrap">
-                            <p class="txt"><strong>간편한도조회</strong>를 위해<br/><strong>약관에 동의</strong>해 주세요</p>
+                    <div class="tit-wrap">
+                        <p class="txt"><strong>간편한도조회</strong>를 위해<br/><strong>약관에 동의</strong>해 주세요</p>
+                    </div>
+
+                    <div class="terms-area"><!--D : div 변경 -->
+    
+                        <div class="terms-wrap level1 chk-all">
+                            <fieldset>
+                                <input type="checkbox" id="allChk01" name="allChk01" value="" class="check all">
+                                <label for="allChk01"><span>약관에 모두 동의할게요</span></label>
+                            </fieldset>
                         </div>
-
-                        <div class="terms-area"><!--D : div 변경 -->
-        
-                            <div class="terms-wrap level1 chk-all">
-                                <fieldset>
-                                    <input type="checkbox" id="allChk01" name="allChk01" value="" class="check all">
-                                    <label for="allChk01"><span>약관에 모두 동의할게요</span></label>
-                                </fieldset>
-                            </div>
-        
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chkEach01" name="check" value="" class="check">
-                                    <label for="chkEach01"><span>[필수] 개인(신용)정보 수집·이용·제공·조회 동의서</span></label>
-                                </fieldset>
-                            </div>
-        
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chkEach02" name="check" value="" class="check">
-                                    <label for="chkEach02"><span>[필수] 개인(신용)정보 수집·이용·제공 동의서(여신금융거래)</span></label>
-                                </fieldset>
-                            </div>
-        
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chkEach03" name="check" value="" class="check all">
-                                    <label for="chkEach03"><span>[선택] 개인(신용)정보 수집·이용·제공 동의서(상품서비스 안내)</span></label>
-                                </fieldset>
-                                <div class="etc level3">
-                                    <div class="terms-wrap">
-                                        <input type="checkbox" id="svcCheck01" name="check" value="" class="check">
-                                        <label for="svcCheck01">문자</label>
-                                    </div>
-                                    <div class="terms-wrap">
-                                        <input type="checkbox" id="svcCheck02" name="check" value="" class="check">
-                                        <label for="svcCheck02">이메일</label>
-                                    </div>
-                                    <div class="terms-wrap">
-                                        <input type="checkbox" id="svcCheck03" name="check" value="" class="check">
-                                        <label for="svcCheck03">전화</label>
-                                    </div>
-                                    <div class="terms-wrap">
-                                        <input type="checkbox" id="svcCheck04" name="check" value="" class="check">
-                                        <label for="svcCheck04">DM</label>
-                                    </div>
+    
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chkEach01" name="check" value="" class="check">
+                                <label for="chkEach01"><span>[필수] 개인(신용)정보 수집·이용·제공·조회 동의서</span></label>
+                            </fieldset>
+                        </div>
+    
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chkEach02" name="check" value="" class="check">
+                                <label for="chkEach02"><span>[필수] 개인(신용)정보 수집·이용·제공 동의서(여신금융거래)</span></label>
+                            </fieldset>
+                        </div>
+    
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chkEach03" name="check" value="" class="check all">
+                                <label for="chkEach03"><span>[선택] 개인(신용)정보 수집·이용·제공 동의서(상품서비스 안내)</span></label>
+                            </fieldset>
+                            <div class="etc level3">
+                                <div class="terms-wrap">
+                                    <input type="checkbox" id="svcCheck01" name="check" value="" class="check">
+                                    <label for="svcCheck01">문자</label>
                                 </div>
-        
+                                <div class="terms-wrap">
+                                    <input type="checkbox" id="svcCheck02" name="check" value="" class="check">
+                                    <label for="svcCheck02">이메일</label>
+                                </div>
+                                <div class="terms-wrap">
+                                    <input type="checkbox" id="svcCheck03" name="check" value="" class="check">
+                                    <label for="svcCheck03">전화</label>
+                                </div>
+                                <div class="terms-wrap">
+                                    <input type="checkbox" id="svcCheck04" name="check" value="" class="check">
+                                    <label for="svcCheck04">DM</label>
+                                </div>
                             </div>
-        
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chkEach04" name="check" value="" class="check">
-                                    <label for="chkEach04"><span>[선택] 대출거절사유 고지에 관한 사항</span></label>
-                                </fieldset>
-                            </div>
-        
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chkEach04" name="check" value="" class="check">
-                                    <label for="chkEach04"><span>[필수] 가계대출 상품설명서</span></label>
-                                </fieldset>
-                            </div>
-        
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chkEach05" name="check" value="" class="check">
-                                    <label for="chkEach05"><span>[필수] 개인(신용)정보 조회동의서(서민금융진흥원用)</span></label>
-                                </fieldset>
-                            </div>
-        
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chkEach06" name="check" value="" class="check">
-                                    <label for="chkEach06"><span>[필수] 개인(신용)정보의 수집·이용·제공 및 행정·공공기관 및 금융회사 정보제공 동의(서민금융진흥원)</span></label>
-                                </fieldset>
-                            </div>
-        
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chkEach07" name="check" value="" class="check">
-                                    <label for="chkEach07"><span>[필수] 개인(신용)정보 및 기업(신용)정보 조회·수집·이용·제공과 행정정보공동이용, 전자금융거래확인서 발급을 위한 동의서 관리</span></label>
-                                </fieldset>
-                            </div>
-        
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chkEach08" name="check" value="" class="check">
-                                    <label for="chkEach08"><span>[필수] 계약 체결이행 등을 위한 필수 동의서 (개인금융성신용보험용)</span></label>
-                                </fieldset>
-                            </div>
-        
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chkEach09" name="check" value="" class="check">
-                                    <label for="chkEach09"><span>[필수] CMS출금이체 동의</span></label>
-                                </fieldset>
-                            </div>
-        
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chkEach10" name="check" value="" class="check">
-                                    <label for="chkEach10"><span>[필수] 개인(신용)정보 제3자 제공동의서(통신관련정보)</span></label>
-                                </fieldset>
-                            </div>
-        
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chkEach11" name="check" value="" class="check">
-                                    <label for="chkEach11"><span>[선택] 개인(신용)정보 수집·이용 동의서(보증료 우대 서비스)</span></label>
-                                </fieldset>
-                            </div>
-        
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chkEach12" name="check" value="" class="check">
-                                    <label for="chkEach12"><span>[선택] 개인(신용)정보 수집·이용 동의서(상품서비스 안내 등)</span></label>
-                                </fieldset>
-                            </div>
-        
+    
                         </div>
-                    </section>
-                    
-                    <section><!--D : section 추가 및 list-bull 구조 변경 (리스트)-->
-                        <div class="list-bull">
-                            <div class="border"></div>
-                            <strong>알아두세요</strong>
-                            <ul>
-                                <li>약관 동의 시, 저금리 정책 상품의 결과 조회 및 취급이 가능하며 동의에 의한 개인(신용) 정보 조회는 귀하의 신용등급에 영향을 미치지 않아요</li>
-                                <li>단, 당행의 신용평가 시스템 및 해당 정책 상품 실행기관의 심사 기준과 개인의 신용도에 따라 대출 여부가 결정돼요</li>
-                            </ul>
+    
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chkEach04" name="check" value="" class="check">
+                                <label for="chkEach04"><span>[선택] 대출거절사유 고지에 관한 사항</span></label>
+                            </fieldset>
                         </div>
-                    </section>
+    
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chkEach04" name="check" value="" class="check">
+                                <label for="chkEach04"><span>[필수] 가계대출 상품설명서</span></label>
+                            </fieldset>
+                        </div>
+    
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chkEach05" name="check" value="" class="check">
+                                <label for="chkEach05"><span>[필수] 개인(신용)정보 조회동의서(서민금융진흥원用)</span></label>
+                            </fieldset>
+                        </div>
+    
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chkEach06" name="check" value="" class="check">
+                                <label for="chkEach06"><span>[필수] 개인(신용)정보의 수집·이용·제공 및 행정·공공기관 및 금융회사 정보제공 동의(서민금융진흥원)</span></label>
+                            </fieldset>
+                        </div>
+    
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chkEach07" name="check" value="" class="check">
+                                <label for="chkEach07"><span>[필수] 개인(신용)정보 및 기업(신용)정보 조회·수집·이용·제공과 행정정보공동이용, 전자금융거래확인서 발급을 위한 동의서 관리</span></label>
+                            </fieldset>
+                        </div>
+    
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chkEach08" name="check" value="" class="check">
+                                <label for="chkEach08"><span>[필수] 계약 체결이행 등을 위한 필수 동의서 (개인금융성신용보험용)</span></label>
+                            </fieldset>
+                        </div>
+    
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chkEach09" name="check" value="" class="check">
+                                <label for="chkEach09"><span>[필수] CMS출금이체 동의</span></label>
+                            </fieldset>
+                        </div>
+    
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chkEach10" name="check" value="" class="check">
+                                <label for="chkEach10"><span>[필수] 개인(신용)정보 제3자 제공동의서(통신관련정보)</span></label>
+                            </fieldset>
+                        </div>
+    
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chkEach11" name="check" value="" class="check">
+                                <label for="chkEach11"><span>[선택] 개인(신용)정보 수집·이용 동의서(보증료 우대 서비스)</span></label>
+                            </fieldset>
+                        </div>
+    
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chkEach12" name="check" value="" class="check">
+                                <label for="chkEach12"><span>[선택] 개인(신용)정보 수집·이용 동의서(상품서비스 안내 등)</span></label>
+                            </fieldset>
+                        </div>
+    
+                    </div>
+                </section>
+                
+                <section><!--D : section 추가 및 list-bull 구조 변경 (리스트)-->
+                    <div class="list-bull">
+                        <div class="border"></div>
+                        <strong>알아두세요</strong>
+                        <ul>
+                            <li>약관 동의 시, 저금리 정책 상품의 결과 조회 및 취급이 가능하며 동의에 의한 개인(신용) 정보 조회는 귀하의 신용등급에 영향을 미치지 않아요</li>
+                            <li>단, 당행의 신용평가 시스템 및 해당 정책 상품 실행기관의 심사 기준과 개인의 신용도에 따라 대출 여부가 결정돼요</li>
+                        </ul>
+                    </div>
+                </section>
 
-                </div>
             </div>
-            <!-- //contents -->
-
-            <div class="fixed-btn-wrap">
-                <div class="btn-wrap flexCol"><!--D: flexCol 클래스 추가-->
-                    <a href="#none" class="btn disabled" id="procBtn">다음</a>
-                    <a href="#none" class="btn txt">그만하기</a><!--D: btn txt 클래스 변경 및 위치 변경-->
-                </div>
-            </div>
-
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- //contents -->
+
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap flexCol"><!--D: flexCol 클래스 추가-->
+                <a href="#none" class="btn disabled" id="procBtn">다음</a>
+                <a href="#none" class="btn txt">그만하기</a><!--D: btn txt 클래스 변경 및 위치 변경-->
+            </div>
+        </div>
+
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

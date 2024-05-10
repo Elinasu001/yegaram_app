@@ -67,88 +67,86 @@
     </header>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
-                    <div class="tit-wrap">
-                        <p class="txt"><b>자동이체 등록을 위해<br/>약관에 동의해 주세요</b></p>
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+                <div class="tit-wrap">
+                    <p class="txt"><b>자동이체 등록을 위해<br/>약관에 동의해 주세요</b></p>
+                </div>
+                <section class="terms-area" id="validateArea">
+
+                    <div class="terms-wrap level1 chk-all">
+                        <fieldset>
+                            <input type="checkbox" id="allChk01" class="check all"/>
+                            <label for="allChk01"><span>약관에 모두 동의할게요</span></label>
+                        </fieldset>
                     </div>
-                    <section class="terms-area" id="validateArea">
-
-                        <div class="terms-wrap level1 chk-all">
-                            <fieldset>
-                                <input type="checkbox" id="allChk01" class="check all"/>
-                                <label for="allChk01"><span>약관에 모두 동의할게요</span></label>
-                            </fieldset>
-                        </div>
-                        <!-- 
-                        약관목록반복
-                        약관상태저장은 본 페이지에서 해야 하므로 / 펑션을 하나 제공
-                        전체동의는 조회 카테고리로 처리 (상품코드.pdf)
-                        -->
-                        
-                        <!-- S: 자동이체 이용약관_자동이체 약관 -->
-                        <div class="terms-wrap level2">
-                            <fieldset>
-                                <input type="checkbox" id="chk02" name="check" value="" class="check"/>
-                                <label for="chk02"><span>[필수] 계좌간 자동이체 약관 </span></label>
-                            </fieldset>
-                        </div>
-                        <!-- S: 자동이체 이용약관_자동이체 약관 -->
+                    <!-- 
+                    약관목록반복
+                    약관상태저장은 본 페이지에서 해야 하므로 / 펑션을 하나 제공
+                    전체동의는 조회 카테고리로 처리 (상품코드.pdf)
+                    -->
+                    
+                    <!-- S: 자동이체 이용약관_자동이체 약관 -->
+                    <div class="terms-wrap level2">
+                        <fieldset>
+                            <input type="checkbox" id="chk02" name="check" value="" class="check"/>
+                            <label for="chk02"><span>[필수] 계좌간 자동이체 약관 </span></label>
+                        </fieldset>
+                    </div>
+                    <!-- S: 자동이체 이용약관_자동이체 약관 -->
 
 
-                        <!-- S: 자동이체 이용약관_자동이체(CMS)약관 -->
-                        <div class="terms-wrap level2">
-                            <fieldset>
-                                <input type="checkbox" id="chk01" name="check" value="" class="check"/>
-                                <label for="chk01"><span>[필수] 개인정보 수집 및 이용 동의 </span></label>
-                            </fieldset>
-                        </div>
-                        <div class="terms-wrap level2">
-                            <fieldset>
-                                <input type="checkbox" id="chk03" name="check" value="" class="check"/>
-                                <label for="chk03"><span>[필수] 개인정보 제3자 제공 동의</span></label>
-                            </fieldset>
-                        </div>
-                        <div class="terms-wrap level2">
-                            <fieldset>
-                                <input type="checkbox" id="chk04" name="check" value="" class="check"/>
-                                <label for="chk04"><span>[필수] 출금이체 동의 및 해지사실 통지안내</span></label>
-                            </fieldset>
-                        </div>
-                        <!-- S: 자동이체 이용약관_자동이체(CMS)약관 -->
-                    </section>
+                    <!-- S: 자동이체 이용약관_자동이체(CMS)약관 -->
+                    <div class="terms-wrap level2">
+                        <fieldset>
+                            <input type="checkbox" id="chk01" name="check" value="" class="check"/>
+                            <label for="chk01"><span>[필수] 개인정보 수집 및 이용 동의 </span></label>
+                        </fieldset>
+                    </div>
+                    <div class="terms-wrap level2">
+                        <fieldset>
+                            <input type="checkbox" id="chk03" name="check" value="" class="check"/>
+                            <label for="chk03"><span>[필수] 개인정보 제3자 제공 동의</span></label>
+                        </fieldset>
+                    </div>
+                    <div class="terms-wrap level2">
+                        <fieldset>
+                            <input type="checkbox" id="chk04" name="check" value="" class="check"/>
+                            <label for="chk04"><span>[필수] 출금이체 동의 및 해지사실 통지안내</span></label>
+                        </fieldset>
+                    </div>
+                    <!-- S: 자동이체 이용약관_자동이체(CMS)약관 -->
+                </section>
 
-                    <!-- S: 자동이체 이용약관_자동이체 약관  -->
-                    <section class="list-bull">
-                        <div class="border"></div>
-                        <strong>알아두세요</strong>
-                        <ul>
-                            <li>약관 내용을 상세히 확인해 주세요</li>
-                            <li>매월 이체 설정된 일자에 출금되며 당행 계좌 입금 내역은<br/>
-                                이체 일자의 다음 영업일 14시 이후 확인 가능해요</li>
-                        </ul>
-                    </section>
-                     <!-- S: 자동이체 이용약관_자동이체 약관 -->
+                <!-- S: 자동이체 이용약관_자동이체 약관  -->
+                <section class="list-bull">
+                    <div class="border"></div>
+                    <strong>알아두세요</strong>
+                    <ul>
+                        <li>약관 내용을 상세히 확인해 주세요</li>
+                        <li>매월 이체 설정된 일자에 출금되며 당행 계좌 입금 내역은<br/>
+                            이체 일자의 다음 영업일 14시 이후 확인 가능해요</li>
+                    </ul>
+                </section>
+                    <!-- S: 자동이체 이용약관_자동이체 약관 -->
 
-                </div>
             </div>
-            <!-- //contents -->
-
-            <div class="fixed-btn-wrap">
-                <div class="btn-wrap flexCol">
-                    <a href="#none" class="btn disabled" id="procBtn">다음</a>
-                    <a href="#none" class="btn txt">그만하기</a>
-                </div>
-            </div>
-    
-
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- //contents -->
+
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap flexCol">
+                <a href="#none" class="btn disabled" id="procBtn">다음</a>
+                <a href="#none" class="btn txt">그만하기</a>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

@@ -67,270 +67,268 @@
     </header>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
-                    <!--S: 이체정보 입력-->
-                    <section>
-                        <div class="tit-wrap">
-                            <p class="txt"><strong>이체 결과 조회를 위해<br/>정보를 입력해 주세요</strong></p>
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+                <!--S: 이체정보 입력-->
+                <section>
+                    <div class="tit-wrap">
+                        <p class="txt"><strong>이체 결과 조회를 위해<br/>정보를 입력해 주세요</strong></p>
+                    </div>
+
+                    <div id="" class="select-wrap">
+
+                        <div class="select-box " tabindex="1" onclick="openPopupUp('transGbnPop');"><!--D: on 클래스 : 값이 들어갈 경우 on 클래스 적용-->
+                            <label for="">이체 구분</label>
+                            <span class="option" id="">미선택</span>
                         </div>
 
-                        <div id="" class="select-wrap">
+                        <div class="select-box" tabindex="1">
+                            <label for="">조회 계좌</label>
+                            <span class="option" id="">미선택</span>
+                        </div>
+                    </div>
 
-                            <div class="select-box " tabindex="1" onclick="openPopupUp('transGbnPop');"><!--D: on 클래스 : 값이 들어갈 경우 on 클래스 적용-->
-                                <label for="">이체 구분</label>
-                                <span class="option" id="">미선택</span>
-                            </div>
+                    <div id="" class="select-wrap">
 
-                            <div class="select-box" tabindex="1">
-                                <label for="">조회 계좌</label>
-                                <span class="option" id="">미선택</span>
-                            </div>
+                        <div class="select-box on" tabindex="1"><!--D: on 클래스 : 값이 들어갈 경우 on 클래스 적용-->
+                            <label for="">이체 구분</label>
+                            <span class="option" id="">즉시이체</span><!--D: 즉시이체, 지연이체, 예약이체-->
                         </div>
 
-                        <div id="" class="select-wrap">
-
-                            <div class="select-box on" tabindex="1"><!--D: on 클래스 : 값이 들어갈 경우 on 클래스 적용-->
-                                <label for="">이체 구분</label>
-                                <span class="option" id="">즉시이체</span><!--D: 즉시이체, 지연이체, 예약이체-->
-                            </div>
-
-                            <div class="select-box on" tabindex="1">
-                                <label for="">조회 계좌</label>
-                                <span class="option" id="">101-1245-1243-21</span>
-                            </div>
+                        <div class="select-box on" tabindex="1">
+                            <label for="">조회 계좌</label>
+                            <span class="option" id="">101-1245-1243-21</span>
                         </div>
-                    </section>
-                    <!--E: 이체정보 입력-->
+                    </div>
+                </section>
+                <!--E: 이체정보 입력-->
 
-                    <!--S: 이체 조회결과-->
-                    <section>
+                <!--S: 이체 조회결과-->
+                <section>
+                    
+
+                    <div class="inquiry-choice-area type-spread" id="dateInqDiv">
+                        <button type="button" class="btn-inquiry-choice">
+                            <span id="">3개월</span>
+                            <span id="">전체</span>
+                            <span id="">최신순</span>
+                        </button>
+                    </div>
+
+                    <!-- S: 조회결과 노출 영역 -->
+                    <div class="inquiry-result-area">
+                        <div class="inquiry-summary type-spread" id="inqDateDiv" style="display:block;"> <!-- [퍼블] .type-spread 추가 -->
+                            <p class="period" id="dateText">2023. 03. 15 ~ 2023. 06. 15</p>
+                            <span class="num"><strong id="totalCnt">N</strong>건</span>
+                        </div>
+
+                        <ul class="data-list-wrap" id="transRsltData"></ul>
                         
+                        <ul class="data-list-wrap" id="transResult" style="display:block;">
+                            <!-- 반복부 : 즉시 -->
+                            <li>
+                                <ul class="data-list">
+                                    <li class="date"><span>2023.05.04 13:24:56</span></li><!-- [퍼블-2] date 클래스 위치 li로 변경 -->
 
-                        <div class="inquiry-choice-area type-spread" id="dateInqDiv">
-                            <button type="button" class="btn-inquiry-choice">
-                                <span id="">3개월</span>
-                                <span id="">전체</span>
-                                <span id="">최신순</span>
-                            </button>
-                        </div>
+                                    <li>
+                                        <span class="tit">출금계좌</span>
+                                        <span class="txt">123-45-678-90</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">받는 분</span>
+                                        <span class="txt">홍길동</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">입금 계좌</span>
+                                        <span class="txt">
+                                            우체국<br/>
+                                            01012345678
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">이체 금액</span>
+                                        <span class="txt">500,000원</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">이체 예정 일시</span>
+                                        <span class="txt">2023.06.12 12:30</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">수수료</span>
+                                        <span class="txt">0원</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">이체 결과</span>
+                                        <span class="txt standby">대기</span> <!--D: standby / error /  success 클래스 : 대기 / 오류 / 정상-->
+                                    </li>
+                                </ul>
+                                <!-- [D] 결과 상태 대기인 경우 노출되는 버튼 -->
+                                <div class="btn-cont-wrap">
+                                    <a href="#none" class="btn btn-gray" >등록 취소하기</a>
+                                </div>
+                                <!-- // [D] 결과 상태 대기인 경우 노출되는 버튼 -->
+                            </li>
+                            <li>
+                                <ul class="data-list">
+                                    <li class="date"><span>2023.05.04 13:24:56</span></li><!-- [퍼블-2] date 클래스 위치 li로 변경 -->
 
-                        <!-- S: 조회결과 노출 영역 -->
-                        <div class="inquiry-result-area">
-                            <div class="inquiry-summary type-spread" id="inqDateDiv" style="display:block;"> <!-- [퍼블] .type-spread 추가 -->
-                                <p class="period" id="dateText">2023. 03. 15 ~ 2023. 06. 15</p>
-                                <span class="num"><strong id="totalCnt">N</strong>건</span>
-                            </div>
+                                    <li>
+                                        <span class="tit">출금계좌</span>
+                                        <span class="txt">123-45-678-90</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">받는 분</span>
+                                        <span class="txt">홍길동</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">입금 계좌</span>
+                                        <span class="txt">
+                                            우체국<br/>
+                                            01012345678
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">이체 금액</span>
+                                        <span class="txt">500,000원</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">이체 예정 일시</span>
+                                        <span class="txt">2023.06.12 12:30</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">수수료</span>
+                                        <span class="txt">0원</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">이체 결과</span>
+                                        <span class="txt success">정상</span>
+                                    </li>
+                                </ul>
+                                <!-- [D] 결과 상태 대기인 경우 노출되는 버튼 -->
+                                <div class="btn-cont-wrap">
+                                    <a href="#none" class="btn btn-gray" >등록 취소하기</a>
+                                </div>
+                                <!-- // [D] 결과 상태 대기인 경우 노출되는 버튼 -->
+                            </li>
+                            <li>
+                                <ul class="data-list">
+                                    <li class="date"><span>2023.05.04 13:24:56</span></li><!-- [퍼블-2] date 클래스 위치 li로 변경 -->
 
-                            <ul class="data-list-wrap" id="transRsltData"></ul>
-                            
-                            <ul class="data-list-wrap" id="transResult" style="display:block;">
-                                <!-- 반복부 : 즉시 -->
-                                <li>
-                                    <ul class="data-list">
-                                        <li class="date"><span>2023.05.04 13:24:56</span></li><!-- [퍼블-2] date 클래스 위치 li로 변경 -->
-
-                                        <li>
-                                            <span class="tit">출금계좌</span>
-                                            <span class="txt">123-45-678-90</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">받는 분</span>
-                                            <span class="txt">홍길동</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">입금 계좌</span>
-                                            <span class="txt">
-                                                우체국<br/>
-                                                01012345678
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">이체 금액</span>
-                                            <span class="txt">500,000원</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">이체 예정 일시</span>
-                                            <span class="txt">2023.06.12 12:30</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">수수료</span>
-                                            <span class="txt">0원</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">이체 결과</span>
-                                            <span class="txt standby">대기</span> <!--D: standby / error /  success 클래스 : 대기 / 오류 / 정상-->
-                                        </li>
-                                    </ul>
-                                    <!-- [D] 결과 상태 대기인 경우 노출되는 버튼 -->
-                                    <div class="btn-cont-wrap">
-                                        <a href="#none" class="btn btn-gray" >등록 취소하기</a>
-                                    </div>
-                                    <!-- // [D] 결과 상태 대기인 경우 노출되는 버튼 -->
-                                </li>
-                                <li>
-                                    <ul class="data-list">
-                                        <li class="date"><span>2023.05.04 13:24:56</span></li><!-- [퍼블-2] date 클래스 위치 li로 변경 -->
-
-                                        <li>
-                                            <span class="tit">출금계좌</span>
-                                            <span class="txt">123-45-678-90</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">받는 분</span>
-                                            <span class="txt">홍길동</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">입금 계좌</span>
-                                            <span class="txt">
-                                                우체국<br/>
-                                                01012345678
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">이체 금액</span>
-                                            <span class="txt">500,000원</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">이체 예정 일시</span>
-                                            <span class="txt">2023.06.12 12:30</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">수수료</span>
-                                            <span class="txt">0원</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">이체 결과</span>
-                                            <span class="txt success">정상</span>
-                                        </li>
-                                    </ul>
-                                    <!-- [D] 결과 상태 대기인 경우 노출되는 버튼 -->
-                                    <div class="btn-cont-wrap">
-                                        <a href="#none" class="btn btn-gray" >등록 취소하기</a>
-                                    </div>
-                                    <!-- // [D] 결과 상태 대기인 경우 노출되는 버튼 -->
-                                </li>
-                                <li>
-                                    <ul class="data-list">
-                                        <li class="date"><span>2023.05.04 13:24:56</span></li><!-- [퍼블-2] date 클래스 위치 li로 변경 -->
-
-                                        <li>
-                                            <span class="tit">출금계좌</span>
-                                            <span class="txt">123-45-678-90</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">받는 분</span>
-                                            <span class="txt">홍길동</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">입금 계좌</span>
-                                            <span class="txt">
-                                                우체국<br/>
-                                                01012345678
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">이체 금액</span>
-                                            <span class="txt">500,000원</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">이체 예정 일시</span>
-                                            <span class="txt">2023.06.12 12:30</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">수수료</span>
-                                            <span class="txt">0원</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">이체 결과</span>
-                                            <span class="txt error">오류</span>
-                                        </li>
-                                        <li>
-                                            <span class="tit">오류 내용</span>
-                                            <span class="txt">
-                                                거래금약(월불입금액<br/>
-                                                단위아님)(을)를 <br/>
-                                                확인하시기 바랍니다. 
-                                            </span>
-                                        </li>
-                                    </ul>
-                                    <!-- [D] 결과 상태 대기인 경우 노출되는 버튼 -->
-                                    <div class="btn-cont-wrap">
-                                        <a href="#none" class="btn btn-gray" >등록 취소하기</a>
-                                    </div>
-                                    <!-- // [D] 결과 상태 대기인 경우 노출되는 버튼 -->
-                                </li>
-                                <!-- //반복부 -->
-                            </ul>
-                            <!-- S : 조회 결과 없음 -->
-                            <div class="result-area nodata" id="transRsltNoData" style="display:block;"><!-- [퍼블-2] 클래스 변경 -->
-                                <p>조회된 이체 내역이 없어요</p>
-                            </div>
-                            <!-- E : 조회 결과 없음 -->
-                        </div>
-                        <!-- E: 조회결과 노출 영역 -->
-                    </section>
-                    <!--E: 이체 조회결과-->
-
-                </div>
-            </div>
-            <!-- //contents -->
-
-            <!--S: 이체구분 선택 팝(팝업)-->
-            <div id="transGbnPop" class="layerpopup layer-up show">
-                <div class="content-wrap">
-                    <div class="pop-header">
-                        <h2 class="pop-title">이체구분</h2>
-                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
-                    </div>
-                    <div class="ly-scroll-con ly-select">
-                        <ul class="ly-select-list">
-                            <li><button>즉시이체</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                            <li><button>지연이체</button></li>
-                            <li><button>예약이체</button></li>
+                                    <li>
+                                        <span class="tit">출금계좌</span>
+                                        <span class="txt">123-45-678-90</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">받는 분</span>
+                                        <span class="txt">홍길동</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">입금 계좌</span>
+                                        <span class="txt">
+                                            우체국<br/>
+                                            01012345678
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">이체 금액</span>
+                                        <span class="txt">500,000원</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">이체 예정 일시</span>
+                                        <span class="txt">2023.06.12 12:30</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">수수료</span>
+                                        <span class="txt">0원</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">이체 결과</span>
+                                        <span class="txt error">오류</span>
+                                    </li>
+                                    <li>
+                                        <span class="tit">오류 내용</span>
+                                        <span class="txt">
+                                            거래금약(월불입금액<br/>
+                                            단위아님)(을)를 <br/>
+                                            확인하시기 바랍니다. 
+                                        </span>
+                                    </li>
+                                </ul>
+                                <!-- [D] 결과 상태 대기인 경우 노출되는 버튼 -->
+                                <div class="btn-cont-wrap">
+                                    <a href="#none" class="btn btn-gray" >등록 취소하기</a>
+                                </div>
+                                <!-- // [D] 결과 상태 대기인 경우 노출되는 버튼 -->
+                            </li>
+                            <!-- //반복부 -->
                         </ul>
+                        <!-- S : 조회 결과 없음 -->
+                        <div class="result-area nodata" id="transRsltNoData" style="display:block;"><!-- [퍼블-2] 클래스 변경 -->
+                            <p>조회된 이체 내역이 없어요</p>
+                        </div>
+                        <!-- E : 조회 결과 없음 -->
                     </div>
-                </div>
-            </div>
-            <!--E: 이체구분 선택 팝(팝업)-->
+                    <!-- E: 조회결과 노출 영역 -->
+                </section>
+                <!--E: 이체 조회결과-->
 
-            <!--S: 지연이체 등록취소 확인 (Alert) -->
-            <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
-                <div class="content-wrap">
-                    
-                    <div class="pop-con-wrap">
-                        <span class="pop-con">지연이체 등록을 취소하시겠어요?</span>
-                    </div>
-                    <div class="btn-wrap">
-                        <a href="javascript:void(0);" class="btn btn-info" onclick="">취소</a>
-                        <a href="javascript:void(0);" class="btn">확인</a>
-                    </div>
-                </div>
             </div>
-            <!--E: 지연이체 등록취소 확인 (Alert) -->
-
-            <!--S: 예약이체 등록취소 확인 (Alert) -->
-            <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
-                <div class="content-wrap">
-                    
-                    <div class="pop-con-wrap">
-                        <span class="pop-con">예약이체 등록을 취소하시겠어요?</span>
-                    </div>
-                    <div class="btn-wrap">
-                        <a href="javascript:void(0);" class="btn btn-info" onclick="">취소</a>
-                        <a href="javascript:void(0);" class="btn">확인</a>
-                    </div>
-                </div>
-            </div>
-            <!--E: 예약이체 등록취소 확인 (Alert) -->
-
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- //contents -->
+
+        <!--S: 이체구분 선택 팝(팝업)-->
+        <div id="transGbnPop" class="layerpopup layer-up show">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">이체구분</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>즉시이체</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                        <li><button>지연이체</button></li>
+                        <li><button>예약이체</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--E: 이체구분 선택 팝(팝업)-->
+
+        <!--S: 지연이체 등록취소 확인 (Alert) -->
+        <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
+            <div class="content-wrap">
+                
+                <div class="pop-con-wrap">
+                    <span class="pop-con">지연이체 등록을 취소하시겠어요?</span>
+                </div>
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn btn-info" onclick="">취소</a>
+                    <a href="javascript:void(0);" class="btn">확인</a>
+                </div>
+            </div>
+        </div>
+        <!--E: 지연이체 등록취소 확인 (Alert) -->
+
+        <!--S: 예약이체 등록취소 확인 (Alert) -->
+        <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
+            <div class="content-wrap">
+                
+                <div class="pop-con-wrap">
+                    <span class="pop-con">예약이체 등록을 취소하시겠어요?</span>
+                </div>
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn btn-info" onclick="">취소</a>
+                    <a href="javascript:void(0);" class="btn">확인</a>
+                </div>
+            </div>
+        </div>
+        <!--E: 예약이체 등록취소 확인 (Alert) -->
+
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

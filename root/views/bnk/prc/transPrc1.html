@@ -67,127 +67,125 @@
     </header>
 	<!-- //header -->
 
-    <form>
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
-                    
-                    <div class="tit-wrap">
-                        <p class="txt"><strong>얼마를 이체하시겠어요?</strong></p>
-                    </div>
-                    <!--S: 이체예약 시 프로세스_이체금액 입력-->
-                    <section style="display:block">
-                        <div class="form-all-wrap">
-                            <div class="form-wrap type2">
-                                <div  for="PYMN_AMT" class="form-tit">
-                                    <span>이체금액</span>
-                                </div>
-                                <div class="input">
-                                    <input type="tel" title="" class="validChk" id="PYMN_AMT" name="PYMN_AMT" value="0" placeholder="예치금액을 입력해주세요." required="">
-                                    <div class="value-wrap">
-                                        <strong class="value PYMN_AMT">0</strong>
-                                        <span class="unit">만원</span>
-                                        <button type="reset" class="btn-delete">삭제</button>
-                                    </div>
-                                </div>
-                                <div class="inquiry-set-wrap">
-                                    <div class="type-area">
-                                        <ul class="radio-list style-button">
-                                            <li><button type="button" onclick="incrsAmt(this, 1);">1만</button></li>
-                                            <li><button type="button" onclick="incrsAmt(this, 5);">5만</button></li>
-                                            <li><button type="button" onclick="incrsAmt(this, 10);">10만</button></li>
-                                            <li><button type="button" onclick="incrsAmt(this, 100);">100만</button></li>
-                                            <li><button type="button" onclick="incrsAmt(this, 0);">전액</button></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="select-wrap">
-                                <div class="select-box on" tabindex="1" onclick="openPopupUp('lySel01');"><!--D: on 클래스 : 값 적용 됐을 경우 , disabled 클래스 : 적용 됐을 경우  -->
-                                    <label for="" class="essential">등록구분</label>
-                                    <span class="option">123-324-234352</span>
-                                </div>
-                            </div>
-                            <p class="exp-txt">잔액 : <span id="Acct_Amt">50,000,000원</span></p>
-
-                        </div>
-                    </section>
-                    <!--E: 이체예약 시 프로세스_이체금액 입력-->
-
-                    <!--S: 이체예약 시 프로세스_이체계좌 정보 입력-->
-                    <section  style="display: block;">
-                        <div class=form-all-wrap>
-
-                            <div class="select-wrap">
-                                <div class="form-tit">
-                                    <span>입금계좌</span>
-                                    <button type="button" class="btn btn-sm">최근 입금계좌</button>
-                                </div>
-                                <div class="select-box" tabindex="1">
-                                    <label for="" class="essential">은행선택</label>
-                                    <span class="option" id="">미선택</span>
-                                </div>
-                            </div>
-
-                            <div class="form-wrap">
-                                <label for="" class="formlabel">계좌번호</label>
-                                <div class="input">
-                                    <input type="number" title="계좌번호" id="" class="inp" name="" value="" placeholder="계좌번호를 입력" maxlength="14" required="">
-                                </div>
-                            </div>
-
-                            <div class="form-wrap">
-                                <label for="" class="formlabel">받는분 통장 표시</label>
-                                <div class="input">
-                                    <input type="text" title="받는 분 통장 표시" id="" class="inp" name="" value="" placeholder="김예가람(예가람저축은행)" maxlength="10" required="">
-                                </div>
-                            </div>
-
-                            <div class="form-wrap">
-                                <label for="" class="formlabel">내 통장 표시</label>
-                                <div class="input">
-                                    <input type="text" title="내 통장 표시" id="" class="inp" name="" value="" placeholder="10자 이내로 입력" maxlength="10">
-                                </div>
-                            </div>
-
-
-                            <div class="check-account">
-                                <input type="checkbox" id="scheduleChk" name="scheduleChk" value="">
-                                <label for="scheduleChk">
-                                    <span>예약이체</span>
-                                </label>
-                            </div>
-
-                            <div class="select-wrap" style="display:block;"><!--D: 예약이체 선택 시 display:block;-->
-                                <div id="rolldate" class="select-box" tabindex="1" >
-                                    <label for="">예약이체일자</label>
-                                    <span class="option" id="">미선택</span><!-- [D] 두줄처리 필요할때 클래스 ellipse-none 추가 -->
-                                </div>
-                                <p class="info-txt">예약이체는 오늘 기준 3개월 이내만 등록이 가능해요</p>
-                            </div>
-
-                        
-
-                        </div>
-                    </section>
-                    <!--E: 이체예약 시 프로세스_이체계좌 정보 입력-->
-
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+                
+                <div class="tit-wrap">
+                    <p class="txt"><strong>얼마를 이체하시겠어요?</strong></p>
                 </div>
+                <!--S: 이체예약 시 프로세스_이체금액 입력-->
+                <section style="display:block">
+                    <div class="form-all-wrap">
+                        <div class="form-wrap type2">
+                            <div  for="PYMN_AMT" class="form-tit">
+                                <span>이체금액</span>
+                            </div>
+                            <div class="input">
+                                <input type="tel" title="" class="validChk" id="PYMN_AMT" name="PYMN_AMT" value="0" placeholder="예치금액을 입력해주세요." required="">
+                                <div class="value-wrap">
+                                    <strong class="value PYMN_AMT">0</strong>
+                                    <span class="unit">만원</span>
+                                    <button type="reset" class="btn-delete">삭제</button>
+                                </div>
+                            </div>
+                            <div class="inquiry-set-wrap">
+                                <div class="type-area">
+                                    <ul class="radio-list style-button">
+                                        <li><button type="button" onclick="incrsAmt(this, 1);">1만</button></li>
+                                        <li><button type="button" onclick="incrsAmt(this, 5);">5만</button></li>
+                                        <li><button type="button" onclick="incrsAmt(this, 10);">10만</button></li>
+                                        <li><button type="button" onclick="incrsAmt(this, 100);">100만</button></li>
+                                        <li><button type="button" onclick="incrsAmt(this, 0);">전액</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="select-wrap">
+                            <div class="select-box on" tabindex="1" onclick="openPopupUp('lySel01');"><!--D: on 클래스 : 값 적용 됐을 경우 , disabled 클래스 : 적용 됐을 경우  -->
+                                <label for="" class="essential">등록구분</label>
+                                <span class="option">123-324-234352</span>
+                            </div>
+                        </div>
+                        <p class="exp-txt">잔액 : <span id="Acct_Amt">50,000,000원</span></p>
+
+                    </div>
+                </section>
+                <!--E: 이체예약 시 프로세스_이체금액 입력-->
+
+                <!--S: 이체예약 시 프로세스_이체계좌 정보 입력-->
+                <section  style="display: block;">
+                    <div class=form-all-wrap>
+
+                        <div class="select-wrap">
+                            <div class="form-tit">
+                                <span>입금계좌</span>
+                                <button type="button" class="btn btn-sm">최근 입금계좌</button>
+                            </div>
+                            <div class="select-box" tabindex="1">
+                                <label for="" class="essential">은행선택</label>
+                                <span class="option" id="">미선택</span>
+                            </div>
+                        </div>
+
+                        <div class="form-wrap">
+                            <label for="" class="formlabel">계좌번호</label>
+                            <div class="input">
+                                <input type="number" title="계좌번호" id="" class="inp" name="" value="" placeholder="계좌번호를 입력" maxlength="14" required="">
+                            </div>
+                        </div>
+
+                        <div class="form-wrap">
+                            <label for="" class="formlabel">받는분 통장 표시</label>
+                            <div class="input">
+                                <input type="text" title="받는 분 통장 표시" id="" class="inp" name="" value="" placeholder="김예가람(예가람저축은행)" maxlength="10" required="">
+                            </div>
+                        </div>
+
+                        <div class="form-wrap">
+                            <label for="" class="formlabel">내 통장 표시</label>
+                            <div class="input">
+                                <input type="text" title="내 통장 표시" id="" class="inp" name="" value="" placeholder="10자 이내로 입력" maxlength="10">
+                            </div>
+                        </div>
+
+
+                        <div class="check-account">
+                            <input type="checkbox" id="scheduleChk" name="scheduleChk" value="">
+                            <label for="scheduleChk">
+                                <span>예약이체</span>
+                            </label>
+                        </div>
+
+                        <div class="select-wrap" style="display:block;"><!--D: 예약이체 선택 시 display:block;-->
+                            <div id="rolldate" class="select-box" tabindex="1" >
+                                <label for="">예약이체일자</label>
+                                <span class="option" id="">미선택</span><!-- [D] 두줄처리 필요할때 클래스 ellipse-none 추가 -->
+                            </div>
+                            <p class="info-txt">예약이체는 오늘 기준 3개월 이내만 등록이 가능해요</p>
+                        </div>
+
+                    
+
+                    </div>
+                </section>
+                <!--E: 이체예약 시 프로세스_이체계좌 정보 입력-->
+
             </div>
-            <!-- //contents -->
-            <div class="fixed-btn-wrap">
-				<div class="btn-wrap">
-					<a href="javascript:void(0);" class="btn " id="" >다음</a>
-				</div>
-			</div>
-
-
         </div>
-        <!-- //contentsWrap -->
-    </form>
+        <!-- //contents -->
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <a href="javascript:void(0);" class="btn " id="" >다음</a>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 
