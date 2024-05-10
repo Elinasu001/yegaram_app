@@ -52,14 +52,20 @@
 
 <body>
     <!-- header -->
-    <div id="headerWrap">
-        <script>
-        $(document).ready(function(){
-            document.charset="euc-kr";
-            $("#headerWrap").load("../includes/header.html");
-        });
-        </script>
-    </div>
+    <header class="headerWrap"> <!--D: bg-color02 클래스 : 뒤에 색상 들어갈 경우  -->
+		<div class="headerLeft">
+			<!--D: 이전버튼-->
+			<a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+	
+		</div>
+		<div class="headerCenter">
+			<h2 class="text"><span>상담원연결</span></h2> <!--D: TEXT -->
+		</div>
+		<div class="headerRight">
+			<!--D: 전체메뉴버튼 -->
+			<a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>
+		</div>
+	</header>
 	<!-- //header -->
 
     <!--contentsWrap -->
@@ -92,7 +98,7 @@
                 <p class="info-txt">주말 및 국경일 휴무</p>
                 <p class="info-txt">ARS 대출신청 접수 : 24시간</p>
 
-                <p class="info-txt">상담 전, 자주묻는 질문을 확인해 보세요</p>
+                <p class="info-txt" style="margin-top:40px; margin-bottom:15px;">상담 전, 자주묻는 질문을 확인해 보세요</p><!-- D: 스타일 추가 -->
                 <div class="btn-cont-wrap flexCenter"><!-- D: 클래스 변경 -->
 					<a href="./faq.frm" class="btn btn-add">'자주묻는 질문' 바로가기</a><!-- D: 클래스 변경 -->
 				</div>

@@ -32,60 +32,93 @@
 <script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common"
-	data-menuId="dep/prc"
-	data-frameId="depAcnoOpenPrc2"
-	data-serviceCd="depAcnoOpenPrc2.frm"
-	data-serverTime="20230803152535"
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803174840"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803174840"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803174840"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803174840"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803174840"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803174840"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803174840"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803174840"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803174840" id="biz_common" 
+	data-menuId="etc/inq"
+	data-frameId="precaution"
+	data-serviceCd="precaution.frm" 
+	data-serverTime="20230803174840"
 	data-activeMode="local"
 	data-activeEnv="${active.env">
 </script>
-
-
-<body>
-    <!-- header -->
-    <header class="headerWrap"> <!--D: bg-color02 클래스 : 뒤에 색상 들어갈 경우  -->
-		<div class="headerLeft">
-			<!--D: 이전버튼-->
-			<a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+<script type="text/javascript">
+var PageFunc = function() {
 	
+	var _back = function() { // 뒤로가기
+		history.back();
+	}
+	
+	var _proc = function() { // 본처리
+		// TODO 
+		return true;
+	}
+	
+	var _cancel = function() { // 그만하기
+		goMainPage();
+	}
+	
+	var _validate = function() { // 유효성검증
+		// TODO 
+		return true;
+	}
+	
+	/**************************
+	* 사전점검표 체크
+	***************************/
+	var _checkNext = function(el){
+		
+	}
+	
+	return {
+		back : _back,
+		proc : _proc,
+		cancel : _cancel,
+		checkNext : _checkNext
+	};
+}();
+
+
+$(document).ready(function(){
+	
+});
+</script>
+</head>
+<body>
+	<!-- header -->
+	<header class="headerWrap">
+		<div class="header">
+			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+			<h2><span>이용자 유의사항</span></h2> <!-- [퍼블-2] 텍스트 변경 -->
 		</div>
-		<div class="headerCenter">
-			<h2 class="text"><span>이용자유의사항</span></h2> <!--D: TEXT -->
-		</div>
-		<div class="headerRight">
-			<!--D: 전체메뉴버튼 -->
-			<a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>
+		<div class="menu-wrap">
 		</div>
 	</header>
 	<!-- //header -->
 
-    <!--contentsWrap -->
+    <!-- s: contentsWrap -->
     <div class="contentsWrap">
-        <!--contents -->
+        <!-- s: contents -->
         <div class="contents">
-            <div class="default-wrap">
-
-                <div class="tit-wrap">
-					<p class="txt"><strong>금융거래 이용 시<br>유의사항에 대해 안내해 드려요</strong></p>
+            <div class="default-wrap"><!-- [퍼블] 클래스 변경 -->
+				<div class="tit-wrap"><!-- [퍼블] 클래스 변경 -->
+					<p class="txt"><strong>고객님, 금융거래 이용 시<br>유의사항에 대해 안내해 드려요</strong></p> <!-- [퍼블-2] 변경 -->
 				</div>
-
-                <section class="tabs-wrap type2"><!--D: 클래스 변경-->
+				<section class="tabs-wrap type-box">
                     <div class="tabs">
-                        <ul class="tab-item square col-03"><!--D: 클래스 추가-->
+                        <ul class="tab-item">
                             <li class="on" data-tab="tab-cont09"><a href="#none">전자금융거래<br/>이용자 주의사항</a></li>
                             <li data-tab="tab-cont10" class=""><a href="#none">스마트폰 금융거래<br/>유의사항</a></li>
                             <li data-tab="tab-cont11" class=""><a href="#none">보이스피싱<br/>피해예방 유의사항</a></li>
 						</ul>
 
+						<!-- [퍼블-2] 전체 변경 -->
                         <div class="tab-content-area">
                             <div id="tab-cont09" class="">
                                 <div class="terms-notice-wrap">
@@ -301,16 +334,16 @@
                                 </div>
                             </div>
                         </div>
+						<!-- // [퍼블-2] 전체 변경 -->
 
                     </div>
                 </section>
 
             </div>
         </div>
-        <!-- //contents -->
+        <!-- //e: contents -->
 
     </div>
-    <!-- //contentsWrap -->
+    <!-- e: contentsWrap -->			
 </body>
 </html>
-
