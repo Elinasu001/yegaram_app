@@ -107,6 +107,76 @@
         <div class="contents">
             <div class="default-wrap">
                 <section class="form-all-wrap">
+
+                    
+                    <div class="form-wrap">
+                        <div id="rolldate" class="select-box type2 type-dd" tabindex="1">
+                            <label for="">연월일</label>
+                            <span class="option">미선택</span>
+                        </div>
+                    </div>
+                    <div class="form-wrap">
+                        <div id="rolldate2" class="select-box type2 type-dd" tabindex="1">
+                            <label for="">일</label>
+                            <span class="option">미선택</span>
+                        </div>
+                    </div>
+                    <div class="form-wrap">
+                        <div id="rolldate3" class="select-box type2 type-dd" tabindex="1">
+                            <label for="">월</label>
+                            <span class="option">미선택</span>
+                        </div>
+                    </div>
+                    <div class="form-wrap">
+                        <div id="rolldate4" class="select-box type2 type-dd" tabindex="1">
+                            <label for="">년도</label>
+                            <span class="option">미선택</span>
+                        </div>
+                    </div>
+
+                    <div class="form-wrap">
+                        <div class="form-tit">
+                            <span>입금계좌</span>
+                            <button type="button" class="btn btn-sm">최근 입금계좌</button>
+                        </div>
+                        <div class="select-box" tabindex="1">
+                            <label for="" class="essential">은행선택</label>
+                            <span class="option" id="">미선택</span>
+                        </div>
+                    </div>
+
+                    <div class="form-wrap">
+                        <div class="select-box disabled" tabindex="1"><!--D: disabled-->
+                            <label for="">사용중인 보안매체</label>
+                            <span class="option">mOTP</span>
+                        </div>
+                    </div>
+
+                    <div class="form-wrap">
+                        <div class="select-box on " tabindex="1" onclick="openPopupUp('lySel01');"><!--D: on 선택 됐을 경우-->
+                            <label for="">등록구분</label>
+                            <span class="option">주민등록번호</span>
+                        </div>
+                    </div>
+
+                    <div class="form-wrap">
+                        <div class="select-box" tabindex="1">
+                            <label for="">OTP일련번호</label>
+                            <span class="option">12⦁⦁⦁6780</span>
+                        </div>
+                    </div>
+
+                    <div class="form-wrap">
+                        <div id="" class="select-box error" tabindex="1" >
+                            <label for="">출금계좌</label>
+                            <span class="option ellipse-none" id="">미선택</span><!-- [D] 두줄처리 필요할때 클래스 ellipse-none 추가 -->
+                        </div>
+                    </div>
+                    <p class="exp-txt">출금 가능금액 : <span id="">50,000,000원</span></p>
+                    
+
+
+
                     <!-- 금액입력 -->
                     <div class="form-wrap type2">
                         <div class="form-tit"><!--D:label에서 구조 변경-->
@@ -135,8 +205,6 @@
                     </div>
                     <p class="info-txt">가가가가</p>
 
-
-
                     <div class="form-wrap">
                         <label for="" class="formlabel essential">연소득</label>
                         <div class="input">
@@ -145,66 +213,29 @@
                             <!-- <button type="reset" class="btn-delete">검색어 삭제</button> -->
                         </div>
                     </div>
-                    
                     <!--// 금액입력 -->
 
-                    <div class="form-wrap ">
-                        <label for="" class="formlabel">가가가</label>
+                    <div class="form-wrap phone"><!--D: 기존 레이아웃 -->
+                        <label for="" class="formlabel">휴대폰번호</label>
                         <div class="input">
-                            <input type="month" title="" id="" class="inp option validChk" name="" value="" placeholder="자동이체 시작일을 선택해주세요" required="" numberonly="">
-                        </div>
-                    </div>
-
-                    <div class="form-wrap w50">
-                        <div class="form-tit">
-                            <span>자동이체 일자</span>
-                        </div>
-                        <div class="input">
-                            <span id="period1">
-                                <input type="month" title="" id="" class="inp option validChk"  name="" value="" placeholder="자동이체 시작일을 선택해주세요" required="" numberonly="">
-                            </span>
-                            <span class="inputTextHyphen">~</span>
-                            <span id="period2">
-                                <input type="month" title="" id="" class="inp option validChk" name="" value="" placeholder="자동이체 종료일을 선택해주세요" required="" numberonly="">
+                            <div class="select-wrap">
+                                <div class="select-box type-line" tabindex="1">
+                                    <span class="option">선택</span>
+                                </div>
+                            </div>
+                            <span>
+                                <input type="tel" title="" class="inp " id="" name="" value="" placeholder="휴대폰번호 입력" maxlength="11" required  numberonly/>
                             </span>
                         </div>
                     </div>
 
-                    <ul class="radio-list">
-                        <li>
-                            <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked" class="monthly">
-                            <label for="radio01_2" class="">납입일 선택</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="radio01" id="radio01_1" value="" onclick="">
-                            <label for="radio01_1" class="">매월 말일</label>
-                        </li>
-                    </ul>
-
-                    <div class="select-wrap">
-                        <div id="rolldate" class="select-box type2 type-dd" tabindex="1">
-                            <label for="">연월일</label>
-                            <span class="option">미선택</span>
+                    <div class="form-wrap phone"><!--D: 전 프로젝트 개발자 사용 -->
+                        <label for="" class="formlabel">휴대폰번호</label>
+                        <div class="input">
+                            <input type="tel" title="" class="inp " id="" name="" value="" placeholder="휴대폰번호 입력" maxlength="11" required  numberonly/>
                         </div>
-
-                        <div id="rolldate2" class="select-box type2 type-dd" tabindex="1">
-                            <label for="">일</label>
-                            <span class="option">미선택</span>
-                        </div>
-                        
-                        <div id="rolldate3" class="select-box type2 type-dd" tabindex="1">
-                            <label for="">월</label>
-                            <span class="option">미선택</span>
-                        </div>
-
-                        <div id="rolldate4" class="select-box type2 type-dd" tabindex="1">
-                            <label for="">년도</label>
-                            <span class="option">미선택</span>
-                        </div>
-                        
-
                     </div>
-                
+
                     <!-- 이메일 검색 -->
                     <div class="form-wrap type-box">
                         <div class="input">

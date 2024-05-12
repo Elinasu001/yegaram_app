@@ -453,7 +453,7 @@ input:autofill:active { -webkit-text-fill-color: #000 !important; -webkit-box-sh
 
 input.error { border-color:#FF0000; }
 /* .form-wrap input:focus { border-color:#260F54; } */
-.form-wrap > div { border-color:#260F54; }
+/* .form-wrap > div { border-color:#260F54; } */
 .form-wrap input:focus-visible,
 .form-wrap textarea:focus-visible { outline:none; }
 .form-wrap input:invalid ~ .placeholder { display:block; }
@@ -495,8 +495,8 @@ textarea:read-only { border-color:#DDDDDD !important; }
 /*** 폼 form ***/
 .form-all-wrap { margin-top:40px; }
 .form-all-wrap .form-wrap.type-box:first-child,
-.form-all-wrap .form-wrap:first-child,
-.form-all-wrap .select-wrap:first-child { margin-top:0; }
+.form-all-wrap > .form-wrap:first-child,
+.form-all-wrap > .select-wrap:first-child { margin-top:0; }
 .form-all-wrap .form-wrap { margin-top:30px; }
 .form-all-wrap .form-wrap.type-box { margin-top:10px;}
 .form-all-wrap > .sub-tit-wrap,
@@ -618,7 +618,10 @@ input[type="file"]::file-selector-button { display:none; }
 
 .form-all-wrap .form-wrap + .check-box.toggle { margin-top:30px; }
 .form-all-wrap .check-box.toggle { margin-top:10px;}
-.form-all-wrap .form-wrap { margin-top:10px; }
+.form-all-wrap .form-wrap:has(.select-box) { margin-top:10px; }
+.form-all-wrap > .form-wrap:has(.select-box):first-child { margin-top:0; }
+.form-all-wrap .form-wrap.phone,
+.form-all-wrap .form-wrap:has(.form-tit) { margin-top:30px; }
 
 /* .search-area.type-box { padding-top:0; }
 .form-wrap.email-wrap > div.input input,
@@ -779,10 +782,10 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .select-wrap { overflow:hidden; position:relative; z-index:1; line-height:50px; vertical-align:middle;  margin-top:40px; }
 .select-wrap .form-wrap + .select-box { margin-top:20px; }
 .select-wrap .select-box:first-child,
-.select-wrap .check-box:first-child { margin-top:0;}s
-.select-wrap .select-box,
-.select-wrap .check-box,
-.select-wrap .select-box{position:relative;height:58px; margin-top:10px; border-bottom:1px solid #DDDDDD;color:#333333; font-size:0.88889rem;}
+.select-wrap .check-box:first-child { margin-top:0;}
+
+/* 수정필요 */
+.select-box{position:relative;height:58px; margin-top:10px; border-bottom:1px solid #DDDDDD;color:#333333; font-size:0.88889rem;}
 .select-wrap .select-box.form-line:after {content:'';position:absolute;right:0;top:0;width:50px;height:50px;background:url(../images/common/arrow_selbox.png) no-repeat 50%/24px auto;}
 .select-wrap .select-box .inputH{display:block;visibility:hidden;position:absolute;top:0;width:1px;height:1px;}
 
@@ -888,6 +891,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 .form-tit { display:flex; align-items:center; justify-content: space-between; margin-bottom:15px; }
 .form-tit span { display:block; font-weight:600; font-size:0.88889rem; line-height:1.278rem; color:#333333; }
 .form-tit button { position:static; transform:none; }
+.form-wrap .form-tit button { right:0px !important; }
 /* .form-wrap.form-line .form-tit .btn-gray { border-color:#F2F4F6; } */
 
 /* 에러 , 필수값체크*/
