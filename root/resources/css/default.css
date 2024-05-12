@@ -69,6 +69,8 @@ h3 + div{ margin-top:15px; }
 .flexLeft { display:flex; justify-content:flex-start; }
 .flexCenter { display:flex; justify-content: center; }
 .flexRight { display:flex; justify-content: flex-end; }
+.flexSb { display:flex; justify-content: space-around; }
+.flexSb { display:flex; justify-content: space-between; }
 .flexCol  { display:flex; flex-direction:column; }
 .flexRow { display:flex; flex-direction: row; }
 
@@ -682,7 +684,7 @@ input[type="file"]::file-selector-button { display:none; }
 .terms-list.type2 > li > span.btn-purple,
 .terms-list.type2 > li > span.btn-pink { border:none; }
 
-.btn-cont-wrap .btn-white { border:1px solid #DDDDDD !important; background:#FFFFFF !important; font-weight:500; color:#454545 !important; }
+.btn-cont-wrap .btn-white { border:1px solid #DDDDDD !important; background:#FFFFFF !important; font-weight:500; color:#26282C !important; }
 .btn-cont-wrap .btn-white:focus { background:#EEEBFF !important; color:#260F54 !important; }
 
 .btn-cont-wrap.join { display:flex; justify-content:center; }
@@ -2148,11 +2150,11 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .inquiry-result-area .result-list .date > span { margin-left:10px; }
 .inquiry-result-area .result-list .txt-wrap { flex:1 1 auto; }
 .inquiry-result-area .result-list .txt-wrap .date { margin-top:2px; }
-.inquiry-result-area .result-list .amount-wrap { flex:1 1 fit-content; place-self: flex-end; font-size:0; text-align:right; }
+.inquiry-result-area .result-list .amount-wrap { margin-top:0; padding:0; flex:1 1 fit-content; place-self: flex-end; font-size:0; text-align:right; background:#fff; }
 .inquiry-result-area .result-list .amount-wrap .amount { position:static; color:#FF0000; font-weight:500; font-size:1rem; line-height:1.38889;}
 .inquiry-result-area .result-list .amount-wrap .amount.deposit { color:#4880EE;}
 .inquiry-result-area .result-list .amount-wrap .amount .tit { margin-right:3px; font-weight:300; color:#333333; }
-.inquiry-result-area .result-list .amount-wrap .balance { display:block; margin-top:2px; font-weight:300; font-size:0.88889rem; line-height:1.4375; }
+.inquiry-result-area .result-list .amount-wrap .balance { display:block; margin-top:10px; font-weight:300; font-size:0.88889rem; line-height:1.4375; }
 .inquiry-result-area .result-list .amount-wrap .balance .tit { font-weight:inherit; color:inherit; font-size:inherit; }
 .inquiry-summary:has(+.thumb-wrap) .period { font-weight:600; color:#000000; font-size:1rem; line-height:1.38889; }
 
@@ -2549,6 +2551,9 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .account-amount { margin-top:13px; }
 .account-amount > p { font-size:0.88889rem; line-height:1.4375; font-weight:600; }
 .amount-on { color:#4E32A5;  }
+.amount-on.flexSb span { color:#333; }
+.amount-on.flexSb span.tit { color:#666666; font-weight:400; font-size:0.77778rem; }
+
 .amount-off { font-weight:400 !important; color:#999999; }
 
 .btn-set { position:absolute; top:24px; right:20px; font-size:0.88889rem; line-height:1.4375; color: #757575; /*width:24px; height:24px;*/ /*background:url("../images/common/btn_setting.png") no-repeat 50%/24px auto;*/}

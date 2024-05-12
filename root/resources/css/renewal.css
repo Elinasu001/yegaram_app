@@ -243,6 +243,10 @@ section > .result-wrap{ margin-top:40px; }
 .txt-list-wrap .txt-detail-area:has(.txt-detail-tit) { padding-top:20px; }
 /* .txt-list-wrap .txt-detail-area .txt-list li { align-items:flex-start; } 높이 가운데로 정렬 하기로해서 주석처리함 */
 
+/**마이뱅킹 계좌관리 추가**/
+.visaul-info-section + .account-detail-section > .txt-list-wrap:first-of-type { margin-top:0; }
+
+
 .txt-detail-area .txt-detail-tit { display:flex; align-items:center;  padding:0; font-size:0; color:#333333;   }
 .txt-detail-area .txt-detail-tit strong { /*display:inline-block; width:50%;*/ flex:1;  font-weight:500; font-size:1rem; }
 .txt-detail-area .txt-detail-tit span { /*display:inline-block; width:50%; text-align:right; */font-size:0.8rem; font-weight:500; color: #FF0000; }

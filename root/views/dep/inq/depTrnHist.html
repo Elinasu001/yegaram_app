@@ -62,8 +62,6 @@
 			<h2 class="text"><span>계좌상세</span></h2> 
 		</div>
 		<div class="headerRight">
-			<a href="javascript:void(0)" class="btn btn-interest"><img src="/resources/images/header/btn_interest.png" alt="관심상품"><em class="count-flag">3</em></a>  <!--D: 관심상품버튼 -->
-			<a href="javascript:void(0)" class="btn btn-like"><img src="/resources/images/header/btn_like.png" alt="좋아요"><em class="count-flag">3</em></a>  <!--D: 좋아요버튼 -->
 		</div>
 	</header>
 	<!-- //header -->
@@ -76,8 +74,11 @@
 			<div class="default-wrap">
 				<section class="visaul-info-section">
 					<div class="visaul-info-box">
-						<div><em class="flag style10">종합통장대출</em></div>
-						<strong class="info-tit">E-RUN 파킹통장</strong>
+                        <!-- D : info-tit 위치변경 및 flag 스타일 변경-->
+						<div>
+                            <em class="flag style4">종합통장대출</em>
+                            <strong class="info-tit">E-RUN 파킹통장(개인)</strong>
+                        </div>
 						<div class="account-area">
 							<p class="account">123-12-12-1234567</p>
 							<button type="button" class="btn-copy">복사하기</button>
@@ -91,7 +92,7 @@
 
 						<a href="javascript:void(0);" class="btn-set" onclick="acnoSetBtn();">관리</a>
 						<div class="btn-cont-wrap">
-							<a href="javascript:void(0);" class="btn btn-primary">거래내역</a>
+							<a href="javascript:void(0);" class="btn btn-primary">이체</a>
 						</div>
 					</div>
 				</section>
@@ -113,108 +114,88 @@
 						<div class="container">
 							<canvas id="chart" width="600" height="400"></canvas>
 						</div>
-						<!-- s : 퍼블 확인용 -->	
-						<script>
-						var ctx = document.getElementById('chart').getContext('2d');
-						var gradient = ctx.createLinearGradient(0, 0, 0, 250);
-						gradient.addColorStop(0, 'rgba(233,219,255,1)');
-						gradient.addColorStop(1, 'rgba(212,231,243,0)');
-
-						var dataValues = [2.92, 17.53, 14.94, 26.62, 12.99];
-						var maxIndex = dataValues.indexOf(Math.max(...dataValues));
-
-						var chart = new Chart(ctx, {
-							type: 'line',
-							data: {
-								labels: ['Dairy', 'Fruits', 'Lean meats', 'Vegetables', 'Whole grains'],
-								datasets: [{
-									data: dataValues,
-									backgroundColor: gradient,
-									borderColor: ['#AD85FF'],
-									borderWidth: 2,
-									pointRadius: 0 // Remove data point symbols
-								}]
-							},
-							options: {
-								title: {
-									display: true,
-									position: 'top',
-									fontSize: 16,
-									fontColor: '#111',
-									padding: 20
-								},
-								legend: {
-									display: false
-								},
-								tooltips: {
-									enabled: true,
-									custom: function(tooltipModel) {
-										// Only show the tooltip if the hovered point is the maximum value
-										if (tooltipModel.dataPoints && tooltipModel.dataPoints[0].index !== maxIndex) {
-											tooltipModel.opacity = 0; // Hide the tooltip
-										}
-									},
-									callbacks: {
-										label: function(tooltipItem, data) {
-											return `Value: ${tooltipItem.yLabel}`;
-										}
-									}
-								},
-								scales: {
-									xAxes: [{
-										display: false
-									}],
-									yAxes: [{
-										beginAtZero: true,
-										display: true,
-										scaleLabel: {
-											display: false
-										}
+                        
+                        <script>
+                            //문구 및 색상만 변경할것 D 주석확인
+							var ctx = document.getElementById('chart').getContext('2d');
+							var gradient = ctx.createLinearGradient(0, 0, 0, 250);
+                            //D : 그라데이션 색상 변경
+                            gradient.addColorStop(0, 'rgba(233,219,255,1)');
+						    gradient.addColorStop(1, 'rgba(212,231,243,0)');
+								
+							var chart = new Chart(ctx, {
+								type: 'line',
+								data: {
+									labels: ['Dairy', 'Fruits', 'Lean meats', 'Vegetables', 'Whole grains'],
+									datasets: [{
+										data: [2.92, 17.53, 14.94, 26.62, 12.99],
+										backgroundColor: gradient,
+										borderColor: [
+											'#AD85FF',
+										],
+										borderWidth: 2,
+                                        pointRadius: 0 // 여기를 추가시 심볼 제거
 									}]
 								},
-								plugins: {
-									datalabels: {
+								options: {
+									title: {
 										display: true,
-										color: '#612AD0',
-										textAlign: 'center',
-										font: {
-											family: "Spoqa Han Sans Neo",
-											size: 12,
+										position: 'top',
+										fontSize: 16,
+										fontColor: '#111',
+										padding: 20
+									},
+									legend: {
+										display: false,
+									},
+									tooltips: {
+										enabled: false,
+									},
+									scales: {
+										xAxes: [{
+											display: false,
+										}],
+										yAxes: [{
+											beginAtZero: true,
+											// 선 boolan
+											display: true,
+											scaleLabel: {
+												display: false,
+											},
+										}]
+									},
+									plugins: {
+										tooltip: {
+											enabled: true,
 										},
-										formatter: function(value, ctx) {
-											// Display the label only for the maximum value
-											if (ctx.dataIndex === maxIndex) {
-												return '저축을 가장 많이 하신 날이에요';
-											}
-											return '';
+										legend: {
+											position: 'bottom',
 										},
-										align: 'left',
-										backgroundColor: '#E7DBFF',
-										borderRadius: 10,
-										padding: function(ctx) {
-											// Set specific padding only for the maximum value
-											if (ctx.dataIndex === maxIndex) {
-												return {
-													top: 10, // Adjust these values as per your requirement
-													bottom: 10,
-													left: 15,
-													right: 15
-												};
-											}
-											// No padding for other values
-											return {
-												top: 0,
-												bottom: 0,
-												left: 0,
-												right: 0
-											};
+										datalabels: {
+											display: true,
+											color: '#612AD0',
+											textAlign: 'center',
+											font: {
+												size:12,
+											},
+                                            //D : 문구변경
+											formatter: function(value, ctx) {
+												return '저축을 가장 많이 하신 날이에요'
+											},
+											align: 'left',
+											backgroundColor: '#E7DBFF',
+											borderRadius: 10,
+											padding :{
+												top : 11,
+												bottom : 11,
+												left : 15,
+												right : 15,
+											},
 										}
 									}
 								}
-							}
-						});
-						</script>
-						<!-- e : 퍼블 확인용 -->
+							});
+					    </script>
 					</div>
 				</section>
 				<!-- // [퍼블] 차트 추가 -->
