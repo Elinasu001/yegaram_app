@@ -207,133 +207,218 @@ $(document).ready(function(){
 </script>
 </head>
 <div class="wrap main"><!-- [*] main 클래스 어디에 붙을 수 있는지 확인 필요 -->
-	<!-- header -->
-	<header class="headerWrap bg-color02"><!--D: bg-color02 클래스 : 뒤에 색상 들어갈 경우  -->
-		<div class="headerLeft">
-	
-			<!--D: 이전버튼 -->
-			<!-- <a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a> -->
-	
-			<!--D: USER -->
-			<!-- <a href="javascript:void(0)" class="user"><img src="/resources/images/header/user.png" alt="사용자이름"><span>김예가람</span></a> -->
-	
-			<!--D: 로고 이미지 -->
-			<a href="javascript:void(0)" class="logoImg"><img src="/resources/images/header/logo.png" alt="예가람저축은행로고" /></a>
-	
-		</div>
-		
-		<div class="headerRight">
-	
-			<!--D: 전체메뉴버튼 -->
-			<!-- <a href="javascript:void(0)" class="btn btn-menu "><img  src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a> -->
-	
-			<!--D: 닫기버튼 -->
-			<!-- <a href="javascript:void(0)" class="btn btn-menu-close"><img  src="/resources/images/header/btn_close.png" alt="닫기버튼"></a> -->
-	
-			<!--D: 로그아웃 같은 클래스 사용 -->
-			<a href="javascript:void(0)" class="btn btn-txt login">로그인</a>
-	
-			<!--D: 알림버튼 -->
-			<a href="javascript:void(0)" class="btn btn-notify"><img src="/resources/images/header/btn_notify.png" alt="알림"><em class="count-flag"><span>3</span></em></a>
-	
-			<!--D: 좋아요버튼 -->
-			<!-- <a href="javascript:void(0)" class="btn btn-like"><img src="/resources/images/header/btn_like.png" alt="좋아요"><em class="count-flag">3</em></a> -->
-	
-			<!--D: 관심상품버튼 -->
-			<!-- <a href="javascript:void(0)" class="btn btn-interest"><img src="/resources/images/header/btn_interest.png" alt="관심상품"><em class="count-flag">3</em></a> -->
-			
-		</div>
-	</header>
-	<!-- //header -->
+    <!-- s: header -->
+    <header class="main-header">
+        <div class="logo-area">
+            <h1><a href="#none" onclick="doActionFrame('etc/testPage');"><img src="/resources/images/main/logo.png" alt="Goryo Savings Bank 예가람저축은행" /></a></h1>
+        </div>
+        <div class="notify-area">
+			<div class="login-area">
+				<a href="#">
+					<span>로그인</span>
+				</a>
+			</div>
+            <div class="btn-notify-wrap">
+                <button type="button" class="btn-notify" onclick="javascript:doActionMenu('etc/inq/noti1');"><img src="/resources/images/main/ico_notify.png" alt="" /></button>
+                <em class="count-flag"><span id="MAIN_NOTI_CNT">3</span></em>
+            </div>
+        </div>
+    </header>
+    <!-- //e: header -->
 
     <!-- s: contentsWrap -->
     <div class="contentsWrap">
         <!-- s: contents -->
         <div class="contents">
             <div class="default-wrap">
-				<section class="login-check-box">
-					<div class="login-check">
-						<div class="txtbox">
-							나의 한도와 이자율<br />
-							<span class="color-F10F8E">로그인하고 확인</span>해 보세요
+                <section class="welcome-area">
+                    <p class="welcome-txt">
+                        <span>언제나 든든한 내 금융지원군</span>
+                        <strong>GO BANK</strong>에 오신 것을<br>환영합니다
+                    </p>
+                </section>
+                <section class="quick-menu-area">
+                    <ul class="quick-menu-list">
+                        <li><a href="#none" onclick="javascript:doActionMenu('dep/inq/depList','BBS_SELECT');">예/적금<br>알아보기</a></li>
+                        <li><a href="#none" onclick="javascript:doActionMenu('lon/inq/qckLonLimt1');">대출한도<br>조회하기</a></li>
+                    </ul>
+                </section>
+               
+                
+                <section class="quick-service-area">
+					<div class="flex-between-center">
+						<h2 class="area-title">빠른 서비스</h2>
+						<div class="quick-menu-search" onclick="">
+							<button type="button" class="btn-search">검색</button>
+							<span>메뉴찾기</span>
 						</div>
 					</div>
-					<a href="javascript:void(0);" class="btn">예적금통장 계좌 개설하기</a>
-				</section>
-				
-				<section class="products-area">
-					<div class="flex-between-center">
-						<h2 class="area-title">추천상품</h2>
-					</div>
-
-				</section>
-
-				<section class="quick-service-area">
-					<div class="area-title-box">
-						<h2 class="area-title">빠른 서비스</h2>
-					</div>
-                    <ul class="quick-service-list" id="MAIN_QUICK_MENU">
-						<li class="service-deposits"><a href="#none">예/적금 알아보기</a></li>
-						<li class="service-loan-inquiry"><a href="#none">간편대출 한도조회</a></li>
-						<li class="service-contract"><a href="#none">전자계약서 작성</a></li>
-						<li class="service-loan"><a href="#none">대출이어하기</a></li>
+                    <ul class="quick-service-list" id="MAIN_QUICK_MENU"><!--[퍼블-2]추가-->]
+						<li class="highlight"><a href="#none" >대출이어하기</a></li>
+						<li class="highlight"><a href="#none">빠른계좌개설</a></li>
+						<li><a href="#none">제증명서발급</a></li>
+						<li><a href="#none">온라인서류제출</a></li>
+						<li><a href="#none">인증보안</a></li>
 					</ul>
                 </section>
-
-				<section class="yesbank-service-area">
-					<div class="area-title-box">
-						<h2 class="area-title">
-							오직 <span class="color-F10F8E">YESBANK</span> <br />
-							고객님을 위한 편리한 서비스
-						</h2>
+                <section class="recom-area">
+                    <h2 class="area-title">GO BANK가 추천해요!</h2>
+                    <div class="recom-slider-wrap">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" style="background:linear-gradient(115deg, #FD96BF  0%, #FFBEDC 70%, #FFBEDC 100%);" onclick="doActionURL('/lon/inq/loanDetail.frm?LINK_ACT=BBS_SELECT&PDCD=P000000020');"><!-- [퍼블] onclick 이동됨 -->
+                                    <em class="prd-flag">
+                                        <span style="background:#540F27;">대출</span>
+                                        <span style="background:#FFDFEC; color:#E8689B;">모바일전용</span>
+                                    </em>
+                                    <strong class="prd-tit">신용대출 [뉴플랜론III]</strong>
+                                    <p class="prd-desc">
+                                        대출신청부터 송금까지<br>
+                                        쉽고 빠르게
+                                    </p>
+                                    <span class="prd-rate">최대한도 1억원</span>
+                                    <span class="prd-obj"><img src="/resources/images/main/temp_obj_recom02.png" alt=""></span>
+                                    <span class="btn-go-link" 
+                                    style="background-image:url('../../resources/images/main/arrow_right_pink.png');color:#CB7095;">신용대출 신청하기</span><!-- [퍼블] a태그 삭제되고 / span에 a태그에 있던 class,style 속성 추가 (onclick은 div.swiper-slide로 이동) -->
+                                </div>
+                                
+                                <div class="swiper-slide" style="background:linear-gradient(115deg, #8D74F6 0%, #AE9CFE 70%, #AE9CFE 100%);" onclick="javascipt:doActionURL('dep/inq/depDetail.frm?LINK_ACT=BBS_SELECT&PDCD=P000000091');"><!-- [퍼블] onclick 이동됨 -->
+                                    <em class="prd-flag">
+                                        <span>입출금</span>
+                                        <span>모바일전용</span>
+                                    </em>
+                                    <strong class="prd-tit">보고파 파킹통장</strong>
+                                    <p class="prd-desc">
+                                        입출금 자유! 하루만 맡겨도<br>
+                                        확정금리를 드려요
+                                    </p>
+                                    <span class="prd-rate">최고 3.35%</span>
+                                    <span class="prd-obj"><img src="/resources/images/main/temp_obj_recom01.png" alt=""></span>
+                                    <span class="btn-go-link" 
+									style="background-image:url('../../resources/images/main/arrow_right_purple.png');color:#51348D;">보고파 파킹통장 둘러보기</span><!-- [퍼블] a태그 삭제되고 / span에 a태그에 있던 class,style 속성 추가 (onclick은 div.swiper-slide로 이동) -->
+                                </div>
+                                <div class="swiper-slide" style="background:linear-gradient(115deg, #4ABEE2 0%, #92D5EE 70%, #92D5EE 100%);" onclick="javascipt:doActionURL('dep/inq/depDetail.frm?LINK_ACT=BBS_SELECT&PDCD=P000000040');"><!-- [퍼블] onclick 이동됨 -->
+                                    <em class="prd-flag">
+                                        <span style="background:#683B08;">적금</span>
+                                        <span style="background:#FFEDCB; color:#D98A00;">모바일전용</span>
+                                    </em>
+                                    <strong class="prd-tit">챌린지 적금</strong>
+                                    <p class="prd-desc">
+                                        30일만 모아도 쏠쏠한 이율<br>
+                                        내가 직접 목표 금액/기간을<br>
+                                        설정하고 도전하세요
+                                    </p>
+                                    <span class="prd-rate">최고금리 4.2%</span>
+                                    <span class="prd-obj"><img src="/resources/images/main/temp_obj_recom03.png" alt=""></span>
+                                    <span class="btn-go-link" style="background-image:url('../../resources/images/main/arrow_right_yellow.png');color:#D98A00;">챌린지 만들어 도전하기</span><!-- [퍼블] a태그 삭제되고 / span에 a태그에 있던 class,style 속성 추가 (onclick은 div.swiper-slide로 이동) -->
+                                </div>
+								<!--//[추가]-->
+								<div class="swiper-slide" style="background:linear-gradient(115deg, #4ABEE2 0%, #92D5EE 70%, #92D5EE 100%);" onclick="javascipt:doActionURL('dep/inq/depDetail.frm?LINK_ACT=BBS_SELECT&PDCD=P000000040');"><!-- [퍼블] onclick 이동됨 -->
+                                    <em class="prd-flag">
+                                        <span style="background:#154C71;">대출</span>
+                                        <span style="background:#DFF8FF; color:#2B8294;">정책자금</span>
+                                    </em>
+                                    <strong class="prd-tit">햇살론</strong>
+                                    <p class="prd-desc">
+                                        서민을 위한 정부지원 대출
+                                    </p>
+                                    <span class="prd-rate">최대한도 2000만원</span>
+                                    <span class="prd-obj"><img src="/resources/images/main/temp_obj_recom04.png" alt=""></span>
+                                    <span class="btn-go-link" style="background-image:url('../../resources/images/main/arrow_right_blue.png');color:#2B8294;">햇살론 신청하기</span><!-- [퍼블] a태그 삭제되고 / span에 a태그에 있던 class,style 속성 추가 (onclick은 div.swiper-slide로 이동) -->
+                                </div>
+								<!--[추가]//-->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="guide-area">
+                    <h2 class="area-title">처음 오셨나요?</h2>
+                    <ul class="guide-list" id="MAIN_FAQ"></ul>
+                </section>
+                <section class="banner-area">
+                    <a href="#none" class="banner-box"><!-- [퍼블] 태그 변경 : div ==> a -->
+                        <p class="banner-tit">
+                            <span>예/적금과 대출, 현명하게 관리하려면</span>
+                            잉여생활자금 계산하고<br>적정 금액을 정해 보세요
+                        </p>
+                        <div class="go-link-wrap">
+							<span class="btn-go-link">잉여생활자금계산하기</span><!-- [퍼블] a태그 삭제 / span에 클래스 추가 -->
+						</div>
+                    </a>
+                </section>
+                <section class="notice-area">
+                    <div class="notice-slider-wrap swiper">
+                        <div class="swiper-wrapper" id="MAIN_NOTI"></div>
+                    </div>
+                </section>
+                <section class="news-area type-spread">
+                    <h2 class="area-title">GO BANK 소식</h2>
+                    <div class="news-slider-wrap swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background:#F2F6FF;">
+                                <a href="#none">
+                                    <em class="news-flag">깜짝퀴즈이벤트</em>
+                                    <strong class="news-tit">예가람저축은행 파킹통장 이름은?!</strong>
+                                    <p class="news-desc">
+                                        정답 남기고 버거킹 와퍼 세트 받아가세요<br>
+                                        친구에게 정답을 공유하면 당첨확률 UP!
+                                    </p>
+                                    <div class="news-img-wrap">
+                                        <img src="/resources/images/main/temp_news_img01.png" alt="" style="width:185px;">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide" style="background:#FFEFF5;">
+                                <a href="#none">
+                                    <em class="news-flag">깜짝퀴즈이벤트 2</em>
+                                    <strong class="news-tit">예가람저축은행 파킹통장 이름은?!</strong>
+                                    <p class="news-desc">
+                                        정답 남기고 버거킹 와퍼 세트 받아가세요<br>
+                                        친구에게 정답을 공유하면 당첨확률 UP!
+                                    </p>
+                                    <div class="news-img-wrap">
+                                        <img src="/resources/images/main/temp_news_img01.png" alt="" style="width:185px;">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide" style="background:#F2F6FF;">
+                                <a href="#none">
+                                    <em class="news-flag">깜짝퀴즈이벤트 3</em>
+                                    <strong class="news-tit">예가람저축은행 파킹통장 이름은?!</strong>
+                                    <p class="news-desc">
+                                        정답 남기고 버거킹 와퍼 세트 받아가세요<br>
+                                        친구에게 정답을 공유하면 당첨확률 UP!
+                                    </p>
+                                    <div class="news-img-wrap">
+                                        <img src="/resources/images/main/temp_news_img01.png" alt="" style="width:185px;">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </section>
+				
+				<!-- s: 버튼추가 -->
+				<div class="main-function-btn-wrap">
+					<div>
+						<a href="#none" class="btn amount-view-on">금액보이기</a>
+						<!-- <a href="#none" class="btn amount-view-off">금액숨기기</a> -->
+						<a href="#none" class="btn" onclick="openPopupUp('lyPop');">큰 글씨 설정</a>
 					</div>
-					<ul class="service-more">
-						<li class="kcb-score">
-							<a href="javascript:void(0);">KCB 신용점수 조회하기</a>
-						</li>
-						<li class="living-expenses">
-							<a href="javascript:void(0);">여유 생활자금 계산하기</a>
-						</li>
-						<li class="simple-loan">
-							<a href="javascript:void(0);">간편대출 한도조회</a>
-						</li>
-					</ul>
-				</section>
-
-				<section class="sns-area">
-					<div class="">SNS소식</div>
-					<div class="">오직 예가람의 SNS를 통해<br />이벤트를 참여하세요!</div>
-				</section>
-
-				<section class="notice-area">
-					<div class="area-title-box">
-						<h2 class="area-title">공지사항</h2>
-					</div>
-
-				</section>
-
-				<ul class="info-list">
-					<li><a href="#none">이용시간<br />안내</a></li>
-					<li><a href="#none">영업점<br />위치 안내</a></li>
-					<li><a href="#none">대표번호<br />1877-7788</a></li>
-				</ul>
-
-				<ul class="sns-list">
+				</div>
+				<!-- e: 버튼추가 -->
+				
+				<!-- [퍼블] 수정범위 클래스 추가-->
+                <ul class="sns-list">
                     <li class="btn_sns sns_facebook"><a href="#none">페이스북</a></li>
+                    <!-- <li class="btn_sns sns_twitter"><a href="#none">트위터</a></li> -->
                     <li class="btn_sns sns_insta"><a href="#none">인스타그램</a></li>
                     <li class="btn_sns sns_blog"><a href="#none">네이버 블로그</a></li>
                     <li class="btn_sns sns_kakao"><a href="#none">카카오톡체널</a></li>
                 </ul>
-
-				<div class="main-function-btn-wrap">
-					<div>
-						<a href="#none" class="btn amount-view-on">금액보이기</a>
-						<a href="#none" class="btn amount-view-off">금액숨기기</a>
-						<a href="#none" class="btn" onclick="openPopupUp('lyPop');">큰 글씨 설정</a>
-					</div>
-				</div>
-
-			</div>
+				<!-- // [퍼블] 수정범위 클래스 추가-->
+            </div>
         </div>
         <!-- //e: contents -->
     </div>

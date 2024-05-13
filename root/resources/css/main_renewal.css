@@ -17,13 +17,14 @@
 .main-header .login-area span { font-size:0.77778rem; line-height:1.5; color:#260F54; font-weight:500; }
 .main-header .login-area span:after { content:""; position:absolute; top:50%; transform: translateY(-50%); width:16px; height:16px; background:url(../images/main/ic-login-arrow-right.png) no-repeat 50%/16px auto; }
 
-.main .default-wrap { margin:0; padding:30px 20px 60px; }
+.main .default-wrap { margin:0; padding:24px 20px 60px; }
 .main .default-wrap:has(>.tit-wrap:first-child) { padding-top:0; }
 .main .layer-up .default-wrap { padding-top:0; }
 .main .type-spread { margin: 0 -20px; padding: 0; }
 .main .type-spread .area-title { padding: 0 20px; }
 .contentsWrap [class*="-area"] + [class*="-area"] { margin-top:40px; }
-.contentsWrap [class*="-area"] .area-title { margin:0 0 15px; font-weight:700; font-size:1rem; }
+.contentsWrap [class*="-area"] .area-title-box { margin-bottom: 15px; }
+.contentsWrap [class*="-area"] .area-title { font-weight:500; font-size:1.11111rem; }
 .contentsWrap .welcome-area + [class*="-area"] { margin-top:30px; }
 
 /*** 각 영역 ***/
@@ -48,12 +49,17 @@
 .quick-menu-list li+li a:before { background:url('../images/main/ico_quick_02.png') no-repeat 50%/ 36px auto; }
 
 /** 빠른 서비스 **/
-.contentsWrap .quick-service-area .area-title { font-size:0.77778rem; line-height:1.5; } 
+/* .contentsWrap .quick-service-area .area-title { font-size:0.77778rem; line-height:1.5; }  */
 .quick-service-area { margin-top:50px !important; }
 .quick-service-area .area-title { margin-bottom:0 !important; font-size:0.78rem; }
-.quick-service-list { font-size:0; }
-.quick-service-list li { display:inline-block; margin:10px 6px 0 0; }
-.quick-service-list a { display:block; height:30px; padding:0 13px; border-radius:23px; border:1px solid #DDDDDD; background:#FFFFFF; font-weight:500; color:#666666; font-size:0.67rem; line-height:30px; }
+.quick-service-list { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; width: 100%; }
+.quick-service-list li { width: 48%; box-sizing: border-box; }
+.service-deposits a { background:url('../images/main/ico_service_deposits.png') no-repeat 92%/ 24px auto; }
+.service-loan-inquiry a { background:url('../images/main/ico_service_loan_inquiry.png') no-repeat 92%/ 24px auto; }
+.service-contract a { background:url('../images/main/ico_service_contract.png') no-repeat 92%/ 24px auto; }
+.service-loan a { background:url('../images/main/ico_service_loan.png') no-repeat 92%/ 24px auto; }
+
+.quick-service-list a { display:block; height:72px; padding:0 16px 0 20px; border-radius:15px; background-color:#FFFFFF; font-weight:500; color:#333333; font-size:0.77778rem; line-height:72px; }
 .quick-service-list li.highlight a { border:1px solid #6836CB; color:#6836CB; background:#EEEBFF; }
 .quick-service-area .quick-menu-search { color:#757575; font-size:0.77778rem; line-height:1.5; }
 .quick-service-area .quick-menu-search .btn-search { width:16px; height:16px; background-size:16px 16px; }
@@ -81,13 +87,13 @@
 .guide-list a { display:block; position:relative; height:50px; font-size:0.78rem; line-height:50px; }
 
 /** 롤링 노티스 **/
-.notice-area { overflow:hidden; position:relative; height:20px; }
+/* .notice-area { overflow:hidden; position:relative; height:20px; }
 .notice-area:before { content:''; position:absolute; top:50%; left:0; width:20px; height:20px; background:url('../images/main/ico_notice.png') no-repeat 50%/20px auto; transform:translateY(-50%); }
 .notice-area:after{content:'공지';position:absolute; font-size:0.77778rem; line-height:1.5; color:#333;top:50%;left:22px;transform:translateY(-50%);}
-.notice-slider-wrap .swiper-wrapper { position:relative; height:20px; /*padding-left:25px;*/ padding-left:60px; }
+.notice-slider-wrap .swiper-wrapper { position:relative; height:20px; padding-left:25px; padding-left:60px; }
 .notice-slider-wrap .swiper-wrapper .swiper-slide { position:relative; height:20px; line-height:20px; }
 .notice-slider-wrap .swiper-wrapper .notice-tit { overflow:hidden; padding-right:150px; font-size:0.77778rem; line-height:1.5; white-space:nowrap; text-overflow:ellipsis; }
-.notice-slider-wrap .swiper-wrapper .notice-date { position:absolute; top:0; right:70px; color:#ccc; font-size:0.77778rem; line-height:1.5;  }
+.notice-slider-wrap .swiper-wrapper .notice-date { position:absolute; top:0; right:70px; color:#ccc; font-size:0.77778rem; line-height:1.5;  } */
 
 /** 소식 슬라이더 **/
 .news-slider-wrap.swiper { overflow: visible; padding-left:20px; padding-right:20px; padding-bottom:47px; }
@@ -101,7 +107,7 @@
 .news-slider-wrap .swiper-pagination-bullet-active { width:30px; border-radius:9px; background:#BCB5CA; }
 
 /** sns **/
-.sns-list { margin-top:30px; font-size:0; text-align:center; }
+.sns-list { margin-top:40px; font-size:0; text-align:center; }
 .sns-list li { display:inline-block; }
 .sns-list li + li { margin-left:12px; }
 .sns-list li a { display:block; width:36px; height:36px;}
@@ -123,9 +129,10 @@
 .banner-colse { position:absolute; right:0; width:18px; height:18px; background:url("../images/main/ico-baneer-close.png")no-repeat center/100%; font-size:0; }
 
 /* 금액보이기 */
-.main-function-btn-wrap{display:flex;flex-direction:column;gap:10px;align-items:center; margin-top: 20px;}
-.main-function-btn-wrap .btn{display:inline-flex;align-items:center;padding:8px 16px;border:solid 1px #ddd;background:#fff;border-radius:8px;color:#666;font-size:.88889rem; vertical-align: middle; line-height:1.4375}
-.main-function-btn-wrap .btn[class*="amount-view-"]:before{display:inline-block;content:'';width:16px;height:16px;margin-right:5px}
+.main-function-btn-wrap{display:flex;flex-direction:column;gap:10px;align-items:center; margin-top: 30px; text-align: center;}
+.main-function-btn-wrap .btn{display:block; align-items:center; padding:8px 16px; border:solid 1px #dddddd; background:#FFFFFF; border-radius:17px;color:#666; font-weight: 400; font-size: 0.77778rem; line-height: 1rem; vertical-align: middle; margin-bottom: 8px;}
+.main-function-btn-wrap .btn:last-child { margin-bottom: 0; }
+.main-function-btn-wrap .btn[class*="amount-view-"]:before{display:inline-block;content:'';width:16px;height:16px;margin-right:5px; vertical-align: top; }
 .main-function-btn-wrap .amount-view-on:before{background:url(../images/common/ico_eye_on.png) no-repeat 50% / contain}
 .main-function-btn-wrap .amount-view-off:before{background:url(../images/common/ico_eye_off.png) no-repeat 50% / contain}
 
@@ -189,3 +196,26 @@
 
 /* 추가 */
 .contentsWrap:has(~ .bottom-menu-area) { padding-bottom:calc( env(safe-area-inset-bottom) + 68px ) !important; } /* 기존 default.css에 있던거는 주석처리하고 메인에만 추가 20231019 */
+
+/* 예가람 메인 */
+.main .contentsWrap { background-color: #F5F8FA; }
+.service-more { background-color: #DAEAF8; border-radius: 20px; padding: 20px; }
+.service-more li { margin-bottom: 13px; }
+.service-more li:last-child { margin-bottom: 0; }
+
+.service-more a { display: block; font-size:0.88889rem; font-weight: 500; height: 38px; line-height: 38px; background: url('../images/main/arrow_right_black.png') no-repeat 100%/16px auto; }
+.service-more a::before { content: ''; display: inline-block; width: 38px; height: 38px; vertical-align: top; }
+.kcb-score a::before { background: url('../images/main/ico_kcb_score.png') no-repeat 50%/38px auto; }
+.living-expenses a::before { background: url('../images/main/ico_living_expenses.png') no-repeat 50%/38px auto; }
+.simple-loan a::before { background: url('../images/main/ico_simple_loan.png') no-repeat 50%/38px auto; }
+
+
+.info-list { display: flex; justify-content: space-between; align-items: center; gap: 8px; width: 100%; }
+.info-list li { width: 100%; background-color: #FFFFFF; border-radius: 10px; }
+.info-list a { display: block; text-align: center; font-size:0.66667rem; font-weight: 400; color: #666666; height: 55px; align-content: center; }
+
+
+
+@media screen and (max-width:389px) { /* 떨어짐 현상 방지 - 수치 변경 가능성 있음 */
+    .quick-service-list li { width: 100%; }
+}
