@@ -2157,7 +2157,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .inquiry-result-area .result-list .txt-wrap .date { margin-top:2px; }
 .inquiry-result-area .result-list .amount-wrap { margin-top:0; padding:0; flex:1 1 fit-content; place-self: flex-end; font-size:0; text-align:right; background:#fff; }
 .inquiry-result-area .result-list .amount-wrap .amount { position:static; color:#FF0000; font-weight:500; font-size:1rem; line-height:1.38889;}
-.inquiry-result-area .result-list .amount-wrap .amount.deposit { color:#4880EE;}
+.inquiry-result-area .result-list .amount-wrap .amount.deposit { color:#4E32A5;}
 .inquiry-result-area .result-list .amount-wrap .amount .tit { margin-right:3px; font-weight:300; color:#333333; }
 .inquiry-result-area .result-list .amount-wrap .balance { display:block; margin-top:10px; font-weight:300; font-size:0.88889rem; line-height:1.4375; }
 .inquiry-result-area .result-list .amount-wrap .balance .tit { font-weight:inherit; color:inherit; font-size:inherit; }

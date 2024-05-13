@@ -80,7 +80,7 @@
 						<div class="account-amount">
                             <!-- D: flexSa 클래스 추가 및 span태그 추가-->
 							<p class="amount-on flexSb">
-                                <sapn class="tit">잔액</sapn> 
+                                <sapn class="tit">잔액</sapn>
                                 <span><span>1,600,000</span>원</span>
                             </p>
 							<!--<p class="amount-desc">예적금담보대출가능금액 <span>21,500,000</span>원</p>-->
@@ -100,44 +100,43 @@
 							</div>
 						</div>
 						<a href="javascript:void(0);" class="btn-set" onclick="acnoSetBtn();">관리</a>
-                        <!--D:버튼클래스 공통잡기-->
+                        <!--D : 버튼클래스 공통잡기-->
                         <div class="btn-cont-wrap">
                             <a href="javascript:void(0);" class="btn btn-info btn-white">만기자동재예치</a>
                             <a href="javascript:void(0);" class="btn btn-primary">해지예상조회</a>
                         </div>
 
-						<!-- [퍼블] 정기적금일때 버튼 -->
+						<!-- 정기적금일때 버튼 -->
 						<div class="btn-cont-wrap" style="display:none;">
 							<a href="#none" class="btn btn-info btn-white">납입일변경</a>
 							<a href="#none" class="btn btn-primary">입금</a>
 						</div>
-						<!-- // [퍼블] 정기적금일때 버튼 -->
-                        <!-- [퍼블] 정기적금일때 버튼 -->
+						<!-- // 정기적금일때 버튼 -->
+                        <!-- 정기적금일때 버튼 -->
 						<div class="btn-cont-wrap" style="display:none;">
 							<a href="#none" class="btn btn-primary">이자즉시출금요청</a>
 						</div>
-						<!-- // [퍼블] 정기적금일때 버튼 -->
+						<!-- // 정기적금일때 버튼 -->
 					</div>
-					<!-- // [퍼블] 전체 변경 -->
+					<!-- // 전체 변경 -->
 
 				</div>
 
 				<!-- s: 조회기간 호출 영역 -->
-				<div class="inquiry-choice-area type-spread"> <!-- [퍼블] .mt50 삭제 -->
-					<button type="button" class="btn-inquiry-choice"
-						onclick="biz.dateInq(srchFilter);">
+				<div class="inquiry-choice-area type-spread"> 
+					<button type="button" class="btn-inquiry-choice"onclick="biz.dateInq(srchFilter);">
 						<span id="termTxt">3개월</span>
 						<!-- <span id="rstTxt">전체</span> --> 
 						<span id="orderTxt">최신순</span>
 					</button>
 				</div>
 				<div class="inquiry-result-area">
-					<div class="inquiry-summary type-spread"><!-- [퍼블] .type-spread 추가 -->
+					<div class="inquiry-summary type-spread">
 						<p class="period">
 							<span id="sttTxt">2023. 00. 00</span> ~ <span id="endTxt">2023. 00. 00</span>
 						</p>
 						<div class="toggle-wrap">
-							<input type="checkbox" id="blncChk" onclick="amtDisplay(this);"> 
+							<input type="checkbox" id="blncChk" onclick="amtDisplay(this);">
 							<label for="blncChk">
 								<span>잔액표기</span>
 								<div class="switch-btn">
@@ -168,7 +167,7 @@
 					<!-- // [퍼블] 추가 -->
 
 					<!-- [퍼블] 정기적금일때 -->
-					<ul class="data-list-wrap" style="display:none;">
+					<ul class="data-list-wrap">
 						<li>
 							<div class="data-tit"><strong>2회차</strong></div>
 							<ul class="data-list">
@@ -204,14 +203,13 @@
 							</ul>
 						</li>
 					</ul>
-					<!-- // [퍼블] 정기적금일때 -->
+					<!-- // 정기적금일때 -->
 
-					<!-- 거래내역 없음 -->
-					<div class="result-area exclamation search-txt mb55" id="noDataDiv"
-						style="display: none;">
-						<p>조회된 거래 내역이 없어요</p>
+					<!-- s: 거래내역 없음 D 클래스변경 확인 -->
+					<div class="result-area nodata" id="transRsltNoData" style="display:block;">
+						<p>조회된 거래내역이 없어요</p>
 					</div>
-					<!-- 거래내역 없음 -->
+					<!-- e : 거래내역 없음 -->
 
 					<!-- s : 종합통장대출일경우 노출 -->
 					<!-- <p class="month-divide">2023.04</p> -->

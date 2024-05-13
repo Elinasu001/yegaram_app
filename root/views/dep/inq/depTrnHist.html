@@ -97,7 +97,6 @@
 					</div>
 				</section>
 
-				<!-- [퍼블] 차트 추가 -->
 				<section class="chart-wrap">
 					<div class="inquiry-set-wrap list-style-wrap">
 						<div class="type-area">
@@ -198,7 +197,6 @@
 					    </script>
 					</div>
 				</section>
-				<!-- // [퍼블] 차트 추가 -->
 
 				<!-- s: 조회기간 호출 영역 -->
 				<section>
@@ -229,7 +227,6 @@
 						<!-- <p class="month-divide" class="prodGbnLon" style="display:none">2023.04</p> -->
 						<!-- e : 종합통장대출일경우 노출 -->	
 
-						<!-- [퍼블] 전체 변경 -->
 						<!-- s : [예적금담보대출], [아파트.일반부동산 담보대출 - 만기일시상환] 일 경우 -->
 						<p class="month-divide type-spread">2023.05</p> <!-- [퍼블] 추가 -->
 						<ul class="result-list">
@@ -298,13 +295,12 @@
 								</a>
 							</li>
 						</ul>
-						<!-- // [퍼블] 전체 변경 -->
 
 						<!-- s : [신용대출], [아파트.일반부동산 담보대출-원리금균등분할상환] 일 경우 -->
 						<div id="trnHistDiv" name="trnHistDiv"></div>
 						
 						<div id="trnHistTemp" name="trnHistTemp" style="display:none;">
-						<div class="txt-list-wrap"> <!-- [퍼블] .mt20 삭제 -->
+						<div class="txt-list-wrap">
 							<div class="txt-detail-area">
 								<div class="txt-detail-tit">
 									<strong>{idx}</strong>
@@ -340,9 +336,13 @@
 						<!-- e : [신용대출], [아파트.일반부동산 담보대출-원리금균등분할상환] 일 경우 //-->
 						</div>
 					</div>
+					<!--  조회 결과 없음 -->
+					<div class="result-area nodata" id="transRsltNoData" style="display:block;">
+						<p>조회된 거래내역이 없어요</p>
+					</div>
+					<!--  조회 결과 없음 -->
 				</section>
 			</div>
-			<!-- // [퍼블] 전체 변경 -->
 
 		</div>
 
