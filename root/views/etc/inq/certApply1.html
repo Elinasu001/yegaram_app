@@ -80,85 +80,160 @@
 
                 <!--D: " 부채잔액증명서, 금융거래확인서, 완납증명서, 미연체확인서, 대출거래내역서, 예금잔액증명서, 금융소득종합과세, 원천징수영수증 " 의 증명서 발금신청 정보입력 -->
                 
-                <div class="select-wrap"><!--D:selct-wrap에 select-box 반복-->
+                <!--S:FORM-->
+                <div class="form-all-wrap"><!--D: 5/13 - form 전체 감쌀 경우 : form-all-wrap / slect-box를 감쌀 경우 slect-wrap이 아닌 form-wrap으로 감싸주세요-->
 
                     <!--D: 증명서 종류 -->
-                    <div class="select-box" tabindex="1">
-                        <label for="" class="essential">증명서 종류</label>
-                        <span class="option" id="">미선택</span>
-                    </div>
-
-                    <!--D: 발급년도 -->
-                    <div id="rolldate4" class="select-box" tabindex="1">
-                        <label for="" class="essential">발급년도</label>
-                        <span class="option" id="">미선택</span>
-                    </div>
-
-                    <!--D: 발급목적 -->
-                    <div class="select-box" tabindex="1">
-                        <label for="" class="essential">발급목적</label>
-                        <span class="option" id="">미선택</span>
-                    </div>
-
-                    <!--D: 제출처 선택 -->
-                    <div class="select-box" tabindex="1">
-                        <label for="" class="essential">제출처 선택</label>
-                        <span class="option" id="">미선택</span>
-                    </div>
-
-                    <!--D: 수령방법 -->
-                    <div class="select-box" tabindex="1">
-                        <label for="" class="essential">수령방법</label>
-                        <span class="option" id="">미선택</span>
-                    </div>
-
-                    <!--D: 조회계좌 -->
-                    <div class="select-box" tabindex="1">
-                        <label for="" class="essential">조회계좌</label>
-                        <span class="option" id="">미선택</span>
-                    </div>
-
-                    <!--D: 조회기간 -->
-                    <div class="select-box" tabindex="1">
-                        <label for="" class="essential">조회기간</label>
-                        <span class="option" id="">미선택</span>
-                    </div>
-
-                </div>
-
-                <div class="form-all-wrap">
-
-                    <div class="form-wrap"><!-- D:이메일-->
-                        <label for="ipt02" class="formlabel">이메일</label>
-                        <div class="input">
-                            <span><input type="text" id="email" class="inp" pattern=".+@\." onclick="eml()" placeholder="이메일주소를 입력해주세요" name="EML_C50" value="" required=""></span>
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div class="select-box" tabindex="1">
+                            <label for="" class="essential">증명서 종류</label><!--D: essentail 추가-->
+                            <span class="option" id="">미선택</span>
                         </div>
                     </div>
 
-                </div>
+                    <!--D: 발급목적 -->
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div class="select-box" tabindex="1">
+                            <label for="" class="essential">발급목적</label><!--D: essentail 추가-->
+                            <span class="option" id="">미선택</span>
+                        </div>
+                    </div>
 
-                <div class="list-bull"><!-- D: 구조 변경-->
+                    <!--D: 제출처 선택 -->
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div class="select-box" tabindex="1">
+                            <label for="" class="essential">제출처 선택</label><!--D: essentail 추가-->
+                            <span class="option" id="">미선택</span>
+                        </div>
+                    </div>
+
+                    <!--D: 발급년도 -->
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div id="rolldate4" class="select-box" tabindex="1">
+                            <label for="" class="essential">발급년도</label><!--D: essentail 추가-->
+                            <span class="option" id="">미선택</span>
+                        </div>
+                    </div>
+
+
+                    <!--D: 수령방법 -->
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div class="select-box" tabindex="1">
+                            <label for="" class="essential">수령방법</label><!--D: essentail 추가-->
+                            <span class="option" id="">미선택</span>
+                        </div>
+                    </div>
+
+                    <!--D: 조회계좌 -->
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div class="select-box" tabindex="1">
+                            <label for="" class="essential">조회계좌</label><!--D: essentail 추가-->
+                            <span class="option" id="">미선택</span>
+                        </div>
+                    </div>
+
+                    <!--D: 조회기간 -->
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div class="select-box" tabindex="1">
+                            <label for="" class="essential">조회기간</label><!--D: essentail 추가-->
+                            <span class="option" id="">미선택</span>
+                        </div>
+                    </div>
+
+                    <!--D: 이메일 -->
+                    <div class="form-wrap"><!-- D:이메일-->
+                        <label for="ipt02" class="formlabel">이메일</label>
+                        <div class="input">
+                            <span><input type="text" id="email" class="inp" pattern=".+@\." onclick="eml()" placeholder="이메일주소 입력" name="EML_C50" value="" required=""></span><!--D: placeholder : 이메일주소 입력-->
+                        </div>
+                    </div>
+
+
+                    <div class="form-wrap"><!-- D:팩스번호-->
+                        <label for="ipt02" class="formlabel">팩스번호</label>
+                        <div class="input">
+                            <span><input type="text" id="txt" class="inp" placeholder="팩스번호 입력" name="" value="" required=""></span>
+                        </div>
+                    </div>
+                    <p class="info-txt">팩스번호 입력 시 '-'를 빼고 입력해주세요</p><!--D: 팩스번호  info-txt 추가-->
+
+
+                    <div class="form-wrap form-line"><!-- D:우편번호-->
+                        <label for="ipt04" class="formlabel">주소</label>
+                        <div class="input"><!--D:<div class="input">로 변경-->
+                            <input type="text" title="주소검색" class="inp validChk" name="" value="" id=""  placeholder="우편번호 입력" required="">
+                            <button type="button" class="btn-certi">우편번호찾기</button>
+                        </div>
+                        <div class="input"><!--D:<div class="input">로 변경-->
+                            <input type="text" class="inp validChk" name="" value="" id=""placeholder="기본주소 입력" required="">
+                        </div>
+                        <div class="input"><!--D:<div class="input">로 변경-->
+                            <input type="text" class="inp validChk" name="" value="" id=""  placeholder="상세주소 입력" required="">
+                        </div>
+                        <p class="error-txt">주소를 입력해주세요</p>
+                    </div>
+
+                </div>
+                <!--E:FORM-->
+
+                <!--D: 리스트 뿌려지는게 다름 - 추가 -->
+
+                <!--S: 부채잔액증명서-->
+                <div class="list-bull">
                     <div class="border"></div>
                     <strong>알아두세요</strong>
                     <ul>
                         <li>거래가능시간 : 은행영업원(평일) 08:00 ~ 22:00</li>
                         <li>부채잔액증명서에 이자 잔액은 표시되지 않아요</li>
-                        <li>특수채권내역은 인터넷뱅킹에서 조회되지 않으므로
-                            영업점을 방문하여 발급해 주세요 아래와 같은 경우에는
-                            가까운 영업점을 방문하여 발급해 주세요<br/>
-                            - 개인회생, 파산, 기업회생 등의 용도로 발급을 원하는 경우
+                        <li>특수채권내역은 인터넷뱅킹에서 조회되지 않으므로 영업점을 방문하여 발급해 주세요</li>
+                        <li>아래와 같은 경우에는 가까운 영업점을 방문하여 발급해 주세요
+                            <ul class="list-bull hyphen">
+                                <li>개인회생, 파산, 기업회생 등의 용도로 발급을 원하는 경우</li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
+                <!--E: 부채잔액증명서-->
                 
+                <!--S: 금융거래확인서 / 금융소득종합과세 / 원천징수영수증-->
+                <div class="list-bull">
+                    <div class="border"></div>
+                    <strong>알아두세요</strong>
+                    <ul>
+                        <li>거래가능시간 : 은행영업원(평일) 08:00 ~ 22:00</li>
+                    </ul>
+                </div>
+                <!--E: 금융거래확인서 / 금융소득종합과세 / 원천징수영수증-->
+                
+                <!--S: 예금잔액증명서-->
+                <div class="list-bull">
+                    <div class="border"></div>
+                    <strong>알아두세요</strong>
+                    <ul>
+                        <li>출력은 입력하신 이메일 주소에서 첨부파일을 내려받으신 후 인쇄해 주세요</li>
+                        <li>고객님의 예금 등에 대해서 발급기준일자의 최종잔액을 증명할 수 있어요</li>
+                        <li>아래와 같은 경우에는 가까운 영업점을 방문하여 발급해 주세요
+                            <ul class="list-bull hyphen">
+                                <li>제 3자에게 양도 거래한 대금</li>
+                                <li>수익자를 타인으로 지정한 타인 신탁 상품</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--E: 예금잔액증명서-->
+
+                <!--D: 리스트 뿌려지는게 다름 - 추가 // -->
+
+
+
             </div>
         </div>
         <!-- //contents -->
 
         <div class="fixed-btn-wrap">
-            <div class="btn-wrap flexCol">
+            <div class="btn-wrap flexCol"><!--D: flexCol추가-->
                 <a href="#none" class="btn">다음</a>
-                <a href="#none" class="btn txt">그만하기</a>
+                <a href="#none" class="btn txt">그만하기</a><!--D: btn txt 클래스 변경-->
             </div>
         </div>
 

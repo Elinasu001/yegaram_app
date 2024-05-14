@@ -78,10 +78,13 @@
 					<p class="txt"><b>발급 계좌를</b>선택하세요</p>
 				</div>
 
+				<!--D: <span class="txt">원</span>일 경우 공통적으로 point 클래스가 추가됩니다. ex) <span class="txt point"></span>-->
+
+				<!-- D: 반복부 -->
                 <div class="txt-list-wrap active"><!--D: active-->
 					<div class="txt-detail-area">
 						<div class="txt-detail-tit">
-							<strong id="prodNm1" data-value="보통예금(SB톡톡)">보통예금(SB톡톡)</strong>
+							<strong id="prodNm1">계좌1</strong>
 							<div class="check-account fl-r">
 								<input type="checkbox" id="chk1" class="chkBox" name="acnoCheck" value="">
 								<label for="chk1">
@@ -91,30 +94,30 @@
 						</div>
 
 						<ul id="1" class="txt-list">
-                           	<li>
-								<span class="tit">입금계좌</span>
-								<span class="txt" id="acno1" data-value="10161130024058">101-61-13-0024058</span>								
+	 						<li>
+								<span class="tit">계좌번호</span><!--D:텍스트 변경-->
+								<span class="txt" id="">101-61-13-0024058</span>
 							</li>
 							<li>
-								<span class="tit" id="accoKncd1" data-value="1">예금종류</span>
-								<p id="accoKncd" class="txt">예금</p>
+								<span class="tit" id="" data-value="1">예금종류</span>
+								<p id="" class="txt">정기예금(복리)</p>
 							</li>
 							<li>
 								<span class="tit">계좌잔액</span>
-								<span class="txt" id="mndpBlnc1" data-value="1754762">1,754,762원</span>
+								<span class="txt point" id="">1,754,762원</span><!--D: 계좌잔액 point 클래스 추가 -->
 							</li>
 							<li>
 								<span class="tit">개설일</span>
-								<span class="txt" id="newDt1" data-value="20180821">2018.08.21</span>
+								<span class="txt" id="">2018.08.21</span>
 							</li>
                         </ul>
 					</div>
 		    	</div>
 
-                <div class="txt-list-wrap "><!--D: active-->
+				<div class="txt-list-wrap"><!--D: active-->
 					<div class="txt-detail-area">
 						<div class="txt-detail-tit">
-							<strong id="prodNm1" data-value="보통예금(SB톡톡)">보통예금(SB톡톡)</strong>
+							<strong id="prodNm1">계좌1</strong>
 							<div class="check-account fl-r">
 								<input type="checkbox" id="chk1" class="chkBox" name="acnoCheck" value="">
 								<label for="chk1">
@@ -124,33 +127,35 @@
 						</div>
 
 						<ul id="1" class="txt-list">
-                            <li>
-								<span class="tit">입금계좌</span>
-								<span class="txt" id="acno1" data-value="10161130024058">101-61-13-0024058</span>
+	 						<li>
+								<span class="tit">계좌번호</span><!--D:텍스트 변경-->
+								<span class="txt" id="">101-61-13-0024058</span>
 							</li>
 							<li>
-								<span class="tit" id="accoKncd1" data-value="1">예금종류</span>
-								<p id="accoKncd" class="txt">예금</p>
+								<span class="tit" id="" data-value="1">예금종류</span>
+								<p id="" class="txt">정기예금(복리)</p>
 							</li>
 							<li>
 								<span class="tit">계좌잔액</span>
-								<span class="txt" id="mndpBlnc1" data-value="1754762">1,754,762원</span>
+								<span class="txt point" id="">1,754,762원</span><!--D: 계좌잔액 point 클래스 추가 -->
 							</li>
 							<li>
 								<span class="tit">개설일</span>
-								<span class="txt" id="newDt1" data-value="20180821">2018.08.21</span>
+								<span class="txt" id="">2018.08.21</span>
 							</li>
                         </ul>
 					</div>
 		    	</div>
+				<!-- D: 반복부// -->
 
             </div>
         </div>
         <!-- //contents -->
 
-        <div class="fixed-btn-wrap"><!-- [퍼블] contentsWrap안으로 변경 -->
-            <div class="btn-wrap">
-                <a href="#none" class="btn" onclick="PageFunc.acnoPwProc()">다음</a>
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap flexCol"><!--D: flexCol 클래스 추가-->
+                <a href="#none" class="btn">발급신청하기</a>
+                <a href="#none" class="btn txt">홈으로</a><!--D:txt 클래스 추가-->
             </div>
         </div>
 

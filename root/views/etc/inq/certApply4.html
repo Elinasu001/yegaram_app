@@ -72,63 +72,685 @@
     <div class="contentsWrap">
         <!--contents -->
         <div class="contents">
-            <div class="default-wrap">
 
-			<!--s:상세보기-->
-			<div class="visaul-info-box style2"><!--D: 클래스 추가-->
-				<strong class="info-tit">
-					정기예금(복리)
-				</strong>
-				<div class="account-area">
-					<p class="account">123-12-12-1234567</p>
-					<button type="button" class="btn-copy">복사하기</button><!--D: 추가-->
-				</div>
-				<ul class="amount-area border-none">
-					<li>
-						<span class="num"><em>500,000원</em></span>
-					</li>
-				</ul>
-			</div>
-
-			<div class="txt-list-wrap type-result">
-				<div class="txt-detail-area">
-					<div class="txt-detail-tit">
-						<strong>발급내역</strong>
+			<!--D: 증명서 발급신청 상세보기-->
+			<div class="default-wrap">
+				
+				<div class="visaul-info-box style2">
+					<strong class="info-tit">
+						정기예금(복리)
+					</strong>
+					<div class="account-area">
+						<p class="account">123-12-12-1234567</p>
+						<button type="button" class="btn-copy">복사하기</button><!--D: 버튼 추가-->
 					</div>
-					<ul class="txt-list">
+					<ul class="amount-area border-none">
 						<li>
-							<span class="tit">발행번호</span>
-							<span class="txt">123</span>
-						</li>
-						<li>
-							<span class="tit">발급기준일</span>
-							<p class="txt">YYY.MM.DD</p>
-						</li>
-						<li>
-							<span class="tit">발급목적</span>
-							<span class="txt">결산용</span>
-						</li>
-						<li>
-							<span class="tit">예금종류</span>
-							<span class="txt">정기예금(복리)</span>
-						</li>
-						<li>
-							<span class="tit">개설일</span>
-							<span class="txt">YYY.MM.DD</span>
-						</li>
-						<li>
-							<span class="tit">이메일</span>
-							<span class="txt">
-								yegaram1234<br/>
-								@yegaramsb.co.kr</span>
+							<span class="num"><em>500,000원</em></span>
 						</li>
 					</ul>
 				</div>
 
-			</div>
-			<!--e:예금잔액증명서_증명서 발급신청(완료)_상세보기-->
+				<!--S: 상세보기-->
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>발급내역</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">발행번호</span>
+								<span class="txt">123</span>
+							</li>
+							<li>
+								<span class="tit">발급기준일</span>
+								<p class="txt">YYY.MM.DD</p>
+							</li>
+							<li>
+								<span class="tit">발급목적</span>
+								<span class="txt">결산용</span>
+							</li>
+							<li>
+								<span class="tit">예금종류</span>
+								<span class="txt">정기예금(복리)</span>
+							</li>
+							<li>
+								<span class="tit">개설일</span>
+								<span class="txt">YYY.MM.DD</span>
+							</li>
+							<li>
+								<span class="tit">이메일주소</span><!--D: 이메일주소로 텍스트 변경-->
+								<span class="txt">
+									yegaram1234<br/>
+									@yegaramsb.co.kr</span>
+							</li>
+						</ul>
+					</div>
+	
+				</div>
+				<!--E: 상세보기-->
 
-            </div>
+				<!--D:금융거래확인서 상세보기 동일-->
+				
+
+			</div>
+			<!--D: 증명서 발급신청 상세보기//-->
+
+			<!--D: 공통 -  <span class="txt">원</span>일 경우 공통적으로 point 클래스가 추가됩니다. ex) <span class="txt point"></span>-->
+			<!--D: 이자율,세율도  point 클래스가 추가 -->
+			<!--D: 아래 내용 중 변경사항은 D: 로 시작되는 주석처리 확인해주세요 그 외는 개발 기준으로 적용됩니다.-->
+
+			<!-- s: 부채잔액증명서 -->
+			<div class="default-wrap">
+
+				<div class="tit-wrap">
+					<p class="txt">발급하실 <strong>부채잔액증명서</strong> 내용을<br/>확인하세요</p>
+				</div>
+
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>발급내역</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">발급기준일</span>
+								<span class="txt"></span>
+							</li>
+							<li>
+								<span class="tit">발급목적</span>
+								<p class="txt">${reqDs.INTG_MCF_USE_USG_CNTN_TEXT}</p>
+							</li>
+							<li>
+								<span class="tit">제출처 선택</span><!-- [퍼블] 텍스트 변경 -->
+								<span class="txt">${reqDs.INTG_MCF_PRPL_NM_TEXT}</span>
+							</li>
+							<li>
+								<span class="tit">이메일</span>
+								<span class="txt">${reqDs.EML_C50}</span>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="txt-list-wrap type-result"><!-- [퍼블] 클래스 변경 -->
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>대출내용</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">대출일자</span>
+								<span class="txt"><ft:format type="date" value="${item.LOAN_DT}"/></span>
+							</li>
+							<li>
+								<span class="tit">대출과목</span>
+								<p class="txt">${item.LOAN_SUBJ}</p>
+							</li>
+							<li>
+								<span class="tit">대출잔액</span>
+								<span class="txt point">100,00원</span><!--D: point 클래스 추가-->
+							</li>
+							<li>
+								<span class="tit">비고</span>
+								<span class="txt">${item.RMRK}</span>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<!--[퍼블] 추가-->
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>담보내용</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">종류</span>
+								<span class="txt">정기적금(정기/장학)</span>
+							</li>
+							<li>
+								<span class="tit">유효담보가</span>
+								<p class="txt point">500,000원</p><!--D: point 클래스 추가-->
+							</li>
+							<li>
+								<span class="tit">소재지</span>
+								<span class="txt">서울시 강동구</span>
+							</li>
+							<li>
+								<span class="tit">소유자</span>
+								<span class="txt">김고려</span>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>미보유 채권 현황</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">채권구분</span>
+								<span class="txt"></span>
+							</li>
+							<li>
+								<span class="tit">계좌번호</span>
+								<p class="txt"></p>
+							</li>
+							<li>
+								<span class="tit">최초 대출일</span>
+								<span class="txt"></span>
+							</li>
+							<li>
+								<span class="tit">매각 회사명</span>
+								<span class="txt"></span>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+				<!--D:해당사항 없을 경우-->
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>미보유 채권 현황</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">해당사항없음</span>
+								<span class="txt"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+			<!-- e: 부채잔액증명서 -->
+
+			<!-- s: 금융거래확인서 -->
+			<div class="default-wrap">
+				<div class="tit-wrap">
+					<p class="txt">발급하실 <strong>금융거래확인서</strong> 내용을 <br/> 확인하세요</p>
+				</div>
+
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>대출금 거래현황</strong>
+						</div>
+						<c:forEach var="item" items="${resDs.REC1 }">
+						<ul class="txt-list">
+							<li>
+								<span class="tit">종별</span>
+								<span class="txt">${item.CLSC }</span>
+							</li>
+							<li>
+								<span class="tit">용도</span>
+								<p class="txt">${item.USG }</p>
+							</li>
+							<li>
+								<span class="tit">대출기한</span>
+								<span class="txt"><ft:format type="date" value="${item.LOAN_DLN}"/></span>
+							</li>
+							<li>
+								<span class="tit">이율</span>
+								<span class="txt">${item.INRT}"%</span>
+							</li>
+							<li>
+								<span class="tit">잔액</span>
+								<span class="txt point">원</span><!--D: point 클래스 추가-->
+							</li>
+							<li>
+								<span class="tit">비고</span>
+								<span class="txt">${item.RMRK}</span>
+							</li>
+						</ul>
+						</c:forEach>
+					</div>
+
+				</div>
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>담보내용</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">소재지</span>
+								<span class="txt">${item.LCTN}</span>
+							</li>
+							<li>
+								<span class="tit">소유자</span>
+								<p class="txt">${item.OWNR}</p>
+							</li>
+							<li>
+								<span class="tit">채무자와의 관계</span>
+								<span class="txt">${item.LCTN}</span>
+							</li>
+							<li>
+								<span class="tit">종류</span>
+								<span class="txt">${item.KIND}</span>
+							</li>
+							<li>
+								<span class="tit">수량</span>
+								<span class="txt">${item.QTY}</span>
+							</li>
+							<li>
+								<span class="tit">감정가격</span>
+								<span class="txt point">원</span><!--D: point 클래스 추가-->
+							</li>
+							<li>
+								<span class="tit">감정일자</span>
+								<span class="txt"></span>
+							</li>
+							<li>
+								<span class="tit">비고</span>
+								<span class="txt">${item.RMRK}</span>
+							</li>
+						</ul>
+						</div>
+					</div>
+
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>기준일로부터 1년 이내 당좌부도 발생 유무</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">유무</span>
+								<span class="txt">있음</span>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>기준일 현재 원금 또는 이자의 납입지체 여부</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">여부</span>
+								<span class="txt">없음</span>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>최근 3개월 이내 10일 이상 계속된 연체 명세</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">대출종류</span>
+								<span class="txt">${item.CLSC}</span>
+							</li>
+							<li>
+								<span class="tit">연체발생일</span>
+								<p class="txt"></p>
+							</li>
+							<li>
+								<span class="tit">연체원금</span>
+								<span class="txt point">원</span><!--D: point 클래스 추가-->
+							</li>
+							<li>
+								<span class="tit">연체이자</span>
+								<span class="txt point">원</span><!--D: point 클래스 추가-->
+							</li>
+							<li>
+								<span class="tit">연체정리일</span>
+								<span class="txt"></span>
+							</li>
+							<li>
+								<span class="tit">연체일수</span>
+								<span class="txt">${item.ODYCNT}일</span>
+							</li>
+							<li>
+								<span class="tit">비고</span>
+								<span class="txt">${item.RMRK}</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- e: 금융거래확인서 -->
+
+			<!-- s: 발급신청 내용확인 -->
+			<div class="default-wrap">
+
+				<div class="tit-wrap">
+					<p class="txt">발급하실 <strong>금융소득종합과세 내용을</strong><br/>확인하세요</p>
+				</div>
+
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>소득자 인적사항</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">고객명</span>
+								<span class="txt">${reqDs.CUST_NM}</span>
+							</li>
+							<li>
+								<span class="tit">주민등록번호</span>
+								<p class="txt">${resDs.NPBR_DVCD}</p>
+							</li>
+							<li>
+								<span class="tit">주소</span>
+								<span class="txt">${reqDs.CUST_ADDR1} ${reqDs.CUST_ADDR2} </span>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>연도별 소득 발생명세</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">소득년도</span>
+								<span class="txt">${reqDs.RVRS_YR}년</span>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>일련번호: ${item.SRNO}</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">소득 종류</span>
+								<span class="txt">이자소득</span>
+								<span class="txt">배당소득</span>
+							</li>
+							<li>
+								<span class="tit">소득 지급점</span>
+								<p class="txt">${item.INCM_PRVS_BO_NM }</p>
+							</li>
+							<li>
+								<span class="tit">소득 지급점 <br />사업자 등록번호</span>
+								<span class="txt">${item.INCM_PRVS_BO_NM }</span>
+							</li>
+							<li>
+								<span class="tit">계좌번호</span>
+								<span class="txt"><ft:format type="acno" value="${item.INCM_PRVS_BO_NM }"/></span>
+							</li>
+							<li>
+								<span class="tit">소득금액(세전)</span>
+								<span class="txt point">원</span><!--D:point 클래스 추가-->
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>원천징수액</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">소득세</span>
+								<span class="txt point">원</span><!--D:point 클래스 추가-->
+							</li>
+							<li>
+								<span class="tit">주민세</span>
+								<span class="txt point">원</span><!--D:point 클래스 추가-->
+							</li>
+							<li>
+								<span class="tit">농어촌특별세</span>
+								<span class="txt point">원</span><!--D:point 클래스 추가-->
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>일련번호 : 2</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">소득 종류</span>
+								<span class="txt"></span>
+							</li>
+							<li>
+								<span class="tit">소득 지급점</span>
+								<span class="txt"></span>
+							</li>
+							<li>
+								<span class="tit">소득 지급점 사업자등록번호</span>
+								<span class="txt"></span>
+							</li>
+							<li>
+								<span class="tit">계좌번호</span>
+								<span class="txt"></span>
+							</li>
+							<li>
+								<span class="tit">소득금액(세전)</span>
+								<span class="txt point">원</span><!--D:point 클래스 추가-->
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>원천징수액</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">소득세</span>
+								<span class="txt point">원</span><!--D:point 클래스 추가-->
+							</li>
+							<li>
+								<span class="tit">주민세</span>
+								<span class="txt point">원</span><!--D:point 클래스 추가-->
+							</li>
+							<li>
+								<span class="tit">농어촌특별세</span>
+								<span class="txt point">원</span><!--D:point 클래스 추가-->
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- e: 발급신청 내용확인 -->
+
+			<!-- s: 원천징수영수증 -->
+			<div class="default-wrap">
+
+				<div class="tit-wrap">
+					<p class="txt">발급하실 <strong>원천징수영수증</strong> 내용을<br/> 확인하세요</p>
+				</div>
+
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>소득자 인적사항</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">고객명</span>
+								<span class="txt">${resDs.INCR_NM }</span>
+							</li>
+							<li>
+								<span class="tit">주민등록번호</span>
+								<p class="txt">${resDs.INCR_RNNO }</p>
+							</li>
+							<li>
+								<span class="tit">소득자 구분코드</span>
+								<span class="txt">${resDs.INCR_DVCD}</span>
+							</li>
+							<li>
+								<span class="tit">계좌번호</span>
+								<span class="txt"><ft:format type="acno" value="${reqDs.ACNO}"/></span>
+							</li>
+							<li>
+								<span class="tit">주소</span>
+								<span class="txt">${resDs.INCR_ADDR }</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>계좌별 소득 발생명세</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">소득 귀속기간</span>
+								<span class="txt"><ft:format type="date" value="${reqDs.INQ_STDT}"/>~<ft:format type="date" value="${reqDs.INQ_EDDT }"/></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>지급일자</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">지급일자</span>
+								<span class="txt"></span>
+							</li>
+							<li>
+								<span class="tit">귀속연월</span><!--D: 귀속 연월로 텍스트 변경-->
+								<span class="txt"></span>
+							</li>
+							<li>
+								<span class="tit">과세구분</span>
+								<span class="txt">${item.NTS_RPT_TXTN_DVCD }</span>
+							</li>
+							<li>
+								<span class="tit">지급대상기간</span>
+								<span class="txt"><ft:format type="date" value="${item.TXTN_STDT}"/>~<ft:format type="date" value="${item.TXTN_EDDT }"/></span>
+							</li>
+							<li>
+								<span class="tit">이자율</span>
+								<span class="txt point">${item.APL_INRT}%</span><!--D: point 클래스 추가-->
+							</li>
+							<li>
+								<span class="tit">지급액</span>
+								<span class="txt point"><ft:format type="comma" value="${item.INCM_AMT }"/>원</span><!--D: point 클래스 추가-->
+							</li>
+							<li>
+								<span class="tit">세율</span>
+								<span class="txt point">${item.INCM_TXRT }%</span><!--D: point 클래스 추가-->
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>원천징수액</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">소득세</span>
+								<span class="txt point"><ft:format type="comma" value="${item.INTX }"/>원</span><!--D: point 클래스 추가-->
+							</li>
+							<li>
+								<span class="tit">법인세</span>
+								<span class="txt point"><ft:format type="comma" value="${item.CRTX }"/>원</span><!--D: point 클래스 추가-->
+							</li>
+							<li>
+								<span class="tit">지방소득세</span>
+								<span class="txt point"><ft:format type="comma" value="${item.LOCL_INTX }"/>원</span><!--D: point 클래스 추가-->
+							</li>
+							<li>
+								<span class="tit">농어촌특별세</span>
+								<span class="txt point"><ft:format type="comma" value="${tem.ASTX }"/>원</span><!--D: point 클래스 추가-->
+							</li>
+							<li>
+								<span class="tit">계</span>
+								<span class="txt point"><ft:format type="comma" value="${item.TAX_SAMT }"/>원</span><!--D: point 클래스 추가-->
+							</li>
+
+						</ul>
+					</div>
+				</div>
+				<!-- s: 원천징수영수증 "지급일자 해당없음"인 경우 -->
+
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>소득자 인적사항</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">고객명</span>
+								<span class="txt"></span>
+							</li>
+							<li>
+								<span class="tit">주민등록번호</span>
+								<span class="txt"></span>
+							</li>
+							<li>
+								<span class="tit">소득자 구분코드</span>
+								<span class="txt"></span>
+							</li>
+							<li>
+								<span class="tit">계좌번호</span>
+								<span class="txt"></span>
+							</li>
+							<li>
+								<span class="tit">주소</span>
+								<span class="txt"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>계좌별 소득 발생명세</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">소득 귀속기간</span>
+								<span class="txt"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="txt-list-wrap type-result">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>해당사항 없음</strong>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- e: 원천징수영수증 -->
+            
         </div>
         <!-- //contents -->
 

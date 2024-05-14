@@ -72,35 +72,42 @@
             <div class="default-wrap">
 
                 <!--D: step_bar 단게 구조 삭제-->
+                
                 <div class="tit-wrap">
                     <p class="txt"><strong>대출신청을 위해<br/>직장정보가 필요해요</strong></p>
                 </div>
 
-                <div class="select-wrap"><!--D: select-wrap 안에 select-box 반복 / *표시는 essential 추가 / error-txt는 사용하지 않아서 삭제 -->
+                <!--S: FORM -->
+                <div class="form-all-wrap"><!--D: 5/13 - form 전체 감쌀 경우 : form-all-wrap / slect-box를 감쌀 경우 slect-wrap이 아닌 form-wrap으로 감싸주세요-->
 
-                    <div class="select-box" tabindex="1">
-                        <label for="" class="essential">직종</label>
-                        <span class="option">미선택</span>
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div class="select-box" tabindex="1">
+                            <label for="" class="essential">직종</label>
+                            <span class="option">미선택</span>
+                        </div>
                     </div>
 
-                    <div class="select-box" tabindex="1">
-                        <label for="" class="essential">근로자유형</label>
-                        <span class="option">미선택</span>
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div class="select-box" tabindex="1">
+                            <label for="" class="essential">근로자유형</label>
+                            <span class="option">미선택</span>
+                        </div>
                     </div>
 
-                    <div id="rolldate2" class="select-box type2" tabindex="1">
-                        <label for="" class="essential">급여일</label>
-                        <span class="option">미선택</span>
+                    
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div id="rolldate2" class="select-box type2" tabindex="1">
+                            <label for="" class="essential">급여일</label>
+                            <span class="option">미선택</span>
+                        </div>
                     </div>
 
-                    <div id="rolldate" class="select-box type2" tabindex="1"><!--D: rolldate 입사연월일 -->
-                        <label for="" class="essential">입사연월일</label>
-                        <span class="option">미선택</span>
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div id="rolldate" class="select-box type2" tabindex="1"><!--D: rolldate 입사연월일 -->
+                            <label for="" class="essential">입사연월일</label>
+                            <span class="option">미선택</span>
+                        </div>
                     </div>
-
-                </div>
-
-                <div class="form-all-wrap"><!--D: form-all-wrap 태그 추가 -->
 
                     <div class="form-wrap">
                         <label for="" class="formlabel essential">직장명</label>
@@ -120,19 +127,20 @@
 
                     <div class="form-wrap form-line address">
                         <label for="" class="formlabel essential">직장주소</label>
-                        <div class="input" >
+                        <div class="input" ><!--D: <span>이 아닌 <div class="input">로 변경 -->
                             <input type="text" title="주소검색" id="" class="inp" name="" value=""  placeholder="우편번호 입력"required readonly>
                             <button type="button" class="btn-certi">우편번호찾기</button>
                         </div>
-                        <div class="input">
+                        <div class="input"><!--D: <span>이 아닌 <div class="input">로 변경 -->
                             <input type="text" id="" class="inp" name="" value="" placeholder="주소 입력" required readonly>
                         </div>
-                        <div class="input">
+                        <div class="input"><!--D: <span>이 아닌 <div class="input">로 변경 -->
                             <input type="text" id="" class="inp" name="" value=""  placeholder="상세주소 입력" required style="display:block;">
                         </div>
                     </div>
 
                 </div>
+                <!--E: FORM -->
 
             </div>
         </div>

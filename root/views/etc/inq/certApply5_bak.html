@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+<head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>예가람저축은행</title>
 <meta charset="utf-8">
@@ -31,19 +32,19 @@
 <script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803175225"></script>
-<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803175225"></script>
-<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803175225"></script>
-<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803175225"></script>
-<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803175225"></script>
-<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803175225"></script>
-<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803175225"></script>
-<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803175225"></script>
-<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803175225" id="biz_common" 
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803181648"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803181648"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803181648"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803181648"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803181648"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803181648"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803181648"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803181648"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803181648" id="biz_common" 
 	data-menuId="etc/inq"
-	data-frameId="certApply1"
-	data-serviceCd="certApply1.frm" 
-	data-serverTime="20230803175225"
+	data-frameId="certApply5"
+	data-serviceCd="certApply5.frm" 
+	data-serverTime="20230803181648"
 	data-activeMode="local"
 	data-activeEnv="${active.env">
 </script>
@@ -55,538 +56,126 @@ var PageFunc = function() {
 	}
 	
 	var _proc = function() { // 본처리
-		var bzwrDvcd = $("#bzwrDvcd_value").val();
-		var qValue = $("#qValue").val(); //발급목적
-		var qText = $("#qText").text(); //발급목적
-		var qValue2 = $("#qValue2").val(); //발급목적
-		var qText2 = $("#qText2").text(); //발급목적
-		
-		addFormData($("#dataForm"), "LINK_ACT", "CERT_ISSU_MNG");
-		addFormData($("#dataForm"), "txGbnCd", "P"); // P 전조회
-		/*
-		 * 00.예금잔액증명서 
-		 * 01.금융소득종합과세
-		 * 02.원천징수영수증
-		 * 03.금융거래확인서
-		 * 04.부채잔액증명서
-		 */
-		addFormData($("#dataForm"), "bzwrDvcd", bzwrDvcd);
-		addFormData($("#dataForm"), "TRN_DSTC", "1"); // 거래구분  1:대상조회, 2:발급
-		addFormData($("#dataForm"),"EML_C50" , $("#email").val());// 이메일
-		if(bzwrDvcd == "00" )
-		{//예금잔액증명서
-			addFormData($("#dataForm"),"BLNC_PRF_ISS_PRPS_DVCD" , qValue); // 잔액증명발급목적구분코드
-			addFormData($("#dataForm"),"BLNC_PRF_ISS_PRPS_DVCD_TEXT" , qText); // 잔액증명발급목적구분내용
-			}
-		else if (bzwrDvcd == "01") {
-		//금융소득종합과세 
-			addFormData($("#dataForm"),"RVRS_YR", $("#RVRS_YR").val());// 귀속년도
-			addFormData($("#dataForm"), "INDV_CORP_DSTC_CD", "1"); //1:개인, 2:법인 || 이거어디서 받아와요?
-			}
-		
-		else if (bzwrDvcd == "02") {
-			//원천징수영수증
-			addFormData($("#dataForm"), "ACNO", $("#ACNO").val());
-			addFormData($("#dataForm"), "INQ_STDT", stdt);
-			addFormData($("#dataForm"), "INQ_EDDT", eddt);
-			}
-		else if (bzwrDvcd == "03") {//금융거래확인서
-			addFormData($("#dataForm"), "INTG_MCF_USE_USG_CNTN", qValue);// 통합제증명사용용도내용
-			addFormData($("#dataForm"), "INTG_MCF_USE_USG_CNTN_TEXT", qText);// 통합제증명사용용도내용
-			}
-		else if (bzwrDvcd == "04") 
-		{//부채잔액증명서
-			addFormData($("#dataForm"), "INTG_MCF_USE_USG_CNTN", qValue);// 통합제증명사용용도내용
-			addFormData($("#dataForm"), "INTG_MCF_USE_USG_CNTN_TEXT", qText);// 통합제증명사용용도텍스트
-			addFormData($("#dataForm"), "INTG_MCF_PRPL_NM", qValue2);// 통합제증명제출처명
-			addFormData($("#dataForm"), "INTG_MCF_PRPL_NM_TEXT", qText2);// 통합제증명제출처텍스트
-			};
-			
-		if(bzwrDvcd == "01" || bzwrDvcd == "02"){
-			doAction("CERT_ISSU_MNG", $("#dataForm"), function(res){
-				console.log(res.REC)
-			if(res.APP_HEADER.respCd == "N00000"){
-				doActionFrame("etc/inq/certApply4", $("#dataForm"));
-				}
-			else {
-				biz.alert(res.API_RS_MSG);
-				}
-		 	 });
-			}
-		else {
-			doActionFrame("etc/inq/certApply2", $("#dataForm"));
-			}
-	};
+		// TODO 
+		return true;
+	}
 	
 	var _cancel = function() { // 그만하기
 		goMainPage();
 	}
 	
 	var _validate = function() { // 유효성검증
-		if($("#email").val() == null || UtilFunc.isNull($("#email").val()) ){
-			biz.alert("이메일을 입력해주세요.", "확인", eml()); //이메일
-		} else {
-			PageFunc.proc();
-		}
+		// TODO 
+		return true;
 	}
-	
+
 
 	
 	return {
 		back : _back,
 		proc : _proc,
 		cancel : _cancel,
-		validate : _validate,
-	}
+	};
 }();
 
 
-$(document).ready(function(){
-});
-function eml(){
-	biz.email(function(inputData){
-		$("#email").val(inputData);
-		validChk();
-	});
-}
-function callSelect(data) {
-	if(data.id=="bzwrDvcd_div") {
-		biz.certSelect('증명서발급','H000600000',function(data) {
-			$("#bzwrDvcd_span").text(data.name);
-			$("#bzwrDvcd_value").val(data.value);
-			htmlDraw(data); 
-			$(".email-wrap").show()
-		});
-	} else {
-		//type2
-		if(data.nextSelect!="" && data.nextSelect!=undefined){
-			biz.certSelect('발급목적',data.nextSelect,function(data1) {
-				$("#qText").text(data1.name);
-				$("#qValue").val(data1.value);
-				if($("#test").length>0) {
-					biz.certSelect('제출처','H000800000',function(data2) {
-						$("#qText2").text(data2.name);
-						$("#qValue2").val(data2.value);
-					});
-				}
-			});			
-		} else {
-			if(data.code == 'H000600008') { //원천징수영수
-				data.id = 'acno_div';
-				midSelect(data);
-			} else if(data.code == 'H000600007'){ //금융소득종합과세
-				callYearSelect();
-			}
-		}           
-	}
-}
-function midSelect(data) {
-	if(data.id=="acno_div") {
-		biz.acnoList("0",acnoCallback);
-	} else if(data.id=="acno_terms"){
-		biz.dateInq(srchFilter,"H");
-	} else {
-		data.nextSelect = data.getAttribute("nextSelect");
-		callSelect(data);
-	}
-}
-function htmlDraw(data) {
-	var html = '';
-	var val = data.value;
-	if($("#table").size() > 0)  {
-		$("#table").empty();
-	}
-	switch (val) {
-		case("00") ://예금잔액증명
-				html +=	'<div class="form-wrap mt0" nextSelect="N000800000" onclick="midSelect(this);">';
-				html += '<div class="input">';
-				html += '<div class="select-wrap">';
-				html += '<div class="select-box" tabindex="1" onclick="callSelect(this)">';
-				html += '<label for="">발급목적</label>';
-				html += '<span class="option" id="qText">미선택</span>';
-				html += '<input type="hidden" class="validChk" id="qValue" >';
-				html += '</div>';
-				html += '</div>';
-				html += '</div>';
-				html += '<p class="error-txt">발급목적을 선택해주세요</p>';
-				html += '</div>';
-			data.nextSelect = 'N000800000';				
-			break;
-		case("01") : //금융소득종합과세
-				html +=	'<div class="select-wrap">'
-				html += '<div id="rolldate4" class="select-box" tabindex="1" onclick="callYearSelect();">'
-				html += '<label for="RVRS_YR">발급년도</label>'
-				html += '<span class="option" id="tranDt" style="padding-right: 1px">미선택</span>'
-				html += '</div>'
-				html += '<input type="hidden" id="RVRS_YR" name="RVRS_YR"/>'
-				html += '</div>'
-			break;
-		case("02")://원천징수영수증
-				html +=	'<div class="select-wrap select-box" tabindex="1" id="acno_div" onclick="midSelect(this)">';
-				html +=	'<label for="ACNO">조회 계좌</label>';
-				html +=	'<span class="option" id="acnoTxt">미선택</span>';
-				html +=	'<input type="hidden" id="ACNO" name="ACNO" class=""/>';
-				html +=	'</div>';
-				html +=	'<div id="selBox4" class="input mt0">';
-				html +=	'<div class="select-wrap">';
-				html +=	'<div class="select-box mt10" tabindex="1" id="acno_terms" onclick="midSelect(this)">';
-				html +=	'<label for="period">조회기간</label>';
-				html +=	'<p class="period option" style="padding-right: 1px">';
-				html +=	'<span id="sttTxt">2023.00.00</span> ';
-				html +=	'<span class="inputTextHyphen">~</span>';
-				html +=	'<span id="endTxt">2023.00.00</span>';
-				html += '</p>';
-				html += '</div>';
-				html += '</div>';
-				html += '<p class="error-txt">조회기간을 선택해주세요</p>';
-				html += '</div>';
-			break;
-		case("03") ://금융거래확인
-				html += '<div class="select-wrap select-box" tabindex="1" nextSelect="N000700000" onclick="midSelect(this)">';
-				html += '<label for="">발급목적</label>';
-				html += '<span class="option" id="qText">미선택</span>';
-				html += '<input type="hidden" class="validChk" id="qValue" >';
-				html += '</div>';
-				data.nextSelect = 'H000700000';								
-			break;
-		case("04") ://부채잔액증명
-				html += '<div class="select-wrap select-box" tabindex="1" nextSelect="N000700000" onclick="midSelect(this)">';
-				html += '<label for="">발급목적</label>';
-				html += '<span class="option" id="qText">미선택</span>';
-				html += '<input type="hidden" class="validChk" id="qValue" >';
-				html += '</div>';
-				html += '<div class="select-wrap select-box mt10" tabindex="1" id="test">';
-				html += '<label for="">제출처 선택</label>';
-				html += '<span class="option" id="qText2">미선택</span>';
-				html += '<input type="hidden" class="validChk" id="qValue2" >';
-				html += '</div>';
-				data.nextSelect = 'H000700000';								
-			break;
-		default:
-			break;
-	}
-	$("#table").append(html);
-	callSelect(data);
-}
-function callYearSelect() {
-	new Rolldate({
-		el: '#rolldate4', // div.select-box 의 id
-		format: 'YYYY',
-		beginYear: 2013,
-		lang: {
-			title: '년도를 선택해주세요', // 팝업 타이틀
-			year: '년',
-		},
-		moveEnd: function(scroll) {
-		},
-		confirm: function(date) {
-			removeErr($(this.config.el));
-			$(this.config.el).closest('.select-wrap').addClass('on');
-			validChk();
-		}
-	})			
-}
 
-var stdt;	// 조회시작일
-var eddt;	// 조회종료일
-//조회필터레이어 콜백
-function srchFilter(data) {
-	if (!UtilFunc.isEmpty(data)) {
-		// 조회데이터 세팅
-		stdt = data.STDT;
-		eddt = data.EDDT
-		$("#sttTxt").text(UtilFunc.getDateDisp2(stdt));
-		$("#endTxt").text(UtilFunc.getDateDisp2(eddt));
-	}
-}
-//조회기간 세팅(3개월)
-function srchSet(){
-	stdt = UtilFunc.getDateStr(UtilFunc.addMonths(new Date(),-3));
-	eddt = UtilFunc.getDateStr(new Date());
-	$("#sttTxt").text(UtilFunc.getDateDisp2(stdt));
-	$("#endTxt").text(UtilFunc.getDateDisp2(eddt));; 
-}
-//조회계좌 콜백
-function acnoCallback(data){
-	// 콜백데이터 화면 세팅
-	$("#ACNO").val(data.acno);
- 	$("#acnoTxt").text(UtilFunc.formmatList(data.acno,"acct"));
-}
+$(document).ready(function(){
+	console.log("")
+})
 </script>
 </head>
 <body>
 	<!-- header -->
-	
-
-
-
-
-
-<header class="headerWrap">
-	<div class="header">
-		
-	    <a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
-	    
-	    <h2><span>증명서 발급신청</span></h2>
-	</div>
-	<div class="menu-wrap">
-		
-	</div>
-</header> 
-	<!-- //header -->
-	
-	 <!-- s: contentsWrap -->
-	<div class="contentsWrap">
-		<form id="dataForm" name="dataForm" method="post">
-        <!-- s: contents -->
-        <div class="contents">
-			<div class="default-wrap">
-				<div class="tit-wrap">
-					<p class="txt"><strong>발급신청 정보</strong>를 입력하세요</p><!--[퍼블] 수정-->
-				</div>
-
-				<div class="form-all-wrap">
-
-				<div class="form-wrap"><!--[퍼블] 클래스 변경--><!--D: 증명서 종류-->
-					<div class="input">
-						<div class="select-wrap">
-							<div class="select-box" tabindex="1" id="bzwrDvcd_div" onclick="callSelect(this);">
-								<label for="bzwrDvcd_div">증명서 종류</label>
-								<span class="option" id="bzwrDvcd_span">미선택</span>
-								<input type="hidden" name="bzwrDvcd" class="validChk" id="bzwrDvcd_value">
-							</div>
-						</div>
-					</div>
-					<p class="error-txt">증명서 종류를 선택해주세요</p>
-				</div>
-				<!-- [퍼블] 추가 -->
-
-				<div class="form-wrap"><!--D: 용도-->
-					<div class="input">
-						<div class="select-wrap">
-							<div class="select-box" tabindex="1" id="bzwrDvcd_div" onclick="callSelect(this);">
-								<label for="bzwrDvcd_div">용도</label>
-								<span class="option" id="bzwrDvcd_span">미선택</span>
-								<input type="hidden" name="bzwrDvcd" class="validChk" id="bzwrDvcd_value">
-							</div>
-						</div>
-					</div>
-					<p class="error-txt">용도를 선택해주세요</p>
-				</div>
-
-				<div class="form-wrap"><!--D: 예가람저축은행 발급 계좌번호-->
-					<div class="input">
-						<div class="select-wrap">
-							<div class="select-box" tabindex="1" id="bzwrDvcd_div" onclick="callSelect(this);">
-								<label for="bzwrDvcd_div">예가람저축은행 발급 계좌번호</label>
-								<span class="option" id="bzwrDvcd_span">미선택</span>
-								<input type="hidden" name="bzwrDvcd" class="validChk" id="bzwrDvcd_value">
-							</div>
-						</div>
-					</div>
-					<p class="error-txt">예가람저축은행 발급 계좌번호를 선택해주세요</p>
-				</div>
-
-				<div class="form-wrap"><!--D: 발급년도-->
-					<div class="input">
-						<div class="select-wrap">
-							<div class="select-box" tabindex="1" id="bzwrDvcd_div" onclick="callSelect(this);">
-								<label for="bzwrDvcd_div">발급년도</label>
-								<span class="option" id="bzwrDvcd_span">미선택</span>
-								<input type="hidden" name="bzwrDvcd" class="validChk" id="bzwrDvcd_value">
-							</div>
-						</div>
-					</div>
-					<p class="error-txt">발급발급년도를 선택해주세요</p>
-				</div>
-
-				<div class="form-wrap"><!--D: 발급목적-->
-					<div class="input">
-						<div class="select-wrap">
-							<div class="select-box" tabindex="1" id="bzwrDvcd_div" onclick="callSelect(this);">
-								<label for="bzwrDvcd_div">발급목적</label>
-								<span class="option" id="bzwrDvcd_span">미선택</span>
-								<input type="hidden" name="bzwrDvcd" class="validChk" id="bzwrDvcd_value">
-							</div>
-						</div>
-					</div>
-					<p class="error-txt">발급목적을 선택해주세요</p>
-				</div>
-
-				<div class="form-wrap"><!--D: 제출처 선택-->
-					<div class="input">
-						<div class="select-wrap">
-							<div class="select-box" tabindex="1" id="bzwrDvcd_div" onclick="callSelect(this);">
-								<label for="bzwrDvcd_div">제출처 선택</label>
-								<span class="option" id="bzwrDvcd_span">미선택</span>
-								<input type="hidden" name="bzwrDvcd" class="validChk" id="bzwrDvcd_value">
-							</div>
-						</div>
-					</div>
-					<p class="error-txt">제출처를 선택해주세요</p>
-				</div>
-
-				<div class="form-wrap"><!--D: 수령방법-->
-					<div class="input">
-						<div class="select-wrap">
-							<div class="select-box" tabindex="1" id="bzwrDvcd_div" onclick="callSelect(this);">
-								<label for="bzwrDvcd_div">수령방법</label>
-								<span class="option" id="bzwrDvcd_span">미선택</span>
-								<input type="hidden" name="bzwrDvcd" class="validChk" id="bzwrDvcd_value">
-							</div>
-						</div>
-					</div>
-					<p class="error-txt">수령방법을 선택해주세요</p>
-				</div>
-
-				<div class="form-wrap"><!-- D:팩스번호-->
-					<label for="ipt02" class="formlabel onbasic">팩스번호</label>
-					<div class="input">
-						<span><input type="text" id="txt" class="inp" placeholder="팩스번호를 입력해주세요" name="" value="" required=""></span>
-					</div>
-					<!-- <button type="button" class="btn-delete">검색어 삭제</button> -->
-					<p class="error-txt">팩스번호를 입력해주세요</p>
-				</div>
-
-				<div class="form-wrap form-line"><!-- D:우편번호-->
-					<label for="ipt04" class="formlabel">주소</label><!--[퍼블-2]클래스 변경-->
-					<div class="input">
-						<span onclick="biz.addrSelect(jusoRoadResultCallBack_home);">
-							<input type="text" title="주소검색" class="inp validChk" name="PSNT_RSDC_ZPCD" value="" id="ZIP_CODE" onkeyup="validChk();" onclick="removeErr(this);" placeholder="우편번호를 입력해주세요." required="">
-							<button type="button" class="btn-certi">우편번호찾기</button>
-						</span>
-						<span>
-							<input type="text" class="inp validChk" name="PSNT_RSDC_BSIC_ADDR" value="" id="ADDR" onkeyup="validChk();" onclick="removeErr(this);" placeholder="기본주소를 입력해주세요." required="">
-						</span>
-						<span>
-							<input type="text" class="inp validChk" name="PSNT_RSDC_DTAD" value="" id="ADDR_DETAIL" onkeyup="validChk();" onclick="removeErr(this);" placeholder="상세주소를 입력해주세요." required=""><!--[퍼블] display:none; 삭제-->
-							<input type="hidden" id="PSNT_RSDC_BLDG_MNGNO" name="PSNT_RSDC_BLDG_MNGNO">
-							<input type="hidden" id="PSNT_RSDC_REF_ITEM_NM" name="PSNT_RSDC_REF_ITEM_NM">
-						</span>
-					</div>
-					<p class="error-txt">주소를 입력해주세요</p>
-				</div>
-
-			
-
-				<!-- // [퍼블] 추가 -->
-
-				<!-- [퍼블] 삭제 <div class="form-wrap">
-					<div class="input">
-						<div class="select-wrap on">
-							<div id="table"></div>
-						</div>
-					</div>
-				</div> -->
-
-				<!--[퍼블] 수정범위-->
-				<div class="form-wrap"><!-- D:이메일-->
-					<label for="ipt02" class="formlabel onbasic">이메일</label>
-					<div class="input">
-						<span><input type="text" id="email" class="inp" pattern=".+@\." onclick="eml()" placeholder="이메일주소를 입력해주세요" name="EML_C50" value="" required=""></span>
-					</div>
-					<!-- <button type="button" class="btn-delete">검색어 삭제</button> -->
-					<p class="error-txt">이메일을 입력해주세요</p>
-				</div>
-				<!-- // [퍼블] 수정범위-->
-
-				<!-- [퍼블] 추가 -->
-				<div class="form-wrap"><!--D:조회기간-->
-					<div class="input">
-						<div class="select-wrap">
-							<div class="select-box" tabindex="1" id="bzwrDvcd_div" onclick="callSelect(this);">
-								<label for="bzwrDvcd_div">조회기간</label>
-								<span class="option" id="bzwrDvcd_span">미선택</span>
-								<input type="hidden" name="bzwrDvcd" class="validChk" id="bzwrDvcd_value">
-							</div>
-						</div>
-					</div>
-					<p class="error-txt">조회기간을 선택해주세요</p>
-				</div>
-				<!-- // [퍼블] 추가 -->
-
-			</div>
-
-				<!-- [퍼블] 수정범위 -->
-				<dl class="list-bull type-caption"><!-- D:예금잔액증명서 캡션-->
-					<dt>알아두세요</dt>
-					<dd>출력은 입력하신 이메일 주소에서 첨부파일을 내려 받으신 후 인쇄해 주세요</dd>
-					<dd>고객님의 예금 등에 대해서 발급기준일자의 최종잔액을 증명할 수 있어요</dd>
-					<dd>아래와 같은 경우에는 가까운 영업점을 방문하여 발급해 주세요
-						<ul class="list-bull type-caption hyphen"><!--[퍼블-2]클래스 변경-->
-							<li>제3자에게 양도 거래한 대금</li>
-							<li>수익자를 타인으로 지정한 타인 신탁 상품</li>
-							<li>PC환경 등 기타 사유로 발급이 불가한 경우</li>
-						</ul>
-					</dd>
-					<!--[퍼블] 삭제<dd>아래와같은  경우에는 가까운 영업점을 방문하여 발급해 주세요
-						<ul class="list-bull type-caption hyphen">
-							<li>제3자에게 양도 거래한 대금</li>
-							<li>PC환경 등 기타 사유로 발급이 불가한 경우</li>
-						</ul>
-					</dd>-->
-				</dl>
-				<!-- // [퍼블] 수정범위 -->
-
-				<!-- [퍼블] 추가 -->
-				<dl class="list-bull type-caption"><!-- D:금융거래확인서 캡션-->
-					<dt>알아두세요</dt>
-					<dd>거래가능시간 : 은행영업일(평일) 08:00 ~ 22:00</dd>
-				</dl>
-
-				<dl class="list-bull type-caption"><!-- D:부채잔액증명서 캡션-->
-					<dt>알아두세요</dt>
-					<dd>거래가능시간 : 은행영업일(평일) 08:00 ~ 22:00</dd>
-					<dd>부채잔액증명서에 이자 잔액은 표시되지 않아요</dd>
-					<dd>
-						특수채권내역은 인터넷뱅킹에서 조회되지 않으므로
-						영업점을 방문하여 발급해 주세요 아래와 같은 경우에는
-						가까운 영업점을 방문하여 발급해 주세요
-						<ul class="list-bull type-caption hyphen"><!--[퍼블] 클래스 변경-->
-							<li>개인회생, 파산, 기업회생 등의 용도로 발급을 원하는 경우</li>
-						</ul>
-					</dd>
-				</dl>
-
-				<dl class="list-bull type-caption"><!-- D:원납증명서 캡션-->
-					<dt>알아두세요</dt>
-					<dd>완납증명서 신청은 대출계좌 보유 고객만 이용 가능해요</dd>
-					<dd>증명서 발급 당일에는 각종 상환 처리를 할 수 없어요</dd>
-				</dl>
-
-				<dl class="list-bull type-caption"><!-- D:미연체확인서 캡션-->
-					<dt>알아두세요</dt>
-					<dd>미연체확인서 신청은 대출 계좌 보유 고객만 이용 가능해요</dd>
-					<dd>증명서 발급 당일에는 각종 상환 처리를 할 수 없어요</dd>
-				</dl>
-				<!-- // [퍼블] 추가 -->
-			</div>
+	<header class="headerWrap">
+		<div class="header">
+			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+			<h2><span>증명서 발급신청</span></h2>
 		</div>
-		<!-- e: contents -->
-		</form>
+		<div class="menu-wrap">
+		</div>
+	</header>
+	<!-- //header -->
 
-		<div class="fixed-btn-wrap"><!-- [퍼블] 위치 contentsWrap 안으로 변경 -->
-            <div class="btn-wrap">
-                <a href="#none" class="btn" onclick="PageFunc.validate()">다음으로</a>
-            </div>
-			<a href="#none" class="btn-txt">그만하기</a>
-        </div>
-	</div>
+	<!-- s: contentsWrap -->
+    <div class="contentsWrap">
+		<!-- s:contents -->
+		<div class="contents loan"><!--[퍼블] 클래스 변경-->
+			<!-- [퍼블] 추가 -->
+			<div class="default-wrap">
+
+				<!--D:증명서 발급신청-->
+				<div class="result-area ing" style="display:;">
+					<p class="tit"><strong>증명서 발급을<br>시청했어요</strong></p>
+				</div>
+				<div class="txt-list-wrap">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>신청정보</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">신청증명서</span>
+								<span class="txt">원천징수영수증</span>
+							</li>
+							<li>
+								<span class="tit">신청일</span>
+								<span class="txt">YYYY.MM.DD hh:ss</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!--D:상담원 연결-->
+				<div class="result-area ing" style="display:;">
+					<p class="tit"><strong>증명서 발급을<br>시청했어요</strong></p>
+					<div class="txtbox-wrap">
+						<p>곧 상담원이<br/> 고객님께 연락드릴 예정이에요</p>
+					</div>
+				</div>
+				<div class="txt-list-wrap">
+					<div class="txt-detail-area">
+						<div class="txt-detail-tit">
+							<strong>신청정보</strong>
+						</div>
+						<ul class="txt-list">
+							<li>
+								<span class="tit">신청증명서</span>
+								<span class="txt">원납증명서</span>
+							</li>
+							<li>
+								<span class="tit">신청일</span>
+								<span class="txt">YYYY.MM.DD hh:ss</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<dl class="list-bull type-caption">
+					<dt>알아두세요</dt>
+					<dd>증명서 발급 당일에는 각종 상환 처리를 할 수 없어요</dd>
+				</dl>
+
+			</div>
+			<!-- //[퍼블] 추가 -->
+		</div>
+		<!-- //e:contents -->
+
+        <!-- s: fixedBtnWrap -->
+		<div class="fixed-btn-wrap">
+			<div class="btn-wrap">
+				<a href="#none" class="btn" onclick="openPopupUp('lyPullPop');">상세보기</a>
+			</div>
+			<a href="#none" class="btn-txt" onclick="PageFunc.cancel()">홈으로</a>
+		</div>
+        <!-- //e: fixedBtnWrap -->
+
+    </div>
 	<!-- e: contentsWrap -->
 
-        
-					
 	<!-- footer -->
-	
-
-
-
-
-
-
-<footer>
-<!-- 푸터 타입별 정의 -->
-</footer>
+	<footer>
+	<!-- 푸터 타입별 정의 -->
+	</footer>
 
 <!-- 업무공통 -->
 

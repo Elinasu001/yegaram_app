@@ -74,14 +74,17 @@
                         <p class="txt"><strong>타행 본인 계좌 인증을</strong><br/>같이 진행할게요</p>
                     </div>
 
-                    <div class="form-all-wrap">
-
-                        <div class="form-tit">
-                            <span>대출금 입금 계좌정보를 입력해 주세요</span>
-                        </div>
-                        <div class="select-box" tabindex="1">
-                            <label for="" class="essential">은행선택</label>
-                            <span class="option" id="">미선택</span>
+                    <!--S:form-->
+                    <div class="form-all-wrap"><!--D: 5/13 - form 전체 감쌀 경우 : form-all-wrap / slect-box를 감쌀 경우 slect-wrap이 아닌 form-wrap으로 감싸주세요-->
+                        
+                        <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                            <div class="form-tit"><!--D: label이 아닌 form-tit 사용-->
+                                <span>대출금 입금 계좌정보를 입력해 주세요</span>
+                            </div>
+                            <div class="select-box" tabindex="1">
+                                <label for="" class="essential">은행선택</label>
+                                <span class="option" id="">미선택</span>
+                            </div>
                         </div>
 
                         <div class="form-wrap password form-line">
@@ -93,16 +96,14 @@
                         </div>
                         <p class="info-txt">타행 본인 인증계좌도 동시에 진행돼요</p>
 
-                    </div>
-
-                    <div class="form-all-wrap">
-
-                        <div class="form-tit">
-                            <span>이자 등이 출금될 계좌정보를 입력해 주세요</span>
-                        </div>
-                        <div class="select-box" tabindex="1">
-                            <label for="" class="essential">은행선택</label>
-                            <span class="option" id="">미선택</span>
+                        <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                            <div class="form-tit"><!--D: label이 아닌 form-tit 사용-->
+                                <span>이자 등이 출금될 계좌정보를 입력해 주세요</span>
+                            </div>
+                            <div class="select-box" tabindex="1">
+                                <label for="" class="essential">은행선택</label>
+                                <span class="option" id="">미선택</span>
+                            </div>
                         </div>
 
                         <div class="form-wrap password form-line">
@@ -115,7 +116,7 @@
                         <p class="info-txt">이자 등이 자동이체될 계좌(CMS계좌정보)를 입력해 주세요</p>
 
                     </div>
-
+                    <!--E:form-->
 
                 </div>
             </div>

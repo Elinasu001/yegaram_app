@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/html2canvas.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230823145224"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230823145224"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230823145224"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230823145224"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230823145224"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230823145224"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230823145224"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230823145224"></script>
+<script type="text/javascript" src="/resources/js/common_bank_calc_util.js?v=20230823145224"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230823145224" id="biz_common" 
+	data-menuId="etc/inq"
+	data-frameId="illeagal"
+	data-serviceCd="illeagal.frm" 
+	data-serverTime="20230823145224"
+	data-activeMode="local"
+	data-activeEnv="WEB"
+	data-deviceInfo="ANDROID">
+</script>
+<script type="text/javascript">
+const getPercentage = (current, max) => ((current / max) * 100);
+function initFontSize() {
+	const fontSize = sessionStorage.getItem('fontSize');
+	const defaultFontSize = fontSize ? fontSize : 0;
+	const rangeMax = Number($('input[type=range]').attr('max'));
+	const currentGradient = getPercentage(defaultFontSize, rangeMax);
+	$('html').addClass('font-size-'+defaultFontSize);
+	$('input[type=range]').css(
+	    'background', `linear-gradient(to right, #6836CB 0%, #6836CB %, #d5d4d3 %, #d5d4d3 100%)`
+	);
+}
+function fontSizeEvent() {
+	initFontSize();
+}
+function onInputFn() {
+	const $this = $(this);
+	const html = $('html');
+	const val = Number($("#textSize").val());
+	const rangeMax = Number($('input[type=range]').attr('max'));
+	const currentGradient = getPercentage(val, rangeMax);
+	
+	sessionStorage.setItem('fontSize', val);
+	html.removeClass((idx, className) => (
+	    (className.match(/(^|\s)font-size-\S+/g) || []).join(' ')
+	));
+	html.addClass('font-size-'+val);
+	
+	$this.css(
+	    'background', `linear-gradient(to right, #6836CB 0%, #6836CB %, #d5d4d3 %, #d5d4d3 100%)`
+	);
+}
+</script>
+<script type="text/javascript">
+var PageFunc = function() {
+	
+	var _back = function() { // 뒤로가기
+		history.back();
+	}
+	
+	var _proc = function() { // 본처리
+		// TODO 약관다운로드기능
+		return true;
+	}
+	
+	var _cancel = function() { // 그만하기
+		goMainPage();
+	}
+	
+	return {
+		back : _back,
+		proc : _proc,
+		cancel : _cancel,
+	};
+}();
+function downLoadFile() {
+	var fileForm = makeForm("fileForm");
+	addFormData(fileForm, "txGbnCd", "F"); 
+	addFormData(fileForm, "REF_TABLE_NAME", "CMM_BOARD");
+	addFormData(fileForm, "REF_TABLE_KEY", '4');
+	doActionDownload(fileForm);
+}
+
+$(document).ready(function(){
+	
+});
+</script>
+</head>
+<body>
+	<!-- header -->
+	
+
+
+
+
+
+<header class="headerWrap">
+	<div class="header">
+		
+	    <a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+	    
+	    <h2><span>위법계약해지권</span></h2>
+	</div>
+	<div class="menu-wrap">
+		
+	</div>
+</header>
+
+
+	<!-- //header -->
+	
+    <!-- s: contentsWrap -->
+    <div class="contentsWrap">
+        <!-- s: contents -->
+        <div class="contents">
+            <div class="default-wrap"><!-- [퍼블] 클래스 변경 -->
+
+                <div class="tit-wrap"><!-- [퍼블] 클래스 변경 -->
+                    <p class="txt"><strong>위법계약해지권이란?</strong></p><!--[퍼블] strong 태그로 변경-->
+					<p class="s-txt">금융회사가 판매 원칙을 위반하여 금융상품 계약을 체결한 경우, 고객님께서 해당 계약의 해지를 요구할 수 있는 제도를 말해요</p>
+                </div>
+                <div class="btn-cont-wrap btn-add type2"><!-- [퍼블] 클래스 변경 -->
+                    <a href="javascript:void(0);" class="btn" onclick="downLoadFile();">위법계약해지 요구서</a>
+                </div>
+
+				<!-- [퍼블] 추가 -->
+				<div class="sub-tit-wrap">
+					<p class="tit">적용 가능한 상품을 안내해 드려요</p>
+					<ul class="list-bull">
+						<li>계속 거래중이며, 해지하면 재산상 불이익이 발생하는
+							금융상품 중 다음을 제외한 경우
+							<ul class="list-bull hyphen">
+								<li>'온라인 투자 연계 금융업 및 이용자보호에 관한 법률'에 따른 온라인 투자 연계 금융 업자와 체결하는 계약</li>
+								<li>'온라인 투자 연계 금융업 및 이용자보호에 관한 법률'에 따른 온라인 투자 연계 금융 업자와 체결하는 계약</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<div class="sub-tit-wrap">
+					<p class="tit">신청 가능한 기간을 안내해 드려요</p>
+					<ul class="list-bull">
+						<li>가입 상품의 계약 체결을 위한 사실을 안 날로부터
+							1년 이내
+							<ul class="list-bull num"><!--[퍼블] 클래스 추가-->
+								<li><em>①</em> 단, 5년 이내 계약한 상품만 위법계약해지 신청이
+									가능해요</li><!--[퍼블] em 추가-->
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<div class="sub-tit-wrap">
+					<p class="tit">자세한 안내를 원하시면</p>
+					<ul class="list-bull">
+						<li>예가람저축은행 고객센터 (1877-9900)으로 연락해 주세요</li>
+					</ul>
+				</div>
+				<!-- //[퍼블] 추가 -->
+
+                <!-- [퍼블] 삭제 <p class="mt40 fw-500">적용 가능한 상품을 안내해드려요</p>
+                <ul class="list-bull dot none-bor mt10">
+					<li>고객님과 계속 거래가 이루어지고, 고객님께서 해지 하실 경우 재산상 불이익이 발생하는금융상품 중 다음 상품을 제외한 상품
+                        <p>- '온라인 투자 연계 금융업 및 이용자보호에 관한 법률'에 따른 온라인 투자 연계 금융 업자와 체결하는 계약</p>
+                        <P>- '자본시장과 금융투자업에 관한 법률'에 따른 원화로 표시된 양도성 예금증서</P>
+                        <P>- '자본시장과 금융투자업에 관한 법률 시행령'에 따른 표지어음</P>
+                    </li>
+				</ul>
+
+                <p class="mt40 fw-500">신청 가능한 기간을 안내해 드려요</p>
+                <ul class="list-bull dot none-bor mt10">
+					<li>고객님께서 가입하신 상품의 계약 체결에 대한 위반 사실을 안 날로부터 1년 이내
+                        <p>① 이 경우 해당 기간은 계약 체결일로부터 5년 이내예요</p>
+                    </li>
+				</ul>
+
+                <p class="mt40 fw-500">위법계약해지권에 대해 상세한 안내를 원하시나요?</p>
+                <ul class="list-bull dot none-bor mt10">
+					<li>예가람저축은행 고객센터(1877-9900)으로 연락해 주시면 상세히 안내해 드려요</li>
+				</ul>-->
+				
+            </div>
+        </div>
+        <!-- //e: contents -->
+
+    </div>
+    <!-- e: contentsWrap -->
+					
+</body>
+</html>
