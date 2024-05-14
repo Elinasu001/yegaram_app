@@ -52,60 +52,42 @@
 
 <body>
     <!-- header -->
-    <header class="headerWrap">
-        <div class="headerLeft">
-        </div>
-        <div class="headerCenter">
-            <h2 class="text"><span>E-RUN 정기적금</span></h2> <!--D: TEXT -->
-        </div>
-        <div class="headerRight">
-            <a href="javascript:void(0)" class="btn btn-menu"><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>  <!--D: 전체메뉴버튼 -->
-        </div>
-    </header>
+    <div id="headerWrap">
+      
+    </div>
 	<!-- //header -->
 
-        <!--contentsWrap -->
-        <div class="contentsWrap">
-            <!--contents -->
-            <div class="contents">
-                <div class="default-wrap">
-                    <!--D : 적금납입일 변경 결과 성공 경우 -->
-    
-                    <!-- [퍼블] 전체 변경, 적금납입일 변경 성공 경우 -->
-                    <section class="result-area checking">
-                        <p class="tit"><strong>납입일을 변경했어요</strong></p>
-    
-                        <div class="bg-box">
-                            <ul class="alter-list">
-                                <li><span>납입일 변경</span>매월 1일</li>
-                                <li class="arrow"></li>
-                                <li>매월 16일</li>
-                            </ul>
-                        </div>
-                    </section>
-                    <!-- // [퍼블] 전체 변경, 적금납입일 변경 성공 경우 -->
-    
-                    <!-- [퍼블] 적금납입일 변경 실패 경우 -->
-                    <section class="result-area exclamation">
-                        <p class="tit"><strong>납입일 변경 처리 중<br>오류가 발생했어요</strong></p>
-                        <div class="txtbox-wrap">
-                            <p>잠시 후 다시 시도해 주세요</p>
-                        </div>
-    
-                    </section>
-                    <!-- // [퍼블] 적금납입일 변경 실패 경우 -->
-                </div>
-            </div>
-            <!-- //contents -->
-            <div class="fixed-btn-wrap">
-                <div class="btn-wrap">
-                    <a href="javascript:void(0);" class="btn">홈으로</a>
-                </div>
-            </div>
-    
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
 
+            </div>
         </div>
-        <!-- //contentsWrap -->
+        <!-- //contents -->
+
+        <!--S: 자동만기여부 선택(팝업)-->
+        <div id="lyPop2" class="layerpopup layer-up show" style=" display: block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">자동만기여부</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li class="active"><button>자동연장(원금)</button></li>
+                        <li><button>자동연장(원리금)</button></li>
+                        <li><button>자동해지송금</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--E: 자동만기여부 선택(팝업)-->
+
+
+    </div>
+    <!-- //contentsWrap -->
 </body>
 </html>
 

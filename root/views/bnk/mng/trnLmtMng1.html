@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>예가람저축은행</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta name="keywords" content="예가람저축은행keywords">
+	<meta name="description" content="예가람저축은행description">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	
+	<meta name="apple-mobile-web-app-status-bar-style" content="white">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta http-equiv="Expires" content="-1">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="No-Cache">
+	
+	<link href="/resources/css/default.css" rel="stylesheet">
+	<link href="/resources/css/renewal.css" rel="stylesheet">
+	
+	
+	<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="/resources/favicon.ico">
+	
+	<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+	
+	<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+	<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+	<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+	<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+	<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+	<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+	<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+	<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+	<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+	<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+	<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common" data-menuid="dep/prc" data-frameid="depAcnoOpenPrc2" data-servicecd="depAcnoOpenPrc2.frm" data-servertime="20230803152535" data-activemode="local" data-activeenv="${active.env">
+	</script>
+	
+	
+	</head>
+
+<body>
+
+<div class="wrap">
+	<!-- s:header -->
+	<header class="headerWrap">
+		<div class="headerLeft">
+			<a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+		</div>
+		<div class="headerCenter">
+			<h2 class="text"><span>이체한도관리</span></h2> <!--D: TEXT -->
+		</div>
+		<div class="headerRight">
+			<!-- <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a> -->
+		</div>
+	</header>
+    <!-- e:header -->
+
+    <!-- s: contentsWrap -->
+    <div class="contentsWrap">
+    	<form id="limitForm" name="limitForm" method="post">
+		<!-- s: contents -->
+		<div class="contents">
+			<!-- s: default-wrap -->
+			<div class="default-wrap">
+                <div class="txt-list-wrap">
+					<div class="txt-detail-area">
+						<ul class="txt-list">
+							<li>
+								<span class="tit">1회 이체한도</span>
+								<span class="txt point"><span>500,000</span>원</span>
+							</li>
+							<li>
+								<span class="tit">1일 이체한도</span>
+								<span class="txt point"><span>1,000,000</span>원</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+                <!-- D : sub-tit-wrap, selct-wrap 그룹으로 묶기-->
+                <div class="form-all-wrap">
+                    <div class="sub-tit-wrap"> 
+                        <p class="tit">변경 이체한도</p>
+                    </div>
+
+                    <div class="select-wrap">
+                        <div class="select-box on">
+                            <label for="">1회 이체한도</label>
+                            <span class="option"><span>1,500,000</span>원</span>
+                        </div>
+                        <div class="select-box on">
+                            <label for="">1일 이체한도</label>
+                            <span class="option"><span>1,500,000</span>원</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- D : sub-tit-wrap, list-bull 그룹으로 묶기-->
+                <div class="txt-wrap">
+                    <div class="sub-tit-wrap">
+                        <p class="tit">보안매체에 따른 최대 이체한도</p>
+                    </div>
+
+                    <ul class="list-bull style-big">
+                        <li>
+                            <strong>OTP</strong>
+                            <span>1일 5억원, 1회 1억원</span>
+                        </li>
+                        <li>
+                            <strong>보안카드/mOTP</strong>
+                            <span>1일 2억5천만원, 1회 5천만원</span>
+                        </li>
+                        <li>
+                            <strong>보안카드/mOTP+SMS </strong>
+                            <span>1일 2억5천만원, 1회 5천만원</span>
+                        </li>
+                    </ul>
+                </div>
+				<!-- D: 알아두세요 전체 레이어 변경 -->
+                <div class="list-bull">
+                    <div class="border"></div>
+                    <strong>알아두세요</strong>
+                    <ul>
+                        <li>비대면한도 계좌 또는 금융거래한도제한계좌 등 계좌별 제한이 있는 경우 이체한도가 제한돼요</li>
+                        <li>인터넷뱅킹과 텔레뱅킹 서비스도 함께 적용돼요</li>
+                    </ul>
+                </div>
+			</div>
+			<!-- //s: default-wrap -->
+		</div>
+		<!-- //e: contents -->
+
+		<!-- s: fixed-btn-wrap -->
+		<div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <a href="#none" class="btn">이체한도 변경</a>
+            </div>
+        </div>
+		<!-- //e: fixed-btn-wrap -->
+        <!-- s : 한도제한 알림 -->
+        <div id="lyPop01" class="layerpopup layer-up has-button show" style="display:block;">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">한도제한 알림</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <div class="txtbox-wrap">
+                        <p>신규계좌 개설 시 금융사기예방을 위해 금융거래 한도가 제한된 상태에요<br>
+                            이체한도 증액 설정은 한도제한해제 후 가능하세요<br>
+                            한도제한을 해제 하시겠어요?</p>
+                    </div>
+                </div>
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="#none" class="btn">한도제한 해제하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- e : 한도제한 알림 -->
+         <!-- s : 보안매체 등록 팝업 -->
+         <div id="lyPop02" class="layerpopup layer-up has-button show" style="display:block;">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">보안매체 등록</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <div class="txtbox-wrap">
+                        <p>사용 가능하신 보안매체가 없으세요<br>
+                            실물 보안카드나 OPT가 없으시다면 mOPT를 등록하신 후 이용하실 수 있어요<br>
+                            mOPT화면으로 이동하시겠어요?</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap">
+                    <a href="#none" class="btn">보안매체 등록</a>
+                </div>
+            </div>
+        </div>
+        <!-- e : 보안매체 등록 팝업 -->
+		</form>
+	</div>
+    <!-- e: contentsWrap -->
+</div>
+
+</body>
+
+</html>
