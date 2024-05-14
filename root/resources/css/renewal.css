@@ -31,7 +31,7 @@ body.fix { overflow:hidden; }
 /* 공통 - 컨텐츠 in 버튼 */
 .btn-cont-wrap { display:flex; gap:10px; /*width:100%;*/ padding:0; text-align:center; align-items:start; }
 .btn-cont-wrap.flex-end { justify-content:flex-end;}
-.btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:10px 5px; border-radius:30px; background:#9F7CE3; color:#fff; font-size:1rem; font-weight:700; text-align:center; }
+.btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; height:48px; border-radius:30px; background:#9F7CE3; color:#fff; font-size:1rem; line-height:48px; font-weight:700; text-align:center; }
 .btn.btn-add {display:inline-block; width:unset; height:48px;  padding:12px 54px; background:#FFFFFF; border:1px solid #4E32A5; font-size:1rem; line-height:1.38889rem; font-weight:500; color:#4E32A5; }
 .btn.btn-sm { display:inline-flex; align-items: center; /*display:inline-block;*/ width:unset; height:30px; padding:5px 16px;  background:#FFFFFF; border:1px solid #DDDDDD; border-radius:17px;  font-size:0.77778rem; line-height: 1rem; font-weight:400; color:#26282C; letter-spacing: -0.5px;}
 .btn.btn-sm.gray { background: #F1F1F1; border:1px solid #F1F1F1; color:#666666; }
@@ -1167,7 +1167,8 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .list-icon.type2 > li { display:inline-block; width:100%; height:unset; padding:20px 20px 20px 90px; border:1px solid #DDD; border-radius:15px; background:#fff; font-size:0; }
 .list-icon.type2 > li::before { top:20px; left:20px; }
 .list-icon.type2 > li.joint::before { background:url("../images/common/ico_certi_joint.png") no-repeat 50%/24px auto #F8F8FA; }
-.list-icon.type2 > li.on::after { position:absolute; top:-1px; right:-1px; bottom:-1px; left:-1px; width:100%; height:100%; border:2px solid #260F54; border-radius:16px; content:""; }
+.list-icon.type2 > li.on { border:2px solid #4E32A5; box-shadow: 0px 2px 8px rgba(0, 0, 0, 0); }
+.list-icon.type2 > li.on::after { position:absolute; top:-1px; right:-1px; bottom:-1px; left:-1px; width:100%; height:100%;  content:"";}
 .list-icon.type2 > li > a { display:inline-block; width:100%; height:100%; }
 .list-icon.type2 > li .tit { font-size:0.88889rem; line-height:1.4375; font-weight:bold; color:#260F54; }
 .list-icon.type2 > li .txt { font-size:0.77778rem; line-height:1.5; }
