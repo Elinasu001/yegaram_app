@@ -75,16 +75,20 @@
                     <p class="txt"><strong>대출한도조회</strong>를 위해<br/><strong>정보를 입력</strong>해 주세요</p>
                 </div>
 
-                <div class="select-wrap"><!--D: .form-wrap / input 레이아웃 삭제 후 slect-wrap 안에 select-box 반복-->
+                <div class="form-all-wrap"><!--D: 5/13 - form 전체 감쌀 경우 : form-all-wrap / slect-box를 감쌀 경우 slect-wrap이 아닌 form-wrap으로 감싸주세요-->
 
-                    <div class="select-box">
-                        <label for="" class="formlabel essential">직업선택</label><!--D: essential 클래스 추가 -->
-                        <span class="option" id="">미선택</span>
-                    </div>
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div class="select-box">
+                            <label for="" class="formlabel essential">직업선택</label><!--D: essential 클래스 추가 -->
+                            <span class="option" id="">미선택</span>
+                        </div>
+                    </div> 
 
-                    <div id="rolldate5" class="select-box">
-                        <label for="" class="formlabel essential">입사연월</label><!--D: essential 클래스 추가 -->
-                        <span class="option" id="">미선택</span>
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div id="rolldate5" class="select-box">
+                            <label for="" class="formlabel essential">입사연월</label><!--D: essential 클래스 추가 -->
+                            <span class="option" id="">미선택</span>
+                        </div>
                     </div>
 
                     <div class="form-wrap">

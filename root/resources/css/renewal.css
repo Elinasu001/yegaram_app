@@ -40,7 +40,7 @@ body.fix { overflow:hidden; }
 .btn.btn-sm.red { background: #FFEFEF; border:1px solid #FFEFEF; color:#FF0000; }
 .btn.btn-sm.blue { background: #EFF4FF; border:1px solid #EFF4FF; color:#2B66F6; }
 .btn.btn-sm.purple {  border:1px solid #E7DBFF; background:#E7DBFF; color:#612AD0; }
-.btn.btn-sm.other { height:34px; background: #F2F4F6; border:1px solid #F2F4F6; color:#26282C; }
+.btn.btn-sm.other { display:flex; justify-content: center; width:100%; height:34px; background: #F2F4F6; border:1px solid #F2F4F6; color:#26282C; }
  
 .btn.sq { border-radius:6px; }
 
@@ -260,10 +260,10 @@ section > .result-wrap{ margin-top:40px; }
 .txt-list li:last-child { padding-bottom:0; border-bottom:0; }
 .txt-list li.none-bor:first-child { padding-top:0; }
 /* .txt-list li .tit{ display:inline-block; width:50%; font-size:0.9rem; color:#666666; } (청)flex test-아래와같이수정*/
-.txt-list li .tit { font-weight:300; font-size:0.88889rem; line-height:1.278rem; color:#454545; }/*2023-07-14 스타일가이드 반영*/
+.txt-list li .tit { font-weight:300; font-size:0.88889rem; line-height:1.278rem; color:#666666; }/*2023-07-14 스타일가이드 반영*/
 .txt-list li .tit .ref { font-size:0.77778rem; line-height:1.5;}
 /* .txt-list li .txt{ display:inline-block; width:50%; font-weight:500; vertical-align:top; text-align:right; font-size:0.9rem; color:#260F54; word-break:break-all; } (청)flex test-아래와같이수정*/
-.txt-list li .txt{ flex:1; padding-left:30px; font-weight:500; vertical-align:top; text-align:right; font-size:0.88889rem; line-height:1.278rem; word-break:break-all; }
+.txt-list li .txt{ flex:1; padding-left:30px; font-weight:500; vertical-align:top; text-align:right; font-size:0.88889rem; line-height:1.278rem; word-break:break-all; color:#333333; }
 .txt-list li .txt a[href*="tel"] { color:#333333; word-break:break-all; }
 .txt-list li .txt.point { color:#4E32A5; }
 .txt-list .cusnm { color:#000!important; }
@@ -272,7 +272,7 @@ section > .result-wrap{ margin-top:40px; }
 .txt-list-wrap .txt-detail-area.account-info .txt-list li { display:flex; }
 .txt-list-wrap .txt-detail-area.account-info .txt-list li .tit { flex:1 1 fit-content; }
 .txt-list-wrap .txt-detail-area.account-info .txt-list li .txt { flex:1 1 auto; }
-.txt-detail-area strong { display:block; margin-top:10px; font-weight:600; color:#666666; }
+.txt-detail-area strong { display:block; margin-top:10px; font-weight:600; color:#333333; }
 .txt-detail-area.flex { display:flex; justify-content:space-between; }
 .txt-detail-area.flex strong { font-weight:500; color:#4E32A5; }
 .txt-detail-area .desc { color:#757575; font-size:0.88889rem; line-height:1.4375; }
@@ -397,8 +397,8 @@ section > .result-wrap{ margin-top:40px; }
 
 
 /* 메뉴 인증번호 시간*/
-.verifi-time { /*width:100%;*/ margin-top:20px; font-size:0.88889rem; line-height:1.278rem; color:#FF0000; }/* 2023-07-11 수정 */
-.verifi-time .txt-numb { margin-left:5px; text-decoration:underline; }
+.verifi-time { /*width:100%;*/ margin-top:20px; font-size:0.88889rem; line-height:1.278rem; color:#FF0000; }/* 2023-07-11 수정 */ 
+.verifi-time .txt-numb { margin-left:5px; text-decoration:underline; } 
 /* .input.verification + .verifi-time { position:absolute; bottom:16px; right:0; width:auto; margin-top:0; } */
 /* .input.verification:has(.btn-certi[style="display: block;"]) + .verifi-time { right:80px; } */
 .btn-input .txt-numb { margin-right:10px; font-size:0.8rem; font-weight:500; text-decoration:none; }

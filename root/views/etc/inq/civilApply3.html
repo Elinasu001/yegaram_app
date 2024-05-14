@@ -93,40 +93,41 @@
                     이용하기 위한 필수 사항이므로, 위 사항에 동의하셔야만
                     민원센터에 글을 등록하실 수 있어요
                 </p>
+                
+                <!--S:FORM-->
+                <div class="form-all-wrap"><!--D: 5/13 - form 전체 감쌀 경우 : form-all-wrap / slect-box를 감쌀 경우 slect-wrap이 아닌 form-wrap으로 감싸주세요-->
 
-                <div class="select-wrap "><!--D: select-wrap 안에 select-box 구조 반복-->
-
-                    <div class="select-box on" tabindex="1"><!--D: form-wrap / input 영역 삭제 , on 클래스 추가-->
-                        <label for="" class="essential">민원신청 구분</label><!--D: essential 추가-->
-                        <span class="option">일반문의</span>
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div class="select-box on" tabindex="1"><!--D: form-wrap / input 영역 삭제 , on 클래스 추가-->
+                            <label for="" class="essential">민원신청 구분</label><!--D: essential 추가-->
+                            <span class="option">일반문의</span>
+                        </div>
                     </div>
 
-                    <div class="select-box" tabindex="1">
-                        <label for=""  class="essential">회신방법</label><!--D: essential 추가-->
-                        <span class="option">이메일</span>
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div class="select-box" tabindex="1">
+                            <label for=""  class="essential">회신방법</label><!--D: essential 추가-->
+                            <span class="option">이메일</span>
+                        </div>
                     </div>
-                    
-                </div>
-
-                <div class="form-all-wrap"><!--D: 영역 추가-->
 
                     <div class="form-wrap"><!--D:이메일-->
-                        <label for="ipt02" class="formlabel onbasic">이메일</label>
-                        <div class="input"><!--D: span 삭제 -->
+                        <label for="ipt02" class="formlabel">이메일</label>
+                        <div class="input"><!--D: span 삭제 후 <div class="input"> 으로 감싸줌 -->
                             <input type="text" title="이메일" id="ipt02" class="inp" pattern=".+@\." value="" placeholder="이메일주소 입력" required="" readonly>
                         </div>
                     </div>
 
                     <div class="form-wrap form-line address"><!--D: 주소-->
                         <label for="ipt04" class="formlabel">주소</label>
-                        <div class="input"><!-- D: <div class="input"> 구조로만 묶음 -->
+                        <div class="input"><!--D: span 삭제 후 <div class="input"> 으로 감싸줌 -->
                             <input type="text" title="주소검색" id="ipt04" class="inp" name="" value="" required=""  placeholder="우편번호 입력" readonly>
                             <button type="button" class="btn btn-sm" onclick="openPopupUp('');">우편번호찾기</button>
                         </div>
-                        <div  class="input">
+                        <div  class="input"><!--D: span 삭제 후 <div class="input"> 으로 감싸줌 -->
                             <input type="text" id="" class="inp" name="" value="" required="" placeholder="기본주소 입력" readonly>
                         </div>
-                        <div  class="input">
+                        <div  class="input"><!--D: span 삭제 후 <div class="input"> 으로 감싸줌 -->
                             <input type="text" id="" class="inp" name="" value="" placeholder="상세주소 직접입력" required="" style="display:block;">
                         </div>
                     </div>
@@ -144,11 +145,11 @@
                     </div>
 
                 </div>
-    
+                <!--S:FORM-->
+
             </div>
-
-
-
+        </div>
+        <!-- e:contents -->
 
         <div class="fixed-btn-wrap">
             <div class="btn-wrap flexCol"><!--D: flexCol 클래스 추가-->
@@ -233,7 +234,6 @@
             </div>
         </div>
         <!-- E: 이메일주소 -->
-
 
     </div>
     <!-- //contentsWrap -->

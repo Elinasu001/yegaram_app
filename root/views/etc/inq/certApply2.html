@@ -77,21 +77,28 @@
                     <p class="txt"><strong>수수료 출금계좌</strong>를 선택해 주세요</p>
                 </div>
 
-                <div class="select-wrap ">
+                <!--D: " 부채잔액증명서, 금융거래확인서, 예금잔액증명서 " 의 증명서 발금신청 정보입력 -->
 
-                    <div id="" class="select-box on disabled" tabindex="1" ><!--D: on 클래스 : 값이 들어갈 경우 / disabled 클래스 : selct-box disbaled 기능-->
-                        <label for="">수수료</label>
-                        <span class="option" id="">원</span>
+                <!--S:FORM-->
+                <div class="form-all-wrap"><!--D: 5/13 - form 전체 감쌀 경우 : form-all-wrap / slect-box를 감쌀 경우 slect-wrap이 아닌 form-wrap으로 감싸주세요-->
+
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div id="" class="select-box on disabled" tabindex="1" ><!--D: on 클래스 : 값이 들어갈 경우 / disabled 클래스 : selct-box disbaled 기능-->
+                            <label for="">수수료</label>
+                            <span class="option" id="">원</span>
+                        </div>
                     </div>
 
-                    <div id="" class="select-box on " tabindex="1" ><!--D: on 클래스 : 값이 들어갈 경우 / disabled 클래스 : selct-box disbaled 기능-->
-                        <label for="">수수료</label>
-                        <span class="option" id="">101-23-45-6789012</span>
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div id="" class="select-box on " tabindex="1" ><!--D: on 클래스 : 값이 들어갈 경우 / disabled 클래스 : selct-box disbaled 기능-->
+                            <label for="">수수료</label>
+                            <span class="option" id="">101-23-45-6789012</span>
+                    </div>
                     </div>
                     <p class="exp-txt">출금 가능금액 : <span id="Acct_Amt">50,000,000원</span></p>
-
+                
                 </div>
-
+                <!--E:FORM-->
 
             </div>
         </div>

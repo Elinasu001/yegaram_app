@@ -84,25 +84,29 @@
                         <p class="txt"><strong>소득정보조회를 위해 본인확인이<br/> 필요해요</strong></p>
                     </div>
 
-                    <div class="select-wrap">
+                    <div class="form-all-wrap"><!--D: 5/13 - form 전체 감쌀 경우 : form-all-wrap / slect-box를 감쌀 경우 slect-wrap이 아닌 form-wrap으로 감싸주세요-->
 
-                        <div class="form-tit">
-                            <span>주소(초본)정보 입력</span>
-                        </div>
-                        <div class="select-box" tabindex="1">
-                            <label for="" class="">시/도</label>
-                            <span class="option" id="">미선택</span>
+                        <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경 / form-tit 는 form-wrap 구조 안에 들어감-->
+                            <div class="form-tit">
+                                <span>주소(초본)정보 입력</span>
+                            </div>
+                            <div class="select-box" tabindex="1">
+                                <label for="" class="">시/도</label>
+                                <span class="option" id="">미선택</span>
+                            </div>
                         </div>
 
-                        <div class="select-box" tabindex="1">
-                            <label for="" class="">시/군/구</label>
-                            <span class="option" id="">미선택</span>
+                        <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                            <div class="select-box" tabindex="1">
+                                <label for="" class="">시/군/구</label>
+                                <span class="option" id="">미선택</span>
+                            </div>
+                            <p class="info-txt">주민등록초본 조회를 위해 시/도 와 시/군/구를 선택해 주세요</p>
                         </div>
-                        <p class="info-txt">주민등록초본 조회를 위해 시/도 와 시/군/구를 선택해 주세요</p>
 
                     </div>
 
-                    <div class="list-bull">
+                    <div class="list-bull"><!--D:구조변경-->
                         <div class="border"></div>
                         <strong>소득정보 자동화 조회목록</strong>
                         <ul>
