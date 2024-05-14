@@ -322,7 +322,7 @@ html.font-size-3{ font-size: 24px;}
 .text-bar-list li:before { content:''; position:absolute; top:50%; right:0; width:1px; height:13px; background:#DDDDDD; vertical-align:middle; transform:translateY(-50%); }
 .text-bar-list li:last-child:before { content:none; }
 
-.account-info:has(>dl) { margin-top:10px; border-top:solid 1px #EEEEEE; }
+/* .account-info:has(>dl) { margin-top:10px; border-top:solid 1px #EEEEEE; } */
 .text-bar-list, .account-info > dl { display:flex; flex-wrap: wrap; margin-top:10px; font-size:0.77778rem; line-height:1.5;  }
 .account-info > dl > dt { margin-right:10px; color:#666666; }
 .text-bar-list li, .account-info > dl > dd { position:relative; padding-right: 8px; margin-right: 8px; color:#999999; }
@@ -1231,7 +1231,7 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 
 .headerWrap .headerLeft .user { display:flex; align-items:center; }
 .headerWrap .headerLeft .user img { width:34px; height:34px; }
-.headerWrap .headerLeft .user span { font-size:0.83334rem; line-height:1.278rem; font-weight:500; letter-spacing:-0.04em; color:26282C;  }
+.headerWrap .headerLeft .user span { font-size:0.83334rem; line-height:1.278rem; font-weight:500; letter-spacing:-0.04em; color: #26282C; margin-left: 5px; }
 
 /*헤더 센터*/
 
@@ -1261,8 +1261,8 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 .bottom-menu-area { position:fixed; bottom:0; left:0; z-index:9; width:100%; height:68px; border-top:1px solid #EEECF8; background:#fff; padding-bottom: constant(safe-area-inset-bottom); padding-bottom: env(safe-area-inset-bottom); }
 .bottom-menu-list { font-size:0; height:100%; display:flex;  }
 .bottom-menu-list li { /*display:inline-block; width:25%;*/ padding-top:10px; padding-bottom:15px; text-align:center; width:100%; height:100%; }
-.bottom-menu-list li a {/* display:block; width:100%; height:100%; padding-top:3px;*/ color:#959DA8; font-size:0.66667rem; line-height:1.58334; /*line-height:1.75;*/ }
-.bottom-menu-list li.on a { color:#260F54; }
+.bottom-menu-list li a {/* display:block; width:100%; height:100%; padding-top:3px;*/ color:#26282C; font-size:0.66667rem; line-height:1.58334; font-weight: 500; /*line-height:1.75;*/ }
+.bottom-menu-list li.on a { color:#26282C; }
 .bottom-menu-list a:before { content:''; display:block; width:100%; /*min-height:36px;*/ height:26px;  background:url('../images/main/ico_bottom-menu_01.png') no-repeat 50%/ 24px auto; }
 .bottom-menu-list li.on a:before { background-image:url('../images/main/ico_bottom-menu_01_on.png'); }
 .bottom-menu-list li:nth-child(2) a:before { background-image:url('../images/main/ico_bottom-menu_02.png'); }
@@ -2438,13 +2438,13 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .visaul-info-section .visaul-info-box { margin-top:0; }
 .visaul-info-section .visaul-info-box:has(.btn-set) .info-tit { width:inherit; line-height:1.6; }
 .visaul-info-box .btn-modi { position:absolute; top:20px; right:50px; }
-.visaul-info-box .btn-cont-wrap { margin-top:20px!important; }
-.visaul-info-box .btn-cont-wrap .btn-info { background-color:#F4F5FB; color:#2B0F62; }
+.visaul-info-box .btn-cont-wrap { margin-top:25px!important; }
+/* .visaul-info-box .btn-cont-wrap .btn-info { background-color:#F4F5FB; color:#2B0F62; } */
 .visaul-info-box:has(.flag) .info-tit { margin-top:7px; }
 .visaul-info-box + .txt-list-wrap { margin-top:20px; }
 
 /* 2023-07-16 카드 관리 텍스트 테스트*/
-.visaul-info-box .info-tit.ico-arrow::after { content:'관리'; display:inline-block; position:absolute; padding-left: 55px; right:0; top:0; width:unset; height:unset; font-weight:400; font-size:0.88889rem; line-height:1.4375; color:#757575; background: url(../images/common/btn_setting.png) no-repeat 50%/24px auto; }
+.visaul-info-box .info-tit.ico-arrow::after { content:''; display:inline-block; width: 24px; height: 24px; position:absolute; right:0; top:0; font-weight:400; font-size:0.88889rem; line-height:1.4375; color:#757575; background: url(../images/common/btn_setting.png) no-repeat 50%/24px auto; }
 .visaul-info-box .info-tit .set { display:inline-block; float:right; font-size:0.88889rem; line-height:1.4375; font-weight:400; color:#757575; }
 /*.visaul-info-box .info-tit.ico-arrow::after { content:''; display:inline-block; position:absolute; right:0; top:50%; transform:Translate(0, -50%); width:16px; height:16px; background:url("../images/common/ic-arrow-right.png") no-repeat center/100%; } 2023-07-16 카드 관리 텍스트 테스트 */
 
@@ -2475,9 +2475,12 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .progress-wrap .btn-call-csr { margin-top: 10px; }
 
 
-.account-amount { margin-top:13px; }
-.account-amount > p { font-size:0.88889rem; line-height:1.4375; font-weight:700; }
-.amount-on { color:#F1108E;  }
+.account-amount { margin-top:17px; }
+.account-amount > p { font-size:0.88889rem; line-height:1.4375; font-weight:600; }
+.amount-on { color:#4E32A5;  }
+.amount-on.flexSb span { color:#333; }
+.amount-on.flexSb span.tit { color:#666666; font-weight:400; font-size:0.77778rem; }
+
 .amount-off { font-weight:400 !important; color:#999999; }
 
 .btn-set { position:absolute; top:24px; right:20px; font-size:0.88889rem; line-height:1.4375; color: #757575; /*width:24px; height:24px;*/ /*background:url("../images/common/btn_setting.png") no-repeat 50%/24px auto;*/}
