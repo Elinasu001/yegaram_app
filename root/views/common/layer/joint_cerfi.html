@@ -78,40 +78,38 @@
                     <div class="tit-wrap">
                         <p class="txt"><strong>공동인증서를 선택해주세요</strong></p>
                     </div>
-                    <div class="check-wrap">
-                        <ul class="check-box flex-col">
-                            <li class="certi">
-                                <fieldset>
-                                    <input type="radio" id="Chk01_3" name="Chk01" value="">
-                                    <label for="Chk01_3">
-                                        <ul>
-                                            <li><span class="name">예가람(YEGATAM)</span></li>
-                                            <li><span class="number">01223456789012</span></li>
-                                            <li><span class="issuer">발급자 : yessign</span></li>
-                                            <li><span class="deadline">만료일 : YYYY-MM-DD</span></li>
-                                        </ul>
-                                    </label>
-                                </fieldset>
+
+                    <!--D: [퍼블-1] : 기존 개발 소스로 변경-->
+                    <div class="check-wrap"><!--D:check-wrap 만 감싸주는걸로 추가 되었습니다.-->
+                        <ul class="list-icon type2 list-cert">
+                            <li class="joint on"><!-- D: 클래스 on 추가 시 선택된 스타일로 변경됨 -->
+                                <a>
+                                    <p class="tit">예가람(YEGARAM)</p>
+                                    <p class="txt">01223456789012</p>
+                                    <p class="s-txt mt10">발급자 : yessign</p>
+                                    <p class="s-txt">만료일 : YYYY-MM-DD</p>
+                                </a>
                             </li>
-                            <li class="certi">
-                                <fieldset>
-                                    <input type="radio" id="Chk01_4" name="Chk01" value="" class="">
-                                    <label for="Chk01_4">
-                                        <ul>
-                                            <li><span class="name">예가람(YEGATAM)</span></li>
-                                            <li><span class="number">01223456789012</span></li>
-                                            <li><span class="issuer">발급자 : yessign</span></li>
-                                            <li><span class="deadline">만료일 : YYYY-MM-DD</span></li>
-                                        </ul>
-                                    </label>
-                                </fieldset>
+                            <li class="joint">
+                                <a>
+                                    <p class="tit">예가람(YEGARAM)</p>
+                                    <p class="txt">01223456789012</p>
+                                    <p class="s-txt mt10">발급자 : yessign</p>
+                                    <p class="s-txt">만료일 : YYYY-MM-DD</p>
+                                </a>
                             </li>
-                           
+                        </ul>
                     </div>
 
                 </div>
             </div>
             <!-- //contents -->
+
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap flexCol"><!--D: flexCol 클래스 추가-->
+                    <a href="#none" class="btn disabled">삭제하기</a><!--D:disabled 삭제 시 활성화-->
+                </div>
+            </div>
 
         </div>
         <!-- //contentsWrap -->

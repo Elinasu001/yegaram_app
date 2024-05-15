@@ -48,7 +48,16 @@
 	data-activeMode="local"
 	data-activeEnv="${active.env">
 </script>
-
+<script>
+$(".list-cert li").click(function(){
+    var $this = $(this);
+    if($this.hasClass('on')){
+        $this.removeClass('on');
+    }else{
+        $this.addClass('on');
+    };
+})
+</script>
 
 <body>
     <!-- header -->
@@ -68,40 +77,50 @@
         <div class="contents">
             <div class="default-wrap">
 
-                <!--D: 자인 공통으로 check-wrap 구조 변경 외 변경없음-->
+                <!--D: 콘텐츠는 check-wrap 변경 / 버튼 외 변경없음 -->
 
+                <!--S:check-wrap로 감싸주는걸로 변경되었습니다.-->
                 <div class="check-wrap">
-                    <ul class="check-box flex-col">
-                        <!--S: 반복문-->
-                        <li class="certi">
-                            <fieldset>
-                                <input type="radio" id="Chk01_3" name="Chk01" value="">
-                                <label for="Chk01_3">
-                                    <ul>
-                                        <li><span class="name">김예람(KIMYERAM)</span></li>
-                                        <li><span class="number">01223456789012</span></li>
-                                        <li><span class="issuer">발급자 : yessign</span></li>
-                                        <li><span class="deadline">만료일 : YYYY-MM-DD</span></li>
-                                    </ul>
-                                </label>
-                            </fieldset>
+                    <ul class="list-icon type2 list-cert">
+                        <li class="joint on"><!-- D: 클래스 on 추가 시 선택된 스타일로 변경됨 -->
+                            <a>
+                                <p class="tit">예가람(YEGARAM)</p>
+                                <p class="txt">01223456789012</p>
+                                <p class="s-txt mt10">발급자 : yessign</p>
+                                <p class="s-txt">만료일 : YYYY-MM-DD</p>
+                            </a>
                         </li>
-                        <li class="certi">
-                            <fieldset>
-                                <input type="radio" id="Chk01_4" name="Chk01" value="" class="">
-                                <label for="Chk01_4">
-                                    <ul>
-                                        <li><span class="name">김예람(KIMYERAM)</span></li>
-                                        <li><span class="number">01223456789012</span></li>
-                                        <li><span class="issuer">발급자 : yessign</span></li>
-                                        <li><span class="deadline">만료일 : YYYY-MM-DD</span></li>
-                                    </ul>
-                                </label>
-                            </fieldset>
+                        <li class="joint">
+                            <a>
+                                <p class="tit">김고려(YEGARAM)</p>
+                                <p class="txt">01223456789012</p>
+                                <p class="s-txt mt10">발급자 : yessign</p>
+                                <p class="s-txt">만료일 : YYYY-MM-DD</p>
+                            </a>
                         </li>
-                        <!--E: 반복문-->
+                        <li class="joint">
+                            <a>
+                                <p class="tit">김고려(YEGARAM)</p>
+                                <p class="txt">01223456789012</p>
+                                <p class="s-txt mt10">발급자 : yessign</p>
+                                <p class="s-txt">만료일 : YYYY-MM-DD</p>
+                            </a>
+                        </li>
                     </ul>
                 </div>
+                <!--E:check-wrap로 감싸주는걸로 변경되었습니다.-->
+
+                <!-- // D: 공동인증서가 없을 경우 -->
+                <div class="default-wrap">
+                    <div class="result-area exclamation">
+                        <p class="tit"><strong>등록된 공동인증서가 없어요</strong></p>
+                        <div class="txtbox-wrap">
+
+                            <p>공동인증서를 앱으로 가져오시겠어요?</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- D: 공동인증서가 없을 경우 // -->
 
             </div>
         </div>
@@ -114,6 +133,16 @@
 			</div>
 		</div>
 		<!-- D: 앱에 공동인증서가 있을 경우 //-->
+
+
+        <!-- // D: 앱에 공동인증서가 없을 경우 -->
+		<div class="fixed-btn-wrap">
+			<div class="btn-wrap flexCol"><!--D: flexCol 클래스 추가-->
+				<a href="#none" class="btn">공동인증서 가져오기</a>
+                <a href="#none" class="btn txt">홈으로</a><!--D: btn txd 클래스 추가-->
+			</div>
+		</div>
+		<!-- D: 앱에 공동인증서가 없을 경우 //-->
 
     </div>
     <!-- //contentsWrap -->

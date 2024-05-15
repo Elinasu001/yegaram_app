@@ -68,32 +68,32 @@
         <div class="contents">
             <div class="default-wrap">
 
-                <!-- D: 디자인 공통으로 check-wrap 구조 변경 외 변경없음-->
+                <!-- D: 감싸주는 check-wrap 추가 외 변경사항 없음-->
 
                 <div class="tit-wrap">
 					<p class="txt">PC로 보낼 <strong>공동인증서</strong>를<br/>선택해주세요</p>
 				</div>
 
-                <!--S: 구조 변경됐습니다.-->
-                <ul class="list-icon type2 list-cert">
-					<li class="joint on"><!-- D: 클래스 on 추가 시 선택된 스타일로 변경됨 -->
-						<a>
-							<p class="tit">김고려(KIMGORYO)</p>
-							<p class="txt">01223456789012</p>
-							<p class="s-txt mt10">발급자 : yessign</p>
-							<p class="s-txt">만료일 : YYYY-MM-DD</p>
-						</a>
-					</li>
-					<li class="joint">
-						<a>
-							<p class="tit">김고려(KIMGORYO)</p>
-							<p class="txt">01223456789012</p>
-							<p class="s-txt mt10">발급자 : yessign</p>
-							<p class="s-txt">만료일 : YYYY-MM-DD</p>
-						</a>
-					</li>
-				</ul>
-                <!--E: 구조 변경됐습니다.-->
+                <div class="check-wrap"><!--D:check-wrap 만 감싸주는걸로 추가 되었습니다.-->
+                    <ul class="list-icon type2 list-cert">
+                        <li class="joint on"><!-- D: 클래스 on 추가 시 선택된 스타일로 변경됨 -->
+                            <a>
+                                <p class="tit">예가람(YEGARAM)</p>
+                                <p class="txt">01223456789012</p>
+                                <p class="s-txt mt10">발급자 : yessign</p>
+                                <p class="s-txt">만료일 : YYYY-MM-DD</p>
+                            </a>
+                        </li>
+                        <li class="joint">
+                            <a>
+                                <p class="tit">김고려(YEGARAM)</p>
+                                <p class="txt">01223456789012</p>
+                                <p class="s-txt mt10">발급자 : yessign</p>
+                                <p class="s-txt">만료일 : YYYY-MM-DD</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
                 <!-- S: 공동인증서가 없을 경우 -->
                 <div class="default-wrap">
