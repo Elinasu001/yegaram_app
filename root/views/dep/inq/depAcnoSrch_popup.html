@@ -67,23 +67,36 @@
         </div>
         <!-- //contents -->
 
-        <!--S: 자동만기여부 선택(팝업)-->
-        <div id="lyPop2" class="layerpopup layer-up show" style=" display: block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+        <!--s:만기자동 재예/만기해지송금 안내(이미 신청 상태인 경우)-->
+        <div id="lyPop2" class="layerpopup layer-up has-button show" style=" display: block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
             <div class="content-wrap">
                 <div class="pop-header">
-                    <h2 class="pop-title">자동만기여부</h2>
+                    <h2 class="pop-title">만기자동 재예치/만기해지송금</h2>
                     <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
                 </div>
-                <div class="ly-scroll-con ly-select">
-                    <ul class="ly-select-list">
-                        <li class="active"><button>자동연장(원금)</button></li>
-                        <li><button>자동연장(원리금)</button></li>
-                        <li><button>자동해지송금</button></li>
-                    </ul>
+                <div class="ly-scroll-con">
+                    <div class="txtbox-wrap">
+                        <p>만기자동재예치/만기해지송금에 가입되어 있어요</p>
+                        <div class="list-bull">
+                            <ul>
+                                <li>기존에 등로된 정보가 있다면 해지 후 재등록이 가능해요</li>
+                                <li>만기자동예치는 계좌의 변경 없이 최대 3회차까지 자동으로 재예치가 가능해요</li>
+                            </ul>
+                        </div>
+                        <p class="mt15">해지하시겠어요?</p>
+                    </div>
+
+
+                </div>
+            </div>
+            <!--D: fixed-btn-wrap 버튼은 content-wrap 밖으로 위치-->
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn">해지신청</a>
                 </div>
             </div>
         </div>
-        <!--E: 자동만기여부 선택(팝업)-->
+        <!--e:만기자동 재예/만기해지송금 안내(이미 신청 상태인 경우)-->
 
 
     </div>

@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Style-Type" content="text/css">
 <meta name="keywords" content="예가람저축은행keywords" />
 <meta name="description" content="예가람저축은행description" />
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
 
 <meta name="apple-mobile-web-app-status-bar-style" content="white" />
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,544 +29,420 @@
 <script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.7/swiper-bundle.css"> -->
-
-<!-- <script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script> -->
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803133439"></script>
-<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803133439"></script>
-<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803133439"></script>
-<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803133439"></script>
-<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803133439"></script>
-<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803133439"></script>
-<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803133439"></script>
-<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803133439"></script>
-<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803133439" id="biz_common" 
-	data-menuId=""
-	data-frameId="main"
-	data-serviceCd="main.frm" 
-	data-serverTime="20230803133439"
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803164937"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803164937"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803164937"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803164937"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803164937"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803164937"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803164937"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803164937"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803164937" id="biz_common" 
+	data-menuId="dep/mng"
+	data-frameId="acnoExpRenew1"
+	data-serviceCd="acnoExpRenew1.frm" 
+	data-serverTime="20230803164937"
 	data-activeMode="local"
 	data-activeEnv="${active.env">
 </script>
-<link href="/resources/css/main_renewal.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <script type="text/javascript">
+/*
+  var moveForm = makeForm("moveForm");
+addFormData(moveForm , "LINK_ACT", "ACNO_EXPT_MNG");
+addFormData(moveForm , "txGbnCd", "P"); // 전조회
+addFormData(moveForm , "ACTNO", "계좌번호"); // 전조회
+addFormData(moveForm , "TRN_DSTC", "1"); // 거래구분 1:등록, 2:해지
+addFormData(moveForm , "PROD_NM", "정기예금"); // 거래구분 1:등록, 2:해지
+doActionView("/dep/mng/acnoExpRenew1", moveForm);
+
+ 
+ */
 var PageFunc = function() {
+	
 	var _back = function() { // 뒤로가기
-		// TODO 앱 종료 메시지 등
-		return true;
+		history.back();
 	}
+	
 	var _proc = function() { // 본처리
-		return true;
-	}
+		// 확인팝업 닫기
+		 closePopupUp('confirmPop');
+		
+		// 구분코드 설정
+		/**
+		은행이체상태구분코드 0:사용안함, 1:원금연장(이자당행이쳬), 2:원금연장(이자타행이체), 3:원리금연장, 4:만기해지후송금
+		
+		자동만기연장 1,4 선택시 : TRNF_ACNO(이체계좌번호)당행계좌 필수
+		자동만기연장 2,4 선택시 : CNTP_BANK_ACNO(상대은행계좌번호)타행계좌 필수
+		1,2,4 : 자행 000, 타저축은행 050, 타행 타행코드3자리
+		*/
+		
+		var dvcd = $(".btn-primary").data().attr;
+		var bkcd = $("#WTCH_BKCD").val();
+		var acnoCd = $("#TRNF_ACNO").val().substr(0,3);
+		var trnfAcno = $("#TRNF_ACNO").val();
+		var acnoName = "TRNF_ACNO";
+		
+		if (dvcd != "3"){
+			// 저축은행
+			if (bkcd == "050" ) {	
+				if (acnoCd == "101") {
+					// 당행
+					bkcd = "000"; 
+				} else {
+					// 타저축은행
+					if(dvcd == "1") dvcd = "2";
+					acnoName = "CNTP_BANK_ACNO";
+				}
+
+			} else {
+				// 타행
+				if(dvcd == "1") dvcd = "2";
+				acnoName = "CNTP_BANK_ACNO";
+			}
+		} else {
+			//원리금 연장
+			bkcd = "";
+			trnfAcno = "";
+		}
+		
+		
+		var dataForm = makeForm("dataForm");
+		addFormData(dataForm, "txGbnCd", "R"); // R 본처리
+		addFormData(dataForm, "ACTNO", ACNO);	// 계좌번호
+		addFormData(dataForm, "BKCD", bkcd);	// 은행코드
+		addFormData(dataForm, acnoName, trnfAcno);
+		addFormData(dataForm, "TRN_DSTC", "1"); // 거래구분 1:등록, 2:해지
+		addFormData(dataForm, "BANK_TRNF_STS_DVCD", dvcd);
+				
+		doAction("ACNO_EXPT_MNG", dataForm, function(resDs){
+			console.log(resDs);
+			var moveForm = makeForm("moveForm");
+			addFormData(moveForm, "BANK_TRNF_STS_DVCD", dvcd);
+			if (resDs.API_RS_MSG == 'SUCCESS') {
+				addFormData(moveForm, "SUCC_YN", "Y");
+			} else {
+				addFormData(moveForm, "SUCC_YN", "N");
+				addFormData(moveForm, "MSG", resDs.API_RS_MSG);
+			}
+			doActionFrame("/dep/mng/acnoExpRenew2", moveForm);
+		});
+		
+	};
+	
+
+	
 	var _cancel = function() { // 그만하기
+		goMainPage();
 	}
+	
+	var _validate = function() { // 유효성검증
+		if (!finalValidChk()) {
+			return false;
+		} else {
+			openPopupUp('confirmPop');
+		}
+	}
+	
 	return {
 		back : _back,
 		proc : _proc,
-		cancel : _cancel
+		cancel : _cancel,
+		validate : _validate
 	};
 }();
 
-function goNotiDetail(seq){
-	var notiDetailForm = makeForm("notiDetailForm");
-	addFormData(notiDetailForm, "LINK_ACT", "BBS_SELECT");
-	addFormData(notiDetailForm, "txGbnCd", "N");
-	addFormData(notiDetailForm, "SEQ", seq);
-	doActionFrame("etc/inq/noti2", notiDetailForm);
-}
-function goFaqDetail(seq){
-	var notiDetailForm = makeForm("notiDetailForm");
-	addFormData(notiDetailForm, "LINK_ACT", "BBS_SELECT");
-	addFormData(notiDetailForm, "txGbnCd", "F");
-	addFormData(notiDetailForm, "SEQ", seq);
-	doActionFrame("etc/inq/faq2", notiDetailForm); 
-}
-$(document).ready(function(){
-	
-    var bbsSelectForm = makeForm("bbsSelectForm");
-    addFormData(bbsSelectForm, "txGbnCd", "NOTI"); // NOTI:공지 RKEY:추천검색어 FAQ:FAQ 배너:BNN 팝업:POP 영업점:BRC
-    doAction("MAIN_SELECT", bbsSelectForm, function(resDs){
-    	var tmp_html = '<div class="swiper-slide"><a href="javascript:#FUNC#"><p class="notice-tit">#TITLE#</p><span class="notice-date">#OPEN_START_DT#</span></a></div>';
-        var add_html = "";
-        var noti_cnt = 0;
-        $.each(resDs.REC, function(idx, item){
-        	var r_html = tmp_html;
-        	r_html = r_html.replace("#FUNC#", "goNotiDetail('"+item.SEQ+"');"); 
-        	r_html = r_html.replace("#TITLE#", item.TITLE);
-        	r_html = r_html.replace("#OPEN_START_DT#", item.OPEN_START_DT);
-        	add_html += r_html;
-        	noti_cnt++;
-        });
-        $("#MAIN_NOTI").html(add_html);
-        $("#MAIN_NOTI_CNT").html(noti_cnt);
-        
-     	// 공지사항
-        var noticeSlider = new Swiper('.notice-slider-wrap.swiper', { // 2023-06-20 선택자 변경 : swiper-container => swiper
-            direction : 'vertical',
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-            },
-            loop : true,
-            loopedSlides: 1,
-            observer: true,
-            observeParents: true,
-        });
 
-    }, false);
-    
-    var bbsSelect2Form = makeForm("bbsSelect2Form");
-    addFormData(bbsSelect2Form, "txGbnCd", "BNN"); // NOTI:공지 RKEY:추천검색어 FAQ:FAQ 배너:BNN 팝업:POP 영업점:BRC
-    doAction("MAIN_SELECT", bbsSelect2Form, function(resDs){
-    	var tmp_html = '';
-    	
-        var recomSlider = new Swiper('.recom-slider-wrap .swiper', { // 2023-06-20 선택자 변경 : swiper-container => swiper
-            effect: "cards",
-            cardsEffect: {
-                perSlideRotate: 0,
-                slideShadows: false,
-            },
-            // 2023-06-23(2) 수정
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-                reverseDirection: true,
-            },
-            loop : true,
-        });
-        
-    }, false);
-    
-    var bbsSelect3Form = makeForm("bbsSelect3Form");
-    addFormData(bbsSelect3Form, "txGbnCd", "QMNU"); // QMNU:빠른메뉴
-    doAction("MAIN_SELECT", bbsSelect3Form, function(resDs){
-    	 var tmp_html = '<li><a href="#" onclick="javascript:#URI#">#NAME#</a></li>';
-         var add_html = "";
-         $.each(resDs.REC, function(idx, item){
-         	var r_html = tmp_html;
-         	r_html = r_html.replace("#URI#", "doActionMenu('"+item.URI+"');");
-         	r_html = r_html.replace("#NAME#", item.NAME);
-         	add_html += r_html;
-         });
-         $("#MAIN_QUICK_MENU").html(add_html);
-         
-    }, false);
-    
-    var bbsSelect4Form = makeForm("bbsSelect4Form");
-    addFormData(bbsSelect4Form, "txGbnCd", "FAQ"); // NOTI:공지 RKEY:추천검색어 FAQ:FAQ 배너:BNN 팝업:POP 영업점:BRC
-    doAction("MAIN_SELECT", bbsSelect4Form, function(resDs){
-    	var tmp_html = '<li><a href="javascript:#FUNC#" class="go-link">#TITLE#</a></li>';
-        var add_html = "";
-        $.each(resDs.REC, function(idx, item){
-        	var r_html = tmp_html;
-        	r_html = r_html.replace("#FUNC#", "goFaqDetail('"+item.SEQ+"');"); 
-        	r_html = r_html.replace("#TITLE#", item.TITLE);
-        	add_html += r_html;
-        });
-        $("#MAIN_FAQ").html(add_html);
-    }, false);
-    
-    var bbsSelect5Form = makeForm("bbsSelect5Form");
-    addFormData(bbsSelect5Form, "txGbnCd", "POP"); // NOTI:공지 RKEY:추천검색어 FAQ:FAQ 배너:BNN 팝업:POP 영업점:BRC
-    doAction("MAIN_SELECT", bbsSelectForm, function(resDs){
-    	if (resDs.REC.length > 1) {
-    		// TODO 팝업 노출
-    	}
-    }, false);
-    
-	// 하단배너는 고정
-    var newsSlider = new Swiper('.news-slider-wrap.swiper', { 
-        slidesPerView: 1,
-        spaceBetween : 20,
-        pagination : {
-            el : '.swiper-pagination',
-            // clickable : true,
-        },
-		observer:true,
-		observeParents:true,
-        // 2023-06-23 추가
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        loop : true,
-		// loopedSlides: 1,
-		centeredSlides: true,
-		// initialSlide: 0,
-		//   slidesPerGroup: 1,
-		//   roundLengths: true,
-		loopAdditionalSlides: 1,
-    });
-    
+
+var ACNO = "";
+$(document).ready(function(){
+	// 만기자동재예치 선조회 
+	var dataForm = makeForm("dataForm");
+	addFormData(dataForm, "txGbnCd", "P");
+	addFormData(dataForm, "ACTNO", ACNO);
+	addFormData(dataForm, "TRN_DSTC", "1");	//거래구분 1:등록 2:해지
+	doAction("ACNO_EXPT_MNG", dataForm, actCallback);
 });
+
+// 만기자동재예치 선조회 데이터 화면세팅
+function actCallback(res){
+	console.log(res);
+	
+	// 계약금액 세팅
+	$("#amtTxt").text(UtilFunc.getAmtFormatInZero(res.CNTR_AMT_N17));
+	
+	// 연장설정정보 및 이체정보 세팅
+	var stts = res.BANK_TRNF_STS_DVCD;
+	var sttsTxt = "미설정";
+	var bkcd = (stts == "1")? "050" : res.BKCD;
+	if(!UtilFunc.isEmpty(stts))	{
+		if (stts != "0" && stts != "4") sttsTxt = "설정";
+		$("#sttTxt").text(sttsTxt);
+		$("#WTCH_BKNM").text(UtilFunc.getBankName(bkcd));
+		$("#div_WTCH_BKNM").addClass("on");
+		$("#WTCH_BKCD").val(bkcd);
+		$("#TRNF_ACNO").val(res.TRNF_ACNO);
+		$("#TRNF_ACNO").trigger("change");
+		
+		if(stts == "3") {
+			divDisplay($("#sttBtn2"), false);
+		} else {
+			divDisplay($("#sttBtn1"), true);
+		}
+	} 
+	
+}
+
+// 출금은행 선택 후 선택값 세팅
+function wtchBankCallback(data){
+	console.log(data);
+	$("#WTCH_BKNM").text(data.BKNM); 
+	$("#WTCH_BKCD").val(data.BKCD);  
+	$("#div_WTCH_BKNM").addClass("on");
+	if (!UtilFunc.isEmpty($("#MNRC_BKCD").val())) {
+		mnrcMrk($("#WTCH_BKCD").val(),$("#MNRC_BKCD").val()); //적요입력 인풋박스 노출여부 		
+	}
+	inputFocus($("#WTCH_ACNO"));
+	validChk();
+}
+
+// 버튼세팅
+function divDisplay(obj, flag){
+	// 입력값 초기화
+	$("#TRNF_ACNO").val("");
+	$("#WTCH_BKNM").text("");
+	$("#WTCH_BKCD").val("");
+	
+	// 버튼클래스 세팅
+	$.each($("#btnDiv > a"), function(i,o){
+		$(o).removeClass("btn-primary");
+	    $(o).addClass("btn-info");
+	});
+	
+	$(obj).removeClass("btn-info");
+	$(obj).addClass("btn-primary");
+	
+	// 화면세팅
+	if (flag) {
+	    //자동연장(원금) or 자동해지송금 클릭시 
+		$("#displayYN").show();	
+		$("#TRNF_ACNO").addClass("validChk");
+		$("#WTCH_BKCD").addClass("validChk");
+		$("#procBtn").addClass("disabled");
+	} else {
+		//자동연장(원리금) 클릭시 
+		$("#displayYN").hide();	
+		$("#TRNF_ACNO").removeClass("validChk");
+		$("#WTCH_BKCD").removeClass("validChk");
+		$("#procBtn").removeClass("disabled");
+	}
+}
+ 
+	 
 </script>
 </head>
-<div class="wrap main"><!-- [*] main 클래스 어디에 붙을 수 있는지 확인 필요 -->
+<body>
 	<!-- header -->
-	<header class="headerWrap bg-color02"><!--D: bg-color02 클래스 : 뒤에 색상 들어갈 경우  -->
-		<div class="headerLeft">
-	
-			<!--D: 이전버튼 -->
-			<!-- <a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a> -->
-	
-			<!--D: USER -->
-			<a href="javascript:void(0)" class="user"><img src="/resources/images/header/user.png" alt="사용자이름"><span>김예가람</span></a>
-	
-			<!--D: 로고 이미지 -->
-			<!-- <a href="javascript:void(0)" class="logoImg"><img src="/resources/images/header/logo.png" alt="예가람저축은행로고" /></a> -->
-	
+	<header class="headerWrap">
+		<div class="header">
+			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+			<h2><span>만기자동 재예치</span></h2> <!-- [퍼블] 텍스트 변경 -->
 		</div>
-		
-		<div class="headerRight">
-	
-			<!--D: 전체메뉴버튼 -->
-			<!-- <a href="javascript:void(0)" class="btn btn-menu "><img  src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a> -->
-	
-			<!--D: 닫기버튼 -->
-			<!-- <a href="javascript:void(0)" class="btn btn-menu-close"><img  src="/resources/images/header/btn_close.png" alt="닫기버튼"></a> -->
-	
-			<!--D: 로그아웃 같은 클래스 사용 -->
-			<a href="javascript:void(0)" class="btn btn-txt login">로그아웃</a>
-	
-			<!--D: 알림버튼 -->
-			<a href="javascript:void(0)" class="btn btn-notify"><img src="/resources/images/header/btn_notify.png" alt="알림"><em class="count-flag"><span>3</span></em></a>
-	
-			<!--D: 좋아요버튼 -->
-			<!-- <a href="javascript:void(0)" class="btn btn-like"><img src="/resources/images/header/btn_like.png" alt="좋아요"><em class="count-flag">3</em></a> -->
-	
-			<!--D: 관심상품버튼 -->
-			<!-- <a href="javascript:void(0)" class="btn btn-interest"><img src="/resources/images/header/btn_interest.png" alt="관심상품"><em class="count-flag">3</em></a> -->
-			
-		</div>
+		<div class="menu-wrap"></div>
 	</header>
 	<!-- //header -->
-
-    <!-- s: contentsWrap -->
+	
+	    <!-- s: contentsWrap -->
     <div class="contentsWrap">
-        <!-- s: contents -->
-        <div class="contents">
-            <div class="default-wrap">
-				<section class="recom-area">
-					<div class="alignment-both-side">
-						<h2 class="area-title">내 예/적금 <span class="point">2</span>건</h2>
-					   <strong>총 <span class="point">30,000,000</span>원</strong>
-					</div>
+    <form id="frm" name="frm" method="post">
+    	<div class="contents">
+			<div class="default-wrap"> <!-- [퍼블] .mt0 삭제 -->
 
+				<!-- [퍼블] 전체 변경 -->
+				<div class="visaul-info-section">
 					<div class="visaul-info-box">
-						<a class="info-tit ico-arrow" onclick="depAcnoDetail('04961132001040','1');">
-							<em class="flag style2">예/적금</em>
-							E-RUN 파킹통장(개인)
-						</a>
-			
+						<div><em class="flag style2">정기예금</em></div>
+						<strong class="info-tit">e정기예금 단리</strong>
 						<div class="account-area">
 							<p class="account">123-12-12-1234567</p>
-							<button type="button" class="btn-copy">복사</button>
-						</div>
-						
-						<div class="account-info">
-							<div class="account-amount">
-								<p class="amount-on">
-									<span>60,000,000</span> 원
-								</p>
-								<p class="amount-off" style="display:none;">잔액숨김</p>
-							</div>
-						</div>
-						<div class="btn-cont-wrap">
-							<a href="javascript:void(0);" class="btn btn-info" onclick="acnoTrnHist('04961132001040','1');">거래내역</a>
-							<a href="javascript:void(0);" class="btn btn-primary" onclick="transBtn('04961132001040')">이체</a>
+							<button type="button" class="btn-copy">복사하기</button>
 						</div>
 					</div>
-				</section>
+				</div>
+				<!-- // [퍼블] 전체 변경 -->
 
-				<!--D: 예/적금 가입 계좌 없을 때 -->
-				<section class="recom-area">
-					<div class="alignment-both-side">
-						<h2 class="area-title">내 예/적금 <span class="point">0</span>건</h2>
+				<!-- <div class="mt40 mb20">
+					<span class="label-txt">계약금액</span>
+					<div class="value-wrap">
+						<strong class="value" id="amtTxt"></strong>
+						<span class="unit">원</span>
 					</div>
-					<div class="visaul-info-box">
-						<div class="txt">현재 예/적금 가입계좌가 없습니다.</div>
-					</div>
-				</section>
+				</div> [퍼블] 주석 처리 -->
 
-				<section class="recom-area">
-					<div class="alignment-both-side">
-						<h2 class="area-title">내 대출 <span class="point">1</span>건</h2>
-					   <strong>총 <span class="point">30,000,000</span>원</strong>
-					</div>
+				<!-- [퍼블] 전체 변경 -->
+				<div class="txt-list-wrap">
+					<div class="txt-detail-area">
+						<ul class="txt-list">
+							<li>
+								<span class="tit">적금 잔액</span>
+								<span class="txt">000,000,000원</span>
+							</li>
+							<li>
+								<span class="tit">적금개설일</span>
+								<span class="txt">YYYY.MM.DD</span>
+							</li>
+							<li>
+								<span class="tit">적금만기일</span>
+								<span class="txt">YYYY.MM.DD</span>
+							</li>
+							<li>
+								<span class="tit">자동만기연장</span>
+								<span class="txt" id="sttTxt">미설정</span>
+							</li>
+						</ul>
 
-					<div class="visaul-info-box">
-						<a class="info-tit ico-arrow" onclick="depAcnoDetail('04961132001040','1');">
-							<em class="flag style2">신용대출</em>
-							종합통장대출(인터넷)
-						</a>
-			
-						<div class="account-area">
-							<p class="account">123-12-12-1234567</p>
-							<button type="button" class="btn-copy">복사</button>
-						</div>
-						
-						<div class="account-info">
-							<dl>
-								<dt>만기일자</dt>
-								<dd> YYY.MM.DD</dd>
-								<dd>원리금균등</dd>
-							</dl>
-							<div class="account-amount">
-								<p class="amount-on">
-									<span>60,000,000</span> 원
-								</p>
-								<p class="amount-off" style="display:none;">잔액숨김</p>
-							</div>
-						</div>
-						<div class="btn-cont-wrap">
-							<a href="javascript:void(0);" class="btn btn-info" onclick="acnoTrnHist('04961132001040','1');">거래내역</a>
-						</div>
-					</div>
-				</section>
+						<!-- <div class="q-wrap"> 디자인 변경 : 버튼 삭제 후 아래 select-wrap으로 변경
+							<ul>
+								<li>
+									<input type="radio" name="q1" id="q11" value="Y" onclick="divDisplay(this, true);" data-attr="1" checked>
+									<label for="q11" class="rd"> 자동연장(원금)</label>
+								</li>
+								<li>
+									<input type="radio" name="q1" id="q12" value="N" onclick="divDisplay(this, false);" data-attr="3">
+									<label for="q12" class="rd">자동연장(원리금)</label>
+								</li>
+							</ul>
+						</div> -->
 
-				<!--D: 대출 신청 계좌 없을 때 -->
-				<section class="recom-area">
-					<div class="alignment-both-side">
-						<h2 class="area-title">내 대출 <span class="point">0</span>건</h2>
-					</div>
-					<div class="visaul-info-box">
-						<div class="txt">현재 대출 신청 계좌가 없습니다.</div>
-					</div>
-				</section>
-
-				
-				<!--D: 추천상품의 경우 슬라이드 2개 이상이 보여야 합니다. (작업하실 때 퍼블에 디자인 확인 요청 한번 부탁드려요) -->
-				<section class="product-area">
-					<div class="area-title-box">
-						<h2 class="area-title">추천상품</h2>
-					</div>
-					<ul class="product-list">
-						<li class="product01">
-							<a href="#none">
-								<strong>신용대출</strong>
-								<div>다양한 직업군을<br />위한 신용대출</div>
-							</a>
-						</li>
-						<li class="product02">
-							<a href="#none">
-								<strong>정책자금대출</strong>
-								<div>서민을 위한<br />정부보증 대출</div>
-							</a>
-						</li>
-					</ul>
-				</section>
-
-				<section class="quick-service-area">
-					<div class="area-title-box">
-						<h2 class="area-title">빠른 서비스</h2>
-					</div>
-                    <ul class="quick-service-list" id="MAIN_QUICK_MENU">
-						<li class="service-deposits"><a href="#none">예/적금 알아보기</a></li>
-						<li class="service-loan-inquiry"><a href="#none">간편대출 한도조회</a></li>
-						<li class="service-contract"><a href="#none">전자계약서 작성</a></li>
-						<li class="service-loan"><a href="#none">대출이어하기</a></li>
-					</ul>
-                </section>
-
-				<section class="yesbank-service-area">
-					<div class="area-title-box">
-						<h2 class="area-title">
-							오직 <span class="color-F10F8E">YESBANK</span> <br />
-							고객님을 위한 편리한 서비스
-						</h2>
-					</div>
-					<ul class="service-more">
-						<li class="kcb-score">
-							<a href="javascript:void(0);">KCB 신용점수 조회하기</a>
-						</li>
-						<li class="living-expenses">
-							<a href="javascript:void(0);">여유 생활자금 계산하기</a>
-						</li>
-						<li class="simple-loan">
-							<a href="javascript:void(0);">간편대출 한도조회</a>
-						</li>
-					</ul>
-				</section>
-
-				<section class="sns-news-area">
-					<ul class="sns-news-list">
-						<li>
-							<a href="#none">
-								<span class="sns-tit">SNS소식</span>
-								<div class="sns-txt">오직 예가람의 SNS를 통해<br />이벤트를 참여하세요!</div>
-							</a>
-						</li>
-					</ul>
-				</section>
-
-				<section class="notice-area">
-					<div class="area-title-box">
-						<h2 class="area-title">공지사항</h2>
-					</div>
-					<ul class="notice-list">
-						<li>
-							<a href="#none">2024년 1분기 NPL 매각대상 개인(신용)정보 제공합니다.</a>
-						</li>
-						<li>
-							<a href="#none">표준약관 개정 사항 공지(압류방지전용통장특약)</a>
-						</li>
-					</ul>
-				</section>
-
-				<ul class="info-list">
-					<li><a href="#none">이용시간<br />안내</a></li>
-					<li><a href="#none">영업점<br />위치 안내</a></li>
-					<li><a href="#none">대표번호<br />1877-7788</a></li>
-				</ul>
-
-				<ul class="sns-list">
-                    <li class="btn_sns sns_facebook"><a href="#none">페이스북</a></li>
-                    <li class="btn_sns sns_insta"><a href="#none">인스타그램</a></li>
-                    <li class="btn_sns sns_blog"><a href="#none">네이버 블로그</a></li>
-                    <li class="btn_sns sns_kakao"><a href="#none">카카오톡체널</a></li>
-                </ul>
-
-				<div class="main-function-btn-wrap">
-					<div>
-						<a href="#none" class="btn amount-view-on">금액보이기</a>
-						<a href="#none" class="btn amount-view-off">금액숨기기</a>
-						<a href="#none" class="btn" onclick="openPopupUp('lyPop');">큰 글씨 설정</a>
+						<!-- <div class="btn-cont-wrap">
+							<a href="#none" id="sttBtn1" class="btn btn-info" onclick="divDisplay(this, true);" data-attr="1"> 자동연장(원금)</a>
+							<a href="#none" id="sttBtn2" class="btn btn-border" onclick="divDisplay(this, false);" data-attr="3">자동연장(원리금)</a>
+						</div> -->
 					</div>
 				</div>
 
+				<!-- <div class="btn-cont-wrap mt15 mb25" id="btnDiv">
+					<a href="#none" id="sttBtn1" class="btn btn-primary" onclick="divDisplay(this, true);" data-attr="1">자동연장(원금)</a>
+					<a href="#none" id="sttBtn2" class="btn btn-info" onclick="divDisplay(this, false);" data-attr="3">자동연장(원리금)</a>
+					<a href="#none" id="sttBtn3" class="btn btn-info" onclick="divDisplay(this, true);" data-attr="4">자동해지송금</a>
+				</div> -->
+				<!-- // [퍼블] 전체 변경 -->
+
+				<div class="form-wrap"><!--디자인 변경-->
+					<div class="input">
+						<div class="select-wrap on" id="exptYnDiv">
+							<div class="select-box" tabindex="1" onclick="openPopupUp('exptYn');">
+								<label for="exptYnVal">자동만기연장여부<span class="essential">*</span></label>
+								<span class="option" id="exptYnText">자동연장(원금)</span>
+							</div>
+							<input type="hidden" id="exptYnVal" name="" value="1" class="validChk">
+						</div>
+					</div>
+					<p class="error-txt">자동만기연장여부를 선택해주세요</p>
+				</div>
+
+				<!-- [퍼블] 전체 변경 -->
+				<!-- D : 자동연장(원금) 선택 시 노출 -->
+				<div id="displayYN"	style="display:block;">
+					<div class="form-wrap" id="divBank">
+						<div class="input">
+							<div class="select-wrap" id="div_WTCH_BKNM">
+								<div class="select-box" tabindex="1" onclick="removeErr(this); biz.bank(wtchBankCallback);">
+									<label for="WTCH_BKNM">은행선택</label>
+									<span class="option" id="WTCH_BKNM" >미선택</span>
+								</div>
+								<input type="hidden" id="WTCH_BKCD" name="WTCH_BKCD" value="" class="validChk"/><!-- 출금은행코드 -->
+							</div>
+						</div>
+						<p class="error-txt">출금은행을 선택해주세요</p>
+					</div>
+					<div class="form-wrap" id="divAcno">
+						<label for="TRNF_ACNO" class="formlabel onbasic">계좌번호</label>
+						<div class="input">
+							<input type="tel" title="계좌번호" id="TRNF_ACNO" 
+							class="inp validChk" name="TRNF_ACNO" value="" 
+							placeholder="계좌번호를 입력해주세요" pattern="[0-9]*" oninput="UtilFunc.inputMaxLength(this);" onkeyup="removeErr(this); validChk();" onclick="removeErr(this);" onchange="validChk();" maxlength="16" required numberOnly>
+						</div>
+						<p class="error-txt">계좌번호를 입력해주세요</p>
+					</div>
+				</div>
+				<!-- D : // 자동연장(원금) 선택 시 노출 -->
+				<!-- // [퍼블] 전체 변경 -->
+
+				<!-- [퍼블] 전체 변경 -->
+				<dl class="list-bull type-caption">
+					<dt>알아두세요</dt>
+					<dd>예금 만기 시 원금 또는 원리금(원금+이자)을 계좌의 변경 없이 최대 3회차까지 자동으로 재예치 가능해요</dd>
+					<dd>재예치 회차에 관계없이 중도해지를 할 수 있어요</dd>
+					<dd>3회차 재예치 이후 계좌 해지는 인터넷뱅킹 또는 창구 방문을 통해 해지가 가능해요</dd>
+				</dl>
+
+				<dl class="list-bull type-caption">
+					<dt>만기이자이체구분</dt>
+					<dd>
+						<span class="tit">내부(타행) 이체</span>
+						만기 당일 발생한 세후 이자 금액을 제외한 원금만을 재예치해요 (발생한 세후 이자 금액은 등록하신 당 저축은행 또는 타행 본인 소유 입출금 가능 계좌로 자동 입금)
+					</dd>
+					<dd>
+						<span class="tit">원금+이자</span>
+						만기 당일 발생한 원금과 세후 이자 금액을 합산하여 재예치해요 (비과세 종합 저축 계좌의 경우 만기 자동 재예치 시 비과세 한도 초과에 따른 재예치 오류가 발생할 수 있어요)
+					</dd>
+				</dl>
+				<!-- // [퍼블] 전체 변경 -->
+
 			</div>
-        </div>
-        <!-- //e: contents -->
-    </div>
-    <!-- //e: contentsWrap -->
+		</div>
 
-
-	<!-- s: 레이어팝업 - 큰글씨설정 -->
-	<div id="lyPop" class="layerpopup layer-up has-button">
+		<div class="fixed-btn-wrap">
+			<div class="btn-wrap">
+				<a href="#none" class="btn disabled" id="procBtn" onclick="PageFunc.validate();">등록</a>
+			</div>
+		</div>
+	<!-- //e: contentsWrap -->
+	</form>
+	</div>
+	
+	<!-- s : 만기자동재예치(재가입) 변경 확인 팝업 -->
+	<div id="confirmPop" class="layerpopup layer-up has-button">
 		<div class="content-wrap">
 			<div class="pop-header">
-				<h2 class="pop-title">큰 글씨 설정</h2>
-				<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+				<h2 class="pop-title">만기자동재예치(재가입) 변경</h2>
+				<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close" onclick="closePopupUp('confirmPop');">닫기</button>
 			</div>
-			<!-- [퍼블-2] ly-scroll-con ly-select 지우고 default-wrap 추가 / 하위에 txtbox-wrap 구조 추가 수정범위 영역-->
 			<div class="default-wrap">
-				<div class="fontsize-range-wrap">
-					<p class="font-char font-char-small">가</p>
-					<input type="range" id="textSize" name="textSize" min="0" max="3" value="0" step="1" />
-					<p class="font-char font-char-big">가</p>
+				<div class="txtbox-wrap">
+					<p>만기자동재예치(재가입) 설정을 변경하시겠어요?</p>
 				</div>
-				<dl class="list-bull type-caption">
-					<dt>알아두세요</dt><!--D: [] 삭제 -->
-					<dd>글씨를 키우면 모양이 기존과 달라질 수 있어요</dd>
-				</dl>
 			</div>
-			<!-- [퍼블] 수정범위 영역-->
 		</div>
 		<div class="fixed-btn-wrap">
 			<div class="btn-wrap type-popup">
-				<a href="#none" class="btn" onclick="closePopupUp('lyPop');">적용하기</a><!--D: 버튼명 수정 -->
+				<a href="#none" class="btn" onclick="PageFunc.proc();">변경</a>
 			</div>
 		</div>
 	</div>
-	<!-- //e: 레이어팝업 - 큰글씨설정  -->
-
-	<!-- [퍼블-3] 이벤트 팝업 -->
-	<div id="event-lyPop" class="layerpopup layer-up show" style="display: block;">
-		<div class="content-wrap">
-			<div class="pop-header">
-				<h2 class="pop-title">이벤트 타이틀</h2>
-			</div>
-			<div class="pop-con-wrap">
-				<div class="default-wrap">
-					<div class="pop-img">
-						<img src="../resources/images/common/event-pop-img.png" alt="이벤트 이미지">
-					</div>
-				</div>
-			</div>
-			<div class="popup-close">
-				<button type="button" name="button" class="pop-out-btn" onclick="closePopup('event-lyPop')">7일 그만보기</button>
-				<button type="button" name="button" class="pop-close-btn" onclick="closePopup('event-lyPop')">닫기</button>
-			</div>
-		</div>
-	</div>
-
-	<div id="event-lyPullPop" class="layerpopup laypop-all on" tabindex="0" data-focus-prev="btn-menu-close" style="display: block;">
-		<div class="pop-header">
-			<h2 class="pop-title">이벤트 타이틀</h2>
-		</div>
-		<div class="pop-con-wrap">
-			<div class="default-wrap type-spread">
-				<div class="pop-img">
-					<img src="../resources/images/common/event-pop-img-pull.png" alt="이벤트 이미지">
-				</div>
-			</div>
-		</div>
-		<div class="popup-close">
-			<button type="button" name="button" class="pop-out-btn" onclick="closePopup('event-lyPullPop')">7일 그만보기</button>
-			<button type="button" name="button" class="pop-close-btn" onclick="closePopup('event-lyPullPop')">닫기</button>
-		</div>
-	</div>
-	
-	<!-- // [퍼블-3] 이벤트 팝업 -->
-	
-	<!-- s: 상단 이동 버튼 -->
-	<button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
-	<!-- //e: 상단 이동 버튼 -->
-	
+	<!-- e :만기자동재예치(재가입) 변경 확인 팝업 // -->
+ 
+					
 	<!-- footer -->
-	<footer>
-	<!-- 푸터 타입별 정의 -->
-	</footer>
+	
 
-<!-- s: 큰글씨설정  -->
-<script>
-	const getPercentage = (current, max) => ((current / max) * 100);
-	function initFontSize() {
-		const fontSize = sessionStorage.getItem('fontSize');
-            const defaultFontSize = fontSize ? fontSize : 0;
-            const rangeMax = Number($('input[type=range]').attr('max'));
-            const currentGradient = getPercentage(defaultFontSize, rangeMax);
-            
-            $('html').addClass(`font-size-${defaultFontSize}`);
 
-            $('input[type=range]').css(
-                'background', `linear-gradient(to right, #6836CB 0%, #6836CB ${currentGradient}%, #d5d4d3 ${currentGradient}%, #d5d4d3 100%)`
-            );
-        }
 
-        function fontSizeEvent() {
-            initFontSize();
-        }
 
-		$(document).ready(() => {
-            fontSizeEvent();
-            $('input[type=range]').on('input', function () {
-                const $this = $(this);
-                const html = $('html');
-                const val = Number($this.val());
-                const rangeMax = Number($('input[type=range]').attr('max'));
-                const currentGradient = getPercentage(val, rangeMax);
 
-                sessionStorage.setItem('fontSize', val);
-                html.removeClass((idx, className) => (
-                    (className.match(/(^|\s)font-size-\S+/g) || []).join(' ')
-                ));
-                html.addClass(`font-size-${val}`);
-                
-                $this.css(
-                    'background', `linear-gradient(to right, #6836CB 0%, #6836CB ${currentGradient}%, #d5d4d3 ${currentGradient}%, #d5d4d3 100%)`
-                );
-            });
-        });
-</script>
-<!-- //e: 큰글씨설정  -->
+
+<footer>
+<!-- 푸터 타입별 정의 -->
+</footer>
 
 <!-- 업무공통 -->
+
+
+
+
 <script type="text/javascript">
 var biz = function() {
 	
@@ -1880,7 +1756,7 @@ var biz = function() {
 		};
 	}();
 </script>
-<!-- <div id="biz_layer_area"></div> -->
+<div id="biz_layer_area"></div>
 
 <!-- s: alert -->
 <div id="biz_alert" class="layerpopup type-alert" style="display:none;">
@@ -2083,24 +1959,6 @@ var efn = function() {
 
 <!-- //업무공통 -->
 
-<div class="bottom-menu-area">
-    <ul class="bottom-menu-list">
-        <!-- s: 2023-06-23 수정 범위 -->
-        <li class="on"><a href="javascript:goMainPage();">홈</a></li>
-        <li><a href="javascript:doActionMenu('lon/inq/loanList','BBS_SELECT');">대출</a></li>
-        <li><a href="javascript:doActionMenu('dep/inq/depList','BBS_SELECT');">예/적금</a></li>
-        <li><a href="javascript:openMenu('menuWrap');">전체메뉴</a></li>
-        <!-- e: 2023-06-23 수정 범위 -->
-    </ul>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){
-	$("#menuDiv").load("/includes/menu.frm", {"LINK_ACT":"MAIN_SELECT","txGbnCd":"MNU"}, 
-			function(){});	
-});
-</script>
-<div id="menuDiv"></div>
-
 <!-- 프로그레스바 -->
 <div class="loading" id="loading" style="display:none">
 	<div class="loader-square-9"></div>
@@ -2118,10 +1976,10 @@ $(document).ready(function(){
     var _SITE_ModuleType = ""; // "", G2, G3, G4
 
 </script>
-<script src="/resources/wizvera/delfino/delfino_config.js?230803_1334" charset="utf-8"></script>
-<script src="/resources/wizvera/delfino/delfino_internal.min.js?230803_1334" charset="utf-8"></script>
-<script src="/resources/wizvera/delfino/delfino.js?230803_1334" charset="utf-8"></script>
-<script src="/resources/wizvera/delfino/delfino_site.js?230803_1334" charset="utf-8"></script>
+<script src="/resources/wizvera/delfino/delfino_config.js?230803_1649" charset="utf-8"></script>
+<script src="/resources/wizvera/delfino/delfino_internal.min.js?230803_1649" charset="utf-8"></script>
+<script src="/resources/wizvera/delfino/delfino.js?230803_1649" charset="utf-8"></script>
+<script src="/resources/wizvera/delfino/delfino_site.js?230803_1649" charset="utf-8"></script>
 <!-- Open Web nFilter 가상키패드 -->
 
 
@@ -2156,7 +2014,6 @@ nshc.setInit();
 
 
 	<!-- //footer -->
-	
-</div>
+
 </body>
 </html>

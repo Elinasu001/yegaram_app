@@ -50,7 +50,7 @@
 
 /** 빠른 서비스 **/
 /* .contentsWrap .quick-service-area .area-title { font-size:0.77778rem; line-height:1.5; }  */
-.quick-service-area { margin-top:50px !important; }
+/* .quick-service-area { margin-top:50px !important; } */
 .quick-service-area .area-title { margin-bottom:0 !important; font-size:0.78rem; }
 .quick-service-list { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; width: 100%; }
 .quick-service-list li { width: 48%; box-sizing: border-box; }
@@ -137,7 +137,7 @@
 .main-function-btn-wrap .amount-view-off:before{background:url(../images/common/ico_eye_off.png) no-repeat 50% / contain}
 
 /* 로그인 후 예적금 카드 */
-.main .visaul-info-box .info-tit { overflow: hidden; /*padding-right: 35px;*/ padding-right: 60px; white-space: nowrap; text-overflow: ellipsis; }
+.main .visaul-info-box .info-tit { overflow: hidden; /*padding-right: 35px;*/ padding-right: 30px; white-space: nowrap; text-overflow: ellipsis; }
 .main .bg-box { border-radius:15px; text-align:center; }
 .main .visaul-info-box + .bg-box { margin-top:20px; }
 .main .bg-box:has(.desc.nodata) { padding:29px 20px; }
@@ -149,12 +149,12 @@
 .btn-more span:after { content:""; display:inline-block; width:13px; height:13px; margin-top:-3px; background:url(../images/main/ic-arrow-right.png) no-repeat 50%/13px auto; vertical-align:middle; }
 
 .main .alignment-both-side .area-title,
-.main .alignment-both-side strong { margin-bottom:20px; }
+.main .alignment-both-side strong { margin-bottom: 5px; }
 
-.main .flag { vertical-align:inherit; }
+.main .flag { vertical-align:inherit; vertical-align: top; }
 
 /* 마이뱅킹 내 카드 로딩바 */
-.visaul-info-box { padding:20px; }
+.visaul-info-box { padding:20px 20px 24px; }
 .visaul-info-box .skeleton-wrap .flex { display:flex; }
 .visaul-info-box .skeleton-wrap .skeleton-item { height:15px; border-radius:5px; background:#EEEEF1; }
 .visaul-info-box .skeleton-wrap .skeleton-item + .skeleton-item { margin-left:10px; }
@@ -199,6 +199,23 @@
 
 /* 예가람 메인 */
 .main .contentsWrap { background-color: #F5F8FA; }
+.login-check-area { background-color: #FFFFFF; border-radius: 20px; padding: 38px 16px 20px; }
+.login-check { padding: 9px 60px 9px 10px; margin-bottom: 25px; background: url('../images/main/ico_login_check.png') no-repeat 100%/60px auto; }
+.login-check .txtbox { display: inline-block; font-size:1rem; font-weight: 500; color: #260F54;}
+.login-check .txtbox::after { content: ''; display: inline-block; width: 16px; height: 16px; background: url('../images/main/arrow_right_black.png') no-repeat 100%/16px auto; }
+.login-check-area .btn { display: block; background-color: #FDF2F2; border-radius: 24px; font-size:0.88889rem; font-weight: 500; color: #ED008D; height: 48px; line-height: 48px; padding: 0 19px; position: relative; }
+.login-check-area .btn::after { content: ''; display: inline-block; width: 16px; height: 16px; background: url('../images/main/arrow_right_pink02.png') no-repeat 100%/16px auto; position: absolute; top: 50%; transform: translateY(-50%); right: 16px; }
+
+.product-list li { background-color: #FFFFFF; border-radius: 20px; position: relative; width:152px; display: inline-block; margin-right: 10px; }
+.product-list a { display: block; height: 188px; box-sizing: border-box; padding: 18px 20px; }
+.product-list a::after { content: ''; display: inline-block; width: 56px; height: 56px; position: absolute; right: 10px; bottom: 20px; }
+.product01 a::after { background: url('../images/main/ico_product01.png') no-repeat 100%/56px auto; } 
+.product02 a::after { background: url('../images/main/ico_product02.png') no-repeat 100%/56px auto; } 
+.product03 a::after { background: url('../images/main/ico_product03.png') no-repeat 100%/56px auto; } 
+.product04 a::after { background: url('../images/main/ico_product04.png') no-repeat 100%/56px auto; } 
+ 
+.product-list li strong { display: block; margin-bottom: 10px; font-size:0.88889rem; line-height:1.278rem; font-weight: 500; color: #333333; }
+.product-list li div { font-size:0.77778rem; line-height: 1rem; font-weight: 500; color: #999999; }
 .service-more { background-color: #DAEAF8; border-radius: 20px; padding: 20px; }
 .service-more li { margin-bottom: 13px; }
 .service-more li:last-child { margin-bottom: 0; }
@@ -209,13 +226,30 @@
 .living-expenses a::before { background: url('../images/main/ico_living_expenses.png') no-repeat 50%/38px auto; }
 .simple-loan a::before { background: url('../images/main/ico_simple_loan.png') no-repeat 50%/38px auto; }
 
+.contentsWrap [class*="-area"] + [class*="-area"].sns-news-area { margin-top: 12px; }
+.sns-news-list li { background-color: #FFF0DA; border-radius: 20px; }
+.sns-news-list a { display: block; box-sizing: border-box; padding: 20px; height: 149px; background: url('../images/main/ico_sns_news.png') no-repeat right /335px auto; }
+.sns-tit { display: inline-block; border-radius: 12px; background-color: #FFFFFF; font-size:0.66667rem; font-weight: 500; color: #DDAE64; padding: 4px 12px;}
+.sns-txt { font-size:0.88889rem; line-height:1.278rem; font-weight: 600; color: #000000; margin-top: 15px; }
 
-.info-list { display: flex; justify-content: space-between; align-items: center; gap: 8px; width: 100%; }
-.info-list li { width: 100%; background-color: #FFFFFF; border-radius: 10px; }
+.contentsWrap [class*="-area"].notice-area .area-title-box { margin-bottom: 0; }
+.notice-list li { border-bottom: 1px solid #DDE2E8; background: url('../images/main/arrow_right_black.png') no-repeat 100%/16px auto; }
+.notice-list li:last-child { border-bottom: 0; }
+.notice-list a { font-size:0.77778rem; line-height: 1rem; display: block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 89%; padding: 15px 0; }
+
+.info-list { display: flex; justify-content: space-between; align-items: center; gap: 8px; width: 100%; margin-top: 25px; }
+.info-list li { width: 100%; background-color: #FFFFFF; border-radius: 10px; border: 1px solid #EEEEEE; }
 .info-list a { display: block; text-align: center; font-size:0.66667rem; font-weight: 400; color: #666666; height: 55px; align-content: center; }
 
+.visaul-info-box .account-info .amount-on { font-size:0.77778rem; line-height: 1rem; }
+.visaul-info-box .account-info .amount-on span { font-size: 1.33333rem; font-weight: 600; }
+.visaul-info-box .txt { font-size:0.88889rem; font-weight: 400; color: #666666; text-align: center; }
+
+.recom-area .area-title .point {color: #ED008D;}
+.recom-area .account-info > dl { margin-top: 0; font-size:0.66667rem; line-height:1.056rem; font-weight: 300; color: #757575; }
+.recom-area .account-info > dl > dd { color: #757575; }
 
 
-@media screen and (max-width:389px) { /* 떨어짐 현상 방지 - 수치 변경 가능성 있음 */
+@media screen and (max-width:374px) { /* 떨어짐 현상 방지 */
     .quick-service-list li { width: 100%; }
 }

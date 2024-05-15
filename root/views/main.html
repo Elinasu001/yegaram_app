@@ -117,7 +117,7 @@ $(document).ready(function(){
             observer: true,
             observeParents: true,
         });
-     
+
     }, false);
     
     var bbsSelect2Form = makeForm("bbsSelect2Form");
@@ -251,7 +251,7 @@ $(document).ready(function(){
         <!-- s: contents -->
         <div class="contents">
             <div class="default-wrap">
-				<section class="login-check-box">
+				<section class="login-check-area">
 					<div class="login-check">
 						<div class="txtbox">
 							나의 한도와 이자율<br />
@@ -261,11 +261,25 @@ $(document).ready(function(){
 					<a href="javascript:void(0);" class="btn">예적금통장 계좌 개설하기</a>
 				</section>
 				
-				<section class="products-area">
-					<div class="flex-between-center">
+				<!--D: 추천상품의 경우 슬라이드 2개 이상이 보여야 합니다. (작업하실 때 퍼블에 디자인 확인 요청 한번 부탁드려요) -->
+				<section class="product-area">
+					<div class="area-title-box">
 						<h2 class="area-title">추천상품</h2>
 					</div>
-
+				<ul class="product-list">
+						<li class="product01">
+							<a href="#none">
+								<strong>신용대출</strong>
+								<div>다양한 직업군을<br />위한 신용대출</div>
+							</a>
+						</li>
+						<li class="product02">
+							<a href="#none">
+								<strong>정책자금대출</strong>
+								<div>서민을 위한<br />정부보증 대출</div>
+							</a>
+						</li>
+					</ul>
 				</section>
 
 				<section class="quick-service-area">
@@ -300,16 +314,29 @@ $(document).ready(function(){
 					</ul>
 				</section>
 
-				<section class="sns-area">
-					<div class="">SNS소식</div>
-					<div class="">오직 예가람의 SNS를 통해<br />이벤트를 참여하세요!</div>
+				<section class="sns-news-area">
+					<ul class="sns-news-list">
+						<li>
+							<a href="#none">
+								<span class="sns-tit">SNS소식</span>
+								<div class="sns-txt">오직 예가람의 SNS를 통해<br />이벤트를 참여하세요!</div>
+							</a>
+						</li>
+					</ul>
 				</section>
 
 				<section class="notice-area">
 					<div class="area-title-box">
 						<h2 class="area-title">공지사항</h2>
 					</div>
-
+					<ul class="notice-list">
+						<li>
+							<a href="#none">2024년 1분기 NPL 매각대상 개인(신용)정보 제공합니다.</a>
+						</li>
+						<li>
+							<a href="#none">표준약관 개정 사항 공지(압류방지전용통장특약)</a>
+						</li>
+					</ul>
 				</section>
 
 				<ul class="info-list">
@@ -347,7 +374,6 @@ $(document).ready(function(){
 				<h2 class="pop-title">큰 글씨 설정</h2>
 				<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
 			</div>
-			<!-- [퍼블-2] ly-scroll-con ly-select 지우고 default-wrap 추가 / 하위에 txtbox-wrap 구조 추가 수정범위 영역-->
 			<div class="default-wrap">
 				<div class="fontsize-range-wrap">
 					<p class="font-char font-char-small">가</p>
@@ -355,15 +381,14 @@ $(document).ready(function(){
 					<p class="font-char font-char-big">가</p>
 				</div>
 				<dl class="list-bull type-caption">
-					<dt>[알아두세요]</dt>
+					<dt>알아두세요</dt><!--D: [] 삭제 -->
 					<dd>글씨를 키우면 모양이 기존과 달라질 수 있어요</dd>
 				</dl>
 			</div>
-			<!-- [퍼블] 수정범위 영역-->
 		</div>
 		<div class="fixed-btn-wrap">
 			<div class="btn-wrap type-popup">
-				<a href="#none" class="btn" onclick="closePopupUp('lyPop');">확인</a>
+				<a href="#none" class="btn" onclick="closePopupUp('lyPop');">적용하기</a><!--D: 버튼명 수정 -->
 			</div>
 		</div>
 	</div>
