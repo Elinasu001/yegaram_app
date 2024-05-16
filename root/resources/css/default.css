@@ -796,6 +796,7 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .select-wrap .form-wrap + .select-box { margin-top:20px; }
 .select-wrap .select-box:first-child,
 .select-wrap .check-box:first-child { margin-top:0;}
+.dev .input .select-wrap { margin-top:10px; }
 
 /* 수정필요 */
 .select-box{position:relative;height:58px; margin-top:10px; border-bottom:1px solid #DDDDDD;color:#333333; font-size:0.88889rem;}
@@ -2128,6 +2129,8 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .inquiry-set-wrap .radio-list.style-button li + li { margin-left:5px; }
 .inquiry-set-wrap + .info-txt { margin-top:10px; }
 .form-wrap + .info-txt { margin-top:10px; }
+/*.form-wrap ~ .info-txt:last-of-type { margin-bottom:40px; }*/
+
 .form-wrap + .info-txt + .form-line { margin-top:30px; }
 .inquiry-set-wrap + .info-txt + .form-wrap:has(.select-wrap) { margin-top:40px; }
 /* .inquiry-choice-area:has(+.inquiry-result-area) { margin-top:30px; } */
@@ -2509,6 +2512,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 /** [공통?] 계좌 조회 상세 **/
 .visaul-info-section { margin:0 -20px; padding:20px; background:#F5F8FA; }
+.visaul-info-section > .tit-wrap { margin:10px 0; }
 * + .visaul-info-box { margin: 10px 0 0; }
 .visaul-info-section + .txt-list-wrap { margin-top:30px; }
 .visaul-info-section + .txt-list-wrap + .arrow-button-list { margin-top:40px; }
