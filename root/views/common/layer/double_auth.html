@@ -86,7 +86,10 @@
                         <div class="tit-wrap">
                             <p class="txt"><strong>추가인증 방법을<br/>선택해주세요</strong></p>
                         </div>
-                        <div class="check-wrap">
+                        
+                        <!--S:form-all-wrap-->
+                        <div class="form-all-wrap"><!--D: form-all-wrap 구조 추가-->
+
                             <ul class="check-box">
                                 <li class="ars">
                                     <fieldset>
@@ -105,23 +108,24 @@
                                 <p>전화번호를 선택 후 <strong>[ARS 요청]</strong> 버튼을 눌러주세요</p>
                             </div>
                             
-                        </div>
-
-                        <div class="select-wrap">
-
-                            <div class="select-box on" tabindex="1"><!--D: on 클래스 값이 들어갈 경우-->
-                                <label for="">연락처</label>
-                                <span class="option">010-1234-5678</span>
+                            <div class="form-wrap"><!--D: 개발 기준 포커스 문제로 form-wrap으로 변경-->
+                                <div class="select-box on" tabindex="1"><!--D: on 클래스 값이 들어갈 경우-->
+                                    <label for="">연락처</label>
+                                    <span class="option">010-1234-5678</span>
+                                </div>
                             </div>
 
-                            <div class="select-box" tabindex="1" onclick="openPopupUp('lySel1')" style="block;"><!--D: 등록된 전화번호가 2개인 경우-->
-                                <label for="">연락처</label>
-                                <span class="option">미선택</span>
+                            <div class="form-wrap"><!--D: 개발 기준 포커스 문제로 form-wrap으로 변경-->
+                                <div class="select-box" tabindex="1" onclick="openPopupUp('lySel1')" style="block;"><!--D: 등록된 전화번호가 2개인 경우-->
+                                    <label for="">연락처</label>
+                                    <span class="option">미선택</span>
+                                </div>
                             </div>
+                            
                         </div>
+                        <!--E:form-all-wrap-->
 
-
-                        <div class="list-bull">
+                        <div class="list-bull"><!--D: 구조 변경-->
                             <div class="border"></div>
                             <strong>알아두세요</strong>
                             <ul>
@@ -221,6 +225,22 @@
                 </div>
             </div>
             <!-- E: ARS 인증 / 스마트앱 인증 ( 실패/ 성공 ) -->
+
+            <!--S: 등록된 추가 인증 서비스가 없을 경우 (Alert)-->
+            <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
+                <div class="content-wrap">
+                    
+                    <div class="pop-con-wrap">
+                        <span class="pop-con">기존에 등록하신 추가인증 방식이 없어요<br/>추가인증 서비스를 가입하시겠어요?</span>
+                    </div>
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn btn-info" onclick="">아니오</a>
+                        <a href="javascript:void(0);" class="btn">예</a>
+                    </div>
+                </div>
+            </div>
+            <!--E:등록된 추가 인증 서비스가 없을 경우 (Alert)-->
+
             
         </div>
         <!-- //contentsWrap -->
