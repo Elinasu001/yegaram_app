@@ -30,16 +30,9 @@ body.fix { overflow:hidden; }
 
 /* 공통 - 컨텐츠 in 버튼 */
 .btn-cont-wrap { display:flex; gap:10px; /*width:100%;*/ padding:0; text-align:center; align-items:start; }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 .btn-cont-wrap.flex-end { justify-content:flex-end;}
-.btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; height:48px; border-radius:30px; background:#9F7CE3; color:#fff; font-size:1rem; line-height:48px; font-weight:700; text-align:center; }
-=======
-.btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:14px 5px; border-radius:30px; background:linear-gradient(320deg, rgba(38,15,84,1) 0%, rgba(61,18,146,1) 100%); color:#fff; font-size:1rem; font-weight:700; text-align:center; }
->>>>>>> Stashed changes
-=======
-.btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; padding:14px 5px; border-radius:30px; background:linear-gradient(320deg, rgba(38,15,84,1) 0%, rgba(61,18,146,1) 100%); color:#fff; font-size:1rem; font-weight:700; text-align:center; }
->>>>>>> Stashed changes
+.btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; height:48px; border-radius:30px; background:#9F7CE3; color:#fff; font-size:1rem; line-height:48px; font-weight:500; text-align:center; }
 .btn.btn-add {display:inline-block; width:unset; height:48px;  padding:12px 54px; background:#FFFFFF; border:1px solid #4E32A5; font-size:1rem; line-height:1.38889rem; font-weight:500; color:#4E32A5; }
 .btn.btn-sm { display:inline-flex; align-items: center; /*display:inline-block;*/ width:unset; height:30px; padding:5px 16px;  background:#FFFFFF; border:1px solid #DDDDDD; border-radius:17px;  font-size:0.77778rem; line-height: 1rem; font-weight:400; color:#26282C; letter-spacing: -0.5px;}
 .btn.btn-sm.gray { background: #F1F1F1; border:1px solid #F1F1F1; color:#666666; }
@@ -48,15 +41,8 @@ body.fix { overflow:hidden; }
 .btn.btn-sm.red { background: #FFEFEF; border:1px solid #FFEFEF; color:#FF0000; }
 .btn.btn-sm.blue { background: #EFF4FF; border:1px solid #EFF4FF; color:#2B66F6; }
 .btn.btn-sm.purple {  border:1px solid #E7DBFF; background:#E7DBFF; color:#612AD0; }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 .btn.btn-sm.other { display:flex; justify-content: center; width:100%; height:34px; background: #F2F4F6; border:1px solid #F2F4F6; color:#26282C; }
-=======
-=======
->>>>>>> Stashed changes
-
-.btn.btn-sm.other { height:34px; background: #F2F4F6; border:1px solid #F2F4F6; color:#26282C; }
->>>>>>> Stashed changes
+/* .btn.btn-sm.other { height:34px; background: #F2F4F6; border:1px solid #F2F4F6; color:#26282C; } */
  
 .btn.sq { border-radius:6px; }
 
@@ -76,8 +62,8 @@ body.fix { overflow:hidden; }
 .normal-btn { height:34px; border:solid 1px #ddd; background:#fff; color:#454545; padding:0 16px; font-weight:400; font-size:0.77777rem; border-radius:8px; line-height:34px; }
 .btn-gray { padding:7px 16px; border-radius:8px; border:1px solid #F2F4F6; background:#F2F4F6; font-size:0.77778rem; line-height:1.5; font-weight:400; color:#454545; }
 .btn.btn-gray { background:#F2F4F6; color:#454545; font-weight:500; }
-.btn.btn-info { background:#FFFFFF; border:1px solid #DDDDDD; font-weight:500; color:#2B0F62; }
-.btn.btn-primary { background:#260F54; font-weight:500; color:#FFFFFF; border:1px solid #260F54; }
+.btn.btn-info { background:#FFFFFF; border:1px solid #DDDDDD; color:#2B0F62; }
+.btn.btn-primary { background:#260F54; color:#FFFFFF; border:1px solid #260F54; }
 .btn.btn-sub { background:#F2F4F6; color:#26282C; }
 /* .btn-cont-wrap .btn.btn-border { border:1px solid #DDDDDD; background:#fff; font-weight:500; color:#454545; } */
 
@@ -270,15 +256,9 @@ body.fix { overflow:hidden; }
 .txt-list li .tit { font-weight:300; font-size:0.88889rem; line-height:1.278rem; color:#666666; }/*2023-07-14 스타일가이드 반영*/
 .txt-list li .tit .ref { font-size:0.77778rem; line-height:1.5;}
 /* .txt-list li .txt{ display:inline-block; width:50%; font-weight:500; vertical-align:top; text-align:right; font-size:0.9rem; color:#260F54; word-break:break-all; } (청)flex test-아래와같이수정*/
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-.txt-list li .txt{ flex:1; padding-left:30px; font-weight:500; vertical-align:top; text-align:right; font-size:0.88889rem; line-height:1.278rem; word-break:break-all; color:#333333; }
-=======
+
+
 .txt-list li .txt{ flex:1; padding-left:30px; font-weight:500; vertical-align:top; text-align:right; font-size:0.88889rem; line-height:1.278rem; color:#333333; word-break:break-all; }
->>>>>>> Stashed changes
-=======
-.txt-list li .txt{ flex:1; padding-left:30px; font-weight:500; vertical-align:top; text-align:right; font-size:0.88889rem; line-height:1.278rem; color:#333333; word-break:break-all; }
->>>>>>> Stashed changes
 .txt-list li .txt a[href*="tel"] { color:#333333; word-break:break-all; }
 .txt-list li .txt.point { color:#4E32A5; }
 .txt-list .cusnm { color:#000!important; }
@@ -536,7 +516,7 @@ body.fix { overflow:hidden; }
 .sub-cal-wrap.type2 { margin-bottom:40px; padding:30px 20px; border-radius:15px; background:url("../images/common/visual_obj_cal.png") no-repeat bottom right 35px; background-color:#FFF5DE; background-size:80px; }
 
 /*공통 컨텐츠 btn-cont-wrap*/
-.btn-cont-wrap.btn-more .btn{ background:#EEEBFF; color:#260F54; }
+.btn-cont-wrap.btn-more .btn{ background:#FFFFFF; border:1px solid #DDDDDD; color:#26282C;  font-size:0.88889rem; }
 
 /* 자주쓰는 계좌 */
 .often-account input[type="checkbox"] { display:block; position:absolute; top:0; left:0; width:100%; height:100%; appearance:none; background-color:transparent; -webkit-appearance:none; cursor:pointer; }
