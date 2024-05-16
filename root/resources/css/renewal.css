@@ -41,8 +41,8 @@ body.fix { overflow:hidden; }
 .btn.btn-sm.red { background: #FFEFEF; border:1px solid #FFEFEF; color:#FF0000; }
 .btn.btn-sm.blue { background: #EFF4FF; border:1px solid #EFF4FF; color:#2B66F6; }
 .btn.btn-sm.purple {  border:1px solid #E7DBFF; background:#E7DBFF; color:#612AD0; }
-.btn.btn-sm.other { height:34px; background: #F2F4F6; border:1px solid #F2F4F6; color:#26282C; }
- 
+.btn.btn-sm.other { display:flex; justify-content: center; width:100%; height:34px; background: #F2F4F6; border:1px solid #F2F4F6; color:#26282C; }
+/* .btn.btn-sm.other { height:34px; background: #F2F4F6; border:1px solid #F2F4F6; color:#26282C; } */
 .btn.sq { border-radius:6px; }
 
 .btn-cont-wrap.btn-txt { display:inline-block; width:100%; }
@@ -273,16 +273,12 @@ section > .result-wrap{ margin-top:40px; }
 .txt-list-wrap .txt-detail-area.account-info .txt-list li { display:flex; }
 .txt-list-wrap .txt-detail-area.account-info .txt-list li .tit { flex:1 1 fit-content; }
 .txt-list-wrap .txt-detail-area.account-info .txt-list li .txt { flex:1 1 auto; }
-.txt-detail-area strong { display:block; margin-top:10px; font-weight:600; color:#666666; }
+
+.txt-detail-area strong { display:block; margin-top:10px; font-weight:600; color:#333333; }
 .txt-detail-area.flex { display:flex; justify-content:space-between; }
 .txt-detail-area.flex strong { font-weight:500; color:#4E32A5; }
 .txt-detail-area .desc { color:#757575; font-size:0.88889rem; line-height:1.4375; }
 .txt-detail-area > .tit { font-weight:300; font-size:0.88889rem; line-height:1.4375; }
-.txt-detail-area .desc { /* padding-bottom:22px; */ color:#757575; font-size:0.88889rem; line-height:1.4375; }
-.txt-detail-area > .tit { /*margin-bottom:10px;*/ font-size:0.88889rem; line-height:1.4375; }
-
-.txt-detail-area .desc { /* padding-bottom:22px; */ color:#757575; font-size:0.88889rem; line-height:1.4375; }
-.txt-detail-area > .tit { /*margin-bottom:10px;*/ font-size:0.88889rem; line-height:1.4375; }
 .txt-detail-area:has(.tit) { color:#666666; }
 .txt-detail-area .btn-cont-wrap { margin:0!important; padding:0!important; }
 .txt-detail-area .txt-list + .btn-cont-wrap { margin-top:10px!important; }
@@ -1180,4 +1176,3 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .list-icon.type2 > li .txt { font-size:0.77778rem; line-height:1.5; }
 .list-icon.type2 > li .s-txt { font-size:0.66667rem; line-height:1.58334; color:#999; }
 .popup2 .btnSection .btnCustom:hover { background:#F6F2FF; }
-
