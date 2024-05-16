@@ -619,10 +619,22 @@ input[type="file"]::file-selector-button { display:none; }
 
 .form-all-wrap .form-wrap + .check-box.toggle { margin-top:30px; }
 .form-all-wrap .check-box.toggle { margin-top:10px;}
+
+.form-all-wrap .form-wrap:has(.btn-txt):first-child,
+.form-all-wrap .form-wrap:has(.select-box):first-child { margin-top:0; }
+
 .form-all-wrap .form-wrap:has(.select-box) { margin-top:10px; }
+
+.form-all-wrap .form-wrap:has(.btn-txt) { margin-top:30px; }
+
+.form-all-wrap .form-wrap + .form-wrap:has(.select-box) { margin-top:30px; }
+
+
 .form-all-wrap > .form-wrap:has(.select-box):first-child { margin-top:0; }
 .form-all-wrap .form-wrap.phone,
 .form-all-wrap .form-wrap:has(.form-tit) { margin-top:30px; }
+
+.form-wrap .btn-txt { margin-bottom:10px; }
 
 /* .search-area.type-box { padding-top:0; }
 .form-wrap.email-wrap > div.input input,

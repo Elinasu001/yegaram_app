@@ -253,7 +253,7 @@ section > .result-wrap{ margin-top:40px; }
 .txt-detail-area .txt-detail-tit span { /*display:inline-block; width:50%; text-align:right; */font-size:0.8rem; font-weight:500; color: #FF0000; }
 .txt-detail-area .txt-detail-tit span .btn-gray,
 .txt-detail-area .txt-detail-tit span .normal-btn { /*padding: 8px 16px;230724test*/ color:#454545; }
-.txt-detail-area .txt-detail-tit span .flag { height:unset; line-height:unset; margin-right:0; padding:7px 12px; }
+.txt-detail-area .txt-detail-tit span .flag { height:unset; line-height:unset; margin-right:0; /*padding:7px 12px;*/ }
 .txt-detail-area .txt-detail-tit:has(.btn-request) { padding:0 0 18px; }
 .txt-detail-area .txt-detail-tit + .desc { margin-top:15px; }
 .txt-list li { display:flex; align-items:center; padding:18px 0; font-size:0; border-bottom:1px solid #EEE; }
