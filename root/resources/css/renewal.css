@@ -59,11 +59,13 @@ body.fix { overflow:hidden; }
 .btn-cont-wrap .btn.btn-camera::before { width:22px; height:22px; margin:-5px 4px 0 0; background:url("../images/common/ico_camera_purple.png") no-repeat 50%/22px auto; }
 /* .btn-cont-wrap .btn + .btn { margin-left:10px; } */
 
+.btn-cont-wrap + .btn-cont-wrap { margin-top:15px; }
+
 .normal-btn { height:34px; border:solid 1px #ddd; background:#fff; color:#454545; padding:0 16px; font-weight:400; font-size:0.77777rem; border-radius:8px; line-height:34px; }
-.btn-gray { padding:7px 16px; border-radius:8px; border:1px solid #F2F4F6; background:#F2F4F6; font-size:0.77778rem; line-height:1.5; font-weight:400; color:#454545; }
+.btn-gray { /*padding:7px 16px;*/ border-radius:8px; border:1px solid #F2F4F6; background:#F2F4F6; font-size:0.77778rem; line-height:1.5; font-weight:400; color:#454545; }
 .btn.btn-gray { background:#F2F4F6; color:#454545; font-weight:500; }
 .btn.btn-info { background:#FFFFFF; border:1px solid #DDDDDD; color:#2B0F62; }
-.btn.btn-primary { background:#260F54; color:#FFFFFF; border:1px solid #260F54; }
+.btn.btn-primary { background:#9F7CE3; color:#FFFFFF; border:1px solid #9F7CE3; }
 .btn.btn-sub { background:#F2F4F6; color:#26282C; }
 /* .btn-cont-wrap .btn.btn-border { border:1px solid #DDDDDD; background:#fff; font-weight:500; color:#454545; } */
 
@@ -169,7 +171,7 @@ body.fix { overflow:hidden; }
 .result-area.nodata .desc { font-weight:300; color:#999; font-size:0.88889rem; line-height:1.4375; }
 .result-area.nodata .desc + .desc { margin-top:20px; }
 
-
+.result-area .txt-list-wrap .txt-detail-area .txt-detail-tit { text-align:left; }
 
 /** 처리결과화면 - 메세지노출영역 **/
 .result-msg { display:inline-block; width:100%;  }

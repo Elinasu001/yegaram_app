@@ -1365,21 +1365,20 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 .pop-con-wrap:has(+.fixed-btn-wrap) .default-wrap > div { margin-top:40px; } */
 .laypop-all .default-wrap:has(.tabs-wrap.type-uniform) { padding-top: 0; }
 .layerpopup.has-button .default-wrap { padding-bottom:40px; }
-.layerpopup .sub-tit-wrap:first-child { margin-top:0; }
-.layerpopup .default-wrap > .list-bull:first-child { margin-top:0; }
+/* .layerpopup .sub-tit-wrap:first-child { margin-top:0; } */
+/* .layerpopup .default-wrap > .list-bull:first-child { margin-top:0; } */
 .layerpopup .default-wrap > .list-icon:first-child { padding-top:0; }
 .layerpopup.laypop-all .default-wrap > ul:first-of-type{ margin-top:40px; }
 /* .default-wrap:has(.tit-wrap) { padding-top:0; } renewal.css로 옮김 */
 /* .default-wrap:has(.visaul-info-section) { padding-top:0; } */
 /* .default-wrap.bg-gray { padding-top:20px; background-color:#F7F8FA; } 안쓰는듯한데 삭제해도되는지test(청)*/
 /* .default-wrap:has(.choice-box) .sub-tit-wrap { margin-bottom:15px; } */
-.default-wrap:has(.txt-list-wrap) > .sub-tit-wrap { margin-top:30px; margin-bottom:15px; }
+/* .default-wrap:has(.txt-list-wrap) > .sub-tit-wrap { margin-top:30px; margin-bottom:15px; } */
 .default-wrap:has(.bg-box.border-box) > .sub-tit-wrap { margin:30px 0; }
 .default-wrap:has(.table-type.type-left) .alignment-both-side { margin:40px 0 15px; }
-
 /* .contentsWrap:has(~ .bottom-menu-area) { padding-bottom:calc( env(safe-area-inset-bottom) + 68px ) !important; } */
 /* .bottom-menu-area { padding-bottom:env(safe-area-inset-bottom);} */
-
+.layerpopup .default-wrap > .list-bull { margin-top:40px; }
 
 
 /* _폼 여백 test(청) */
@@ -2418,6 +2417,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 .sub-tit-wrap:has(+.kdic-wrap) { margin-bottom:0px; }
 .sub-tit-wrap + .kdic-wrap { margin-top:15px; }
+.sub-tit-wrap > .txt-list-wrap { margin-top:15px; }
 
 /* 상품안내 버튼 */
 .arrow-button-wrap { margin-top:40px; }
