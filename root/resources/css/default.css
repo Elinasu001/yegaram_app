@@ -510,17 +510,16 @@ textarea:read-only { border-color:#DDDDDD !important; }
 /* .form-all-wrap .form-wrap:has(.select-box):first-child */
 
 .form-all-wrap .check-box.toggle,
-.form-all-wrap .form-wrap:has(.select-box),
+.form-all-wrap .form-wrap:has(.select-box)  + .form-wrap:has(.select-box),
 .form-all-wrap .form-wrap.type-box  { margin-top:10px; }
 
 .form-all-wrap .form-wrap { margin-top:30px; }
 .form-all-wrap .form-wrap.phone { margin-top:30px; }
 .form-all-wrap .form-wrap:has(.btn-txt) { margin-top:30px; }
 .form-all-wrap .form-wrap + .check-box.toggle { margin-top:30px; }
-.form-all-wrap .form-wrap:not(>.select-box) + .form-wrap:has(.select-box) { margin-top:30px; }
 .form-all-wrap .form-wrap:has(.form-tit) { margin-top:30px; }
 .form-all-wrap .exp-txt + .form-wrap:has(.select-box) { margin-top:30px; }
-
+.form-all-wrap .form-wrap:not(>.select-box) + .form-wrap:has(.select-box) { margin-top:30px; }
 .form-wrap .btn-txt { margin-bottom:10px; }
 
 /*.form-all-wrap .select-wrap + .form-wrap { margin-top:20px; }*/
