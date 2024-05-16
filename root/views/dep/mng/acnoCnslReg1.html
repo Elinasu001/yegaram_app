@@ -32,145 +32,38 @@
 <script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803165708"></script>
-<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803165708"></script>
-<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803165708"></script>
-<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803165708"></script>
-<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803165708"></script>
-<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803165708"></script>
-<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803165708"></script>
-<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803165708"></script>
-<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803165708" id="biz_common" 
-	data-menuId="dep/mng"
-	data-frameId="acnoCnslReg1"
-	data-serviceCd="acnoCnslReg1.frm" 
-	data-serverTime="20230803165708"
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common" 
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm" 
+	data-serverTime="20230803152535"
 	data-activeMode="local"
 	data-activeEnv="${active.env">
 </script>
-<script type="text/javascript">
-var PageFunc = function() {
-	
-	var _back = function() { // 뒤로가기
-		history.back();
-	}
-	
-	var _proc = function() { // 예적금해지처리 
-		// 담보제공계좌여부 체크
-		if (mortYn) {
-			biz.alert("해당 예금은 담보제공된 계좌로 해지가 불가능합니다.");
-		} else {
-			console.log("예적금해지처리");
-			var dataForm = makeForm("dataForm");
-			addFormData(dataForm, "txGbnCd", "R");
-			addFormData(dataForm, "ACTNO", ACNO);
-			addFormData(dataForm, "E2E_PSWD_700", $("#PWD").val());
-			addFormData(dataForm, "MNRC_ACNO", $("#mnrcAcno").val());
-			addFormData(dataForm, "TRMT_AMT_N17", "100000");
-			doAction("ACNO_CLOSE_PRC", dataForm, function(res){
-				console.log(res);
-				var dataForm = makeForm("dataForm");
-				addFormData(dataForm, "API_RS_MSG", res.API_RS_MSG);
-				doActionFrame("dep/mng/acnoCnslReg2",dataForm);
-			});			
-			
-		}
-	}
-	
-	var _cancel = function() { // 그만하기
-		goMainPage();
-	}
-	
-	var _validate = function() { // 유효성검증
-		// TODO 
-		return true;
-	}
-	
-	var _password = function() { // 비밀번호확인
-		biz.keypad("해지계좌 비밀번호",4,function(encData){
-			console.log(encData);
-			
-			// 비밀번호검증
-			$("#PWD").val(encData); 
-			efn.acnoPswdConfirm(encData, ACNO, pswdCallback);
-							 
-		});
-	}
-	var _ars = function() { //ARS인증
-		//TODO 
-		biz.alert("ARS인증호출","확인", _sign);
-	}
-	
-	var _sign = function() { // 전자서명
-		
-		
-		// TODO 임시코드
-		biz.alert("서명처리 공통펑션 호출", "확인", _proc);
-		
-	}
-	
-	return {
-		back : _back,
-		proc : _proc,
-		cancel : _cancel,
-		password : _password,
-		sign : _sign,
-		ars : _ars
-	};
-}();
 
-var ACNO = "10161240711133";
-var mortYn = false;	//담보제공여부
-$(document).ready(function(){
-	var dataForm = makeForm("dataForm");
-	addFormData(dataForm, "txGbnCd", "D");
-	addFormData(dataForm, "ACNO", ACNO);
-	doAction("ACNO_DETAIL",dataForm,function(res){
-		var knCd = "";
-		switch(res.ACNO.substr(5,2)){
-			case "24": knCd = "정기예금"; break;
-			case "31": knCd = "정기적금"; break;
-		}
-		
-		$("#knCd").text(knCd);
-		$("#prodNm").text(res.AC_NM);
-		
-		// 담보제공여부
-		var mortOfrYn = res.MORT_OFR_YN;
-		if(!UtilFunc.isEmpty(mortOfrYn) && mortOfrYn == "Y") mortYn = true;
-	});
-	
-	
-});
 
-// 입금계좌 선택 콜백
-function acnoCallback(data){
-	$("#mnrcAcno").val(data.acno);
-	$("#acnoTxt").text(UtilFunc.formmatList(data.acno,"acct"));
-	$('.select-wrap').addClass('on');
-	validChk();
-}
-
-// 비밀번호 검증 콜백
-function pswdCallback(){
-	$("#password").val("●●●●");
-	$("#password").trigger("change");
-	validChk();
-}
-
-</script>
-</head>
 <body>
-	<!-- header -->
-	<header class="headerWrap">
-		<div class="header">
-			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
-			<h2><span>예적금 해지 신청</span></h2>
-		</div>
-		<div class="menu-wrap">
-		</div>
-	</header>
+    <!-- header -->
+    <header class="headerWrap">
+        <div class="headerLeft">
+        </div>
+        <div class="headerCenter">
+            <h2 class="text"><span>만기자동재예치/만기해지송금 해지</span></h2> <!--D: TEXT -->
+        </div>
+        <div class="headerRight">
+            <a href="javascript:void(0)" class="btn btn-menu"><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a>  <!--D: 전체메뉴버튼 -->
+        </div>
+    </header>
 	<!-- //header -->
+<<<<<<< Updated upstream
 	
 	 <!-- s: contentsWrap -->
 	   <div class="contentsWrap">
@@ -1926,6 +1819,174 @@ nshc.setInit();
 
 
 	<!-- //footer -->
+=======
+>>>>>>> Stashed changes
 
+        <!--contentsWrap -->
+        <div class="contentsWrap">
+            <!--contents -->
+            <div class="contents">
+                <div class="default-wrap">
+                      <!--D : visaul-info-section 감싸기 -->
+                    <div class="visaul-info-section">
+                        <div class="tit-wrap">
+                            <p class="txt"><strong>해지 신청 정보</strong>를 입력하세요</p>
+                            <p class="txt" style="display:none;"><strong>해지 예상금액</strong>을 확인하세요</p><!-- D : 종합통장대출 해지 예상 조회일때 -->
+                        </div>
+                        <div class="visaul-info-box">
+                            <div><em class="flag style2">정기예금</em></div>
+                            <strong class="info-tit">e정기예금</strong>
+                            <div class="account-area">
+                                <p class="account">123-12-12-1234567</p>
+                                <button type="button" class="btn-copy">복사하기</button>
+                            </div>
+                        </div>
+                        <!--S : 종합통장대출 해지 예상 조회""일때 -->
+                        <div class="visaul-info-box" style="display:none;">
+                            <div><em class="flag style3">대출</em><em class="flag style4">종합통장대출</em></div>
+                            <strong class="info-tit">보고파 파킹통장</strong>
+                            <div class="account-area">
+                                <p class="account">123-12-12-1234567</p>
+                                <button type="button" class="btn-copy">복사하기</button>
+                            </div>
+                        </div>
+                        <!-- //E : 종합통장대출 해지 예상 조회일때 -->
+                    </div>
+
+                    <div class="txt-list-wrap">
+                        <div class="txt-detail-area">
+                            <ul class="txt-list">
+                                <li>
+                                    <span class="tit">해지구분</span>
+                                    <span class="txt">중도해지</span>
+                                </li>
+                                <li>
+                                    <span class="tit">해지계좌원금</span>
+                                    <span class="txt">000,000,000원</span>
+                                </li>
+                                <li>
+                                    <span class="tit">만기일<br>(만기이연일자)</span>
+                                    <span class="txt">YYYY.MM.DD</span>
+                                </li>
+                                <li>
+                                    <span class="tit">소득세</span>
+                                    <span class="txt">000,000원</span>
+                                </li>
+                                <li>
+                                    <span class="tit">주민세</span>
+                                    <span class="txt">000,000원</span>
+                                </li>
+                                <li>
+                                    <span class="tit">농특세</span>
+                                    <span class="txt">000,000원</span>
+                                </li>
+                                <li>
+                                    <span class="tit">환입이자</span>
+                                    <span class="txt">000,000원</span>
+                                </li>
+                                <li>
+                                    <span class="tit">해지이자</span>
+                                    <span class="txt">000,000원</span>
+                                </li>
+                                <li>
+                                    <span class="tit">세금합계</span>
+                                    <span class="txt">000,000원</span>
+                                </li>
+                                <li>
+                                    <span class="tit">환출수입제세</span>
+                                    <span class="txt">000,000원</span>
+                                </li>
+                                <li>
+                                    <span class="tit">실수령액</span>
+                                    <span class="txt">000,000원</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <!--D: form-all-wrap  감싸기-->
+                    <div class="form-all-wrap">
+                        <div class="form-wrap">
+                            <label for="" class="formlabel essential">계좌 비밀번호</label>
+                            <div class="input">
+                                <input type="password" title="비밀번호" id="password" class="inp" name="" value="" placeholder="계좌비밀번호 입력" onclick="PageFunc.password();" required readOnly>
+                            </div>
+                            <input type="hidden" id="PWD" class="validChk"/>
+                        </div>
+                        <div class="form-wrap">
+                            <div id="" class="select-box" tabindex="1">
+                                <label for="">입금계좌</label>
+                                <span class="option" id="acnoTxt">미선택</span>
+                            </div>
+                            <input type="hidden" id="mnrcAcno" class="validChk"/>
+                        </div>
+                        <p class="info-txt">입금계좌는 예가람저축은행 입출금게좌만 가능해요</p>
+
+                    </div>
+    
+                    <!-- s : 종합통장대출 해지 예상 조회일때 -->
+                    <div class="table-type table-col type-left02" style="display:none;">
+                        <div class="sub-tit-wrap">
+                            <p class="tit">이자계산 내역</p>
+                        </div>
+                        <table>
+                            <caption></caption>
+                            <colgroup>
+                                <col width="45%">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><span>이자계산(시작일)</span></th>
+                                    <td><span>YYYY.MM.DD</span></td>
+                                </tr>
+                                <tr>
+                                    <th><span>이자계산(종료일)</span></th>
+                                    <td><span>YYYY.MM.DD</span></td>
+                                </tr>
+                                <tr>
+                                    <th><span>이율</span></th>
+                                    <td><span>00.00%</span></td>
+                                </tr>
+                                <tr>
+                                    <th><span>이자금액</span></th>
+                                    <td><span>000,000원</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="list-bull" style="display:none;">
+                        <div class="border"></div>
+                        <strong>알아두세요</strong>
+                        <ul>
+                            <li>해지 예상 조회 결과는 (변동금리 또는 세율의 변동이 있으면) 실제 해지 결과와 다를 수 있어요</li>
+                            <li>해지 신청을 하면 해지일은 당일로 고정돼요</li>
+                        </ul>
+                    </div>
+                   <!-- e : 종합통장대출 해지 예상 조회일때 -->
+                </div>
+            </div>
+            <!-- //contents -->
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap">
+                    <a href="#none" class="btn disabled" id="procBtn" onclick="PageFunc.ars();" >해지신청</a>
+                </div>
+            </div>
+            <!-- s : 종합통장대출 해지 예상 조회일때 버튼 -->
+            <div class="fixed-btn-wrap" style="display:none;"> 
+                <div class="btn-wrap flexCol">
+                    <a href="#none" class="btn" onclick="">해지신청</a>
+                    <a href="#none" class="btn txt" onclick="PageFunc.cancel();">그만하기</a>
+                </div>
+            </div>
+            <!--  e :종합통장대출 해지 예상 조회일때 버튼 -->
+
+              
+    
+
+        </div>
+        <!-- //contentsWrap -->
 </body>
 </html>
+
