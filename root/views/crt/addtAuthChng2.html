@@ -63,30 +63,51 @@
 	<!-- //header -->
 
     <!--contentsWrap -->
-    <div class="contentsWrap">
+    <div class="contentsWrap grid"><!--D: 디자인 적용으로 grid 클래스 추가 / section 구조 필요-->
         <!--contents -->
         <div class="contents">
             <div class="default-wrap">
 
-                <div class="result-area checking">
+                
+                <!--S: 추가인증 변경--><!--D: section 구조로 변경 / 텍스트 변경-->
+                <section class="result-area checking">
 					<p class="tit"><strong>추가인증 변경이<br/>완료되었어요</strong></p><!--D: 텍스트 변경-->
                     <div class="bg-box"><!--D: result-area 구조 안으로 이동-->
                         <p class="box-tit"><strong>변경 정보</strong></p>
-                        <p class="box-desc">전화승인(ARS)서비스</p>
+                        <p class="box-desc">전화승인(ARS) 서비스</p>
                     </div>
-				</div>
+				</section>
+                <!--E: 추가인증 변경-->
 
-                <div class="result-area checking">
+                <!--S: 추가인증서비스 해지--><!--D: section 구조로 변경 / 텍스트 변경 -->
+                <section class="result-area checking">
 					<p class="tit"><strong>추가인증서비스 해지가<br/>완료되었어요</strong></p><!--D: 텍스트 변경-->
                     <div class="bg-box"><!--D: result-area 구조 안으로 이동-->
                         <p class="box-tit"><strong>변경 정보</strong></p>
-                        <p class="box-desc">전화승인(ARS)서비스</p>
+                        <p class="box-desc">전화승인(ARS) 서비스</p>
                     </div>
-				</div>
+				</section>
+                <!--E: 추가인증서비스 해지-->
+
+                <!--S: 추가인증 변경 / 추가인증서비스 해지 공통 적용 - 리스트 추가-->
+                <section class="list-bull">
+                    <div class="border"></div>
+                    <strong>알아두세요</strong>
+                    <ul>
+                        <li>추가인증서비스는 이체업무 및 공인인증 업무 등의 서비스에서 사용되어요</li>
+                        <li>인증/보안 &gt; 전자금융사기예방서비스 &gt; 추가인증서비스 변경을 통해 서비스 신청을 변경하실 수 있어요</li>
+                    </ul>
+                </section>
 
             </div>
         </div>
         <!-- //contents -->
+
+        <div class="fixed-btn-wrap">
+			<div class="btn-wrap">
+				<a href="#none" class="btn">홈으로</a>
+			</div>
+		</div>
 
     </div>
     <!-- //contentsWrap -->
