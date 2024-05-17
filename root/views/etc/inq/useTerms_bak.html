@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -32,46 +33,87 @@
 <script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common"
-	data-menuId="dep/prc"
-	data-frameId="depAcnoOpenPrc2"
-	data-serviceCd="depAcnoOpenPrc2.frm"
-	data-serverTime="20230803152535"
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803175852"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803175852"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803175852"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803175852"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803175852"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803175852"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803175852"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803175852"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803175852" id="biz_common" 
+	data-menuId="etc/inq"
+	data-frameId="useTerms"
+	data-serviceCd="useTerms.frm" 
+	data-serverTime="20230803175852"
 	data-activeMode="local"
 	data-activeEnv="${active.env">
 </script>
+<script type="text/javascript">
+var PageFunc = function() {
+	
+	var _back = function() { // 뒤로가기
+		history.back();
+	}
+	
+	var _proc = function() { // 본처리
+		// TODO 
+		return true;
+	}
+	
+	var _cancel = function() { // 그만하기
+		goMainPage();
+	}
+	
+	var _validate = function() { // 유효성검증
+		// TODO 
+		return true;
+	}
+	
+	/**************************
+	* 사전점검표 체크
+	***************************/
+	var _checkNext = function(el){
+		
+	}
+	
+	return {
+		back : _back,
+		proc : _proc,
+		cancel : _cancel,
+		checkNext : _checkNext
+	};
+}();
 
 
+$(document).ready(function(){
+	
+});
+</script>
+</head>
 <body>
-    <!-- header -->
-    <div id="headerWrap">
-        <script>
-        $(document).ready(function(){
-            document.charset="euc-kr";
-            $("#headerWrap").load("../includes/header.html");
-        });
-        </script>
-    </div>
+	<!-- header -->
+	<header class="headerWrap">
+		<div class="header">
+			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+			<h2><span>이용약관</span></h2>
+		</div>
+		<div class="menu-wrap">
+		</div>
+	</header>
 	<!-- //header -->
 
-    <!--contentsWrap -->
+    <!-- s: contentsWrap -->
     <div class="contentsWrap">
-        <!--contents -->
+        <!-- s: contents -->
         <div class="contents">
-            <div class="default-wrap">
-
-                <!--D: 클래스 변경 및 추가 됩니다. 개발기준 소스로 진행하나 PDF는 추후에 변경될 수 있습니다.-->
-                <section class="tabs-wrap type2"><!--D:type2클래스 변경 -->
+            <div class="default-wrap"><!--[퍼블] 클래스 변경-->
+				<!-- [퍼블] 삭제 <div class="tit-wrap mt40">
+					<p class="txt">고객님께서 필요하신<br/><b>이용약관</b>을 확인해 보세요</p>
+				</div> -->
+				<section class="tabs-wrap type-box">
                     <div class="tabs">
-                        <ul class="tab-item square col-03"><!--D:square col-03 클래스로 변경 -->
+                        <ul class="tab-item">
                             <li class="on" data-tab="tab-cont09"><a href="#none">개인(신용)정보<br/> 수집·이용 동의</a></li> <!-- P00004 -->
                             <li data-tab="tab-cont10" class=""><a href="#none">개인(신용)정보<br/> 조회 동의</a></li> <!-- P00007 -->
                             <li data-tab="tab-cont11" class=""><a href="#none">개인(신용)정보<br/> 제공 동의</a></li> <!-- P00005 -->
@@ -99,10 +141,10 @@
 
             </div>
         </div>
-        <!-- //contents -->
+        <!-- //e: contents -->
 
     </div>
-    <!-- //contentsWrap -->
+    <!-- e: contentsWrap -->
+					
 </body>
 </html>
-
