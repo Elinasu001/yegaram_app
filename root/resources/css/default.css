@@ -497,30 +497,15 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .form-all-wrap { margin-top:40px; }
 .form-all-wrap .form-wrap.type-box:first-child,
 .form-all-wrap > .form-wrap:first-child,
-.form-all-wrap > .select-wrap:first-child,
-.form-all-wrap .form-wrap:has(.btn-txt):first-child,
-.form-all-wrap > .form-wrap:has(.select-box):first-child  { margin-top:0; }
+.form-all-wrap > .select-wrap:first-child { margin-top:0; }
+.form-all-wrap .form-wrap { margin-top:30px; }
+.form-all-wrap .form-wrap.type-box { margin-top:10px;}
 .form-all-wrap > .sub-tit-wrap,
 .txt-wrap > .sub-tit-wrap{ margin:0 0 15px; }
 .form-all-wrap > .sub-tit-wrap + .form-wrap,
 .form-all-wrap > .sub-tit-wrap + ul,
 .form-all-wrap > .sub-tit-wrap + div { margin-top:0; }
 
-
-/* .form-all-wrap .form-wrap:has(.select-box):first-child */
-
-.form-all-wrap .check-box.toggle,
-.form-all-wrap .form-wrap:has(.select-box)  + .form-wrap:has(.select-box),
-.form-all-wrap .form-wrap.type-box  { margin-top:10px; }
-
-.form-all-wrap .form-wrap { margin-top:30px; }
-.form-all-wrap .form-wrap.phone { margin-top:30px; }
-.form-all-wrap .form-wrap:has(.btn-txt) { margin-top:30px; }
-.form-all-wrap .form-wrap + .check-box.toggle { margin-top:30px; }
-.form-all-wrap .form-wrap:has(.form-tit) { margin-top:30px; }
-.form-all-wrap .exp-txt + .form-wrap:has(.select-box) { margin-top:30px; }
-.form-all-wrap .form-wrap:not(>.select-box) + .form-wrap:has(.select-box) { margin-top:30px; }
-.form-wrap .btn-txt { margin-bottom:10px; }
 
 /*.form-all-wrap .select-wrap + .form-wrap { margin-top:20px; }*/
 .form-wrap .select-wrap { margin-top:0; }
@@ -632,8 +617,12 @@ input[type="file"]::file-selector-button { display:none; }
 .added .btn-file-del { display:block; }
 .form-wrap:has(textarea) + .sub-tit-wrap { margin-bottom:15px !important; }
 
-
-
+.form-all-wrap .form-wrap + .check-box.toggle { margin-top:30px; }
+.form-all-wrap .check-box.toggle { margin-top:10px;}
+.form-all-wrap .form-wrap:has(.select-box) { margin-top:10px; }
+.form-all-wrap > .form-wrap:has(.select-box):first-child { margin-top:0; }
+.form-all-wrap .form-wrap.phone,
+.form-all-wrap .form-wrap:has(.form-tit) { margin-top:30px; }
 
 /* .search-area.type-box { padding-top:0; }
 .form-wrap.email-wrap > div.input input,

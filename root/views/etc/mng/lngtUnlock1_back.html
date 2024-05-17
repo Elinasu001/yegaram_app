@@ -32,44 +32,45 @@
 <script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/default.js?v=20230804091310"></script>
-<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230804091310"></script>
-<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230804091310"></script>
-<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230804091310"></script>
-<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230804091310"></script>
-<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230804091310"></script>
-<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230804091310"></script>
-<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230804091310"></script>
-<script type="text/javascript" src="/resources/js/biz_common.js?version=20230804091310" id="biz_common" 
-	data-menuId="crt"
-	data-frameId="othCertCnsl2"
-	data-serviceCd="othCertCnsl2.frm" 
-	data-serverTime="20230804091310"
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230804090240"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230804090240"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230804090240"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230804090240"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230804090240"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230804090240"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230804090240"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230804090240"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230804090240" id="biz_common" 
+	data-menuId="etc/mng"
+	data-frameId="lngtUnlock1"
+	data-serviceCd="lngtUnlock1.frm" 
+	data-serverTime="20230804090240"
 	data-activeMode="local"
 	data-activeEnv="${active.env">
 </script>
-<script>
-$(".list-cert li").click(function(){
-	var $this = $(this);
-	$(".list-cert li").removeClass('on');
-
-	if($this.hasClass('on')){
-		$this.removeClass('on');
-	}else{
-		$this.addClass('on');
-	};
-})
-</script>
 <script type="text/javascript">
 var PageFunc = function() {
-	
+	 
 	var _back = function() { // 뒤로가기
 		history.back();
 	}
 	
 	var _proc = function() { // 본처리
-		// TODO 
-		return true;
+		
+		if(PageFunc.validate()){
+			var jumin = $("#jumin1").val()+$("#jumin2").val();
+			$("#NRBNO_INQ").val(jumin);
+			
+			//장기미접속 해제
+			doAction("USR_ID_MNG", $("#unlockForm"), function(resDs){
+				if(resDs.API_RS_MSG == "SUCCESS"){
+					doActionFrame("etc/mng/lngtUnlock2");
+				} else {
+					biz.alert(resDs.API_RS_MSG);
+				}
+			});
+		}
+		
 	}
 	
 	var _cancel = function() { // 그만하기
@@ -81,18 +82,11 @@ var PageFunc = function() {
 		return true;
 	}
 	
-	/**************************
-	* 사전점검표 체크
-	***************************/
-	var _checkNext = function(el){
-		
-	}
-	
 	return {
 		back : _back,
 		proc : _proc,
 		cancel : _cancel,
-		checkNext : _checkNext
+		validate : _validate
 	};
 }();
 
@@ -100,99 +94,153 @@ var PageFunc = function() {
 $(document).ready(function(){
 	
 });
+
+//출금계좌 선택
+function selWtchAcno(data){
+	console.log(data);
+	
+	// 선택값 세팅
+	if (!$("#wtchAcnoDiv").hasClass("on")) $("#wtchAcnoDiv").addClass("on");
+	$("#wtchAcnoText").text(data.acno);
+	$("#OUT_ACTNO").val(data.acno);
+	
+}
 </script>
 </head>
 <body>
 	<!-- header -->
-	
-
-
-
-
-
-<header class="headerWrap">
-	<div class="header">
-		
-	    <a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
-	    
-	    <h2><span>타기관 인증서 해제</span></h2>
-	</div>
-	<div class="menu-wrap">
-		
-	</div>
-</header>
+	<header class="headerWrap">
+		<div class="header">
+			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+			<h2><span>장기미접속해제</span></h2>
+		</div>
+		<div class="menu-wrap"></div>
+	</header>
 	<!-- //header -->
-	
-    <!-- s: contentsWrap --> 
+	<form id="unlockForm" name="unlockForm" method="post">
+	<input type="hidden" id="NRBNO_INQ" name="NRBNO_INQ">
+	<!-- s: contentsWrap -->
     <div class="contentsWrap">
         <!-- s: contents -->
         <div class="contents">
-            <!-- s: default-wrap -->
             <div class="default-wrap">
-
-
-				<!-- // D: 공인인증서가 있을 때 -->
-				<div class="tit-wrap">
-					<p class="txt">해제할<strong> 공동인증서</strong>를<br/>선택해 주세요</p><!--[퍼블] 수정-->
-				</div>
-				<ul class="list-icon type2 list-cert">
-
-					<!-- // D: 공인인증서가 등록된 상태일때  -->
-					<li class="joint on"><!-- D: 클래스 on 추가 시 선택된 스타일로 변경됨 -->
-						<a>
-							<p class="tit">김고려(KIMGORYO)</p>
-							<p class="txt">01223456789012</p>
-							<p class="s-txt mt10">발급자 : yessign</p>
-							<p class="s-txt">만료일 : YYYY-MM-DD</p>
-						</a>
-					</li>
-
-					<!-- // D: 공인인증서가 등록되지 않은 상태일때 -->
-					<li class="joint">
-						<a>
-							<p class="tit">김고려(KIMGORYO)</p>
-							<p class="txt">01223456789012</p>
-							<p class="s-txt mt10">발급자 : yessign</p>
-							<p class="s-txt">만료일 : YYYY-MM-DD</p>
-						</a>
-					</li>
-
-				</ul>
-				<!-- D: 공인인증서가 있을 때 // -->
-
-
-				<!-- // D: 공인인증서가 없을 때 -->
-				<div class="result-area exclamation">
-					<p class="tit"><b>등록된 공동인증서가 없어요</b></p>
-					<div class="txtbox-wrap">
-						<p>공동인증서를 앱으로 가져오시겠어요?</p><!--[퍼블] br 태그 삭제-->
+                <!-- <div class="form-wrap form-line mt40">
+					<label for="USER_ID_12" class="formlabel onbasic">아이디</label>
+					<div class="input">
+						<span>
+							<input type="text" title="아이디" id="USER_ID_12" class="inp" name="USER_ID_12" value="" required>
+							<button type="button" class="btn-certi" onclick="openPopupUp('jusoRord_lyPop');">아이디찾기</button>
+						</span>
 					</div>
+					<p class="error-txt">아이디를 입력해주세요</p>
 				</div>
-				<!-- D: 공인인증서가 없을 때 // -->
 
+                <div class="form-wrap mt0">
+					<label for="USR_PWD" class="formlabel onbasic">비밀번호</label>
+					<div class="input">
+						<input type="password" title="비밀번호" id="USR_PWD" class="inp" name="USR_PWD" value="" placeholder="" required />
+					</div>
+					<p class="error-txt">비밀번호를 입력해주세요</p>
+				</div> [퍼블] 주석 처리 -->
 
-			</div>
-            <!-- //e: default-wrap -->
+                <div class="form-wrap">
+					<div class="input">
+						<div id="wtchAcnoDiv" class="select-wrap">
+							<div class="select-box" tabindex="1" onclick="biz.acnoList('1', selWtchAcno);">
+								<label for="wtchAcnoText">출금계좌</label>
+								<span class="option" id="wtchAcnoText">미선택</span>
+								<input type="hidden" id="OUT_ACTNO" name="OUT_ACTNO">
+							</div>
+						</div>
+					</div>
+					<p class="error-txt">출금계좌를 선택해주세요</p>
+				</div>
+
+				<div class="form-wrap"> <!-- [퍼블] .mt0 삭제 -->
+					<label for="WTCH_ACCO_PWD" class="formlabel onbasic">계좌 비밀번호</label>
+					<div class="input">
+						<input type="text" title="직장명" id="WTCH_ACCO_PWD" class="inp" name="WTCH_ACCO_PWD" value="" placeholder="" required />
+					</div>
+					<p class="error-txt">계좌 비밀번호를 입력해주세요</p>
+				</div>
+
+				<div class="form-wrap">
+					<div class="input">
+						<div class="select-wrap">
+							<div class="select-box" tabindex="1" onclick="biz.alert('[TODO]등록구분 data');">
+								<label for="">등록구분</label>
+								<span class="option">미선택</span>
+							</div>
+						</div>
+					</div>
+					<p class="error-txt">등록구분을 선택해주세요</p>
+				</div>
+
+				<!-- [퍼블] 주민등록번호 전체 변경, 등록구분-주민등록번호 선택시 -->
+				<div class="form-wrap w50">
+					<label for="ipt02" class="formlabel onbasic">주민등록번호</label>
+					<div class="input">
+						<span>
+							<input type="tel" title="주민등록번호 앞자리" id="ipt02" class="inp" name="" value="" maxlength="6" required="">
+						</span>
+						<span class="inputTextHyphen">-</span>
+						<span>
+							<input type="tel" title="주민등록번호 뒷자리(첫번째 숫자)" id="jumin1" class="inp" name="jumin1" value="" maxlength="1" required="">
+							<span class="jumintext">●●●●●●</span>
+						</span>
+					</div>
+					<p class="error-txt">주민등록번호를 입력해주세요.</p>
+				</div>
+				<!-- // [퍼블] 주민등록번호전체 변경, 등록구분-주민등록번호 선택시 -->
+
+				<div class="form-wrap">
+					<div class="input">
+						<div class="select-wrap">
+							<div class="select-box" tabindex="1" onclick="biz.alert('[TODO]인증방법 data');">
+								<label for="">인증방법</label>
+								<span class="option">미선택</span>
+							</div>
+						</div>
+					</div>
+					<p class="error-txt">등록구분을 선택해주세요</p>
+				</div>
+
+				<!-- [퍼블] 변경 -->
+                <dl class="list-bull type-caption">
+					<dt>알아두세요</dt>
+					<dd>현재 사용중인 보안매체를 사용할 수 없는 경우 추가인증 (전화 ARS/스마트폰앱)절차를 통해 장기미접속을 해제하세요
+					</dd>
+					<dd>계좌 비밀번호를 모를 경우 영업점 방문을 통해 장기미접속을 해제 하세요</dd>
+				</dl>
+				<!-- [퍼블] 변경 -->
+
+            </div>
         </div>
         <!-- //e: contents -->
 
-
-		<!-- // D: 공인인증서가 없을 때 -->
-		<div class="fixed-btn-wrap">
-			<div class="btn-wrap">
-				<a href="#none" class="btn">공동인증서 가져오기</a>
-			</div>
-			<a href="#none" class="btn-txt">홈으로</a><!--[퍼블] 텍스트 변경-->
-		</div>
-		<!-- D: 공인인증서가 없을 때 // -->
-
+        <!-- s: btn-wrap -->
+        <div class="fixed-btn-wrap">
+        	<div class="btn-wrap">
+	            <a href="#none" class="btn" onclick="PageFunc.proc();">확인</a>
+	        </div>
+        </div>
+        <!-- //e: btn-wrap -->
 
     </div>
     <!-- //e: contentsWrap -->
+	</form>
+					
 	<!-- footer -->
-	<footer>
-	<!-- 푸터 타입별 정의 -->
-	</footer>
+	
+
+
+
+
+
+
+<footer>
+<!-- 푸터 타입별 정의 -->
+</footer>
 
 <!-- 업무공통 -->
 

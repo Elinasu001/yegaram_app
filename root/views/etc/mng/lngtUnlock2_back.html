@@ -32,37 +32,25 @@
 <script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/default.js?v=20230804091310"></script>
-<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230804091310"></script>
-<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230804091310"></script>
-<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230804091310"></script>
-<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230804091310"></script>
-<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230804091310"></script>
-<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230804091310"></script>
-<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230804091310"></script>
-<script type="text/javascript" src="/resources/js/biz_common.js?version=20230804091310" id="biz_common" 
-	data-menuId="crt"
-	data-frameId="othCertCnsl2"
-	data-serviceCd="othCertCnsl2.frm" 
-	data-serverTime="20230804091310"
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230804090248"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230804090248"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230804090248"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230804090248"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230804090248"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230804090248"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230804090248"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230804090248"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230804090248" id="biz_common" 
+	data-menuId="etc/mng"
+	data-frameId="lngtUnlock2"
+	data-serviceCd="lngtUnlock2.frm" 
+	data-serverTime="20230804090248"
 	data-activeMode="local"
 	data-activeEnv="${active.env">
 </script>
-<script>
-$(".list-cert li").click(function(){
-	var $this = $(this);
-	$(".list-cert li").removeClass('on');
-
-	if($this.hasClass('on')){
-		$this.removeClass('on');
-	}else{
-		$this.addClass('on');
-	};
-})
-</script>
 <script type="text/javascript">
 var PageFunc = function() {
-	
+	 
 	var _back = function() { // 뒤로가기
 		history.back();
 	}
@@ -104,95 +92,55 @@ $(document).ready(function(){
 </head>
 <body>
 	<!-- header -->
-	
-
-
-
-
-
-<header class="headerWrap">
-	<div class="header">
-		
-	    <a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
-	    
-	    <h2><span>타기관 인증서 해제</span></h2>
-	</div>
-	<div class="menu-wrap">
-		
-	</div>
-</header>
+	<header class="headerWrap">
+		<div class="header">
+			<a class="btn-back" onclick="PageFunc.back();"><span class="blind">이전페이지 이동하기</span></a>
+			<h2><span>장기미접속해제</span></h2>
+		</div>
+		<div class="menu-wrap"></div>
+	</header>
 	<!-- //header -->
 	
-    <!-- s: contentsWrap --> 
+	<!-- s: contentsWrap -->
     <div class="contentsWrap">
-        <!-- s: contents -->
-        <div class="contents">
-            <!-- s: default-wrap -->
-            <div class="default-wrap">
+    <!-- s:contents -->
+		<div class="contents">
+			<div class="default-wrap">
 
-
-				<!-- // D: 공인인증서가 있을 때 -->
-				<div class="tit-wrap">
-					<p class="txt">해제할<strong> 공동인증서</strong>를<br/>선택해 주세요</p><!--[퍼블] 수정-->
-				</div>
-				<ul class="list-icon type2 list-cert">
-
-					<!-- // D: 공인인증서가 등록된 상태일때  -->
-					<li class="joint on"><!-- D: 클래스 on 추가 시 선택된 스타일로 변경됨 -->
-						<a>
-							<p class="tit">김고려(KIMGORYO)</p>
-							<p class="txt">01223456789012</p>
-							<p class="s-txt mt10">발급자 : yessign</p>
-							<p class="s-txt">만료일 : YYYY-MM-DD</p>
-						</a>
-					</li>
-
-					<!-- // D: 공인인증서가 등록되지 않은 상태일때 -->
-					<li class="joint">
-						<a>
-							<p class="tit">김고려(KIMGORYO)</p>
-							<p class="txt">01223456789012</p>
-							<p class="s-txt mt10">발급자 : yessign</p>
-							<p class="s-txt">만료일 : YYYY-MM-DD</p>
-						</a>
-					</li>
-
-				</ul>
-				<!-- D: 공인인증서가 있을 때 // -->
-
-
-				<!-- // D: 공인인증서가 없을 때 -->
-				<div class="result-area exclamation">
-					<p class="tit"><b>등록된 공동인증서가 없어요</b></p>
+				<div class="result-area checking">
+					<p class="tit"><strong>장기미접속을 해제했어요</strong></p> <!-- [퍼블] 변경 -->
 					<div class="txtbox-wrap">
-						<p>공동인증서를 앱으로 가져오시겠어요?</p><!--[퍼블] br 태그 삭제-->
+						<p>이제 정상적으로 서비스를 <br>이용하실 수 있어요</p>
 					</div>
 				</div>
-				<!-- D: 공인인증서가 없을 때 // -->
-
 
 			</div>
-            <!-- //e: default-wrap -->
-        </div>
-        <!-- //e: contents -->
 
-
-		<!-- // D: 공인인증서가 없을 때 -->
-		<div class="fixed-btn-wrap">
-			<div class="btn-wrap">
-				<a href="#none" class="btn">공동인증서 가져오기</a>
-			</div>
-			<a href="#none" class="btn-txt">홈으로</a><!--[퍼블] 텍스트 변경-->
 		</div>
-		<!-- D: 공인인증서가 없을 때 // -->
+		<!-- //e:contents -->
 
+        <!-- s: fixedBtnWrap -->
+		<div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <a href="#none" class="btn" onclick="goMainPage();">홈으로</a>
+            </div>
+        </div>
+        <!-- //e: fixedBtnWrap -->
 
     </div>
     <!-- //e: contentsWrap -->
+					
 	<!-- footer -->
-	<footer>
-	<!-- 푸터 타입별 정의 -->
-	</footer>
+	
+
+
+
+
+
+
+<footer>
+<!-- 푸터 타입별 정의 -->
+</footer>
 
 <!-- 업무공통 -->
 
