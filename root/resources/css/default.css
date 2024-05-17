@@ -497,11 +497,12 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .form-all-wrap { margin-top:40px; }
 .form-all-wrap .form-wrap.type-box:first-child,
 .form-all-wrap > .form-wrap:first-child,
-.form-all-wrap > .select-wrap:first-child { margin-top:0; }
+.form-all-wrap > .select-wrap:first-child,
+.form-all-wrap > .sub-tit-wrap:first-child { margin-top:0; }
 .form-all-wrap .form-wrap { margin-top:30px; }
 .form-all-wrap .form-wrap.type-box { margin-top:10px;}
-.form-all-wrap > .sub-tit-wrap,
-.txt-wrap > .sub-tit-wrap{ margin:0 0 15px; }
+.txt-wrap > .sub-tit-wrap { margin:0 0 15px; }
+.form-all-wrap > .sub-tit-wrap { margin-bottom:15px;}
 .form-all-wrap > .sub-tit-wrap + .form-wrap,
 .form-all-wrap > .sub-tit-wrap + ul,
 .form-all-wrap > .sub-tit-wrap + div { margin-top:0; }
