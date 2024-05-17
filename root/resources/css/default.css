@@ -1772,7 +1772,7 @@ body.on { position:fixed; top:0; }
 .list-icon.num > li > .tit { margin-bottom:7px; font-weight:700; }
 
 /* 아이콘 '또는' 텍스트 리스트 */
-.list-icon.or > li::after { content:"또는"; position:absolute; top:35%; left:0; height:unset; font-size:0.77778rem; line-height:1.5; transform:translateX(-50%); }
+/* .list-icon.or > li::after { content:"또는"; position:absolute; top:35%; left:0; height:unset; font-size:0.77778rem; line-height:1.5; transform:translateX(-50%); } */
 .list-icon.or.col2 > li:nth-of-type(2n+1)::after,
 .list-icon.or.col3 > li:nth-of-type(3n+1)::after { display:none; }
 
