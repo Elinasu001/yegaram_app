@@ -63,34 +63,44 @@
 	<!-- //header -->
 
     <!--contentsWrap -->
-    <div class="contentsWrap grid"><!--D: 디자인 적용으로 grid 클래스 추가 / section 구조 필요-->
+    <div class="contentsWrap">
         <!--contents -->
         <div class="contents">
             <div class="default-wrap">
-
-                <section class="result-area checking"><!--D: section 으로 변경-->
-					<p class="tit"><strong>인증 예외서비스를<br/>등록했어요</strong></p><!--D: 텍스트 변경-->
-				</section>
-
-
-                <section class="list-bull"><!--D: 구조 변경 및 section으로 변경-->
-                    <div class="border"></div>
-                    <strong>[인증 예외서비스 등록 적용 업무]</strong>
-                    <ul>
-                        <li>전화승인(ARS)서비스 : 이체업무(1일 누계 100만원 이상)</li>
-                        <li>스마트앱 인증 서비스 : 이체업무(1일 누계 100만원 이상)</li>
-                    </ul>
-                </section>
+                
 
             </div>
         </div>
         <!-- //contents -->
 
-        <div class="fixed-btn-wrap">
-			<div class="btn-wrap">
-				<a href="javascript:void(0);" class="btn">홈으로</a>
-			</div>
-		</div>
+        <div id="lypullPop" class="layerpopup laypop-all show" style="display: block;">
+            <!-- s: contents -->
+            <div class="pop-header">
+                <h2 class="pop-title">타기관 인증서 등록</h2>
+                <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lypullPop')">닫기</button>
+            </div>
+            
+            <div class="pop-con-wrap">
+                <div class="default-wrap">
+                    <!-- // D: 공동인증서가 없을 때 -->
+                    <div class="result-area exclamation">
+                        <p class="tit"><b>등록된 공동인증서가 없어요</b></p>
+                        <div class="txtbox-wrap">
+                            <p>공동인증서를 앱으로 가져오시겠어요?</p>
+                        </div>
+                    </div>
+                    <!-- D: 공동인증서가 없을 때 // -->
+                </div>
+            </div>
+
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap flexCol">
+                    <a href="#none" class="btn">공동인증서 가져오기</a>
+                    <a href="#none" class="btn txt">홈으로</a>
+                </div>
+            </div>
+
+        </div>
 
     </div>
     <!-- //contentsWrap -->
