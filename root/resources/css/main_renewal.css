@@ -240,7 +240,7 @@
 
 .info-list { display: flex; justify-content: space-between; align-items: center; gap: 8px; width: 100%; margin-top: 25px; }
 .info-list li { width: 100%; background-color: #FFFFFF; border-radius: 10px; border: 1px solid #EEEEEE; }
-.info-list a { display: block; text-align: center; font-size:0.66667rem; font-weight: 400; color: #666666; height: 55px; align-content: center; }
+.info-list a { display: block; text-align: center; font-size:0.66667rem; font-weight: 400; color: #666666; height: 55px; align-content: center; padding: 10px 0;}
 
 .visaul-info-box .account-info .amount-on { font-size:0.77778rem; line-height: 1rem; }
 .visaul-info-box .account-info .amount-on span { font-size: 1.33333rem; font-weight: 600; }
