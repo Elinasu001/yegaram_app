@@ -96,7 +96,7 @@
 .notice-slider-wrap .swiper-wrapper .notice-date { position:absolute; top:0; right:70px; color:#ccc; font-size:0.77778rem; line-height:1.5;  } */
 
 /** 소식 슬라이더 **/
-.news-slider-wrap.swiper { overflow: visible; padding-left:20px; padding-right:20px; padding-bottom:47px; }
+/* .news-slider-wrap.swiper { overflow: visible; padding-left:20px; padding-right:20px; padding-bottom:47px; }
 .news-slider-wrap .swiper-slide { border-radius:15px; background:#F2F6FF; max-width: 60%; }
 .news-slider-wrap a { display:block;padding:20px 20px 20px;}
 .news-slider-wrap .news-flag { font-weight:500; font-size:0.67rem; color:#2560A2; line-height:1.67; letter-spacing:-.5px; }
@@ -104,7 +104,7 @@
 .news-slider-wrap .news-desc { font-size:0.78rem; line-height:1.43; letter-spacing:-.5px; }
 .news-slider-wrap .news-img-wrap { margin-top:10px; border-radius:10px; background:#fff;overflow: hidden;}
 .news-slider-wrap .swiper-pagination-bullet { width:9px; height:9px; background:#999; }
-.news-slider-wrap .swiper-pagination-bullet-active { width:30px; border-radius:9px; background:#BCB5CA; }
+.news-slider-wrap .swiper-pagination-bullet-active { width:30px; border-radius:9px; background:#BCB5CA; } */
 
 /** sns **/
 .sns-list { margin-top:40px; font-size:0; text-align:center; }
@@ -231,7 +231,7 @@
 .sns-news-list li { background-color: #FFF0DA; border-radius: 20px; }
 .sns-news-list a { display: block; box-sizing: border-box; padding: 20px; height: 149px; background: url('../images/main/ico_sns_news.png') no-repeat right bottom /142px auto; }
 .sns-tit { display: inline-block; border-radius: 12px; background-color: #FFFFFF; font-size:0.66667rem; font-weight: 500; color: #DDAE64; padding: 4px 12px;}
-.sns-txt { font-size:0.88889rem; line-height:1.278rem; font-weight: 600; color: #000000; margin-top: 15px; }
+.sns-txt { font-size:0.88889rem; line-height:1.278rem; font-weight: 600; color: #000000; margin-top: 15px; box-sizing: border-box; padding-right: 120px; height: 69px; overflow: hidden; }
 
 .contentsWrap [class*="-area"].notice-area .area-title-box { margin-bottom: 0; }
 .notice-list li { border-bottom: 1px solid #DDE2E8; background: url('../images/main/arrow_right_black.png') no-repeat 100%/16px auto; }
