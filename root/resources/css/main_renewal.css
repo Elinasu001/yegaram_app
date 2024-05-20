@@ -229,7 +229,7 @@
 
 .contentsWrap [class*="-area"] + [class*="-area"].sns-news-area { margin-top: 12px; }
 .sns-news-list li { background-color: #FFF0DA; border-radius: 20px; }
-.sns-news-list a { display: block; box-sizing: border-box; padding: 20px; height: 149px; background: url('../images/main/ico_sns_news.png') no-repeat right /335px auto; }
+.sns-news-list a { display: block; box-sizing: border-box; padding: 20px; height: 149px; background: url('../images/main/ico_sns_news.png') no-repeat right bottom /142px auto; }
 .sns-tit { display: inline-block; border-radius: 12px; background-color: #FFFFFF; font-size:0.66667rem; font-weight: 500; color: #DDAE64; padding: 4px 12px;}
 .sns-txt { font-size:0.88889rem; line-height:1.278rem; font-weight: 600; color: #000000; margin-top: 15px; }
 
