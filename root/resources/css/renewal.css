@@ -668,6 +668,7 @@ section > .result-wrap{ margin-top:40px; }
 .toggle-area .list-bull { margin-top:0; }
 .txt-list-wrap + .btn-cont-wrap { margin:20px 0 0; }
 .txt-list-wrap + .txt-list-wrap { margin-top:20px; }
+.txt-list-wrap > .btn-cont-wrap  { margin-bottom:15px; }
 .layer-up .default-wrap .txtbox-wrap:last-child { padding-bottom:0; }
 /* 준비사항 + 자동이체 불가 안내 */
 .prepare-area ~ .sub-tit-wrap:has(+.txtbox-wrap) { margin-bottom:15px; }
