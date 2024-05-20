@@ -67,37 +67,67 @@
         <!--contents -->
         <div class="contents">
             <div class="default-wrap">
-
                 
-
-                <!--S:온라인서류제출 완료-->
-                <section class="result-area checking"><!--D: section 구조-->
-					<p class="tit"><strong>온라인서류를<br/>제출했어요</strong></p><!--D: 텍스트 변경-->
-					<div class="txtbox-wrap">
-						<p>대출실행을 위해 상담원이<br/>연락드릴 예정이에요</p>
-					</div>
-				</section>
-                <!--E:온라인서류제출 완료-->
-
-                <!--S:온라인서류제출 실패-->
-                <div class="result-area exclamation">
-					<p class="tit"><strong>서류 제출에 실패했어요</strong></p>
-					<div class="txtbox-wrap">
-						<p>잠시 후 다시 시도해주세요</p><!--D: 텍스트 변경-->
-					</div>
-				</div>
-                <!--E:온라인서류제출 실패-->
 
             </div>
         </div>
         <!-- //contents -->
 
-        <div class="fixed-btn-wrap">
-			<div class="btn-wrap">
-                <a href="javascript:void(0);" class="btn">홈으로</a>
-			</div>
-		</div>
+        <!-- S: 인증수단 -->
+        <div id="lySel02" class="layerpopup layer-up show" style="display:block;"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">인증서</h2><!--D: 화면설계서 기준 텍스트 변경-->
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>금융인증서</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                        <li><button>토스인증서</button></li>
+                        <li><button>카카오인증서</button></li>
+                        <li><button>네이버인증서</button></li>
+                        <li><button>공동인증서</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- E: 인증수단 -->
 
+        <!--S: 인증 완료-->
+        <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
+            <div class="content-wrap">
+                
+                <div class="pop-con-wrap">
+                    <span class="pop-con">
+                        Step1: 인증요청 메시지를 보냈어요<br/>
+                        Step2: 인증 완료 후, 하단의(인증완료)를 눌러주세요
+                    </span>
+                </div>
+                <div class="btn-wrap" style="display:none;">
+                    <a href="javascript:void(0);" class="btn">인증완료</a>
+                </div>
+            </div>
+        </div>
+        <!--E: 인증 완료-->
+
+        <!--S: 인증 미완료-->
+        <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
+            <div class="content-wrap">
+                
+                <div class="pop-con-wrap">
+                    <span class="pop-con">
+                        인증이 완료되지 않았어요<br/>
+                        선택한 수단에서 인증 후(인증완료)를 누르거나,<br/>
+                        [닫기]를 누른 후 다른 인증수단을 선택 해주세요
+                    </span>
+                </div>
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn btn-info" onclick="">닫기</a>
+                    <a href="javascript:void(0);" class="btn">인증완료</a>
+                </div>
+            </div>
+        </div>
+        <!--E: 인증 미완료-->
     </div>
     <!-- //contentsWrap -->
 </body>
