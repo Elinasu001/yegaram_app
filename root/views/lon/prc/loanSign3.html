@@ -175,14 +175,47 @@
                 </section>
                 <!--E: 대출신청 완료(상담원 전황 예정)-->
 
-                    <!--S: 신용조회동의 완료-->
-                    <section class="result-area checking">
+                <!--S: 신용조회동의 완료-->
+                <section class="result-area checking">
                     <p class="tit"><strong>신용조회를 동의했어요</strong></p>
                 </section>
                 <!--E: 신용조회동의 완료-->
 
+                <!--S: 전자계약서 작성 시간 초과 안내 -->
+                <section class="result-area exclamation"  style="display:block;">
+                    <p class="tit"><strong>지금은 전자계약서 작성을<br/>할 수 있는 시간이 아니에요</strong></p>
+                    <div class="txtbox-wrap">
+                        <p>대출신청 안내를 위해</br/>본 영업일에 상담원이 연락드릴게요</p>
+                    </div>
+                    <div class="bg-box">
+                        <p class="box-desc">
+                            전자계약서 작성 가능시간<br/>
+                            평일 09:000 ~ 18:00 (주말 및 공휴일 휴무)
+                        </p>
+                    </div>
+                </section>
+                <!--E: 전자계약서 작성 시간 초과 안내 -->
 
-                <!--S: 이용문의 (하단고정 - 일괄 적용)-->
+                <!--S: 전자계약서 작성 완료(대출금 입금) -->
+                <section class="result-area checking">
+                    <p class="tit"><strong>전자계약서 작성을 완료했어요</strong></p>
+                    <div class="txtbox-wrap">
+                        <p>10분 내로 등록하신 계좌로</br/>대출금을 입금할게요</p>
+                    </div>
+                </section>
+                <!--E: 전자계약서 작성 완료(대출금 입금) -->
+
+                <!--S: 전자계약서 작성 완료(상담원 연락 예정) -->
+                <section class="result-area checking">
+                    <p class="tit"><strong>전자계약서 작성을 완료했어요</strong></p>
+                    <div class="txtbox-wrap">
+                        <p>대출 심사와 대출금 입금을 위해</br/>상담원이 연락드릴 예정이에요</p>
+                    </div>
+                </section>
+                <!--E: 전자계약서 작성 완료(상담원 연락 예정) -->
+
+
+                <!--S: 이용문의 (하단고정 - 일괄 적용) : 이 페이지 모든 결과 화면은 이용문의 내용이 일괄 적용됩니다.-->
                 <section class="sub-info-wrap">
                     <div class="tel">이용문의 <strong>1877-7788</strong></div>
                     <p>평일 09:00 ~ 18:00<br>(주말 및 공휴일 휴무)</p>
@@ -195,13 +228,13 @@
 
 
         <!---- D: 버튼---->
-        <!--S: 상담연결대기/대출심사중인경우/대출승인거절/대출진행불가(중복거래)/상담원대출진행/대출신청 완료-->
+        <!--S: 상담연결대기/대출심사중인경우/대출승인거절/대출진행불가(중복거래)/상담원대출진행/대출신청 완료/전자계약서 작성 시간 초과 안내/전자계약서 작성 완료(대출금 입금) -->
         <div class="fixed-btn-wrap">
             <div class="btn-wrap">
                 <a href="javascript:void(0);" class="btn">홈으로</a>
             </div>
         </div>
-        <!--E: 상담연결대기/대출심사중인경우/대출승인거절/대출진행불가(중복거래)/상담원대출진행/대출신청 완료-->
+        <!--E: 상담연결대기/대출심사중인경우/대출승인거절/대출진행불가(중복거래)/상담원대출진행/대출신청 완료/전자계약서 작성 시간 초과 안내/전자계약서 작성 완료(대출금 입금)-->
 
         <!--S: 신청중인경우-->
         <div class="fixed-btn-wrap">
@@ -239,14 +272,14 @@
         </div>
         <!--E: 상담대출가능-->
 
-        <!--S: 대출신청 완료(상담원 전황 예정)-->
+        <!--S: 대출신청 완료(상담원 전황 예정)/전자계약서 작성 완료(상담원 연락 예정)-->
         <div class="fixed-btn-wrap">
             <div class="btn-wrap flexCol">
                 <a href="javascript:void(0);" class="btn">대출신청 상태보기</a>
                 <a href="javascript:void(0);" class="btn txt">홈으로</a>
             </div>
         </div>
-        <!--E: 대출신청 완료(상담원 전황 예정)-->
+        <!--E: 대출신청 완료(상담원 전황 예정)/전자계약서 작성 완료(상담원 연락 예정)-->
 
         <!--S: 상담대출가능 (Alert)-->
         <div id="lyAlert1" class="layerpopup type-alert on" style="display:none;">

@@ -923,6 +923,9 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 .terms-wrap.level1 label { background:url("../images/common/chk_all_off.png") no-repeat left 17px center; background-size:24px 24px; display:block; padding:18px 20px 18px 50px; border-radius:10px; border:1px solid #DDDDDD; font-size:0.89rem; font-weight:500; }
 .terms-wrap.level1 label > a { position:relative; z-index:1; }
 .terms-wrap.chk-all input[type="checkbox"]:checked + label { background-image:url("../images/common/chk_all_on.png"); color:#4E32A5; }
+/* 최신소스 추가 */
+.terms-wrap.chk-all input[type="checkbox"]:checked + label:before { content:''; position:absolute; top:-1px; left:-1px; right:-1px; bottom:-1px; border:1px solid #260F54; border-radius:11px; }
+
 
 /* 개별체크 */
 /* .terms-wrap.level2 { margin:5px 0; } */
@@ -943,6 +946,28 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 
 .terms-area .terms-agr-wrap { display:inline-block; width:100%; margin-top:50px; }
 .terms-area .terms-agr-wrap .terms-tit { font-weight:600; font-size:1rem; color:#000; margin-bottom:20px; }
+
+
+/* 상품서비스 안내 동의항목 - 최신소스 추가 */
+.terms-wrap .level4 { width:100%; margin:10px 0; padding:0 30px; font-size:0; }
+.terms-wrap .level4 > div { width:50%; display:inline-block; }
+.terms-wrap .level4 label { width:100%; padding:0; padding-left:30px; }
+.terms-wrap .level4 label::after { display:none; }
+.terms-wrap div.tit{font-size: 0.88889rem; padding-left:60px ; font-weight: bold;}
+
+/* 정보활용동의등급제 - 최신소스 추가 */
+.safe1{padding: 2px 8px;border-radius: 25px; color: #fff; background-color: #2c9ecc;font-size: 0.66667rem;margin-left: 4px;}
+.safe2{padding: 2px 8px;border-radius: 25px; color: #fff; background-color: #2ea64e;font-size: 0.66667rem;margin-left: 4px;}
+.safe3{padding: 2px 8px;border-radius: 25px; color: #fff; background-color: #b38f0a;font-size: 0.66667rem;margin-left: 4px;}
+.safe4{padding: 2px 8px;border-radius: 25px; color: #fff; background-color: #e5751c;font-size: 0.66667rem;margin-left: 4px;}
+.safe5{padding: 2px 8px;border-radius: 25px; color: #fff; background-color: #ee2128;font-size: 0.66667rem;margin-left: 4px;}
+
+
+.terms-area .terms-agr-wrap { display:inline-block; width:100%; margin-top:50px; }
+.terms-area .terms-agr-wrap .terms-tit { font-weight:600; font-size:1rem; color:#000; margin-bottom:20px; }
+
+
+
 
 
 /* 본인계좌 인증 */

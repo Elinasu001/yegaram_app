@@ -421,7 +421,7 @@
                                     <td class="modify">4/26</td>
                                     <td class="person">박수현</td>
                                     <td></td>
-                                    <td>인증방법 선택 (팝업) (본인인증)</td>
+                                    <td>본인인증 (풀팝업)</td>
                                     <td></td>
                                     <td><a href="views/common/layer/user_auth.html" target="_blank">views/common/layer/user_auth.html</a></td>
                                 </tr>
@@ -582,11 +582,15 @@
                                     <td><a href="/views/common/layer/mydata.html" target="_blank">/views/common/layer/mydata.html</a></td>
                                 </tr>
                                 <tr>
-                                    <td class="modify">5/10</td>
+                                    <td class="modify">5/10 - 미전달</td>
                                     <td class="person">박수현</td>
                                     <td></td>
-                                    <td>본인인증 방식 (팝업)</td>
-                                    <td></td>
+                                    <td>
+                                        공통 : 인증수단 선택 (팝업) / 로그인 : 본인인증 방식 (팝업)<br/>
+                                        - 본인인증 완료 (Alert)<br/>
+                                        - 본인인증 미완료 (Alert)
+                                    </td>
+                                    <td>인증수단 선택 리스트와 로그인 본인인증 방식의 리스트가 다르게 뿌려집니다.</td>
                                     <td><a href="/views/common/layer/select_auth.html" target="_blank">/views/common/layer/select_auth.html</a></td>
                                 </tr>
                                 <tr>
@@ -653,18 +657,6 @@
                                     <td>휴대폰 본인인증</td>
                                     <td><a href="" target="_blank"></a></td>
                                     <td><a href="/views/common/layer/mobile_socket_popup.html" target="_blank">/views/common/layer/mobile_socket_popup.html</a></td>
-                                </tr>
-                                
-                                <tr>
-                                    <td class="modify">미전달</td>
-                                    <td class="person">박수현</td>
-                                    <td></td>
-                                    <td>인증수단 (팝업)<br/>
-                                        - 인증완료 (Alert)<br/>
-                                        - 인증미완료 (Alert)
-                                    </td>
-                                    <td><a href="" target="_blank">(새로운 페이지 추가) 공통으로 사용되고 있어 추가했습니다. (loanRqs.html, mydata.html에서 사용 중 )</a></td>
-                                    <td><a href="/views/common/layer/authSel.html" target="_blank">/views/common/layer/authSel.html</a></td>
                                 </tr>
 
                             </tbody>
@@ -2007,9 +1999,9 @@
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
-                                    <td>본인인증</td>
+                                    <td>본인인증 (풀팝업)</td>
                                     <td></td>
-                                    <td><a href="" target="_blank">loanStbt.html</a></td>
+                                    <td><a href="" target="_blank">user_auth.html</a></td>
                                 </tr>
                                 <tr>
                                     <td class="modify">미전달</td>
@@ -2058,8 +2050,6 @@
                                         - 차량보유여부 (팝업)<br/>
                                         - 차량번호 (팝업)<br/>
                                         - 차량번호 입력 확인(Alert)<br/>
-                                        - 인증수단 선택 (팝업)<br/>
-                                        - 인증수단 선택 (Alert)
                                     </td>
                                     <td>5/13 form 레이아웃 - 변경완료</td>
                                     <td><a href="/views/lon/prc/loanRqs.html" target="_blank">views/lon/prc/loanRqs.html</a></td>
@@ -2069,28 +2059,31 @@
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
-                                    <td>신분증 촬영</td>
+                                    <td>신분증 촬영 (팝업)
+                                    </td>
                                     <td></td>
                                     <td><a href="" target="_blank">ocr_auth.html</a></td>
                                 </tr>
-                                <!-- <tr>
-                                    <td class="modify">미전달</td>
-                                    <td class="person">박수현</td>
-                                    <td></td>
-                                    <td>인증수단 선택<br/>
-                                        - 인증수단 선택 (Alert)<br/>
-                                    </td>
-                                    <td></td>
-                                    <td><a href="" target="_blank"></a></td>
-                                </tr> -->
 
                                 <tr>
-                                    <td class="modify">미전달</td>
-                                    <td class="person">박수현</td>
+                                    <td class="modify"></td>
+                                    <td class="person">공통</td>
+                                    <td></td>
+                                    <td>본인인증 방식 (팝업)<br/>
+                                        - 본인인증 완료 (Alert)<br/>
+                                        - 본인인증 미완료 (Alert)
+                                    </td>
+                                    <td>화면설계서에는 인증수단이라고 나와있습니다. 공통으로 쓰일 경우 본인인증 방식 텍스트로 갑니다.</td>
+                                    <td><a href="" target="_blank">select_auth.html</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="modify"></td>
+                                    <td class="person">공통</td>
                                     <td></td>
                                     <td>마이데이터 조회 (팝업)</td>
                                     <td></td>
-                                    <td><a href="views/common/layer/mydata.html" target="_blank">views/common/layer/mydata.html</a></td>
+                                    <td><a href="" target="_blank">mydata.html</a></td>
                                 </tr>
 
                                 <tr>
@@ -2099,11 +2092,20 @@
                                     <td></td>
                                     <td>본인확인 및 소득정보 조회(스크래핑)<br/>
                                         - 시/도(팝업)<br/>
-                                        - 시/군/구(팝업)<br/>
-                                        - 본인인증 방식 (팝업) (공통)<br/>
+                                        - 시/군/구(팝업)
                                     </td>
-                                    <td>5/13 form 레이아웃 - 변경완료</td>
+                                    <td>5/13 form 레이아웃 - 변경완료/ 새로운 페이지 입니다.</td>
                                     <td><a href="/views/lon/prc/idIncInq.html" target="_blank">/views/lon/prc/idIncInq.html</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="modify"></td>
+                                    <td class="person">공통</td>
+                                    <td></td>
+                                    <td>본인인증 방식 (팝업)
+                                    </td>
+                                    <td>화면설계서는 인증수단 선택 팝업으로 되어있습니다. 공통으로 쓰일 경우 본인인증 방식 텍스트로 통일했습니다.</td>
+                                    <td><a href="" target="_blank">select_auth.html</a></td>
                                 </tr>
 
                                 <tr>
@@ -2189,10 +2191,10 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
-                                    <td class="person">박수현</td>
+                                    <td class="modify"></td>
+                                    <td class="person">공통</td>
                                     <td></td>
-                                    <td>은행선택 (공통)<br/></td>
+                                    <td>은행선택<br/></td>
                                     <td></td>
                                     <td><a href="" target="_blank">bank_popup.html</a></td>
                                 </tr>
@@ -2210,9 +2212,9 @@
                                     <td class="modify">미전달</td>
                                     <td class="person">박수현</td>
                                     <td></td>
-                                    <td>타 금융시 동시대출 확인<br/>
-                                        - 대출 진행 불가(중복 거래)<br/>
-                                        - 상담원 대출 진행<br/>
+                                    <td>
+                                        대출 진행 불가(중복 거래)<br/>
+                                        상담원 대출 진행<br/>
                                     </td>
                                     <td></td>
                                     <td><a href="/views/lon/prc/loanSign3.html" target="_blank">/views/lon/prc/loanSign3.html</a></td>
@@ -2221,9 +2223,8 @@
                                     <td class="modify">미전달</td>
                                     <td class="person">박수현</td>
                                     <td></td>
-                                    <td>대출실행전자계약(약관동의)<br/>
-                                    </td>
-                                    <td></td>
+                                    <td>대출실행전자계약(약관동의)</td>
+                                    <td>전자계약서 작성하기 페이지와 동일 사용</td>
                                     <td><a href="views/lon/prc/loanSign.html" target="_blank">views/lon/prc/loanSign.html</a></td>
                                 </tr>
 
@@ -2231,20 +2232,25 @@
                                     <td class="modify">미전달</td>
                                     <td class="person">박수현</td>
                                     <td></td>
-                                    <td>대출실행전자계약_ 전자계약체결 내용확인<br/>
-                                        - 인증수단(공통)
-                                    </td>
-                                    <td>디자인 추가</td>
+                                    <td>전자계약체결 내용확인</td>
+                                    <td>전자계약서 작성하기 페이지와 동일 사용 / 디자인 추가</td>
                                     <td><a href="views/lon/prc/loanSign2.html" target="_blank">views/lon/prc/loanSign2.html</a></td>
                                 </tr>
-
-
 
                                 <tr>
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
-                                    <td>본인인증</td>
+                                    <td>본인인증 방식 (팝업)</td>
+                                    <td>화면설계서는 인증수단 선택 팝업으로 되어있습니다. 공통으로 쓰일 경우 본인인증 방식 텍스트로 통일했습니다.</td>
+                                    <td><a href="" target="_blank">select_auth.html</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="modify"></td>
+                                    <td class="person">공통</td>
+                                    <td></td>
+                                    <td>본인인증 (풀팝업)</td>
                                     <td></td>
                                     <td><a href="" target="_blank">user_auth.html</a></td>
                                 </tr>
@@ -2285,7 +2291,7 @@
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
-                                    <td>본인인증 방식 선택(팝업)</td>
+                                    <td>본인인증 (풀팝업)</td>
                                     <td></td>
                                     <td><a href="" target="_blank">user_auth.html</a></td>
                                 </tr>
@@ -2328,7 +2334,7 @@
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
-                                    <td>본인인증</td>
+                                    <td>본인인증 (풀팝업)</td>
                                     <td></td>
                                     <td><a href="" target="_blank">user_auth.html</a></td>
                                 </tr>
@@ -2383,9 +2389,9 @@
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
-                                    <td>본인인증</td>
+                                    <td>본인인증 (풀팝업)</td>
                                     <td></td>
-                                    <td><a href="" target="_blank"></a></td>
+                                    <td><a href="" target="_blank">user_auth.html</a></td>
                                 </tr>
 
                                 <tr>
@@ -2428,12 +2434,12 @@
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
-                                    <td>인증수단 (팝업)<br/>
-                                        - 인증완료 됐을 경우(Alert)
-                                        - 인증이 완료 안됐을 경우 (Alert)
+                                    <td>본인인증 (팝업)<br/>
+                                        - 본인인증 완료 (Alert)
+                                        - 본인인증 미완료-- (Alert)
                                     </td>
                                     <td></td>
-                                    <td><a href="" target="_blank">authSel.html</a></td>
+                                    <td><a href="" target="_blank">select_auth.html</a></td>
                                 </tr>
 
                                 <tr>
@@ -2481,27 +2487,36 @@
                                     <td class="modify"></td>
                                     <td class="person"></td>
                                     <td></td>
+                                    <td>전자계약서 이용약관</td>
+                                    <td>대출신청의 대출실행전자계약서 페이지와 동일 사용</td>
+                                    <td><a href="views/lon/prc/loanSign.html" target="_blank">views/lon/prc/loanSign.html</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="modify"></td>
+                                    <td class="person"></td>
+                                    <td></td>
                                     <td>전자계약체결 내용확인</td>
-                                    <td></td>
-                                    <td><a href="" target="_blank"></a></td>
+                                    <td>대출신청의 대출실행전자계약서 페이지와 동일 사용</td>
+                                    <td><a href="views/lon/prc/loanSign2.html" target="_blank">views/lon/prc/loanSign2.html</a></td>
                                 </tr>
 
                                 <tr>
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
-                                    <td>본인인증</td>
+                                    <td>본인인증 (풀팝업)</td>
                                     <td></td>
-                                    <td><a href="" target="_blank"></a></td>
+                                    <td><a href="" target="_blank">user_auth.html</a></td>
                                 </tr>
 
                                 <tr>
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
-                                    <td>본인인증 방식</td>
-                                    <td></td>
-                                    <td><a href="" target="_blank"></a></td>
+                                    <td>본인인증 방식 (팝업)</td>
+                                    <td>화면설계서는 인증수단 선택 팝업으로 되어있습니다. 공통으로 쓰일 경우 본인인증 방식 텍스트로 통일했습니다.</td>
+                                    <td><a href="" target="_blank">select_auth.html</a></td>
                                 </tr>
 
                                 <tr>
@@ -2517,11 +2532,13 @@
                                     <td class="modify"></td>
                                     <td class="person"></td>
                                     <td></td>
-                                    <td>전자계약서 작성 완료(대출금 입금)<br/>
+                                    <td>
+                                        전자계약서 작성 시간 초과 안내<br/>
+                                        전자계약서 작성 완료(대출금 입금)<br/>
                                         전자계약서 작성 완료(상담원 연락 예정)
                                     </td>
                                     <td></td>
-                                    <td><a href="" target="_blank"></a></td>
+                                    <td><a href="views/lon/prc/loanSign3.html" target="_blank">views/lon/prc/loanSign3.html</a></td>
                                 </tr>
 
                                 <tr>
@@ -2981,7 +2998,7 @@
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
-                                    <td>인증방법 선택 (팝업) (본인인증)</td>
+                                    <td>본인인증 (풀팝업)</td>
                                     <td></td>
                                     <td><a href="views/common/layer/user_auth.html" target="_blank">views/common/layer/user_auth.html</a></td>
                                 </tr>
@@ -3005,7 +3022,7 @@
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
-                                    <td>인증방법 선택 (팝업) (본인인증)</td>
+                                    <td>본인인증 (풀팝업)</td>
                                     <td></td>
                                     <td><a href="views/common/layer/user_auth.html" target="_blank">views/common/layer/user_auth.html</a></td>
                                 </tr>
@@ -3255,7 +3272,7 @@
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
-                                    <td>본인인증 (팝업)</td>
+                                    <td>본인인증 (풀팝업)</td>
                                     <td></td>
                                     <td><a href="" target="_blank">user_auth.html</a></td>
                                 </tr>
@@ -4377,7 +4394,7 @@
                                     <td class="person">공통</td>
                                     <td></td>
                                     <td>본인인증 방식 (팝업)</td>
-                                    <td>타이틀확인 필요</td>
+                                    <td>타이틀확인 필요 / 화면설계서는 인증수단 선택 팝업으로 되어있습니다. 공통으로 쓰일 경우 본인인증 방식 텍스트로 통일했습니다.</td>
                                     <td><a href="/views/common/layer/select_auth.html" target="_blank">/views/common/layer/select_auth.html</a></td>
                                 </tr>
                                 <tr>
