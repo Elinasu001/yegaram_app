@@ -2182,9 +2182,10 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .inquiry-result-area .result-list li a:has(>div:nth-of-type(2)) { display:flex; }
 .inquiry-result-area .result-list .date > span { margin-left:10px; }
 .inquiry-result-area .result-list .txt-wrap { flex:1 1 auto; }
+.inquiry-result-area .result-list .txt-wrap .tit { font-size:0.88889rem; line-height:1.278rem; }
 .inquiry-result-area .result-list .txt-wrap .date { margin-top:2px; }
 .inquiry-result-area .result-list .amount-wrap { margin-top:0; padding:0; flex:1 1 fit-content; place-self: flex-end; font-size:0; text-align:right; background:#fff; }
-.inquiry-result-area .result-list .amount-wrap .amount { position:static; color:#FF0000; font-weight:500; font-size:1rem; line-height:1.38889;}
+.inquiry-result-area .result-list .amount-wrap .amount { position:static; color:#FF0000; font-weight:500; font-size:0.88889rem; line-height:1.278rem; }
 .inquiry-result-area .result-list .amount-wrap .amount.deposit { color:#4E32A5;}
 .inquiry-result-area .result-list .amount-wrap .amount .tit { margin-right:3px; font-weight:300; color:#333333; }
 .inquiry-result-area .result-list .amount-wrap .balance { display:block; margin-top:10px; font-weight:300; font-size:0.88889rem; line-height:1.4375; }
@@ -2554,14 +2555,14 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .visaul-info-box .info-tit + *, .flag-tit-wrap + * { margin-top:5px; }
 .visaul-info-box:has(.btn-set) .info-tit {width: 80%}
 .visaul-info-section .visaul-info-box { margin-top:0; }
-.visaul-info-section .visaul-info-box:has(.btn-set) .info-tit { width:inherit; line-height:1.6; }
+/* .visaul-info-section .visaul-info-box:has(.btn-set) .info-tit { width:inherit; line-height:1.6; } */
 .visaul-info-box .btn-modi { position:absolute; top:20px; right:50px; }
 .visaul-info-box .btn-cont-wrap { margin-top:25px!important; }
 /* .visaul-info-box .btn-cont-wrap .btn-info { background-color:#F4F5FB; color:#2B0F62; } */
-.visaul-info-box:has(.flag) .info-tit { margin-top:7px; }
+/* .visaul-info-box:has(.flag) .info-tit { margin-top:7px; } */
 .visaul-info-box + .txt-list-wrap { margin-top:20px; }
-/**계좌상세 클래스 추가**/
-.visaul-info-box .card-tit .flag { margin-right:7px; } 
+/** 레이블 있을 경우 **/
+.visaul-info-box .card-tit { display:flex; align-items:center; gap:10px; }
 
 
 
@@ -2633,12 +2634,12 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 /* 계좌목록 조회 상세  */
 .amount-area {display:inline-block;width:100%;margin-top: 10px;}
 .amount-area > li { display:flex; align-items: center; width:100%; padding: 10px 0; }
-.amount-area > li + li { border-top:1px solid #EEEEEE; }
+/* .amount-area > li + li { border-top:1px solid #EEEEEE; } */
 .amount-area.border-none > li:last-child { border-top:0px; }
 .amount-area > li > span { flex:1; }
 .amount-area .tit { font-weight:400; color:#333333; font-size:0.77778rem; line-height:1.5; }
-.amount-area .num { font-weight:700; color:#260F54; font-size:0.88889rem; line-height:1.4375; text-align:right; }
-.amount-area .num em { font-weight:700; color:#F1108E; font-size:1.11111rem; line-height:1.35; }
+.amount-area .num { font-weight:700; color:#333333; font-size:0.88889rem; line-height:1.4375; text-align:right; }
+.amount-area .num em { font-weight:700; color:#4E32A5; font-size:1.11111rem; line-height:1.35; }
 .amount-area + .progress-area { margin-top:10px; }
 
 
