@@ -2560,6 +2560,10 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 /* .visaul-info-box .btn-cont-wrap .btn-info { background-color:#F4F5FB; color:#2B0F62; } */
 .visaul-info-box:has(.flag) .info-tit { margin-top:7px; }
 .visaul-info-box + .txt-list-wrap { margin-top:20px; }
+/**계좌상세 클래스 추가**/
+.visaul-info-box .card-tit .flag { margin-right:7px; } 
+
+
 
 /* 2023-07-16 카드 관리 텍스트 테스트*/
 .visaul-info-box .info-tit.ico-arrow::after { content:''; display:inline-block; width: 24px; height: 24px; position:absolute; right:0; top:0; font-weight:400; font-size:0.88889rem; line-height:1.4375; color:#757575; background: url(../images/common/btn_setting.png) no-repeat 50%/24px auto; }
