@@ -81,6 +81,11 @@
 .recom-slider-wrap .btn-go-link { position:absolute; bottom:25px; left:20px; right:20px; color:#51348D; background:#fff url('../images/main/arrow_right.svg') no-repeat calc(100% - 20px) 50% / 16px auto; }
 .recom-slider-wrap .btn-go-link:after { content:none; }
 
+/* 추천상품 슬라이더 */
+.recom-slider-wrap .recom-pagination .swiper-pagination-bullet{width:9px; height:9px; background:#999; }
+.recom-slider-wrap .recom-pagination .swiper-pagination-bullet-active { width:30px; border-radius:9px; background:#BCB5CA;}
+.recom-pagination { text-align: center; margin-top: 18px; }
+
 /** 처음 오셨나요? **/
 .guide-area { margin-top:65px !important; }
 .guide-list li:not(:first-child) { border-top:1px solid #DDE2E8; }
