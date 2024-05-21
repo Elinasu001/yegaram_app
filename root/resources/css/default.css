@@ -908,9 +908,9 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 
 
 /*** 체크박스/라디오 ***/
-.terms-area { margin-top:40px; }
-.terms-wrap .terms-area { margin-top:30px; }
-.terms-wrap .terms-area:first-child { margin-top:0; }
+/* .terms-area { margin-top:40px; } */
+/* .terms-wrap .terms-area { margin-top:30px; } */
+/* .terms-wrap .terms-area:first-child { margin-top:0; } */
 .terms-area { display:inline-block; width:100%; }
 .terms-wrap input[type="checkbox"] { display:block; position:absolute; top:0; left:0; width:100%; height:100%; appearance:none; background-color:transparent; -webkit-appearance:none; cursor: pointer; }
 
@@ -1600,7 +1600,7 @@ body.on { position:fixed; top:0; }
 .layerpopup .subtxt-wrap { font-size:0.88889rem; line-height:1.4375; color:#666; }
 .layerpopup .ly-select-list + div .sub-title { padding-top:30px; }
 .layerpopup .txtbox-wrap { /*padding-bottom:15px;*/  color:#666666; }
-.layerpopup .default-wrap > div { margin-top:40px;  }
+/* .layerpopup .default-wrap > div { margin-top:40px;  } */
 .layerpopup .txtbox-wrap > div { margin-top:15px; }
 .layerpopup .txtbox-wrap.bt1 { padding-bottom:15px; border-bottom:1px solid #ddd; }
 /* .layerpopup .txtbox-wrap + .ly-select-list { margin-top:30px; } */
@@ -2298,17 +2298,14 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 /** [공통] 상품리스트 템플릿 **/
 .tooltip-form-wrap { margin-left:15px; display:flex; flex-direction:row-reverse; }
-/* .tooltip-wrap.type2 { z-index:13; } */
 .tooltip-wrap.type2 .tooltip-txt  { display:none; left:inherit; top:-53px; right:-10px; padding:12px 15px; background:#F1EBFD; font-weight:400; color:#612AD0; font-size:0.66667rem; line-height:1.58334; transform:none; transition:none; opacity:1; }
-.tooltip-wrap.type2 .tooltip-txt:before {  left:inherit; right:13px; border-left-color:#F1EBFD; }
-/* .tooltip-wrap.type2 .tooltip-txt::before  { z-index:13; }
-.tooltip-wrap.type2 .tooltip-txt  { z-index:13; } */
-.like {  z-index:10; display:block; width:28px; height:28px; font-size:0; /*margin-top:-5px;*/ background:url("../images/common/ico_heart.png") no-repeat 50% / 28px auto; }
+.tooltip-wrap.type2 .tooltip-txt:before { z-index:2; left:inherit; right:13px; border-left-color:#F1EBFD; }
+.like {  z-index:10; display:block; width:28px; height:28px; font-size:0; background:url("../images/common/ico_heart.png") no-repeat 50% / 28px auto; }
 .like.active { background-image:url("../images/common/ico_heart_on.png"); }
 
-.scale { display:block; width:28px; height:28px; font-size:0; /*margin-top:-5px;*/ background:url("../images/common/ico_scale.png") no-repeat 50% / 28px auto; }
+.scale { display:block; width:28px; height:28px; font-size:0;  background:url("../images/common/ico_scale.png") no-repeat 50% / 28px auto; }
 .scale.active { background-image:url("../images/common/ico_scale_on.png"); }
-.tooltip-wrap.type2:has(.scale) { /*right:34px;*/ }
+/* .tooltip-wrap.type2:has(.scale) {  } */
 
 .tooltip-wrap.type2 .tooltip-txt-off { display:none; position: absolute; top:-73px; right:-10px; white-space:nowrap; transition:all .2s ease; padding:12px 15px; border-radius:10px; box-shadow:0px 7px 7px 0px #bebdbd; background:#3A00B1; font-weight:400; color:#FFFFFF; font-size:0.66667rem; line-height:1.58334; letter-spacing:-1px; transform:none; }
 .tooltip-wrap.type2 .tooltip-txt-off:before { content: ''; position:absolute; transform:translate(-50%, 0) rotate(90deg); right:13px; bottom:-9px; border-top:5px solid transparent; border-right:5px solid transparent; border-bottom:5px solid transparent; border-left:5px solid #3A00B1; border-left-color:#3A00B1; }
@@ -2328,8 +2325,17 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .visual-area { margin:0 -20px; padding:20px 20px 145px; background:#F8F8F8; }
 .product-detail .visual-area:first-of-type { padding:20px 20px 40px; text-align:center; }
 .product-detail .visual-area:nth-of-type(even) { background:#fff; }
+
+/* 예적금상품 */
 .product-detail .visual-area.img01 { background:url("../images/common/bg_proudct01.png") no-repeat calc(100% - 20px) calc(100% - 20px); background-size:105px; }
 .product-detail .visual-area.img02 { background:#F8F8F8 url("../images/common/bg_proudct02.png") no-repeat calc(100% - 20px) calc(100% - 20px); background-size:105px; }
+
+/* 대출상품 */
+.product-detail.loan01 .visual-area.img01 { background:url("../images/common/bg_product03.png") no-repeat calc(100% - 20px) calc(100% - 20px); background-size:105px; }
+.product-detail.loan01 .visual-area.img02 { background:#F8F8F8 url("../images/common/bg_product04.png") no-repeat calc(100% - 20px) calc(100% - 20px); background-size:105px; }
+
+
+
 .product-detail .visual-area .tit-wrap { margin-top:20px; }
 .product-detail .visual-area .tit-wrap > .tag { display:flex; margin-bottom:12px; }
 .product-detail .visual-area .tit-wrap > .tag li{ font-size:0.77778rem; color:#666; margin-right:10px; color:#999999; }
@@ -2340,11 +2346,15 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .visual-area .desc-txt { padding:12px 0 30px; color:#666666; font-size:0.77778rem; }
 .product-detail .visual-area .desc-txt + ul{ display:flex; justify-content:center;}
 .product-detail .visual-area .desc-txt + ul > li { width:50%; }
-.product-detail .visual-area .desc-txt + ul > li::before { content:""; display:inline-block; width:64px; height:64px; border-radius:50%; background-color:#fff; background-position:center; background-repeat:no-repeat; background-size:48px;  }
+.product-detail .visual-area .desc-txt + ul > li::before { content:""; display:inline-block; width:64px; height:64px; border-radius:50%; background-color:#fff; background-position:center; background-repeat:no-repeat; background-size:41px;  }
+
+/* 예적금상품 */
 .product-detail.dep01 .visual-area .desc-txt + ul > li:nth-of-type(1)::before  { background-image:url("../images/common/ico_product01.png"); }
 .product-detail.dep01 .visual-area .desc-txt + ul > li:nth-of-type(2)::before { background-image:url("../images/common/ico_product02.png"); }
-.product-detail.dep02 .visual-area .desc-txt + ul > li:nth-of-type(1)::before  { background-image:url("../images/common/ico_product_limit.png"); }
-.product-detail.dep02 .visual-area .desc-txt + ul > li:nth-of-type(2)::before { background-image:url("../images/common/ico_product_rate.png"); }
+/* 대출상품 */
+.product-detail.loan01 .visual-area .desc-txt + ul > li:nth-of-type(1)::before  { background-image:url("../images/common/ico_product_limit.png"); }
+.product-detail.loan01 .visual-area .desc-txt + ul > li:nth-of-type(2)::before { background-image:url("../images/common/ico_product_rate.png"); }
+
 .product-detail .visual-area .desc-txt + ul > li > strong.tit { display:block; margin:8px 0 4px; color:#666666; font-size:0.77778rem; }
 .product-detail .visual-area .desc-txt + ul > li > span.exp { display:block; font-size:0.88889rem; font-weight:500; color:#033333;  }
 .product-detail .visual-area .flag-tit-wrap { display:block; margin-top:5px; }
@@ -2371,8 +2381,10 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .visual-area .flag-tit-wrap { display:block; margin-top:5px; }
 .product-detail .visual-area .icon-exp + .flag-tit-wrap { margin-top:15px; /*padding-right:40px;*/ }
 .product-detail .visual-area .icon-exp + .flag-tit-wrap:has(.tooltip-wrap.type2+.tooltip-wrap.type2) { /*padding-right:28px;*/ }
+/* 예적금상품 */
 .product-detail.dep01 .visual-area .flag-tit-wrap .tit { display:block; margin-top:10px; font-size:1.22222rem; font-weight:600; color:#260F54; word-break:normal; }
-.product-detail.dep02 .visual-area .flag-tit-wrap .tit { color:#ED008D; }
+/* 대출상품 */
+.product-detail.loan01 .visual-area .flag-tit-wrap .tit { color:#ED008D; }
 .product-detail .visual-area .flag-tit-wrap .tooltip-wrap.type2 {position:absolute; right:0; top:0; }
 .product-detail .visual-area .flag-tit-wrap .tit { display:block; margin-top:10px; font-size:1.22222rem; font-weight:600; color:#260F54; word-break:normal; }
 .product-detail .visual-area .label-info-wrap { padding:50px 0 40px; }

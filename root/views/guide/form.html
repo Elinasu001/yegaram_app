@@ -106,8 +106,16 @@
         <!-- s: contents -->
         <div class="contents">
             <div class="default-wrap">
-                <section class="form-all-wrap"><!-- [퍼블-1] : 개발자 포커스 및 error 스크립트로 인하여 select-wrap으로 감싼 레이아웃 form-wrap으로 변경 -->
+                <!-- D :
+                    
+                    form-wrap 구조는 form-all-wrap 태그로 감싸는 걸로 변경했습니다.
+                    
+                    select-box 감싼 form-wrap > input > select-wrap을 form-wrap 태그로만 감싸는 걸로 변경했습니다.
 
+                    5/13 - 개발자 포커스 및 error 스크립트로 인하여
+                    select-wrap으로 감싼 레이아웃 form-wrap으로 변경
+                -->
+                <section class="form-all-wrap">
                     
                     <div class="form-wrap">
                         <div id="rolldate" class="select-box type2 type-dd" tabindex="1">

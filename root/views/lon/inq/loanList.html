@@ -56,11 +56,21 @@
 			<a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a> <!--D: 이전버튼 -->
 		</div>
 		<div class="headerCenter">
-			<h2 class="text"><span>예적금</span></h2> 
+			<h2 class="text"><span>대출상품</span></h2>
 		</div>
 		<div class="headerRight">
-			<a href="javascript:void(0)" class="btn btn-interest"><img src="/resources/images/header/btn_interest.png" alt="관심상품"><em class="count-flag">3</em></a>  <!--D: 관심상품버튼 -->
-			<a href="javascript:void(0)" class="btn btn-like"><img src="/resources/images/header/btn_like.png" alt="좋아요"><em class="count-flag">3</em></a>  <!--D: 좋아요버튼 -->
+
+		<!--D: 알림버튼 -->
+		<!-- <a href="javascript:void(0)" class="btn btn-notify"><img src="/resources/images/header/btn_notify.png" alt="알림"><em class="count-flag"><span>3</span></em></a> --> <!--D: count-flag : 수 표시-->
+
+        <!--D: 관심상품버튼 (비교하기상품) -->
+		<a href="javascript:void(0)" class="btn btn-interest"><img src="/resources/images/header/btn_interest.png" alt="관심상품"><em class="count-flag">3</em></a> <!--D: count-flag : 수 표시-->
+
+		<!--D: 좋아요버튼 -->
+		<a href="javascript:void(0)" class="btn btn-like"><img src="/resources/images/header/btn_like.png" alt="좋아요"><em class="count-flag">3</em></a> <!--D: count-flag : 수 표시-->
+
+		
+		
 		</div>
 	</header>
 	<!-- //header -->
@@ -69,20 +79,17 @@
     <div class="contentsWrap">
         <!--contents -->
         <div class="contents">
-            <div class="default-wrap gray-wrap product">
+            <div class="default-wrap gray-wrap product"><!--D: gray-wrap 구조 삭제 후 default-wrap 태그에 gray-wrap 클래스 추가-->
                 <section class="tabs-wrap">
                     <div class="tabs swiper">
                         <ul class="swiper-pager"></ul>
                             <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="form-wrap">
-                                    <div class="input">
-                                        <div class="select-wrap type2 on">
-                                            <div class="select-box">
-                                                <label for="">총 <strong class="point">3</strong> 개</label>
-                                                <span class="option">4,800,000 원</span>
-                                            </div>
-                                        </div>
+                            
+                                <div class="form-wrap type2 on"><!--D:공통 : input, select-wrap 삭제 후 form-wrap태그로만 감싸주기로 변경-->
+                                    <div class="select-box">
+                                        <label for="">총 <strong class="point">3</strong> 개</label>
+                                        <span class="option">4,800,000 원</span>
                                     </div>
                                 </div>
 
@@ -120,7 +127,7 @@
                                                 </div>
                                             </div>
                                             <div class="flag-tit-wrap">
-                                                <em class="flag style3">신용대출</em><!--D: style2클래스 : 예적금 style3클래스 : 대출 style4클래스 : 종합통장대출-->
+                                                <em class="flag style3">신용대출</em><!--D: depList.html와 동일 style2클래스 : 예적금 / style3클래스 : 대출 / style4클래스 : 종합통장대출-->
                                                 <strong class="tit">예스론</strong>
                                             </div>
                                             <ul class="text-bar-list">
@@ -769,6 +776,7 @@
                                     <strong class="info">연<span>6.80</span>% ~ <span>18.20</span>%</strong>
                                 </div>
                             </div>
+                            <!--D: 삭제-->
                             <!-- <div class="btn-cont-wrap">
                                 <a href="#none" class="btn">가입하기</a>
                             </div> -->
@@ -799,6 +807,7 @@
                                     <strong class="info">연<span>15.60</span>% ~ <span>19.90</span>%</strong>
                                 </div>
                             </div>
+                            <!--D: 삭제-->
                             <!-- <div class="btn-cont-wrap">
                                 <a href="#none" class="btn">가입하기</a>
                             </div> -->

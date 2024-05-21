@@ -69,148 +69,186 @@
             <!--contents -->
             <div class="contents">
                 <div class="default-wrap">
-                    <section><!-- D : section 추가-->
-                        <div class="tit-wrap">
-                            <p class="txt">대출 신청을 위해<br><strong>약관에 동의</strong>가 필요해요</p><!--D: 텍스트 변경-->
+                    <div class="tit-wrap">
+                        <p class="txt">대출 신청을 위해<br><strong>약관에 동의</strong>가 필요해요</p><!--D: 텍스트 변경-->
+                    </div>
+
+                    <!--S: 약관-->
+                    <section class="terms-area" id="termsArea">
+
+                        <div class="terms-wrap level1 chk-all">
+                            <fieldset>
+                                <input type="checkbox" id="chk_TA03500000" name="chk_TA03500000" value=""
+                                    class="validChk radioClass">
+                                <label for="chk_TA03500000"><span>금융상품 중요사항 안내</span></label>
+                            </fieldset>
                         </div>
 
-                        <div class="terms-area" id="validateArea"><!--D: div로 변경-->
+                        <div class="terms-wrap level1 chk-all">
+                            <fieldset>
+                                <input type="checkbox" id="chk_understanding_confirm" name="chk_understanding_confirm"
+                                    value="" class="validChk radioClass2">
+                                <label for="chk_understanding_confirm"><span>이해여부 확인</span></label>
+                            </fieldset>
+                        </div>
 
-                            <div class="terms-wrap level1 chk-all">
-                                <fieldset>
-                                    <input type="checkbox" id="allChk01" class="check all" data-TERMS_CODE="PC00000013"
-                                        onchange="agreeChk(this);">
-                                    <label for="allChk01"><span>약관에 모두 동의할게요</span></label>
-                                </fieldset>
+                        <div class="terms-wrap level1 chk-all">
+                            <fieldset>
+                                <input type="checkbox" id="allChk01" class="check all">
+                                <label for="allChk01"><span>약관에 모두 동의할게요</span></label>
+                            </fieldset>
+                        </div>
+
+                        <!--D: 약관목록반복 -->
+
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chk_T000800004" name="check" value="Y"
+                                    class="check agreeYn validChk">
+                                <label for="chk_T000800004"><span>[필수] 가계대출 상품설명서 </span></label>
+                            </fieldset>
+                        </div>
+
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chk_T000800020" name="check" value="Y" class="check agreeYn validChk">
+                                <label for="chk_T000800020"><span>[필수] 상호저축은행 여신거래기본약관 </span></label>
+                            </fieldset>
+                        </div>
+
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chk_T000800010" name="check" value="Y" class="check agreeYn validChk">
+                                <label for="chk_T000800010"><span>[필수] CMS출금이체 약관 </span></label>
+                            </fieldset>
+                        </div>
+
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chk_T000800001" name="check" value="Y" class="check agreeYn validChk">
+                                <label for="chk_T000800001"><span>[필수] 개인(신용)정보 수집·이용·제공·조회 동의서 </span></label>
+                            </fieldset>
+                        </div>
+
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chk_T000800019" name="check" value="Y" class="check agreeYn validChk">
+                                <label for="chk_T000800019"><span>[필수] 개인(신용)정보 제3자 제공동의서(비여신 여신공통) </span></label>
+                            </fieldset>
+                        </div>
+
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chk_T000800002" name="check" value="Y"class="check agreeYn validChk">
+                                <label for="chk_T000800002"><span>[필수] 개인(신용)정보 수집·이용·제공 동의서(여신 금융거래) </span></label>
+                            </fieldset>
+                        </div>
+
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chk_T000800007" name="check" value="Y" class="check agreeYn validChk">
+                                <label for="chk_T000800007"><span>[필수] 개인(신용)정보 수집,이용,제공 동의서(신용보증 신청용) </span></label>
+                            </fieldset>
+                        </div>
+
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chk_T000800006" name="check" value="Y" class="check agreeYn validChk">
+                                <label for="chk_T000800006"><span>[필수] 개인(신용)정보 조회 동의서(신용보증 신청용) </span></label>
+                            </fieldset>
+                        </div>
+
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chk_TA06000004" name="check" value="Y" class="check agreeYn validChk">
+                                <label for="chk_TA06000004"><span>[필수] 본인정보 제3자 제공동의요구서(공공 마이데이터(여신)) </span></label>
+                            </fieldset>
+                        </div>
+
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chk_T000800017" name="check" value="Y" class="check agreeYn">
+                                <label for="chk_T000800017"><span>[선택] 개인(신용)정보 수집·이용 동의서(보증료 우대 서비스) </span></label>
+                            </fieldset>
+                        </div>
+
+                        <div class="terms-wrap level2">
+                            <fieldset>
+                                <input type="checkbox" id="chk_T000800018" name="check" value="Y" class="check agreeYn">
+                                <label for="chk_T000800018"><span>[선택] 개인(신용)정보 수집·이용 동의서(상품서비스 안내 등) </span></label>
+                            </fieldset>
+                        </div>
+
+                        <div class="terms-wrap level2">
+
+                            <fieldset>
+                                <input type="checkbox" id="chk_T000800003" name="check" value="Y" class="check agreeYn  mktChk" onclick="biz.terms('T000800003', $('#chk_T000800003'));">
+                                <label for="chk_T000800003"><span>[선택] 개인(신용)정보 수집·이용·제공 동의서(상품서비스 안내 등) </span></label>
+                            </fieldset>
+
+                            <div class="etc level3">
+                                <div class="terms-wrap w100">
+                                    <input type="checkbox" id="svcCheckType1" name="check" value="" class="check mktYn prodSvrMktYn">
+                                    <label for="svcCheck01">위 개인(신용)정보 수집·이용에 동의하십니까?<em class="safe1">안심</em> </label>
+                                </div>
                             </div>
-                            <!-- 약관목록반복
-                            약관상태저장은 본 페이지에서 해야 하므로 / 펑션을 하나 제공
-                            전체동의는 조회 카테고리로 처리 (상품코드.pdf)
-                            -->
-    
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chk_T000800001" name="check" value="" class="check agreeYn validChk " onclick="biz.terms('T000800001', $('#chk_T000800001'));">
-                                    <label for="chk_T000800001"><span>[필수] 개인(신용)정보 수집·이용·제공·조회 동의서 </span></label>
-                                </fieldset>
+
+                            <div class="etc level3">
+                                <div class="terms-wrap w100">
+                                    <input type="checkbox" id="svcCheckType2" name="check" value="" class="check mktYn">
+                                    <label for="svcCheck01">전자적 전송매체를 통한 광고성 정보의 수신을 동의하십니까?</label>
+                                </div>
                             </div>
-    
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chk_T000800002" name="check" value="" class="check agreeYn validChk " onclick="biz.terms('T000800002', $('#chk_T000800002'));">
-                                    <label for="chk_T000800002"><span>[필수] 개인(신용)정보 수집·이용·제공 동의서(여신 금융거래) </span></label>
-                                </fieldset>
-                            </div>
-    
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chk_T000800003" name="check" value="" class="check agreeYn  mktChk" onclick="biz.terms('T000800003', $('#chk_T000800003'));">
-                                    <label for="chk_T000800003"><span>[선택] 개인(신용)정보 수집·이용·제공 동의서(상품서비스 안내) </span></label>
-                                </fieldset>
-    
-    
-                                <div class="etc level3">
+
+                            <div class="tit">상품서비스 안내수단</div>
+
+                            <div class="etc level3">
+                                <div class="etc level4 w100">
                                     <div class="terms-wrap">
-                                        <input type="checkbox" id="svcCheck01" name="check" value="" class="check mktYn">
-                                        <label for="svcCheck01">문자</label>
+                                        <input type="checkbox" id="svcCheckMktAll" name="svcCheckMktAll" value="" class="check mktYn"><label for="svcCheck01">전체</label>
                                     </div>
                                     <div class="terms-wrap">
-                                        <input type="checkbox" id="svcCheck02" name="check" value="" class="check mktYn">
-                                        <label for="svcCheck02">이메일</label>
+                                        <label for=""></label>
                                     </div>
                                     <div class="terms-wrap">
-                                        <input type="checkbox" id="svcCheck03" name="check" value="" class="check mktYn">
-                                        <label for="svcCheck03">전화</label>
+                                        <input type="checkbox" id="svcCheck01" name="svcCheckMkt" value="" class="check mktYn prodSvrMktYn"> <label for="svcCheck01">문자</label>
                                     </div>
                                     <div class="terms-wrap">
-                                        <input type="checkbox" id="svcCheck04" name="check" value="" class="check mktYn">
-                                        <label for="svcCheck04">DM</label>
+                                        <input type="checkbox" id="svcCheck02" name="svcCheckMkt" value="" class="check mktYn prodSvrMktYn"> <label for="svcCheck02">이메일</label>
+                                    </div>
+                                    <div class="terms-wrap">
+                                        <input type="checkbox" id="svcCheck03" name="svcCheckMkt" value="" class="check mktYn prodSvrMktYn"> <label for="svcCheck03">전화</label>
+                                    </div>
+                                    <div class="terms-wrap">
+                                        <input type="checkbox" id="svcCheck04" name="svcCheckMkt" value="" class="check mktYn prodSvrMktYn"> <label for="svcCheck04">DM</label>
                                     </div>
                                 </div>
                             </div>
-    
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chk_T000800011" name="check" value="" class="check agreeYn  " onclick="biz.terms('T000800011', $('#chk_T000800011'));">
-                                    <label for="chk_T000800011"><span>[선택] 대출거절사유 고지에 관한 사항 </span></label>
-                                </fieldset>
+
+                            <div class="etc level3">
+                                <div class="terms-wrap w100">
+                                    <input type="checkbox" id="svcCheckApprAll" name="mktType2All" value="" class="check mktYn prodSvrMktYn">
+                                    <label for="svcCheck01">제공 항목에 관한 개인(신용)정보 제공 동의여부</label>
+                                </div>
+                                <div class="etc level4 w100">
+                                    <div class="terms-wrap w100">
+                                        <input type="checkbox" id="" name="mktType2" value="" class="check mktYn" disabled="">
+                                        <label for="svcCheck01">위 개인신용정보 제공에 동의하십니까?<em class="safe1">안심</em></label>
+                                    </div>
+                                </div>
+                                <div class="etc level4 w100">
+                                    <div class="terms-wrap w100">
+                                        <input type="checkbox" id="" name="mktType2" value="" class="check mktYn" disabled="">
+                                        <label for="svcCheck01">위 개인신용정보 제공에 동의하십니까?<em class="safe2">다소안심</em></label>
+                                    </div>
+                                </div>
                             </div>
-    
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chk_T000800004" name="check" value="" class="check agreeYn validChk " onclick="biz.terms('T000800004', $('#chk_T000800004'));">
-                                    <label for="chk_T000800004"><span>[필수] 가계대출 상품설명서 </span></label>
-                                </fieldset>
-                            </div>
-    
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chk_T000800006" name="check" value="" class="check agreeYn validChk" onclick="biz.terms('T000800006', $('#chk_T000800006'));">
-                                    <label for="chk_T000800006"><span>[필수] 개인(신용)정보 조회동의서 (서민금융진흥원用) </span></label>
-                                </fieldset>
-                            </div>
-    
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chk_T000800007" name="check" value="" class="check agreeYn validChk " onclick="biz.terms('T000800007', $('#chk_T000800007'));">
-                                    <label for="chk_T000800007"><span>[필수] 개인(신용)정보의 수집·이용·제공 및 행정·공공기관 및 금융회사 정보제공 동의 (서민금융진흥원) </span></label>
-                                </fieldset>
-                            </div>
-    
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chk_T000800008" name="check" value=""
-                                        class="check agreeYn validChk " onclick="biz.terms('T000800008', $('#chk_T000800008'));">
-                                    <label for="chk_T000800008"><span>[필수] 개인(신용)정보 및 기업(신용)정보 조회·수집·이용·제공과 행정정보공동이용, 전자금융거래확인서 발급을 위한 동의서 관리
-                                        </span></label>
-                                </fieldset>
-                            </div>
-    
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chk_T000800009" name="check" value=""
-                                        class="check agreeYn validChk "
-                                        onclick="biz.terms('T000800009', $('#chk_T000800009'));">
-                                    <label for="chk_T000800009"><span>[필수] 계약 체결이행 등을 위한 필수 동의서(개인금융성신용보험용) </span></label>
-                                </fieldset>
-                            </div>
-    
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chk_T000800010" name="check" value=""
-                                        class="check agreeYn validChk "
-                                        onclick="biz.terms('T000800010', $('#chk_T000800010'));">
-                                    <label for="chk_T000800010"><span>[필수] CMS출금이체 동의 </span></label>
-                                </fieldset>
-                            </div>
-    
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chk_T000800016" name="check" value=""
-                                        class="check agreeYn validChk "
-                                        onclick="biz.terms('T000800016', $('#chk_T000800016'));">
-                                    <label for="chk_T000800016"><span>[필수] 개인(신용)정보 제3자 제공동의서[통신관련정보] </span></label>
-                                </fieldset>
-                            </div>
-    
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chk_T000800017" name="check" value="" class="check agreeYn  "
-                                        onclick="biz.terms('T000800017', $('#chk_T000800017'));">
-                                    <label for="chk_T000800017"><span>[선택] 개인(신용)정보 수집·이용 동의서(보증료 우대 서비스) </span></label>
-                                </fieldset>
-                            </div>
-    
-                            <div class="terms-wrap level2">
-                                <fieldset>
-                                    <input type="checkbox" id="chk_T000800018" name="check" value="" class="check agreeYn  "
-                                        onclick="biz.terms('T000800018', $('#chk_T000800018'));">
-                                    <label for="chk_T000800018"><span>[선택] 개인(신용)정보 수집·이용 동의서(상품서비스 안내 등)</span></label>
-                                </fieldset>
-                            </div>
-    
+
                         </div>
+                        <!--D: 약관목록반복 //-->
+
                     </section>
+                    <!--E: 약관-->
 
                     <section><!--D: section 추가 및 list-bull 구조 변경 -->
                         <div class="list-bull">
@@ -223,7 +261,6 @@
                             </ul>
                         </div>
                     </section>
-                   
 
                     
 
