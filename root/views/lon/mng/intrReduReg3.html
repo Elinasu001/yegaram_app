@@ -107,14 +107,14 @@
                         <label for="ipt04" class="formlabel">주소</label>
                         <!--D: 삭제 <div class="input"> -->
                         <div class="input" onclick="biz.addrSelect(jusoRoadResultCallBack_home);"><!--D: div 구조 및 input클래스 추가-->
-                            <input type="text" title="주소검색" class="inp validChk" name="PSNT_RSDC_ZPCD" value="" id="ZIP_CODE" onkeyup="validChk();" onclick="removeErr(this);" placeholder="우편번호를 입력해주세요." required readonly>
+                            <input type="text" title="주소검색" class="inp validChk" name="PSNT_RSDC_ZPCD" value="" id="ZIP_CODE" onkeyup="validChk();" onclick="removeErr(this);" placeholder="우편번호 입력" required readonly>
                             <button type="button" class="btn btn-sm">우편번호찾기</button><!--D:btn btn-sm 클래스로 변경-->
                         </div>
                         <div  class="input"><!--D: div 구조 및 input클래스 추가-->
-                            <input type="text" class="inp validChk" name="PSNT_RSDC_BSIC_ADDR" value="" id="ADDR" onkeyup="validChk();" onclick="removeErr(this);" placeholder="기본주소를 입력해주세요." required readonly>
+                            <input type="text" class="inp validChk" name="PSNT_RSDC_BSIC_ADDR" value="" id="ADDR" onkeyup="validChk();" onclick="removeErr(this);" placeholder="기본주소 입력" required readonly>
                         </div>
                         <div  class="input"><!--D: div 구조 및 input클래스 추가-->
-                            <input type="text" class="inp validChk" name="PSNT_RSDC_DTAD" value="" id="ADDR_DETAIL" onkeyup="validChk();" onclick="removeErr(this);" placeholder="상세주소를 입력해주세요." required style="display:none">
+                            <input type="text" class="inp validChk" name="PSNT_RSDC_DTAD" value="" id="ADDR_DETAIL" onkeyup="validChk();" onclick="removeErr(this);" placeholder="상세주소 입력" required style="display:none">
                             <input type="hidden" id="PSNT_RSDC_BLDG_MNGNO" name="PSNT_RSDC_BLDG_MNGNO"><!-- 건물관리번호 -->
                             <input type="hidden" id="PSNT_RSDC_REF_ITEM_NM" name="PSNT_RSDC_REF_ITEM_NM"><!-- 참조항목명 -->
                         </div>
