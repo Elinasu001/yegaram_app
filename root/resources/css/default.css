@@ -933,7 +933,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 .terms-wrap.level2 + .level2 { margin-top:8px; }
 .terms-wrap.level2 + .terms-wrap.bg-box { margin-top:40px; }
 .terms-wrap.level2 + .terms-wrap.bg-box + .terms-wrap.bg-box { margin-top:15px; }
-.terms-wrap.level2 label { padding:0 0 0 26px; font-size:0.88889rem; line-height:1.4375; background:url("../images/common/chk_off.png") no-repeat left top/16px auto;  display:block; }
+.terms-wrap.level2 label { padding:0 0 0 26px; font-size:0.88889rem; line-height:1.4375; background:url("../images/common/chk_off.png") no-repeat left center/16px auto;  display:block; }
 .terms-wrap.level2 label > span { display:inline-block; width:100%; padding-right:26px; color:#666; line-height:1.4375; }
 .terms-wrap.level2 input[type="checkbox"]:checked + label { background-image:url("../images/common/chk_on.png"); }
 .terms-wrap.level2 label > span::after { content:''; display:inline-block; position:absolute; right:0; top:0; width:24px; height:24px; background:url("../images/common/ic-arrow-right.png") no-repeat 50%/16px auto; }
