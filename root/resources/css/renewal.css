@@ -732,6 +732,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 
 /* 여유자금계산기 */
 .sub-top-wrap { padding: 29px 20px 20px; background:#F7F8FA; }
+.sub-top-wrap .txt-list-wrap { margin-top:0; }
 /* .default-wrap:has(.sub-top-wrap) { padding-top:0; } */
 .s-text-box { margin-bottom:20px; padding-right:90px; box-sizing:border-box; background:url("../images/common/cal_character.png") no-repeat bottom right /90px; }
 .s-text-box .s-txt { margin-bottom:7px; font-weight:400; font-size:0.77778rem; line-height: 1.5; }
@@ -1061,7 +1062,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .chart-wrap { padding:30px 0 40px; }
 .chart-wrap .inquiry-set-wrap { margin:0; padding:0; }
 .sub-top-wrap .txt-list-wrap .txt-detail-area { background:#FFFFFF; }
-.sub-top-wrap:has(.txt-list-wrap) { padding:30px 20px; }
+.sub-top-wrap:has(.txt-list-wrap) { padding:20px; }
 .default-wrap:has(.txt-list-wrap) .btn-cont-wrap.btn-add { margin-top:40px; }
 /* .default-wrap > .tit-wrap { padding:20px 0 40px; } */
 .txt-list-wrap .btn-cont-wrap.btn-add:first-of-type { margin-top:20px; }
