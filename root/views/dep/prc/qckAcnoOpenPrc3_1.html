@@ -114,12 +114,14 @@
 
 		<!-- //e: contents -->
 
+		<!--[퍼블-1] 5/21 : 버튼 구조 공통으로 맞추기-->
 		<div class="fixed-btn-wrap">
-			<div class="btn-wrap">
-				<a href="#none" class="btn disabled" onclick="PageFunc.checkNext();">다음</a>
+			<div class="btn-wrap flexCol">
+				<a href="#none" class="btn" onclick="PageFunc.checkNext();">다음</a>
+				<a href="#none" class="btn txt" onclick="PageFunc.cancel();">그만하기</a>
 			</div>
-			<a href="#none" class="btn-txt" onclick="PageFunc.cancel();">그만하기</a>
-		</div>
+		</div>	
+
         <!--s:직업선택 -->
         <div id="lySel01" class="layerpopup layer-up">
             <div class="content-wrap">
@@ -173,7 +175,7 @@
         </div>
         <!--e:개인거래목적-->
         <!--s:거래자금원천-->
-        <div id="lySel03" class="layerpopup layer-up has-button" style="display:block">
+        <div id="lySel03" class="layerpopup layer-up has-button show" style="display:block">
             <div class="content-wrap">
                 <div class="pop-header">
                     <h2 class="pop-title">거래자금원천</h2>
