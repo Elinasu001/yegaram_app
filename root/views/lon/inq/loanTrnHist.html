@@ -71,8 +71,8 @@
                 <!--S: visaul-info-section -->
                 <div class="visaul-info-section">
 					<div class="visaul-info-box">
-                        <div class="card-tit"><!--D: 디자인 추가로 card-tit 구조 추가 -->
-                            <em class="flag style3">담보대출</em><!--D: 예적금: style2, 대출: style3, 종합통장대출: style4-->
+                        <div class="flag-tit-wrap"><!--D: flag-tit-wrap : 레이블 있을 경우 구조 추가 -->
+                            <em class="flag style3">담보대출</em><!--D: 예적금: style2, 대출: style3, 종합통장대출: style4 클래스가 적용됩니다. -->
                             <strong class="info-tit">e회전정기예금 복리</strong>
                         </div>
 						<div class="account-area">
@@ -83,7 +83,7 @@
                             <!--D: 추가-->
 							<li>
 								<strong class="tit">대출잔액</strong>
-								<span class="num"><em>358,000,000원</em></span>
+								<span class="num"><em>358,000,000원</em></span><!--D: 대출 잔액 표시 시 em 태그 필요 -->
 							</li>
                             <!--D: 추가//-->
                             <li>
@@ -189,7 +189,7 @@
                                         <strong class="tit">납입이자</strong>
                                     </div>
                                     <div class="amount-wrap">
-                                        <strong class="amount">350,000원</strong><!--D: amount 클래스는 디폴트, amount deposit 클래스는 빨간색으로 출금 및 이자일 경우 적용됩니다. 기존  deposit 클래스 삭제 -->
+                                        <strong class="amount">350,000원</strong><!--D: amount 클래스(디폴트) : 빨간색으로 출금 및 이자일 경우 적용됩니다. , amount deposit 클래스 : 입금 됐을 경우 적용됩니다. / 납입 이자로 deposit 클래스 삭제 -->
                                     </div>
                                 </a>
                             </li>

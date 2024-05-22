@@ -2567,7 +2567,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 
 /* 2023-07-16 카드 관리 텍스트 테스트*/
-.visaul-info-box .info-tit.ico-arrow::after { content:''; display:inline-block; width: 24px; height: 24px; position:absolute; right:0; top:0; font-weight:400; font-size:0.88889rem; line-height:1.4375; color:#757575; background: url(../images/common/btn_setting.png) no-repeat 50%/24px auto; }
+.visaul-info-box .info-tit.ico-arrow::after { content:''; display:inline-block; width: 24px; height: 24px; position:absolute; right:0; top:0; font-weight:400; font-size:0.88889rem; line-height:1.4375; color:#757575; background: url(../images/common/btn_setting2.png) no-repeat 50%/24px auto; }
 .visaul-info-box .info-tit .set { display:inline-block; float:right; font-size:0.88889rem; line-height:1.4375; font-weight:400; color:#757575; }
 /*.visaul-info-box .info-tit.ico-arrow::after { content:''; display:inline-block; position:absolute; right:0; top:50%; transform:Translate(0, -50%); width:16px; height:16px; background:url("../images/common/ic-arrow-right.png") no-repeat center/100%; } 2023-07-16 카드 관리 텍스트 테스트 */
 
