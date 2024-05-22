@@ -70,8 +70,8 @@
 		<!-- s: contents -->
 		<div class="contents">
 			<!-- s: default-wrap -->
-			<div class="default-wrap"><!-- [퍼블] 클래스 변경 -->
-				<div class="gray-wrap">
+			<div class="default-wrap gray-wrap"><!-- [퍼블] 클래스 변경 -->
+				<section class="">
 					<ul class="prod-box-list">
 						<li onclick="fnProdJoin('P000000013')">
 							<div class="prod-box">
@@ -115,93 +115,97 @@
 								<a href="javascript:void(0);" class="btn btn-primary">가입하기</a>
 							</div>
 						</li>
-
-						<li>
-							<div class="prod-box">
-								<div class="icon-exp">
-									<p>가장 많이 주목을 받고 있어요</p>
-									<div class="tooltip-wrap type2 type-toast">
-										<span class="like"></span>
-										<div class="tooltip-txt reg">
-											<p>관심상품으로 등록되었어요</p>
-										</div>
-										<div class="tooltip-txt del">
-											<p>관심상품에서 제외했어요</p>
-										</div>
-									</div>
-									<div class="tooltip-wrap type2">
-										<span class="scale active"></span>
-										<div class="tooltip-txt">
-											<p>비교상품으로 등록되었어요</p>
-										</div>
-									</div>
-									
-								</div>
-								<div class="flag-tit-wrap">
-									<em class="flag style2">
-									태그
-									</em>
-									<strong class="tit">보고파 파킹통장</strong>
-									
-								</div>
-								<ul class="text-bar-list mt10">
-									<li>입출금자유</li>
-									<li>매일이자지급</li>
-									<li>구간별차등금리</li>
-								</ul>
-								<div class="label-info-wrap">
-									<p>1일 ~</p>
-									<strong class="info">최고 연<span>2.30</span>%</strong>
-								</div>
-							</div>
-							<div class="btn-cont-wrap">
-								<a href="javascript:void(0);" class="btn btn-primary">가입하기</a>
-							</div>
-						</li>
-
-						<li>
-							<div class="prod-box">
-								<div class="icon-exp">
-									<p>가장 많이 주목을 받고 있어요</p>
-									<div class="tooltip-wrap type2 type-toast">
-										<span class="like"></span>
-										<div class="tooltip-txt reg">
-											<p>관심상품으로 등록되었어요</p>
-										</div>
-										<div class="tooltip-txt del">
-											<p>관심상품에서 제외했어요</p>
-										</div>
-									</div>
-									<div class="tooltip-wrap type2">
-										<span class="scale"></span>
-										<div class="tooltip-txt">
-											<p>비교상품으로 등록되었어요</p>
-										</div>
-									</div>
-									
-								</div>
-								<div class="flag-tit-wrap">
-									<em class="flag style2">
-									태그
-									</em>
-									<strong class="tit">보고파 파킹통장</strong>
-									
-								</div>
-								<ul class="text-bar-list mt10">
-									<li>입출금자유</li>
-									<li>매일이자지급</li>
-									<li>구간별차등금리</li>
-								</ul>
-								<div class="label-info-wrap">
-									<p>1일 ~</p>
-									<strong class="info">최고 연<span>2.30</span>%</strong>
-								</div>
-							</div>
-							<div class="btn-cont-wrap">
-								<a href="javascript:void(0);" class="btn btn-primary">가입하기</a>
-							</div>
-						</li>
 					</ul>
+				</section>
+
+				<section class="visaul-info-section">
+					<div class="visaul-info-box">
+                        <!-- D : info-tit 위치변경 및 flag 스타일 변경-->
+						<!-- [퍼블-1] 5/21 : flag-tit-wrap 클래스추가  -->
+						<div class="flag-tit-wrap">
+                            <em class="flag style4">종합통장대출</em>
+                            <strong class="tit">E-RUN 파킹통장(개인)</strong>
+                        </div>
+						<div class="account-area">
+							<p class="account">123-12-12-1234567</p>
+							<button type="button" class="btn-copy">복사하기</button>
+						</div>
+						<div class="account-amount">
+							<p class="amount-on">
+								잔액 <span>1,600,000</span>원
+							</p>
+							<p class="amount-desc">출금가능금액 <span>21,500,000</span>원</p>
+						</div>
+
+						<a href="javascript:void(0);" class="btn-set" onclick="acnoSetBtn();">관리</a>
+						<div class="btn-cont-wrap">
+							<a href="javascript:void(0);" class="btn btn-primary">이체</a>
+						</div>
+					</div>
+				</section>
+
+				<div class="visaul-info-section">
+					<div class="visaul-info-box">
+						<strong class="info-tit">e정기예금</strong>
+						<div class="account-area">
+							<p class="account">123-12-12-1234567</p>
+							<button type="button" class="btn-copy">복사하기</button>
+						</div>
+						<!--[퍼블1] 5/21 : 잔액부분 구조 변경 -->
+						<ul class="amount-area">
+							<li>
+								<strong class="tit">잔액</strong>
+								<span class="num">100,000원</span>
+							</li>
+						</ul>
+						<div class="progress-area">
+							<div class="progress-wrap">
+								<div class="progress-line">
+									<div class="progress-bar" style="width:50%;">
+										<em class="current">50%</em>
+									</div>
+								</div>
+								<!-- 개발단에서는 사용안함 <ul class="progress-txt">
+									<li>최근 <span>2023.15.15</span></li>
+									<li><span>00회차</span>/<span>00개월</span></li>
+								</ul>-->
+								<div class="progress-message">지금까지 잘하고 있어요</div>
+							</div>
+						</div>
+						<a href="javascript:void(0);" class="btn-set" onclick="acnoSetBtn();">관리</a>
+                        <!--D : 버튼클래스 공통잡기-->
+                        <div class="btn-cont-wrap">
+                            <a href="javascript:void(0);" class="btn btn-info btn-white">만기자동재예치</a>
+                            <a href="javascript:void(0);" class="btn btn-primary">해지예상조회</a>
+                        </div>
+
+						<!-- 정기적금일때 버튼 -->
+						<div class="btn-cont-wrap" style="display:none;">
+							<a href="#none" class="btn btn-info btn-white">납입일변경</a>
+							<a href="#none" class="btn btn-primary">입금</a>
+						</div>
+						<!-- // 정기적금일때 버튼 -->
+                        <!-- 정기적금일때 버튼 -->
+						<div class="btn-cont-wrap" style="display:none;">
+							<a href="#none" class="btn btn-primary">이자즉시출금요청</a>
+						</div>
+						<!-- // 정기적금일때 버튼 -->
+					</div>
+					<!-- // 전체 변경 -->
+				</div>
+				<div class="visaul-info-section">
+					<div class="visaul-info-box">
+						<!-- [퍼블-1] 5/22 : flag-tit-wrap 클래스 추가 -->
+						<div class="flag-tit-wrap">
+							<em class="flag style2">입출금</em><em class="flag style4">종합통장대출</em>
+						</div>
+						<strong class="info-tit">보고파 파킹통장</strong>
+						<div class="account-area">
+							<p class="account">123-12-12-1234567</p>
+							<button type="button" class="btn-copy">복사하기</button>
+						</div>
+						<a href="#none" class="btn-set star" id="oftnAcct" onclick="oftnAcct(this);">관리</a>
+					</div>
 				</div>
 			</div>
 			<!-- //s: default-wrap -->

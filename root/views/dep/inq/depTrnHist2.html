@@ -77,14 +77,13 @@
 							<p class="account">123-12-12-1234567</p>
 							<button type="button" class="btn-copy">복사하기</button>
 						</div>
-						<div class="account-amount">
-                            <!-- D: flexSa 클래스 추가 및 span태그 추가-->
-							<p class="amount-on flexSb">
-                                <sapn class="tit">잔액</sapn>
-                                <span><span>1,600,000</span>원</span>
-                            </p>
-							<!--<p class="amount-desc">예적금담보대출가능금액 <span>21,500,000</span>원</p>-->
-						</div>
+						<!--[퍼블1] 5/21 : 잔액부분 구조 변경 -->
+						<ul class="amount-area">
+							<li>
+								<strong class="tit">잔액</strong>
+								<span class="num">100,000원</span>
+							</li>
+						</ul>
 						<div class="progress-area">
 							<div class="progress-wrap">
 								<div class="progress-line">
@@ -92,10 +91,17 @@
 										<em class="current">50%</em>
 									</div>
 								</div>
+<<<<<<< Updated upstream
 								<!-- <ul class="progress-txt">
 									<li>최근 <span>2023.15.15</span></li>
 									<li><span>00회차</span>/<span>00개월</span></li>
 								</ul> -->
+=======
+								<!-- 개발단에서는 사용안함 <ul class="progress-txt">
+									<li>최근 <span>2023.15.15</span></li>
+									<li><span>00회차</span>/<span>00개월</span></li>
+								</ul>-->
+>>>>>>> Stashed changes
 								<div class="progress-message">지금까지 잘하고 있어요</div>
 							</div>
 						</div>
