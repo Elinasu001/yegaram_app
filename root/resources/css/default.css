@@ -284,6 +284,7 @@ html.font-size-3{ font-size: 24px;}
 .info-txt + .check-box { margin-top:20px; }
 .btn-cont-wrap.btn-add + .info-txt { margin-top:20px; }
 .info-txt + .bg-box { margin-top:20px; }
+.info-txt + .table-type { margin-top:40px; }
 .choice-txt { display:inline-block; width:100%; padding-bottom:10px; padding-left:32px; color:#454545; font-size:0.77778rem; line-height:1.5; line-height:24px; background:url("../images/common/img_account.png")top left no-repeat; background-size:24px; }
 .icon-exp { color:#777777; font-size:0.72222rem; line-height:1.5; padding-left:0; background:none; }
 .juso-ex-list { margin-top:40px; font-size:0.88889rem; line-height:1.4375; letter-spacing:-.5px; }
@@ -1188,8 +1189,9 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 .table-type.type-left td .list-bull.hyphen {  margin-top:0px; color:#666666; }
 .table-type td:has(.list-bull) { vertical-align:top; }
 .table-type .sub-tit-wrap { margin-bottom:15px; }
-
 .table-type.type-left02 th,.table-type.type-left02 td { text-align:left; padding:14px 15px; }
+.table-type .btn-cont-wrap { margin-bottom:15px; }
+
 
 .table-type.style2 table { border:none; }
 .table-type.style2 table tr:first-child th:last-child { border-right:0px; }
@@ -2561,9 +2563,6 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 /* .visaul-info-box .btn-cont-wrap .btn-info { background-color:#F4F5FB; color:#2B0F62; } */
 /* .visaul-info-box:has(.flag) .info-tit { margin-top:7px; } */
 .visaul-info-box + .txt-list-wrap { margin-top:20px; }
-/** 레이블 있을 경우 **/
-.visaul-info-box .card-tit { display:flex; align-items:center; gap:10px; }
-
 
 
 /* 2023-07-16 카드 관리 텍스트 테스트*/
