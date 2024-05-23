@@ -280,6 +280,7 @@ section > .result-wrap{ margin-top:40px; }
 .txt-detail-area > .tit { font-weight:300; font-size:0.88889rem; line-height:1.4375; }
 .txt-detail-area:has(.tit) { color:#666666; }
 .txt-detail-area .btn-cont-wrap { margin:0!important; padding:0!important; }
+.txt-detail-area .txt + .btn-cont-wrap,
 .txt-detail-area .txt-list + .btn-cont-wrap { margin-top:10px!important; }
 .txt-detail-area .q-wrap { margin-top:18px; margin-bottom:0; }
 /*.txt-list-wrap ~ div:has(.form-wrap) { margin-top:20px; }*/
