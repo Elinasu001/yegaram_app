@@ -1195,7 +1195,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .loan-guide-list li.guide3::before{ background:url("../images/common/loanguide_list03.png") no-repeat;  }
 .loan-guide-list li.guide4::before{ background:url("../images/common/loanguide_list04.png") no-repeat;  }
 .loan-guide-list li.guide5::before{ background:url("../images/common/loanguide_list05.png") no-repeat;  }
-.loan-guide-list li span{ display:block; margin-top:10px; font-weight:600; font-size:16px; }
+.loan-guide-list li span{ display:block; margin-top:10px; font-weight:600; font-size:0.88889rem; }
 
 .login-guide .content-wrap { padding:0; height:calc(100% - 100px); background:#F5F8FA;  }
 .login-guide .pop-con-wrap { height:100%; padding-bottom:0 !important; }
