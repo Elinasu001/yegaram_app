@@ -159,8 +159,24 @@
 				<a href="#none" class="btn disabled" id="step1_procBtn" onclick="PageFunc.viewChange();">다음</a><!--D: disabled 클래스 삭제 시 활성화-->
                 <a href="#none" class="btn txt" onclick="PageFunc.cancel();">그만하기</a><!--D: btn txt 클래스 변경-->
 			</div>
-			
 		</div>
+
+		<!--S: 상환방식 (팝업)-->
+		<div id="lySel1" class="layerpopup layer-up show" style="position: fixed; top: 351px; left: 0px; display: block;">
+			<div class="content-wrap">
+				<div class="pop-header">
+					<h2 class="pop-title">상환방식</h2>
+					<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+				</div>
+				<div class="ly-scroll-con ly-select">
+					<ul class="ly-select-list">
+						<li><button>회차상환</button></li>
+						<li><button>중도상환</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--E: 상환방식 (팝업)-->
 
     </div>
     <!-- //contentsWrap -->

@@ -513,8 +513,8 @@ textarea:read-only { border-color:#DDDDDD !important; }
 
 /*.form-all-wrap .select-wrap + .form-wrap { margin-top:20px; }*/
 .form-wrap .select-wrap { margin-top:0; }
-.form-wrap .check-account { margin-top:0; margin-bottom:20px; }
-.form-wrap .input + .check-account { margin-top:10px; }
+/* .form-wrap .check-account { margin-top:0; margin-bottom:20px; } */
+/* .form-wrap .input + .check-account { margin-top:10px; } */
 .form-wrap + .radio-list { margin-top:20px; }
 
 .form-wrap + div > .form-wrap.select-form-wrap { margin-top:10px; }
@@ -1604,7 +1604,9 @@ body.on { position:fixed; top:0; }
 .layerpopup .sub-title { padding:20px 0; font-size:0.88889rem; line-height:1.4375; font-weight:500; color:#333; }
 .layerpopup .subtxt-wrap { font-size:0.88889rem; line-height:1.4375; color:#666; }
 .layerpopup .ly-select-list + div .sub-title { padding-top:30px; }
-.layerpopup .txtbox-wrap { /*padding-bottom:15px;*/  color:#666666; }
+.layerpopup .txtbox-wrap { padding-bottom:15px;  color:#666666; }
+.layerpopup .txtbox-wrap b,
+.layerpopup .txtbox-wrap strong { font-weight:500; color:#333333; }
 /* .layerpopup .default-wrap > div { margin-top:40px;  } */
 .layerpopup .txtbox-wrap > div { margin-top:15px; }
 .layerpopup .txtbox-wrap.bt1 { padding-bottom:15px; border-bottom:1px solid #ddd; }
