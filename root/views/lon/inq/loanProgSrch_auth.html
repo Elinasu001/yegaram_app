@@ -67,111 +67,34 @@
         <!--contents -->
         <div class="contents">
             <div class="default-wrap">
-                <div class="txt-list-wrap">
-					<!--D:
 
-						//flag 컬러
-
-                        * style6 초록 - 심사중
-                        * style7 블루 - 완료
-                        * style8 빨강 - 거절
-
-					-->
-
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>전세보증금담보대출</strong>
-							<span><em class="flag style7">접수완료</em></span>
-						</div>
-						
-						<ul class="txt-list">
-							<li>
-								<span class="tit">대출신청번호</span>
-								<span class="txt">20230703800012</span>
-							</li>
-							<li>
-								<span class="tit">대출신청일</span>
-								<span class="txt">2023.06.08  13:34</span>
-							</li>
-						</ul>
-					</div>
-
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>부동산담보대출</strong>
-							<span><em class="flag style6">심사중</em></span><!--D: style6 클래스 -->
-						</div>
-						
-						<ul class="txt-list">
-							<li>
-								<span class="tit">대출신청번호</span>
-								<span class="txt">20230703800012</span>
-							</li>
-							<li>
-								<span class="tit">대출신청일</span>
-								<span class="txt">2023.06.08  13:34</span>
-							</li>
-						</ul>
-					</div>
-
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>예스론</strong>
-							<span><em class="flag style8">심사거절</em></span><!--D: style8 클래스 -->
-						</div>
-						
-						<ul class="txt-list">
-							<li>
-								<span class="tit">대출신청번호</span>
-								<span class="txt">20230703800012</span>
-							</li>
-							<li>
-								<span class="tit">대출신청일</span>
-								<span class="txt">2023.06.08  13:34</span>
-							</li>
-						</ul>
-					</div>
-
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>빅머니U론</strong>
-							<span><em class="flag style7">심사완료</em></span><!--D: style7 클래스 -->
-						</div>
-						
-						<ul class="txt-list">
-							<li>
-								<span class="tit">대출신청번호</span>
-								<span class="txt">20230703800012</span>
-							</li>
-							<li>
-								<span class="tit">대출신청일</span>
-								<span class="txt">2023.06.08  13:34</span>
-							</li>
-						</ul>
-					</div>
-
-					<div class="txt-detail-area">
-						<div class="txt-detail-tit">
-							<strong>빅머니U론</strong>
-							<span><em class="flag style7">송금완료</em></span><!--D: style7 클래스 / 텍스트 수정-->
-						</div>
-						<ul class="txt-list">
-							<li>
-								<span class="tit">대출신청번호</span>
-								<span class="txt">20230703800012</span>
-							</li>
-							<li>
-								<span class="tit">대출신청일</span>
-								<span class="txt">2023.06.08  13:34</span>
-							</li>
-						</ul>
-					</div>
-				
-				</div>
+                <section class="result-area exclamation" >
+                    <p class="tit"><strong>본인인증 후 이용 가능해요</strong></p>
+                </section>
 
             </div>
         </div>
         <!-- //contents -->
+
+        <div class="fixed-btn-wrap">
+			<div class="btn-wrap">
+				<a href="#none" class="btn" onclick="goMainPage();">홈으로</a>
+			</div>
+		</div>
+
+        <!--S: 본인인증 후 이용 가능 거래 (Alert)-->
+        <div id="lyAlert1" class="layerpopup type-alert on" style="display: block;">
+            <div class="content-wrap">
+                <div class="pop-con-wrap">
+                    <span class="pop-con">본인인증 후 이용 가능한 거래예요</span>
+                </div>
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn btn-info" onclick="">홈으로</a>
+                    <a href="javascript:void(0);" class="btn">본인인증</a>
+                </div>
+            </div>
+        </div>
+        <!--E: 본인인증 후 이용 가능 거래 (Alert)-->
 
     </div>
     <!-- //contentsWrap -->
