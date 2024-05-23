@@ -250,6 +250,7 @@ html.font-size-3{ font-size: 24px;}
 .bg-box { background:#F8F8F8; padding:20px; border-radius:20px; text-align:left; }
 .bg-box > p { font-size:0.77778rem; }
 .bg-box .box-tit { display:block; margin-bottom:10px; font-size:0.88889rem; line-height:1.4375; color:#454545; }
+.bg-box.flexSb .box-tit { margin-bottom:0; }
 .bg-box .box-desc { font-size:0.88889rem; line-height:1.4375; color:#454545; }
 .bg-box .box-desc + .box-desc { margin-top:25px;}
 .border-box { border:1px solid #E5E5E5; background:none; }
@@ -293,7 +294,7 @@ html.font-size-3{ font-size: 24px;}
 .juso-ex-list dd { color:#666; }
 .point { /* font-weight:500; */ font-weight:500; color:#492BA2; }
 .point-red{ color:#FF0000; }
-
+.point-md-gray { font-weight:500; color:#666666; }
 /* flag */
 /*  */
 .flag { display:inline-flex; align-items: center; width:auto; height:30px; /*margin-right:6px;*/ padding:6px 7px; border-radius:15px; background:#FFFFFF; border:1px solid #DDDDDD; font-size:0.77778rem; line-height: 1rem;  font-weight:400; color:#26282C; letter-spacing:-.5px; vertical-align:middle; } /* 접수완료, 긍정 - 파랑 */
