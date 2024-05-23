@@ -79,9 +79,9 @@
 					<div class="txt-list-wrap mt15">
 						<div class="txt-detail-area pd20">
 							<p class="txt ta-c">입금계좌지정서비스는 <br> 영업점에 방문하여  가입 후 이용해 주세요</p>
-							<div class="btn-cont-wrap mt15"> 
-								<a href="javascript:void(0);" class="btn btn-info">영업점 안내</a>
-							</div>
+							<!--[퍼블-1] 5/21 : 버튼 공통구조로 변경-->
+							<div class="btn-cont-wrap btn-more">
+								<a href="javascript:void(0);" class="btn">영업점 안내</a>
 						</div>
 					</div>
 					<!-- D : tit-box 부분 클래스 전체 변경 -->
@@ -109,7 +109,8 @@
 						<div class="txt-detail-area">
 							<div class="txt-detail-tit">
 								<strong>우리은행</strong>
-								<span><button type="button" class="btn-gray" onclick="javascript:fnRemoveAcno('004','44990101149827');">해지</button></span>
+								<!--[퍼블-1] 5/21 : 버튼클래스 공통으로 변경 btn-gray -> btn btn-sm gray-->
+								<span><button type="button" class="btn btn-sm gray" onclick="javascript:fnRemoveAcno('004','44990101149827');">해지</button></span>
 							</div>
 							<ul class="txt-list">
 								<li>
@@ -124,7 +125,8 @@
 						<div class="txt-detail-area">
 							<div class="txt-detail-tit">
 								<strong>국민은행</strong>
-								<span><button type="button" class="btn-gray" onclick="">해지</button></span>
+								<!--[퍼블-1] 5/21 : 버튼클래스 공통으로 변경 btn-gray -> btn btn-sm gray-->
+								<span><button type="button" class="btn btn-sm gray" onclick="">해지</button></span>
 							</div>
 							<ul class="txt-list">
 								<li>
