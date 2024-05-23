@@ -534,6 +534,7 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .inquiry-set-wrap + .form-wrap { margin-top:40px; }
 .sub-tit-wrap + .bg-box { margin-top:-15px; }/*네이버앱 대응으로 인한 음수 마진 추가*/
 .terms-area + .form-wrap { margin-top:20px; }
+.terms-area > .btn-cont-wrap { margin-bottom:15px; } /* 전자계약서 */
 /* .result-area + .sub-info-wrap { margin-top:30px; } */
 .default-wrap > .form-wrap:first-child,
 .default-wrap > .txt-wrap { margin-top:40px; }
