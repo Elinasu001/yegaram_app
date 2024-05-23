@@ -67,16 +67,42 @@
         <!--contents -->
         <div class="contents">
             <div class="default-wrap">
+
+                <!--D: 원래 구조: txt-list-wrap > txt-detail-area 구조 ... 다른 페이지에서는 account-detail-section  > txt-list-wrap 구조로 가는 케이스도 있습니다...  -->
                 
-                <div class="tit-wrap"><!--D: 추가-->
-					<p class="txt"><strong>기존에 대출철회를 신청한</strong><br>내역이 있어요</p>
-				</div>
+                <div class="txt-list-wrap"><!--D: 전체 감싸는 구조 -->
 
-                <!--S: 리스트 -->
-                <div class="txt-list-wrap"><!--D: txt-list-wrap 감싸는 구조 추가-->
-
-                    <div class="btn-cont-wrap flexRight"><!--D: 버튼 txt-list-wrp 구조 안으로 이동-->
+                    <div class="btn-cont-wrap flexRight"><!--D: 버튼 있을 경우 -->
                         <a href="#none" class="btn-txt">대출철회신청취소 안내</a>
+                    </div>
+
+                    <!--S: 반복문으로 사용되고 있음 -->
+                    <div class="txt-detail-area">
+
+                        <div class="txt-detail-tit"><!--D:리스트 타이틀 있을 경우-->
+							<strong>아파트담보대출</strong>
+						</div>
+
+                        <ul class="txt-list">
+							<li>
+                                <span class="tit">대출상품</span>
+                                <span class="txt">상품명</span>
+                            </li>
+                            <li>
+                                <span class="tit">계좌번호</span>
+                                <span class="txt">123-456-7890</span>
+                            </li>
+                            <li>
+                                <span class="tit">대출금액</span>
+                                <span class="txt">000,000,000원</span>
+                            </li>
+                        </ul>
+
+                        <div class="btn-cont-wrap"><!--D: 리스트 버튼 있을 경우 -->
+							<a href="#none" class="btn btn-info" >이자상환</a>
+							<a href="#none" class="btn btn-info">상환일정</a>
+						</div>
+
                     </div>
 
                     <div class="txt-detail-area">
@@ -93,89 +119,25 @@
                                 <span class="tit">대출금액</span>
                                 <span class="txt">000,000,000원</span>
                             </li>
-                            <li>
-                                <span class="tit">대출금리</span>
-                                <span class="txt">00.00%</span>
-                            </li>
-                            <li>
-                                <span class="tit">대출일자</span>
-                                <span class="txt">YYYY.MM.DD</span>
-                            </li>
-                            <li>
-                                <span class="tit">대출만기일이자</span>
-                                <span class="txt">00.00%</span>
-                            </li>
-                            <li>
-                                <span class="tit">처리상태</span>
-                                <span class="txt">심사대기</span>
-                            </li>
-							<li>
-                                <span class="tit">신청상태</span>
-                                <span class="txt">철회신청</span>
-                            </li>
-							<li>
-                                <span class="tit">신청일자</span>
-                                <span class="txt">YYYY.MM.DD</span>
-                            </li>
-							<li>
-                                <span class="tit">처리일자</span>
-                                <span class="txt">YYYY.MM.DD</span>
-                            </li>
-							<li>
-                                <span class="tit">상환할금액</span>
-                                <span class="txt">000,000,000원</span>
-                            </li>
-							<li>
-                                <span class="tit">가상계좌</span>
-                                <span class="txt">123-456-7890</span>
-                            </li>
                         </ul>
+                    </div>
+                    <!--E: 반복문으로 사용되고 있음 -->
+
+                    <div class="txt-detail-area">
+                        <div class="txt-detail-tit">
+                            <strong>자동이체</strong>
+                            <div class="btn-cont-wrap">
+                                <a href="javascript:void(0);" class="btn btn-sm other">신청</a>
+                            </div>
+                        </div>
+                        <p class="desc">자동이체를 설정하시면 매월 정기예금 이자가 자동으로 입금되요</p>
                     </div>
 
                 </div>
-                <!--E: 리스트 -->
 
             </div>
         </div>
         <!-- //contents -->
-
-        <div class="fixed-btn-wrap">
-			<div class="btn-wrap">
-				<a href="javascript:void(0);" class="btn" >다음</a> <!-- [퍼블] 텍스트 변경 -->
-			</div>
-		</div>
-
-        <!--S: 대출철회신청취소 안내 (팝업)-->
-        <div id="" class="layerpopup laypop-all show" tabindex="0" data-focus-prev="btn-menu-close" style="display:block;">
-            <!-- s: contents -->
-            <div class="pop-header">
-                <h2 class="pop-title">대출철회신청취소 안내</h2>
-                <a class="btn-back" onclick="backKeyAction();"><span class="blind">이전페이지 이동하기</span></a>
-                <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lyPullPop')">닫기</button>
-            </div>
-            <div class="pop-con-wrap">
-                <div class="default-wrap">
-
-                    <div class="tit-wrap"><!--D:추가-->
-                        <p class="txt"><strong>대출철회신청취소란?</strong></p>
-                        <p class="s-txt">기존에 신청하신 대출철회 요청 건 중 아직 처리가 완료되지 않은 경우, 철회 신청을 취소할 수 있어요</p>
-                        <p class="s-txt">기타 안내를 원하시면 고객센터로 연락주세요</p>
-                    </div>
-
-                    <!--D: 삭제 <div class="sub-tit-wrap">
-                        <p class="tit"><strong>대출철회신청 취소란?</strong></p>
-                    </div> -->
-
-                    <div class="sub-info-wrap"><!--D: 택스트변경-->
-                        <div class="tel">이용문의 <strong>1877-7788</strong></div>
-                        <p>평일 09:00 ~ 18:00<br>(주말 및 공휴일 휴무)</p>
-                    </div>
-        
-                </div>
-                
-            </div>
-        </div>
-        <!--E: 대출철회신청취소 안내 (팝업)-->
 
     </div>
     <!-- //contentsWrap -->

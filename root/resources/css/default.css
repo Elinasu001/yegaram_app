@@ -533,7 +533,7 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .inquiry-set-wrap + .form-wrap { margin-top:40px; }
 .sub-tit-wrap + .bg-box { margin-top:-15px; }/*네이버앱 대응으로 인한 음수 마진 추가*/
 .terms-area + .form-wrap { margin-top:20px; }
-.result-area + .sub-info-wrap { margin-top:30px; }
+/* .result-area + .sub-info-wrap { margin-top:30px; } */
 .default-wrap > .form-wrap:first-child,
 .default-wrap > .txt-wrap { margin-top:40px; }
 .layer-up .default-wrap > .form-wrap:first-child { margin-top:0; }
@@ -1559,7 +1559,7 @@ body.on { position:fixed; top:0; }
 .layerpopup.laypop-all .pop-header.bg-pattern{border-color:#191e2a;color:#fff;}
 .layerpopup.laypop-all .bg-pattern + .btn-layer-close{background-image:url("../images/common/btn_closeW_white.png");}
 .layerpopup .pop-con-wrap:has(.txtbox-wrap) .sub-tit-wrap { margin-bottom:15px; }
-.layerpopup .pop-con-wrap .txtbox-wrap + .sub-info-wrap { margin-top:40px; }
+/* .layerpopup .pop-con-wrap .txtbox-wrap + .sub-info-wrap { margin-top:40px; } */
 
 
 /** 알럿팝업 **/
@@ -2500,7 +2500,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .fin-cal-wrap .select-wrap .select-box span.option { font-size:0.88889rem; line-height:1.4375; }
 
 /* 상품상세 border-top이 있는 중앙 정렬 txt */
-.sub-info-wrap { position:relative; margin-top:20px; padding:25px 100px 25px 30px; border-radius:15px; background:url("../images/common/visual_obj_info_02.png") no-repeat center right 20px; background-color:#F7F7F9; background-size:75px; font-size:0.77778rem; line-height:1.5; }
+.sub-info-wrap { position:relative; margin-top:30px; padding:25px 100px 25px 30px; border-radius:15px; background:url("../images/common/visual_obj_info_02.png") no-repeat center right 20px; background-color:#F7F7F9; background-size:75px; font-size:0.77778rem; line-height:1.5; }
 .sub-info-wrap .tel { font-weight:500; font-size:0.77778rem; line-height:1.5; color:#26282C; }
 .sub-info-wrap .tel strong { font-size:1rem; line-height:1.38889; }
 .sub-info-wrap > p { margin-top:10px; font-size:0.77778rem; line-height:1.5; color:#666666; }
