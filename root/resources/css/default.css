@@ -742,7 +742,7 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .form-wrap.type2 > .input input { height:50px; padding-right:40px; border-bottom:2px solid #F1108E; font-weight:700; color:#F1108E; font-size:1.94445rem; line-height:1.28571; line-height:50px; }
 .form-wrap.type2 > .input .unit { position:absolute; top:50%; right:0; transform:translateY(-50%); font-weight:700; font-size:1rem; } 디자인 변경 전 소스 */
 /* .form-wrap.type2 { margin-top:0; } */
-.form-wrap.type2 label { font-weight:500; font-size:0.88889rem; line-height:1.278rem; letter-spacing:-0.4px; }
+.form-wrap.type2 label { font-weight:500; font-size:0.88889rem; line-height:1.278rem; letter-spacing:-0.4px; color:#26282C; }
 .form-wrap.type2 > .input { /*height:50px;*/ /*margin-top:10px;*/ font-weight:700; color:#F1108E; font-size:1.94445rem; line-height:1.28571; line-height:50px; }
 .form-wrap.type2 > div.input input { display:block; padding:0; border-bottom:none; font-weight:700; color:transparent; font-size:1.94445rem; line-height:50px; /*caret-color:#B088FF !important;*/ }
 .form-wrap.type2> div.input input::placeholder { color: transparent; }

@@ -80,10 +80,8 @@
                     <!--S:form-->
                     <div class="form-all-wrap"><!--D: 5/13 - form 전체 감쌀 경우 : form-all-wrap / slect-box를 감쌀 경우 slect-wrap이 아닌 form-wrap으로 감싸주세요-->
 
-
                         <div class="form-wrap type2">
-                            <!-- <label for="LOAN_AMT">대출신청금액</label> 삭제-->
-                            <div class="form-tit"><span class="essential">대출신청금액</span></div><!--D: label 구조 form-tit 구조로 변경 및 essential 추가-->
+                            <label for="LOAN_AMT" class="essential">대출신청금액</label><!--D: essential 클래스 추가-->
                             <div class="input">
                                 <input type="tel" title="" class="validChk" id="LOAN_AMT" value="" placeholder="대출신청금액을 입력해주세요." pattern="[0-9]*"  maxlength="4" required="">
                                 <div class="value-wrap">
@@ -95,40 +93,66 @@
                         <p class="exp-txt">나의 대출한도 : 만원</p>
 
 
-                        <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
-                            <div id=""  class="select-box" tabindex="1">
-                                <label for="">대출기간</label>
-                                <span class="option" id="">미선택</span>
-                            </div>
-                        </div>
+                        <!--D: 삭제 <div class="form-wrap">
+                            <div class="input"> -->
+                                <div id="selDiv1" class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                                    <div class="select-box openSel" tabindex="1" onclick="openSelect();">
+                                        <label for="qValue1">대출기간</label>
+                                        <span class="option" id="qText1">미선택</span>
+                                        <input type="hidden" name="LOAN_TERM" id="qValue1" value="" class="validChk" />
+                                    </div>
+                                </div>
+                            <!-- </div>
+                        </div> -->
 
-                        <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
-                            <div id="rolldate2" class="select-box type2" tabindex="1">
-                                <label for="">납입일</label>
-                                <span class="option">미선택</span>
-                            </div>
-                        </div>
+                        <!--D: 삭제 <div class="form-wrap">
+                            <div class="input"> -->
+                                <div id="selDiv2" class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                                    <div id="rolldate2" class="select-box openSel type2" tabindex="1" onclick="openSelect('납입일','C007600000','2');" >
+                                        <label for="qValue2">납입일</label>
+                                        <span class="option" id="qText2">미선택</span>
+                                        <input type="hidden" name="LOAN_CNRT_DD" id="qValue2" value="" class="validChk" />
+                                    </div>
+                                </div>
+                            <!-- </div>
+                        </div> -->
 
-                        <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
-                            <div class="select-box disabled on" tabindex="1"><!--D: disabled 클래스 : 비활성화 / on 클래스 : 값이 있을 경우  -->
-                                <label for="">상환방법</label>
-                                <span class="option" id="">원리금균등상환</span>
-                            </div>
-                        </div>
 
-                        <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
-                            <div class="select-box disabled on" tabindex="1"><!--D: disabled 클래스 : 비활성화 / on 클래스 : 값이 있을 경우  -->
-                                <label for="">중도수수료율</label>
-                                <span class="option" id="">00,00%</span>
-                            </div>
-                        </div>
+                        <!--D: 삭제 <div class="form-wrap">
+                            <div class="input"> -->
+                                <div id="selDiv2" class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                                    <div id="" class="select-box openSel disabled on" tabindex="1" onclick="openSelect('납입일','C007600000','2');" ><!--D: disabled 클래스 : 비활성화 / on 클래스 : 값이 있을 경우  -->
+                                        <label for="qValue2">상환방법</label>
+                                        <span class="option" id="qText2">원리금균등상환</span>
+                                        <input type="hidden" name="LOAN_CNRT_DD" id="qValue2" value="" class="validChk" />
+                                    </div>
+                                </div>
+                            <!-- </div>
+                        </div> -->
 
-                        <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
-                            <div class="select-box disabled on" tabindex="1"><!--D: disabled 클래스 : 비활성화 / on 클래스 : 값이 있을 경우  -->
-                                <label for="">연체이자율</label>
-                                <span class="option" id="">00,00%</span>
-                            </div>
-                        </div>
+
+                        <!--D: 삭제 <div class="form-wrap">
+                            <div class="input"> -->
+                                <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                                    <div class="select-box disabled on" tabindex="1"><!--D: disabled 클래스 : 비활성화 / on 클래스 : 값이 있을 경우  -->
+                                        <label for="">중도수수료율</label>
+                                        <span class="option">00.00%</span>
+                                    </div>
+                                </div>
+                            <!-- </div>
+                        </div> -->
+
+
+                        <!--D: 삭제 <div class="form-wrap">
+                            <div class="input"> -->
+                                <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                                    <div class="select-box disabled on" tabindex="1"><!--D: disabled 클래스 : 비활성화 / on 클래스 : 값이 있을 경우  -->
+                                        <label for="">연체이자율</label>
+                                        <span class="option">00.00%</span>
+                                    </div>
+                                </div>
+                            <!-- </div>
+                        </div> -->
 
                     </div>
                     <!--E:form-->
