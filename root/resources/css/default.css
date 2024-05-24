@@ -2167,8 +2167,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .inquiry-result-area .result-list li { position:relative; padding:10px 0 20px; border-bottom:1px solid #EEEEEE; }
 .inquiry-result-area .result-list li:first-child { padding:20px 0; }
 .inquiry-result-area .result-list li:last-child { border-bottom:0; }
-/* .inquiry-result-area .result-list li + li { border-top:1px solid #EEEEEE; } */
-.inquiry-result-area .result-list li a { display:block; }.data-list-wrap .data-tit > strong
+.inquiry-result-area .result-list li a { display:block; }
 .inquiry-result-area .result-list .tit { font-weight:700; color:#333333; font-size:0.88889rem; line-height:1.4375; }
 .inquiry-result-area .result-list a:has(.account) .tit:after { content:''; display:inline-block; width:16px; height:16px; margin-top:-2px; background:url("../images/common/arrow_black_right.png") no-repeat 50%/16px auto; vertical-align:middle; } /*(청)arrow들어가야하는지 확인 필요(전체클릭영역임) - account 있을때만 arrow붙임 (클래스추가X)*/
 .inquiry-result-area .result-list .account { display:block; margin-top:6px; font-weight:400; color:#666666; font-size:0.77778rem; line-height:1.5; }
@@ -2179,7 +2178,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .inquiry-result-area .result-list .amount { position:absolute; bottom:20px; right:0; }
 
 .account-amount .amount-desc { font-weight:400; color:#666666; font-size:0.77778rem; line-height:1.5; }
-.account-amount .amount-on + .amount-desc { margin-top:3px; }
+.account-amount .amount-on + .amount-desc { margin-top:4px; }
 .account-amount > p.amount-off { font-weight:400; color:#999999; font-size:1.11111rem; line-height:1.35; }
 .inquiry-result-area .inquiry-summary .toggle-wrap { margin-top:0; flex:1 1 auto; }
 .inquiry-result-area .inquiry-summary .toggle-wrap label { display:flex; align-items:center; justify-content: flex-end; }
@@ -2411,8 +2410,8 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .sub-tit-wrap:first-of-type { margin-top:25px; }
 .product-detail .sub-tit-wrap:first-of-type { margin-top:25px; }
 
-.flag-tit-wrap { /*padding-right:40px;*/ display: flex; align-items:center; }
-.flag-tit-wrap .flag { margin-right:6px; }
+.flag-tit-wrap { /*padding-right:40px;*/ display: flex; align-items:center; gap:10px; }
+/* .flag-tit-wrap .flag { margin-right:6px; } */
 .flag-tit-wrap:has(.tooltip-wrap.type2+.tooltip-wrap.type2) { /*padding-right:66px;*/ }
 .flag-tit-wrap .tit { font-size:1rem; line-height:1.38889rem; flex:1; }
 /* .flag-tit-wrap .tit { overflow:hidden; display:inline-block; width:62%; vertical-align:middle; white-space:nowrap; text-overflow:ellipsis; } */
@@ -2539,7 +2538,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .prod-box .icon-exp div:nth-of-type(1){ order:3; }
 .prod-box .icon-exp div:nth-of-type(2){ order:2; }
 
-.prod-box .label-info-wrap { padding:16px 0 24px; }
+.prod-box .label-info-wrap { margin-top:16px; }
 /* .prod-box:last-child .label-info-wrap { padding-bottom:5px; } */
 .prod-box:last-child .label-info-wrap:last-child { padding-bottom:0; }
 .prod-box .label-info-wrap .label { font-size:0.77778rem; line-height:1.5; }
@@ -2553,20 +2552,20 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .visaul-info-section + .txt-list-wrap { margin-top:30px; }
 .visaul-info-section + .txt-list-wrap + .arrow-button-list { margin-top:40px; }
 .visaul-info-section + .inquiry-choice-area.type-spread { margin-top:0; }
-.visaul-info-box { position: relative; padding:18px 20px 20px; border-radius:20px; background:#fff; box-shadow:0px 5px 15px #6E76810D; }
+.visaul-info-box { position: relative; padding:24px 20px; border-radius:20px; background:#fff; box-shadow:0px 5px 15px #6E76810D; }
 .prod-box-list > li { display:block; position:relative; width:100%; margin-bottom:16px; padding:24px 20px; border-radius:20px; background:#fff; box-shadow:0px 5px 15px #6E76810D; }
 
 .visaul-info-box + .visaul-info-box { margin-top:20px; }
 /* .visaul-info-box .tag { display:block; font-weight:400; color:#999999; font-size:0.66667rem; line-height:1.58334; } */
-.visaul-info-box .info-tit { position:relative; display:inline-block; width:100%; padding-right:35px; font-weight:700; color:#333333; font-size:1rem; line-height:1.38889rem; }
+.visaul-info-box .info-tit { position:relative; display:inline-block; width:100%; margin-right:35px; font-weight:700; color:#333333; font-size:1rem; line-height:1.38889rem; }
 
 
-.visaul-info-box .info-tit + *, .flag-tit-wrap + * { margin-top:5px; }
+.visaul-info-box .info-tit + *, .flag-tit-wrap + * { margin-top:8px; }
 .visaul-info-box:has(.btn-set) .info-tit {width: 80%}
 .visaul-info-section .visaul-info-box { margin-top:0; }
 /* .visaul-info-section .visaul-info-box:has(.btn-set) .info-tit { width:inherit; line-height:1.6; } */
 .visaul-info-box .btn-modi { position:absolute; top:20px; right:50px; }
-.visaul-info-box .btn-cont-wrap { margin-top:25px!important; }
+.visaul-info-box .btn-cont-wrap { margin-top:25px; }
 /* .visaul-info-box .btn-cont-wrap .btn-info { background-color:#F4F5FB; color:#2B0F62; } */
 /* .visaul-info-box:has(.flag) .info-tit { margin-top:7px; } */
 .visaul-info-box + .txt-list-wrap { margin-top:20px; }
@@ -2592,7 +2591,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .btn-request { display:inline-block; height:34px; padding:0 16px; border-radius:8px; background:#EEEBFF; color:#260F54; font-size:0.77778rem; line-height:1.5; line-height:34px }
 
 .account-area + .progress-area { margin-top:15px; }
-.progress-area .progress-wrap {position:relative;padding: 44px 0 0;text-align:center;}
+.progress-area .progress-wrap { position:relative; padding: 36px 0 0; margin-top:30px; text-align:center; }
 .progress-wrap .progress-line { position:relative; height:10px; border-radius:10px; background:#EBEAF5; }
 .progress-wrap .progress-line:after { left:inherit; right:3px; background:#EBEAF5; }
 .progress-wrap .progress-line .progress-bar { position:absolute; top:0; left:0; height:100%; border-radius:10px; background:linear-gradient(90deg, #FFFFFF 0%, #F1108E 100%); }
@@ -2602,7 +2601,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .progress-wrap [class*="-date"] .date { margin-left:2px; font-weight:400; color:#454545; }
 .progress-wrap [class*="-date"]:last-of-type { left:inherit; right:0; }
 
-.progress-message { margin-top:10px; padding:14px 20px; color:#260F54; font-size:0.77778rem; line-height:1.5; font-weight:500; background:#F8F8F8; border-radius:10px; text-align:center; }
+.progress-message { margin-top:12px; padding:14px 20px; color:#260F54; font-size:0.77778rem; line-height:1.5; font-weight:500; background:#F8F8F8; border-radius:10px; text-align:center; }
 .progress-message > a, .progress-wrap .btn-call-csr { float:right; font-size:0.77778rem; line-height:1.5; color: #666666; }
 .progress-wrap .btn-call-csr { margin-top: 10px; }
 
@@ -2638,8 +2637,9 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .no-count { text-align:center; }
 
 /* 계좌목록 조회 상세  */
-.amount-area {display:inline-block;width:100%;margin-top: 10px;}
-.amount-area > li { display:flex; align-items: center; width:100%; padding: 10px 0; }
+.amount-area {display:inline-block;width:100%; margin-top: 20px;}
+.amount-area > li { display:flex; align-items: center; width:100%; }
+.amount-area > li + li { margin-top:6px; }
 /* .amount-area > li + li { border-top:1px solid #EEEEEE; } */
 .amount-area.border-none > li:last-child { border-top:0px; }
 .amount-area > li > span { flex:1; }
