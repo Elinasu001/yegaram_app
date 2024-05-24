@@ -28,7 +28,7 @@
         }
 
         td[colspan="6"] {
-            background-color: #ffcc00; 
+            background-color: #a3cca3;; 
         }
         </style>
     </head>
@@ -599,7 +599,8 @@
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>
-                                        공통 : 인증수단 선택 (팝업) / 로그인 : 본인인증 방식 (팝업)<br/>
+                                        본인인증 방식 (팝업)<br/>
+                                        ( 로그인페이지 : 인증수단 선택  공통 : 본인인증 방식 ) - 로그인 페이지 와 본인인증 시 사용되는 팝업의 타이틀이 변경됩니다.<br/>
                                         - 본인인증 완료 (Alert)<br/>
                                         - 본인인증 미완료 (Alert)
                                     </td>
@@ -2050,8 +2051,8 @@
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
-                                    <td>본인인증 방식</td>
-                                    <td>화면설계서에는 인증수단 선택으로 되어있습니다.공통 사용시 본인인증 방식 텍스트로 진행</td>
+                                    <td>본인인증 방식 (팝업)</td>
+                                    <td>화면설계서에는 인증수단이라고 나와있습니다. 로그인: 인증수단 선택 / 본인인증: 본인인증 방식 타이틀 사용</td>
                                     <td><a href="" target="_blank">select_auth.html</a></td>
                                 </tr>
 
@@ -2276,7 +2277,7 @@
 
                 <div class="cont" >
                     <div class="guide">
-                        <h3 class="tit on">대출 - 대출상품/간편대출한도조회/대출신청/대출이어하기/대출신용조회동의/온라인서류제출/전자계약서 작성하기/계약서 확인(다운로드)/대출이용가이드 - 진행중</h3>
+                        <h3 class="tit on">대출 - 대출상품/간편대출한도조회/대출신청/대출이어하기/대출신용조회동의/온라인서류제출/전자계약서 작성하기/계약서 확인(다운로드)/대출이용가이드</h3>
                         <summary></summary>
                         <table>
                             <caption></caption>
@@ -2305,19 +2306,19 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>전체대출상품<br/>
-                                        - 대출상품비교하기 관련 (Alert)<br/>
-                                        - 상품비교하기<br/>
-                                        - 대출상품모두보기 - 찜한 상품 (관심상품)<br/>
+                                        - 대출상품비교하기 관련 2개 (Alert)<br/>
+                                        - 상품비교하기 (팝업)<br/>
+                                        - 대출상품모두보기 - 찜한 상품 (관심상품) (팝업)<br/>
                                     </td>
                                     <td>[참고] : 예적금의 depList.html 화면과 동일하나 카드의 타이틀 부분에  style2클래스 : 예적금 / style3클래스 : 대출 / style4클래스 : 종합통장대출로 스타일이 다르게 반영됩니다. / 화면설계서에 금융계산기 없음으로 주석 처리함</td>
                                     <td><a href="views/lon/inq/loanList.html" target="_blank">views/lon/inq/loanList.html</a></td>
                                 </tr>
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출상품 상세</td>
@@ -2336,79 +2337,21 @@
                                 </tr>
 
                                 <tr>
-                                    <td colspan="6" style="text-align:center">대출 _ 간편한도조회</td>
-                                </tr>
-                                
-                                <tr>
-                                    <td class="modify">미전달</td>
-                                    <td class="person">박수현</td>
-                                    <td></td>
-                                    <td>간편대출한도조회 안내</td>
-                                    <td></td>
-                                    <td><a href="views/lon/inq/qckLonLimt1.html" target="_blank">views/lon/inq/qckLonLimt1.html</a></td>
-                                </tr>
-                                <tr>
-                                    <td class="modify">미전달</td>
-                                    <td class="person">박수현</td>
-                                    <td></td>
-                                    <td> 간편대출한도조회 이용약관</td>
-                                    <td></td>
-                                    <td><a href="views/lon/inq/qckLonLimt2.html" target="_blank">views/lon/inq/qckLonLimt2.html</a></td>
-                                </tr>
-                                <tr>
-                                    <td class="modify"></td>
-                                    <td class="person">공통</td>
-                                    <td></td>
-                                    <td>본인인증</td>
-                                    <td></td>
-                                    <td><a href="" target="_blank">loanStbt.html</a></td>
-                                </tr>
-                                <tr>
-                                    <td class="modify">미전달</td>
-                                    <td class="person">박수현</td>
-                                    <td></td>
-                                    <td>간편대출한도조회 고객정보입력<br/>
-                                        - 직업 선택 (팝업)
-                                    </td>
-                                    <td>5/13 form 레이아웃 - 변경완료</td>
-                                    <td><a href="views/lon/inq/qckLonLimt3.html" target="_blank">views/lon/inq/qckLonLimt3.html</a></td>
-                                </tr>
-                                <tr>
-                                    <td class="modify">미전달</td>
-                                    <td class="person">박수현</td>
-                                    <td></td>
-                                    <td>대출한도 조회결과</td>
-                                    <td></td>
-                                    <td><a href="views/lon/inq/qckLonLimt4.html" target="_blank">views/lon/inq/qckLonLimt4.html</a></td>
-                                </tr>
-                                <tr>
-                                    <td class="modify">미전달</td>
-                                    <td class="person">박수현</td>
-                                    <td></td>
-                                    <td>
-                                    - 대출한도 조회결과 (대출신청불가)<br/>
-                                    - 대출한도 조회결과(신청중인대출존재)
-                                </td>
-                                    <td></td>
-                                    <td><a href="views/lon/inq/qckLonLimt4_1.html" target="_blank">views/lon/inq/qckLonLimt4_1.html</a></td>
-                                </tr>
-
-                                <tr>
                                     <td colspan="6" style="text-align:center">대출 _ 대출신청</td>
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출신청(약관동의)<br/>
-                                        - 유효성 체크<br/>
+                                        - 대출신청(약관동의)_유효성 체크 (Alert)<br/>
                                     </td>
-                                    <td></td>
+                                    <td>[참고] - 대출신청하기 이용약관 loanAuth.html 화면과 동일 </td>
                                     <td><a href="views/lon/prc/loanAuth.html" target="_blank">views/lon/prc/loanAuth.html</a></td>
                                 </tr>
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>
@@ -2426,7 +2369,7 @@
                                     <td><a href="" target="_blank">user_auth.html</a></td>
                                 </tr>
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>적합성 적정성 정보 확인<br/>
@@ -2442,11 +2385,11 @@
                                         - 적합성/적정성 정보동의 (팝업)</br/>
                                         - 적합성/적정성 확인 (Alert)</br/>
                                     </td>
-                                    <td>5/13 form 레이아웃 - 변경완료</td>
+                                    <td></td>
                                     <td><a href="/views/lon/prc/loanStbt.html" target="_blank">views/lon/prc/loanStbt.html</a></td>
                                 </tr>
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출 진행 결과<br/>
@@ -2461,7 +2404,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출정보입력_기본정보입력<br/>
@@ -2473,7 +2416,7 @@
                                         - 차량번호 (팝업)<br/>
                                         - 차량번호 입력 확인(Alert)<br/>
                                     </td>
-                                    <td>5/13 form 레이아웃 - 변경완료</td>
+                                    <td></td>
                                     <td><a href="/views/lon/prc/loanRqs.html" target="_blank">views/lon/prc/loanRqs.html</a></td>
                                 </tr>
 
@@ -2495,7 +2438,7 @@
                                         - 본인인증 완료 (Alert)<br/>
                                         - 본인인증 미완료 (Alert)
                                     </td>
-                                    <td>화면설계서에는 인증수단이라고 나와있습니다. 공통으로 쓰일 경우 본인인증 방식 텍스트로 갑니다.</td>
+                                    <td>화면설계서에는 인증수단이라고 나와있습니다. 로그인: 인증수단 선택 / 본인인증: 본인인증 방식 타이틀 사용</td>
                                     <td><a href="" target="_blank">select_auth.html</a></td>
                                 </tr>
 
@@ -2509,7 +2452,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>본인확인 및 소득정보 조회(스크래핑)<br/>
@@ -2526,12 +2469,12 @@
                                     <td></td>
                                     <td>본인인증 방식 (팝업)
                                     </td>
-                                    <td>화면설계서는 인증수단 선택 팝업으로 되어있습니다. 공통으로 쓰일 경우 본인인증 방식 텍스트로 통일했습니다.</td>
+                                    <td>화면설계서에는 인증수단이라고 나와있습니다. 로그인: 인증수단 선택 / 본인인증: 본인인증 방식 타이틀 사용</td>
                                     <td><a href="" target="_blank">select_auth.html</a></td>
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출신청 결과<br/>
@@ -2544,7 +2487,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출정보입력_주소입력<br/>
@@ -2564,7 +2507,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출정보입력_직장정보입력<br/>
@@ -2578,7 +2521,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출 실 한도조회 안내</td>
@@ -2587,7 +2530,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출 신청금액 입력<br/>
@@ -2602,7 +2545,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출승인 및 계약정보입력<br/>
@@ -2631,7 +2574,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>
@@ -2642,7 +2585,7 @@
                                     <td><a href="/views/lon/prc/loanSign3.html" target="_blank">/views/lon/prc/loanSign3.html</a></td>
                                 </tr>
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출실행전자계약(약관동의)</td>
@@ -2651,7 +2594,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>전자계약체결 내용확인</td>
@@ -2664,7 +2607,7 @@
                                     <td class="person">공통</td>
                                     <td></td>
                                     <td>본인인증 방식 (팝업)</td>
-                                    <td>화면설계서는 인증수단 선택 팝업으로 되어있습니다. 공통으로 쓰일 경우 본인인증 방식 텍스트로 통일했습니다.</td>
+                                    <td>화면설계서에는 인증수단이라고 나와있습니다. 로그인: 인증수단 선택 / 본인인증: 본인인증 방식 타이틀 사용</td>
                                     <td><a href="" target="_blank">select_auth.html</a></td>
                                 </tr>
 
@@ -2678,7 +2621,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출신청 완료<br/>
@@ -2692,11 +2635,70 @@
                                 </tr>
 
                                 <tr>
+                                    <td colspan="6" style="text-align:center">대출 _ 간편한도조회</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="modify">5/24</td>
+                                    <td class="person">박수현</td>
+                                    <td></td>
+                                    <td>간편대출한도조회 안내</td>
+                                    <td></td>
+                                    <td><a href="views/lon/inq/qckLonLimt1.html" target="_blank">views/lon/inq/qckLonLimt1.html</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="modify">5/24</td>
+                                    <td class="person">박수현</td>
+                                    <td></td>
+                                    <td> 간편대출한도조회 이용약관</td>
+                                    <td></td>
+                                    <td><a href="views/lon/inq/qckLonLimt2.html" target="_blank">views/lon/inq/qckLonLimt2.html</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="modify"></td>
+                                    <td class="person">공통</td>
+                                    <td></td>
+                                    <td>본인인증</td>
+                                    <td></td>
+                                    <td><a href="" target="_blank">loanStbt.html</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="modify">5/24</td>
+                                    <td class="person">박수현</td>
+                                    <td></td>
+                                    <td>간편대출한도조회 고객정보입력<br/>
+                                        - 직업 선택 (팝업)
+                                    </td>
+                                    <td>5/13 form 레이아웃 - 변경완료</td>
+                                    <td><a href="views/lon/inq/qckLonLimt3.html" target="_blank">views/lon/inq/qckLonLimt3.html</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="modify">5/24</td>
+                                    <td class="person">박수현</td>
+                                    <td></td>
+                                    <td>대출한도 조회결과</td>
+                                    <td></td>
+                                    <td><a href="views/lon/inq/qckLonLimt4.html" target="_blank">views/lon/inq/qckLonLimt4.html</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="modify">5/24</td>
+                                    <td class="person">박수현</td>
+                                    <td></td>
+                                    <td>
+                                    - 대출한도 조회결과 (대출신청불가)<br/>
+                                    - 대출한도 조회결과(신청중인대출존재)
+                                </td>
+                                    <td></td>
+                                    <td><a href="views/lon/inq/qckLonLimt4_1.html" target="_blank">views/lon/inq/qckLonLimt4_1.html</a></td>
+                                </tr>
+
+
+                                <tr>
                                     <td colspan="6" style="text-align:center">대출 _ 이어하기</td>
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출이어하기 이용약관<br/>
@@ -2731,7 +2733,7 @@
                                     <td><a href="/views/lon/prc/loanStbt.html" target="_blank">loanStbt.html</a></td>
                                 </tr>
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출한도 조회결과</td>
@@ -2744,7 +2746,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>약관동의</td>
@@ -2794,7 +2796,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>온라인서류제출 안내</td>
@@ -2812,16 +2814,15 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
-                                    <td>온라인서류제출 진행 불가
-                                    </td>
-                                    <td>새로운 페이지입니다.</td>
-                                    <td><a href="views/lon/mng/onlPprSnd2_1.html" target="_blank">views/lon/mng/onlPprSnd2_1.html</a></td>
+                                    <td>온라인서류제출 진행 불가</td>
+                                    <td>온라인서류제출 완료 / 실패 페이지와 동일 사용</td>
+                                    <td><a href="views/lon/mng/onlPprSnd5.html" target="_blank">views/lon/mng/onlPprSnd5.html</a></td>
                                 </tr>
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>온라인서류제출 진행 안내</td>
@@ -2841,8 +2842,7 @@
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
-                                    <td>공공마이데이터 조회 (팝업)
-                                    </td>
+                                    <td>공공마이데이터 조회 (팝업)</td>
                                     <td></td>
                                     <td><a href="" target="_blank">mydata.html</a></td>
                                 </tr>
@@ -2851,11 +2851,11 @@
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
-                                    <td>본인인증 (팝업)<br/>
+                                    <td>본인인증 방식(팝업)<br/>
                                         - 본인인증 완료 (Alert)
-                                        - 본인인증 미완료-- (Alert)
+                                        - 본인인증 미완료 (Alert)
                                     </td>
-                                    <td></td>
+                                    <td>화면설계서에는 인증수단이라고 나와있습니다. 로그인: 인증수단 선택 / 본인인증: 본인인증 방식 타이틀 사용</td>
                                     <td><a href="" target="_blank">select_auth.html</a></td>
                                 </tr>
 
@@ -2870,7 +2870,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>촬영한 이미지 목록
@@ -2880,7 +2880,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>
@@ -2896,7 +2896,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>전자계약서 이용약관</td>
@@ -2905,7 +2905,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>전자계약체결 내용확인</td>
@@ -2927,21 +2927,12 @@
                                     <td class="person">공통</td>
                                     <td></td>
                                     <td>본인인증 방식 (팝업)</td>
-                                    <td>화면설계서는 인증수단 선택 팝업으로 되어있습니다. 공통으로 쓰일 경우 본인인증 방식 텍스트로 통일했습니다.</td>
+                                    <td>화면설계서에는 인증수단이라고 나와있습니다. 로그인: 인증수단 선택 / 본인인증: 본인인증 방식 타이틀 사용</td>
                                     <td><a href="" target="_blank">select_auth.html</a></td>
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
-                                    <td class="person">박수현</td>
-                                    <td></td>
-                                    <td>전자계약서 작성 시간 초과 안내</td>
-                                    <td></td>
-                                    <td><a href="" target="_blank"></a></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>
@@ -2949,7 +2940,7 @@
                                         전자계약서 작성 완료(대출금 입금)<br/>
                                         전자계약서 작성 완료(상담원 연락 예정)
                                     </td>
-                                    <td>대출신청의 대출실행전자계약서 페이지와 동일 사용</td>
+                                    <td></td>
                                     <td><a href="views/lon/prc/loanSign3.html" target="_blank">views/lon/prc/loanSign3.html</a></td>
                                 </tr>
 
@@ -2967,7 +2958,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출 계약서 목록(계약서 없음)<br/>
@@ -2978,7 +2969,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="modify">미전달</td>
+                                    <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출 계약서 상세화면
@@ -2989,6 +2980,18 @@
 
                                 <tr>
                                     <td colspan="6" style="text-align:center">대출 _ 대출이용가이드</td>
+                                </tr>
+
+                                <tr>
+                                    <td></td>
+                                    <td class="modify">5/24</td>
+                                    <td class="person">윤은정</td>
+                                    <td>
+                                    대출이용가이드<br>
+                                    대출이용가이드 상세 (팝업) 5개 :<br>
+                                    (대출 신청하기,  간편한도조회, 대출이어하기, 온라인서류 제출하기, 전자계약서 작성하기)</td>
+                                    <td>새로운 페이지입니다.</td>
+                                    <td><a href="/views/lon/loanGuide.html" target="_blank">/views/lon/loanGuide.html</a></td>
                                 </tr>
 
                             </tbody>
@@ -4827,7 +4830,7 @@
                                     <td class="person">공통</td>
                                     <td></td>
                                     <td>본인인증 방식 (팝업)</td>
-                                    <td>타이틀확인 필요 / 화면설계서는 인증수단 선택 팝업으로 되어있습니다. 공통으로 쓰일 경우 본인인증 방식 텍스트로 통일했습니다.</td>
+                                    <td>화면설계서에는 인증수단이라고 나와있습니다. 로그인: 인증수단 선택 / 본인인증: 본인인증 방식 타이틀 사용</td>
                                     <td><a href="/views/common/layer/select_auth.html" target="_blank">select_auth.html</a></td>
                                 </tr>
                                 <tr>

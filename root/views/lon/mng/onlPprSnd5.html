@@ -63,15 +63,26 @@
 	<!-- //header -->
 
     <!--contentsWrap -->
-    <div class="contentsWrap">
+    <div class="contentsWrap grid"><!--D: 디자인 반영 : grid  클래스 추가 / section 구조 필요 / 만약 팝업으로 변경할 경우 pop-con-wrap  에 gird 클래스 추가해주세요.  -->
         <!--contents -->
         <div class="contents">
             <div class="default-wrap">
 
-                
+                <!--S:온라인서류제출 진행 불가  _ 추가-->
+                <section class="result-area exclamation"  style="display:block;">
+					<p class="tit"><strong>온라인서류제출은<br/>대출을 신청하신 고객님만<br/>이용할 수 있어요</strong></p>
+				</section>
+                <!--E:온라인서류제출 진행 불가 _ 추가-->
+
+                <!--S: 온라인서류제출 진행 불가 _ 추가-->
+                <section class="sub-info-wrap"  style="display:block;">
+                    <div class="tel">이용문의 <strong>1877-7788</strong></div>
+                    <p>평일 09:00 ~ 18:00<br>(주말 및 공휴일 휴무)</p>
+                </section>
+                <!--E: 온라인서류제출 진행 불가 _ 추가-->
 
                 <!--S:온라인서류제출 완료-->
-                <section class="result-area checking"><!--D: section 구조-->
+                <section class="result-area checking"  style="display:block;"><!--D: section 구조-->
 					<p class="tit"><strong>온라인서류를<br/>제출했어요</strong></p><!--D: 텍스트 변경-->
 					<div class="txtbox-wrap">
 						<p>대출실행을 위해 상담원이<br/>연락드릴 예정이에요</p>
@@ -80,7 +91,7 @@
                 <!--E:온라인서류제출 완료-->
 
                 <!--S:온라인서류제출 실패-->
-                <div class="result-area exclamation">
+                <div class="result-area exclamation"  style="display:block;">
 					<p class="tit"><strong>서류 제출에 실패했어요</strong></p>
 					<div class="txtbox-wrap">
 						<p>잠시 후 다시 시도해주세요</p><!--D: 텍스트 변경-->

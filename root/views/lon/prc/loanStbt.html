@@ -71,77 +71,73 @@
         <div class="contents">
             <div class="default-wrap">
 
-                <section><!--D:  리스트 하단 고정으로 section 추가-->
-                    
-                    <div class="tit-wrap">
-                        <p class="txt"><strong>적합성&#183;적정성 정보를<br/> 확인할게요</strong></p>
+                <div class="tit-wrap">
+                    <p class="txt"><strong>적합성&#183;적정성 정보를<br/> 확인할게요</strong></p>
+                </div>
+
+                <!--S: FORM -->
+                <div class="form-all-wrap"><!--D: 5/13 - form 전체 감쌀 경우 : form-all-wrap / slect-box를 감쌀 경우 slect-wrap이 아닌 form-wrap으로 감싸주세요-->
+
+                    <div class="form-wrap error"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div id="" class="select-box openSel" tabindex="1"><!--D: error 클래스 : 미선택 됐을 경우-->
+                            <label for="qValue1">연령</label>
+                            <span class="option" id="qText1">미선택</span>
+                        </div>
                     </div>
 
-                    <!--S: FORM -->
-                    <div class="form-all-wrap"><!--D: 5/13 - form 전체 감쌀 경우 : form-all-wrap / slect-box를 감쌀 경우 slect-wrap이 아닌 form-wrap으로 감싸주세요-->
-
-                        <div class="form-wrap error"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
-                            <div id="" class="select-box openSel" tabindex="1"><!--D: error 클래스 : 미선택 됐을 경우-->
-                                <label for="qValue1">연령</label>
-                                <span class="option" id="qText1">미선택</span>
-                            </div>
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div  id="" class="select-box openSel" tabindex="1">
+                            <label for="qValue2">대출목적</label>
+                            <span class="option" id="qText2">미선택</span>
                         </div>
-
-                        <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
-                            <div  id="" class="select-box openSel" tabindex="1">
-                                <label for="qValue2">대출목적</label>
-                                <span class="option" id="qText2">미선택</span>
-                            </div>
-                        </div>
-
-                        <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
-                            <div id="" class="select-box openSel" tabindex="1">
-                                <label for="qValue3">연간소득</label>
-                                <span class="option" id="qText3">미선택</span>
-                            </div>
-                        </div>
-
-                        <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
-                            <div id="" class="select-box openSel" tabindex="1">
-                                <label for="qValue4">총 자산(순자산)</label>
-                                <span class="option" id="qText4">미선택</span>
-                            </div>
-                        </div>
-
-                        <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
-                            <div id="" class="select-box openSel" tabindex="1">
-                                <label for="qValue5">부채</label>
-                                <span class="option" id="qText5">미선택</span>
-                            </div>
-                        </div>
-
-                        <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
-                            <div  id="" class="select-box openSel" tabindex="1">
-                                <label for="qValue6">신용점수</label>
-                                <span class="option" id="qText6">미선택</span>
-                            </div>
-                        </div>
-
-                        <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
-                            <div id="" class="select-box openSel" tabindex="1">
-                                <label for="qValue7">변제방법</label>
-                                <span class="option" id="qText7">미선택</span>
-                            </div>
-                        </div>
-
-                        <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
-                            <div id="" class="select-box openSel" tabindex="1">
-                                <label for="qValue8">연소득 대비 고정지출</label>
-                                <span class="option" id="qText8">미선택</span>
-                            </div>
-                        </div>
-
                     </div>
-                    <!--E: FORM -->
 
-                </section>
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div id="" class="select-box openSel" tabindex="1">
+                            <label for="qValue3">연간소득</label>
+                            <span class="option" id="qText3">미선택</span>
+                        </div>
+                    </div>
 
-                <section><!--D:   리스트 하단 고정으로 section 추가 및 리스트 구조 변경-->
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div id="" class="select-box openSel" tabindex="1">
+                            <label for="qValue4">총 자산(순자산)</label>
+                            <span class="option" id="qText4">미선택</span>
+                        </div>
+                    </div>
+
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div id="" class="select-box openSel" tabindex="1">
+                            <label for="qValue5">부채</label>
+                            <span class="option" id="qText5">미선택</span>
+                        </div>
+                    </div>
+
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div  id="" class="select-box openSel" tabindex="1">
+                            <label for="qValue6">신용점수</label>
+                            <span class="option" id="qText6">미선택</span>
+                        </div>
+                    </div>
+
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div id="" class="select-box openSel" tabindex="1">
+                            <label for="qValue7">변제방법</label>
+                            <span class="option" id="qText7">미선택</span>
+                        </div>
+                    </div>
+
+                    <div class="form-wrap"><!--D: 5/13  개발 포커스 및 error 적용 문제로 select-wrap을 form-wrap으로 변경-->
+                        <div id="" class="select-box openSel" tabindex="1">
+                            <label for="qValue8">연소득 대비 고정지출</label>
+                            <span class="option" id="qText8">미선택</span>
+                        </div>
+                    </div>
+
+                </div>
+                <!--E: FORM -->
+
+                <div><!--D: 리스트 구조 변경-->
                     <div class="list-bull">
                         <div class="border"></div>
                         <strong>알아두세요</strong>
@@ -150,7 +146,7 @@
                             <li>기입 정보가 정확하지 않거나 변경사항이 있으면 적합성 판단이 달라져서 대출신청이 어려울 수 있어요</li>
                         </ul>
                     </div>
-                </section>
+                </div>
 
             </div>
         </div>
