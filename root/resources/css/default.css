@@ -1615,7 +1615,10 @@ body.on { position:fixed; top:0; }
 
 /** _스크롤 컨텐츠 레이어 **/
 .layer-up .ly-scroll-con { overflow:hidden; overflow-y:auto; max-height:287px; /*margin-bottom:10px; padding:0 20px 10px;*/ padding:0 20px 20px; background:#FFFFFF; }
+.layer-up .form-all-wrap:first-of-type { margin-top:0; }
+.layer-up .form-all-wrap .form-wrap,
 .layer-up .select-wrap { margin-top:20px; }
+.layer-up .txtbox-wrap + .select-wrap { margin-top:0; }
 .layer-up .default-wrap { /*margin-bottom:10px; padding:0 20px 10px;*/ padding:0 20px 10px; }
 .layer-up:has(.fixed-btn-wrap) .default-wrap { padding-bottom:10px; }
 .layer-up .ly-scroll-con.type-high { max-height:60vh; }
