@@ -1569,6 +1569,7 @@ body.on { position:fixed; top:0; }
 /** 알럿팝업 **/
 .layerpopup.type-alert{border:none;border-radius:3px;box-shadow:0 4px 8px 0 rgba(0,0,0,0.50); }
 .layerpopup.type-alert .pop-con-wrap{padding:40px 20px 10px 20px;text-align:center;}
+/* .layerpopup.type-alert .btn-wrap .btn.btn-info { color:#26282C; border:1px solid #DDDDDD; } */
 /* .layerpopup.type-alert .tit-pop{margin-bottom:10px;padding:0 20px;font-size:1.55556rem;color:#464646;line-height:2.2rem;}  2023-07-11, class 사용확인후 삭제필요 */
 .layerpopup.type-alert .pop-con{font-size:1rem;color:#333333;}
 .layerpopup.type-alert .btn-wrap { padding:20px; }
