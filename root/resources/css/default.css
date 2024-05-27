@@ -877,7 +877,7 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .jumintext { position:absolute; left:10px; top:50%; transform:translate(0, -50%); letter-spacing:6px; color:#CCCCCC; font-size:0.55556rem; }
 :disabled ~ .jumintext { color:#DDDDDD; }
 input[type="hidden"] ~ .jumintext { left:15px; }
-.num-masking { letter-spacing:-1px; color:#260F54; font-size:0.88889rem; line-height:1.4375; }
+.num-masking { letter-spacing:-1px; color:#333333; font-size:0.88889rem; line-height:1.4375; }
 
 /* 30% */
 .form-wrap.w30 > label { position:relative; z-index:0!important; width:auto; }
@@ -1943,6 +1943,10 @@ body.on { position:fixed; top:0; }
 .list-bull li:before,
 .list-bull dd:before,
 .list-item-box .notice-list li:before { content:""; position:absolute; left:0px; top:9px; width:3px; height:3px; border-radius:50%; background:#999999; }
+
+.list-bull li.point-red:before,
+.list-bull dd.point-red:before { background:#FF0000; }
+
 .list-bull li + li,
 .list-bull dd + dd,
 .list-item-box .notice-list li + li { margin-top:5px; }
