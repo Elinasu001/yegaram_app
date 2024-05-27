@@ -2128,7 +2128,7 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 .layer-up .inquiry-set-wrap { margin-top:0; }
 .inquiry-set-wrap [class*="-area"]:not(:first-of-type) { margin-top:30px; }
 .inquiry-set-wrap .area-title { padding-bottom:10px; font-weight:400; color:#666666; font-size:0.77778rem; line-height:1.5; }
-.inquiry-set-wrap .radio-list { margin:0; padding:4px; border-radius:15px; background:#F8F8F8; font-size:0; }
+.inquiry-set-wrap .radio-list { margin:0; padding:4px; min-height:40px; border-radius:20px; background:#F8F8F8; font-size:0; }
 .inquiry-set-wrap .radio-list li { display:inline-block; height:30px; margin:0; line-height:32px; text-align:center; }
 .inquiry-set-wrap .radio-list li:nth-last-child(n+2),
 .inquiry-set-wrap .radio-list li:nth-last-child(n+2) ~ li { width:calc(100% / 2); }
@@ -2138,8 +2138,8 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 .inquiry-set-wrap .radio-list li:nth-last-child(n+4) ~ li { width:calc(100% / 4); }
 .inquiry-set-wrap .radio-list li:nth-last-child(n+5),
 .inquiry-set-wrap .radio-list li:nth-last-child(n+5) ~ li { width:calc(100% / 5); }
-.inquiry-set-wrap .radio-list button { position:relative; width:100%; height:100%; font-weight:400; color:#26282C; font-size:0.77778rem; line-height:1.167rem; }
-.inquiry-set-wrap .radio-list li.active button { border-radius:8px; background:#fff; color:#26282C;  }
+.inquiry-set-wrap .radio-list button { position:relative; width:100%; height:100%; font-weight:500; color:#999999; font-size:0.77778rem; line-height:1.167rem; }
+.inquiry-set-wrap .radio-list li.active button { border-radius:8px; background:#fff; color:#26282C; font-weight:600;  }
 .inquiry-set-wrap .radio-list li.active button:before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; border:1px solid #DDDDDD; border-radius:24px; }
 /* input[type="date"]::-webkit-calendar-picker-indicator { background:url("../images/common/ico_calendar.png") no-repeat 50%/24px auto; } */
 input[type="date"]::-webkit-calendar-picker-indicator,
