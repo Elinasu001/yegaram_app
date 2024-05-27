@@ -1469,7 +1469,6 @@ body.on { position:fixed; top:0; }
 
 /* 전체메뉴 */
 .menuWrap { position:fixed; left:100%; top:0; z-index:100; width:100%; height:100%; overflow:hidden; background:#fff; }
-
 .all-menu-wrap { display:flex; flex-direction:column; width:100%; height:100%; }
 .all-menu-header {/* padding-bottom:20px;*/ padding:20px; background:#FFFFFF; border-bottom:1px solid #EEEEEE; /*box-shadow:0 3px 10px rgba(0,0,0,0.06);*/ }
 .all-menu-header .all-menu-info { display:flex; justify-content:space-between; /* height:60px;padding:20px;*/ padding-bottom:25px; font-size:0.88889rem; line-height:1.4375; }
@@ -1501,7 +1500,7 @@ body.on { position:fixed; top:0; }
 
 .all-menu-header .btn-cont-wrap { padding-bottom:20px; padding-right:5px; }
 
-/* 빠른 서비스 */ 
+/* 빠른 서비스 */
 .all-menu-header .quick-menu { padding:20px; background:#fff; }
 .all-menu-header .quick-menu > dt { position:relative; font-size: 0.66667rem; line-height:1.58334; font-weight:600; color:#333333; }
 .all-menu-header .quick-menu > dt button { position:absolute; right:0; color:#868686; padding-right:16px; } /*(청)내부망에서menu.jsp수정후 삭제필요*/
@@ -1511,7 +1510,7 @@ body.on { position:fixed; top:0; }
 .all-menu-header .quick-menu > dd { display:flex; flex-wrap:wrap; }
 .all-menu-header .quick-menu > dd > a { margin:5px 5px 5px 0; padding:5px 9px; background:#E6E2FB; border-radius:100px; font-size:0.77778rem; line-height:1.5; color:#260F54; }
 
-.all-menu-area { display:flex; flex-direction:row; height:calc(100% - 207px); }	/*60 135 140 = 335 */
+.all-menu-area { display:flex; flex-direction:row; height:calc(100vh - 200px); }	/*60 135 140 = 335 */
 .all-menu-area > div { display:inline-block; float:left; } 
 .all-menu-area .menuDepth1 { width:125px; padding-top:20px; font-size:0.77778rem; line-height:1.5; background:#EEEEEE;  }
 .all-menu-area .menuDepth1 li { position:relative; }
