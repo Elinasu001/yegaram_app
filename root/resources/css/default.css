@@ -496,19 +496,33 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .essential::after { content:"*"; position:absolute; padding-left:3px; color:#ff0000;}
 
 /*** 폼 form ***/
+
 .form-all-wrap { margin-top:40px; }
 .form-all-wrap .form-wrap.type-box:first-child,
 .form-all-wrap > .form-wrap:first-child,
 .form-all-wrap > .select-wrap:first-child,
 .form-all-wrap > .sub-tit-wrap:first-child { margin-top:0; }
-.form-all-wrap .terms-area,
-.form-all-wrap .form-wrap { margin-top:30px; }
-.form-all-wrap .form-wrap.type-box { margin-top:10px;}
-.txt-wrap > .sub-tit-wrap { margin:0 0 15px; }
+
 .form-all-wrap > .sub-tit-wrap { margin-bottom:15px;}
-.form-all-wrap > .sub-tit-wrap + .form-wrap,
+
+.form-all-wrap .form-wrap.type-box,
+.form-all-wrap .check-box.toggle,
+.form-all-wrap .form-wrap:has(.select-box) + .form-wrap:has(.select-box) { margin-top:10px; }
+
+/* .form-all-wrap > .sub-tit-wrap + .form-wrap */
 .form-all-wrap > .sub-tit-wrap + ul,
-.form-all-wrap > .sub-tit-wrap + div { margin-top:0; }
+.form-all-wrap > .sub-tit-wrap + div,
+.form-all-wrap > .form-wrap:has(.select-box):first-child { margin-top:0; }
+
+.form-all-wrap .terms-area,
+.form-all-wrap .form-wrap + .form-wrap,
+.form-all-wrap .form-wrap + .check-box.toggl,
+.form-all-wrap .form-wrap.phone { margin-top:30px; }
+
+
+
+
+/** 이전 form 마진 **/
 
 
 /*.form-all-wrap .select-wrap + .form-wrap { margin-top:20px; }*/
@@ -538,6 +552,7 @@ textarea:read-only { border-color:#DDDDDD !important; }
 /* .result-area + .sub-info-wrap { margin-top:30px; } */
 .default-wrap > .form-wrap:first-child,
 .default-wrap > .txt-wrap { margin-top:40px; }
+.txt-wrap > .sub-tit-wrap { margin:0 0 15px; }
 .layer-up .default-wrap > .form-wrap:first-child { margin-top:0; }
 
 .form-wrap > div.input { /*display:inline-block;*/ position:relative; /*width:100%;*/ }
@@ -622,12 +637,6 @@ input[type="file"]::file-selector-button { display:none; }
 .added .btn-file-del { display:block; }
 .form-wrap:has(textarea) + .sub-tit-wrap { margin-bottom:15px !important; }
 
-.form-all-wrap .form-wrap + .check-box.toggle { margin-top:30px; }
-.form-all-wrap .check-box.toggle { margin-top:10px;}
-.form-all-wrap .form-wrap:has(.select-box) { margin-top:10px; }
-.form-all-wrap > .form-wrap:has(.select-box):first-child { margin-top:0; }
-.form-all-wrap .form-wrap.phone,
-.form-all-wrap .form-wrap:has(.form-tit) { margin-top:30px; }
 
 /* .search-area.type-box { padding-top:0; }
 .form-wrap.email-wrap > div.input input,
@@ -966,13 +975,8 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 .safe4{padding: 2px 8px;border-radius: 25px; color: #fff; background-color: #e5751c;font-size: 0.66667rem;margin-left: 4px;}
 .safe5{padding: 2px 8px;border-radius: 25px; color: #fff; background-color: #ee2128;font-size: 0.66667rem;margin-left: 4px;}
 
-
 .terms-area .terms-agr-wrap { display:inline-block; width:100%; margin-top:50px; }
 .terms-area .terms-agr-wrap .terms-tit { font-weight:600; font-size:1rem; color:#000; margin-bottom:20px; }
-
-
-
-
 
 /* 본인계좌 인증 */
 .form-wrap.form-crtf { margin:20px auto 0; text-align:center; }
@@ -1003,7 +1007,6 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 
 /* 은행 선택 */
 /* .search-area .form-wrap > div.input input { padding:15px 65px 11px 0; padding-right:65px; } */
-
 
 /** 약관 체크**/
 
@@ -2698,8 +2701,6 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 	/* html, body { font-size:18px; } */
 }
 
-
-
 /*input 추가*/
 
 .form-row { gap:8px; }
@@ -2708,7 +2709,6 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 
 /** placeholder **/
-
 
 /* amount */
 .amount { position:relative; }
