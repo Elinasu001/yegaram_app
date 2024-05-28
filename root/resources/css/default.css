@@ -2129,8 +2129,8 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 .layer-up .inquiry-set-wrap { margin-top:0; }
 .inquiry-set-wrap [class*="-area"]:not(:first-of-type) { margin-top:30px; }
 .inquiry-set-wrap .area-title { padding-bottom:10px; font-weight:400; color:#666666; font-size:0.77778rem; line-height:1.5; }
-.inquiry-set-wrap .radio-list { margin:0; padding:4px; border-radius:15px; background:#F8F8F8; font-size:0; }
-.inquiry-set-wrap .radio-list li { display:inline-block; height:30px; margin:0; line-height:32px; text-align:center; }
+.inquiry-set-wrap .radio-list { margin:0; padding:4px; min-height:40px; border-radius:20px; background:#F8F8F8; font-size:0; }
+.inquiry-set-wrap .radio-list li { display:inline-block; height:32px; margin:0; line-height:32px; text-align:center; }
 .inquiry-set-wrap .radio-list li:nth-last-child(n+2),
 .inquiry-set-wrap .radio-list li:nth-last-child(n+2) ~ li { width:calc(100% / 2); }
 .inquiry-set-wrap .radio-list li:nth-last-child(n+3),
@@ -2139,9 +2139,8 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 .inquiry-set-wrap .radio-list li:nth-last-child(n+4) ~ li { width:calc(100% / 4); }
 .inquiry-set-wrap .radio-list li:nth-last-child(n+5),
 .inquiry-set-wrap .radio-list li:nth-last-child(n+5) ~ li { width:calc(100% / 5); }
-.inquiry-set-wrap .radio-list button { position:relative; width:100%; height:100%; font-weight:400; color:#26282C; font-size:0.77778rem; line-height:1.167rem; }
-.inquiry-set-wrap .radio-list li.active button { border-radius:8px; background:#fff; color:#26282C;  }
-.inquiry-set-wrap .radio-list li.active button:before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; border:1px solid #DDDDDD; border-radius:24px; }
+.inquiry-set-wrap .radio-list button { position:relative; width:100%; height:100%; font-weight:500; color:#999999; font-size:0.77778rem; }
+.inquiry-set-wrap .radio-list li.active button { border-radius:8px; background:#fff; color:#26282C; border-radius:24px; font-weight:600; box-shadow: 0px 0px 4px #0000001A; }
 /* input[type="date"]::-webkit-calendar-picker-indicator { background:url("../images/common/ico_calendar.png") no-repeat 50%/24px auto; } */
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
@@ -2216,8 +2215,8 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 /** [공통] 은행 선택 팝업 **/
 /* .banklistWrap .tabs .tab-item > li { padding:0 20px; } */
-.banklistWrap .bank_list li a { padding:11px 12px 11px 34px; margin-bottom:0; font-size:0.88889rem; line-height:1.4375; }
-.banklistWrap .bank_list li a::before { width:24px; height:24px; }
+.banklistWrap .bank_list li a { padding:11px 12px 11px 46px; margin-bottom:0; font-size:0.88889rem; line-height:1.4375; }
+.banklistWrap .bank_list li a::before { width:36px; height:36px; }
 
 .bank_list { font-size:0; }
 .bank_list.col2 li { width:calc((100% - 15px) / 2); }
@@ -2226,7 +2225,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .bank_list li a { display:inline-block; position:relative; width:100%; padding:10px 10px 10px 46px; }
 .bank_list li a::before { content:''; display:inline-block; position:absolute; left:0; top:50%; transform:translate(0, -50%); width:32px; height:32px; border-radius:50%; overflow:hidden; border:solid 1px #eee; }
 .bank_list li.none { padding-top:90px; color:#666666; font-size:0.88889rem; line-height:1.4375; text-align:center; }
-.bank_list .tit { display:block; font-weight:500; color:#333333; font-size:0.88889rem; line-height:1.4375; }
+.bank_list .tit { display:block; font-weight:500; color:#333333; font-size:0.88889rem; line-height:1; }
 .bank_list .exp { font-weight:400; color:#999999; font-size:0.77778rem; line-height:1.5; }
 .bank_list.star li a::after { content:""; position:absolute; top:50%; right:0; width:24px; height:24px; background:url("../images/common/ico-star_off.png") no-repeat center; background-size:100%; transform:translateY(-50%); }
 .bank_list.star li.active a::after { background-image:url("../images/common/ico-star_on.png"); }
