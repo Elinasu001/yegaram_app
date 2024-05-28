@@ -324,7 +324,7 @@ html.font-size-3{ font-size: 24px;}
 .flag.style9   { border:1px solid #EFF0F2; color:#666666; background:#EFF0F2; } /* 취소 */
 
 .success { font-weight:500; color:#2B66F6; }/* 내역조회완료 - 파랑  */
-.error { font-weight:500; color:#FF0000; }/* 내역조회실패 - 빨강  */
+.error:not(>.check-account) { font-weight:500; color:#FF0000; }/* 내역조회실패 - 빨강  */
 .standby { font-weight:500; color:#999999; }/* 내역조회 - 회색  */
 
 .point-list dt { padding-bottom:10px; font-size:1rem; font-weight:700; color:#260F54; }
@@ -894,8 +894,8 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 /* 주소 */
 /* .form-wrap.address { margin-top:40px; } */
 .form-wrap.address + .form-wrap:has(.check-box) { margin-top:40px; }
-.form-wrap.address .check-account { margin-top:20px; }
-
+/* .form-wrap.address .check-account { margin-top:20px; } */
+.form-wrap .check-account { margin-bottom:20px; }
 /* 버튼형*/
 .form-wrap.address input::placeholder { color:#CCCCCC; }
 /* .form-wrap.form-line div.input > span { position:relative; display:block; margin-bottom:15px; } 아래와같이 변경*/
