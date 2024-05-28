@@ -34,7 +34,7 @@ body.fix { overflow:hidden; }
 .btn-cont-wrap.flex-end { justify-content:flex-end;}
 .btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; height:48px; border-radius:30px; background:#9F7CE3; color:#fff; font-size:1rem; line-height:48px; font-weight:500; text-align:center; }
 .btn.btn-add {display:inline-block; width:unset; padding:0 54px; background:#FFFFFF; border:1px solid #4E32A5; font-size:1rem; line-height:48px; font-weight:500; color:#4E32A5; }
-.btn.btn-sm { display:inline-flex; align-items: center; /*display:inline-block;*/ width:unset; height:30px; padding:5px 16px;  background:#FFFFFF; border:1px solid #DDDDDD; border-radius:17px;  font-size:0.77778rem; line-height: 1rem; font-weight:400; color:#26282C; letter-spacing: -0.5px;}
+.btn.btn-sm { display:inline-flex; align-items: center; /*display:inline-block;*/ width:unset; height:30px; padding:0px 16px;  background:#FFFFFF; border:1px solid #DDDDDD; border-radius:17px;  font-size:0.77778rem; line-height: 1rem; font-weight:400; color:#26282C; letter-spacing: -0.5px;}
 
 .btn.btn-sm.green { background: #E3F6F8; border:1px solid #E3F6F8; color:#00A2C4; }
 .btn.btn-sm.pink { background: #FFE9F5; border:1px solid #FFE9F5; color:#F648AA; }
@@ -47,6 +47,7 @@ body.fix { overflow:hidden; }
 .juso-list .btn.btn-sm.purple { height:26px; padding:0 8px; border-radius:13px; border:1px solid #612AD0; background:#FFFFFF; color:#612AD0; }
 
 .btn.btn-sm.other { display:flex; justify-content: center; width:100%; height:34px; background: #F2F4F6; border:1px solid #F2F4F6; color:#26282C; }
+.btn.btn-gray { display:flex; align-items: center; justify-content: center; border-radius:17px; padding:0 16px; font-size:0.77778rem; font-weight:400; height:34px; background: #F2F4F6; border:1px solid #F2F4F6; color:#26282C; }
 .btn.sq { border-radius:6px; }
 
 .btn-cont-wrap.btn-txt { display:inline-block; width:100%; }
@@ -65,8 +66,8 @@ body.fix { overflow:hidden; }
 .btn-cont-wrap + .btn-cont-wrap { margin-top:15px; }
 
 .normal-btn { height:34px; border:solid 1px #ddd; background:#fff; color:#454545; padding:0 16px; font-weight:400; font-size:0.77777rem; border-radius:8px; line-height:34px; }
-.btn-gray { /*padding:7px 16px;*/ border-radius:8px; border:1px solid #F2F4F6; background:#F2F4F6; font-size:0.77778rem; line-height:1.5; font-weight:400; color:#454545; }
-.btn.btn-gray { background:#F2F4F6; color:#454545; font-weight:500; }
+
+/* .btn.btn-gray { background:#F2F4F6; color:#454545; font-weight:500; } */
 .btn.btn-info { background:#FFFFFF; border:1px solid #DDDDDD; color:#26282C; }
 .btn.btn-primary { background:#9F7CE3; color:#FFFFFF; border:1px solid #9F7CE3; }
 .btn.btn-sub { background:#F2F4F6; color:#26282C; }
@@ -552,27 +553,29 @@ section > .result-wrap{ margin-top:40px; }
 
 /* 내정보관리 */
 .user-imgbox { display:flex; width:100%; flex-direction:column; align-items:center; margin-top:40px; margin-bottom:20px; }
+.user-imgbox > p { color:#26282C; }
 .user-imgbox > p.user-img > img { width:80px; height:80px; margin-bottom:20px; border-radius:50%; overflow:hidden; background:#eee; }
 .user-imgbox > p.user-img > img { width:100%; }
 .user-imgbox > p.user-img { position: relative; }
 .user-imgbox > p.user-img.plus .img-plus { display:block; }
 .user-imgbox > p.user-img .img-plus { display:none; font-size:0; position: absolute; width:24px; height:24px; right:0; bottom:20px; background: url(../images/common/user-img-plus.png) no-repeat 100%/24px auto; }
-.user-imgbox > p.user-email { color:#757575; margin-top:5px; }
+.user-imgbox > p.user-email { font-size:0.88889rem; color:#999999; margin-top:10px; }
 
-.userinfo-wrap { margin-bottom:20px; padding:30px 20px; border:solid 1px #E5E5E5; background:#Fff; border-radius:20px; }
+.userinfo-wrap { /*margin-bottom:20px;*/ padding:30px 20px; border:solid 1px #E5E5E5; background:#Fff; border-radius:20px; }
 .userinfo-wrap dt,
 .userinfo-wrap dd { position:relative; padding:15px 0; border-bottom:solid 1px #e5e5e5; }
+.userinfo-wrap dt { padding-top:0; }
 .userinfo-wrap dt,
-.userinfo-wrap dd:last-child { border-bottom:0; }
+.userinfo-wrap dd:last-child { border-bottom:0; padding-bottom:0; }
 
 
 .userinfo-wrap dt { font-weight:bold; color:#333; }
 .userinfo-wrap dt > a,
 .userinfo-wrap dd a { position:absolute; right:0; top:50%; transform:translate(0, -50%); }
 
-.userinfo-wrap dd .tit { margin-bottom:15px; font-size:0.88889rem; line-height:1.4375; font-weight:300; color:#454545; }
+.userinfo-wrap dd .tit { margin-bottom:16px; font-size:0.88889rem; line-height:1.4375; font-weight:300; color:#999999; }
 
-.userinfo-wrap.ico dd .tit { padding-left:25px; }
+/* .userinfo-wrap.ico dd .tit { padding-left:25px; }
 .userinfo-wrap dd .tit::before { content:''; display:inline-block; width:20px; height:20px; position:absolute; left:0; top:50%; transform:translate(0, -50%); }
 .user-name .tit::before { background:url("../images/common/user-name.png") no-repeat center/100%; }
 .user-birth .tit::before { background:url("../images/common/user-birth.png") no-repeat center/100%; }
@@ -580,18 +583,18 @@ section > .result-wrap{ margin-top:40px; }
 .user-email .tit::before { background:url("../images/common/user-email.png") no-repeat center/100%; }
 .user-job .tit::before { background:url("../images/common/user-job.png") no-repeat center/100%; }
 .user-home .tit::before { background:url("../images/common/user_home.png") no-repeat center/100%; }
-.user-office .tit::before { background:url("../images/common/user_office.png") no-repeat center/100%; }
+.user-office .tit::before { background:url("../images/common/user_office.png") no-repeat center/100%; } */
 
-.userinfo-wrap dd .txt { font-size:1rem; line-height:1.38889; font-weight:500; color:#260F54; text-align:left; }
+.userinfo-wrap dd .txt { font-size:0.88889rem; line-height:1.278rem; font-weight:500; color:#333333; text-align:left; }
 .userinfo-wrap dd .txt a[href*="tel"] { position:static; font-size:1rem; line-height:1.38889; font-weight:500; color:#260F54; text-align:left; }
 .userinfo-wrap + .sub-cal-wrap { margin-top:25px; }
 
 .product-more-wrap { margin:40px 0; font-size:0; }
-.more-bg-box{ background:#F8F8F8; border-radius:10px; padding:18px 0 20px; }
+.more-bg-box{ background:#F8F8F8; border-radius:30px; padding:18px 0 20px; }
 .more-bg-box > li { display:inline-block; width:calc(100% / 3); font-size:0.88889rem;line-height:1.4375; text-align:center; }
 .more-bg-box > li:nth-child(2) { padding-left:15px; }
 .more-bg-box > li:last-child { padding-right:10px; }
-.more-bg-box > li.tit { position:relative; font-weight:500; }
+.more-bg-box > li.tit { position:relative; font-weight:500; color:#333333; }
 .more-bg-box > li.tit::after { content:''; position:absolute; top:50%; right:0; width:1px; height:21px; background:#DDDDDD; vertical-align:middle; transform:translateY(-50%); }
 .more-bg-box > li > a { color:#666666; font-weight:300; }
 .more-bg-box > li > a::after { content:''; display:inline-block; width:16px; height:16px; margin-left:5px; margin-top:4px; background:url("../images/common/ic_arrow_right_more02.png") no-repeat center/100%;; vertical-align:top; }
@@ -605,8 +608,8 @@ section > .result-wrap{ margin-top:40px; }
 .custom-setting-list .item:first-child{ padding-top: 0px; }
 .custom-setting-list .item:not(:first-child){ border-top: 1px solid #EEEEEE; }
 .custom-setting-list .tit {font-weight:600; }
-.custom-setting-list .item .toggle-wrap + .txt { margin-top:15px; }
-.custom-setting-list .list-bull { margin-top:15px; }
+.custom-setting-list .item .toggle-wrap + .txt { margin-top:16px; font-size:0.88889rem; }
+.custom-setting-list .list-bull { margin-top:15px;  font-size:0.88889rem;  }
 
 /* 앱설치안내 */
 .install-logo { text-align:center; padding:0 0 40px;}
@@ -679,7 +682,7 @@ section > .result-wrap{ margin-top:40px; }
 
 /*.form-wrap:has(.select-wrap) + .exp-txt { margin-top:0; } 이체-셀렉트+잔액 ex)immedTransferStep1.html*/
 .toggle-area .list-bull { margin-top:0; }
-.txt-list-wrap + .btn-cont-wrap { margin:20px 0 0; }
+/* .txt-list-wrap + .btn-cont-wrap { margin:20px 0 0; } */
 .txt-list-wrap + .txt-list-wrap { margin-top:20px; }
 .txt-list-wrap > .btn-cont-wrap + .txt-detail-area { margin-top:15px; }
 .layer-up .default-wrap .txtbox-wrap:last-child { padding-bottom:0; }

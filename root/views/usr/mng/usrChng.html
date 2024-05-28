@@ -70,7 +70,7 @@
                 <!--D : 로그인시 노출-->
 				<section>
 					<div class="user-imgbox"><!--D: plus 클래스 추가 : 이미지 들어갈 경우 plus 클래스 삭제-->
-						<p class="user-img plus"><img src="../../../resources/images/common/user-img.png" alt="고객 이미지프로필"><span class="img-plus">이미지 추가</span></p>
+						<p class="user-img plus"><img src="../../../resources/images/common/user-img.png" alt="고객 이미지프로필"><span class="img-plus">이미지 추가</span></p><!--D: img-plus 태그 추가-->
 						<p><b>예가람(test000819)</b></p>
 						<p class="user-email">testkorea@naver.com</p>
 					</div>
@@ -89,40 +89,39 @@
 					</div>
 
 					<dl class="userinfo-wrap ico">
-						<dt>나의 정보 <a href="#none" class="btn-gray" onclick="usrChngPwdCall();">비밀번호 변경</a></dt><!--[퍼블] 클래스 변경-->
+						<dt>나의 정보 <a href="#none" class="btn btn-gray " onclick="usrChngPwdCall();">비밀번호 변경</a></dt><!--D: 버튼 클래스 변경-->
 						<dd class="user-name">
 							<p class="tit">이름</p>
-							<p class="txt">김고려</p>
+							<p class="txt">김가람</p>
 						</dd>
 						<dd class="user-birth">
 							<p class="tit">생년월일</p>
 							<p class="txt">1999.05.01</p>
 						</dd>
 						<dd class="user-call">
-							<p class="tit">휴대폰<a href="#none" class="btn-gray" onclick="usrChngTelCall();">변경</a></p><!--[퍼블] 클래스 및 텍스트 변경-->
+							<p class="tit">휴대폰<a href="#none" class="btn btn-sm" onclick="usrChngTelCall();">변경</a></p><!--D: 버튼 클래스 변경-->
 							<p class="txt">010-8568-6730</p>
 						</dd>
 						<dd class="user-email">
-							<p class="tit">이메일<a href="#none" class="btn-gray" onclick="usrChngEmadCall();">변경</a></p><!--[퍼블] 클래스 및 텍스트 변경-->
+							<p class="tit">이메일<a href="#none" class="btn btn-sm" onclick="usrChngEmadCall();">변경</a></p><!--D: 버튼 클래스 변경-->
 							<p class="txt">testkorea@naver.com</p>
 						</dd>
 						<dd class="user-job">
-							<p class="tit">직업<a href="#none" class="btn-gray" onclick="usrChngJobCall();">변경</a></p><!--[퍼블] 클래스 및 텍스트 변경-->
+							<p class="tit">직업<a href="#none" class="btn btn-sm" onclick="usrChngJobCall();">변경</a></p><!--D: 버튼 클래스 변경-->
 							<p class="txt" id="jobName">국회의원</p>
 						</dd>
-						<!--[퍼블] 추가-->
 						<dd class="user-home">
-							<p class="tit">자택<a href="#none" class="btn-gray" onclick="usrChngJobCall();">변경</a></p>
+							<p class="tit">자택<a href="#none" class="btn btn-sm" onclick="usrChngJobCall();">변경</a></p><!--D: 버튼 클래스 변경-->
 							<p class="txt">051-640-9000<br/>부산광역시 동구 좌천1동 520-1</p>
 						</dd>
 						<dd class="user-office">
-							<p class="tit">직장<a href="#none" class="btn-gray" onclick="usrChngJobCall();">변경</a></p>
+							<p class="tit">직장<a href="#none" class="btn btn-sm" onclick="usrChngJobCall();">변경</a></p><!--D: 버튼 클래스 변경-->
 							<p class="txt">051-640-9000<br/>부산광역시 동구 좌천1동 520-1</p>
 						</dd>
 					</dl>
 
 					<!--배너 영역 마크업 변경 : 메인배너와 일원화 -->
-					<div class="banner-area">
+					<!--D: 삭제 <div class="banner-area">
 						<a href="javascript:void(0);" class="banner-box">
 							<p class="banner-tit">
 								<span>예/적금과 대출, 현명하게 관리하려면</span>
@@ -132,15 +131,17 @@
 								<span class="btn-go-link" onclick="doActionFrame('etc/inq/freeCashCalc1');">여유생활자금계산</span>
 							</div>
 						</a>
-					</div>
+					</div> -->
 					<!-- 배너 영역 마크업 변경 : 메인배너와 일원화 -->
 
-					<ul class="arrow-button-list">
-						<li><a href="#none" onclick="usrAlertCall();">알림 설정</a></li>
-						<li><a href="#none" onclick="doActionFrame('usr/mng/usrReReg1');">고객 비밀번호 분실/재등록</a></li>
-						<li><a href="#none" onclick="doActionFrame('usr/mng/usrFrtPswd1');">최초 비밀번호 등록</a></li>
-						<li><a href="#none" onclick="doActionFrame('usr/mng/usrPwErr1');">고객 비밀번호 오류 해제</a></li>
-					</ul>
+                    <div class="arrow-button-wrap"><!--D: 감싸주는 arrow-button-wrap 태그 추가 -->
+                        <ul class="arrow-button-list">
+                            <li><a href="#none" onclick="usrAlertCall();">알림 설정</a></li>
+                            <li><a href="#none" onclick="doActionFrame('usr/mng/usrReReg1');">비밀번호 분실/재등록</a></li><!--D: 텍스트 변경-->
+                            <li><a href="#none" onclick="doActionFrame('usr/mng/usrFrtPswd1');">최초 비밀번호 등록</a></li>
+                            <li><a href="#none" onclick="doActionFrame('usr/mng/usrPwErr1');">비밀번호 오류 해제</a></li><!--D: 텍스트 변경-->
+                        </ul>
+                    </div>
 
 					<div class="custom-setting-list">
 						<div class="item">
@@ -157,20 +158,20 @@
 									</label>
 								</div>
 							</div>
-							<p class="txt">Push 알림을 해제하시면 GOBANK APP에서 발송하는 다양한 정보 및 인증에 필요한 알림을 수신할 수 없으세요</p>
+							<p class="txt">Push 알림을 해제하시면 예스뱅킹APP에서 발송하는 다양한 정보 및 인증에 필요한 알림을 수신할 수 없으세요</p><!--D: 텍스트 변경-->
 						</div>
 
 						<div class="item">
 							<div class="flex-between-center">
 								<p class="tit">로그인방법</p>
-								<button type="button" class="btn-request">설정</button>
+								<button type="button" class="btn btn-sm">설정</button><!--D: 버튼 클래스 변경-->
 							</div>
 						</div>
 	
 						<div class="item">
 							<div class="flex-between-center">
 								<p class="tit">큰글씨</p>
-								<button type="button" class="btn-request" onclick="biz.empInq(empInqCallBack);">설정</button>
+								<button type="button" class="btn btn-sm" onclick="biz.empInq(empInqCallBack);">설정</button><!--D: 버튼 클래스 변경-->
 							</div>
 						</div>
 	
@@ -191,17 +192,24 @@
 
 					</div>
 
-					<div class="logout-btn-wrap">
+					<!--D: 삭제 <div class="logout-btn-wrap">
 						<div>
 							<a href="javascript:void(0);" class="btn">로그아웃</a>
 						</div>
-					</div>
+					</div> -->
 				</section>
 				<!--D : 로그인시 노출 //-->
 
             </div>
         </div>
         <!-- //contents -->
+
+        <!--D: 로그아웃 버튼 fixed 버튼으로 이동-->
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap">
+                <a href="javascript:void(0);" class="btn">로그아웃</a>
+            </div>
+        </div>
 
     </div>
     <!-- //contentsWrap -->
