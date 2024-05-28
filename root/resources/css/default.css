@@ -1589,7 +1589,10 @@ body.on { position:fixed; top:0; }
 .layerpopup .fixed-btn-wrap { /*margin-top:10px;*/  background:#fff; bottom:1px; }
 .layerpopup.layer-up .fixed-btn-wrap {  padding:10px 20px 20px; }
 .layerpopup.has-button .ly-scroll-con.ly-select { padding:0 20px 0px !important; }
+/* 버튼 1개 있을 경우 */
 .layer-up.has-button { padding-bottom:90px; }
+/* 버튼 위아래로 있을 경우 */
+.layer-up.has-button:has(.fixed-btn-wrap .flexCol) { padding-bottom:130px; }
 .layer-up.has-button .content-wrap { padding-bottom:20px; }
 
 
@@ -1608,7 +1611,7 @@ body.on { position:fixed; top:0; }
 .layerpopup .sub-title { padding:20px 0; font-size:0.88889rem; line-height:1.4375; font-weight:500; color:#333; }
 .layerpopup .subtxt-wrap { font-size:0.88889rem; line-height:1.4375; color:#666; }
 .layerpopup .ly-select-list + div .sub-title { padding-top:30px; }
-.layerpopup .txtbox-wrap { padding-bottom:15px;  color:#666666; }
+.layerpopup .txtbox-wrap { /*padding-bottom:15px;*/  color:#666666; }
 .layerpopup .txtbox-wrap b,
 .layerpopup .txtbox-wrap strong { font-weight:500; color:#333333; }
 /* .layerpopup .default-wrap > div { margin-top:40px;  } */
@@ -1618,7 +1621,7 @@ body.on { position:fixed; top:0; }
 
 
 /** _스크롤 컨텐츠 레이어 **/
-.layer-up .ly-scroll-con { overflow:hidden; overflow-y:auto; max-height:287px; /*margin-bottom:10px; padding:0 20px 10px;*/ padding:0 20px 20px; background:#FFFFFF; }
+.layer-up .ly-scroll-con { overflow:hidden; overflow-y:auto; max-height:287px; /*margin-bottom:10px; padding:0 20px 10px;*/ padding:0 20px; background:#FFFFFF; }x
 .layer-up .form-all-wrap:first-of-type { margin-top:0; }
 .layer-up .form-all-wrap .form-wrap,
 .layer-up .select-wrap { margin-top:20px; }

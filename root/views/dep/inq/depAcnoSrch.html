@@ -263,7 +263,7 @@
 						<div class="txt-detail-area">
 							<ul class="txt-list">
 								<li>
-									<span class="tit">잔액</span>
+									<span class="tit">출금가능금액</span><!--[퍼블-1] : 텍스트변경-->
 									<span class="txt">000,000,000원</span>
 								</li>
 								<li>
@@ -333,8 +333,79 @@
 
 	</div>
     <!-- //e: contentsWrap -->
+	
+	<!--[퍼블-1] : 추가 페이지로 알럿 추가 -->
 
+	<!--S: 1. 해지불가 안내 (Alert)-->
+	<div id="lyPop2" class="layerpopup layer-up has-button show" style="position: fixed; top: 354.5px; left: 0px; display: none;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+		<div class="content-wrap">
+			<div class="pop-header">
+				<h2 class="pop-title">해지불가 안내</h2>
+				<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+			</div>
+			<div class="ly-scroll-con">
+				<div class="txtbox-wrap">
+					<p>
+						지급제한계좌 및 자동이체 연결계좌는 해지 신청을 할 수 없어요
+					</p>
+				</div>
+			</div>
+			<div class="fixed-btn-wrap">
+				<div class="btn-wrap">
+					<a href="javascript:void(0);" class="btn">확인</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--S: 1. 해지불가 안내 (Alert)-->
 
+	<!--S: 2. 예적금 계좌 보유 안내 (Alert)-->
+	<div id="lyPop2" class="layerpopup layer-up has-button show" style="position: fixed; top: 354.5px; left: 0px; display: none;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+		<div class="content-wrap">
+			<div class="pop-header">
+				<h2 class="pop-title">예적금 계좌 보유 안내</h2>
+				<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+			</div>
+			<div class="ly-scroll-con">
+				<div class="txtbox-wrap">
+					<p>
+						예적금 또는 대출계좌가 존재하지 않아야 해지 신청을 할 수 있어요
+					</p>
+				</div>
+			</div>
+			<div class="fixed-btn-wrap">
+				<div class="btn-wrap">
+					<a href="javascript:void(0);" class="btn">확인</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--S: 2. 예적금 계좌 보유 안내 (Alert)-->
+
+	<!--S: 3. 종합통장대출 해지 안내 (Alert)-->
+	<div id="lyPop2" class="layerpopup layer-up has-button show" style="position: fixed; top: 354.5px; left: 0px; display: none;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+		<div class="content-wrap">
+			<div class="pop-header">
+				<h2 class="pop-title">종합통장대출 해지 안내</h2>
+				<button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+			</div>
+			<div class="ly-scroll-con">
+				<div class="txtbox-wrap">
+					<p>
+						종합통장대출을 해지하신 후 가능해요
+					</p>
+				</div>
+			</div>
+			<div class="fixed-btn-wrap">
+				<div class="btn-wrap">
+					<a href="javascript:void(0);" class="btn">확인</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--S: 3. 종합통장대출 해지 안내 (Alert)-->
+
+	<!--[퍼블-1] : 추가 페이지로 알럿 추가 //-->
 <footer>
 <!-- 푸터 타입별 정의 -->
 </footer>
