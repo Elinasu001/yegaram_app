@@ -274,6 +274,232 @@
 				</div>
 			</div>
 
+            <!--S: 최신소스 반영 : 대출한도조회 (팝업) -->
+            <div id="stopPopup" class="layerpopup layer-up has-button show" style="display:none;">
+                <div class="content-wrap">
+                    <div class="pop-header">
+                        <h2 class="pop-title">고객님 지금은 대출한도조회만 가능해요</h2>
+                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close" onclick="PageFunc.cancel();">닫기</button>
+                    </div>
+                    <div class="ly-scroll-con ly-select">
+                        <div class="txtbox-wrap">
+                            <p>아래의 대출한도 조회 버튼을 클릭하시면<br>대출가능한 상품을 확인하실 수 있어요</p>
+                            <ul class="list-bull"><!--D: txtbox-wrap 안으로 list-bull 이동 -->
+                                <li>
+                                    대출신청가능시간<br/>
+                                    <span class="point">평일 9시 ~ 17시 30분</span><!--D: b태그 span태그로 변경 후 point 클래스로 변경 -->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap type-popup">
+                        <a href="javascript:void(0);" class="btn" onclick="javascript:doActionMenu('lon/inq/qckLonLimt1');">간편한도 조회</a><!--D: 텍스트 변경-->
+                    </div>
+                </div>
+            </div>
+            <!--E: 최신소스 반영 : 대출한도조회 (팝업) -->
+
+            <!--S: 최신소스 반영 : 금융상품 중요사항 안내 (팝업)-->
+            <div id="importantNotiPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display: none;">
+                <div class="pop-header">
+                    <h2 class="pop-title">금융상품 중요사항 안내</h2>
+                    <button type="button" name="button" class="btn-layer-close">닫기</button>
+                </div>
+                <div class="pop-con-wrap">
+                    <div class="default-wrap">
+                        <div class="tabs-wrap">
+                            <div class="tabs type2">
+                                <ul class="tab-item pf">
+                                    <li class="on" data-tab="tab-cont001" id="tep01"><a
+                                            href="javascript:void(0);">상품정보</a></li>
+                                    <li class="" data-tab="tab-cont002" id="tep02"><a
+                                            href="javascript:void(0);">유의사항</a></li>
+                                </ul>
+        
+                                <div class="tab-content-area scroll-height">
+                                    <div id="tab-cont001" class="tab-content on">
+                                        <div id="intractInfo">상품정보 들어감</div>
+                                    </div>
+        
+                                    <div id="tab-cont002" class="tab-content dp-none">
+        
+                                        <div class="bg-box">
+                                            <ul class="list-bull">
+                                                <li>금융상품의 중요사항에 대한 일반적인 안내 사항으로 세부내용은 상품설명서를 통해 확인 하실 수 있어요</li>
+                                            </ul>
+                                        </div>
+        
+                                        <div class="sub-tit-wrap">
+                                            <p class="tit">중도해지에 따른 불이익</p>
+                                            <ul class="list-bull">
+                                                <li>만기가 도래하기 전에 중도해지를 하는 경우, 가입 기간에 따라 중도해지 이율이 적용되며, 약정이율로 지급받기 어려울 수 있으며, 추가적인 설명이 필요한 경우 "중도해지이율"항목을 다시 한번 확인해 주세요</li>
+                                            </ul>
+                                        </div>
+        
+                                        <div class="sub-tit-wrap">
+                                            <p class="tit">금리변동형 상품 안내</p>
+                                            <ul class="list-bull">
+                                                <li>금리변동형 예금성 상품의 경우 금리상승에 따라 약정금리인상 가능성이 있지만 금리가 하락하는 경우 약정금리 인하로 소비자에게 불리할 수 있어요</li>
+                                            </ul>
+                                        </div>
+        
+                                        <div class="table-type table-row type-left">
+                                            <table>
+                                                <caption>
+                                                    금리변동형 상품 안내의 금리 상승, 하락 안내 표이며 구분, 고정금리, 변동금리, 운영형태, 특징 항목이 있습니다.
+                                                </caption>
+                                                <colgroup>
+                                                    <col width="20%">
+                                                    <col width="40%">
+                                                    <col width="*%">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col">고정금리</th>
+                                                    <th scope="col">변동금리</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="col">운영<br>형태</th>
+                                                    <td><img src="../../../resources/images/common/fixed_rate.png" alt="고정금리 운영형태"></td>
+                                                    <td><img src="../../../resources/images/common/floating_rate.png" alt="변동금리 운영형태"> </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">특징</th>
+                                                    <td>
+                                                        <ul class="list-bull">
+                                                            <li>예금 가입 시 결정된 약정금리가 예금만기까지 동일하게 유지</li>
+                                                            <li>시장금리 하락 시 이자율 하락이 없는 반면 상승 시 이자율 변동이 없어 변동금리보다 불리</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <ul class="list-bull">
+                                                            <li>일정주기(3/6개월 등)마다 예금 기준금리의 변동에 따라 약정금리가 변동</li>
+                                                            <li>시장금리 상승 시 이자 수익이 증가하는 반면 상승 시 이자수익 하락으로 고정금리보다 불리</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+        
+        
+                                        <div class="sub-tit-wrap">
+                                            <p class="tit">민원처리 및 분쟁조정 절차</p>
+                                            <ul class="list-bull">
+                                                <li>본 상품에 대한 문의사항 또는 민원 상담이 필요하시면 영업점, 고객센터(1877-9900) 또는 인터넷 홈페이지(www.goryosb.co.kr)를 통해 문의해주세요</li>
+                                                <li>금융소비자는 본 상품에 대하여 당 저축은행과 분쟁이 있는 경우에는 금융소비자보호법 제 36조 제 1항에 따라 금융감독원(국번없이 1322)에 분쟁조정을 신청할 수 있습니다</li>
+                                            </ul>
+                                        </div>
+        
+                                        <div class="sub-tit-wrap">
+                                            <p class="tit">위법계약해지권 행사에 관한 사항</p>
+                                            <ul class="list-bull">
+                                                <li>금융회사가 금융소비자보호법상 판매원칙 위반시 일정 기간 이내에 금융소비자가 계약해지를 요구할 수 있어요</li>
+                                                <li>금융회사는 10일 이내에 수락여부를 통지해야 하며, 거절 시에는 거절사유와 함께 통지해야 해요</li>
+                                                <li>위법계약해지 요구는 계약서류를 받은 날로부터 5년, 위법 사실을 안 날로부터 1년 이내에 가능해요</li>
+                                            </ul>
+                                        </div>
+        
+                                        <div class="sub-tit-wrap">
+                                            <p class="tit">유의사항</p>
+                                            <ul class="list-bull">
+                                                <li>금융상품체결 전 금융상품설명서 및 약관을 확인하시기 바랍니다.</li>
+                                                <li>일반금융소비자는 금융상품 판매업자로부터 해당 상품에 대해 충분한 사전 설명을 받을 권리가 있으며, 설명을 이해한 후 거래하기 바랍니다.</li>
+                                                <li>금융소비자의 자격요건으로 연체대출금보유자, 불건전대출이 있는 자 등은 대출 취급이 제한될 수 있습니다.</li>
+                                                <li>과도한 대출은 개인신용평점 하락의 원인이 될 수 있습니다.</li>
+                                                <li>개인신용평점 하락으로 금융거래의 제약 또는 불이익이 발생할 수 있습니다.</li>
+                                                <li>연체 시 계약기간 만료 전 원리금 변제의무가 발생할 수 있습니다.</li>
+                                                <li>상품정보의 내용은 당행의 여신 및 금리정책에 따라 변경될수 있음.</li>
+                                                <li>기타 자세한 내용은 상품 취급 지점으로 문의 하여 주시기 바랍니다.</li>
+                                            </ul>
+                                        </div>
+        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //금융상품 중요사항 안내 탭 추가 231201-->
+                    <div class="fixed-btn-wrap">
+                        <div class="btn-wrap">
+                            <a href="javascript:void(0);" class="btn" onclick="closePopup('importantNotiPop');">확인했어요</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--E: 최신소스 반영 : 금융상품 중요사항 안내 (팝업)-->
+
+            <!--S: 최신소스 반영 : 이해여부 확인 (팝업)-->
+            <div id="underStandingconfirmPop" class="layerpopup laypop-all testaaa" tabindex="0" data-focus-prev="btn-layer-close" style="display: none;">
+                <div class="pop-header">
+                    <h2 class="pop-title">이해여부 확인</h2>
+                    <button type="button" name="button" class="btn-layer-close">닫기</button>
+                </div>
+                <div class="pop-con-wrap">
+                    <div class="default-wrap ">
+                        <div class="bg-box">
+                            <p class="box-desc">충분한 이해없이 확인했다고 답변할 경우 추후 소송이나 분쟁에서 불리하게 작용할 수 있으니 질문에 정성껏 답변해주시기 바랍니다.</p>
+                            <p class="box-desc"><strong class="color-2B0F62">충분히 이해하고 답변해주세요</strong></p>
+                        </div>
+                        <section class="terms-area">
+                            <div class="q-wrap">
+                                <p>1. 대출계약의 체결만으로도 <span class="color-FF0000">고객님의 신용평점이 하락</span>할 수 있습니다. 확인하셨습니까?</p>
+                                <ul>
+                                    <li>
+                                        <input type="radio" class="radioClass" name="qq1" id="qq11" value="Y" onclick="PageFunc.checkNext2(this)">
+                                        <label for="qq11" class="rd">예</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" class="radioClass" name="qq1" id="qq12" value="N" onclick="PageFunc.checkNext2(this)">
+                                        <label for="qq12" class="rd">아니오</label>
+                                    </li>
+                                </ul>
+                            </div>
+        
+                            <div class="q-wrap">
+                                <p>2. 대출계약이 성립한 날로부터 <u>3년 이내의 기간 동안</u>에는 약정하신 대출금을 조기상환하는 경우 <span class="color-FF0000">중도상환수수료가 발생</span>할 수 있습니다. 확인하셨습니까?</p>
+                                <ul>
+                                    <li>
+                                        <input type="radio" class="radioClass" name="qq2" id="qq21" value="Y" onclick="PageFunc.checkNext2(this)">
+                                        <label for="qq21" class="rd">예</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" class="radioClass" name="qq2" id="qq22" value="N" onclick="PageFunc.checkNext2(this)">
+                                        <label for="qq22" class="rd">아니오</label>
+                                    </li>
+                                </ul>
+                            </div>
+        
+                            <div class="q-wrap">
+                                <p>3. 대출금 연체 시 <strong>대출원금</strong>에 대하여 연체이자율이 적용되며, 연체이자를 일부 납입하는 경우에도 <span class="color-FF0000">연체이자 전액을 납입하기 전까지 대출잔액에 연체이자율이 적용</span>됩니다. 확인하셨습니까?</p>
+                                <ul>
+                                    <li>
+                                        <input type="radio" class="radioClass" name="qq3" id="qq31" value="Y" onclick="PageFunc.checkNext2(this)">
+                                        <label for="qq31" class="rd">예</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" class="radioClass" name="qq3" id="qq32" value="N" onclick="PageFunc.checkNext2(this)">
+                                        <label for="qq32" class="rd">아니오</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn disabled" id="underStandingconfirmPopBtn" onclick="PageFunc.checkNextConfirm(this);">확인했어요</a>
+                    </div>
+                </div>
+            </div>
+            <!--E: 최신소스 반영 : 이해여부 확인 (팝업)-->
+
+
             <!--S: 대출신청(약관동의) 유효성 체크-->
             <div id="lyAlert1" class="layerpopup type-alert on" style="display: none;">
                 <div class="content-wrap">
@@ -441,6 +667,7 @@
                 </div>
             </div>
             <!--E: 1-8. 제휴[혁신]대출 또는 온라인 햇살론 진행 시 (Alert)-->
+            
 
         </div>
         <!-- //contentsWrap -->

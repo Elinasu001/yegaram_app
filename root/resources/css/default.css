@@ -256,8 +256,8 @@ html.font-size-3{ font-size: 24px;}
 .border-box { border:1px solid #E5E5E5; background:none; }
 .bg-box.border-box { padding:30px 20px; }
 .bg-box.border-box .result-area.nodata { margin-top:0; }
-
 .bg-box .list-bull + .list-bull { margin-top:20px; }
+.bg-box + .terms-area { margin-top:30px; }
 
 /** flex 플렉스 **/
 .flex-no { display: unset; }
@@ -1696,6 +1696,7 @@ body.on { position:fixed; top:0; }
 .tabs-wrap .swiper-pager li.swiper-pagination-bullet-active { color:#4E32A5; border-bottom:2px solid #4E32A5; font-weight:600; color:#4E32A5; }
 .tabs-wrap .tab-item li.on a,
 .tabs-wrap.type2 .tab-item li a { padding:0; color:#4E32A5; }
+.tabs-wrap .tab-content > div  { margin-top:30px; }
 
 /** _탭리스트 swiper 적용 case **/
 .default-wrap.product .tabs.swiper { margin:0 -20px; } /*네이버앱 대응*/
