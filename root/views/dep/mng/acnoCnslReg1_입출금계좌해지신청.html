@@ -68,11 +68,13 @@
         <div class="contents">
             <div class="default-wrap">
 
-                <div class="tit-wrap">
-					<p class="txt"><strong>해지 계좌 정보</strong>를 입력하세요</p>
-				</div>
-
+                <!--S: 카드-->
                 <div class="visaul-info-section"><!--D: 감싸주는 visual-info-section 태그 추가-->
+
+                    <div class="tit-wrap">
+                        <p class="txt"><strong>해지계좌 정보</strong>를 입력하세요</p>
+                    </div>
+                    
                     <div class="visaul-info-box">
                         <div class="flag-tit-wrap"><em class="flag style2">입출금</em></div><!--D: flag-tit-wrap 클래스 추가-->
                         <strong class="info-tit">보고파 파킹통장</strong>
@@ -81,14 +83,19 @@
                             <button type="button" class="btn-copy">복사하기</button>
                         </div>
                     </div>
-                </div>
 
-                <div class="txt-list-wrap">
-					<div class="txt-detail-area">
+                </div>
+                <!--E: 카드-->
+            
+                <!--S: 리스트-->
+                <div class="txt-list-wrap"><!--D: txt-list-wrap : txt-detail-area 감싸는 구조입니다. -->
+
+                    <!--S: 입출금계좌 해지 정보입력 -->
+                    <div class="txt-detail-area">
 						<ul class="txt-list">
 							<li>
 								<span class="tit">현재잔액</span>
-								<span class="txt">10,000,000원</span>
+								<span class="txt point">10,000,000원</span><!--D: point 클래스 추가 -->
 							</li>
 							<li>
 								<span class="tit">계좌개설일</span>
@@ -96,8 +103,55 @@
 							</li>
 						</ul>
 					</div>
-				</div>
+                    <!--E: 입출금계좌 해지 정보입력 -->
 
+                    <!--S: 입출금 계좌 해지정보 확인 --><!--D: 텍스트 변경됐습니다. -->
+					<div class="txt-detail-area">
+						<ul class="txt-list">
+							<li>
+								<span class="tit">원금</span>
+								<span class="txt">20,000원</span>
+							</li>
+							<li>
+								<span class="tit">이자</span>
+								<span class="txt">000,000원</span>
+							</li>
+							<li>
+								<span class="tit">지방소득세</span>
+								<span class="txt">000,000원</span>
+							</li>
+							<li>
+								<span class="tit">농업촌특별세</span>
+								<span class="txt">000,000원</span>
+							</li>
+							<li>
+								<span class="tit">수입제세금액</span>
+								<span class="txt">000,000원</span>
+							</li>
+							<li>
+								<span class="tit">환입이자</span>
+								<span class="txt">000,000원</span>
+							</li>
+							<li>
+								<span class="tit">환출수입제세</span>
+								<span class="txt">000,000원</span>
+							</li>
+							<li>
+								<span class="tit">세후이자</span>
+								<span class="txt">000,000원</span>
+							</li>
+                            <li>
+								<span class="tit">차감지급금액</span>
+								<span class="txt">000,000원</span>
+							</li>
+						</ul>
+					</div>
+                    <!--E: 입출금 계좌 해지정보 확인 -->
+
+				</div>
+                <!--E: 리스트-->
+
+                <!--S: FORM-->
                 <div class="form-all-wrap"><!--D: 폼 감싸는 form-all-wrap 태그 추가-->
 
                     
@@ -123,10 +177,79 @@
                     </p>
 
                 </div>
+                <!--E: FORM-->
+
+                <div class="list-bull"><!--D: 구조변경-->
+                    <div class="border"></div>
+                    <strong>알아두세요</strong>
+                    <ul>
+                        <li>해지금액은 다른 입출금계좌가 있는 경우에는 해당계좌로 입금되며, 입금 가능한 계좌가 없는 경우 본인명의의 타행 계좌로 입금이 가능해요</li>
+                        <li>예금 해지 후에는 취소할 수 없으니 유의하세요</li>
+                    </ul>
+                </div>
 
             </div>
         </div>
         <!-- //contents -->
+
+        <!--S: 입출금계좌 해지 정보입력 버튼-->
+        <div class="fixed-btn-wrap">
+			<div class="btn-wrap">
+				<a href="#none" class="btn" id="procBtn">다음</a>
+			</div>
+		</div>
+        <!--E: 입출금계좌 해지 정보입력 버튼-->
+
+        <!--S: 입출금계좌 해지정보 확인 버튼-->
+        <div class="fixed-btn-wrap">
+			<div class="btn-wrap flexCol"><!--D: flexCol 클래스 추가-->
+				<a href="#none" class="btn" id="" onclick="">해지신청</a>
+                <a href="#none" class="btn txt">그만하기</a><!--D: btn txt 클래스 사용-->
+			</div>
+		</div>
+        <!--E: 입출금계좌 해지정보 확인 버튼-->
+        
+        <!--S: 입출금통장 해지 안내 -->
+        <div id="lyPop2" class="layerpopup layer-up has-button show" style="position: fixed; top: 415px; left: -0.5px; display: none;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">입출금통장 해지 안내</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con">
+                    <div class="txtbox-wrap">
+                        <p>입출금통장을 해지하시겠어요?</p>
+                    </div>
+                </div>
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap flexCol">
+                        <a href="javascript:void(0);" class="btn">확인</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--E: 입출금통장 해지 안내-->
+
+        <!--S: 해지금액 초과 안내 -->
+        <div id="lyPop2" class="layerpopup layer-up has-button show" style="position: fixed; top: 415px; left: -0.5px; display: none;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">해지금액 초과 안내</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con">
+                    <div class="txtbox-wrap">
+                        <p>타행 계좌로 입금하시는 경우에는 해지 시 실수령액이 1만원 미만인 경우에만 가능해요</p>
+                    </div>
+                </div>
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap flexCol">
+                        <a href="javascript:void(0);" class="btn">확인</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--E: 해지금액 초과 안내-->
 
     </div>
     <!-- //contentsWrap -->
