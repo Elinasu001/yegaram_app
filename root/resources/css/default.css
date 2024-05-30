@@ -727,6 +727,7 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .file-dwn + .file-dwn { margin-top:10px; }
 .file-dwn span {width:100%; position: relative; padding:16px 20px 16px 45px; border-radius:10px; font-size:0.77778rem; line-height:1.5; background:#F8F8F8; color:#454545; }
 .file-dwn span:before { position:absolute; content:""; left:20px; width:20px; height:20px; background:url(../images/common/file_clip.png) no-repeat 50%/20px auto; }
+.file-dwn + .btn-cont-wrap { margin-top:30px; }
 
 /* 게시판 링크url 복사 */
 .url-copy-list { margin-top:10px; font-size:0; }
