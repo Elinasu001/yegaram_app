@@ -2427,6 +2427,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .product-info { margin:0 -20px; padding:0; width:calc(100% + 40px); }
 .product-detail .product-info > h3 { display:block; padding:0 20px; height:60px; line-height:60px; font-weight:500; font-size:0.88889rem; border-bottom:1px solid #EDEDED; }
 .product-detail .product-info > div { padding:0 20px; }
+.product-detail .pr-detail.default-wrap { padding:0; }
 .product-detail .text-bar-list li { font-weight:500; color:#260F54; }
 .product-detail .text-bar-list li:before { background:#260F54; }
 .product-detail .text-bar-list.type-box li:before { background:#EEEEEE; }
@@ -2434,6 +2435,22 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .sub-tit-wrap { margin:50px 0; }
 .product-detail .sub-tit-wrap:first-of-type { margin-top:25px; }
 .product-detail .sub-tit-wrap:first-of-type { margin-top:25px; }
+
+/***관리자 뿌려지는 부분 관련하여  css 추가**/
+.product-detail .pr-detail .list-tit { padding-top:20px !important; }
+.product-detail .pr-detail .list-tit:first-of-type { margin-top:25px !important; }
+.product-detail .pr-detail .bull { display:block; margin-top:15px; font-size:0.88889rem; line-height:1.38889; font-weight:300; }
+.product-detail .pr-detail .list-tit, 
+.product-detail .product-info p br + strong { display:block; font-size:0.88889rem; line-height:1.38889; font-weight:600; }
+.product-detail .product-info b{ font-weight:400; font-size:0.88889rem; font-weight:400; color:#4e32a5;  }
+.product-detail .product-info ~ .sub-info-wrap { margin-bottom:40px; }
+.product-detail .table-wrap{ overflow-x:auto; }
+.product-detail .table-wrap th { border-top:1px solid #EEEEEE; }
+.product-detail .table-wrap th strong { font-weight:400; font-size:0.88889rem;  }
+.product-detail table.line_fixed { margin-top:15px; margin-bottom:20px; }
+.product-detail table.line_fixed td{ font-weight:300; color:#333; }
+
+
 
 .flag-tit-wrap { /*padding-right:40px;*/ display: flex; align-items:center; gap:10px; }
 /* .flag-tit-wrap .flag { margin-right:6px; } */
