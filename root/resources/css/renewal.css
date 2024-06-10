@@ -1230,4 +1230,4 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 
 /* gobank */
 .txtbox-wrap.ta-c { display:flex; flex-direction: column; align-items: center; }
-.go-bank-img { content:''; width:178px; height:32px; margin-bottom:30px; font-size:0; background: url(../images/common/gobank_app.png)no-repeat center/178px auto; }
+.go-bank-img { content:''; width:178px; height:32px; margin-bottom:30px; background: url(../images/common/gobank_app.png)no-repeat center/178px auto; }
