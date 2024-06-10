@@ -1724,7 +1724,7 @@ body.on { position:fixed; top:0; }
 
 
 /*Case 2 - 본문 컨텐츠 영역*/
-.tabs-wrap.type2 .tab-item { flex-wrap:wrap; padding:4px; min-height:48px; border-radius:24px; background:#F8F8F8; }
+.tabs-wrap.type2 .tab-item { flex-wrap:wrap; padding:4px; min-height:48px; border-radius:10px; background:#F8F8F8; }
 .tabs-wrap.type2 .tab-item:before { display:none; }
 .tabs-wrap.type2 .tab-item li {  height:40px; line-height:24px; padding:8px; margin-right:0; font-size:0.89rem; border:0; border-radius:24px;  }
 .tabs-wrap.type2 .tab-item li.on {  background:#fff; font-weight:600; box-shadow:0 0 4px #00000029; }
