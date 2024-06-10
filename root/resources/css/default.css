@@ -2492,6 +2492,9 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .sub-tit-wrap + .kdic-wrap { margin-top:15px; }
 .sub-tit-wrap > .txt-list-wrap { margin-top:15px; }
 
+/* 모집인  */
+.sub-tit-wrap.line { border-bottom:1px solid #111111; padding-bottom:10px;}
+
 /* 상품안내 버튼 */
 .arrow-button-wrap { margin-top:40px; }
 .arrow-button-wrap .arrow-button-list { margin-top:10px; }
