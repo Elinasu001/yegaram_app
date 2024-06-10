@@ -548,7 +548,7 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .inquiry-set-wrap + .form-wrap { margin-top:40px; }
 .sub-tit-wrap + .bg-box { margin-top:-15px; }/*네이버앱 대응으로 인한 음수 마진 추가*/
 .terms-area + .form-wrap { margin-top:20px; }
-.terms-area > .btn-cont-wrap { margin-bottom:15px; } /* 전자계약서 */
+.btn-cont-wrap + .terms-area { margin-top:15px; } /* 전자계약서 */
 /* .result-area + .sub-info-wrap { margin-top:30px; } */
 .default-wrap > .form-wrap:first-child,
 .default-wrap > .txt-wrap { margin-top:40px; }
@@ -1062,7 +1062,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 .q-wrap.result-box { margin-top:20px; padding:20px; }
 
 /* 일반 라디오 버튼 - 06.28 수정 */
-.radio-list { display:flex; /*margin:10px 0;*/ }
+.radio-list { display:flex; /*margin:10px 0;*/ gap:10px;}
 .radio-list li { flex:1; position:relative; /*margin:10px 0;*/ }
 .radio-list li input { margin-right:10px; }
 .radio-list input[type="radio"] { display:none; }
@@ -1597,6 +1597,7 @@ body.on { position:fixed; top:0; }
 /* 디자인 추가 - 버튼 위아래로 있을 경우 */
 .layer-up.has-button:has(.fixed-btn-wrap .btn.txt) { padding-bottom:130px; }
 .layer-up.has-button .content-wrap { padding-bottom:20px; }
+.layer-up .txtbox-wrap { color:#666666; }
 
 
 .layerpopup .pop-desc { padding-bottom:30px; color:#666666; font-size:0.88889rem; line-height:1.4375; }
@@ -2017,15 +2018,12 @@ body.on { position:fixed; top:0; }
 
 .list-bull + table { margin-top:20px; }
 
-
 .list-bull .border{ margin-left:-20px; margin-right:-20px; margin-bottom:20px; height:8px; border-top:1px solid rgb(0,0,0,0.1); background:#F9FAFC; }
 .layerpopup:not(.layerpopup.laypop-all) .list-bull .border{ margin-left:-40px; margin-right:-40px; margin-bottom:20px; height:8px; border-top:1px solid rgb(0,0,0,0.1); background:#F9FAFC; }
 
 .list-bull.ico strong { margin-bottom:15px; padding-left:30px; position:relative; font-weight:700; color:#333333; font-size:1rem; line-height:1.38889rem; }
 .list-bull.ico strong:before { content:""; position:absolute; left:0px; top:47%; transform: translateY(-50%); width:24px; height:24px; background:url("../images/common/ic-bull-warning.png") no-repeat 100%/24px auto;}
 .list-bull.ico li { font-weight:400; color:#666666; font-size:0.77778rem; line-height: 1rem; }
-
-
 
 .form-wrap.type2 .list-bull { font-weight: 300; }
 
@@ -2036,7 +2034,7 @@ body.on { position:fixed; top:0; }
 .terms-area + .terms-area,
 .terms-area + .list-bull { margin-top:40px; }
 .terms-area .check-account { margin-top:0; margin-bottom:20px; }
-
+.terms-area .radio-list { margin-bottom:20px; }
 .layerpopup.layer-up .list-bull li { color:#666666; font-size:0.77778rem; line-height: 1rem; }
 .layerpopup.layer-up .list-bull.dot li:before { background:#666666; }
 
@@ -2095,6 +2093,7 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 .tit-wrap { margin-top:40px; }
 .tit-wrap + .tabs-wrap { margin-top:40px; }
 .tit-wrap  +  .prod-box-list.line { margin-top:40px; }
+.tit-wrap + .btn-cont-wrap { margin-top:40px; }
 /* .tit-wrap + section { margin-top:40px; } */
 .tit-wrap .flag { margin-bottom:10px; }
 .tit-wrap > span { display:inline-block; margin-bottom:10px; padding:4px 15px; border-radius:20px; background:#EBF2FF; font-size:0.88889rem; line-height:1.4375; color:#2968CF; }
@@ -2427,7 +2426,6 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .product-info { margin:0 -20px; padding:0; width:calc(100% + 40px); }
 .product-detail .product-info > h3 { display:block; padding:0 20px; height:60px; line-height:60px; font-weight:500; font-size:0.88889rem; border-bottom:1px solid #EDEDED; }
 .product-detail .product-info > div { padding:0 20px; }
-.product-detail .pr-detail.default-wrap { padding:0; }
 .product-detail .text-bar-list li { font-weight:500; color:#260F54; }
 .product-detail .text-bar-list li:before { background:#260F54; }
 .product-detail .text-bar-list.type-box li:before { background:#EEEEEE; }
@@ -2435,22 +2433,6 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .sub-tit-wrap { margin:50px 0; }
 .product-detail .sub-tit-wrap:first-of-type { margin-top:25px; }
 .product-detail .sub-tit-wrap:first-of-type { margin-top:25px; }
-
-/***관리자 뿌려지는 부분 관련하여  css 추가**/
-.product-detail .pr-detail .list-tit { padding-top:20px !important; }
-.product-detail .pr-detail .list-tit:first-of-type { margin-top:25px !important; }
-.product-detail .pr-detail .bull { display:block; margin-top:15px; font-size:0.88889rem; line-height:1.38889; font-weight:300; }
-.product-detail .pr-detail .list-tit, 
-.product-detail .product-info p br + strong { display:block; font-size:0.88889rem; line-height:1.38889; font-weight:600; }
-.product-detail .product-info b{ font-weight:400; font-size:0.88889rem; font-weight:400; color:#4e32a5;  }
-.product-detail .product-info ~ .sub-info-wrap { margin-bottom:40px; }
-.product-detail .table-wrap{ overflow-x:auto; }
-.product-detail .table-wrap th { border-top:1px solid #EEEEEE; }
-.product-detail .table-wrap th strong { font-weight:400; font-size:0.88889rem;  }
-.product-detail table.line_fixed { margin-top:15px; margin-bottom:20px; }
-.product-detail table.line_fixed td{ font-weight:300; color:#333; }
-
-
 
 .flag-tit-wrap { /*padding-right:40px;*/ display: flex; align-items:center; gap:10px; }
 /* .flag-tit-wrap .flag { margin-right:6px; } */

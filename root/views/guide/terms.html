@@ -35,11 +35,11 @@
 <script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
 <script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
 
-
+<!-- 
 <style>
     h3.guid{ padding:30px 0 10px; }
     p.guid { font-size:14px; }
-</style>
+</style> -->
 </head>
 <body>
 	<!-- header -->
@@ -68,21 +68,25 @@
                     <div class="tit-wrap">
                         <p class="txt"><strong>대출 신청을 위해</strong><br><strong>약관에 동의</strong>가 필요해요</p>
                     </div>
+
+                    <div class="btn-cont-wrap flexRight"><!--D: 전자계약서 작성 방법 보기 버튼 추가-->
+                        <a href="#none" class="btn-txt" title="전자계약서 작성 방법 보기 버튼">전자계약서 작성 방법 보기</a><!--[퍼블-1]:클래스 변경-->
+                    </div>
                     
                     <!--S: 약관-->
                     <!-- S: 필수약관 -->
                     <section class="terms-area" id="termsArea">
 
-                        <div class="check-account">
+                        <div class="radio-list"><!--[퍼블-1]:클래스 변경 -->
                             <div>
-                                <input type="checkbox" id="chk01" name="check" value="">
-                                <label for="chk01">
+                                <input type="radio" id="radio01" name="radio01" value="" checked><!--[퍼블-1]:type/id/name 변경 -->
+                                <label for="radio01"><!--[퍼블-1]:for 변경 -->
                                     <span>요약동의서</span>
                                 </label>
                             </div>
                             <div>
-                                <input type="checkbox" id="chk02" name="check" value="">
-                                <label for="chk02">
+                                <input type="radio" id="radio02" name="radio02" value=""><!--[퍼블-1]:type/id/name 변경 -->
+                                <label for="radio02"><!--[퍼블-1]:for 변경 -->
                                     <span>상세동의서</span>
                                 </label>
                             </div>
@@ -285,7 +289,7 @@
             <!--E: 최신소스 반영 : 대출한도조회 (팝업) -->
 
             <!--S: 최신소스 반영 : 금융상품 중요사항 안내 (팝업)-->
-            <div id="importantNotiPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display: block;">
+            <div id="importantNotiPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display: none;">
                 <div class="pop-header">
                     <h2 class="pop-title">금융상품 중요사항 안내</h2>
                     <button type="button" name="button" class="btn-layer-close">닫기</button>
