@@ -274,3 +274,6 @@
 @media screen and (max-width:374px) { /* 떨어짐 현상 방지 */
     .quick-service-list li { width: 100%; }
 }
+
+/* 모집인 */
+
