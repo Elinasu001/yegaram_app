@@ -76,6 +76,8 @@ body.fix { overflow:hidden; }
 /* 공통 - layerpopup 텍스트영역*/
 .txtbox-wrap { /*padding-bottom:30px;*/ color:#333333; font-size:0.88889rem; line-height:1.4375; }
 .txtbox-wrap p + p { margin-top:10px; }
+.txtbox-wrap .b-tit { font-size:1.11111rem; font-weight:600; }
+.txtbox-wrap + .more-box-list { margin-top:40px; }
 .txtbox-wrap:has(+.form-wrap.type-box) { padding-bottom:20px; }
 .s-txtbox-wrap { padding-top:20px; border-top:1px solid #E5E5E5; }/*border-top 추후 삭제 필요*/
 .s-txtbox-wrap .list-bull { font-size:0.8rem; color:#999; }
@@ -1147,9 +1149,6 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .terms-notice-wrap .list-bull.type-large { margin-top:0; }
 .terms-notice-wrap .list-bull.type-large.num li { padding-left:25px; font-size:0.88889rem; line-height:1.4375; }
 
-/* 모집인 관련 */
-.terms-dsr-wrap { margin-top: 30px; }
-.terms-notice-wrap .sub-tit-wrap .guide-txt-wrap { margin-top:15px; }
 
 /* 휴면계좌 */
 .default-wrap > .alignment-both-side > .sub-tit-wrap { margin:10px 0 15px; }
@@ -1235,3 +1234,15 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 /* gobank */
 .txtbox-wrap.ta-c { display:flex; flex-direction: column; align-items: center; }
 .go-bank-img { content:''; width:178px; height:32px; margin-bottom:30px; background: url(../images/common/gobank_app.png)no-repeat center/178px auto; }
+
+
+/* 모집인 */
+.terms-dsr-wrap { margin-top: 30px; }
+.terms-notice-wrap .sub-tit-wrap .guide-txt-wrap { margin-top:15px; }
+
+.unfair-wrap .info-txt { padding-top:110px; background:url("../images/page/bg_unfair.png") no-repeat center 0; background-size:auto 90px; }
+.unfair-wrap .manager-area { padding:30px 45px; background:#fff; }
+.unfair-wrap .unfair-tb tr td { text-align:center; }
+
+.txtbox-wrap .img {content:''; width:80px; height:80px; }
+.txtbox-wrap .img.unfair { background: url(../../resources/images/dsr/page/unfair.png)no-repeat center 100%/80px auto; }

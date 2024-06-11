@@ -1615,12 +1615,8 @@ body.on { position:fixed; top:0; }
 .layerpopup .sub-title { padding:20px 0; font-size:0.88889rem; line-height:1.4375; font-weight:500; color:#333; }
 .layerpopup .subtxt-wrap { font-size:0.88889rem; line-height:1.4375; color:#666; }
 .layerpopup .ly-select-list + div .sub-title { padding-top:30px; }
-<<<<<<< Updated upstream
-.layerpopup .txtbox-wrap { /*padding-bottom:15px;*/  color:#666666; }
-=======
 .layerpopup .txtbox-wrap { padding-bottom:15px;  color:#666666; }
 .layerpopup .txtbox-wrap:last-child { padding-bottom:25px; }
->>>>>>> Stashed changes
 .layerpopup .txtbox-wrap b,
 .layerpopup .txtbox-wrap strong { font-weight:500; color:#333333; }
 /* .layerpopup .default-wrap > div { margin-top:40px;  } */
