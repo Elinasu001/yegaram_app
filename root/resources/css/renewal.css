@@ -1238,7 +1238,8 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 
 /* 모집인 */
 .terms-dsr-wrap { margin-top: 30px; }
-.terms-notice-wrap .sub-tit-wrap .guide-txt-wrap { margin-top:15px; }
+.terms-dsr-wrap .sub-tit-wrap .guide-txt-wrap .list-bull { margin-top:0; }
+.terms-dsr-wrap .sub-tit-wrap .guide-txt-wrap { margin-top:15px; }
 
 .unfair-wrap .info-txt { padding-top:110px; background:url("../images/page/bg_unfair.png") no-repeat center 0; background-size:auto 90px; }
 .unfair-wrap .manager-area { padding:30px 45px; background:#fff; }
@@ -1256,3 +1257,10 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .terms-list.type2 em { font-size:0.88889rem; line-height:1.278rem; color:#111111; }
 .terms-list li p {  padding-right:100px;}
 .terms-list.type2 .btn { position:absolute; right:0; top:50%; }
+
+.form-tit .txt { font-size:0.77778rem; line-height: 1.5; font-weight: 500; color:#999999; }
+.form-all-wrap + .btn-cont-wrap { margin-top:40px; }
+
+.form-all-wrap .tit-wrap  + .form-wrap,
+.form-all-wrap .form-wrap + .btn-cont-wrap,
+.form-all-wrap .form-wrap + .table-type  { margin-top:40px; }
