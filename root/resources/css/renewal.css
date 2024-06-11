@@ -1254,6 +1254,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .form-all-wrap + .btn-cont-wrap { margin-top:40px; }
 
 .form-all-wrap .tit-wrap  + .form-wrap,
+.form-all-wrap .form-wrap + .btn-cont-wrap,
 .form-all-wrap .form-wrap + .table-type  { margin-top:40px; }
 
 .sub-cont-wrap + .btn-cont-wrap { margin-top:40px; }
