@@ -719,7 +719,8 @@ input[type="file"]::file-selector-button { display:none; }
 
 .notice_contents { min-height:150px; width:100%; margin-top:30px; padding-top:30px; padding-bottom:30px; border-top:1px solid #EEEEEE; border-bottom:1px solid #EEEEEE; }
 .notice_contents + .btn-cont-wrap,
-.txt-list-wrap + .btn-cont-wrap { margin-top:40px; }
+.txt-list-wrap + .btn-cont-wrap,
+.terms-list.type2 + .btn-cont-wrap { margin-top:40px; }
 
 /* 게시판 첨부파일 */
 .file-dwn { display:flex; flex-direction:row; margin-top:40px; cursor:pointer; }

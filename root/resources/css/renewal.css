@@ -1250,3 +1250,9 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 
 .txtbox-wrap .img {content:''; width:80px; height:80px; }
 .txtbox-wrap .img.unfair { background: url(../../resources/images/dsr/page/unfair.png)no-repeat center 100%/80px auto; }
+
+
+.terms-list.type2 li a:after { content:none; }
+.terms-list.type2 em { font-size:0.88889rem; line-height:1.278rem; color:#111111; }
+.terms-list li p {  padding-right:100px;}
+.terms-list.type2 .btn { position:absolute; right:0; top:50%; }
