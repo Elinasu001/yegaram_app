@@ -1244,5 +1244,9 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .unfair-wrap .manager-area { padding:30px 45px; background:#fff; }
 .unfair-wrap .unfair-tb tr td { text-align:center; }
 
+.sub-tit-wrap.line { display:flex; justify-content: space-between; align-items: center; }
+.sub-tit-wrap.line .txt { margin-top:0; }
+.sub-tit-wrap.line { border-bottom:1px solid #111111; padding-bottom:10px;}
+
 .txtbox-wrap .img {content:''; width:80px; height:80px; }
 .txtbox-wrap .img.unfair { background: url(../../resources/images/dsr/page/unfair.png)no-repeat center 100%/80px auto; }

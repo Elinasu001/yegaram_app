@@ -297,7 +297,7 @@ html.font-size-3{ font-size: 24px;}
 .point-md-gray { font-weight:500; color:#666666; }
 /* flag */
 /*  */
-.flag { display:inline-flex; align-items: center; width:auto; height:30px; /*margin-right:6px;*/ padding:0px 7px; border-radius:15px; background:#FFFFFF; border:1px solid #DDDDDD; font-size:0.77778rem; line-height: 1rem;  font-weight:400; color:#26282C; letter-spacing:-.5px; vertical-align:middle; } /* 접수완료, 긍정 - 파랑 */
+.flag { display:inline-flex; align-items: center; width:auto; height:30px; /*margin-right:6px;*/ padding:0px 7px; border-radius:15px; background:#FFFFFF; border:1px solid #DDDDDD; font-size:0.77778rem; line-height: 30px;  font-weight:400; color:#26282C; letter-spacing:-.5px; vertical-align:middle; } /* 접수완료, 긍정 - 파랑 */
 /* .flag + .flag { margin-right:6px; } */
 
 /*.flag.style4  { color:#00A2C4; background:#E3F6F8; }*/ /* 심사중 - 초록 */ 
@@ -2487,9 +2487,6 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .sub-tit-wrap:has(+.kdic-wrap) { margin-bottom:0px; }
 .sub-tit-wrap + .kdic-wrap { margin-top:15px; }
 .sub-tit-wrap > .txt-list-wrap { margin-top:15px; }
-
-/* 모집인  */
-.sub-tit-wrap.line { border-bottom:1px solid #111111; padding-bottom:10px;}
 
 /* 상품안내 버튼 */
 .arrow-button-wrap { margin-top:40px; }
