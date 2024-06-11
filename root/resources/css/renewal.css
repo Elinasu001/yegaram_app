@@ -1258,6 +1258,11 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 
 .sub-cont-wrap + .btn-cont-wrap { margin-top:40px; }
 
+.hr-line { height:1px; background: #EEEEEE; margin:40px 0; }
+.hr-line + .terms-area,
+.terms-area .tit-wrap { margin-top:0; }
+.terms-area .tit-wrap { margin-bottom:40px; }
+
 /* 신고안내 */
 .txtbox-wrap .img {content:''; width:80px; height:80px; }
 .txtbox-wrap .img.unfair { background: url(../../resources/images/dsr/page/bg_unfair.png)no-repeat center 100%/80px auto; }
@@ -1286,3 +1291,4 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .step-cont-wrap { margin-top:30px; }
 .step-cont-wrap .tit { font-size:0.88889rem; font-weight: 600; text-align: center; }
 .step-cont-wrap .step-img { margin-top:20px; }
+

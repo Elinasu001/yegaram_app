@@ -503,6 +503,10 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .form-all-wrap > .select-wrap:first-child,
 .form-all-wrap > .sub-tit-wrap:first-child { margin-top:0; }
 
+.form-all-wrap .terms-area,
+.form-all-wrap .form-wrap + .form-wrap,
+.form-all-wrap .form-wrap + .check-box.toggl,
+.form-all-wrap .form-wrap.phone { margin-top:30px; }
 
 
 .form-all-wrap > .sub-tit-wrap { margin-bottom:15px;}
@@ -511,22 +515,14 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .form-all-wrap .check-box.toggle,
 .form-all-wrap .form-wrap:has(.select-box) + .form-wrap:has(.select-box) { margin-top:10px; }
 
-
 /* .form-all-wrap > .sub-tit-wrap + .form-wrap */
 .form-all-wrap > .sub-tit-wrap + ul,
 .form-all-wrap > .sub-tit-wrap + div,
 .form-all-wrap > .form-wrap:has(.select-box):first-child { margin-top:0; }
 
-.form-all-wrap .terms-area,
-.form-all-wrap .form-wrap + .form-wrap,
-.form-all-wrap .form-wrap + .check-box.toggl,
-.form-all-wrap .form-wrap.phone { margin-top:30px; }
-
-
-
+.select-wrap .form-wrap { margin-top:10px; }
 
 /** 이전 form 마진 **/
-
 
 /*.form-all-wrap .select-wrap + .form-wrap { margin-top:20px; }*/
 .form-wrap .select-wrap { margin-top:0; }
@@ -1425,7 +1421,7 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 
 /* _폼 여백 test(청) */
 .form-wrap.phone .select-wrap { width:200px;  }
-.form-wrap.phone > .input span { width:100%; }
+.form-wrap.phone > .input span { width:90%; }
 /* .tit-wrap:has(+ .form-wrap) { padding-bottom:13px; } test*/
 /* .tit-wrap:has(+ .form-wrap:has(.action)) + .form-wrap:has(.action) { margin-bottom:40px; }
 .tit-wrap:has(+.list-bull) { padding-bottom:0; }
