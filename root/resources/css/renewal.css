@@ -1236,15 +1236,13 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .go-bank-img { content:''; width:178px; height:32px; margin-bottom:30px; background: url(../images/common/gobank_app.png)no-repeat center/178px auto; }
 
 
-/* 모집인 */
+/*** 모집인 ***/
+/* 약관 */
 .terms-dsr-wrap { margin-top: 30px; }
 .terms-dsr-wrap .sub-tit-wrap .guide-txt-wrap .list-bull { margin-top:0; }
 .terms-dsr-wrap .sub-tit-wrap .guide-txt-wrap { margin-top:15px; }
 
-.unfair-wrap .info-txt { padding-top:110px; background:url("../images/page/bg_unfair.png") no-repeat center 0; background-size:auto 90px; }
-.unfair-wrap .manager-area { padding:30px 45px; background:#fff; }
-.unfair-wrap .unfair-tb tr td { text-align:center; }
-
+/*공통*/
 .sub-tit-wrap.line { display:flex; justify-content: space-between; align-items: center; }
 .sub-tit-wrap.line .txt { margin-top:0; }
 .sub-tit-wrap.line { border-bottom:1px solid #111111; padding-bottom:10px;}
@@ -1252,15 +1250,28 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .txtbox-wrap .img {content:''; width:80px; height:80px; }
 .txtbox-wrap .img.unfair { background: url(../../resources/images/dsr/page/unfair.png)no-repeat center 100%/80px auto; }
 
+.form-tit .txt { font-size:0.77778rem; line-height: 1.5; font-weight: 500; color:#999999; }
+.form-all-wrap + .btn-cont-wrap { margin-top:40px; }
 
+.form-all-wrap .tit-wrap  + .form-wrap,
+.form-all-wrap .form-wrap + .table-type  { margin-top:40px; }
+
+.sub-cont-wrap + .btn-cont-wrap { margin-top:40px; }
+
+/* 약관/서식 자료실 */
 .terms-list.type2 li a:after { content:none; }
 .terms-list.type2 em { font-size:0.88889rem; line-height:1.278rem; color:#111111; }
 .terms-list li p {  padding-right:100px;}
 .terms-list.type2 .btn { position:absolute; right:0; top:50%; }
 
-.form-tit .txt { font-size:0.77778rem; line-height: 1.5; font-weight: 500; color:#999999; }
-.form-all-wrap + .btn-cont-wrap { margin-top:40px; }
-
-.form-all-wrap .tit-wrap  + .form-wrap,
-.form-all-wrap .form-wrap + .btn-cont-wrap,
-.form-all-wrap .form-wrap + .table-type  { margin-top:40px; }
+/* accordion */
+.accordion-wrap .answer-wrap { margin-top:initial; border-top:initial; }
+.accordion li { border-bottom:1px solid #EEEEEE; padding:18px 0; }
+.accordion li .question-wrap { display:table; width:100%; position:relative; min-height:36px; background-image:url(../images/dsr/page/btn_plus.png); background-repeat:no-repeat; background-position:center right; background-size:18px 18px; }
+.accordion li.active .question-wrap { background-image:url(../images/dsr/page/btn_minus.png); }
+.accordion li .question-wrap .con { display: table-cell; min-height:36px; padding-right:23px; font-size:0.88889rem; line-height:1.278rem; color:#333333; vertical-align:middle;}
+.accordion li.active .question-wrap .con { color:#333333; }
+.accordion li .answer-wrap { display:none; }
+.accordion li.active .answer-wrap { display:block; margin-top:15px; padding:20px; background: #F8F8F8; }
+.accordion li .answer-wrap .con { display:inline-block; font-size:0.88889rem; line-height:1.278rem; color:#333333;  }
+.accordion li .answer-wrap .con img { width:auto; max-width:100% ; height: auto ; }
