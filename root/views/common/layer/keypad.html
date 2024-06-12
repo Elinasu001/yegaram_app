@@ -48,7 +48,11 @@
 
     <link href="/resources/nfilter/sample/css/ownSample.css?v=${serverTime}" rel="stylesheet">
     <link href="/resources/nfilter/sample/css/ownCustomKpdSample.css?v=${serverTime}" rel="stylesheet">
-
+</head>
+<style>
+.keypad-wrap { padding:0 20px; }
+.keypad-wrap .tit-wrap { margin-top:15vh; }
+</style>
 <body>
     <!-- header -->
     <div id="headerWrap">
@@ -79,8 +83,16 @@
                     <button type="button" name="button" class="btn-layer-close"
                         onclick="closePopup('lypullPop')">닫기</button>
                 </div>
-
+                <div class="keypad-wrap">
+                    <div class="tit-wrap">
+                        <p class="txt">
+                            <strong>비밀번호</strong>를<br/>
+                            입력해 주세요
+                        </p>
+                    </div>
+                </div>
                 <div class="showFormBx">
+                    
                     <ul id="biz_4iqs54i390o_keypad_length">
                         <li class="on"></li>
                         <li></li>
