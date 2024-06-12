@@ -503,10 +503,6 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .form-all-wrap > .select-wrap:first-child,
 .form-all-wrap > .sub-tit-wrap:first-child { margin-top:0; }
 
-.form-all-wrap .terms-area,
-.form-all-wrap .form-wrap + .form-wrap,
-.form-all-wrap .form-wrap + .check-box.toggl,
-.form-all-wrap .form-wrap.phone { margin-top:30px; }
 
 
 .form-all-wrap > .sub-tit-wrap { margin-bottom:15px;}
@@ -515,14 +511,22 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .form-all-wrap .check-box.toggle,
 .form-all-wrap .form-wrap:has(.select-box) + .form-wrap:has(.select-box) { margin-top:10px; }
 
+
 /* .form-all-wrap > .sub-tit-wrap + .form-wrap */
 .form-all-wrap > .sub-tit-wrap + ul,
 .form-all-wrap > .sub-tit-wrap + div,
 .form-all-wrap > .form-wrap:has(.select-box):first-child { margin-top:0; }
 
-.select-wrap .form-wrap { margin-top:10px; }
+.form-all-wrap .terms-area,
+.form-all-wrap .form-wrap + .form-wrap,
+.form-all-wrap .form-wrap + .check-box.toggl,
+.form-all-wrap .form-wrap.phone { margin-top:30px; }
+
+
+
 
 /** 이전 form 마진 **/
+
 
 /*.form-all-wrap .select-wrap + .form-wrap { margin-top:20px; }*/
 .form-wrap .select-wrap { margin-top:0; }
@@ -1045,7 +1049,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 /***********체크박스 애니메이션 버전************/
 
 /** 예/아니오 라디오 **/
-.q-wrap { /*display:inline-block; width:100%;*/ margin-bottom:30px; }
+.q-wrap { /*display:inline-block; width:100%;*/ margin-bottom:40px; }
 .q-wrap input[type="radio"] { display:block; position:absolute; top:0; left:0; width:100%; height:100%; appearance:none; -webkit-appearance:none; cursor:pointer; }
 .q-wrap > p { margin-bottom:10px; font-weight:400; }
 .q-wrap ul { display:flex; justify-content:space-between; align-items:center; gap:10px; }
@@ -1421,7 +1425,7 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 
 /* _폼 여백 test(청) */
 .form-wrap.phone .select-wrap { width:200px;  }
-.form-wrap.phone > .input span { width:90%; }
+.form-wrap.phone > .input span { width:100%; }
 /* .tit-wrap:has(+ .form-wrap) { padding-bottom:13px; } test*/
 /* .tit-wrap:has(+ .form-wrap:has(.action)) + .form-wrap:has(.action) { margin-bottom:40px; }
 .tit-wrap:has(+.list-bull) { padding-bottom:0; }
@@ -2101,9 +2105,8 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 .tit-wrap > .txt.has-icon strong { font-weight:600; position:relative; }
 .tit-wrap > .txt.has-icon strong:before { content:''; display:inline-block; width:24px; height:24px; margin:-5px 6px 0 0; background:url("../images/common/ico_siren.png") no-repeat 50%/24px auto; vertical-align:middle; }
 
-.tit-wrap .tit + .s-txt { margin-top:40px; font-size:1rem; line-height:1.38889; }
-.tit-wrap > .s-txt + .s-txt,
-.tit-wrap > .txt + .s-txt { margin-top:30px; }
+.tit-wrap > .s-txt { margin-top:40px; font-size:1rem; line-height:1.38889; }
+.tit-wrap > .s-txt + .s-txt { margin-top:30px; }
 
 .tit-wrap + .terms-area .terms-agr-wrap { margin-top:0px; }
 .tit-wrap + .form-wrap.form-cert { margin-top:20px; }
@@ -2434,10 +2437,10 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 
 /***관리자 뿌려지는 부분 관련하여  css 추가**/
-.product-detail .pr-detail .list-tit { padding-top:20px !important; }
-.product-detail .pr-detail .list-tit:first-of-type { margin-top:25px !important; }
-.product-detail .pr-detail .bull { display:block; margin-top:15px; font-size:0.88889rem; line-height:1.38889; font-weight:300; }
-.product-detail .pr-detail .list-tit, 
+.pr-detail .list-tit { padding-top:20px !important; display:block; }
+.pr-detail .list-tit:first-of-type { margin-top:25px !important; }
+.pr-detail .bull { display:block; margin-top:15px; font-size:0.88889rem; line-height:1.38889; font-weight:300; }
+.pr-detail .list-tit,
 .product-detail .product-info p br + strong { display:block; font-size:0.88889rem; line-height:1.38889; font-weight:600; }
 .product-detail .product-info b{ font-weight:400; font-size:0.88889rem; font-weight:400; color:#4e32a5;  }
 .product-detail .product-info ~ .sub-info-wrap { margin-bottom:40px; }
