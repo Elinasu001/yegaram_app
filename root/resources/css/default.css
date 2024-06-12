@@ -1045,7 +1045,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 /***********체크박스 애니메이션 버전************/
 
 /** 예/아니오 라디오 **/
-.q-wrap { /*display:inline-block; width:100%;*/ margin-bottom:40px; }
+.q-wrap { /*display:inline-block; width:100%;*/ margin-bottom:30px; }
 .q-wrap input[type="radio"] { display:block; position:absolute; top:0; left:0; width:100%; height:100%; appearance:none; -webkit-appearance:none; cursor:pointer; }
 .q-wrap > p { margin-bottom:10px; font-weight:400; }
 .q-wrap ul { display:flex; justify-content:space-between; align-items:center; gap:10px; }
@@ -2101,7 +2101,7 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 .tit-wrap > .txt.has-icon strong { font-weight:600; position:relative; }
 .tit-wrap > .txt.has-icon strong:before { content:''; display:inline-block; width:24px; height:24px; margin:-5px 6px 0 0; background:url("../images/common/ico_siren.png") no-repeat 50%/24px auto; vertical-align:middle; }
 
-.tit-wrap > .s-txt { margin-top:40px; font-size:1rem; line-height:1.38889; }
+.tit-wrap .tit + .s-txt { margin-top:40px; font-size:1rem; line-height:1.38889; }
 .tit-wrap > .s-txt + .s-txt { margin-top:30px; }
 
 .tit-wrap + .terms-area .terms-agr-wrap { margin-top:0px; }
