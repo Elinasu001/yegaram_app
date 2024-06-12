@@ -1331,3 +1331,11 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 /* 새로고침 */
 .btn-refresh { width:75px; height:48px; background:url(../../resources/images/dsr/page/btn_refresh.png)  no-repeat 100%/48px auto; }
 
+/* 법인 및 상담사 소개 */
+.introduce-wrap { margin-top: 30px; }
+.intro-counselor { text-align: center; }
+.intro-counselor .photo{ width: 92px; height: 92px; border-radius: 50%; overflow: hidden; display: inline-block; margin-bottom: -46px; position: relative; z-index: 1; }
+.intro-counselor .photo img { width: auto; }
+.intro-counselor .intro-txt { box-sizing: border-box; background-color: #F4F8FA; padding: 55px 48px 43px; font-size: 1.11111rem; font-weight: 600; line-height: 1.5; }
+.intro-counselor .intro-txt span { color: #4E32A5; }
+.counselor-info .sub-tit-wrap .txt.hyphen > li span { display: block; }
