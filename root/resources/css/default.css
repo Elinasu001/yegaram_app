@@ -2102,7 +2102,8 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 .tit-wrap > .txt.has-icon strong:before { content:''; display:inline-block; width:24px; height:24px; margin:-5px 6px 0 0; background:url("../images/common/ico_siren.png") no-repeat 50%/24px auto; vertical-align:middle; }
 
 .tit-wrap .tit + .s-txt { margin-top:40px; font-size:1rem; line-height:1.38889; }
-.tit-wrap > .s-txt + .s-txt { margin-top:30px; }
+.tit-wrap > .s-txt + .s-txt,
+.tit-wrap > .txt + .s-txt { margin-top:30px; }
 
 .tit-wrap + .terms-area .terms-agr-wrap { margin-top:0px; }
 .tit-wrap + .form-wrap.form-cert { margin-top:20px; }

@@ -1286,7 +1286,8 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .form-all-wrap .form-wrap + .btn-cont-wrap,
 .form-all-wrap .form-wrap + .table-type  { margin-top:40px; }
 
-.sub-cont-wrap + .btn-cont-wrap { margin-top:40px; }
+.sub-cont-wrap + .btn-cont-wrap,
+.loan-info-wrap + .btn-cont-wrap { margin-top:40px; }
 
 .hr-line { height:1px; background: #EEEEEE; margin:40px 0; }
 .hr-line + .terms-area,
