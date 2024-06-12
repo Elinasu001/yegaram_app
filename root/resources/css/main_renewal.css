@@ -275,5 +275,78 @@
     .quick-service-list li { width: 100%; }
 }
 
-/* 모집인 */
+/* 모집인 메인 */
+.contentsWrap .contents > .default-wrap.dsr-wrap { padding: 0; }
+.counselor-box { box-sizing: border-box; position: relative; background: linear-gradient(rgba(255, 255, 255), #F6F7F9); padding: 25px 20px; }
+.counselor-box .intro span { display: block; color: #666666; font-weight: 500; font-size:1rem; line-height:1.38889; }
+.counselor-box .intro .company { color: #999999; font-weight: 400; font-size:0.66667rem; line-height:1.58334; }
+.counselor-box .intro .name { font-size:1.11111rem; line-height:1.35; color: #4E32A5; font-weight: 600; }
+.counselor-box .intro .time { font-weight: 400; font-size: 0.66667rem; line-height: 1.58334; margin-top: 5px; }
+.counselor-box .thumb { width: 92px; height: 92px; border-radius: 50%; overflow: hidden; position: absolute; top: 0; right: 0; }
+.counselor-box .thumb a { display: block; height: 100%; }
+.counselor-box .info { margin-top: 15px; }
+.counselor-box .info dt { font-size:0.77778rem; line-height:1.5; font-weight: 500; }
+.counselor-box .info .phone { font-weight: 500; margin-bottom: 15px; }
+.counselor-box .info .phone::after { content: ""; display: inline-block; vertical-align: top; width: 18px; height: 18px; background: url(../images/dsr/common/ico_phone1.png) no-repeat 100%/18px auto; }
+.counselor-box .info dd { color: #666666; font-weight: 400; font-size:0.66667rem; line-height:1.58334; }
+.counselor-box .info dd .inquire::after { content: ""; display: inline-block; vertical-align: middle; width: 11px; height: 11px; background: url(../images/dsr/common/ic_arrow_right.png) no-repeat 100%/11px auto; margin-left: 5px; }
 
+.loan-apply .apply-more { padding: 28px 20px 0; box-sizing: border-box; }
+.loan-apply .apply-more:after { content: ''; display: block; margin: 10px auto 0; max-width: 375px; width: 100%; height: 310px; background: url(../images/dsr/common/ico_loan_apply.png) no-repeat center bottom/100% auto; }
+.loan-apply .apply-more strong { color: #111111; font-size:1.22222rem; line-height:1.5rem; display: block; margin-bottom: 3px; }
+.loan-apply .btn-shortcuts { font-weight: 500; color: #666666; font-size:0.88889rem; line-height:1.4375; }
+.loan-apply .btn-shortcuts::after { content: ""; display: inline-block; vertical-align: middle; width: 17px; height: 17px; background: url(../images/dsr/common/ic_arrow_right02.png) no-repeat 100%/17px auto; margin-left: 5px;  }
+.loan-apply .btn-wrap .btn { border-radius: 0; font-size:1.11111rem; height: 72px; line-height: 72px; }
+
+.dsr-wrap .quick-service-list { padding: 30px 20px 40px; }
+.dsr-wrap .quick-service-list li { border-radius: 15px; box-shadow: 0 3px 8px rgba(0,0,0,0.2); }
+.dsr-wrap .quick-service-list a { font-size:0.88889rem; padding: 18px 12px 12px 20px; height: auto; line-height: normal; }
+.dsr-wrap .quick-service-list a::after { content: ''; display: inline-block; width: 100%; height: 38px; margin-top: 11px; }
+.financial-consumer a::after{ background:url('../images/dsr/main/ico_financial_consumer.png') no-repeat 100%/ 38px auto; }
+.complain a::after { background:url('../images/dsr/main/ico_complain.png') no-repeat 100%/ 38px auto; }
+.map-info a::after { background:url('../images/dsr/main/ico_map_info.png') no-repeat 100%/ 38px auto; }
+.terms-document a::after { background:url('../images/dsr/main/ico_terms_document.png') no-repeat 100%/ 38px auto; }
+.map-info,
+.terms-document { margin-top: 15px; }
+
+/* 모집인 관리자 영역 */
+.layer-con .tit { font-size:1.22222rem; line-height:1.5rem; font-weight: 600; }
+.layer-con p { font-size:0.88889rem; font-weight: 400; margin-top: 20px; }
+.layer-con .prod-icon { text-align: center; margin-top: 20px; }
+.layer-con .prod-icon img { width: 140px; }
+.layer-con hr { background: #EEEEEE; }
+.pop-con-wrap .layer-con .list-tit { display: block; font-size:0.88889rem; line-height:1.4375; font-weight: 600; color: #333333; margin-bottom: 20px; }
+.layer-con .list.type1 li { margin-bottom: 40px; font-weight: 300; }
+.layer-con .list.type1 li:last-child { margin-bottom: 0; }
+.layer-con .list.type1 li .bar { font-size: 0.88889rem; line-height: 1.38889; font-weight: 500; margin-bottom: -10px; }
+.layer-con .list.type1 li > span { display: block; font-size: 0.88889rem; line-height: 1.38889; font-weight: 300; }
+.layer-con .list.type1 li p { font-size: 0.88889rem; line-height: 1.38889; font-weight: 300; }
+.layer-con div:has(.table) { overflow-x: auto }
+.layer-con .table th { padding: 14px 3px; background: #F8F8F8; font-weight: 500; color: #454545; }
+.layer-con .table td { padding: 15px; border-bottom: 1px solid #EEEEEE; border-right: 1px solid #EEEEEE; font-size: 0.88889rem; line-height: 1.4375; font-weight: 300; text-align: center; word-break: keep-all; }
+.layer-con .table td:last-child { border-right: 0; }
+
+/* 모집인 푸터 */
+.footer-text-box { background-color: #F8F8F8; box-sizing: border-box; padding: 28px 20px 30px; }
+.counselor > div { display: inline-block; vertical-align: top; box-sizing: border-box; }
+.c-img { border-radius: 50%; width: 60px; height: 60px; overflow: hidden; }
+.c-info { margin-left: 12px; width: calc(100% - 77px); }
+.c-info .name { font-size: 0.77778rem; line-height: 1.5; font-weight: 500; color: #666666; }
+.c-info .name span { font-size:0.88889rem; line-height:1.4375; color: #333333; font-weight: 600; margin-left: 3px; }
+.c-info .phone {color: #666666; font-size: 0.66667rem; line-height: 1.58334; margin-top: 5px; }
+.c-info .time {color: #666666; font-size: 0.66667rem; line-height: 1.58334; }
+
+.f-text .list-bull { margin-top: 24px; }
+.f-text .list-bull.hyphen { margin-top: 18px; }
+.f-text .list-bull li { font-weight: 400; }
+.footer-info-box { padding: 20px 20px 30px; box-sizing: border-box; }
+.footer-info-box > div { position: relative; }
+.f-info div { font-weight: 400; color: #555555; font-size: 0.66667rem; line-height: 1.58334; opacity: 0.6; display: block; margin-bottom: 10px; }
+.img-kisa { position: absolute; right: 0; bottom: 35px; }
+.img-kisa img { width: auto; }
+
+.copyright { font-weight: 500; color: #555555; font-size: 0.66667rem; line-height: 1.58334; margin-top: 17px; }
+.family-site { margin-top: 30px; }
+.family-site .select-wrap { margin-top: 0; display: inline-block; margin-right: 10px; width: calc(100% - 54px); }
+.family-site .select-wrap select { width: 100%; border: 1px solid #EEEEEE; height: 40px; font-size: 14px; color: #666666; padding: 0 15px; box-sizing: border-box; background: url('../images/dsr/common/ico_arrow.png') no-repeat 96%/24px auto; }
+.family-site button { width: 40px; height: 40px; border-radius: 50%; background: #EEEEEE; color: #666666; text-indent: 0; text-transform: uppercase; font-size: 0.88889rem; }

@@ -1,73 +1,130 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>예가람저축은행</title>
-<meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="Content-Script-Type" content="text/javascript">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<meta name="keywords" content="예가람저축은행keywords" />
-<meta name="description" content="예가람저축은행description" />
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>예가람저축은행</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="예가람저축은행keywords" />
+    <meta name="description" content="예가람저축은행description" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
 
-<meta name="apple-mobile-web-app-status-bar-style" content="white" />
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta http-equiv="Expires" content="-1">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Cache-Control" content="No-Cache">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
 
-<link href="/resources/css/default.css" rel="stylesheet" />
-<link href="/resources/css/renewal.css" rel="stylesheet" />
-<link href="/resources/css/main_renewal.css" rel="stylesheet" />
+    <link href="/resources/css/default.css" rel="stylesheet" />
+    <link href="/resources/css/renewal.css" rel="stylesheet" />
+    <link href="/resources/css/main_renewal.css" rel="stylesheet" />
 
-<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
-<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
-<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+    <link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
 
-<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
 
-<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common"
-	data-menuId="dep/prc"
-	data-frameId="depAcnoOpenPrc2"
-	data-serviceCd="depAcnoOpenPrc2.frm"
-	data-serverTime="20230803152535"
-	data-activeMode="local"
-	data-activeEnv="${active.env">
-</script>
-
+    <script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+    <script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+    <script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common"
+        data-menuId="dep/prc" data-frameId="depAcnoOpenPrc2" data-serviceCd="depAcnoOpenPrc2.frm"
+        data-serverTime="20230803152535" data-activeMode="local" data-activeEnv="${active.env">
+        </script>
+</head>
 
 <body>
     <!-- header -->
     <div id="headerWrap">
         <script>
-        $(document).ready(function(){
-            document.charset="euc-kr";
-            $("#headerWrap").load("../includes/header.html");
-        });
+            $(document).ready(function () {
+                document.charset = "euc-kr";
+                $("#headerWrap").load("../includes/header.html");
+            });
         </script>
     </div>
-	<!-- //header -->
+    <!-- //header -->
 
     <!--contentsWrap -->
     <div class="contentsWrap">
         <!--contents -->
         <div class="contents">
-            <div class="default-wrap">
-                
+            <div class="default-wrap dsr-wrap">
+
+                <div class="counselor-box">
+                    <div class="counselor">
+                        <div class="intro">
+                            <a href="/5959797913231323/introduce">
+                                <span class="company">예가람저축은행 대출모집법인</span>
+                                <span>테스트법인 대출상담사</span>
+                                <span class="name">김도형</span>
+                                <span class="time">평일 09:00~18:00 (주말 및 공휴일 휴무)</span>
+                            </a>
+                        </div>
+                        <div class="thumb">
+                            <a href="/5959797913231323/introduce">
+                                <img src="/resources/images/dsr/common/counselor.png" alt="상담사 사진">
+                            </a>
+                        </div>
+                    </div>
+
+                    <dl class="info">
+                        <dt>전화번호</dt>
+                        <dd class="phone"><a href="tel:010-1234-1234">010-1234-1234</a></dd>
+                        <dt>저축은행중앙회 등록번호 : 10-13231323</dt>
+                        <dd><a class="inquire" target="_blank" title="새창으로"
+                                href="http://www.loanconsultant.or.kr/source/index.jsp">저축은행 상담사 조회</a></dd>
+                    </dl>
+                </div>
+
+                <div class="loan-apply">
+                    <div class="apply-more">
+                        <strong>간편 대출신청</strong>
+                        <a class="btn-shortcuts" onclick="retailYn()">간편 대출신청 바로가기</a>
+                    </div>
+                    <div class="btn-wrap">
+                        <a class="btn" onclick="retailYn()">간편 대출신청하기</a>
+                    </div>
+                </div>
+
+                <!-- 슬라이드 -->
+                <div class="main-prod">
+                    <div>
+                        <div>
+                            <a href="#none"><img src="/resources/images/dsr/main/img_bnn_intro.png" alt="슬라이드 이미지"></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <ul class="quick-service-list">
+                    <li class="financial-consumer"><a href="#none">금융소비자보호</a></li>
+                    <li class="complain"><a href="#none">부당행위 신고</a></li>
+                    <li class="map-info"><a href="#none">지점안내</a></li>
+                    <li class="terms-document"><a href="#none">약관/서식자료실</a></li>
+                </ul>
+
+                <!-- <ul class="quick-service-list">
+                    <li class="service-deposits"><a href="#none">금융소비자보호</a></li>
+                    <li class="service-loan-inquiry"><a href="#none">부당행위 신고</a></li>
+                    <li class="service-contract"><a href="#none">지점안내</a></li>
+                    <li class="service-loan"><a href="#none">약관/서식자료실</a></li>
+                </ul> -->
+
 
             </div>
         </div>
@@ -76,18 +133,257 @@
     </div>
     <!-- //contentsWrap -->
 
-    <!-- footer -->
-     <div id="footerWrap">
-        <div class="footer-text-box">
+    <!-- 메인 배너 클릭시 상품소개 팝업 -->
+    <div class="layerpopup laypop-all mainbanner-layer" style="display:block;">
+        <div class="content-wrap lypop-type2">
+            <div class="pop-header">
+                <h2 class="pop-title"></h2>
+                <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+            </div>
 
+            <div class="pop-con-wrap">
+                <div class="default-wrap">
+
+                    <!-- <div class="prod-top-box">
+                        <strong class="title">라이브A론</strong>
+                        <p>
+                            만 20세 이상 직장인, 자영업자, 주부, 프리랜서라면 무보증으로 최고 5,000만원, 최장 60개월까지 여유롭게
+                            대출을 받으실 수 있습니다.
+                        </p>
+                        <div class="prod-icon"><img src="/resources/images/dsr/main/img_prod.png" alt="상품 아이콘"></div>
+                    </div>
+
+                    <div id="intractInfo">
+                        <div class="pr-detail default-wrap">
+                            <ul class="list type1 mb30">
+                                <li>
+                                    <span class="bar">대출대상</span>&nbsp;
+                                    <span class="txt">연소득 3천5백만원 이하 또는 연소득 4천5백만원 이하 개인신용평점이 하위 100분의 20에 해당하는 (개인신용평가사 기준) 근로자</span>
+                                </li>
+                                <li>
+                                    <span class="bar">대출대상</span>&nbsp;
+                                    <span class="txt">연소득 3천5백만원 이하 또는 연소득 4천5백만원 이하 개인신용평점이 하위 100분의 20에 해당하는 (개인신용평가사 기준) 근로자</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div> -->
+
+                    <div class="layer-con">
+                        <div class="tit">근로자햇살론</div>
+                        <p>
+                            저신용 저소득 서민에게 보증지원을 통해 생활의 안정을 돕고자 서민금융진흥원과 서민금융회사가 공동으로 지원하는 보증부 대출상품입니다.
+                        </p>
+                        <div class="prod-icon">
+                            <img src="/resources/images/dsr/main/img_prod.png" alt="상품 아이콘">
+                        </div>
+
+                        <hr class="mt20 mb30">
+                        <div class="list-tit">상품소개</div>
+                        <ul class="list type1">
+                            <li>
+                                <span class="bar">대출대상</span>&nbsp;
+                                <span class="txt">연소득 3천5백만원 이하 또는 연소득 4천5백만원 이하 개인신용평점이 하위 100분의 20에 해당하는 (개인신용평가사 기준)
+                                    근로자</span>
+                            </li>
+                            <li>
+                                <span class="bar">대출한도</span>&nbsp;
+                                <span class="txt">생계자금 : 최대 2천만원(3개월이상 근로자, 일용직, 임시직 포함)<br></span>
+                            </li>
+                            <li>
+                                <span class="bar">대출기간</span>&nbsp;
+                                <span class="txt">보증기간 : 3년 또는 5년</span>
+                            </li>
+                            <li>
+                                <span class="bar">대출금리</span>&nbsp;
+                                <span class="txt">연 9.0% ~11.0%대 (매월 금융감독원 고시에 따라 변동가능)</span>
+                                <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                &nbsp;
+                                &nbsp; &nbsp; * 대출금리 = 기준금리 + 가산금리
+                            </li>
+
+                            <li>
+                                <span class="bar">연체이자율<br>(지연배상금율)</span>
+                                <span class="font14">
+                                    <p class="mb20">연체이자율(지연배상금율)은 약정이자율에 연체가산이자율 연3%를 가산하여 적용합니다. 단, 법정최고금리를 초과할 수
+                                        없습니다.
+                                        <br>※
+                                        연체이자율
+                                        적용방식(예시)
+                                        <br>- 연체시 : 약정금리 + 연체가산이자율
+                                    </p>
+                                    <div class="mb5">
+                                        <table class="table type1 __se_tbl_ext">
+                                            <caption>연체이자율</caption>
+                                            <colgroup>
+                                                <col style="width: 0px;">
+                                                <col style="width: 0px;">
+                                                <col style="width: 0px;">
+                                                <col style="width: 0px;">
+                                                <col>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th class="ta-c" scope="col">사례</th>
+                                                    <th class="ta-c" scope="col">약정금리</th>
+                                                    <th class="ta-c" scope="col">연체가산이자율</th>
+                                                    <th class="ta-c" scope="col">연체이자율</th>
+                                                    <th class="ta-c" scope="col">비고</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="ta-c">A</td>
+                                                    <td class="ta-c">8.0%</td>
+                                                    <td class="ta-c">3.0%</td>
+                                                    <td class="ta-c">11.0%</td>
+                                                    <td class="ta-c"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="ta-c">B</td>
+                                                    <td class="ta-c">19.9%</td>
+                                                    <td class="ta-c">3.0%</td>
+                                                    <td class="ta-c" style="color: rgb(236, 0, 140);">20.0%</td>
+                                                    <td class="ta-c">법정최고금리 준수</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="bar">상환방법</span>&nbsp;
+                                <span class="txt">원금균등분할상환</span>
+                            </li>
+                            <li>
+                                <span class="bar">이자의 부과시기</span>&nbsp;
+                                <span class="txt">매월 후취</span>
+                            </li>
+                            <li>
+                                <span class="bar">대출이자율<br>적용방식</span>&nbsp;
+                                <span class="txt">
+                                    변동금리 : 대출약정 기간내에 기준금리가 변경될 경우 당해 대출금리가 변동되는 금리로서 기준금리가 인상될 경우 고객의 이자부담이
+                                    증가될 수 있음(생계자금에 한하여)
+                                </span>
+                            </li>
+                            <li>
+                                <span class="bar">준비서류</span>&nbsp;
+                                <span class="txt">공통 : 신분증 사본, 주민등록 초본<br>근로자 : 재직 및 소득 증빙 가능 서류 등<br>자세한 구비서류안내는 햇살론 전용
+                                    홈페이지 www,sunshineloan.co.kr 참조</span>
+                            </li>
+                            <li>
+                                <span class="bar">대출기한전<br>상환수수료</span>&nbsp;
+                                <span class="txt">없음</span>
+                            </li>
+                            <li>
+                                <span class="bar">기타수수료</span>&nbsp;
+                                <span class="txt">보증요율 : 연 2%(사회적배려대상자 및 근로장려금 수급자, 자활근로자는 연1%p 인하)<br></span>
+                            </li>
+                            <li>
+                                <span class="bar">인지비용 부담</span>&nbsp;
+                                <span class="txt">없음</span>
+                            </li>
+                            <li>
+                                <span class="bar">유의사항</span>&nbsp;
+                                <span class="txt">
+                                    저축은행 심사기준과 고객 신용도에 따라 대출여부가 결정됩니다.
+                                    <br>계약체결 전 상품설명서 및 약관을 확인하시기 바랍니다.
+                                    <br>해당 상품에 대해 충분한 사전 설명을 받을 권리가 있으며, 설명을 이해한 후 거래하시기 바랍니다.
+                                    <br>대출금리는 기준금리 변동에 따라 변경될 수 있습니다.
+                                    <br>기간 연장시점에 개인 신상에 따라 변경이 있는 경우 대출금의 일부 또는 전부가 회수될 수 있습니다.
+                                    <br>대출금의 상환 또는 이자납입이 지연된 경우 연체이율이 적용되며, 예금 등 기타채권과의 상계나 법적절차등으로 재산상의 불이익을 당하실 수
+                                    있습니다.
+                                    <br>연체 시 계약기한 만료 전 원리금 변제 의무가 발생할 수 있습니다.
+                                    <br>과도한 대출은 개인신용평점 하락의 원인이 될 수 있습니다.
+                                    <br>대출상품 이용시 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다. 신용등급 또는 개인신용평점이 하락하면 추가 대출이 제한되거나, 대출금리
+                                    상승, 대출한도 감소 등 불이익이 발생할 수 있습니다.
+                                    <br>기타 자세한 내용은 창구직원 또는 대표번호(1877-7788)로 문의하시거나 상품설명서를 반드시 참조하시기 바랍니다.
+                                </span>
+                            </li>
+                            <li>
+                                <span class="bar">준법감시인 심의필</span>&nbsp;
+                                <span class="txt">제 2024-097(2024.05.20 ~ 2025.05.19)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn close">닫기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footerWrap">
+        <div class="footer-text-box">
+            <div class="counselor">
+                <div class="c-img"><img src="/resources/images/dsr/common/counselor_img.png" alt="상담사 사진"></div>
+                <div class="c-info">
+                    <strong class="name">테스트법인 대출상담사 <span>김도형</span></strong>
+                    <div class="phone">전화번호 : <a href="tel:010-1234-1234">010-1234-1234</a></div>
+                    <span class="time">평일 09:00~18:00 상담가능(주말 및 공휴일 휴무)</span>
+                </div>
+            </div>
+            <div class="f-text">
+                <div class="list-bull">
+                    <ul>
+                        <li>
+                            상기인은 예가람저축은행과 대출모집업무 위탁계약을 체결한 테스트법인 대출모집법인 소속으로 저축은행 중앙회에 등록된 대출상담사 입니다.<br />
+                            또한, 예가람저축은행만의 대출상품을 대리중개하며 계약 체결 권한은 예가람저축은행에 있습니다.<br />
+                            대출과 관련된 중개수수료를 요구하거나 받지 않습니다. 수수료를 요구하거나 받은것은 불법이며 수수료를 요구할 경우 금감원 1332로 신고바랍니다.
+                        </li>
+                        <li>예가람저축은행 소비자보호 담당자 : 02)6906-7065</li>
+                        <li>대출모집인 수수료율 확인(<a href="http://www.yegaramsb.co.kr"
+                                target="_blank">http://www.yegaramsb.co.kr</a> 상품공시실>모집인수수료율)</li>
+                        <li>신원확인방법 : <a href="http://www.loanconsultant.co.kr"
+                                target="_blank">http://www.loanconsultant.co.kr</a></li>
+                        <li>금융소비자는 방문판매 목적으로 방문 또는 전화 연락하는 것을 금지하도록 요구할 수 있습니다</li>
+                        <li>두낫콜 홈페이지 <a href="http://www.donotcall.or.kr" target="_blank">http://www.donotcall.or.kr</a>
+                            에 접속하시면 신청 및 철회가 가능합니다</li>
+                    </ul>
+
+                    <ul class="list-bull hyphen">
+                        <li>저축은행 심사기준과 고객 신용도에 따라 대출여부가 결정됩니다</li>
+                        <li>계약 체결 전 상품설명서 및 약관을 확인하시기 바랍니다</li>
+                        <li>해당 상품에 대해 충분한 사전 설명을 받을 권리가 있으며, 설명을 이해한 후 거래하시기 바랍니다</li>
+                        <li>대출금리는 기준금리 변동에 따라 변경될 수 있습니다</li>
+                        <li>기간 연장시점에 개인 신상에 변경이 있는 경우 대출금의 일부 또는 전부가 회수될 수 있습니다</li>
+                        <li>대출금의 상환 또는 이자납입이 지연된 경우 연체이율이 적용되며, 예금 등 기타채권돠의 상계나 법적절차등으로 재산상의 불이익을 당하실 수 있습니다</li>
+                        <li>연체 시 계약기간 만료 전 원리금 변제 의무가 발생할 수 잇습니다</li>
+                        <li>과도한 대출은 개인신용평점 하락의 원인이 될 수 있습니다</li>
+                        <li>대출상품 이용시 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다. 신용등급 또는 개인신용평점이 하락하면 추가 대출이 제한되거나, 대출금리 상승, 대출한도 감소
+                            등 불이익이 발생할 수 있습니다</li>
+                        <li>기타 자세한 내용은 창구직원 또는 대표번호(1877-7788)로 문의하시거나 상품설명서를 반드시 참조하시기 바랍니다</li>
+                    </ul>
+
+                </div>
+
+            </div>
         </div>
 
         <div class="footer-info-box">
+            <div>
+                <div class="f-info">
+                    <div>예가람저축은행 &nbsp; | &nbsp; 주소 : 서울특별시 중구 세종대로 50</div>
+                    <div>사업자등록번호 : 107-86-66267 &nbsp; | &nbsp; 대표번호 : <a href="tel:1877-7788">1877-7788</a></div>
+                    <div>금융사기 야간 콜센터 (02)3978-600,800</div>
+                    <div>예가람저축은행 준법감시인 심의필 제 2024-097호<br />(2024.05.20~2025. 05.19)</div>
+                </div>
+                <div class="img-kisa">
+                    <img src="/resources/images/dsr/common/img_kisa.jpg" alt="KISA 인증마크(SSL)" title="KISA 인증마크(SSL)">
+                </div>
+                <div class="copyright">Copyright ⓒ 2018 Yegaram Saving Bank. All Rights Reserved</div>
+            </div>
 
             <div class="family-site">
                 <div class="">
                     <label class="blind" for="family-site">관련사이트</label>
-                    <div class="select-wrap fl-l"> 
+                    <div class="select-wrap">
                         <select name="" id="family-site">
                             <option selected="selected" value="">관련사이트</option>
                             <option value="http://www.yegaramsb.co.kr">예가람저축은행 공식홈페이지</option>
@@ -96,14 +392,14 @@
                             <option value="http://cyberbureau.police.go.kr/index.do">경찰청사이버안전국</option>
                         </select>
                     </div>
-                    <button type="button" name="button" onclick="goFamilySite()" class="fl-l">Go</button>
+                    <button type="button" name="button" onclick="goFamilySite()">Go</button>
                 </div>
             </div>
-            
+
         </div>
-     </div>
+    </div>
     <!-- //footer -->
 
 </body>
-</html>
 
+</html>

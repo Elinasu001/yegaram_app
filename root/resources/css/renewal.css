@@ -1274,7 +1274,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 
 /*공통*/
 .tit-wrap + .txtbox-wrap.ta-c { margin-top:40px; }
-
+.tit-wrap .list-bull { margin-top:10px; }
 .sub-tit-wrap.line { display:flex; justify-content: space-between; align-items: center; }
 .sub-tit-wrap.line .txt { margin-top:0; }
 .sub-tit-wrap.line { border-bottom:1px solid #111111; padding-bottom:10px;}
@@ -1286,12 +1286,16 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .form-all-wrap .form-wrap + .btn-cont-wrap,
 .form-all-wrap .form-wrap + .table-type  { margin-top:40px; }
 
-.sub-cont-wrap + .btn-cont-wrap { margin-top:40px; }
+.sub-cont-wrap + .btn-cont-wrap,
+.loan-info-wrap + .btn-cont-wrap { margin-top:40px; }
 
 .hr-line { height:1px; background: #EEEEEE; margin:40px 0; }
 .hr-line + .terms-area,
-.terms-area .tit-wrap { margin-top:0; }
-.terms-area .tit-wrap { margin-bottom:40px; }
+.terms-area .tit-wrap { margin-top:0;  margin-bottom:0;}
+.terms-area .tit-wrap + .q-wrap { margin-top:30px; }
+/* .terms-area .tit-wrap { margin-bottom:40px; } */
+.terms-area .radio-wrap { margin-top:30px; }
+.terms-area .tit { text-align:right; }
 
 /* 신고안내 */
 .txtbox-wrap .img {content:''; width:80px; height:80px; }
@@ -1299,11 +1303,13 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .txtbox-wrap .img.certi { background: url(../../resources/images/dsr/page/bg_certi.png)no-repeat center 100%/80px auto; }
 
 
-/* 약관/서식 자료실 */
+/* 약관/서식 */
 .terms-list.type2 li a:after { content:none; }
 .terms-list.type2 em { font-size:0.88889rem; line-height:1.278rem; color:#111111; }
 .terms-list li p {  padding-right:100px;}
 .terms-list.type2 .btn { position:absolute; right:0; top:50%; }
+
+
 
 /* accordion */
 .accordion-wrap .answer-wrap { margin-top:initial; border-top:initial; }
@@ -1321,4 +1327,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .step-cont-wrap { margin-top:30px; }
 .step-cont-wrap .tit { font-size:0.88889rem; font-weight: 600; text-align: center; }
 .step-cont-wrap .step-img { margin-top:20px; }
+
+/* 새로고침 */
+.btn-refresh { width:75px; height:48px; background:url(../../resources/images/dsr/page/btn_refresh.png)  no-repeat 100%/48px auto; }
 
