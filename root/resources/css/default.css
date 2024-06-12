@@ -2426,7 +2426,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .product-info { margin:0 -20px; padding:0; width:calc(100% + 40px); }
 .product-detail .product-info > h3 { display:block; padding:0 20px; height:60px; line-height:60px; font-weight:500; font-size:0.88889rem; border-bottom:1px solid #EDEDED; }
 .product-detail .product-info > div { padding:0 20px; }
-.product-detail .pr-detail.default-wrap { padding:0; }
+.product-detail .product-info > div > .pr-detail.default-wrap { padding:0; }
 .product-detail .text-bar-list li { font-weight:500; color:#260F54; }
 .product-detail .text-bar-list li:before { background:#260F54; }
 .product-detail .text-bar-list.type-box li:before { background:#EEEEEE; }
@@ -2441,14 +2441,14 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .pr-detail .list-tit:first-of-type { margin-top:25px !important; }
 .pr-detail .bull { display:block; margin-top:15px; font-size:0.88889rem; line-height:1.38889; font-weight:300; }
 .pr-detail .list-tit,
-.product-detail .product-info p br + strong { display:block; font-size:0.88889rem; line-height:1.38889; font-weight:600; }
-.product-detail .product-info b{ font-weight:400; font-size:0.88889rem; font-weight:400; color:#4e32a5;  }
+.pr-detail p br + strong { display:block; font-size:0.88889rem; line-height:1.38889; font-weight:600; }
+.pr-detail b{ font-weight:400; font-size:0.88889rem; font-weight:400; color:#4e32a5;  }
 .product-detail .product-info ~ .sub-info-wrap { margin-bottom:40px; }
-.product-detail .table-wrap{ overflow-x:auto; }
-.product-detail .table-wrap th { border-top:1px solid #EEEEEE; }
-.product-detail .table-wrap th strong { font-weight:400; font-size:0.88889rem;  }
-.product-detail table.line_fixed { margin-top:15px; margin-bottom:20px; }
-.product-detail table.line_fixed td{ font-weight:300; color:#333; }
+.pr-detail .table-wrap{ overflow-x:auto; }
+.pr-detail .table-wrap th { border-top:1px solid #EEEEEE; }
+.pr-detail .table-wrap th strong { font-weight:400; font-size:0.88889rem;  }
+.pr-detail table.line_fixed { margin-top:15px; margin-bottom:20px; }
+.pr-detail table.line_fixed td{ font-weight:300; color:#333; }
 
 
 
