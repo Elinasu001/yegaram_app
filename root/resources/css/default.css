@@ -2386,6 +2386,8 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail.loan01 .visual-area .desc-txt + ul > li:nth-of-type(1)::before  { background-image:url("../images/common/ico_product_limit.png"); }
 .product-detail.loan01 .visual-area .desc-txt + ul > li:nth-of-type(2)::before { background-image:url("../images/common/ico_product_rate.png"); }
 
+.product-detail.loan01 .visual-area .tit-wrap > .tag { display:none; }
+
 .product-detail .visual-area .desc-txt + ul > li > strong.tit { display:block; margin:8px 0 4px; color:#666666; font-size:0.77778rem; }
 .product-detail .visual-area .desc-txt + ul > li > span.exp { display:block; font-size:0.88889rem; font-weight:500; color:#033333;  }
 .product-detail .visual-area .flag-tit-wrap { display:block; margin-top:5px; }
