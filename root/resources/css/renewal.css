@@ -10,7 +10,7 @@ body.fix { overflow:hidden; }
 	100% { transform: translateX(25px); box-shadow: 0 25px 0, -25px 25px 0, -25px 0 0; }
 }
 
-.loading-wrap{ position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.loading-wrap{ position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); }
 .loading-wrap .rabbit-loading{ width: 90px; height: 90px; margin: auto; overflow: hidden; position: relative;}
 .loading-wrap .rabbit-loading:after{ content: ''; display: block; width: 1350px; height: 90px; background-image: url("../images/loading/img_rabbit_loading.svg"); background-repeat: no-repeat; background-size: auto 100%; animation: sprite 2.3s steps(15) infinite;}
 .loading-wrap .rabbit-loading + .text {width: 100%; position: relative; color: #fff; font-size: 14px;}
@@ -27,6 +27,36 @@ body.fix { overflow:hidden; }
     }
 }
 
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display:grid;
+  -webkit-mask: conic-gradient(from 15deg,#0000,#000);
+  animation: l26 1s infinite steps(12);
+}
+.loader,
+.loader:before,
+.loader:after{
+  background:
+    radial-gradient(closest-side at 50% 12.5%,
+     #f03355 96%,#0000) 50% 0/20% 80% repeat-y,
+    radial-gradient(closest-side at 12.5% 50%,
+     #f03355 96%,#0000) 0 50%/80% 20% repeat-x;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  grid-area: 1/1;
+  transform: rotate(30deg);
+}
+.loader:after {
+  transform: rotate(60deg);
+}
+
+@keyframes l26 {
+  100% {transform:rotate(1turn)}
+}
 
 /* 공통 - 컨텐츠 in 버튼 */
 .btn-cont-wrap { display:flex; gap:10px; /*width:100%;*/ padding:0; text-align:center; align-items:start; }
