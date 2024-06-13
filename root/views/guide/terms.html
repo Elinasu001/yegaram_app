@@ -201,15 +201,65 @@
                             </fieldset>
                         </div>
 
+                        <!--[퍼블-1] 고객 요청으로 추가-->
                         <div class="terms-wrap level2">
                             <fieldset>
                                 <input type="checkbox" id="chk_T000800018" name="check" value="Y" class="check agreeYn">
                                 <label for="chk_T000800018"><span>[선택] 개인(신용)정보 수집·이용 동의서 (상품서비스 안내 등)</span></label>
                             </fieldset>
+                            <div class="etc level3">
+								<div class="terms-wrap">
+									<input type="checkbox" id="svcCheck01" name="check" value="" class="check mktYn">
+									<label for="svcCheck01">문자</label>
+								</div>
+								<div class="terms-wrap">
+									<input type="checkbox" id="svcCheck02" name="check" value="" class="check mktYn">
+									<label for="svcCheck02">이메일</label>
+								</div>
+								<div class="terms-wrap">
+									<input type="checkbox" id="svcCheck03" name="check" value="" class="check mktYn">
+									<label for="svcCheck03">전화</label>
+								</div>
+								<div class="terms-wrap">
+									<input type="checkbox" id="svcCheck04" name="check" value="" class="check mktYn">
+									<label for="svcCheck04">DM</label>
+								</div>
+							</div>
                         </div>
 
+                        <div class="terms-wrap level2 bg-box">
+                            <fieldset>
+                                <input type="checkbox" id="chk_T000800018" name="check" value="Y" class="check agreeYn">
+                                <label for="chk_T000800018"><span>본인은 저축은행과 예금거래를 함에 있어 
+                                    상품설명서를 제공받았으며, 위에서 설명한 내용을 포함하여 예금 거래의 주요내용, 
+                                    거래조건 및 유의사항에 대하여 충분히 
+                                    설명을 듣고 이해하였음을 확인합니다</span></label>
+                            </fieldset>
+                        </div>
+
+                        <div class="terms-wrap level2 bg-box">
+                            <fieldset>
+                                <input type="checkbox" id="chk_T000800018" name="check" value="Y" class="check agreeYn">
+                                <label for="chk_T000800018"><span>약관 및 상품설명서를 이메일로  제공받는것에 동의합니다</span></label>
+                            </fieldset>
+                        </div>
+                        <!--[퍼블-1] 고객 요청으로 추가//-->
+                        
                     </section>
                     <!-- E: 선택약관 -->
+
+                    <!--[퍼블-1] 고객요청으로 추가-->
+                    <div class="form-all-wrap">
+                        <div class="form-wrap">
+                            <label for="ipt15" class="formlabel">이메일</label>
+                            <div class="input">
+                                <input type="text" title="이메일" id="ipt15" class="inp" name="" value="" placeholder="이메일을 입력" required="">
+                                <button type="button" class="btn-delete">검색어 삭제</button>
+                            </div>
+                            <p class="info-txt">계좌개설 후 입력하신 이메일로 약관 및 상품설명서가 발송돼요</p>
+                        </div>
+                    </div>
+                    <!--[퍼블-1] 고객요청으로 추가//-->
                     <!-- E: 약관-->
 
                     <div class="list-bull">
@@ -287,7 +337,7 @@
             <!--E: 최신소스 반영 : 대출한도조회 (팝업) -->
 
             <!--S: 최신소스 반영 : 금융상품 중요사항 안내 (팝업)-->
-            <div id="importantNotiPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display: block;">
+            <div id="importantNotiPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display: none;">
                 <div class="pop-header">
                     <h2 class="pop-title">금융상품 중요사항 안내</h2>
                     <button type="button" name="button" class="btn-layer-close">닫기</button>

@@ -1295,7 +1295,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .terms-area .tit-wrap + .q-wrap { margin-top:30px; }
 /* .terms-area .tit-wrap { margin-bottom:40px; } */
 .terms-area .radio-wrap { margin-top:20px; }
-.terms-area .tit { text-align:right; }
+/* .terms-area .tit { text-align:right; } */
 .terms-area .tit-wrap > .s-txt { margin-top:10px; }
 /* 신고안내 */
 .txtbox-wrap .img {content:''; width:80px; height:80px; }

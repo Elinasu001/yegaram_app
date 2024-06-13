@@ -949,7 +949,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 /* 개별체크 */
 /* .terms-wrap.level2 { margin:5px 0; } */
 .terms-wrap.level2 + .level2 { margin-top:8px; }
-.terms-wrap.level2 + .terms-wrap.bg-box { margin-top:40px; }
+.terms-wrap.level2 + .terms-wrap.bg-box { margin-top:20px; }
 .terms-wrap.level2 + .terms-wrap.bg-box + .terms-wrap.bg-box { margin-top:15px; }
 .terms-wrap.level2 label { padding:0 0 0 26px; font-size:0.88889rem; line-height:1.4375; background:url("../images/common/chk_off.png") no-repeat left center/16px auto;  display:block; }
 .terms-wrap.level2 label > span { display:inline-block; width:100%; padding-right:26px; color:#666; line-height:1.4375; }
@@ -973,6 +973,13 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 .terms-wrap .level4 label { width:100%; padding:0; padding-left:30px; }
 .terms-wrap .level4 label::after { display:none; }
 .terms-wrap div.tit{font-size: 0.88889rem; padding-left:60px ; font-weight: bold;}
+
+
+/* 예가람 - 약관 디자인 싱크 적용 */
+.terms-wrap.bg-box label { background: url("../images/common/chk_bg_off.png") no-repeat left top 3px/20px auto; }
+.terms-wrap.bg-box input[type="checkbox"]:checked + label { background: url("../images/common/chk_bg_on.png") no-repeat left top 3px/20px auto; }
+.terms-wrap.bg-box label > span { padding-right:0; word-break: initial; }
+.terms-wrap.bg-box label > span::after { content:none; }
 
 /* 정보활용동의등급제 - 최신소스 추가 */
 .safe1{padding: 2px 8px;border-radius: 25px; color: #fff; background-color: #2c9ecc;font-size: 0.66667rem;margin-left: 4px;}
