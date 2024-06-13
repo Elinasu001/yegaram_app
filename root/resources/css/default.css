@@ -2458,12 +2458,14 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .product-info ~ .sub-info-wrap { margin-bottom:40px; }
 .pr-detail .table-wrap{ overflow-x:auto; }
 #intractInfo .table-wrap th,
-.pr-detail .table-wrap th { border-top:1px solid #EEEEEE; font-weight:400; font-size:0.88889rem; }
-.pr-detail .table-wrap th strong { font-weight:400; font-size:0.88889rem;  }
+.pr-detail .table-wrap th { border-top:1px solid #EEEEEE; font-weight:500; font-size:0.88889rem; }
+.pr-detail .table-wrap th strong { font-weight:500; font-size:0.88889rem;  }
 .pr-detail table.line_fixed { margin-top:15px; margin-bottom:20px; }
 .pr-detail table.line_fixed td{ font-weight:300; color:#333; }
-
-
+#intractInfo p[align="right"]:first-child,
+#intractInfo p[style="text-align: right;"]:first-child { font-size:0.88889rem; color:#666; margin-bottom:5px;  }
+#intractInfo  .table-wrap table + .tbl-txt { margin-top:15px; }
+#intractInfo .tbl-txt { display:block; margin-top:5px; font-size: 0.88889rem; line-height: 1.38889; font-weight:300; }
 
 .flag-tit-wrap { /*padding-right:40px;*/ display: flex; align-items:center; gap:10px; }
 /* .flag-tit-wrap .flag { margin-right:6px; } */
