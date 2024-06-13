@@ -2458,7 +2458,8 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .pr-detail b{ font-weight:400; font-size:0.88889rem; font-weight:400; color:#4e32a5;  }
 .product-detail .product-info ~ .sub-info-wrap { margin-bottom:40px; }
 .pr-detail .table-wrap{ overflow-x:auto; }
-.pr-detail .table-wrap th { border-top:1px solid #EEEEEE; }
+#intractInfo .table-wrap th,
+.pr-detail .table-wrap th { border-top:1px solid #EEEEEE; font-weight:400; font-size:0.88889rem; }
 .pr-detail .table-wrap th strong { font-weight:400; font-size:0.88889rem;  }
 .pr-detail table.line_fixed { margin-top:15px; margin-bottom:20px; }
 .pr-detail table.line_fixed td{ font-weight:300; color:#333; }
