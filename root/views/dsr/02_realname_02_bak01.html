@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>예가람저축은행</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="예가람저축은행keywords" />
+    <meta name="description" content="예가람저축은행description" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
+
+    <link href="/resources/css/default.css" rel="stylesheet" />
+    <link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+    <link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+    <script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+    <script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+    <script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+    <script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common"
+        data-menuId="dep/prc" data-frameId="depAcnoOpenPrc2" data-serviceCd="depAcnoOpenPrc2.frm"
+        data-serverTime="20230803152535" data-activeMode="local" data-activeEnv="${active.env">
+        </script>
+</head>
+
+<body>
+    <!-- header -->
+    <div id="headerWrap">
+        <script>
+            $(document).ready(function () {
+                document.charset = "euc-kr";
+                $("#headerWrap").load("../includes/header.html");
+            });
+        </script>
+    </div>
+    <!-- //header -->
+
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+
+                <div class="step-wrap">
+                    <div class="step-line" aria-label="총 3단계 중 2단계 진행중">
+                        <div class="step-bar" style="width: 66.6666%;"></div>
+                    </div>
+                    <div class="num"><strong class="current">2</strong>/<span class="tot">3</span></div>
+                </div>
+
+                <div class="loan-info-wrap">
+
+                    <!--S: 고객거래확인 -->
+                    <div class="loan-confi">
+
+                        <div class="tit-wrap">
+                            <p class="txt"><strong>고객거래확인</strong></p>
+                            <p class="s-txt">
+                                「특정금융거래정보의 보고 및 이용 등에 관한 법률」, 「공중 등 협박목적 및 대량살상무기확산을 위한 자금조달 행위의 금지에 관한 법률」에 따라 고객은 당사와
+                                거래 시 고객확인 및 검증을 위하여 아래의 내용을 기재하셔야 합니다.<br />
+                                당사는 기재된 정보를 검증하기 위하여 추가적인 자료를 요규할 수 있으며, 고객이 금융거래제한대상자이거나 요청된 정보 제출을 거부 또는 고객확인 및 검증이
+                                충분히 이루어지지 않을 경우 요청하신 금융거래가 지연되거나 거절 될 수 있습니다.<br />
+                                고객이 제공하신 정보 또는 자료는 ‘금융실명거래 및 비밀보장에 관한 법률’과 ‘신용정보의 보호 및 이용에 관한 법률’등 관련법령에 따라 보호됩니다.
+                            </p>
+                        </div>
+
+                        <hr class="hr-line">
+
+                        <div class="radio-wrap">
+                            <div class="form-tit">
+                                <p class="tit">개인거래목적</p>
+                            </div>
+                            <ul class="radio-list">
+                                <li>
+                                    <input type="radio" name="radio01" id="radio01" value="" onclick="">
+                                    <label for="radio01" class="">급여 및 생활비</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio02" id="radio02" value="" onclick="">
+                                    <label for="radio02" class="">저축 및 투자</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio03" id="radio03" value="" onclick="">
+                                    <label for="radio03" class="">사업상 거래</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio04" id="radio04" value="" onclick="">
+                                    <label for="radio04" class="">부동산 매매</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio05" id="radio05" value="" onclick="">
+                                    <label for="radio05" class="">상속, 증여성 거래</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio06" id="radio06" value="" onclick="">
+                                    <label for="radio06" class="">타금융회사 상품가입</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio07" id="radio07" value="" onclick="">
+                                    <label for="radio07" class="">대출담보제공</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio08" id="radio08" value="" onclick="">
+                                    <label for="radio08" class="">대출보증</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio09" id="radio09" value="" onclick="">
+                                    <label for="radio09" class="">대출연장</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio10" id="radio10" value="" onclick="">
+                                    <label for="radio10" class="">대출원리금상환</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio11" id="radio11" value="" onclick="">
+                                    <label for="radio11" class="">차입, 부채 상환</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio12" id="radio12" value="" onclick="">
+                                    <label for="radio12" class="">결제</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <hr class="hr-line">
+
+                        <div class="radio-wrap">
+                            <div class="form-tit">
+                                <p class="tit">거래자금의 원천 및 출처</p>
+                            </div>
+                            <ul class="radio-list">
+                                <li>
+                                    <input type="radio" name="radio01" id="radio01" value="" onclick="">
+                                    <label for="radio01" class="">근로 및 연금소득</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio02" id="radio02" value="" onclick="">
+                                    <label for="radio02" class="">퇴직소득</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio03" id="radio03" value="" onclick="">
+                                    <label for="radio03" class="">사업소득</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio04" id="radio04" value="" onclick="">
+                                    <label for="radio04" class="">부동산 임대소득</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio05" id="radio05" value="" onclick="">
+                                    <label for="radio05" class="">부동산 양도소득</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio06" id="radio06" value="" onclick="">
+                                    <label for="radio06" class="">금융소득(이자 및 배당)</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio07" id="radio07" value="" onclick="">
+                                    <label for="radio07" class="">상속/증여</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio08" id="radio08" value="" onclick="">
+                                    <label for="radio08" class="">일시재산양도로 인한 소득</label>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="mo-terms-wrap">
+
+                        <div class="tit-wrap">
+                            <p class="txt"><strong>약관동의</strong></p>
+                            <p class="s-txt">대출신청을 위한 약관에 동의하시겠습니까?</p>
+                        </div>
+
+                        <!--S: 필수 약관-->
+                        <section class="terms-area">
+
+                            <ul class="radio-list">
+                                <li>
+                                    <input type="radio" name="radio01" id="radio01" value="">
+                                    <label for="radio01">요약동의서</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio02" id="radio02" value="">
+                                    <label for="radio02">상세동의서</label>
+                                </li>
+                            </ul>
+                            
+                            <!--S: 금융상품 중요사항 안내 : 아래 팝업 사용-->
+                            <div class="terms-wrap level1 chk-all">
+                                <fieldset>
+                                    <input type="checkbox" id="allChk01" class="check all">
+                                    <label for="allChk01"><span>금융상품 중요사항 안내</span></label>
+                                </fieldset>
+                            </div>
+                            <!--E: 금융상품 중요사항 안내-->
+
+                            <!--S:가계대출상품설명서 : 팝업은 기존 개발 공통 약관 팝업으로 사용-->
+                            <div class="terms-wrap level1 chk-all">
+                                <fieldset>
+                                    <input type="checkbox" id="allChk01" class="check all">
+                                    <label for="allChk01"><span>가계대출상품설명서 확인</span></label>
+                                </fieldset>
+                            </div>
+                            <!--E:가계대출상품설명서-->
+
+                            <!--D: 팝업 : 관리자 영역-->
+                            <div class="terms-wrap level1 chk-all">
+                                <fieldset>
+                                    <input type="checkbox" id="allChk01" class="check all">
+                                    <label for="allChk01"><span>팔수약관에 모두 동의할게요</span></label>
+
+                                </fieldset>
+                            </div>
+
+                            <div class="terms-wrap level2">
+                                <fieldset>
+                                    <input type="checkbox" id="chk_T000800001" name="check" value="Y" class="check">
+                                    <label for="chk_T000800001"><span>[필수] 개인(신용)정보 조회 동의서</span></label>
+                                </fieldset>
+                            </div>
+
+                            <div class="terms-wrap level2">
+                                <fieldset>
+                                    <input type="checkbox" id="chk_T00080002" name="check" value="Y" class="check">
+                                    <label for="chk_T00080002"><span>[필수] 개인(신용)정보 수집.이용 제공 동의서 (여신 금융
+                                            거래)</span></label>
+                                </fieldset>
+                            </div>
+
+                            <div class="terms-wrap level2">
+                                <fieldset>
+                                    <input type="checkbox" id="chk_T00080003" name="check" value="Y" class="check">
+                                    <label for="chk_T00080003"><span>[선택] 개인(신용)정보 수집.이용 제공 동의서 (상품서비스
+                                            안내)</span></label>
+                                </fieldset>
+                            </div>
+
+                            <div class="terms-wrap level2">
+                                <fieldset>
+                                    <input type="checkbox" id="chk_T00080003" name="check" value="Y" class="check">
+                                    <label for="chk_T00080003"><span>[필수] 개인(신용)정보 및 기업(신용)정보 조회 수집이용 제공과 행정정보공동이용,
+                                            전자금융거래확인서 발급을 위한 동의서</span></label>
+                                </fieldset>
+                            </div>
+
+                        </section>
+
+                        <!--E: 필수 약관-->
+
+                        <!--S: 공공 마이데이터 약관-->
+                        <section class="terms-area">
+
+                            <div class="terms-wrap level1 chk-all">
+                                <fieldset>
+                                    <input type="checkbox" id="allChk01" class="check all">
+                                    <label for="allChk01"><span>공공 마이데이터 팔수약관에 모두 동의할게요</span></label>
+
+                                </fieldset>
+                            </div>
+
+                            <div class="terms-wrap level2">
+                                <fieldset>
+                                    <input type="checkbox" id="chk_T000800001" name="check" value="Y" class="check">
+                                    <label for="chk_T000800001"><span>[필수] 공공 마이데이터 개인(신용)정보 수집.이용.제공 동의서</span></label>
+                                </fieldset>
+                            </div>
+
+                            <div class="terms-wrap level2">
+                                <fieldset>
+                                    <input type="checkbox" id="chk_T00080002" name="check" value="Y" class="check">
+                                    <label for="chk_T00080002"><span>[필수] 본인 행정정보 제3자 제공 요구서</span></label>
+                                </fieldset>
+                            </div>
+
+                            <div class="terms-wrap level2">
+                                <fieldset>
+                                    <input type="checkbox" id="chk_T00080003" name="check" value="Y" class="check">
+                                    <label for="chk_T00080003"><span>[필수] 본인정보 제3자 제공 요구서</span></label>
+                                </fieldset>
+                            </div>
+
+                        </section>
+                        <!--E: 공공 마이데이터 약관-->
+
+                        <!--S: 선택 약관-->
+                        <section class="terms-area">
+
+                            <div class="terms-wrap level1 chk-all">
+                                <fieldset>
+                                    <input type="checkbox" id="allChk01" class="check all">
+                                    <label for="allChk01"><span>선택약관에 모두 동의할게요</span></label>
+
+                                </fieldset>
+                            </div>
+
+                            <div class="terms-wrap level2">
+                                <fieldset>
+                                    <input type="checkbox" id="chk_T000800001" name="check" value="Y" class="check">
+                                    <label for="chk_T000800001"><span>[선택] 개인(신용)정보 수집.이용. 제공 조회 동의서(상품서비스 안내
+                                            등)</span></label>
+                                </fieldset>
+                            </div>
+
+                            <div class="terms-wrap level2">
+                                <fieldset>
+                                    <input type="checkbox" id="chk_T00080002" name="check" value="Y" class="check">
+                                    <label for="chk_T00080002"><span>[선택] 개인(신용)정보 수집.이용. 제공 동의서 (보증료 우대
+                                            서비스)</span></label>
+                                </fieldset>
+                            </div>
+
+                            <div class="terms-wrap level2">
+                                <fieldset>
+                                    <input type="checkbox" id="chk_T00080003" name="check" value="Y" class="check">
+                                    <label for="chk_T00080003"><span>[선택] 개인(신용)정보 수집.이용 동의서(상품서비스 안내 등)</span></label>
+                                </fieldset>
+                            </div>
+
+                            <div class="terms-wrap level2">
+                                <fieldset>
+                                    <input type="checkbox" id="chk_T00080003" name="check" value="Y" class="check">
+                                    <label for="chk_T00080003"><span>[선택] 개인(신용)정보 수집.이용. 제공 동의서 (맞춤형 상품 제공)
+                                        </span></label>
+                                </fieldset>
+                            </div>
+
+                            <div class="terms-wrap level2">
+                                <fieldset>
+                                    <input type="checkbox" id="chk_T00080003" name="check" value="Y" class="check">
+                                    <label for="chk_T00080003"><span>[선택] 개인(신용)정보 수집.이용. 제공, 조회 동의서 (멤버십 회원가입
+                                            동의)</span></label>
+                                </fieldset>
+                            </div>
+
+                        </section>
+                        <!--E: 선택 약관-->
+
+                        <div class="form-wrap">
+                            <div class="form-tit">
+                                <p class="tit">본인인증 방법</p>
+                            </div>
+                            <div id="" class="select-box" tabindex="1" onclick="openPopupUp('lySel1');">
+                                <label for="">본인인증 방법 선택</label>
+                                <span class="option">미선택</span>
+                            </div>
+                            <p class="info-txt">대출신청 진행을 위해서는 본인인증이 필요합니다.
+                                인증 방식 중 하나를 선택해 인증을 진행해 주시
+                                기 바랍니다.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="list-bull">
+                        <div class="border"></div>
+                        <ul>
+                            <li>고객님께서 입력하신 개인정보는 대출신청 완료 후 수집됩니다.</li>
+                            <li>대출신청하기 클릭 시 본인인증 팝업으로 넘어갑니다.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="btn-cont-wrap flexCenter">
+                    <a href="#none" class="btn">다음단계 진행</a>
+                    <a href="#none" class="btn-refresh"><span class="blind">취소</span></a><!--D: 취소 버튼-->
+                </div>
+
+            </div>
+        </div>
+        <!-- //contents -->
+
+        <!--S: 본인인증 방식 선택-->
+        <div id="lySel1" class="layerpopup layer-up show">
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">본인인증 방식</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="list-icon certification">
+                        <li class="phone"><a href="#none">휴대폰 본인인증</a></li>
+                        <li class="joint"><a href="#none">공동인증서</a></li>
+                        <li class="ipin"><a href="#none">아이핀인증</a></li>
+                        <li class="kakao"><a href="#none">카카오인증</a></li>
+                        <li class="credit"><a href="#none">신용카드인증</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <!--E: 본인인증 방식 선택-->
+
+        <!--S: 금융상품 중요사항 안내 (팝업)-->
+        <div id="importantNotiPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close">
+            <div class="pop-header">
+                <h2 class="pop-title">금융상품 중요사항 안내</h2>
+                <button type="button" name="button" class="btn-layer-close">닫기</button>
+            </div>
+            <div class="pop-con-wrap">
+                <div class="default-wrap">
+                    <div class="tabs-wrap type2">
+                        <div class="tabs">
+                            <ul class="tab-item pf col-02">
+                                <li class="on" data-tab="tab-cont001" id="tep01"><a href="javascript:void(0);">상품정보</a>
+                                </li>
+                                <li class="" data-tab="tab-cont002" id="tep02"><a href="javascript:void(0);">유의사항</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content-area scroll-height">
+                                <div id="tab-cont001" class="tab-content on">
+                                    <div id="intractInfo">
+                                        <section>관리자 영역</section>
+                                        <!--S:고정 영역-->
+                                        <section class="list-bull">
+                                            <div class="border"></div>
+                                            <strong>알아두세요</strong>
+                                            <ul>
+                                                <li>금융상품의 중요사항에 대한 일반적인 안내사항으로 세부내용을 상품설명서를 통해 확인하실 수 있습니다.</li>
+                                            </ul>
+                                        </section>
+                                        <!--E:고정 영역-->
+                                    </div>
+                                </div>
+
+                                <div id="tab-cont002" class="tab-content dp-none">
+
+                                    <div class="bg-box">
+                                        <ul class="list-bull">
+                                            <li>금융상품의 중요사항에 대한 일반적인 안내 사항으로 세부내용은 상품설명서를 통해 확인 하실 수 있어요</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="sub-tit-wrap">
+                                        <p class="tit">중도해지에 따른 불이익</p>
+                                        <ul class="list-bull">
+                                            <li>만기가 도래하기 전에 중도해지를 하는 경우, 가입 기간에 따라 중도해지 이율이 적용되며, 약정이율로 지급받기 어려울 수 있으며,
+                                                추가적인 설명이 필요한 경우 "중도해지이율"항목을 다시 한번 확인해 주세요</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="sub-tit-wrap">
+                                        <p class="tit">금리변동형 상품 안내</p>
+                                        <ul class="list-bull">
+                                            <li>금리변동형 예금성 상품의 경우 금리상승에 따라 약정금리인상 가능성이 있지만 금리가 하락하는 경우 약정금리 인하로 소비자에게 불리할
+                                                수 있어요</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="table-type table-row type-left">
+                                        <table>
+                                            <caption>
+                                                금리변동형 상품 안내의 금리 상승, 하락 안내 표이며 구분, 고정금리, 변동금리, 운영형태, 특징 항목이 있습니다.
+                                            </caption>
+                                            <colgroup>
+                                                <col width="20%">
+                                                <col width="40%">
+                                                <col width="*%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">구분</th>
+                                                    <th scope="col">고정금리</th>
+                                                    <th scope="col">변동금리</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="col">운영<br>형태</th>
+                                                    <td><img src="../../../resources/images/common/fixed_rate.png"
+                                                            alt="고정금리 운영형태"></td>
+                                                    <td><img src="../../../resources/images/common/floating_rate.png"
+                                                            alt="변동금리 운영형태"> </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="col">특징</th>
+                                                    <td>
+                                                        <ul class="list-bull">
+                                                            <li>예금 가입 시 결정된 약정금리가 예금만기까지 동일하게 유지</li>
+                                                            <li>시장금리 하락 시 이자율 하락이 없는 반면 상승 시 이자율 변동이 없어 변동금리보다 불리</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <ul class="list-bull">
+                                                            <li>일정주기(3/6개월 등)마다 예금 기준금리의 변동에 따라 약정금리가 변동</li>
+                                                            <li>시장금리 상승 시 이자 수익이 증가하는 반면 상승 시 이자수익 하락으로 고정금리보다 불리</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="sub-tit-wrap">
+                                        <p class="tit">민원처리 및 분쟁조정 절차</p>
+                                        <ul class="list-bull">
+                                            <li>본 상품에 대한 문의사항 또는 민원 상담이 필요하시면 영업점, 고객센터(1877-7788) 또는 인터넷
+                                                홈페이지(www.yegaramsb.co.kr)를 통해 문의해주세요</li>
+                                            <li>금융소비자는 본 상품에 대하여 당 저축은행과 분쟁이 있는 경우에는 금융소비자보호법 제 36조 제 1항에 따라 금융감독원(국번없이
+                                                1322)에 분쟁조정을 신청할 수 있습니다</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="sub-tit-wrap">
+                                        <p class="tit">위법계약해지권 행사에 관한 사항</p>
+                                        <ul class="list-bull">
+                                            <li>금융회사가 금융소비자보호법상 판매원칙 위반시 일정 기간 이내에 금융소비자가 계약해지를 요구할 수 있어요</li>
+                                            <li>금융회사는 10일 이내에 수락여부를 통지해야 하며, 거절 시에는 거절사유와 함께 통지해야 해요</li>
+                                            <li>위법계약해지 요구는 계약서류를 받은 날로부터 5년, 위법 사실을 안 날로부터 1년 이내에 가능해요</li>
+                                        </ul>
+                                    </div>
+
+                                    <!--S: 대출일 경우-->
+                                    <div class="sub-tit-wrap">
+                                        <p class="tit">유의사항</p>
+                                        <ul class="list-bull">
+                                            <li>금융상품체결 전 금융상품설명서 및 약관을 확인하시기 바랍니다.</li>
+                                            <li>일반금융소비자는 금융상품 판매업자로부터 해당 상품에 대해 충분한 사전 설명을 받을 권리가 있으며, 설명을 이해한 후 거래하기
+                                                바랍니다.</li>
+                                            <li>금융소비자의 자격요건으로 연체대출금보유자, 불건전대출이 있는 자 등은 대출 취급이 제한될 수 있습니다.</li>
+                                            <li>과도한 대출은 개인신용평점 하락의 원인이 될 수 있습니다.</li>
+                                            <li>개인신용평점 하락으로 금융거래의 제약 또는 불이익이 발생할 수 있습니다.</li>
+                                            <li>연체 시 계약기간 만료 전 원리금 변제의무가 발생할 수 있습니다.</li>
+                                            <li>상품정보의 내용은 당행의 여신 및 금리정책에 따라 변경될수 있음.</li>
+                                            <li>기타 자세한 내용은 상품 취급 지점으로 문의 하여 주시기 바랍니다.</li>
+                                        </ul>
+                                    </div>
+                                    <!--E: 대출일 경우 -->
+
+                                    <!--S: 예적금일 경우-->
+                                    <div class="sub-tit-wrap">
+                                        <p class="tit">예금자보호법에 관한 사항</p>
+                                        <div class="kdic-wrap">
+                                            <img src="/resources/images/common/img-kdic.png"
+                                                alt="예금보험공사 보호금융상품 1인당 최고 5천만원">
+                                            <p>이 예금은 예금자보호법에 따라 원금과 소정의 이자를 합하여 1인당 "5천만원까지"(본 상호저축은행의 여타 보호상품과
+                                                합산)보호됩니다.</p>
+                                        </div>
+                                    </div>
+                                    <!--E: 예적금일 경우-->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //금융상품 중요사항 안내 탭 추가 231201-->
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="javascript:void(0);" class="btn" onclick="closePopup('importantNotiPop');">확인했어요</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--E: 금융상품 중요사항 안내 (팝업)-->
+
+        <!-- s: 상단 이동 버튼 -->
+        <button type="button" name="button" class="btn-circle top ir btn-top">위로</button>
+        <!-- //e: 상단 이동 버튼 -->
+
+    </div>
+    <!-- //contentsWrap -->
+</body>
+
+</html>

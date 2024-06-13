@@ -73,11 +73,24 @@
                     </div>
                     <div class="num"><strong class="current">1</strong>/<span class="tot">3</span></div>
                 </div>
-                <div class="sub-cont-wrap">
+
+                <div class="loan-info-wrap">
+                    
+                    <div class="tit-wrap">
+                        <p class="txt"><strong>대출정보 입력</strong></p>
+                    </div>
+
+                    <!--S: 대출정보 입력-->
                     <div class="form-all-wrap">
 
-                        <div class="tit-wrap">
-                            <p class="txt"><strong>대출정보 입력</strong></p>
+                        <div class="form-wrap">
+                            <div class="form-tit">
+                                <span class="txt">대출상품</span>
+                            </div>
+                            <div class="select-box" tabindex="1">
+                                <label for="">대출상품 선택</label>
+                                <span class="option" id="">미선택</span>
+                            </div>
                         </div>
 
                         <div class="form-wrap">
@@ -129,82 +142,81 @@
                             <p class="info-txt">당 저축은행은 신용정보의 이용 및 보호에 관한 법률 시행령 제37조의 2에 의거하여 주민등록번호를 수집합니다.</p>
                         </div>
 
-                        <hr class="hr-line">
+                    </div>
+                    <!--E: 대출정보 입력-->
 
-                        <div class="form-wrap">
-                            <label for="" class="formlabel">연소득</label>
-                            <div class="input">
-                                <input type="tel" title="연소득" id="" class="inp"  value="" placeholder="연소득 입력" required="">
-                                <span class="static-unit">만원</span>
-                            </div>
-                        </div>
+                    <hr class="hr-line">
 
-                        <div class="form-wrap">
-                            <label for="" class="formlabel">대출신청금액</label>
-                            <div class="input">
-                                <input type="tel" title="연소득" id="" class="inp"  value="" placeholder="대출신청금액 입력" required="">
-                                <span class="static-unit">만원</span>
-                            </div>
-                        </div>
+                    <!--S: 담보종류-->
+                    <div class="form-all-wrap">
 
-                        <div class="form-wrap">
+                        <div class="radio-wrap">
                             <div class="form-tit">
-                                <span class="txt">주택소유형태</span>
+                                <p class="tit">담보종류</p>
                             </div>
-                            <div class="select-box" tabindex="1">
-                                <label for="">주택소유형태</label>
-                                <span class="option" id="">미선택</span>
-                            </div>
+                            
+                            <ul class="radio-list">
+                                <li>
+                                    <input type="radio" name="radio01" id="radio01_2" value="" onclick="">
+                                    <label for="radio01_2" class="">아파트</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio01" id="radio01_1" value="" onclick="">
+                                    <label for="radio01_1" class="">다세대</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio01" id="radio01_3" value="" onclick="">
+                                    <label for="radio01_3" class="">연람(빌라)</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio01" id="radio01_4" value="" onclick="">
+                                    <label for="radio01_4" class="">오피스텔</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="radio01" id="radio01_5" value="" onclick="">
+                                    <label for="radio01_5" class="">기타</label>
+                                </li>
+                            </ul>
                         </div>
 
-                        <div class="form-wrap mt30">
-                            <div class="form-tit">
-                                <span class="txt">고객구분</span>
-                            </div>
-                            <div class="select-box" tabindex="1">
-                                <label for="">고객구분</label>
-                                <span class="option" id="">미선택</span>
-                            </div>
-                        </div>
+                        <div class="form-all-wrap">
 
-                        <div class="form-wrap mt30">
-                            <div class="form-tit">
-                                <span class="txt">직업구분</span>
+                            <div class="form-wrap">
+                                <label for="" class="formlabel">대출신청금액</label>
+                                <div class="input">
+                                    <input type="tel" title="연소득" id="" class="inp" value="" placeholder="백만원 단위 입력" required="">
+                                    <span class="static-unit">백만원</span>
+                                </div>
                             </div>
-                            <div class="select-box" tabindex="1">
-                                <label for="">직업구분</label>
-                                <span class="option" id="">미선택</span>
-                            </div>
-                        </div>
 
-                        <div class="form-wrap">
-                            <label for="" class="formlabel">직장명</label>
-                            <div class="input">
-                                <input type="text" title="직장명" id="" class="inp" name="" value="" placeholder="직장명 입력" required="">
+                            <div class="form-wrap form-line">
+                                <label for="" class="formlabel">주소(현재거주지)</label>
+                                <div class="input"><!--D: 클릭 시 개발 공통 페이지 : addr_select 팝업 사용 -->
+                                    <input type="text" title="우편번호" id="" class="inp" name="" value="" placeholder="우편번호 입력" required="">
+                                    <button type="button" class="btn btn-sm">우편번호찾기</button>
+                                </div>
+                                <div class="input">
+                                    <input type="text" title="주소" id="" class="inp" name="" value="" placeholder="기본주소 입력" required="">
+                                </div>
+                                <div class="input">
+                                    <input type="text" title="상세주소" id="" class="inp" name="" value="" placeholder="상세주소 직접입력" required="">
+                                </div>
+                                <!-- <div class="input">
+                                    <input type="text" title="직장전화" id="" class="inp" name="" value="" placeholder="직장전화 입력" required="">
+                                </div> -->
                             </div>
-                        </div>
 
-                        <div class="form-wrap">
-                            <label for="" class="formlabel">입사일</label>
-                            <div class="input">
-                                <input type="text" title="입사일" id="" class="inp" name="" value="" placeholder="ex)20100505" required="">
-                            </div>
-                        </div>
-
-                        <div class="form-wrap">
-                            <label for="" class="formlabel">재직기간</label>
-                            <div class="input">
-                                <input type="text" title="재직기간" id="" class="inp" name="" value="" placeholder="재직기간 입력" required="">
-                            </div>
                         </div>
 
                     </div>
-                        
+                    <!--E: 담보종류-->
+                    
                     <hr class="hr-line">
 
-                    <section class="terms-area">
+                    <!--S: 대출상담사 설명확인-->
+                    <div class="terms-area">
                         <div class="tit-wrap">
-                            <p class="txt"><strong>대출상담사 설명확인</strong></p>
+                            <p class="tit"><strong>대출상담사 설명확인</strong></p>
                             <p class="s-txt">금융회사는 대출모집상담사를 통해 접수된 대출의 경
                                 우, “대출모집인 제도 모범규준 제 10조 제1항 2호”에
                                 따라 대출 실행 이전에 대출신청인에게 아래 각 사항을
@@ -285,13 +297,15 @@
                             </div>
                         </div>
 
-                    </section>
+                    </div>
+                    <!--E: 대출상담사 설명확인-->
 
                     <hr class="hr-line">
 
-                    <section class="terms-area">
+                    <!--S: 적합성 적정성원칙 확인서-->
+                    <div class="terms-area">
                         <div class="tit-wrap">
-                            <p class="txt"><strong>적합성 적정성원칙 확인서</strong></p>
+                            <p class="tit"><strong>적합성 적정성원칙 확인서</strong></p>
                             <p class="s-txt">본 확인서는 금융소비자 보호에 대한 법률 제17조(적
                                 합성원칙) 및 제 18조(적정성원칙)에 따라 귀하의 연령,
                                 재산상황, 대출계약의 목적등을 파악하여 대출계약자
@@ -377,11 +391,60 @@
                             
                         </div>
 
-                    </section>
+                    </div>
+                    <!--E: 적합성 적정성원칙 확인서-->
 
-                    <section class="terms-area">
+                    <!--S: 필요한 정보-->
+                    <div class="terms-area">
+
                         <div class="tit-wrap">
-                            <p class="s-txt"><strong>본인은 상기와 같이 제공한 정보의 내용의 정확한 것임을 확인합니다.</strong></p>
+                            <p class="s-txt"><strong>♣ 다음은 ‘금융소비자보호법’에 따른 ‘적합성원칙’ 확인을 위해 필요한 정보입니다.</strong></p>
+                            <ul class="list-bull num">
+                                <li><em>1.</em>귀하가 당행에 직접 신청한 대출상품이 ‘주택 또는 증권 등(주식) 담보대출’이 맞으십니까?</li>
+                            </ul>
+                            <div class="radio-wrap">
+                                <ul class="radio-list">
+                                    <li>
+                                        <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked">
+                                        <label for="radio01_2" class="">동의</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="radio01" id="radio01_1" value="" onclick="">
+                                        <label for="radio01_1" class="">동의하지 않음</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="tit-wrap">
+                            <ul class="list-bull num">
+                                <li>(“1””네” 선택 시) 상품이 귀하에게 부적정한 경우 제공하는 ‘부적정 결과 안내서;의 수취방식을 선택해주시기 바랍니다.(적정하다고 판단되는 경우에는 제공되지 않습니다.)</li>
+                            </ul>
+                            <div class="radio-wrap">
+                                <ul class="radio-list">
+                                    <li>
+                                        <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked">
+                                        <label for="radio01_2" class="">동의</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="radio01" id="radio01_1" value="" onclick="">
+                                        <label for="radio01_1" class="">동의하지 않음</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                       
+
+                    </div>
+                    <!--E: 필요한 정보-->
+
+                    <hr class="hr-line">
+
+                    <!--S: 내용확인-->
+                    <div class="terms-area">
+                        <div class="tit-wrap">
+                            <p class="s-txt"><strong>♣ 본인은 상기와 같이 제공한 정보의 내용이 정확한 것임을 확인합니다.</strong></p>
                             <ul class="list-bull num">
                                 <li><em>1.</em>본인이 귀행에 제공한 적합성.적정성 관련 정보는 본인의  재산 상황, 용도등의 정보를 정확히 알려드린 것입니다.</li>
                                 <li><em>2.</em>본인이 제공한 정보가 정확하지 않거나, 정보에 변경사항이 발생한 경우에는 적합성.적정성 판단이 달라질 수 있으며, 이 경우 대출계약 체결이 어려울 수 있음을 설명받았습니다.</li>
@@ -392,25 +455,26 @@
                         <div class="radio-wrap">
                             <ul class="radio-list">
                                 <li>
-                                    <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked" class="monthly">
-                                    <label for="radio01_2" class="">납입일 선택</label>
+                                    <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked">
+                                    <label for="radio01_2" class="">동의</label>
                                 </li>
                                 <li>
                                     <input type="radio" name="radio01" id="radio01_1" value="" onclick="">
-                                    <label for="radio01_1" class="">매월 말일</label>
+                                    <label for="radio01_1" class="">동의하지 않음</label>
                                 </li>
                             </ul>
                         </div>
 
                         <p class="tit">2024년 6월 4일</p>
 
-                    </section>
+                    </div>
+                    <!--E: 내용확인-->
 
                 </div>
 
                 <div class="btn-cont-wrap flexCenter">
                     <a href="#none" class="btn">다음단계 진행</a>
-                    <a href="#none" class="btn-refresh"><span class="blind">취소</span></a>
+                    <a href="#none" class="btn-refresh"><span class="blind">취소</span></a><!--D: 취소 버튼-->
                 </div>
 
             </div>

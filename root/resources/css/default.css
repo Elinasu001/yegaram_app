@@ -1066,7 +1066,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 .q-wrap.result-box { margin-top:20px; padding:20px; }
 
 /* 일반 라디오 버튼 - 06.28 수정 */
-.radio-list { display:flex; /*margin:10px 0;*/ gap:10px;}
+.radio-list { display:flex; /*margin:10px 0;*/ gap:10px; flex-wrap:wrap; }
 .radio-list li { flex:1; position:relative; /*margin:10px 0;*/ }
 .radio-list li input { margin-right:10px; }
 .radio-list input[type="radio"] { display:none; }
@@ -2035,6 +2035,8 @@ body.on { position:fixed; top:0; }
 .terms-area + .list-bull { margin-top:40px; }
 .terms-area .check-account { margin-top:0; margin-bottom:20px; }
 .terms-area .radio-list { margin-bottom:20px; }
+.terms-area .radio-list li,
+.radio-wrap .radio-list li { flex:initial; }
 .layerpopup.layer-up .list-bull li { color:#666666; font-size:0.77778rem; line-height: 1rem; }
 .layerpopup.layer-up .list-bull.dot li:before { background:#666666; }
 
@@ -2047,7 +2049,7 @@ body.on { position:fixed; top:0; }
 .guide-txt-wrap .cont { padding-top:10px; }
 
 /*** 스텝 프로그레스 바 ***/
-.step-wrap { position:relative; margin:20px -20px; text-align:center;}
+.step-wrap { position:relative; margin:20px -20px; text-align:center; overflow: hidden;}
 .step-wrap .step-line{position:relative;height:8px;background:#EEEEEE}
 /*.step-wrap .step-line:before,*/
 .step-wrap .step-line:after { content:''; position:absolute; top:50%; left:-4px; width:6px; height:6px; background:#260F54; -webkit-transform:rotate(45deg) translateY(-80%); -ms-transform:rotate(45deg) translateY(-80%); transform:rotate(45deg) translateY(-80%); }
@@ -2326,6 +2328,8 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .list-icon.certification li.naver a:before { background:url("../images/common/ico_certi_naver.png") no-repeat 50%/22px auto; }
 .list-icon.certification li.hp a:before { background:url("../images/common/ico_certi_hp.png") no-repeat 50%/28px auto; }
 .list-icon.certification li.phone a:before { background:url("../images/common/ico_product03.png") no-repeat 50%/36px auto; }
+.list-icon.certification li.credit a:before { background:url("../images/common/ico_credit.png") no-repeat 50%/36px auto; }
+.list-icon.certification li.ipin a:before { background:url("../images/common/ico_ipin.png") no-repeat 50%/36px auto; }
 
 /** [공통] 상품리스트 템플릿 **/
 .tooltip-form-wrap { margin-left:15px; display:flex; flex-direction:row-reverse; }

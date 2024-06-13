@@ -77,20 +77,18 @@
                     <!-- S: 필수약관 -->
                     <section class="terms-area" id="termsArea">
 
-                        <div class="radio-list"><!--[퍼블-1]:클래스 변경 -->
-                            <div>
-                                <input type="radio" id="radio01" name="radio01" value="" checked><!--[퍼블-1]:type/id/name 변경 -->
-                                <label for="radio01"><!--[퍼블-1]:for 변경 -->
-                                    <span>요약동의서</span>
-                                </label>
-                            </div>
-                            <div>
-                                <input type="radio" id="radio02" name="radio02" value=""><!--[퍼블-1]:type/id/name 변경 -->
-                                <label for="radio02"><!--[퍼블-1]:for 변경 -->
-                                    <span>상세동의서</span>
-                                </label>
-                            </div>
-                        </div>
+                        <!--s: 구조 변경-->
+                        <ul class="radio-list">
+                            <li>
+                                <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked" class="monthly">
+                                <label for="radio01_2" class="">요약동의서</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="radio01" id="radio01_1" value="" onclick="">
+                                <label for="radio01_1" class="">상세동의서</label>
+                            </li>
+                        </ul>
+                        <!--e: 구조 변경-->
 
                         <div class="terms-wrap level1 chk-all">
                             <fieldset>
