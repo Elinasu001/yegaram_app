@@ -496,19 +496,24 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .essential::after { content:"*"; position:absolute; padding-left:3px; color:#ff0000;}
 
 /*** 폼 form ***/
-
 .form-all-wrap { margin-top:40px; }
+
 .form-all-wrap .form-wrap.type-box:first-child,
 .form-all-wrap > .form-wrap:first-child,
 .form-all-wrap > .select-wrap:first-child,
 .form-all-wrap > .sub-tit-wrap:first-child { margin-top:0; }
 
-
+.form-all-wrap .terms-area,
+.form-all-wrap .form-wrap + .form-wrap,
+.form-all-wrap .form-wrap + .check-box.toggl,
+.form-all-wrap .check-box.toggle + .form-wrap,
+.form-all-wrap .form-wrap.phone { margin-top:30px; }
 
 .form-all-wrap > .sub-tit-wrap { margin-bottom:15px;}
 
 .form-all-wrap .form-wrap.type-box,
 .form-all-wrap .check-box.toggle,
+.form-all-wrp .form-wrap,
 .form-all-wrap .form-wrap:has(.select-box) + .form-wrap:has(.select-box) { margin-top:10px; }
 
 
@@ -516,13 +521,6 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .form-all-wrap > .sub-tit-wrap + ul,
 .form-all-wrap > .sub-tit-wrap + div,
 .form-all-wrap > .form-wrap:has(.select-box):first-child { margin-top:0; }
-
-.form-all-wrap .terms-area,
-.form-all-wrap .form-wrap + .form-wrap,
-.form-all-wrap .form-wrap + .check-box.toggl,
-.form-all-wrap .form-wrap.phone { margin-top:30px; }
-
-
 
 
 /** 이전 form 마진 **/
