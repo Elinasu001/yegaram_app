@@ -1326,20 +1326,18 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 /*헤더 오른쪽*/
 .headerWrap .headerRight { position:relative;  }
 .headerWrap .headerLeft { position:absolute; left:10px; }
-.headerWrap .headerRight { position:absolute; right:10px;  display:flex; align-items:center; gap:12px; }
+.headerWrap .headerRight { position:absolute; right:10px;  display:flex; align-items:center; /*gap:12px;*/ }
 
 .headerWrap .headerRight .btn-notify,
 .headerWrap .headerRight .btn-like,
 .headerWrap .headerRight .btn-interest { position:relative; }
 
 .headerWrap .headerLeft .btn img,
-.headerWrap .headerRight .btn img { width:24px; height:24px; }
+.headerWrap .headerRight .btn img { width:40px; height:40px; }
 
 .headerWrap .headerRight .btn-notify .count-flag,
 .headerWrap .headerRight .btn-like .count-flag,
-.headerWrap .headerRight .btn-interest .count-flag { position:absolute; top:0px; right:-2px; width:12px; height:12px; /*padding:2px 2px;*/ border:2px solid #fff; border-radius:50%; box-sizing:content-box; background:#EC008C; color:#fff; font-size:0.45rem; line-height:12px; text-align:center;}
-
-
+.headerWrap .headerRight .btn-interest .count-flag { position:absolute; top:4px; right:2px; width:12px; height:12px; /*padding:2px 2px;*/ border:2px solid #fff; border-radius:50%; box-sizing:content-box; background:#EC008C; color:#fff; font-size:0.45rem; line-height:12px; text-align:center;}
 
 
 /** 바텀메뉴 **/
