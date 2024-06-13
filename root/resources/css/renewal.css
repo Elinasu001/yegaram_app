@@ -1331,12 +1331,12 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 /* 새로고침 */
 .btn-refresh { width:60px; height:48px; background:url(../../resources/images/dsr/page/btn_refresh.png)  no-repeat 100%/48px auto; }
 
-
 /* 약관 */
 .mo-terms-wrap,
 .mo-terms-wrap .form-tit { margin-top:40px; }
 .mo-terms-wrap .tit-wrap { margin-bottom:40px; }
 .form-tit .tit { font-size:0.88889rem; font-weight:600; color:#333333; }
+.date-num { text-align:right; }
 
 /* 법인 및 상담사 소개 */
 .introduce-wrap { margin-top: 30px; }
