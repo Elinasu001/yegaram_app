@@ -1174,7 +1174,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .app-shortcut-warp  .logo img { max-width:142px; }
 
 /* 유의사항 관련 */
-.terms-notice-wrap { height:80vh; overflow:auto; margin-top:30px; }
+.terms-notice-wrap { height:80vh; overflow:auto; margin-top:40px; }
 .terms-notice-wrap .sub-tit-wrap { margin:0 0 20px; }
 .terms-notice-wrap .list-bull.type-large { margin-top:0; }
 .terms-notice-wrap .list-bull.type-large.num li { padding-left:25px; font-size:0.88889rem; line-height:1.4375; }
@@ -1224,7 +1224,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .list-icon.type2 > li.on { border:2px solid #4E32A5; box-shadow: 0px 2px 8px rgb(0, 0, 0, 0.2); }
 .list-icon.type2 > li.on::after { position:absolute; top:-1px; right:-1px; bottom:-1px; left:-1px; width:100%; height:100%;  content:"";}
 .list-icon.type2 > li > a { display:inline-block; width:100%; height:100%; }
-.list-icon.type2 > li .tit { font-size:0.88889rem; line-height:1.4375; font-weight:bold; color:#260F54; }
+.list-icon.type2 > li .tit { font-size:0.88889rem; line-height:1.4375; font-weight:bold; color:#333333; }
 .list-icon.type2 > li .txt { font-size:0.77778rem; line-height:1.5; }
 .list-icon.type2 > li .s-txt { font-size:0.66667rem; line-height:1.58334; color:#999; }
 .popup2 .btnSection .btnCustom:hover { background:#F6F2FF; }

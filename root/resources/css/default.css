@@ -1072,7 +1072,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 .q-wrap.result-box { margin-top:20px; padding:20px; }
 
 /* 일반 라디오 버튼 - 06.28 수정 */
-.radio-list { display:flex; /*margin:10px 0;*/ gap:10px; flex-wrap:wrap; }
+.radio-list { display:flex; /*margin:10px 0;*/ gap:5px; flex-wrap:wrap; }
 .radio-list li { flex:1; position:relative; /*margin:10px 0;*/ }
 .radio-list li input { margin-right:10px; }
 .radio-list input[type="radio"] { display:none; }
@@ -1659,6 +1659,8 @@ body.on { position:fixed; top:0; }
 .layer-up .ly-select.login .ly-select-list li > button  { display:flex; align-items: center; justify-content: space-between; position:relative; text-align:left; padding:0 15px;  padding-left:49px; }
 .layer-up .ly-select.login .ly-select-list li > button::before { content:''; position:absolute; top:50%; transform:translateY(-50%  ); left:15px;  width:24px; height:24px;  }
 
+.layer-up .ly-select .form-wrap.form-type2 { margin-top:10px; }
+
 /* 간편인증관리 */
 .tit-icon::before { content:''; display:inline-block; margin-top:-4px; margin-right:3px; width:36px; height:36px; vertical-align:middle; }
 .pw::before { background:url("../images/common/ico_certi_pw.png") no-repeat 50%/22px auto; }
@@ -2155,7 +2157,7 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 .layer-up .inquiry-set-wrap { margin-top:0; }
 .inquiry-set-wrap [class*="-area"]:not(:first-of-type) { margin-top:30px; }
 .inquiry-set-wrap .area-title { padding-bottom:10px; font-weight:400; color:#666666; font-size:0.77778rem; line-height:1.5; }
-.inquiry-set-wrap .radio-list { margin:0; padding:4px; min-height:40px; border-radius:20px; background:#F8F8F8; font-size:0; }
+.inquiry-set-wrap .radio-list { margin:0; padding:4px; min-height:40px; border-radius:16px; background:#F8F8F8; font-size:0; }
 .inquiry-set-wrap .radio-list li { display:inline-block; height:32px; margin:0; line-height:32px; text-align:center; }
 .inquiry-set-wrap .radio-list li:nth-last-child(n+2),
 .inquiry-set-wrap .radio-list li:nth-last-child(n+2) ~ li { width:calc(100% / 2); }
@@ -2165,8 +2167,12 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 .inquiry-set-wrap .radio-list li:nth-last-child(n+4) ~ li { width:calc(100% / 4); }
 .inquiry-set-wrap .radio-list li:nth-last-child(n+5),
 .inquiry-set-wrap .radio-list li:nth-last-child(n+5) ~ li { width:calc(100% / 5); }
-.inquiry-set-wrap .radio-list button { position:relative; width:100%; height:100%; font-weight:500; color:#333333; font-size:0.77778rem; }
-.inquiry-set-wrap .radio-list li.active button { border-radius:8px; background:#fff; color:#26282C; border-radius:24px; font-weight:600; box-shadow: 0px 0px 4px #0000001A; }
+.inquiry-set-wrap .radio-list button { position:relative; width:100%; height:100%; padding:0 4px; font-size:0.77778rem; line-height: 1rem; font-weight:500; color:#999999;  }
+.inquiry-set-wrap .radio-list li.active button { border-radius:8px; background:#fff; color:#26282C; border-radius:16px; font-weight:600; box-shadow: 0px 0px 4px #0000001A; }
+
+.form-wrap.type2 .inquiry-set-wrap .radio-list button { color:#333333; }
+
+
 /* input[type="date"]::-webkit-calendar-picker-indicator { background:url("../images/common/ico_calendar.png") no-repeat 50%/24px auto; } */
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
