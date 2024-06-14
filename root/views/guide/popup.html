@@ -257,15 +257,20 @@
             <!--S: 셀렉트 팝업 - 팝업이 있을 경우-->
 
             <!-- s: 약관풀팝업 -->
-            <div id="lyTermsPop" class="layerpopup laypop-all agree-layer">
+            <div id="lyTermsPop" class="layerpopup laypop-all agree-layer" style="display:block;">
                 <!-- s: contents -->
                 <div class="pop-header">
-                    <h2 class="pop-title">약관명</h2>
+                    <div class="left-area"><span>약관상세</span></div>
+                    <h2 class="pop-title pop-arrorw-area">
+                        <button value="prev" class="prev"><span class="blind">이전</span></button>
+                        <div class="page-num"><span>1</span>/3</div>
+                        <button value="next" class="next"><span class="blind">다음</span></button>
+                    </h2>
                     <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lyTermsPop')">닫기</button>
                 </div>
                 
                 <div class="pop-con-wrap">
-                    <div class="default-wrap mb0">
+                    <div class="default-wrap mb0 bg">
                         <div class="info-wrap">
                             PDF솔루션 들어갈 예정
                             <iframe src="/resources/terms/P00001.pdf" style="width:100%; height:100%;" ></iframe>
