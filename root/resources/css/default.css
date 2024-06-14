@@ -550,7 +550,7 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .inquiry-set-wrap + .form-wrap { margin-top:40px; }
 .sub-tit-wrap + .bg-box { margin-top:-15px; }/*네이버앱 대응으로 인한 음수 마진 추가*/
 .terms-area + .form-wrap { margin-top:20px; }
-.btn-cont-wrap + .terms-area { margin-top:15px; } /* 전자계약서 */
+
 /* .result-area + .sub-info-wrap { margin-top:30px; } */
 .default-wrap > .form-wrap:first-child,
 .default-wrap > .txt-wrap { margin-top:40px; }
@@ -929,6 +929,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 /* .terms-area { margin-top:40px; } */
 /* .terms-wrap .terms-area { margin-top:30px; } */
 /* .terms-wrap .terms-area:first-child { margin-top:0; } */
+
 .terms-area { display:inline-block; width:100%; }
 .terms-wrap input[type="checkbox"] { display:block; position:absolute; top:0; left:0; width:100%; height:100%; appearance:none; background-color:transparent; -webkit-appearance:none; cursor: pointer; }
 
@@ -2104,7 +2105,7 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 
 /*** 타이틀 ***/
 /** 싱글화면 - 상단 타이틀 **/
-.tit-wrap { margin-top:40px; }
+.tit-wrap { margin-top:30px; }
 .tit-wrap + .tabs-wrap { margin-top:40px; }
 .tit-wrap  +  .prod-box-list.line { margin-top:40px; }
 .tit-wrap + .btn-cont-wrap { margin-top:40px; }

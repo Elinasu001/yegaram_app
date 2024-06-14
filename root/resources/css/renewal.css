@@ -776,6 +776,8 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 /* .form-wrap + .form-wrap.password,
 .form-wrap + .form-wrap.address { margin-top:20px; }수현-test */
 .tit-wrap + .choice-box { margin-top:40px; }
+.default-wrap  > .terms-area { margin-top:32px; }
+.default-wrap .btn-cont-wrap + .terms-area { margin-top:15px; } /* 전자계약서 */
 
 /* 여유자금계산기 */
 .sub-top-wrap { padding: 29px 20px 20px; background:#F7F8FA; }
