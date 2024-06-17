@@ -2515,7 +2515,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .sub-tit-wrap .txt.num > li > p:nth-of-type(1) { display:inline-block; width:25px; padding-right:5px; vertical-align:top; }
 .sub-tit-wrap .txt.num > li > p:nth-of-type(2) { display:inline-block; width:calc(100% - 30px); }
 .sub-tit-wrap .tit .right-txt { position:absolute; bottom:0; right:0; font-size:1rem; font-weight:400; color:#757575; }
-.sub-tit-wrap .tit + .list-bull { margin-top:14px; }
+.sub-tit-wrap .tit + .list-bull { margin-top:12px; }
 .sub-tit-wrap .tit + .kdic-wrap,
 .sub-tit-wrap .tit + .bg-box,
 .sub-tit-wrap .tit + .list-icon { margin-top:15px; }
@@ -2612,7 +2612,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .prod-box .icon-exp div:nth-of-type(1){ order:3; }
 .prod-box .icon-exp div:nth-of-type(2){ order:2; }
 
-.prod-box .label-info-wrap { margin-top:16px; }
+.prod-box .label-info-wrap { margin-top:14px; }
 /* .prod-box:last-child .label-info-wrap { padding-bottom:5px; } */
 .prod-box:last-child .label-info-wrap:last-child { padding-bottom:0; }
 .prod-box .label-info-wrap .label { font-size:0.77778rem; line-height:1.5; }
@@ -2621,7 +2621,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 /** [공통?] 계좌 조회 상세 **/
 .visaul-info-section { margin:0 -20px; padding:20px; background:#F5F8FA; }
-.visaul-info-section > .tit-wrap { margin:10px 0 40px 0; }
+.visaul-info-section > .tit-wrap { margin:10px 0 30px 0; }
 * + .visaul-info-box { margin: 10px 0 0; }
 .visaul-info-section + .txt-list-wrap { margin-top:30px; }
 .visaul-info-section + .txt-list-wrap + .arrow-button-list { margin-top:40px; }
@@ -2631,10 +2631,12 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 .visaul-info-box + .visaul-info-box { margin-top:20px; }
 /* .visaul-info-box .tag { display:block; font-weight:400; color:#999999; font-size:0.66667rem; line-height:1.58334; } */
-.visaul-info-box .info-tit { position:relative; display:inline-block; width:100%; margin-right:35px; font-weight:700; color:#333333; font-size:1rem; line-height:1.38889rem; }
+.visaul-info-box .info-tit { position:relative; display:inline-block; width:100%; /*margin-right:35px;*/ font-weight:700; color:#333333; font-size:1rem; line-height:1.38889rem; }
 
 
-.visaul-info-box .info-tit + *, .flag-tit-wrap + * { margin-top:8px; }
+.visaul-info-box .info-tit { margin-top:12px; }
+.visaul-info-box .account-area { margin-top:12px; }
+/* .flag-tit-wrap + * { margin-top:12px; } */
 .visaul-info-box:has(.btn-set) .info-tit {width: 80%}
 .visaul-info-section .visaul-info-box { margin-top:0; }
 /* .visaul-info-section .visaul-info-box:has(.btn-set) .info-tit { width:inherit; line-height:1.6; } */
