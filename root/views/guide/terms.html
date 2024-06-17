@@ -558,149 +558,178 @@
 
             <!--[퍼블-2] : 금융상품 중요사항 안내 기획 반영-->
             <!--S: 금융상품 중요사항 안내 (팝업)-->
-        <div id="importantNotiPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display:block;">
-            <div class="pop-header">
-                <h2 class="pop-title">금융상품 중요사항 안내</h2>
-                <button type="button" name="button" class="btn-layer-close">닫기</button>
-            </div>
-            <div class="pop-con-wrap">
-                <div class="default-wrap">
-                    <div class="accordion-guide-wrap">
-                        <p class="accordion-tit"><span class="txt">「금융소비자 보호에 관한 법률」 제 19조 제1항에서 규정하고 있는 중요한 사항</span> 입니다. 모든 내용을 확인하시면 다음 단계로 넘어갈 수 있습니다.</p>
-                    
-                        <div class="accordion-area">
-                            <p>금리 및 변동여부 <span class="accordion-num"> 1/8</span></p>
-                        </div>
-                        <div class="accordion-sub guide-means" style="display:block;">
-                            <div class="btn-cont-wrap"><a href="#none" class="btn btn-sm">용어사전</a></div>
-                            <!--D: 관리자 영역 -->
-                            <div class="cont">
-                                내용
-                            </div>
-                            <!--D: 관리자 영역 //-->
-                            <div class="btn-cont-wrap flexCenter">
-                                <button type="button" name="button" class="btn btn-add" >확인</button>
-                            </div>
-                        </div>
+            <div id="importantNotiPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display:block;">
+                <div class="pop-header">
+                    <h2 class="pop-title">금융상품 중요사항 안내</h2>
+                    <button type="button" name="button" class="btn-layer-close">닫기</button>
+                </div>
+                <div class="pop-con-wrap">
+                    <div class="default-wrap">
+                        <div class="accordion-guide-wrap">
+                            <p class="accordion-tit bg-box"><span class="txt">「금융소비자 보호에 관한 법률」 제 19조 제1항에서 규정하고 있는 중요한 사항</span> 입니다. 모든 내용을 확인하시면 다음 단계로 넘어갈 수 있습니다.</p>
                         
-                        <div class="accordion-area">
-                            <p>중도상환해약금 <span class="accordion-num"> 2/8</span></p>
-                        </div>
-                        <div class="accordion-sub guide-means" style="display: block;">
-                            <!--D: 관리자 영역 -->
-                            <div>
-                                내용<br/>
-                                내용<br/>
-                                내용<br/>
-                                내용<br/>
-                                내용<br/>
-                                내용<br/>
-                                내용<br/>
-                                내용<br/>
-                                내용<br/>
-                                내용<br/>
-                                내용<br/>
+                            <div class="accordion-area yes"><!--D: 확인 됐을 경우 yes 클래스 사용됨-->
+                                <p>1. 금리 및 변동여부 <span class="accordion-check">확인</span></p>
                             </div>
-                            <!--D: 관리자 영역 //-->
-                            <div class="btn-cont-wrap flexCenter">
-                                <button type="button" name="button" class="btn btn-add" >확인</button>
+                            <div class="accordion-sub" style="display:block;"><!--D: accordion-area 클릭할 경우 accordion-sub 영역 display:block; 필요-->
+                                <div class="btn-cont-wrap">
+                                    <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
+                                </div>
+                                <div class="guide-area">
+                                    <!--D: 관리자 영역 -->
+                                    <div class="cont">
+                                        내용
+                                    </div>
+                                    <!--D: 관리자 영역 //-->
+                                    <div class="btn-cont-wrap flexCenter">
+                                        <button type="button" name="button" class="btn btn-add" >확인</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    
-                        <div class="accordion-area">
-                            <p>상환금액ㆍ이자율ㆍ 시기 <span class="accordion-num"> 3/8</span></p>
-                        </div>
-                        <div class="accordion-sub guide-means" style="display:block;">
-                            <!--D: 관리자 영역 -->
-                            <div>
-                                내용
+                            
+                            <div class="accordion-area">
+                                <p>2. 중도상환해약금 <span class="accordion-check"></span></p>
                             </div>
-                            <!--D: 관리자 영역 //-->
-                            <div class="btn-cont-wrap flexCenter">
-                                <button type="button" name="button" class="btn btn-add" >확인</button>
+                            <div class="accordion-sub" style="display:block;">
+                                <div class="btn-cont-wrap">
+                                    <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
+                                </div>
+                                <div class="guide-area">
+                                    <!--D: 관리자 영역 -->
+                                    <div class="cont">
+                                        내용
+                                    </div>
+                                    <!--D: 관리자 영역 //-->
+                                    <div class="btn-cont-wrap flexCenter">
+                                        <button type="button" name="button" class="btn btn-add" >확인</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    
-                        <div class="accordion-area">
-                            <p>담보물에 관한 사항 <span class="accordion-num"> 4/8</span></p>
-                        </div>
-                        <div class="accordion-sub guide-means" style="display:block;">
-                            <!--D: 관리자 영역 -->
-                            <div>
-                                내용
+                        
+                            <div class="accordion-area">
+                                <p>3. 상환금액ㆍ이자율ㆍ 시기 <span class="accordion-check"></span></p>
                             </div>
-                            <!--D: 관리자 영역 //-->
-                            <div class="btn-cont-wrap flexCenter">
-                                <button type="button" name="button" class="btn btn-add" >확인</button>
+                            <div class="accordion-sub" style="display:block;">
+                                <div class="btn-cont-wrap">
+                                    <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
+                                </div>
+                                <div class="guide-area">
+                                    <!--D: 관리자 영역 -->
+                                    <div class="cont">
+                                        내용
+                                    </div>
+                                    <!--D: 관리자 영역 //-->
+                                    <div class="btn-cont-wrap flexCenter">
+                                        <button type="button" name="button" class="btn btn-add" >확인</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    
-                        <div class="accordion-area">
-                            <p>금융소비자의 부담금액 <span class="accordion-num"> 5/8</span></p>
-                        </div>
-                        <div class="accordion-sub guide-means" style="display:block;">
-                            <!--D: 관리자 영역 -->
-                            <div>
-                                내용
+                        
+                            <div class="accordion-area">
+                                <p>4. 담보물에 관한 사항 <span class="accordion-check"></span></p>
                             </div>
-                            <!--D: 관리자 영역 //-->
-                            <div class="btn-cont-wrap flexCenter">
-                                <button type="button" name="button" class="btn btn-add" >확인</button>
+                            <div class="accordion-sub" style="display:block;">
+                                <div class="btn-cont-wrap">
+                                    <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
+                                </div>
+                                <div class="guide-area">
+                                    <!--D: 관리자 영역 -->
+                                    <div class="cont">
+                                        내용
+                                    </div>
+                                    <!--D: 관리자 영역 //-->
+                                    <div class="btn-cont-wrap flexCenter">
+                                        <button type="button" name="button" class="btn btn-add" >확인</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    
-                        <div class="accordion-area">
-                            <p>발생 가능한 불이익 <span class="accordion-num"> 6/8</span></p>
-                        </div>
-                        <div class="accordion-sub guide-means" style="display:block;">
-                            <!--D: 관리자 영역 -->
-                            <div>
-                                내용
+                        
+                            <div class="accordion-area">
+                                <p>5. 금융소비자의 부담금액 <span class="accordion-check"></span></p>
                             </div>
-                            <!--D: 관리자 영역 //-->
-                            <div class="btn-cont-wrap flexCenter">
-                                <button type="button" name="button" class="btn btn-add" >확인</button>
+                            <div class="accordion-sub" style="display:block;">
+                                <div class="btn-cont-wrap">
+                                    <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
+                                </div>
+                                <div class="guide-area">
+                                    <!--D: 관리자 영역 -->
+                                    <div class="cont">
+                                        내용
+                                    </div>
+                                    <!--D: 관리자 영역 //-->
+                                    <div class="btn-cont-wrap flexCenter">
+                                        <button type="button" name="button" class="btn btn-add" >확인</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    
-                        <div class="accordion-area">
-                            <p>금융소비자의 권리 <span class="accordion-num"> 7/8</span></p>
-                        </div>
-                        <div class="accordion-sub guide-means" style="display:block;">
-                            <!--D: 관리자 영역 -->
-                            <div>
-                                내용
+                        
+                            <div class="accordion-area">
+                                <p>6. 발생 가능한 불이익 <span class="accordion-check"></span></p>
                             </div>
-                            <!--D: 관리자 영역 //-->
-                            <div class="btn-cont-wrap flexCenter">
-                                <button type="button" name="button" class="btn btn-add" >확인</button>
+                            <div class="accordion-sub" style="display:block;">
+                                <div class="btn-cont-wrap">
+                                    <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
+                                </div>
+                                <div class="guide-area">
+                                    <!--D: 관리자 영역 -->
+                                    <div class="cont">
+                                        내용
+                                    </div>
+                                    <!--D: 관리자 영역 //-->
+                                    <div class="btn-cont-wrap flexCenter">
+                                        <button type="button" name="button" class="btn btn-add" >확인</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    
-                        <div class="accordion-area">
-                            <p>상품별 유의사항 <span class="accordion-num"> 8/8</span></p>
-                        </div>
-                        <div class="accordion-sub guide-means" style="display:block;">
-                            <!--D: 관리자 영역 -->
-                            <div>
-                                내용
+                        
+                            <div class="accordion-area">
+                                <p>7. 금융소비자의 권리 <span class="accordion-check"></span></p>
                             </div>
-                            <!--D: 관리자 영역 //-->
-                            <div class="btn-cont-wrap flexCenter">
-                                <button type="button" name="button" class="btn btn-add" >확인</button>
+                            <div class="accordion-sub" style="display:block;">
+                                <div class="btn-cont-wrap">
+                                    <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
+                                </div>
+                                <div class="guide-area">
+                                    <!--D: 관리자 영역 -->
+                                    <div class="cont">
+                                        내용
+                                    </div>
+                                    <!--D: 관리자 영역 //-->
+                                    <div class="btn-cont-wrap flexCenter">
+                                        <button type="button" name="button" class="btn btn-add" >확인</button>
+                                    </div>
+                                </div>
                             </div>
+                        
+                            <div class="accordion-area">
+                                <p>8. 상품별 유의사항 <span class="accordion-check"></span></p>
+                            </div>
+                            <div class="accordion-sub" style="display:block;">
+                                <div class="btn-cont-wrap">
+                                    <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
+                                </div>
+                                <div class="guide-area">
+                                    <!--D: 관리자 영역 -->
+                                    <div class="cont">
+                                        내용
+                                    </div>
+                                    <!--D: 관리자 영역 //-->
+                                    <div class="btn-cont-wrap flexCenter">
+                                        <button type="button" name="button" class="btn btn-add" >확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        
                         </div>
-                    
                     </div>
-                </div>
-                <div class="fixed-btn-wrap">
-                    <div class="btn-wrap">
-                        <a href="javascript:void(0);" class="btn">확인했어요</a>
+                    <div class="fixed-btn-wrap">
+                        <div class="btn-wrap">
+                            <a href="javascript:void(0);" class="btn">모두 확인했어요</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--E: 금융상품 중요사항 안내 (팝업)-->
+            <!--E: 금융상품 중요사항 안내 (팝업)-->
             <!--[퍼블-2] : 금융상품 중요사항 안내 기획 반영-->
 
         <!--[퍼블-1] : 공통 추가 //-->

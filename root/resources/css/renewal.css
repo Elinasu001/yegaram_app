@@ -1350,17 +1350,19 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .intro-counselor .intro-txt span { color: #4E32A5; }
 .counselor-info .sub-tit-wrap .txt.hyphen > li span { display: block; }
 
-/* .accordion-guide-wrap { border-top: 1px solid #DDDDDD; margin-top: 20px; } */
-.accordion-tit{font-size:0.88889rem; font-weight: 500; margin: 25px 0 7px; }
+.accordion-guide-wrap .accordion-tit + .accordion-area { margin-top:0; }
+.accordion-guide-wrap .accordion-area { margin-top:15px; }
+.accordion-tit{font-size:0.88889rem; font-weight: 500; margin: 30px 0 40px; }
 .accordion-tit .txt { font-weight: 600; }
-.accordion-area { border-bottom: 1px solid #DDDDDD; padding: 18px 0; }
-.accordion-area p { font-size:0.88889rem; font-weight: 500; }
-.accordion-area .accordion-num { float: right; margin-right: 20px; }
-.accordion-sub { margin-top: 25px; font-size: 16px; display: block;  }
-/* .accordion-sub .btn-box { margin-top: 28px; text-align: center; display: block; } */
-/* .accordion-sub .btn-box button.tiny { float: none; margin: 0; } */
-.guide-means { display:none; padding:15px 20px 30px 20px; margin-top: 15px; /*border-radius:15px;*/ border-radius: 7px; background: #F8F8F8;}
-.guide-means .ctm-check { margin-top:15px; }
+.accordion-area { height:60px; border: 1px solid #DDDDDD; padding: 18px 0; border-radius: 15px; padding:20px; }
+.accordion-area p {  font-size:0.88889rem;  line-height:1.278rem; font-weight: 500; color:#666666; }
+.accordion-area .accordion-check { float: right; }
+.accordion-area.yes .accordion-check { font-weight:500; color:#4E32A5; }
+.accordion-sub {  display:none; font-size: 16px; display: block;  }
+.accordion-sub  .cont { background: #FFFFFF; padding:10px; }
+.accordion-sub .guide-area { padding:20px; margin-top: 15px; margin-bottom:30px; border-radius: 10px; background: #F8F8F8;}
+.accordion-sub .btn-cont-wrap { margin-top:15px; }
+.accordion-sub .guide-area .btn-cont-wrap { margin-top:30px; }
 
 
 /*약관*/
