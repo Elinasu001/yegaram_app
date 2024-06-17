@@ -73,8 +73,7 @@
 			<div class="default-wrap pb0">
 				<div class="visaul-info-section">
 					<div class="visaul-info-box">
-						<!-- [퍼블-1] 5/22 : flag-tit-wrap 클래스 추가 -->
-						<div class="flag-tit-wrap">
+						<div class="flag-tit-wrap"><!-- [퍼블-1] : flag-tit-wrap 클래스 추가 -->
 							<em class="flag style2">입출금</em><em class="flag style4">종합통장대출</em>
 						</div>
 						<strong class="info-tit">보고파 파킹통장</strong>
@@ -197,12 +196,49 @@
 				</div>
 			</div>
 
+			<!--[퍼블-1] - 6/17: 누락 페이지  -->
+			<!--S: 종합통합대출 신청 계좌 선택 (팝업)-->
+			<div id="lypullPop" class="layerpopup laypop-all show" style="display: none;">
+                <!-- s: contents -->
+                <div class="pop-header">
+                    <h2 class="pop-title">계좌선택</h2>
+                    <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lypullPop')">닫기</button>
+                </div>
+                
+                <div class="pop-con-wrap" style="padding-bottom: 60px;">
+                    <div class="default-wrap">
+						<div class="tit-wrap">
+							<p class="txt"><strong>종합통장대출</strong>을<br>신청하실 계좌를 선택해 주세요</p>
+						</div>
+						<div class="form-all-wrap">
+							<div id="" class="select-wrap">
+								<div class="select-box openSel" tabindex="1" onclick="">
+									<label for="qValue2" class="essential">계좌선택</label><!--D: essential 클래스 추가-->
+									<span class="option" id="qText2">미선택</span>
+									<input type="hidden" name="LOAN_AIM" class="validChk" value="" id="qValue2">
+									<input type="hidden" name="LOAN_AIM_TEXT" value="" id="qReason2">
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
 
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="#none" class="btn">다음</a>
+                    </div>
+                </div>
+
+            </div>
+			<!--E: 종합통합대출 신청 계좌 선택 (팝업)-->
+			<!--[퍼블-1] - 6/17: 누락 페이지  //-->
 			
 		</div>
 
 	</div>
     <!-- //e: contentsWrap -->
+
+	
 
 
 <footer>
