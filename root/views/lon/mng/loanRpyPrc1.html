@@ -75,15 +75,15 @@
                 <!--S: FORM-->
                 <div class="form-all-wrap"><!--D: 폼 가싸는 form-all-wrap 태그 추가 -->
 
-                    <div class="form-wrap type2">
+                    <!-- <div class="form-wrap type2">
 
-                        <label for="RPY_AMT" class="essential">상환금액</label><!--D: essential 클래스 추가-->
+                        <label for="RPY_AMT" class="essential">상환금액</label>
                         <div class="input">
                             <input type="tel" id="RPY_AMT" name="RPY_AMT" class="validChk" onkeyup="validChk(); removeErr(this);" value="" placeholder="상환금액을 입력해주세요." required="">
                             <div class="value-wrap">
                                 <strong class="value"></strong>
                                 <span class="unit">원</span>
-                                <button type="reset" class="btn-delete">삭제</button><!--D: 버튼 추가-->
+                                <button type="reset" class="btn-delete">삭제</button>
                             </div>
                         </div>
 
@@ -94,8 +94,29 @@
                             </label>
                         </div>
                         <div class="info-txt">전액상환을 선택하면 남은 대출금 전액을 상환해요</div>
-                    </div>
+                    </div> -->
 
+                    <!--[퍼블-1]: 다른 페이지에서 썻던 레이아웃 적용-->
+                    <div class="form-wrap type2">
+                        <label for="LA" class="essential">상환금액</label>
+                        <div class="input">
+                            <input type="tel" title="" class="" id="LA" name="PYMN_AMT" value="0" placeholder="상환금액을 입력해주세요." required="">
+                            <div class="value-wrap">
+                                <strong class="value PYMN_AMT">0</strong>
+                                <span class="unit">원</span>
+                                <button type="reset" class="btn-delete">검색어 삭제</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="check-account">
+                        <input type="checkbox" id="CMPY_YN" name="CMPY_YN" value="Y">
+                        <label for="CMPY_YN">
+                            <span>전액 상환</span>
+                        </label>
+                    </div>
+                    <div class="info-txt">전액상환을 선택하면 남은 대출금 전액을 상환해요</div>
+                    
+                    <!--[퍼블-1]: 다른 페이지에서 썻던 레이아웃 적용//-->
 
                     <div class="txt-list-wrap">
                         <div class="txt-detail-area">
@@ -160,7 +181,7 @@
 		</div>
 
         <!-- S: 진행 전 유의사항 안내 (팝업)-->
-        <div id="lyPop" class="layerpopup layer-up has-button show" style="display:block;">
+        <div id="lyPop" class="layerpopup layer-up has-button show" style="display:none;">
             <div class="content-wrap">
                 <div class="pop-header">
                     <h2 class="pop-title">진행 전 확인해 주세요!</h2>
@@ -181,7 +202,7 @@
         <!-- E: 진행 전 유의사항 안내 (팝업)-->
 
         <!-- S: 대출철회권안내 (팝업)-->
-        <div id="lyPop2" class="layerpopup layer-up has-button show"  style="display:block;">
+        <div id="lyPop2" class="layerpopup layer-up has-button show"  style="display:none;">
             <div class="content-wrap">
                 <div class="pop-header">
                     <h2 class="pop-title">대출철회권 안내</h2>
@@ -206,7 +227,7 @@
 
 
         <!-- S: 중도상환처리동의 (팝업)-->
-        <div id="lyPop3" class="layerpopup layer-up has-button show"  style="display:block;">
+        <div id="lyPop3" class="layerpopup layer-up has-button show"  style="display:none;">
             <div class="content-wrap">
                 <div class="pop-header">
                     <h2 class="pop-title">중도상환 처리 동의</h2><!--D: 텍스트 변경-->
