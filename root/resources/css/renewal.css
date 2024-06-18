@@ -189,7 +189,7 @@ body.fix { overflow:hidden; }
 .result-area.ing::before { background:url("../images/common/ico_result_ing.png") center no-repeat; background-size:100%; }
 .result-area.nodata { margin-top:80px; }
 .result-area.nodata::before { width:48px; height:48px; background:url("../images/common/ico_result_nodata.png") no-repeat 50%/48px auto; }
-.result-area.nodata p { margin-top:14px; font-weight:300;; color:#666666; font-size:0.88889rem; line-height:1.4375; }
+.result-area.nodata p { margin-top:20px; font-weight:300;; color:#666666; font-size:0.88889rem; line-height:1.4375; }
 .result-area.search::before { width:150px; height:110px; background:url("../images/common/ico_que.png") no-repeat 50%/150px auto; }
 .result-area.find:before { width:120px; height:120px; background:url("../images/common/ico_result_find.png") no-repeat 50%/120px auto; }
 
