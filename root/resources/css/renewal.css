@@ -1357,8 +1357,8 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .accordion-area { height:60px; border: 1px solid #DDDDDD; padding: 18px 0; border-radius: 15px; padding:20px; }
 .accordion-area p {  font-size:0.88889rem;  line-height:1.278rem; font-weight: 500; color:#666666; }
 .accordion-area .accordion-check { float: right; }
-.accordion-area.yes .accordion-check { font-weight:500; color:#4E32A5; }
-.accordion-sub {  display:none; font-size: 16px; display: block;  }
+.accordion-area .accordion-check { display:none; font-weight:500; color:#4E32A5; }
+.accordion-sub {  display:none; font-size: 16px; }
 .accordion-sub  .cont { background: #FFFFFF; padding:10px; }
 .accordion-sub .guide-area { padding:20px; margin-top: 15px; margin-bottom:30px; border-radius: 10px; background: #F8F8F8;}
 .accordion-sub .btn-cont-wrap { margin-top:15px; }
