@@ -1710,7 +1710,7 @@ body.on { position:fixed; top:0; }
 /**Case 1 - 상단에 위치**/
 .tabs-wrap.vs-hidden { visibility:hidden; }
 .tabs-wrap .tab-item { display:flex; align-items:center; position:relative; background:#fff; font-size:0; }
-.tabs-wrap .tab-item li { display:inline-block; position:relative;  margin-right:20px; padding:14px 0; font-size:1rem; color:#999; }
+.tabs-wrap .tab-item li { display:inline-block; position:relative;  margin-right:20px; padding:9px 0; font-size:1rem; color:#999; }
 .tabs-wrap .tab-item li:last-child { margin-right:0; }
 .tabs-wrap .tab-item li a { display:block; padding:0 2px; line-height:inherit; text-align:center; color:#999; }
 .tabs-wrap .tab-item li.on,
@@ -2249,13 +2249,13 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 /** [공통] 은행 선택 팝업 **/
 /* .banklistWrap .tabs .tab-item > li { padding:0 20px; } */
-.banklistWrap .bank_list li a { padding:11px 12px 11px 46px; margin-bottom:0; font-size:0.88889rem; line-height:1.4375; }
+.banklistWrap .bank_list li a { padding:0px 0px 0px 46px; margin-bottom:0; font-size:0.88889rem; line-height:1.4375; }
 .banklistWrap .bank_list li a::before { width:36px; height:36px; }
 
 .bank_list { font-size:0; }
 .bank_list.col2 li { width:calc((100% - 15px) / 2); }
 .bank_list.col2 li:nth-child(even) { margin-left:15px; }
-.bank_list li { display:inline-block; width:100%; /*margin-bottom:8px;*/ font-size:0.77778rem; line-height:1.5; vertical-align:middle; }/* 2023-07-11 수정 */
+.bank_list li { display:inline-block; width:100%; /*margin-bottom:8px;*/ font-size:0.77778rem; /*line-height:1.5;*/ height:45px; vertical-align:middle; }/* 2023-07-11 수정 */
 .bank_list li a { display:inline-block; position:relative; width:100%; padding:10px 10px 10px 46px; }
 .bank_list li a::before { content:''; display:inline-block; position:absolute; left:0; top:50%; transform:translate(0, -50%); width:32px; height:32px; border-radius:50%; overflow:hidden; border:solid 1px #eee; }
 .bank_list li.none { padding-top:90px; color:#666666; font-size:0.88889rem; line-height:1.4375; text-align:center; }
