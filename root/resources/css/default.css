@@ -1883,6 +1883,7 @@ body.on { position:fixed; top:0; }
 
 .list-icon > li.security::before { background:url("../images/common/ico_security.png") center / 28px no-repeat #F8F8FA; }
 .list-icon > li.certified::before { background:url("../images/common/ico_certified.png") center / 28px no-repeat #F8F8FA; }
+.list-icon > li.complete::before { background:url("../images/common/ico_complete02.png") center / 28px no-repeat #F8F8FA; }
 
 
 
