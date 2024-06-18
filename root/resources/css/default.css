@@ -2249,15 +2249,15 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 /** [공통] 은행 선택 팝업 **/
 /* .banklistWrap .tabs .tab-item > li { padding:0 20px; } */
-.banklistWrap .bank_list li a { padding:0px 0px 0px 46px; margin-bottom:0; font-size:0.88889rem; line-height:1.4375; }
+.banklistWrap .bank_list li a { padding:11px 12px 11px 46px; margin-bottom:0; font-size:0.88889rem; line-height:1.4375; }
 .banklistWrap .bank_list li a::before { width:36px; height:36px; }
 
 .bank_list { font-size:0; }
 .bank_list.col2 li { width:calc((100% - 15px) / 2); }
 .bank_list.col2 li:nth-child(even) { margin-left:15px; }
-.bank_list li { display:inline-block; width:100%; /*margin-bottom:8px;*/ font-size:0.77778rem; /*line-height:1.5;*/ height:45px; vertical-align:middle; }/* 2023-07-11 수정 */
-.bank_list li a { display:inline-block; position:relative; width:100%; padding:10px 10px 10px 46px; }
-.bank_list li a::before { content:''; display:inline-block; position:absolute; left:0; top:50%; transform:translate(0, -50%); width:32px; height:32px; border-radius:50%; overflow:hidden; border:solid 1px #eee; }
+.bank_list li { display:inline-block; width:100%; /*margin-bottom:8px;*/ font-size:0.77778rem; height:45px; line-height:45px; vertical-align:middle; }/* 2023-07-11 수정 */
+.bank_list li a { display:inline-block; position:relative; width:100%; padding:0px 0px 0px 34px; }
+.bank_list li a::before { content:''; display:inline-block; position:absolute; left:0; top:50%; transform:translate(0, -50%); width:24px; height:24px; border-radius:50%; overflow:hidden; border:solid 1px #eee; }
 .bank_list li.none { padding-top:90px; color:#666666; font-size:0.88889rem; line-height:1.4375; text-align:center; }
 .bank_list .tit { display:block; font-weight:500; color:#333333; font-size:0.88889rem; line-height:1; }
 .bank_list .exp { font-weight:400; color:#999999; font-size:0.77778rem; line-height:1.5; }
