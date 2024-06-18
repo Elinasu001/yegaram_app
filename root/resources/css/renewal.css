@@ -1352,7 +1352,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 
 .accordion-guide-wrap .accordion-tit + .accordion-area { margin-top:0; }
 .accordion-guide-wrap .accordion-area { margin-top:15px; }
-.accordion-tit{font-size:0.88889rem; font-weight: 500; margin: 30px 0 40px; }
+.accordion-tit{ font-size:0.88889rem; font-weight: 500; margin: 30px 0 40px; }
 .accordion-tit .txt { font-weight: 600; }
 .accordion-area { height:60px; border: 1px solid #DDDDDD; padding: 18px 0; border-radius: 15px; padding:20px; }
 .accordion-area p {  font-size:0.88889rem;  line-height:1.278rem; font-weight: 500; color:#666666; }
@@ -1363,6 +1363,11 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .accordion-sub .guide-area { padding:20px; margin-top: 15px; margin-bottom:30px; border-radius: 10px; background: #F8F8F8;}
 .accordion-sub .btn-cont-wrap { margin-top:15px; }
 .accordion-sub .guide-area .btn-cont-wrap { margin-top:30px; }
+.accordion-sub .guide-area .cont .sub-tit-wrap { margin:0px; }
+.accordion-sub .guide-area .cont .sub-tit-wrap + .sub-tit-wrap { margin-top:30px; }
+.accordion-sub .guide-area .cont .sub-tit-wrap .list-bull { margin-top:15px; }
+.accordion-sub .guide-area .cont .sub-tit-wrap .bg-box { border-radius:0; font-size:0.88889rem; }
+/* .accordion-sub .guide-area .cont img {  } */
 
 
 /*약관*/

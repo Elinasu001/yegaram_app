@@ -2634,7 +2634,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .visaul-info-box .info-tit { position:relative; display:inline-block; width:100%; /*margin-right:35px;*/ font-weight:700; color:#333333; font-size:1rem; line-height:1.38889rem; }
 
 
-.visaul-info-box .info-tit { margin-top:12px; }
+.visaul-info-box .flag-tit-wrap + .info-tit { margin-top:12px; }
 .visaul-info-box .account-area { margin-top:12px; }
 /* .flag-tit-wrap + * { margin-top:12px; } */
 .visaul-info-box:has(.btn-set) .info-tit {width: 80%}
