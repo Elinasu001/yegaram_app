@@ -451,7 +451,7 @@ input:autofill:active { -webkit-text-fill-color: #000 !important; -webkit-box-sh
 .form-wrap.type-box input:focus,
 .form-wrap.type-box input:-webkit-autofill:hover,
 .form-wrap.type-box input:-webkit-autofill:focus,
-.form-wrap.type-box input:-webkit-autofill:active  {  padding:15px !important;  border-color: #F8F8F8 !important;  border-radius: 10px;  -webkit-box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;   box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;  background: #F8F8F8; color:#333 !important; }
+.form-wrap.type-box input:-webkit-autofill:active  {  padding:15px !important;  border: #F8F8F8 !important;  border-radius: 10px;  -webkit-box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;   box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;  background: #F8F8F8; color:#333 !important; }
 .form-wrap.type-box .btn-input { right:10px; }
 
 
