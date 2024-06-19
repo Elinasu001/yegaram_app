@@ -245,7 +245,7 @@ section > .result-wrap{ margin-top:40px; }
 .account-prod > ul > li { display:inline-block; float:left; margin-right:5px; padding:2px 8px; border:1px solid #ddd; border-radius:5px; color:#999;
 .account-prod > ul > li:last-child { margin-right:0; } font-size:0.8rem; } 2023-06-21 아래와같이수정(청) */
 .account-prod > ul { margin-top:12px; font-size:0; }
-.account-prod > ul > li { display:inline-block; position:relative; padding-right:20px; font-weight:400; color:#757575; font-size:0.78rem; }
+.account-prod > ul > li { display:inline-block; position:relative; padding-right:20px; font-weight:400; color:#757575; font-size:0.77778rem; }
 .account-prod > ul > li + li:before { content:''; position:absolute; top:50%; left:-10px; width:1px; height:13px; margin-right:5px; background:#DDDDDD; vertical-align:middle; transform:translateY(-50%); }
 .account-prod > p { display:inline-block; width:100%; color:#F1108E; font-size:0.8rem; }
 .account-prod > p:first-of-type { margin-top:20px; }
@@ -356,7 +356,7 @@ section > .result-wrap{ margin-top:40px; }
 .result-box .zipcode { font-weight:500; font-size:0.88889rem; line-height:1.4375; }
 .result-box .juso-list { margin-top:10px; }
 .result-box .juso-list li { display:flex; align-items: flex-start; }
-/* .result-box .juso-list em { position:absolute; top:0; left:0; width:53px; height:26px; border-radius:5px; background:#EFF0F2; font-weight:400; font-size:0.78rem; color:#757575; line-height:26px; letter-spacing:-.5px; text-align:center; } */
+/* .result-box .juso-list em { position:absolute; top:0; left:0; width:53px; height:26px; border-radius:5px; background:#EFF0F2; font-weight:400; font-size:0.77778rem; color:#757575; line-height:26px; letter-spacing:-.5px; text-align:center; } */
 .result-box .juso-list em {  border-radius:5px; }
 
 .result-box .juso-list p { padding-left:10px; color:#666666; font-size:0.88889rem; line-height:1.4375; }
@@ -376,7 +376,7 @@ section > .result-wrap{ margin-top:40px; }
 
 /* 공통-직종선택 */
 .arrow-button-list li { position:relative; }
-.arrow-button-list li a { display:block; width:100%; padding:0 20px; height:60px; line-height:60px; font-weight:400; color:#454545; border-radius:15px; border:solid 1px #DDDDDD; background:#fff;}
+.arrow-button-list li a { display:block; width:100%; padding:0 20px; height:60px; line-height:60px; font-weight:400; color:#454545; border-radius:15px; border:solid 1px #DDDDDD; background:#fff; font-size:0.88889rem; }
 .arrow-button-list li a:after{ content: ''; display: block; position: absolute; width: 16px; height: 16px; transform: translateY(-50%); border-radius: 10px; right: 18px; top: 50%; background: url("../images/common/ic-arrow-right.png")no-repeat center/100%; }
 .arrow-button-list li + li { margin-top:10px; }
 
@@ -653,20 +653,20 @@ section > .result-wrap{ margin-top:40px; }
 
 /* 통장사본 */
 .bankbook-copy-section .logo { display:block; width:140px; height:30px; background:url("../images/header/logo.png") no-repeat 50%/140px auto; color:transparent; font-size:0; }
-.bankbook-copy-section .desc { margin-top:30px; color:#333333; font-size:0.89rem;}
+.bankbook-copy-section .desc { margin-top:30px; color:#333333; font-size: 0.88889rem; }
 .bankbook-copy-section .bankbook-info-area { margin-top:20px; padding-top:20px; border-top:1px solid #E5E5E5; }
-.bankbook-info-area .depositor span { color:#666666; font-size:0.89rem; }
+.bankbook-info-area .depositor span { color:#666666; font-size: 0.88889rem; }
 .bankbook-info-area .depositor strong { display:block; color:#333333; font-size:1rem; }
-.bankbook-info-area .account-info-list { margin-top:20px; }
-.bankbook-info-area .account-info-list > div { font-size:0;   }
-.bankbook-info-area .account-info-list { padding:22px 20px; border:1px solid #DDDDDD; border-radius:15px; background:#F8F8F8; }
-.bankbook-info-area .account-info-list li { display:flex; }
-.bankbook-info-area .account-info-list li span { flex:1; font-weight:300; color:#454545; font-size:0.89rem; }
-.bankbook-info-area .account-info-list li strong { font-weight:500; color:#260F54; font-size:0.89rem; }
-.bankbook-copy-section .confirm-area { margin:20px 0; color:#333333; font-size:0.78rem; }
-.bankbook-copy-section .confirm-area .desc { margin-top:0; font-size:0.78rem; }
+.bankbook-info-area .account-info-list { margin-top:20px; padding:22px 20px; border-radius:15px; background:#F8F8F8; }
+.bankbook-info-area .account-info-list > div { font-size:0; }
+.bankbook-info-area .account-info-list li { display:flex; margin-bottom: 8px; }
+.bankbook-info-area .account-info-list li:last-child { margin-bottom: 0; }
+.bankbook-info-area .account-info-list li span { flex:1; font-weight: 400; color: #999999; font-size: 0.88889rem; }
+.bankbook-info-area .account-info-list li strong { color: #333333; font-size: 0.88889rem; font-weight: 600; }
+.bankbook-copy-section .confirm-area { margin:20px 0; color:#333333; font-size:0.77778rem; line-height: 1.3rem; }
+.bankbook-copy-section .confirm-area .desc { margin-top:0; font-size:0.77778rem; }
 .bankbook-copy-section .seal-area { font-size:0; text-align:right; }
-.bankbook-copy-section .seal-area strong { display:flex; align-items:center; justify-content:flex-end; color:#000000; font-size:0.78rem; vertical-align:middle;  }
+.bankbook-copy-section .seal-area strong { display:flex; align-items:center; justify-content:flex-end; color:#000000; font-size:0.77778rem; vertical-align:middle;  }
 .bankbook-copy-section .seal-area strong::after { content:""; display:block; margin-left:5px; width:36px; height:36px; background:url("../images/common/sign_img.png") no-repeat; background-size:100%;  }
 .bankbook-copy-section .seal-area .seal-wrap { display:inline-block; width:36px; height:36px; margin-left:10px; vertical-align:middle; }
 
@@ -720,7 +720,7 @@ section > .result-wrap{ margin-top:40px; }
 .layer-up .default-wrap .txtbox-wrap:last-child { padding-bottom:0; }
 /* 준비사항 + 자동이체 불가 안내 */
 .prepare-area ~ .sub-tit-wrap:has(+.txtbox-wrap) { margin-bottom:15px; }
-.prepare-area ~ .sub-tit-wrap + .txtbox-wrap { padding-bottom:10px; color:#333; font-size:0.89rem; }
+.prepare-area ~ .sub-tit-wrap + .txtbox-wrap { padding-bottom:10px; color:#333; font-size:0.88889rem; }
 .prepare-area ~ .txtbox-wrap + .list-bull { margin-top:0; }
 .prepare-area ~ .txtbox-wrap + .list-bull li { font-weight:400; color:#333; }
 
@@ -1070,7 +1070,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 
 .fixtable-wrap { width:100%; margin:0 auto; overflow-x:scroll; /*border-top:1px solid #EEEEEE;*/ }
 .fixtable { border-collapse:separate; border-spacing: 0; width:120%; border-top:1px solid #E5E5E5; border-bottom:1px solid #E5E5E5; border-top-right-radius:15px; border-bottom-right-radius:15px; }
-.fixtable th { position:sticky; left:0; z-index:3; width:100px; min-width:100px; height:50px; padding:17px; background:#F4F5FB; font-weight:700; color:#260F54; font-size:0.89rem; text-align:center; }
+.fixtable th { position:sticky; left:0; z-index:3; width:100px; min-width:100px; height:50px; padding:17px; background:#F4F5FB; font-weight:700; color:#260F54; font-size:0.88889rem; text-align:center; }
 .fixtable th::after { content:''; position:absolute; bottom:0; left:50%; transform:translate(-50%, 0); width:80%; border-bottom:1px solid #E0DBF9; }
 .fixtable tr:last-of-type td { border-bottom:none; }
 .fixtable td { min-width:172px; border-right:1px solid #EEEEEE; border-bottom:1px solid #EEEEEE; padding:10px; font-weight:300; color:#666666; font-size:0.88889rem; line-height:1.4375; text-align:left; }
