@@ -1635,8 +1635,8 @@ body.on { position:fixed; top:0; }
 .layerpopup .sub-title { padding:20px 0; font-size:0.88889rem; line-height:1.4375; font-weight:500; color:#333; }
 .layerpopup .subtxt-wrap { font-size:0.88889rem; line-height:1.4375; color:#666; }
 .layerpopup .ly-select-list + div .sub-title { padding-top:30px; }
-.layerpopup .txtbox-wrap { padding-bottom:15px;  color:#666666; }
-.layerpopup .txtbox-wrap:last-child { padding-bottom:25px; }
+.layerpopup .txtbox-wrap { /*padding-bottom:15px;*/  color:#666666; }
+/* .layerpopup .txtbox-wrap:last-child { padding-bottom:25px; } */
 .layerpopup .txtbox-wrap b,
 .layerpopup .txtbox-wrap strong { font-weight:500; color:#333333; }
 /* .layerpopup .default-wrap > div { margin-top:40px;  } */
@@ -1650,7 +1650,7 @@ body.on { position:fixed; top:0; }
 .layer-up .form-all-wrap:first-of-type { margin-top:0; }
 .layer-up .form-all-wrap .form-wrap,
 .layer-up .select-wrap { margin-top:20px; }
-.layer-up .txtbox-wrap + .select-wrap { margin-top:0; }
+.layer-up .txtbox-wrap + .select-wrap { margin-top:15px; }
 .layer-up .default-wrap { /*margin-bottom:10px; padding:0 20px 10px;*/ padding:0 20px 10px; }
 .layer-up:has(.fixed-btn-wrap) .default-wrap { padding-bottom:10px; }
 .layer-up .ly-scroll-con.type-high { max-height:60vh; }
@@ -1671,6 +1671,8 @@ body.on { position:fixed; top:0; }
 .layer-up .ly-select.login .ly-select-list li > button::before { content:''; position:absolute; top:50%; transform:translateY(-50%  ); left:15px;  width:24px; height:24px;  }
 
 .layer-up .ly-select .form-wrap.form-type2 { margin-top:10px; }
+
+.layer-up .ly-scroll-con .form-all-wrap { margin-top:0; }
 
 /* 간편인증관리 */
 .tit-icon::before { content:''; display:inline-block; margin-top:-4px; margin-right:3px; width:36px; height:36px; vertical-align:middle; }
@@ -2139,8 +2141,7 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 .tit-wrap + .form-wrap.form-cert.form-disabled { margin: 40px 0; }
 /*.step-wrap + .tit-wrap { margin-top:20px; }*/
 /* .step-wrap + .tit-wrap { margin-top:20px; } */
-
-.tit-wrap:has(+.form-wrap .formlabel.onbasic) { padding-bottom:10px; }
+.tit-wrap + .form-wrap { margin-top:40px; }
 
 /** 싱글화면 - 서브 타이틀 **/
 /* .p-tit { margin-top:30px; font-size:1.2rem; font-weight:bold; }
@@ -2235,7 +2236,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .account-amount .amount-on + .amount-desc { margin-top:4px; }
 .account-amount > p.amount-off { font-weight:400; color:#999999; font-size:1.11111rem; line-height:1.35; }
 .inquiry-result-area .inquiry-summary .toggle-wrap { margin-top:0; flex:1 1 auto; }
-.inquiry-result-area .inquiry-summary .toggle-wrap label { display:flex; align-items:center; justify-content: flex-end; }
+.inquiry-result-area .inquiry-summary .toggle-wrap label { display:flex; align-items:center; justify-content: flex-end; gap:10px; }
 .month-divide { padding:10px 20px; background:#F8F8F8; font-weight:400; color:#666666; font-size:0.88889rem; line-height:1.58334; }
 /* .inquiry-summary + .month-divide { margin-top:20px; } */
 
@@ -2748,13 +2749,13 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .data-list-wrap > li .txt-detail-tit { margin-bottom:15px; font-size:1rem; }
 .data-list-wrap .data-tit { padding-bottom:20px; font-weight:400; }
 .data-list-wrap .data-tit > strong { font-size:1rem; line-height:1.38889; }
-.data-list-wrap .data-list li { display:flex; width:100%; margin-bottom:12px;  font-size:0.88889rem; line-height:1.278rem; }
+.data-list-wrap .data-list li { display:flex; width:100%; margin-bottom:16px;  font-size:0.88889rem; line-height:1.278rem; }
 .data-list-wrap .data-list li:last-child { margin-bottom:0; }
 .data-list-wrap .data-list li .tit { color:#454545; font-weight:300; }
 .data-list-wrap .data-list li .txt { flex:1; padding-left:30px; font-weight:400; vertical-align:top; text-align:right; word-break:break-all; }
 .data-list-wrap .data-list .date { font-weight:400; color:#999999; font-size:0.77778rem; line-height:1.5; }
 .data-list-wrap .data-list + .btn-cont-wrap { margin-top:30px; }
-
+.data-list-wrap .data-list + .btn-cont-wrap .btn.btn-gray { font-size:1rem; font-weight:500; color:#26282C; height:54px; border-radius: 27px;; }
 
 /* 큰글씨설정 */
 .fontsize-range-wrap { display:flex; padding: 25px 0 35px 0; gap: 10px; vertical-align:middle; align-items: center; justify-content: space-between;}

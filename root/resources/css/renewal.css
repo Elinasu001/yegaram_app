@@ -63,7 +63,7 @@ body.fix { overflow:hidden; }
 
 .btn-cont-wrap.flex-end { justify-content:flex-end;}
 .btn-cont-wrap .btn { display:block; position:relative; z-index:2; width:100%; height:48px; border-radius:30px; background:#9F7CE3; color:#fff; font-size:1rem; line-height:48px; font-weight:500; text-align:center; }
-.btn.btn-add {display:inline-block; width:unset; padding:0 54px; background:transparent; border:1px solid #4E32A5; font-size:1rem; line-height:48px; font-weight:500; color:#4E32A5; }
+.btn.btn-add {display:inline-block; width:unset; padding:0 54px; background:#FFFFFF; border:1px solid #4E32A5; font-size:1rem; line-height:48px; font-weight:500; color:#4E32A5; }
 .btn.btn-sm { display:inline-flex; align-items: center; /*display:inline-block;*/ width:unset; height:30px; padding:0px 16px;  background:#FFFFFF; border:1px solid #DDDDDD; border-radius:17px;  font-size:0.77778rem; line-height: 1rem; font-weight:400; color:#26282C; letter-spacing: -0.5px;}
 
 .btn.btn-sm.green { background: #E3F6F8; border:1px solid #E3F6F8; color:#00A2C4; }
@@ -1109,7 +1109,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .result-area:has(.time-limit) .tit { color:#333333; }
 
 /* 대출계좌목록 */
-.chart-wrap { padding:30px 0 40px; }
+.chart-wrap { padding:30px 0 20px; }
 .chart-wrap .inquiry-set-wrap { margin:0; padding:0; }
 .sub-top-wrap .txt-list-wrap .txt-detail-area { background:#FFFFFF; }
 .sub-top-wrap:has(.txt-list-wrap) { padding:20px; }
