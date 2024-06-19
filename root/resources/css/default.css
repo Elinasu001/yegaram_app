@@ -451,7 +451,7 @@ input:autofill:active { -webkit-text-fill-color: #000 !important; -webkit-box-sh
 .form-wrap.type-box input:focus,
 .form-wrap.type-box input:-webkit-autofill:hover,
 .form-wrap.type-box input:-webkit-autofill:focus,
-.form-wrap.type-box input:-webkit-autofill:active  {  padding:15px !important;  border:1px solid #F8F8F8 !important;  border-radius: 10px;  -webkit-box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;   box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;  background: #F8F8F8; color:#333 !important; }
+.form-wrap.type-box input:-webkit-autofill:active  {  padding:15px !important;  border-color: #F8F8F8 !important;  border-radius: 10px;  -webkit-box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;   box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;  background: #F8F8F8; color:#333 !important; }
 .form-wrap.type-box .btn-input { right:10px; }
 
 
@@ -825,9 +825,10 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .select-box { height:60px; padding-left:20px; border-radius:15px; border:1px solid #DDDDDD; background:#fff; }
 .txt-list-wrap + div.select-wrap:not(.type-line) .select-box { margin-top:40px; }
 .select-box:after { content:none; }
-.select-box label, .check-box label > span { position: absolute; top:50%; left:20px; transform: translateY(-50%); font-size:0.88889rem; font-weight:300; color:#454545; }
+.select-box label, .check-box label > span { position: absolute; top:50%; left:20px; transform: translateY(-50%); font-size:0.88889rem; font-weight:400; color:#454545; }
 .select-box .option, 
 .select-box .amount-off { overflow:hidden; position:absolute; top:50%; right:20px; max-width:50%; font-weight:400; color:#999999; font-size:0.88889rem; transform:translateY(-50%); white-space:nowrap; text-overflow:ellipsis; text-align: right; }
+.select-box .option { font-weight:500; }
 .select-box .option[id^="rolldate"] { width:100%; max-width:100%; right:0; padding-right:20px; }
 .select-box .option[id^="rolldate"],
 #transRolldate{ width:100%; max-width:100%; right:0; padding-right:20px; }
@@ -842,7 +843,7 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 /* 휴대폰번호 선택 셑텍트 */
 .select-box.type-line { flex:1; padding:0; border:none; border-radius: 0;  border-bottom:1px solid #DDDDDD;}
 .select-box.type-line :after { content:''; position:absolute; right:10px; top:0; width:24px; height:50px; background:url(../images/common/arrow_selbox.png) no-repeat 50%/24px auto; }
-.select-box.type-line .option { max-width: inherit; right:0; left:0; text-align: left !important; }
+.select-box.type-line .option { max-width: inherit; right:0; left:0; text-align: left !important; font-weight:400; }
 
 /* checkbox : on / off 스위치 토글 버튼 */
 .check-all-wrap { margin-top:40px;}
