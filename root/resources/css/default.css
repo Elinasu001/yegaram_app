@@ -2003,8 +2003,8 @@ body.on { position:fixed; top:0; }
 .list-bull { color:#666666; font-size:0.77778rem; line-height:1.5; }
 .list-bull dt,
 .list-bull > strong  { display:block; margin:0 0 10px; color:#26282C; font-weight:500; font-size:0.88889rem; line-height:1.278rem; }
-.list-bull li,
-.list-bull dd { font-weight:300; }
+/* .list-bull li,
+.list-bull dd { font-weight:300; } */
 .list-bull p { color:#757575; font-size:0.88889rem; line-height:1.278rem; margin-bottom:10px; }
 
 .list-bull.type-large { color:#333333; font-size:0.88889rem; line-height:1.38889; }
