@@ -2720,7 +2720,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .account-detail-section .check-box { margin-top:40px; }
 .account-detail-section .check-box + .check-box,
 .account-detail-section .check-box + .arrow-button-list { margin-top:10px; }
-.account-detail-section .arrow-button-list li a { border-radius:15px; font-weight:300; color:#454545; }
+.account-detail-section .arrow-button-list li a { border-radius:15px; font-size: 0.88889rem; font-weight:300; color:#333333; }
 
 /* 계좌목록 없을 경우 - 2023-06-30, 추후 아이콘이나 이미지 추가필요 */
 .no-count { text-align:center; }
