@@ -2257,22 +2257,34 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .date-sel-wrap .option.disabled { color:#999999; }
 
 /** [공통] 은행 선택 팝업 **/
-/* .banklistWrap .tabs .tab-item > li { padding:0 20px; } */
-.banklistWrap .bank_list li a { padding:11px 12px 11px 46px; margin-bottom:0; font-size:0.88889rem; line-height:1.4375; }
-.banklistWrap .bank_list li a::before { width:36px; height:36px; }
+/* .banklistWrap .bank_list li { height:38px; line-height:38px; } */
+/* .banklistWrap .bank_list li a { padding:0px 0px 0px 46px; margin-bottom:0; font-size:0.88889rem; line-height:1.4375; } */
+/* .banklistWrap .bank_list li a::before { width:36px; height:36px; } */
 
 .bank_list { font-size:0; }
+
+/* 은행선택 */
 .bank_list.col2 li { width:calc((100% - 15px) / 2); }
 .bank_list.col2 li:nth-child(even) { margin-left:15px; }
-.bank_list li { display:inline-block; width:100%; /*margin-bottom:8px;*/ font-size:0.77778rem; height:45px; line-height:45px; vertical-align:middle; }/* 2023-07-11 수정 */
-.bank_list li a { display:inline-block; position:relative; width:100%; padding:0px 0px 0px 34px; }
-.bank_list li a::before { content:''; display:inline-block; position:absolute; left:0; top:50%; transform:translate(0, -50%); width:24px; height:24px; border-radius:50%; overflow:hidden; border:solid 1px #eee; }
+.bank_list.col2 li:first-child { margin-top:0; }
+.bank_list.col2 li + li { margin-top:0; }
+.bank_list.col2 li {  height:45px; line-height: 45px; }
+.bank_list.col2 li a { padding:0px 0px 0px 34px; }
+.bank_list.col2 li a::before { width:24px; height:24px; }
+
+/* 계좌선택 */
+.bank_list li:first-child { margin-top:10px; }
+.bank_list li + li { margin-top:26px; }
+.bank_list li { display:inline-block; width:100%; /*margin-bottom:8px;*/ font-size:0.77778rem; height:38px; line-height:38px; vertical-align:middle; }/* 2023-07-11 수정 */
+.bank_list li a { display:inline-block; position:relative; width:100%; padding:0px 0px 0px 46px; line-height:1.4375;}
+.bank_list li a::before { content:''; display:inline-block; position:absolute; left:0; top:50%; transform:translate(0, -50%); width:36px; height:36px; border-radius:50%; overflow:hidden; border:solid 1px #eee; }
 .bank_list li.none { padding-top:90px; color:#666666; font-size:0.88889rem; line-height:1.4375; text-align:center; }
 .bank_list .tit { display:block; font-weight:500; color:#333333; font-size:0.88889rem; line-height:1; }
 .bank_list .exp { font-weight:400; color:#999999; font-size:0.77778rem; line-height:1.5; }
 .bank_list.star li a::after { content:""; position:absolute; top:50%; right:0; width:24px; height:24px; background:url("../images/common/ico-star_off.png") no-repeat center; background-size:100%; transform:translateY(-50%); }
 .bank_list.star li.active a::after { background-image:url("../images/common/ico-star_on.png"); }
 .bank_list.logo li.active a strong { color:#4E32A5; }
+
 /* 230630 뱅크코드 수정 */
 .bank_list.logo li a::before { background:url(../images/bank_logo/logo_gb.png) no-repeat center; background-size: 100%; }
 .bank_list li.jt a::before { background:url("../images/bank_logo/logo_jt.png") no-repeat center; background-size:100%; }/**jt**/
@@ -2337,6 +2349,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .bank_list li.bank_266 a::before{ background:url("../images/bank_logo/logo_sk.png") no-repeat center; background-size:100%; }/*sk증권**/
 .bank_list li.bank_224 a::before{ background:url("../images/bank_logo/logo_bnk.png") no-repeat center; background-size:100%; }/*bnk증권**/
 .bank_list li.bank_092 a::before{ background:url("../images/bank_logo/logo_toss.png") no-repeat center; background-size:100%; }/*토스뱅크**/
+
 
 /* 은행 검색 리스트 */
 .search-area .form-wrap .bank_list { display:none; position:absolute; top:52px; left:0; overflow-y:auto; height:calc(64vh - 160px); margin-top:30px; }
