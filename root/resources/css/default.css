@@ -2123,7 +2123,7 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 /* .tit-wrap + section { margin-top:40px; } */
 .tit-wrap .flag { margin-bottom:10px; }
 .tit-wrap > span { display:inline-block; margin-bottom:10px; padding:4px 15px; border-radius:20px; background:#EBF2FF; font-size:0.88889rem; line-height:1.4375; color:#2968CF; }
-.tit-wrap > .txt { font-size:1.22222rem; line-height:1.5rem; }
+.tit-wrap > .txt { font-size:1.22222rem; /*line-height:1.5rem;*/ }
 .tit-wrap > .txt span { display:block; margin-bottom:5px; font-weight:400; color:#000000; font-size:1rem; line-height:1.38889; }
 /*아이콘 있는 case*/
 .tit-wrap > .txt.has-icon b { font-weight:700; position:relative; }
@@ -2133,6 +2133,7 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 
 .tit-wrap > .s-txt { margin-top:40px; font-size:1rem; line-height:1.38889; }
 .tit-wrap > .s-txt + .s-txt { margin-top:30px; }
+
 
 .tit-wrap + .terms-area .terms-agr-wrap { margin-top:0px; }
 .tit-wrap + .form-wrap.form-cert { margin-top:20px; }
@@ -2532,7 +2533,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 /* 상품안내 tit */
 .sub-tit-wrap { display:block; margin:40px 0; font-size:0 }
 .sub-tit-wrap .tit { display:block; font-size:0.88889rem; line-height:1.38889; font-weight:600; }
-.sub-tit-wrap .txt { display:block; margin-top:15px; font-size:0.88889rem; line-height:1.38889; font-weight:300; }
+.sub-tit-wrap .txt { display:block; margin-top:10px; font-size:0.88889rem; line-height:1.38889; font-weight:300; }
 /* .sub-tit-wrap .tit  + .txt { margin-top:0; } */
 .sub-tit-wrap .txt.hyphen > li { position:relative; padding-left:15px; }
 .sub-tit-wrap .txt.hyphen > li::before { content:"-"; position:absolute; top:0; left:0;  }
