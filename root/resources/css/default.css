@@ -2281,9 +2281,12 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .bank_list li.none { padding-top:90px; color:#666666; font-size:0.88889rem; line-height:1.4375; text-align:center; }
 .bank_list .tit { display:block; font-weight:500; color:#333333; font-size:0.88889rem; line-height:1; }
 .bank_list .exp { font-weight:400; color:#999999; font-size:0.77778rem; line-height:1.5; }
-.bank_list.star li a::after { content:""; position:absolute; top:50%; right:0; width:24px; height:24px; background:url("../images/common/ico-star_off.png") no-repeat center; background-size:100%; transform:translateY(-50%); }
-.bank_list.star li.active a::after { background-image:url("../images/common/ico-star_on.png"); }
-.bank_list.logo li.active a strong { color:#4E32A5; }
+/*기능 변경으로 사용 안함 - 버튼 형식으로 변경 */
+/* .bank_list.star li a::after { content:""; position:absolute; top:50%; right:0; width:24px; height:24px; background:url("../images/common/ico-star_off.png") no-repeat center; background-size:100%; transform:translateY(-50%); } */
+/* .bank_list.star li.active a::after { background-image:url("../images/common/ico-star_on.png"); } */
+/* .bank_list.logo li.active a strong { color:#4E32A5; } */
+/*기능 변경으로 사용 안함 - 버튼 형식으로 변경 */
+.bank_list.star li a .star { position: absolute; right:0; top:50%; transform: translateY(-50%); }
 
 /* 230630 뱅크코드 수정 */
 .bank_list.logo li a::before { background:url(../images/bank_logo/logo_gb.png) no-repeat center; background-size: 100%; }
