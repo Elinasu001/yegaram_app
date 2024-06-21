@@ -271,7 +271,7 @@ html.font-size-3{ font-size: 24px;}
 /* .exp-txt + .select-form-wrap { margin-top:40px; } */
 .exp-txt:last-child { margin-bottom:40px; }
 /* .exp-txt span { color:#808080; } */
-.form-wrap.type2 + .exp-txt { margin-top:15px; }
+.form-wrap.type2 + .exp-txt { margin:10px 0 40px; }
 .label-txt { color:#000; font-size:0.88889rem; line-height:1.4375; }
 .info-txt-wrap { margin-top:10px; }
 .info-txt-wrap .info-txt { margin-top:10px; }
