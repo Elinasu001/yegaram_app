@@ -517,8 +517,9 @@ section > .result-wrap{ margin-top:40px; }
 
 /**계좌비밀번호 오류해제 선택 추가**/
 .check-box.bank_list { display:block; }
-.check-box.bank_list > li { width:100%; margin-bottom:15px; }
-.check-box.bank_list > li:last-child { margin-bottom:0; }
+.check-box.bank_list > li { width:100%; margin-top:0; margin-right:0; }
+.check-box.bank_list > li + li { margin-top:10px; }
+/* .check-box.bank_list > li:last-child { margin-bottom:0; } */
 .check-box.bank_list > li label{ text-align:left !important; padding:20px 20px 20px 88px !important; }
 .check-box.bank_list > li label::after { content:''; display: inline-block; position:absolute; left:20px;top: 50%; transform: translate(0, -50%); width:48px; height:48px; border-radius:50%;  }
 .check-box.bank_list.logo > li label::after { background:url(../images/bank_logo/logo_gb.png) no-repeat center; background-size:100%; }
