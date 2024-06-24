@@ -275,6 +275,15 @@
     .quick-service-list li { width: 100%; }
 }
 
+/* 모집인 헤더 */
+.dsr-menu-wrap .all-menu-header .all-menu-info { justify-content: flex-end; }
+.dsr-menu-wrap .all-menu-header .all-menu-info > ul > li > a { height: 24px; }
+.dsr-menu-wrap .all-menu-header .top-menu > li { margin-right: 25px; }
+.dsr-menu-wrap .all-menu-header .top-menu > li:nth-child(1) > a::before { background:#F8F8F8 url('../images/dsr/common/ico_menu01.png') no-repeat 50%/100% auto; }
+.dsr-menu-wrap .all-menu-header .top-menu > li:nth-child(2) > a::before { background:#F8F8F8 url('../images/dsr/common/ico_menu02.png') no-repeat 50%/100% auto; }
+.dsr-menu-wrap .all-menu-header .top-menu > li:nth-child(3) > a::before { background:#F8F8F8 url('../images/dsr/common/ico_menu03.png') no-repeat 50%/100% auto; }
+.dsr-menu-wrap .all-menu-header .top-menu { justify-content: flex-start; }
+
 /* 모집인 메인 */
 .contentsWrap .contents > .default-wrap.dsr-wrap { padding: 0; }
 .counselor-box { box-sizing: border-box; position: relative; background: linear-gradient(rgba(255, 255, 255), #F6F7F9); padding: 25px 20px; }
