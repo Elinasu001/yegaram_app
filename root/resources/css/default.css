@@ -1760,6 +1760,7 @@ body.on { position:fixed; top:0; }
 
 .tabs-wrap.type2 .tab-item.square { height:100%; }
 .tabs-wrap.type2 .tab-item.square li {  display:flex; align-items: center; justify-content: center; height:90px; border-radius:10px; }
+.tabs-wrap.type2 .tab-item.col-04 li { width: 25%; }
 
 .tabs-wrap.type3 { margin-top:15px; }
 .tabs-wrap.type3 .tab-item { display:inline-block; }
