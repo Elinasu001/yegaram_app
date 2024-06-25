@@ -2576,7 +2576,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .sub-tit-wrap + .kdic-wrap { margin-top:15px; }
 .sub-tit-wrap > .txt-list-wrap { margin-top:15px; }
 
-.sub-tit-wrap .graph-img img { width:200px; margin-bottom:10px; }
+.sub-tit-wrap .graph-img img { margin-top:10px; }
 
 /* 상품안내 버튼 */
 .arrow-button-wrap { margin-top:40px; }
