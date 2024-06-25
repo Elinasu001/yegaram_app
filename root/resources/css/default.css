@@ -957,7 +957,8 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 /* 개별체크 */
 /* .terms-wrap.level2 { margin:5px 0; } */
 .terms-wrap.level2 + .level2 { margin-top:8px; }
-.terms-wrap.level2 + .terms-wrap.bg-box { margin-top:20px; }
+.terms-wrap.level2 + .terms-wrap.bg-box,
+.terms-area + .terms-wrap.level2.bg-box { margin-top:20px; }/*개발기준으로 마진 추가*/
 .terms-wrap.level2 + .terms-wrap.bg-box + .terms-wrap.bg-box { margin-top:15px; }
 .terms-wrap.level2 label { padding:0 0 0 26px; font-size:0.88889rem; line-height:1.4375; background:url("../images/common/chk_off.png") no-repeat left center/16px auto;  display:block; }
 .terms-wrap.level2 label > span { display:inline-block; width:100%; padding-right:26px; color:#666; line-height:1.4375; }
@@ -2406,6 +2407,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 /* 기존 .prod-box .icon-exp div:nth-of-type(1) order 적용 되어 있어 right으로 마진 적용 */
 .icon-exp .tooltip-wrap.type2 + .tooltip-wrap.type2 { margin-right:4px; }
+.icon-exp .tooltip-wrap.type2 { height:24px; }
 
 /* 회색 박스 */
 .gray-box-wrap { display:inline-block; width:100%; margin:20px 0; padding:25px 0; border-radius:15px; background:#f8f8f8; text-align:center; }
