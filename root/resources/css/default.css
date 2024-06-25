@@ -430,10 +430,6 @@ select, .select-box { outline:none; -webkit-appearance:none; }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 
-/* 대출 신청 비고 */
-.dsr-con-wrap .form-wrap textarea::placeholder { color:#CCCCCC; }
-/* 대출 신청 비고 */
-
 /** label/placeholder **/
 ::-webkit-input-placeholder { color:#CCCCCC; }
 :-moz-placeholder { color:#CCCCCC; }
@@ -570,7 +566,7 @@ textarea:read-only { border-color:#DDDDDD !important; }
 
 .form-wrap > div.input { /*display:inline-block;*/ position:relative; /*width:100%;*/ }
 .form-wrap > div.input input { width:100%; /*height:100%;*/ padding:13px 0; border-bottom:1px solid #DDDDDD; color:#CCCCCC; /*-webkit-text-fill-color:inherit; opacity:1;*/ }
-.form-wrap > div.input input::placeholder { color:#999; text-shadow:none; }
+.form-wrap > div.input input::placeholder { color:#CCCCCC; text-shadow:none; }
 .formlabel { display:block; position:relative; z-index:1; padding-top:3px; font-size:0.77778rem; font-weight:400; line-height:1.5; cursor:pointer; transition:all 0.3s; color:#999999;}
 
 .form-wrap > div:last-child { margin-bottom:0; }
@@ -584,7 +580,8 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .formlabel.onbasic:has(+.input input:disabled) { top:0; width:auto; font-size:0.77778rem; line-height:1.5; }
 .form-wrap .action ~ .input input:focus::placeholder { color:#CCCCCC; } */
 .form-wrap > div.input input:focus { color:#DDDDDD; border-color:#B088FF; }
-.form-wrap > div.input input:valid { color:#333333; }
+.form-wrap > div.input input:valid,
+.form-wrap > div.input input:focus-visible { color:#333333; }
 .form-wrap > div.input input[type="password"]:focus { color:#DDDDDD !important; }
 .form-wrap > div.input input[type="password"]:valid {  height:50px; caret-color:transparent; font-size:30px; color:#4E32A5 !important; }
 .form-wrap > div.input input[type="password"]:disabled { height:50px;  font-size:30px; color:#CCCCCC; }
