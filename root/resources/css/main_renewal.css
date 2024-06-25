@@ -1,5 +1,8 @@
 @charset "utf-8";
 /*** 레이아웃  ***/
+
+.wrap.main { background: #F5F8FA; }
+
 /** 헤더 **/
 .main-header { position:fixed; display:flex; justify-content:space-between; top:0; left:0; right:0; z-index:5; height:50px; background:#fff; }
 .main-header .logo-area { height:100%; }
