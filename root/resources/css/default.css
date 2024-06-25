@@ -2562,23 +2562,21 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .sub-tit-wrap .tit + .bg-box,
 .sub-tit-wrap .tit + .list-icon { margin-top:15px; }
 .sub-tit-wrap:has(+.choice-box) { margin-bottom:15px; }
-
 /* .sub-tit-wrap:has(+.form-wrap):not(:has(.txt)),
 .sub-tit-wrap:has(+.check-box):not(:has(.txt)),
 .sub-tit-wrap:has(+.date-sel-wrap):not(:has(txt)) { margin-bottom:15px; } */
 .sub-tit-wrap .table-type { margin-top:15px; }
 .sub-tit-wrap .toggle-wrap { display:flex; align-items:center;}
 .sub-tit-wrap .toggle-wrap .tit { flex:1; text-align:left; }
-
 .sub-tit-wrap:has(+.more-box-list) { margin-bottom:20px; }
 /* .sub-tit-wrap:has(+.terms-list) { margin-bottom:15px; } */
 .sub-tit-wrap.contTxt { border-bottom:1px solid #DDDDDD; padding-bottom:15px; margin-bottom:0; color:#999999;  }
-
 .sub-tit-wrap:has(+.map-area) { margin-bottom:15px; }
-
 .sub-tit-wrap:has(+.kdic-wrap) { margin-bottom:0px; }
 .sub-tit-wrap + .kdic-wrap { margin-top:15px; }
 .sub-tit-wrap > .txt-list-wrap { margin-top:15px; }
+
+.sub-tit-wrap .graph-img img { width:200px; margin-bottom:10px; }
 
 /* 상품안내 버튼 */
 .arrow-button-wrap { margin-top:40px; }
