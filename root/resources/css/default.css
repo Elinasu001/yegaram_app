@@ -584,7 +584,7 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .form-wrap > div.input input:focus-visible { color:#333333; }
 .form-wrap > div.input input[type="password"]:focus { color:#DDDDDD !important; }
 .form-wrap > div.input input[type="password"]:valid {  height:50px; caret-color:transparent; font-size:30px; color:#4E32A5 !important; }
-.form-wrap > div.input input[type="password"]:disabled { height:50px;  font-size:30px; color:#CCCCCC; }
+.form-wrap > div.input input[type="password"]:disabled { height:50px; /*font-size:30px;*/ color:#CCCCCC; }
 
 
 /*.bank-input-warp .formlabel.action,*//*수현-test*/
