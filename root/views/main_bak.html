@@ -255,17 +255,12 @@
 				<div class="default-wrap">
 					<section class="login-check-area">
 						<div class="login-check">
-                            <!--[퍼블-4] : 클래스 수정 , 텍스트 수정-->
-							<div class="txtbox color-111111">
-								나의 대출한도를<br />
-                                확인해 보세요.
-								<!-- <span class="color-F10F8E">로그인하고 확인</span>해 보세요 -->
+							<div class="txtbox">
+								나의 한도와 이자율<br />
+								<span class="color-F10F8E">로그인하고 확인</span>해 보세요
 							</div>
-                            <!--[퍼블-4] : 클래스 수정 , 텍스트 수정//-->
 						</div>
-                        <!--[퍼블-4] : 클래스 수정 , 텍스트 수정-->
-						<a href="javascript:void(0);" class="btn">간편한도 조회하기</a>
-                        <!--[퍼블-4] : 클래스 수정 , 텍스트 수정//-->
+						<a href="javascript:void(0);" class="btn">예적금통장 계좌 개설하기</a>
 					</section>
 
 					<!--D: 추천상품의 경우 슬라이드 2개 이상이 보여야 합니다. (작업하실 때 퍼블에 디자인 확인 요청 한번 부탁드려요) -->
@@ -2035,6 +2030,55 @@
 		<div class="loading" id="loading" style="display:none">
 			<div class="loader-square-9"></div>
 		</div>
+
+
+		<script type="text/javascript">
+
+			var _SITE_SystemMode = "test"; // real, test
+			var _SITE_SystemLang = "KOR"; // KOR, ENG, CHN, JPN
+			var _SITE_SiteName = "delfino";     // pc, mobile, tablet
+			var _SITE_ModuleType = ""; // "", G2, G3, G4
+
+		</script>
+		<script src="/resources/wizvera/delfino/delfino_config.js?230803_1334" charset="utf-8"></script>
+		<script src="/resources/wizvera/delfino/delfino_internal.min.js?230803_1334" charset="utf-8"></script>
+		<script src="/resources/wizvera/delfino/delfino.js?230803_1334" charset="utf-8"></script>
+		<script src="/resources/wizvera/delfino/delfino_site.js?230803_1334" charset="utf-8"></script>
+		<!-- Open Web nFilter 가상키패드 -->
+
+		<!-- OWN default script -->
+		<script language="JavaScript" type="text/javascript" src="/resources/nfilter/js/jquery-1.12.4.min.js"
+			charset="UTF-8"></script>
+		<script> var own = $.noConflict() </script>
+		<script language="JavaScript" type="text/javascript" src="/resources/nfilter/js/jquery-ui.js"
+			charset="UTF-8"></script>
+		<script language="JavaScript" type="text/javascript" src="/resources/nfilter/js/open_nFilter.js"
+			charset="UTF-8"></script>
+		<script language="JavaScript" type="text/javascript" src="/resources/nfilter/js/secretUtil.js"
+			charset="UTF-8"></script>
+
+		<script type="text/javascript" charset="UTF-8">
+
+			nshc.contextPath = "";
+			nshc.CSSPath = nshc.contextPath + "/resources/nfilter/css";
+			nshc.imgPath = nshc.contextPath + "/resources/nfilter/image";
+			nshc.randomIdLength = 10;
+			nshc.serviceNameKeypadManager = "resources/nfilter/jsp/open_nFilter_keypad_manager.jsp";
+			nshc.algName = "RSA";
+			nshc.keyLength = "2048";
+			nshc.uuSessionUse = false;
+			nshc.NSCryptoUse = true;
+
+		</script>
+
+		<script type="text/javascript">
+			//Delfino G10 Setting
+			Delfino.setModule('G10');
+			// 가상키패드 서버키
+			nshc.setInit();
+		</script>
+
+
 		<!-- //footer -->
 
 	</div>
