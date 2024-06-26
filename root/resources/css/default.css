@@ -1504,6 +1504,9 @@ body.on { position:fixed; top:0; }
 .layerpopup.laypop-all .pop-con-wrap .pop-con-area{padding-bottom:7rem;}
 .layerpopup.laypop-all .pop-header.bg-pattern{border-color:#191e2a;color:#fff;}
 .layerpopup.laypop-all .bg-pattern + .btn-layer-close{background-image:url("../images/common/btn_closeW_white.png");}
+
+.layerpopup.laypop-all .like { z-index:4; }
+
 .layerpopup .pop-con-wrap:has(.txtbox-wrap) .sub-tit-wrap { margin-bottom:15px; }
 /* .layerpopup .pop-con-wrap .txtbox-wrap + .sub-info-wrap { margin-top:40px; } */
 
