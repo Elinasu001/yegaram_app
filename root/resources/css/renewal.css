@@ -342,6 +342,7 @@ section > .result-wrap{ margin-top:40px; }
 .info-wrap { /*margin-top:40px;(청)test후삭제예정*/ height:80vh; background:#fff; color:#666; font-size:0.8rem; }
 .info-wrap .info-pre { font-family: 'Spoqa Han Sans Neo'; padding:15px; overflow:auto; white-space:pre-wrap; }
 .info-wrap .info-pre b { color:#000; }
+.tabs-wrap .tab-content-area .info-wrap { margin-top:40px; }
 
 /* 약관동의 text */
 .refer-txt { font-size:0.8rem; color:#999999; }
