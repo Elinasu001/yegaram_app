@@ -221,7 +221,7 @@
 .login-check-area { background-color: #FFFFFF; border-radius: 20px; padding: 38px 16px 20px; }
 .login-check { padding: 9px 60px 9px 10px; margin-bottom: 25px; background: url('../images/main/ico_login_check.png') no-repeat 100%/60px auto; }
 .login-check .txtbox { display: inline-block; font-size:1rem; font-weight: 500; color: #260F54;}
-.login-check .txtbox::after { content: ''; display: inline-block; width: 16px; height: 16px; background: url('../images/main/arrow_right_black.png') no-repeat 100%/16px auto ; background-position-y: 2px; }
+.login-check .txtbox::after { content: ''; display: inline-block; width: 16px; height: 16px; background: url('../images/main/arrow_right_black.png') no-repeat 100%/16px auto ; background-position-y: 1px; }
 .login-check-area .btn { display: block; background-color: #FDF2F2; border-radius: 24px; font-size:0.88889rem; font-weight: 500; color: #ED008D; height: 48px; line-height: 48px; padding: 0 19px; position: relative; }
 .login-check-area .btn::after { content: ''; display: inline-block; width: 16px; height: 16px; background: url('../images/main/arrow_right_pink02.png') no-repeat 100%/16px auto; position: absolute; top: 50%; transform: translateY(-50%); right: 16px; }
 
