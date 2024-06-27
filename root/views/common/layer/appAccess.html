@@ -136,69 +136,53 @@
             </div>
 
             <!-- s: 풀팝업 -->
+        <!--[퍼블-1] : 개발 기준 현행화 - 팝업으로 변경-->
         <div id="lypullPop" class="layerpopup laypop-all" style="display:block;">
             <!-- s: contents -->
             <div class="pop-header">
-                <h2 class="pop-title">풀팝업</h2>
+                <h2 class="pop-title">앱권한허용</h2>
                 <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lypullPop')">닫기</button>
             </div>
             
             <div class="pop-con-wrap">
                 <div class="default-wrap">
                     <div class="tit-wrap">
-                        <p class="txt"><strong>GO BANK 앱 서비스 이용을 위해<br/>권한 허용이 필요해요</strong></p>
+                        <p class="txt"><strong>예스뱅킹 앱 서비스 이용을 위해<br/>권한 허용이 필요해요</strong></p>
                     </div>
 
                     <div class="list-icon-wrap">
                         <ul class="list-icon access">
+                            <!--[퍼블-1]: 개발 기준 현행화-->
                             <li class="camera">
-                                <p class="tit">카메라</p>
-                                <p class="txt">실명확인을 위한 신분증 촬영</p>
-                                <p class="txt">실명확인을 위한 신분증 촬영</p>
-                                <p class="txt">실명확인을 위한 신분증 촬영</p>
-                                <p class="txt">실명확인을 위한 신분증 촬영</p>
-                                <p class="txt">실명확인을 위한 신분증 촬영</p>
+                                <p class="tit">카메라 접근 권한</p>
+                                <p class="txt">앱에서 사진을 찍거나 도영상을 촬영하기 위해 카메라 접근 권한이 필요합니다.</p>
+                                <p class="txt">카메라를 사용하여 실명확인을 위한 신분증 촤영을 할 수 있습니다.</p>
                             </li>
                             <li class="space">
-                                <p class="tit">저장공간</p>
-                                <p class="txt">공동인증서 저장, 임시저장공간 사용</p>
-                                <p class="txt">공동인증서 저장, 임시저장공간 사용</p>
-                                <p class="txt">공동인증서 저장, 임시저장공간 사용</p>
-                                <p class="txt">공동인증서 저장, 임시저장공간 사용</p>
-                                <p class="txt">공동인증서 저장, 임시저장공간 사용</p>
+                                <p class="tit">저장공간 접근 권한</p>
+                                <p class="txt">앱에서 파일을 저장하거나 불러오기 위해 저장공간 접근 권한이 필요합니다.</p>
+                                <p class="txt">파일을 다운로드하거나, 저장된 파일을 불러와서 사용하실 수 있습니다.</p>
                             </li>
-                            <li class="place">
+                            <!-- <li class="place">
                                 <p class="tit">위치</p>
                                 <p class="txt">주변 영업점 검색 시 사용</p>
-                                <p class="txt">주변 영업점 검색 시 사용</p>
-                                <p class="txt">주변 영업점 검색 시 사용</p>
-                                <p class="txt">주변 영업점 검색 시 사용</p>
-                                <p class="txt">주변 영업점 검색 시 사용</p>
-                            </li>
+                            </li> -->
                             <li class="phone">
-                                <p class="tit">전화</p>
-                                <p class="txt">휴대전화 기기정보를 수집 시 사용</p>
-                                <p class="txt">휴대전화 기기정보를 수집 시 사용</p>
-                                <p class="txt">휴대전화 기기정보를 수집 시 사용</p>
-                                <p class="txt">휴대전화 기기정보를 수집 시 사용</p>
-                                <p class="txt">휴대전화 기기정보를 수집 시 사용</p>
+                                <p class="tit">전화 접근 권한</p>
+                                <p class="txt">앱에서 전화를 걸거나 수신하기 위해 전화 접근 권한이 필요합니다.</p>
+                                <p class="txt">고객지원 센터에 바로 전화를 걸거나, 비상시 연락을 취할 수 있습니다.</p>
                             </li>
                             <li class="sms">
                                 <p class="tit">SMS</p>
-                                <p class="txt">이체결과 등의 정보전송 시 사용</p>
-                                <p class="txt">이체결과 등의 정보전송 시 사용</p>
-                                <p class="txt">이체결과 등의 정보전송 시 사용</p>
-                                <p class="txt">이체결과 등의 정보전송 시 사용</p>
-                                <p class="txt">이체결과 등의 정보전송 시 사용</p>
+                                <p class="txt">앱에서 SMS를 보내거나 읽기 위해 SMS 접근 권한이 필요합니다.</p>
+                                <p class="txt">본인 확인 코드 전송, 예약 알림 등의 서비스를 이용하실 수 있습니다.</p>
                             </li>
                             <li class="photo">
-                                <p class="tit">사진</p>
-                                <p class="txt">신분확인을 위해 기기 내 저장된 사진을 사용</p>
-                                <p class="txt">신분확인을 위해 기기 내 저장된 사진을 사용</p>
-                                <p class="txt">신분확인을 위해 기기 내 저장된 사진을 사용</p>
-                                <p class="txt">신분확인을 위해 기기 내 저장된 사진을 사용</p>
-                                <p class="txt">신분확인을 위해 기기 내 저장된 사진을 사용</p>
+                                <p class="tit">사진 접근 권한</p>
+                                <p class="txt">앱에서 사진을 저장하거나 불러오기 위해서 사진 접근 권한이 필요합니다.</p>
+                                <p class="txt">갤러리에 저장된 사진을 앱에서 불러오기 프로필 설정이나 콘텐츠 공유에 사용하실 수 있습니다.</p>
                             </li>
+                            <!--[퍼블-1]: 개발 기준 현행화//-->
                         </ul>
                     </div>
                 </div>
