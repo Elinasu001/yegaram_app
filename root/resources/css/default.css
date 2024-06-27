@@ -426,9 +426,8 @@ input:autofill:active { -webkit-text-fill-color: #000 !important; -webkit-box-sh
 .form-wrap.type-box input:focus,
 .form-wrap.type-box input:-webkit-autofill:hover,
 .form-wrap.type-box input:-webkit-autofill:focus,
-.form-wrap.type-box input:-webkit-autofill:active  {  padding:15px !important;  border: #F8F8F8 !important;  border-radius: 10px;  -webkit-box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;   box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;  background: #F8F8F8; color:#333 !important; }
+.form-wrap.type-box input:-webkit-autofill:active  { padding:15px !important;  border: #F8F8F8 !important;  border-radius: 10px;  -webkit-box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;   box-shadow: 0 0 0px 1000px #F8F8F8 inset !important;  background: #F8F8F8; color:#333 !important; }
 .form-wrap.type-box .btn-input { right:10px; }
-
 
 input.error { border-color:#FF0000; }
 /* .form-wrap input:focus { border-color:#260F54; } */
@@ -466,7 +465,7 @@ textarea:disabled { color:#CCCCCC !important; }
 input[type="text"]:read-only,
 input[type="password"]:read-only,
 input[type="tel"]:read-only:not(.form-cert input:read-only),
-textarea:read-only { border-color:#DDDDDD !important; }
+textarea:read-only {  border-color:#DDDDDD !important; }
 /* .essential { margin-left:5px; color:#ff0000; } */
 .essential { position:relative; }
 .essential::after { content:"*"; position:absolute; padding-left:3px; color:#ff0000;}
@@ -547,13 +546,15 @@ textarea:read-only { border-color:#DDDDDD !important; }
 .formlabel.action,
 .formlabel.onbasic:has(+.input input:disabled) { top:0; width:auto; font-size:0.77778rem; line-height:1.5; }
 .form-wrap .action ~ .input input:focus::placeholder { color:#CCCCCC; } */
-.form-wrap > div.input input:focus { color:#DDDDDD; border-color:#B088FF; }
-.form-wrap > div.input input:valid,
-.form-wrap > div.input input:focus-visible { color:#333333; }
+/* .form-wrap > div.input input:focus { color:#333333; } */
+.form-wrap > div.input input:focus { color:#333333; border-color:#B088FF; }
+.form-wrap > div.input input:read-only { color:#CCCCCC; }
+/* .form-wrap > div.input input[type="value"] { color:red; } */
+.form-wrap > div.input input:valid { color:#333333; }
 .form-wrap > div.input input[type="password"]:focus { color:#DDDDDD !important; }
 .form-wrap > div.input input[type="password"]:valid {  height:50px; caret-color:transparent; font-size:30px; color:#4E32A5 !important; }
 .form-wrap > div.input input[type="password"]:disabled { height:50px; /*font-size:30px;*/ color:#CCCCCC; }
-
+/* .form-wrap > div.input input:valid { color:red; } */
 
 /*.bank-input-warp .formlabel.action,*//*수현-test*/
 /* .form-wrap:not(.address, .password), */
@@ -1275,7 +1276,7 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 .headerWrap .headerRight .btn img { width:40px; height:40px; }
 .headerWrap .headerRight .btn-notify .count-flag,
 .headerWrap .headerRight .btn-like .count-flag,
-.headerWrap .headerRight .btn-interest .count-flag { position:absolute; top:4px; right:2px; width:12px; height:12px; /*padding:2px 2px;*/ border:2px solid #fff; border-radius:50%; box-sizing:content-box; background:#EC008C; color:#fff; font-size:0.45rem; line-height:12px; text-align:center;}
+.headerWrap .headerRight .btn-interest .count-flag { display:flex; align-items: center; justify-content: center; position:absolute; top:4px; right:2px; width:12px; height:12px; /*padding:2px 2px;*/ border:2px solid #fff; border-radius:50%; box-sizing:content-box; background:#EC008C; color:#fff; font-size:0.45rem; line-height:9px; text-align:center;}
 
 /** 바텀메뉴 **/
 .bottom-menu-area { position:fixed; bottom:0; left:0; z-index:9; width:100%; height:68px; border-top:1px solid #EEECF8; background:#fff; padding-bottom: constant(safe-area-inset-bottom); padding-bottom: env(safe-area-inset-bottom); }
@@ -2712,4 +2713,3 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .amount.bigText input[type="amount"]:focus.form-control { color:#4E32A5; font-weight:600; }
 .amount.bigText input[type="amount"]:valid.form-control { color:#4E32A5; font-weight:600; }
 .amount.bigText .amount-txt { font-size:2rem; line-height:2rem; }
-
