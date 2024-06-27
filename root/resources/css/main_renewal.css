@@ -55,14 +55,15 @@
 /* .contentsWrap .quick-service-area .area-title { font-size:0.77778rem; line-height:1.5; }  */
 /* .quick-service-area { margin-top:50px !important; } */
 .quick-service-area .area-title { margin-bottom:0 !important; font-size:0.77778rem; }
-.quick-service-list { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; width: 100%; }
+.quick-service-list { display: flex; justify-content: space-between; align-items: center; gap: 13px; flex-wrap: wrap; width: 100%; }
 .quick-service-list li { width: 48%; box-sizing: border-box; }
-.service-deposits a { background:url('../images/main/ico_service_deposits.png') no-repeat 92%/ 24px auto; }
-.service-loan-inquiry a { background:url('../images/main/ico_service_loan_inquiry.png') no-repeat 92%/ 24px auto; }
-.service-contract a { background:url('../images/main/ico_service_contract.png') no-repeat 92%/ 24px auto; }
-.service-loan a { background:url('../images/main/ico_service_loan.png') no-repeat 92%/ 24px auto; }
+.service-deposits a { background:url('../images/main/ico_service_deposits.png') no-repeat 89% 87%/ 55px auto; }
+.service-loan-inquiry a { background:url('../images/main/ico_service_loan_inquiry.png') no-repeat 89% 87%/ 55px auto; }
+.service-contract a { background:url('../images/main/ico_service_contract.png') no-repeat 89% 87%/ 55px auto; }
+.service-loan a { background:url('../images/main/ico_service_loan.png') no-repeat 89% 87%/ 55px auto; }
 
-.quick-service-list a { display:block; height:72px; padding:0 16px 0 20px; border-radius:15px; background-color:#FFFFFF; font-weight:500; color:#333333; font-size:0.77778rem; line-height:72px; }
+.quick-service-list a { display:block; height:141px; padding:15px; border-radius:16px; background-color:#FFFFFF; font-weight:600; color:#333333; font-size:0.88889rem; }
+.quick-service-list a span { color: #666666; display: block; font-size:0.66667rem; line-height:1.056rem; font-weight: 400; }
 .quick-service-list li.highlight a { border:1px solid #6836CB; color:#6836CB; background:#EEEBFF; }
 .quick-service-area .quick-menu-search { color:#757575; font-size:0.77778rem; line-height:1.5; }
 .quick-service-area .quick-menu-search .btn-search { width:16px; height:16px; background-size:16px 16px; }
@@ -222,8 +223,8 @@
 .login-check { padding: 9px 60px 9px 10px; margin-bottom: 25px; background: url('../images/main/ico_login_check.png') no-repeat 100%/60px auto; }
 .login-check .txtbox { display: inline-block; font-size:1rem; font-weight: 500; color: #260F54;}
 .login-check .txtbox::after { content: ''; display: inline-block; width: 16px; height: 16px; background: url('../images/main/arrow_right_black.png') no-repeat 100%/16px auto ; background-position-y: 2px; }
-.login-check-area .btn { display: block; background-color: #FDF2F2; border-radius: 24px; font-size:0.88889rem; font-weight: 500; color: #ED008D; height: 48px; line-height: 48px; padding: 0 19px; position: relative; }
-.login-check-area .btn::after { content: ''; display: inline-block; width: 16px; height: 16px; background: url('../images/main/arrow_right_pink02.png') no-repeat 100%/16px auto; position: absolute; top: 50%; transform: translateY(-50%); right: 16px; }
+.login-check-area .btn { display: block; background-color: #260F54; border-radius: 24px; font-size:0.88889rem; font-weight: 500; color: #FFFFFF; height: 48px; line-height: 48px; padding: 0 19px; position: relative; }
+.login-check-area .btn::after { content: ''; display: inline-block; width: 16px; height: 16px; background: url('../images/main/arrow_right_white.png') no-repeat 100%/16px auto; position: absolute; top: 50%; transform: translateY(-50%); right: 16px; }
 
 .product-list li { background-color: #FFFFFF; border-radius: 20px; position: relative; width:152px; display: inline-block; margin-right: 10px; vertical-align: top; }
 .product-list a { display: block; height: 188px; box-sizing: border-box; padding: 18px 20px; }
@@ -236,6 +237,7 @@
 .product06 a::after { background: url('../images/main/ico_product06.png') no-repeat 100%/56px auto; }
 .product07 a::after { background: url('../images/main/ico_product07.png') no-repeat 100%/56px auto; }
 
+.yesbank-service-area .area-title .color-F10F8E { font-weight: 600; }
 .product-list li strong { display: block; margin-bottom: 10px; font-size:0.88889rem; line-height:1.278rem; font-weight: 500; color: #333333; }
 .product-list li div { font-size:0.77778rem; line-height: 1rem; font-weight: 500; color: #999999; }
 .service-more { background-color: #DAEAF8; border-radius: 20px; padding: 20px; }
