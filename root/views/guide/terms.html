@@ -35,11 +35,48 @@
 <script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
 <script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
 
+<!-- <script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803133439"></script> -->
+<!-- <script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803133439"></script> -->
+<!-- <script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803133439"></script> -->
+<!-- <script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803133439"></script> -->
+<!-- <script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803133439"></script> -->
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803133439"></script>
+
 <!-- 
 <style>
     h3.guid{ padding:30px 0 10px; }
     p.guid { font-size:14px; }
 </style> -->
+<script>
+
+    $(document).ready(function(){
+    
+        // 하단배너는 고정
+        var newsSlider = new Swiper('.loan-slider-wrap.swiper', { 
+            slidesPerView: 1,
+            spaceBetween : 20,
+            pagination : {
+                el : '.swiper-pagination',
+                // clickable : true,
+            },
+            observer:true,
+            observeParents:true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop : true,
+            // loopedSlides: 1,
+            centeredSlides: true,
+            // initialSlide: 0,
+            //   slidesPerGroup: 1,
+            //   roundLengths: true,
+            loopAdditionalSlides: 1,
+        });
+        
+    });
+</script>
+
 </head>
 <body>
 	<!-- header -->
@@ -69,7 +106,7 @@
                         <p class="txt"><strong>대출 신청을 위해</strong><br><strong>약관에 동의</strong>가 필요해요</p>
                     </div>
 
-                    <div class="btn-cont-wrap flexRight"><!--D: 전자계약서 작성 방법 보기 버튼 추가-->
+                    <div class="btn-cont-wrap flexRight"  onclick="openPopupUp('guidePop5');"><!--D: 전자계약서 작성 방법 보기 버튼 추가-->
                         <a href="#none" class="btn-txt" title="전자계약서 작성 방법 보기 버튼">전자계약서 작성 방법 보기</a><!--[퍼블-1]:클래스 변경-->
                     </div>
                     
@@ -337,7 +374,7 @@
             <!--E: 최신소스 반영 : 대출한도조회 (팝업) -->
 
             <!--S: 최신소스 반영 : 금융상품 중요사항 안내 (팝업)-->
-            <div id="importantNotiPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display: block;">
+            <div id="importantNotiPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display: none;">
                 <div class="pop-header">
                     <h2 class="pop-title">금융상품 중요사항 안내</h2>
                     <button type="button" name="button" class="btn-layer-close">닫기</button>
@@ -558,7 +595,7 @@
 
             <!--[퍼블-2] : 금융상품 중요사항 안내 기획 반영-->
             <!--S: 금융상품 중요사항 안내 (팝업)-->
-            <div id="importantNotiPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display:block;">
+            <div id="importantNotiPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display:none;">
                 <div class="pop-header">
                     <h2 class="pop-title">금융상품 중요사항 안내</h2>
                     <button type="button" name="button" class="btn-layer-close">닫기</button>
@@ -1039,6 +1076,72 @@
             <!--[퍼블-2] : 금융상품 중요사항 안내 기획 반영-->
 
         <!--[퍼블-1] : 공통 추가 //-->
+
+
+                <!--s:전자계약서 작성하기 상세팝업-->
+        <div id="guidePop5" class="layerpopup laypop-all has-button login-guide">
+
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">전자계약서 작성하기</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="pop-con-wrap">
+                    <div class="default-wrap">
+                        <div class="loan-slider-wrap swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="javascript:void(0);">
+                                        <div class="swiper-txt">
+                                        <strong>Step1.</strong>
+                                        <p>전자계약서 작성하기 메뉴를<br />
+                                            선택 해주세요</p>
+                                        </div>
+                                        <div class="swiper-img">
+                                            <img src="/resources/images/common/loanguide_img05_01.png" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="javascript:void(0);">
+                                        <div class="swiper-txt">
+                                            <strong>Step2.</strong>
+                                            <p>다음 버튼을 눌러 순서대로<br />
+                                                진행 해주세요</p>
+                                        </div>
+                                        <div class="swiper-img">
+                                            <img src="/resources/images/common/loanguide_img05_02.gif" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="javascript:void(0);">
+                                        <div class="swiper-txt">
+                                            <strong>Step3.</strong>
+                                            <p>전자계약서 작성이 완료되었어요<br />
+                                                경우에 따라 상담원이 연락이 올 수 있어요</p>
+                                        </div>
+                                        <div class="swiper-img">
+                                            <img src="/resources/images/common/loanguide_img05_03.png" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn close">충분히 이해했어요</a>
+                </div>
+            </div>
+
+        </div>
+        <!--e:전자계약서 작성하기 상세팝업-->
+
 	</div>  
 	<!-- //e: contentsWrap -->
 
