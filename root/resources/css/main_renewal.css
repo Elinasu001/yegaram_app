@@ -148,7 +148,7 @@
 
 /* 금액보이기 */
 .main-function-btn-wrap{display:flex;flex-direction:column;gap:10px;align-items:center; margin-top: 30px; text-align: center;}
-.main-function-btn-wrap .btn{/*display:block;*/ align-items:center; padding:8px 16px; border:solid 1px #dddddd; background:#FFFFFF; border-radius:17px;color:#666; font-weight: 400; font-size: 0.77778rem; line-height: 1rem; vertical-align: middle; margin-bottom: 8px;}
+.main-function-btn-wrap .btn{display:block; align-items:center; padding:8px 16px; border:solid 1px #dddddd; background:#FFFFFF; border-radius:17px;color:#666; font-weight: 400; font-size: 0.77778rem; line-height: 1rem; vertical-align: middle; margin-bottom: 8px;}
 .main-function-btn-wrap .btn:last-child { margin-bottom: 0; }
 .main-function-btn-wrap .btn[class*="amount-view-"]:before{display:inline-block;content:'';width:16px;height:16px;margin-right:5px; vertical-align: top; }
 .main-function-btn-wrap .amount-view-on:before{background:url(../images/common/ico_eye_on.png) no-repeat 50% / contain}
