@@ -1658,6 +1658,9 @@ body.on { position:fixed; top:0; }
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:last-child, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:last-child { margin-right:0; }
 .swiper-pagination-bullet { width:auto; height:auto; border-radius:0; background:none; opacity:1; }
 
+.login-guide .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal { top:inherit; }
+.login-guide .swiper-pagination-bullet { border-radius: 50%; }
+
 /*Case 2 - 본문 컨텐츠 영역*/
 .tabs-wrap.type2 .tab-item { flex-wrap:wrap; padding:4px; min-height:48px; border-radius:10px; background:#F8F8F8; }
 .tabs-wrap.type2 .tab-item:before { display:none; }
