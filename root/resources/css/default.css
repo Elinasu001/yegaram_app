@@ -2425,7 +2425,8 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .pr-detail .table-wrap th strong { font-weight:500; font-size:0.88889rem;  }
 .pr-detail table.line_fixed { margin-top:15px; margin-bottom:20px; }
 .product-detail  table.line_fixed td,
-.pr-detail table.line_fixed td{ font-weight:300; color:#333; width:220px; word-break: inherit; }
+.pr-detail table.line_fixed td { display:block; font-weight:300; color:#333; word-break: inherit; }
+.product-detail .__se_tbl_ext td { font-weight:300; color:#333; margin-top:15px;  }
 #intractInfo p[align="right"]:first-child,
 #intractInfo p[style="text-align: right;"]:first-child { font-size:0.88889rem; color:#666; margin-bottom:5px;  }
 #intractInfo  .table-wrap table + .tbl-txt { margin-top:15px; }
