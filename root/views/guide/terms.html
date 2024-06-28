@@ -561,7 +561,7 @@
 
             <!--[퍼블-2] : 금융상품 중요사항 안내 기획 반영-->
             <!--S: 금융상품 중요사항 안내 (팝업)-->
-            <div id="importantNotiPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display:none;">
+            <div id="importantNotiPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display:block;">
                 <div class="pop-header">
                     <h2 class="pop-title">금융상품 중요사항 안내</h2>
                     <button type="button" name="button" class="btn-layer-close">닫기</button>
@@ -574,7 +574,7 @@
                             <div class="accordion-area"><!--D: 확인버튼 눌렀을 경우 accordion-check display:block 적용 필요-->
                                 <p>1. 금리 및 변동여부 <span class="accordion-check" style="display:block;">확인</span></p>
                             </div>
-                            <div class="accordion-sub" style="display:block;"><!--D: accordion-area 클릭할 경우 accordion-sub 영역 display:block; 필요-->
+                            <div class="accordion-sub" style="display:none;"><!--D: accordion-area 클릭할 경우 accordion-sub 영역 display:block; 필요-->
                                 <div class="btn-cont-wrap">
                                     <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
                                 </div>
@@ -622,7 +622,7 @@
                             <div class="accordion-area">
                                 <p>2. 중도상환해약금 <span class="accordion-check">확인</span></p>
                             </div>
-                            <div class="accordion-sub">
+                            <div class="accordion-sub" >
                                 <div class="btn-cont-wrap">
                                     <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
                                 </div>
@@ -855,7 +855,7 @@
                             <div class="accordion-area">
                                 <p>6. 발생 가능한 불이익 <span class="accordion-check">확인</span></p>
                             </div>
-                            <div class="accordion-sub">
+                            <div class="accordion-sub" style="display:block;">
                                 <div class="btn-cont-wrap">
                                     <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
                                 </div>
@@ -908,8 +908,13 @@
 
                                         <div class="sub-tit-wrap">
                                             <p class="tit">기타 불이익</p>
-                                            <p class="txt">금리,중도상환,상환방법,담보,비용,상품에 따른 특수한 불이익은 각 중요사항 설명보기 항목을 참고 바랍니다.</p>
+                                            <!--[퍼블-5] : 수정-->
+                                            <ul class="list-bull">
+                                                <li>금리,중도상환,상환방법,담보,비용,상품에 따른 특수한 불이익은 각 중요사항 설명보기 항목을 참고 바랍니다.</li>
+                                            </ul>
+                                            <!--[퍼블-5] : 수정//-->
                                         </div>
+
                                     </div>
                                     
                                     <div class="btn-cont-wrap flexCenter">
@@ -921,7 +926,7 @@
                             <div class="accordion-area">
                                 <p>7. 금융소비자의 권리 <span class="accordion-check">확인</span></p>
                             </div>
-                            <div class="accordion-sub">
+                            <div class="accordion-sub" >
                                 <div class="btn-cont-wrap">
                                     <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
                                 </div>
@@ -954,20 +959,21 @@
                             <div class="accordion-area">
                                 <p>8. 상품별 유의사항 <span class="accordion-check">확인</span></p>
                             </div>
-                            <div class="accordion-sub">
+                            <div class="accordion-sub" style="display:block;">
                                 <div class="btn-cont-wrap">
                                     <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
                                 </div>
                                 <div class="guide-area">
                                     
                                     <div class="cont">
-                                        <div class="sub-tit-wrap">
+                                        <!--[퍼블-5] : 삭제-->
+                                        <!-- <div class="sub-tit-wrap">
                                             <p class="tit">『가계대출』은 가계가 생계유지 등 기타 사용목적으로 받는 대출상품을 총칭합니다.</p>
                                             <ul class="list-bull">
                                                 <li>개인(신용)정보 조회는 고객님의 개인신용평점에 영향을 주지 않습니다.</li>
                                                 <li>대출 계약의 체결만으로도 개인신용평점이 하락할 수 있으며 대출계약이 변제 혹은 이에 준하는 방식으로 거래가 종료된 경우에도 일정기간 개인신용평점의 산정에 영향을 줄 수 있습니다.</li>
                                             </ul>
-                                        </div>
+                                        </div> -->
 
                                         <div class="sub-tit-wrap">
                                             <p class="tit">『가계대출』은 가계가 생계유지 등 기타 사용목적으로 받는 대출상품을 총칭합니다.</p>
