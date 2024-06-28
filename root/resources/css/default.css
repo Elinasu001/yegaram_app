@@ -513,6 +513,7 @@ textarea:read-only {  border-color:#DDDDDD !important; }
 .form-wrap + div > .form-wrap.select-form-wrap,
 .form-wrap + div > .select-form-wrap { margin-top:10px; }
 .txt-list-wrap + div > .form-wrap { margin-top: 40px; }
+.form-all-wrap .form-tit + .form-wrap { margin-top:0; }
 .form-all-wrap > .select-wrap + .select-wrap { margin-top:10px; }
 .form-wrap + .form-wrap:has(.form-tit)  { margin-top:40px; }
 .form-wrap + .select-wrap { margin-top:30px; } 
@@ -2575,7 +2576,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 /* .visaul-info-box .tag { display:block; font-weight:400; color:#999999; font-size:0.66667rem; line-height:1.58334; } */
 .visaul-info-box .info-tit { position:relative; display:inline-block; width:100%; /*margin-right:35px;*/ font-weight:700; color:#333333; font-size:1rem; line-height:1.38889rem; }
 .visaul-info-box .flag-tit-wrap + .info-tit { margin-top:12px; }
-.visaul-info-box .account-area { margin-top:12px; }
+.visaul-info-box .account-area { margin-top:7px; }
 /* .flag-tit-wrap + * { margin-top:12px; } */
 .visaul-info-box:has(.btn-set) .info-tit {width: 80%}
 .visaul-info-section .visaul-info-box { margin-top:0; }

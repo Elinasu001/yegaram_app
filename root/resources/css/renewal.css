@@ -68,10 +68,10 @@ body.fix { overflow:hidden; }
 /* .btn.btn-gray { background:#F2F4F6; color:#454545; font-weight:500; } */
 .btn.btn-info { background:#FFFFFF; border:1px solid #DDDDDD; color:#26282C; }
 /* .btn.btn-primary { background:#7446D1; color:#FFFFFF; border:1px solid #7446D1; } */
-.btn.btn-sub { background:#F2F4F6; color:#26282C; }
+.btn.btn-sub { background:hsl(210, 18%, 96%); color:#26282C; }
 
 /* .btn-cont-wrap .btn.btn-border { border:1px solid #DDDDDD; background:#fff; font-weight:500; color:#454545; } */
-.btn.btn-add {display:inline-block; width:unset; padding:0 54px; background:transparent; border:1px solid #4E32A5; font-size:1rem; line-height:48px; font-weight:500; color:#4E32A5; }
+.btn.btn-add {display:inline-block; width:unset; padding:0 54px; background:#FFFFFF; border:1px solid #4E32A5; font-size:1rem; line-height:48px; font-weight:500; color:#4E32A5; }
 .btn.btn-sm { display:inline-flex; align-items: center; /*display:inline-block;*/ width:unset; height:30px; padding:0px 16px;  background:#FFFFFF; border:1px solid #DDDDDD; border-radius:17px;  font-size:0.77778rem; line-height: 1rem; font-weight:400; color:#26282C; letter-spacing: -0.5px;}
 .btn.btn-sm.green { background: #E3F6F8; border:1px solid #E3F6F8; color:#00A2C4; }
 .btn.btn-sm.pink { background: #FFE9F5; border:1px solid #FFE9F5; color:#F648AA; }

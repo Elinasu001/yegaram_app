@@ -86,19 +86,26 @@
 					</div>
 				</div>
                 <!-- D : sub-tit-wrap, selct-wrap 그룹으로 묶기-->
-                <div class="form-all-wrap">
-                    <div class="sub-tit-wrap"> 
-                        <p class="tit">변경 이체한도</p>
-                    </div>
 
-                    <div class="select-wrap">
-                        <div class="select-box on">
-                            <label for="">1회 이체한도</label>
-                            <span class="option"><span>1,500,000</span>원</span>
+                <!--[퍼블-1] 개발은 인풋으로 적용중 퍼블도 개준으로 적용 완료 - 단 레이아웃 공통이랑 다름 - 확인 바랍니다. -->
+                <div class="form-all-wrap">
+                    
+                    <div class="form-tit">
+                        <span>변경 이체한도</span>
+                    </div>
+                    
+                    <div class="form-wrap">
+                        <label for="" class="formlabel">1회 이체한도</label>
+                        <div class="input">
+                            <input type="tel" title="1회 이체한도" id="" class="inp" value="" placeholder="1회 이체한도 입력" required="">
+                            <span class="static-unit">원</span>
                         </div>
-                        <div class="select-box on">
-                            <label for="">1일 이체한도</label>
-                            <span class="option"><span>1,500,000</span>원</span>
+                    </div>
+                    <div class="form-wrap">
+                        <label for="" class="formlabel">1일 이체한도</label>
+                        <div class="input">
+                            <input type="tel" title="1일 이체한도" id="" class="inp" value="" placeholder="1일 이체한도 입력" required="">
+                            <span class="static-unit">원</span>
                         </div>
                     </div>
                 </div>
@@ -108,7 +115,6 @@
                     <div class="sub-tit-wrap">
                         <p class="tit">보안매체에 따른 최대 이체한도</p>
                     </div>
-
                     <ul class="list-bull style-big">
                         <li>
                             <strong>OTP</strong>
@@ -133,6 +139,7 @@
                         <li>인터넷뱅킹과 텔레뱅킹 서비스도 함께 적용돼요</li>
                     </ul>
                 </div>
+                <!--[퍼블-1] 개발은 인풋으로 적용중 퍼블도 개발 기준으로 적용- 단 개발 레이아웃 공통이랑 다름 - 확인 바랍니다. //-->
 			</div>
 			<!-- //s: default-wrap -->
 		</div>
@@ -146,7 +153,7 @@
         </div>
 		<!-- //e: fixed-btn-wrap -->
         <!-- s : 한도제한 알림 -->
-        <div id="lyPop01" class="layerpopup layer-up has-button show" style="display:block;">
+        <div id="lyPop01" class="layerpopup layer-up has-button show" style="display:none;">
             <div class="content-wrap">
                 <div class="pop-header">
                     <h2 class="pop-title">한도제한 알림</h2>
@@ -169,7 +176,7 @@
 
         <!-- e : 한도제한 알림 -->
          <!-- s : 보안매체 등록 팝업 -->
-         <div id="lyPop02" class="layerpopup layer-up has-button show" style="display:block;">
+         <div id="lyPop02" class="layerpopup layer-up has-button show" style="display:none;">
             <div class="content-wrap">
                 <div class="pop-header">
                     <h2 class="pop-title">보안매체 등록</h2>
