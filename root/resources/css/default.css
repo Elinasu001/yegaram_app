@@ -1076,7 +1076,8 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 /** normal style **/
 .btn-wrap { display:flex; gap:10px; }
 .btn-wrap .btn { display:block; position:relative; width:100%; height:60px; border-radius:30px; background:#4E32A5; font-weight:500; color:#fff; font-size:1rem; line-height:60px; text-align:center; }
-.btn-wrap.flexRow .btn.btn-info { width:53%; }
+/* .btn-wrap.flexRow .btn.btn-info { width:53%; } */
+.btn-wrap.flexRow .btn.btn-info + .btn { width:150%; }
 .btn-wrap .btn + .btn.txt { padding:0; padding-top:10px; }
 
 /** disabled style **/
@@ -1656,7 +1657,7 @@ body.on { position:fixed; top:0; }
 
 /** _탭리스트 swiper 적용 case **/
 .default-wrap.product .tabs.swiper { margin:0 -20px; } /*네이버앱 대응*/
-.tabs.swiper .swiper-pager { padding:0 20px; background:#FFFFFF; }
+.tabs.swiper .swiper-pager { display:inline-block; overflow-y:hidden; overflow-x: scroll; white-space: nowrap; padding:0 20px; background:#FFFFFF; }
 .tabs.swiper .swiper-slide > * { padding:0 20px 20px; }
 .tabs.swiper .swiper-slide > *:first-child { margin-top:30px; }
 .tabs.swiper .swiper-slide:has(.visaul-info-box) .form-wrap + div { margin-top:0; }
@@ -2393,13 +2394,13 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .visual-area .flag-tit-wrap .tit { display:block; margin-top:10px; font-size:1.22222rem; font-weight:600; color:#260F54; word-break:normal; }
 .product-detail .visual-area .label-info-wrap { padding:50px 0 40px; }
 .product-detail .visual-area .label-info-wrap:has(+ .text-bar-list.type-box) { padding-bottom:30px; }
-.product-detail .product-info { margin:0 -20px; /*padding:0; width:calc(100% + 40px);*/ }
+.product-detail .product-info { margin:0 -20px; padding:0; width:calc(100% + 40px); }
 .product-detail .product-info > h3 { display:block; padding:0 20px; height:60px; line-height:60px; font-weight:500; font-size:0.88889rem; border-bottom:1px solid #EDEDED; }
-/* .product-detail .product-info > div { padding:0 20px; } */
+.product-detail .product-info > div { padding:0 20px; }
+.product-detail .product-info { margin:0 -20px; padding:0; width:calc(100% + 40px); }
+.product-detail .product-info > h3 { display:block; padding:0 20px; height:60px; line-height:60px; font-weight:500; font-size:0.88889rem; border-bottom:1px solid #EDEDED; }
+.product-detail .product-info > div { padding:0 20px; }
 .product-detail .product-info > div > .pr-detail.default-wrap { padding:0; }
-
-
-
 .product-detail .text-bar-list li { font-weight:500; color:#260F54; }
 .product-detail .text-bar-list li:before { background:#260F54; }
 .product-detail .text-bar-list.type-box li:before { background:#EEEEEE; }
