@@ -1530,7 +1530,7 @@ body.on { position:fixed; top:0; }
 .type-alert.on::before { content:''; z-index:2; position:fixed; left:0; top:0; display:inline-block; width:100%; height:100%; background:#000; opacity:0.2;  }
 .layerpopup.on { z-index:105; }
 
-.layerpopup .fixed-btn-wrap { /*margin-top:10px;*/  /*background:#fff;*/ bottom:1px; }
+.layerpopup .fixed-btn-wrap { /*margin-top:10px;*/  background:#fff; bottom:1px; }
 .layerpopup.layer-up .fixed-btn-wrap {  padding:10px 20px 20px; }
 .layerpopup.has-button .ly-scroll-con.ly-select { padding:0 20px 0px !important; }
 /* 버튼 1개 있을 경우 */
@@ -2322,6 +2322,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .visual-area:first-of-type { padding:20px 20px 40px; text-align:center; }
 .product-detail .visual-area:nth-of-type(even) { background:#fff; }
 
+
 /* 예적금상품 */
 .product-detail .visual-area.img01 { background:url("../images/common/bg_proudct01.png") no-repeat calc(100% - 20px) calc(100% - 20px); background-size:105px; }
 .product-detail .visual-area.img02 { background:#F8F8F8 url("../images/common/bg_proudct02.png") no-repeat calc(100% - 20px) calc(100% - 20px); background-size:105px; }
@@ -2386,13 +2387,13 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .visual-area .flag-tit-wrap .tit { display:block; margin-top:10px; font-size:1.22222rem; font-weight:600; color:#260F54; word-break:normal; }
 .product-detail .visual-area .label-info-wrap { padding:50px 0 40px; }
 .product-detail .visual-area .label-info-wrap:has(+ .text-bar-list.type-box) { padding-bottom:30px; }
-.product-detail .product-info { margin:0 -20px; padding:0; width:calc(100% + 40px); }
+.product-detail .product-info { margin:0 -20px; /*padding:0; width:calc(100% + 40px);*/ }
 .product-detail .product-info > h3 { display:block; padding:0 20px; height:60px; line-height:60px; font-weight:500; font-size:0.88889rem; border-bottom:1px solid #EDEDED; }
-.product-detail .product-info > div { padding:0 20px; }
-.product-detail .product-info { margin:0 -20px; padding:0; width:calc(100% + 40px); }
-.product-detail .product-info > h3 { display:block; padding:0 20px; height:60px; line-height:60px; font-weight:500; font-size:0.88889rem; border-bottom:1px solid #EDEDED; }
-.product-detail .product-info > div { padding:0 20px; }
+/* .product-detail .product-info > div { padding:0 20px; } */
 .product-detail .product-info > div > .pr-detail.default-wrap { padding:0; }
+
+
+
 .product-detail .text-bar-list li { font-weight:500; color:#260F54; }
 .product-detail .text-bar-list li:before { background:#260F54; }
 .product-detail .text-bar-list.type-box li:before { background:#EEEEEE; }
@@ -2407,13 +2408,14 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .pr-detail .list-tit,
 .pr-detail p br + strong { display:block; font-size:0.88889rem; line-height:1.38889; font-weight:600; }
 .pr-detail b{ font-weight:400; font-size:0.88889rem; font-weight:400; color:#4e32a5;  }
-.product-detail .product-info ~ .sub-info-wrap { margin-bottom:40px; }
+/* .product-detail .product-info ~ .sub-info-wrap { margin-bottom:40px; } */
 .pr-detail .table-wrap{ overflow-x:auto; }
 #intractInfo .table-wrap th,
 .pr-detail .table-wrap th { border-top:1px solid #EEEEEE; font-weight:500; font-size:0.88889rem; }
 .pr-detail .table-wrap th strong { font-weight:500; font-size:0.88889rem;  }
 .pr-detail table.line_fixed { margin-top:15px; margin-bottom:20px; }
-.pr-detail table.line_fixed td{ font-weight:300; color:#333; }
+.product-detail  table.line_fixed td,
+.pr-detail table.line_fixed td{ font-weight:300; color:#333; width:220px; word-break: inherit; }
 #intractInfo p[align="right"]:first-child,
 #intractInfo p[style="text-align: right;"]:first-child { font-size:0.88889rem; color:#666; margin-bottom:5px;  }
 #intractInfo  .table-wrap table + .tbl-txt { margin-top:15px; }
@@ -2714,3 +2716,15 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .amount.bigText input[type="amount"]:valid.form-control { color:#4E32A5; font-weight:600; }
 .amount.bigText .amount-txt { font-size:2rem; line-height:2rem; }
 
+
+
+/* 상품소개 - 예가람 기준  */
+/* .product-detail .product-info  { margin:0px }
+.product-detail .arrow-button-list { margin:0 -20px; padding:0px; width:calc(100% + 40px); }
+.product-detail .pr-detail.default-wrap { padding:0 0 40px; }
+.product-detail .list-tit:first-of-type { margin-top:25px !important; }
+.product-detail .list-tit,
+.product-detail p br + strong { display:block; font-size:0.8889rem; line-height: 1.388898; font-weight:600; }
+.product-detail .list-tit { padding-top:20px !important; display:block; }
+.product-detail .bull { display:block; margin-top:15px; font-size:0.88889rem; line-height: 1.38889; font-weight: 400; }
+.product-detail .sub-info-wrap { margin-bottom:40px; } */
