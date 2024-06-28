@@ -173,7 +173,7 @@
 .main .flag { vertical-align:inherit; vertical-align: top; }
 
 /* 마이뱅킹 내 카드 로딩바 */
-.visaul-info-box { padding:20px 20px 24px; }
+/* .visaul-info-box { padding:20px 20px 24px; } *//*디자인 공통으로 맞춤*/
 .visaul-info-box .skeleton-wrap .flex { display:flex; }
 .visaul-info-box .skeleton-wrap .skeleton-item { height:15px; border-radius:5px; background:#EEEEF1; }
 .visaul-info-box .skeleton-wrap .skeleton-item + .skeleton-item { margin-left:10px; }
