@@ -857,6 +857,7 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .form-wrap.w50 > div.input { display:flex; /*height:100%;*/ }
 .form-wrap.w50 > div.input > span { position:relative; display:inline-block; width:50%; height:50px; line-height:50px; }
 .form-wrap.w50 > div.input > span.inputTextHyphen { width:30px; color:#999999; text-align:center; line-height:50px; }
+.form-wrap.on .jumintext { color:#4E32A5; }
 .jumintext { position:absolute; left:10px; top:50%; transform:translate(0, -50%); letter-spacing:6px; color:#CCCCCC; font-size:0.55556rem; }
 :disabled ~ .jumintext { color:#DDDDDD; }
 input[type="hidden"] ~ .jumintext { left:15px; }
