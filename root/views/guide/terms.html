@@ -1139,6 +1139,36 @@
                 </div>
             </div>
 
+            <script>
+
+                $(document).ready(function(){
+                
+                    // 하단배너는 고정
+                    var newsSlider = new Swiper('.loan-slider-wrap.swiper', { 
+                        slidesPerView: 1,
+                        spaceBetween : 20,
+                        pagination : {
+                            el : '.swiper-pagination',
+                            // clickable : true,
+                        },
+                        observer:true,
+                        observeParents:true,
+                        autoplay: {
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        },
+                        loop : true,
+                        // loopedSlides: 1,
+                        centeredSlides: true,
+                        // initialSlide: 0,
+                        //   slidesPerGroup: 1,
+                        //   roundLengths: true,
+                        loopAdditionalSlides: 1,
+                    });
+                    
+                });
+            </script>
+
         </div>
         <!--e:전자계약서 작성하기 상세팝업-->
 
