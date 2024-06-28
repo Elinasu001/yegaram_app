@@ -2431,7 +2431,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 #intractInfo  .table-wrap table + .tbl-txt { margin-top:15px; }
 #intractInfo .tbl-txt { display:block; margin-top:5px; font-size: 0.88889rem; line-height: 1.38889; font-weight:300; }
 
-.flag-tit-wrap { /*padding-right:40px;*/ display: flex; align-items:center; gap:6px; }
+.flag-tit-wrap { /*padding-right:40px;*/ display: flex; align-items:flex-start; gap:6px; }
 /* .flag-tit-wrap .flag { margin-right:6px; } */
 /* .flag-tit-wrap:has(.tooltip-wrap.type2+.tooltip-wrap.type2) { padding-right:66px; } */
 .flag-tit-wrap .tit { font-size:1rem; line-height:1.38889rem; flex:1; }
