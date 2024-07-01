@@ -2208,12 +2208,14 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 /* 계좌선택 */
 .bank_list li:first-child { margin-top:10px; }
 .bank_list li + li { margin-top:26px; }
-.bank_list li { display:inline-block; width:100%; /*margin-bottom:8px;*/ font-size:0.77778rem; height:38px; line-height:38px; vertical-align:middle; }/* 2023-07-11 수정 */
+.bank_list li { display:inline-block; width:100%; /*margin-bottom:8px;*/ font-size:0.77778rem; /*height:38px;  line-height:38px;*/ vertical-align:middle; }/* 2023-07-11 수정 */
 .bank_list li a { display:inline-block; position:relative; width:100%; padding:0px 0px 0px 46px; line-height:1.4375;}
-.bank_list li a::before { content:''; display:inline-block; position:absolute; left:0; top:50%; transform:translate(0, -50%); width:36px; height:36px; border-radius:50%; overflow:hidden; border:solid 1px #eee; }
+.bank_list li a::before { content:''; display:inline-block; position:absolute; left:0; top:0; transform:translate(0); width:36px; height:36px; border-radius:50%; overflow:hidden; border:solid 1px #eee; }
 .bank_list li.none { padding-top:90px; color:#666666; font-size:0.88889rem; line-height:1.4375; text-align:center; }
 .bank_list .tit { display:block; font-weight:500; color:#333333; font-size:0.88889rem; /*line-height:1;*/ }
 .bank_list .exp { font-weight:400; color:#999999; font-size:0.77778rem; line-height:1.5; }
+.bank_list.logo .exp { display:block; }
+/* .bank_list.logo li a::before { top:0; transform: translate(0);} */
 /*기능 변경으로 사용 안함 - 버튼 형식으로 변경 */
 /* .bank_list.star li a::after { content:""; position:absolute; top:50%; right:0; width:24px; height:24px; background:url("../images/common/ico-star_off.png") no-repeat center; background-size:100%; transform:translateY(-50%); } */
 /* .bank_list.star li.active a::after { background-image:url("../images/common/ico-star_on.png"); } */
@@ -2336,7 +2338,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .bor-box-wrap + .txtbox-wrap { margin-top:20px; }
 
 /** [공통] 상품상세 템플릿 (예금) **/
-.product-detail .default-wrap { padding-top:0; }
+.product-detail .default-wrap { padding:0 20px 40px;}
 .product-detail .visual-area { margin:0 -20px; padding:20px 20px 145px; background:#F8F8F8; }
 .product-detail .visual-area:first-of-type { padding:20px 20px 40px; text-align:center; }
 .product-detail .visual-area:nth-of-type(even) { background:#fff; }
