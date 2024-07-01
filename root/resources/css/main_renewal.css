@@ -255,6 +255,7 @@
 .sns-news-list a { display: block; box-sizing: border-box; padding: 20px; height: 149px; background: url('../images/main/ico_sns_news.png') no-repeat right bottom /142px auto; }
 .sns-tit { display: inline-block; border-radius: 12px; background-color: #FFFFFF; font-size:0.66667rem; font-weight: 500; color: #DDAE64; padding: 4px 12px;}
 .sns-txt { font-size:0.88889rem; line-height:1.278rem; font-weight: 600; color: #000000; margin-top: 15px; box-sizing: border-box; padding-right: 120px; height: 69px; overflow: hidden; }
+.sns-news-area a { display: block; }
 
 .contentsWrap [class*="-area"].notice-area .area-title-box { margin-bottom: 0; }
 .notice-list li { border-bottom: 1px solid #DDE2E8; background: url('../images/main/arrow_right_black.png') no-repeat 100%/16px auto; }
@@ -272,6 +273,9 @@
 .recom-area .area-title .point {color: #ED008D;}
 .recom-area .account-info > dl { margin-top: 0; font-size:0.66667rem; line-height:1.056rem; font-weight: 300; color: #757575; }
 .recom-area .account-info > dl > dd { color: #757575; }
+
+.esg-logo { margin-top: 15px; text-align: center; }
+.esg-logo img { width: 147px; }
 
 /* 큰 글씨 */
 .font-size-2 .quick-service-list li { width: 100%; }
