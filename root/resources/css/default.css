@@ -466,6 +466,12 @@ input[type="text"]:read-only,
 input[type="password"]:read-only,
 input[type="tel"]:read-only:not(.form-cert input:read-only),
 textarea:read-only {  border-color:#DDDDDD !important; }
+
+.form-wrap > div.input input[type="text"]:read-only,
+.form-wrap > div.input input[type="password"]:read-only,
+.form-wrap > div.input input[type="tel"]:read-only:not(.form-cert input:read-only)
+textarea:read-only { color:#999999; }
+
 /* .essential { margin-left:5px; color:#ff0000; } */
 .essential { position:relative; }
 .essential::after { content:"*"; position:absolute; padding-left:3px; color:#ff0000;}
@@ -511,7 +517,8 @@ textarea:read-only {  border-color:#DDDDDD !important; }
 .form-wrap + .radio-list { margin-top:20px; }
 /*개발 레이아웃 적용*/
 .form-wrap + div > .form-wrap.select-form-wrap,
-.form-wrap + div > .select-form-wrap { margin-top:10px; }
+.form-wrap + div > .select-form-wrap,
+.form-all-wrap .select-form-wrap { margin-top:10px; }
 .txt-list-wrap + div > .form-wrap { margin-top: 40px; }
 .form-all-wrap .form-tit + .form-wrap { margin-top:0; }
 .form-all-wrap > .select-wrap + .select-wrap { margin-top:10px; }
@@ -551,7 +558,7 @@ textarea:read-only {  border-color:#DDDDDD !important; }
 .form-wrap .action ~ .input input:focus::placeholder { color:#CCCCCC; } */
 /* .form-wrap > div.input input:focus { color:#333333; } */
 .form-wrap > div.input input:focus { color:#333333; border-color:#B088FF; }
-.form-wrap > div.input input:read-only { color:#CCCCCC; }
+/* .form-wrap > div.input input:read-only { color: 999999; } */
 /* .form-wrap > div.input input[type="value"] { color:red; } */
 .form-wrap > div.input input:valid { color:#333333; }
 .form-wrap > div.input input[type="password"]:focus { color:#DDDDDD !important; }
@@ -2401,9 +2408,9 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .product-info { margin:0 -20px; padding:0; width:calc(100% + 40px); }
 .product-detail .product-info > h3 { display:block; padding:0 20px; height:60px; line-height:60px; font-weight:500; font-size:0.88889rem; border-bottom:1px solid #EDEDED; }
 .product-detail .product-info > div { padding:0 20px; }
-.product-detail .product-info { margin:0 -20px; padding:0; width:calc(100% + 40px); }
+/* .product-detail .product-info { margin:0 -20px; padding:0; width:calc(100% + 40px); }
 .product-detail .product-info > h3 { display:block; padding:0 20px; height:60px; line-height:60px; font-weight:500; font-size:0.88889rem; border-bottom:1px solid #EDEDED; }
-.product-detail .product-info > div { padding:0 20px; }
+.product-detail .product-info > div { padding:0 20px; } */
 .product-detail .product-info > div > .pr-detail.default-wrap { padding:0; }
 .product-detail .text-bar-list li { font-weight:500; color:#260F54; }
 .product-detail .text-bar-list li:before { background:#260F54; }
@@ -2420,7 +2427,8 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .pr-detail p br + strong { display:block; font-size:0.88889rem; line-height:1.38889; font-weight:600; }
 .pr-detail b{ font-weight:400; font-size:0.88889rem; font-weight:400; color:#4e32a5;  }
 /* .product-detail .product-info ~ .sub-info-wrap { margin-bottom:40px; } */
-.pr-detail .table-wrap{ overflow-x:auto; }
+.pr-detail .table-wrap,
+#intrateHtml .table-wrap { overflow-x:auto; }
 #intractInfo .table-wrap th,
 .pr-detail .table-wrap th { border-top:1px solid #EEEEEE; font-weight:500; font-size:0.88889rem; }
 .pr-detail .table-wrap th strong { font-weight:500; font-size:0.88889rem;  }
@@ -2430,8 +2438,11 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .__se_tbl_ext td { font-weight:300; color:#333; margin-top:15px;  }
 #intractInfo p[align="right"]:first-child,
 #intractInfo p[style="text-align: right;"]:first-child { font-size:0.88889rem; color:#666; margin-bottom:5px;  }
-#intractInfo  .table-wrap table + .tbl-txt { margin-top:15px; }
-#intractInfo .tbl-txt { display:block; margin-top:5px; font-size: 0.88889rem; line-height: 1.38889; font-weight:300; }
+#intractInfo  .table-wrap table + .tbl-txt,
+#intrateHtml .table-wrap table + .tbl-txt,
+#intrateHtml .table-style + .tbl-txt { margin-top:15px; }
+#intractInfo .tbl-txt,
+#intrateHtml .tbl-txt { display:block; margin-top:5px; font-size: 0.88889rem; line-height: 1.38889; font-weight:300; }
 
 .flag-tit-wrap { /*padding-right:40px;*/ display: flex; align-items:flex-start; gap:6px; }
 /* .flag-tit-wrap .flag { margin-right:6px; } */
@@ -2741,3 +2752,13 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .list-tit { padding-top:20px !important; display:block; }
 .product-detail .bull { display:block; margin-top:15px; font-size:0.88889rem; line-height: 1.38889; font-weight: 400; }
 .product-detail .sub-info-wrap { margin-bottom:40px; } */
+.product-detail .product-info .arrow-button-list { margin-top:15px; }
+.product-detail .sub-info-wrap { margin-bottom:30px; }
+.layerpopup #intrateHtml { margin-top:30px; }
+.layerpopup #intrateHtml p[style='text-align: right;'],
+.layerpopup #intrateHtml p[style='text-align: right; '] { margin-bottom:10px;}
+#intrateHtml .table-style thead th { padding:14px 3px; background: #F8F8F8; font-weight:500; color:#454545; }
+#intrateHtml .table-style th,
+#intrateHtml .table-style td { border-bottom:1px solid #EEEEEE; border-right:1px solid #EEEEEE; font-size:0.88889rem; text-align:center; word-break:keep-all; }
+#intrateHtml .table-style tbody td:last-child,
+#intrateHtml .table-style thead th:last-child { border-right:0; }
