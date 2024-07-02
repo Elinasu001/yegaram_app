@@ -2422,7 +2422,6 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .sub-tit-wrap { margin:50px 0; }
 .product-detail .sub-tit-wrap:first-of-type { margin-top:25px; }
 
-
 .flag-tit-wrap { /*padding-right:40px;*/ display: flex; align-items:flex-start; gap:6px; }
 /* .flag-tit-wrap .flag { margin-right:6px; } */
 /* .flag-tit-wrap:has(.tooltip-wrap.type2+.tooltip-wrap.type2) { padding-right:66px; } */
@@ -2755,6 +2754,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail  table td[style="padding-left:10px; vertical-align:top;"] { font-size:0.88889rem; font-weight:300; padding:0 !important; }
 .product-detail table[class="__se_tbl_ext"] { margin-top:15px; }
 .product-detail .__se_tbl_ext td { margin-top:10px;  }
+.product-detail p[style="margin-left: 80px;"] { margin-left:0 !important; }
 
 #intractInfo p[align="right"]:first-child,
 #intractInfo p[style="text-align: right;"]:first-child { font-size:0.88889rem; color:#666; margin-bottom:5px;  }
