@@ -2782,7 +2782,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .terms-txt .table-style { border-bottom:1px solid #CCCCCC; }
 .terms-txt .table-style thead th { font-size:0.88889rem; text-align:center; color:#333333; font-weight:500; }
 .terms-txt .table-style thead th { background:#F8F8F8 !important; }
-.terms-txt .table-style th, .table-style td { padding:12px 15px; color:#626C74; text-align:left; vertical-align:middle; }
+.terms-txt .table-style th, .table-style td { padding:20px; color:#626C74; text-align:left; vertical-align:middle; }
 .terms-txt .table-style th, .table-style td { border-right:1px solid #EEEEEE; }
 .terms-txt .table-style tbody th, .table-style tbody td, .table-style tfoot th, .table-style tfoot td { border-top:1px solid #EEEEEE;font-size:0.88889rem; color:#666666; /*vertical-align:top;*/ }
 /* .terms-txt .table-style td a { color:#626C74; } */
