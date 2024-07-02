@@ -470,7 +470,7 @@ textarea:read-only {  border-color:#DDDDDD !important; }
 .form-wrap > div.input input[type="text"]:read-only,
 .form-wrap > div.input input[type="password"]:read-only,
 .form-wrap > div.input input[type="tel"]:read-only:not(.form-cert input:read-only)
-textarea:read-only { color:#999999; }
+textarea:read-only { color:#333333; }
 
 /* .essential { margin-left:5px; color:#ff0000; } */
 .essential { position:relative; }
