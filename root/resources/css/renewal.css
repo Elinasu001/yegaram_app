@@ -1381,16 +1381,3 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .layerpopup .pop-arrorw-area .next { width:40px; height:40px; }
 .layerpopup .pop-arrorw-area .prev { background:url(../../resources/images/header/pop_btn_prev.png) no-repeat 100%/40px auto; }
 .layerpopup .pop-arrorw-area .next { background:url(../../resources/images/header/pop_btn_next.png) no-repeat 100%/40px auto; }
-
-.parentDivMain { border-top: 1px solid #DDDDDD; margin-top: 20px; }
-.parentText {font-size:0.88889rem; font-weight: 400; margin: 25px 0 7px; }
-.parentText span { font-weight: 500; }
-.parentDiv { border-bottom: 1px solid #DDDDDD; padding: 18px 0; }
-.parentDiv.bB0 { border-bottom: 0; padding-bottom: 0; }
-.parentDiv p { font-size:0.88889rem; font-weight: 500; }
-.parentDiv .DivInSpanTag { float: right; margin-right: 20px; }
-.subDiv { margin-top: 25px; font-size: 16px; display: block;  }
-.subDiv .btn-box{ margin-top: 28px; text-align: center; display: block; }
-.subDiv .btn-box button.tiny { float: none; margin: 0; }
-.guide-means { display:none; padding:15px 20px 30px 20px; margin-top: 15px; /*border-radius:15px;*/ border-radius: 7px; background: #F8F8F8;}
-.guide-means .ctm-check { margin-top:15px; }
