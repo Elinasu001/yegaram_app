@@ -263,7 +263,7 @@ html.font-size-3{ font-size: 24px;}
 /* .select-wrap .info-txt:last-child { margin-bottom:40px; } */
 /* .info-txt + .form-wrap.password,
 .info-txt + .form-wrap.address { padding-top:30px; } */
-.info-txt + .btn-cont-wrap.btn-add { margin-top:40px; }
+.info-txt + .btn-cont-wrap .btn-add { margin-top:40px; }
 /* .info-txt + .form-wrap:has(.select-wrap) { padding-top:30px; } */
 .info-txt + .form-wrap:has(.check-box) { margin-top:20px; }
 .info-txt + .check-box { margin-top:20px; }
