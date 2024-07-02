@@ -2753,7 +2753,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail table.line_fixed,
 .pr-detail table.line_fixed { font-size:0.88889rem; font-weight:500; margin-top:15px; margin-bottom:20px; }
 .product-detail  table.line_fixed td,
-.pr-detail table.line_fixed td { display:block; font-size:0.88889rem; font-weight:400; color:#333333; word-break: inherit; }
+.pr-detail table.line_fixed td { display:block; font-size:0.88889rem; font-weight:300; color:#333333; word-break: inherit; }
 .product-detail  table td[style="padding-left: 10px; vertical-align: top;"],
 .product-detail  table td[style="padding-left:10px; vertical-align:top;"] { font-size:0.88889rem; font-weight:300; padding:0 !important; }
 .product-detail table[class="__se_tbl_ext"] { margin-top:10px; }
