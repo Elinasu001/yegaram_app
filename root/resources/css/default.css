@@ -2755,14 +2755,15 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail table.line_fixed,
 .pr-detail table.line_fixed { font-size:0.88889rem; font-weight:500; margin-top:10px; margin-bottom:10px; }
 .product-detail  table.line_fixed td,
-.pr-detail table.line_fixed td { /*display:block;*/ font-size:0.88889rem; font-weight:300; color:#333333; word-break: inherit; }
+.pr-detail table.line_fixed td { /*display:block;*/ font-size:0.88889rem; font-weight:400; color:#333333; word-break: inherit; }
 .product-detail  table td[style="padding-left: 10px; vertical-align: top;"],
-.product-detail  table td[style="padding-left:10px; vertical-align:top;"] { font-size:0.88889rem; font-weight:300; padding:0 !important; }
+.product-detail  table td[style="padding-left:10px; vertical-align:top;"] { font-size:0.88889rem; font-weight:400; padding:0 !important; }
 .product-detail table[class="__se_tbl_ext"] { margin-top:10px; }
 .product-detail .__se_tbl_ext td { margin-top:10px;  }
 .product-detail p[style="margin-left: 80px;"] { margin-left:0 !important; }
 .product-detail .list-tit + .bull + .bull { margin-bottom:0px !important; }
 
+#intrateHtml p { font-size: 0.88889rem; font-weight:400;}
 #intractInfo p[align="right"]:first-child,
 #intractInfo p[style="text-align: right;"]:first-child { font-size:0.88889rem; color:#666; margin-bottom:5px;  }
 #intractInfo  .table-wrap table + .tbl-txt,
@@ -2796,7 +2797,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .layerpopup #intrateHtml .default-wrap { padding:0px !important;  margin-bottom:0px !important; margin-top:25px; }
 .layerpopup #intrateHtml .s-tit { font-size: 0.88889rem; }
 .layerpopup #intrateHtml .list-bull { margin-top:0px; }
-.layerpopup #intrateHtml .link-list > .tit { font-size:18px; margin-bottom:10px; font-weight:600; }
+.layerpopup #intrateHtml .link-list > .tit { font-size: 0.88889rem; margin-bottom:10px; font-weight:600; }
 
 /* 상품소개 - 예가람 기준  */
 
