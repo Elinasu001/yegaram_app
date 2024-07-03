@@ -2731,7 +2731,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail p,
 .product-detail .bull,
 .pr-detail .bull,
-.product-detail .star { display:block; margin-top:5px; font-size:0.88889rem; line-height:1.38889; font-weight:300; }
+.product-detail .star { display:block; margin-top:5px; font-size:0.88889rem; line-height:1.38889; font-weight:400; }
 /* .product-detail .bull { margin-bottom:40px !important; }
 .product-detail .bull { margin-bottom:40px !important; } */
 .product-detail .list-tit,
@@ -2740,7 +2740,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .pr-detail p br + strong { display:block; font-size:0.88889rem; line-height:1.38889; font-weight:600; }
 .product-detail b,
 .pr-detail b{ font-weight:400; font-size:0.88889rem; font-weight:400; color:#4e32a5;  }
-.product-info > .list-tit { font-size:0.88889rem; font-weight:300; margin-top:0px !important; padding-top:5px !important; color:#333333; }
+/* .product-info > .list-tit { font-size:0.88889rem; font-weight:300; margin-top:0px !important; padding-top:5px !important; color:#333333; } */
 .product-detail .list-tit + .list-tit { margin-top:15px !important; }
 /* .product-detail .product-info ~ .sub-info-wrap { margin-bottom:40px; } */
 
@@ -2761,6 +2761,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail table[class="__se_tbl_ext"] { margin-top:10px; }
 .product-detail .__se_tbl_ext td { margin-top:10px;  }
 .product-detail p[style="margin-left: 80px;"] { margin-left:0 !important; }
+.product-detail .list-tit + .bull + .bull { margin-bottom:0px !important; }
 
 #intractInfo p[align="right"]:first-child,
 #intractInfo p[style="text-align: right;"]:first-child { font-size:0.88889rem; color:#666; margin-bottom:5px;  }
@@ -2771,7 +2772,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 #intrateHtml .tbl-txt { display:block; margin-top:5px; font-size: 0.88889rem; line-height: 1.38889; font-weight:300; }
 #intrateHtml .table-style thead th { padding:14px 3px; background: #F8F8F8; font-weight:500; color:#454545; }
 #intrateHtml .table-style th,
-#intrateHtml .table-style td { border-bottom:1px solid #EEEEEE; border-right:1px solid #EEEEEE; font-size:0.88889rem; text-align:center; word-break:keep-all; }
+#intrateHtml .table-style td { border-bottom:1px solid #EEEEEE; /*border-right:1px solid #EEEEEE;*/ font-size:0.88889rem; text-align:center; word-break:keep-all; }
 #intrateHtml .table-style thead th:last-child { border-right:0; }
 
 .product-detail .product-info  { margin:0px }
