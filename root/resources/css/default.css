@@ -2761,7 +2761,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail table[class="__se_tbl_ext"] { margin-top:10px; }
 .product-detail .__se_tbl_ext td { margin-top:10px;  }
 .product-detail p[style="margin-left: 80px;"] { margin-left:0 !important; }
-.product-detail .list-tit + .bull + .bull { margin-bottom:0px !important; }
+/* .product-detail .list-tit + .bull + .bull { margin-bottom:0px !important; } */
 
 #intrateHtml p { font-size: 0.88889rem; font-weight:400;}
 #intractInfo p[align="right"]:first-child,
