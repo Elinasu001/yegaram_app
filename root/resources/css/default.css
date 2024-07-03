@@ -2738,8 +2738,9 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail p br + strong,
 .pr-detail .list-tit,
 .pr-detail p br + strong { display:block; font-size:0.88889rem; line-height:1.38889; font-weight:600; }
+.product-detail .bull strong,
 .product-detail b,
-.pr-detail b{ font-weight:400; font-size:0.88889rem; font-weight:400; color:#4e32a5;  }
+.pr-detail b{ font-weight:400; font-size:0.88889rem; color:#4e32a5;  }
 /* .product-info > .list-tit { font-size:0.88889rem; font-weight:300; margin-top:0px !important; padding-top:5px !important; color:#333333; } */
 .product-detail .list-tit + .list-tit { margin-top:15px !important; }
 /* .product-detail .product-info ~ .sub-info-wrap { margin-bottom:40px; } */
