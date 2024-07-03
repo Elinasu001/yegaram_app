@@ -2359,7 +2359,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .visual-area .tit-wrap > .tag li::before { content:"#"; display:inline; }
 .product-detail .visual-area .tit-wrap > .txt { font-size:1.11111rem; font-weight:400; color:#26282C; }
 .product-detail .visual-area .tit-wrap > .txt strong { font-weight:500; } */
-.product-detail .visual-area .desc-txt { padding:12px 0 30px; color:#666666; font-size:0.77778rem; }
+.product-detail .visual-area .desc-txt { padding:7px 0 30px; color:#666666; font-size:0.77778rem; }
 .product-detail .visual-area .desc-txt + ul{ display:flex; justify-content:center;}
 .product-detail .visual-area .desc-txt + ul > li { width:50%; }
 .product-detail .visual-area .desc-txt + ul > li::before { content:""; display:inline-block; width:64px; height:64px; border-radius:50%; background-color:#fff; background-position:center; background-repeat:no-repeat; background-size:41px;  }
@@ -2725,13 +2725,15 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .pr-detail.default-wrap { padding:0; }
 /* .product-detail .default-wrap { padding:0 20px 0; } */
 .product-detail .list-tit,
-.pr-detail .list-tit { padding-top:25px !important; display:block; }
+.pr-detail .list-tit { margin-top:40px !important; display:block; }
 .product-detail .list-tit:first-of-type,
-.pr-detail .list-tit:first-of-type { margin-top:25px !important; }
+.pr-detail .list-tit:first-of-type { margin-top:40px !important; }
 .product-detail p,
 .product-detail .bull,
 .pr-detail .bull,
 .product-detail .star { display:block; margin-top:5px; font-size:0.88889rem; line-height:1.38889; font-weight:300; }
+/* .product-detail .bull { margin-bottom:40px !important; }
+.product-detail .bull { margin-bottom:40px !important; } */
 .product-detail .list-tit,
 .product-detail p br + strong,
 .pr-detail .list-tit,
@@ -2739,7 +2741,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail b,
 .pr-detail b{ font-weight:400; font-size:0.88889rem; font-weight:400; color:#4e32a5;  }
 .product-info > .list-tit { font-size:0.88889rem; font-weight:300; margin-top:0px !important; padding-top:5px !important; color:#333333; }
-
+.product-detail .list-tit + .list-tit { margin-top:15px !important; }
 /* .product-detail .product-info ~ .sub-info-wrap { margin-bottom:40px; } */
 
 .product-detail .table-wrap,
@@ -2751,9 +2753,9 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .table-wrap th strong,
 .pr-detail .table-wrap th strong { font-weight:500; font-size:0.88889rem;  }
 .product-detail table.line_fixed,
-.pr-detail table.line_fixed { font-size:0.88889rem; font-weight:500; margin-top:15px; margin-bottom:20px; }
+.pr-detail table.line_fixed { font-size:0.88889rem; font-weight:500; margin-top:10px; margin-bottom:10px; }
 .product-detail  table.line_fixed td,
-.pr-detail table.line_fixed td { display:block; font-size:0.88889rem; font-weight:300; color:#333333; word-break: inherit; }
+.pr-detail table.line_fixed td { /*display:block;*/ font-size:0.88889rem; font-weight:300; color:#333333; word-break: inherit; }
 .product-detail  table td[style="padding-left: 10px; vertical-align: top;"],
 .product-detail  table td[style="padding-left:10px; vertical-align:top;"] { font-size:0.88889rem; font-weight:300; padding:0 !important; }
 .product-detail table[class="__se_tbl_ext"] { margin-top:10px; }
