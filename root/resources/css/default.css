@@ -1950,6 +1950,8 @@ body.on { position:fixed; top:0; }
 .list-bull.type-large dd { font-weight:300; }
 .list-bull.type-large.num li { padding-left:15px; }
 .list-bull.type-large.num li > em { position:absolute; left:0; }
+.sub-tit-wrap .list-bull.type-large li { font-weight:400; }
+
 
 .list-bull.hyphen li,
 .list-bull.hyphen dd { position:relative; padding-left:10px; letter-spacing:-0.6px; }
@@ -2447,6 +2449,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .sub-tit-wrap { display:block; margin:40px 0; font-size:0 }
 .sub-tit-wrap .tit { display:block; font-size:0.88889rem; line-height:1.38889; font-weight:600; }
 .sub-tit-wrap .txt { display:block; margin-top:10px; font-size:0.88889rem; line-height:1.38889; font-weight:400; }
+.sub-tit-wrap .txt .list-bull { margin-top:0; font-weight:500; font-size:0.88889rem;  }
 /* .sub-tit-wrap .tit  + .txt { margin-top:0; } */
 .sub-tit-wrap .txt.hyphen > li { position:relative; padding-left:15px; }
 .sub-tit-wrap .txt.hyphen > li::before { content:"-"; position:absolute; top:0; left:0;  }
