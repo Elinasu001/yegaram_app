@@ -1549,7 +1549,7 @@ body.on { position:fixed; top:0; }
 .type-alert.on::before { content:''; z-index:2; position:fixed; left:0; top:0; display:inline-block; width:100%; height:100%; background:#000; opacity:0.2;  }
 .layerpopup.on { z-index:105; }
 
-.layerpopup .fixed-btn-wrap { /*margin-top:10px;*/  background:#fff; bottom:1px; }
+.layerpopup .fixed-btn-wrap { /*margin-top:10px;*/  background:#fff; bottom:0px; }
 .layerpopup.layer-up .fixed-btn-wrap {  padding:10px 20px 20px; }
 .layerpopup.has-button .ly-scroll-con.ly-select { padding:0 20px 0px !important; }
 /* 버튼 1개 있을 경우 */
