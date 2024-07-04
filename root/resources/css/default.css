@@ -1337,7 +1337,7 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 
 /* .layerpopup.laypop-all .pop-con-wrap { margin-bottom:100px; } */
 .layerpopup.laypop-all .pop-con-wrap.grid .default-wrap { height:100%; display:flex; flex-direction:column; justify-content: space-between; padding-bottom:0; margin-bottom:0;}
-.layerpopup.laypop-all .pop-con-wrap.grid .default-wrap .banner-area { margin-top:40px; }
+.layerpopup.laypop-all .pop-con-wrap.grid .default-wrap .banner-area { margin-top:40px; padding-bottom:20px !important;}
 .layerpopup.laypop-all .pop-con-wrap.grid .default-wrap section:last-child { padding-bottom:100px; }
 .layerpopup.laypop-all .pop-con-wrap.grid { height:100%; }
 .layerpopup.laypop-all .pop-con-wrap.grid.login-banner .default-wrap section:last-child { padding-bottom:20px; }
