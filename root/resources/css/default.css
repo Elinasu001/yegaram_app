@@ -1514,7 +1514,7 @@ body.on { position:fixed; top:0; }
 .layerpopup.laypop-all .pop-header .pop-title { font-size:0.88889rem; font-weight:500; }
 .layerpopup.laypop-all .btn-layer-close{position:fixed; top:13px;right:10px;width:24px;height:24px;background:url("../images/header/btn_close.png") no-repeat 50%/24px auto;text-indent:-9999px;}
 .layerpopup.laypop-all .btn-wrap .btn-layer-close { position:static; width:100%; height:60px; background:#4E32A5; text-indent:inherit; }
-.layerpopup.laypop-all .fixed-btn-wrap { background:linear-gradient(0deg, rgba(255,255,255,1) 89%, rgba(255,255,255,0) 100%); }
+.layerpopup.laypop-all .fixed-btn-wrap { background:#fff; }
 .layerpopup.layer-up .btn-wrap .btn-layer-close { position:static; width:100%; height:60px; background:#4E32A5; text-indent:inherit; }
 
 
