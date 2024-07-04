@@ -704,7 +704,7 @@ input[type="file"]::file-selector-button { display:none; }
 .board-nav > div:after { position:absolute; content:""; right:0; transform:translate( 0,-50%); top:50%; width:16px; height:16px; background: url(../images/common/ic-arrow-right.png)no-repeat 50%/16px auto; }
 .board-nav > div > a { display:flex; align-items:center; padding-right:10px; width:70%; font-size:0.77778rem; line-height:1.5; overflow:hidden;  }
 
-.notice_contents { min-height:150px; width:100%; margin-top:30px; padding-top:30px; padding-bottom:30px; border-top:1px solid #EEEEEE; border-bottom:1px solid #EEEEEE; font-size:0.88889rem; }
+.notice_contents { min-height:150px; width:100%; margin-top:30px; padding-top:30px; padding-bottom:30px; border-top:1px solid #EEEEEE; border-bottom:1px solid #EEEEEE; }
 .notice_contents + .btn-cont-wrap,
 .txt-list-wrap + .btn-cont-wrap,
 .terms-list.type2 + .btn-cont-wrap { margin-top:40px; }
