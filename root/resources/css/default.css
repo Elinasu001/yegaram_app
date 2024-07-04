@@ -495,7 +495,7 @@ textarea:read-only { color:#333333; }
 .form-all-wrap .check-box.toggle,
 .form-all-wrp .form-wrap,
 .form-all-wrap .form-wrap:has(.select-box) + .form-wrap:has(.select-box),
-.form-all-wrap .form-wrap + div:not(.select-wrap, .form-wrap) { margin-top:10px; }
+.form-all-wrap .form-wrap + div:not(.select-wrap, .form-wrap, .sub-tit-wrap) { margin-top:10px; }
 .form-all-wrap .form-wrap .form-tit { margin-top:20px; }
 
 /* .form-all-wrap > .sub-tit-wrap + .form-wrap */
@@ -1514,7 +1514,7 @@ body.on { position:fixed; top:0; }
 .layerpopup.laypop-all .pop-header .pop-title { font-size:0.88889rem; font-weight:500; }
 .layerpopup.laypop-all .btn-layer-close{position:fixed; top:13px;right:10px;width:24px;height:24px;background:url("../images/header/btn_close.png") no-repeat 50%/24px auto;text-indent:-9999px;}
 .layerpopup.laypop-all .btn-wrap .btn-layer-close { position:static; width:100%; height:60px; background:linear-gradient(320deg, rgba(38,15,84,1) 0%, rgba(61,18,146,1) 100%); text-indent:inherit; }
-.layerpopup.layer-up .btn-wrap .btn-layer-close { position:static; width:100%; height:60px; background:#EEEBFF; text-indent:inherit; }
+.layerpopup.layer-up .btn-wrap .btn-layer-close { position:static; width:100%; height:60px; /*background:#EEEBFF;*/ text-indent:inherit; }
 
 
 .layerpopup.laypop-all .btn-layer-close:after { content:none; }
@@ -2792,7 +2792,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .product-info .arrow-button-list { margin-top:25px; }
 .product-detail .sub-info-wrap { margin-bottom:30px; }
 .product-detail .accordion li { border-bottom:initial; padding:0; }
-.product-detail  li { font-size:0.88889rem; /* line-height: 1.38889;*/ font-weight:400; }
+.product-detail  li { font-size:0.88889rem; /* line-height: 1.38889;*/ font-weight:400; }/*li 가 300으로 가는게 맞는지 ????*/
 .pr-detail.default-wrap .bull:last-child { margin-bottom:0px !important; }
 
 .layerpopup #intrateHtml { margin-top:30px; }
