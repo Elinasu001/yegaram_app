@@ -704,7 +704,7 @@ input[type="file"]::file-selector-button { display:none; }
 .board-nav > div:after { position:absolute; content:""; right:0; transform:translate( 0,-50%); top:50%; width:16px; height:16px; background: url(../images/common/ic-arrow-right.png)no-repeat 50%/16px auto; }
 .board-nav > div > a { display:flex; align-items:center; padding-right:10px; width:70%; font-size:0.77778rem; line-height:1.5; overflow:hidden;  }
 
-.notice_contents { min-height:150px; width:100%; margin-top:30px; padding-top:30px; padding-bottom:30px; border-top:1px solid #EEEEEE; border-bottom:1px solid #EEEEEE; }
+.notice_contents { min-height:150px; width:100%; margin-top:30px; padding-top:30px; padding-bottom:30px; border-top:1px solid #EEEEEE; border-bottom:1px solid #EEEEEE; font-size:0.88889rem; }
 .notice_contents + .btn-cont-wrap,
 .txt-list-wrap + .btn-cont-wrap,
 .terms-list.type2 + .btn-cont-wrap { margin-top:40px; }
@@ -1508,12 +1508,13 @@ body.on { position:fixed; top:0; }
 .layerpopup .btn-wrap button { margin:0; }
 
 /** 레이어 풀팝업 **/
-.layerpopup.laypop-all{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;border-top:none;background:#fff;z-index:21;}
+.layerpopup.laypop-all{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;border-top:none; background:#fff;z-index:21;}
 .layerpopup.laypop-all .pop-header {position:fixed;top:0;left:0;right:0;height:50px; line-height:50px; padding:0 20px; background:#fff;text-align:center;line-height:50px;z-index:5;}
 .layerpopup.laypop-all .pop-header:has(+.pop-con-wrap>.default-wrap>.txt-list-wrap:first-child) { border:0; }/*(청)test immedTransferStep1.html*/
 .layerpopup.laypop-all .pop-header .pop-title { font-size:0.88889rem; font-weight:500; }
 .layerpopup.laypop-all .btn-layer-close{position:fixed; top:13px;right:10px;width:24px;height:24px;background:url("../images/header/btn_close.png") no-repeat 50%/24px auto;text-indent:-9999px;}
 .layerpopup.laypop-all .btn-wrap .btn-layer-close { position:static; width:100%; height:60px; background:#4E32A5; text-indent:inherit; }
+.layerpopup.laypop-all .fixed-btn-wrap { background:linear-gradient(0deg, rgba(255,255,255,1) 89%, rgba(255,255,255,0) 100%); }
 .layerpopup.layer-up .btn-wrap .btn-layer-close { position:static; width:100%; height:60px; background:#4E32A5; text-indent:inherit; }
 
 
