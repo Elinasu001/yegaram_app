@@ -2780,6 +2780,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 #intrateHtml .table-style td { border-bottom:1px solid #EEEEEE; border-right:1px solid #EEEEEE; font-size:0.88889rem; text-align:center; word-break:keep-all; }
 #intrateHtml .table-style thead th:last-child,
 #intrateHtml .table-style tbody tr:first-child td:last-child { border-right:0; }
+#intrateHtml .table-style li { font-weight:400; }
 
 .product-detail .product-info  { margin:0px }
 .product-detail .arrow-button-list { margin:0 -20px; padding:0px; width:calc(100% + 40px); }
