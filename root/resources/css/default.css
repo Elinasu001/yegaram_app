@@ -2727,16 +2727,25 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .pr-detail { font-size:0.88889rem; line-height:1.38889; font-size:300; }
 .product-detail .pr-detail.default-wrap { padding:0; }
 /* .product-detail .default-wrap { padding:0 20px 0; } */
-.product-detail .list-tit,
-.pr-detail .list-tit { margin-top:40px !important; display:block; }
+.product-detail .button-list + li:has(.de-tit):first-child,
 .product-detail .list-tit:first-of-type,
 .pr-detail .list-tit:first-of-type { margin-top:40px !important; }
+
+.product-detail .de-tit,
+.product-detail .list-tit,
+.pr-detail .list-tit { margin-top:40px !important; display:block; }
+
+.product-detail .de-cts table,
+.product-detail .de-cts,
+.product-detail .de-cts b,
 .product-detail p,
 .product-detail .bull,
 .pr-detail .bull,
 .product-detail .star { display:block; margin-top:5px; font-size:0.88889rem; line-height:1.38889; font-weight:400; }
 /* .product-detail .bull { margin-bottom:40px !important; }
 .product-detail .bull { margin-bottom:40px !important; } */
+
+.product-detail .de-tit,
 .product-detail .list-tit,
 .product-detail p br + strong,
 .pr-detail .list-tit,
