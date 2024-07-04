@@ -2089,7 +2089,7 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 .default-wrap .p-tit{padding:0;} */
 
 /** 상단 네모 박스 안에 텍스트 있는 경우 **/
-.top-sub-txt { margin-top:20px;  height:60px; background:#F8F8F8; border-radius:15px; text-align:center; font-size:0.88889rem; line-height:60px; }
+.top-sub-txt { margin-top:20px;  background:#F8F8F8; border-radius:15px; text-align:center; font-size:0.88889rem; padding:20px; }
 .top-sub-txt + .inquiry-choice-area { margin-top:40px; }
 
 /*** 공통화면 ***/
@@ -2792,7 +2792,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .product-info .arrow-button-list { margin-top:25px; }
 .product-detail .sub-info-wrap { margin-bottom:30px; }
 .product-detail .accordion li { border-bottom:initial; padding:0; }
-.product-detail li { font-size:0.88889rem; /* line-height: 1.38889;*/ font-weight:300; }
+.product-detail  li { font-size:0.88889rem; /* line-height: 1.38889;*/ font-weight:400; }
 .pr-detail.default-wrap .bull:last-child { margin-bottom:0px !important; }
 
 .layerpopup #intrateHtml { margin-top:30px; }
