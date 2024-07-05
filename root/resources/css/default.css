@@ -1517,7 +1517,6 @@ body.on { position:fixed; top:0; }
 .layerpopup.laypop-all .btn-wrap .btn-layer-close { position:static; width:100%; height:60px; background:#4E32A5; text-indent:inherit; }
 .layerpopup.laypop-all .fixed-btn-wrap { background:#fff; }
 
-
 .layerpopup.laypop-all .btn-layer-close:after { content:none; }
 .layerpopup.laypop-all .pop-con-wrap{ min-height:calc(100% - 146px); padding-top:50px; /*padding-bottom:100px;*/ }
 .layerpopup.laypop-all .pop-con-wrap:not(:has(+.fixed-btn-wrap)) { padding-bottom:0; } /*전체메뉴-풀팝업 테스트(청)*/
@@ -1823,8 +1822,9 @@ body.on { position:fixed; top:0; }
 .list-icon.type3 > li .txt { font-size:0.88889rem; line-height:1.4375; }
 .list-icon.type3 > li .txt { margin-top:10px; }
 .list-icon.type3 > li .tit + .txt { margin-top:0; } */
-.list-icon.type3 > li .txt li { margin-bottom:8px; }
-.list-icon.type3 > li .tit + .point { font-size:1.11111rem; }
+.list-icon.type3 > li .tit { margin-bottom:8px; font-size:1rem; color:#4E32A5; }
+.list-icon.type3 > li .txt li { margin-bottom:8px; font-size:0.88889rem; font-weight:600;  }
+.list-icon.type3 > li .tit + .point { font-size:1rem; font-weight:400; color:#333333; }
 
 /** 아이콘 리스트 bor-line **/
 .list-icon.bor-line { padding-bottom:40px; border-bottom:1px solid #EEEEEE; }
