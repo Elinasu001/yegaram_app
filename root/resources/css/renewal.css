@@ -1223,7 +1223,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 
 
 /* 공인인증서 리스트 .type2 */
-.list-icon.type2 > li { display:inline-block; width:100%; height:unset; padding:20px 20px 20px 90px; border:1px solid #DDD; border-radius:15px; background:#fff; font-size:0; }
+/* .list-icon.type2 > li { display:inline-block; width:100%; height:unset; padding:20px 20px 20px 90px; border:1px solid #DDD; border-radius:15px; background:#fff; font-size:0; }
 .list-icon.type2 > li::before { top:20px; left:20px; }
 .list-icon.type2 > li.joint::before { background:url("../images/common/ico_certi_joint.png") no-repeat 50%/24px auto #F8F8FA; }
 .list-icon.type2 > li.on { border:2px solid #4E32A5; box-shadow: 0px 2px 8px rgb(0, 0, 0, 0.2); }
@@ -1232,7 +1232,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .list-icon.type2 > li .tit { font-size:0.88889rem; line-height:1.4375; font-weight:bold; color:#333333; }
 .list-icon.type2 > li .txt { font-size:0.77778rem; line-height:1.5; }
 .list-icon.type2 > li .s-txt { font-size:0.66667rem; line-height:1.58334; color:#999; }
-.popup2 .btnSection .btnCustom:hover { background:#F6F2FF; }
+.popup2 .btnSection .btnCustom:hover { background:#F6F2FF; } */
 
 
 
