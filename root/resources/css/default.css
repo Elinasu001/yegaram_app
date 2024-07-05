@@ -727,7 +727,7 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 
 /* 자주묻는질문 검색 */
 .fix-tag { font-size:0.77778rem; line-height:1.5;}
-.fix-tag span { font-weight:500; color:#260F54; }
+.fix-tag span { font-weight:500; color:#999999; }
 .fix-tag span,
 .fix-tag a { margin-right:10px; }
 .fix-tag a { color:#999999; }
@@ -735,7 +735,7 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .terms-list.type2 > li > p { margin-top:10px; font-weight:400; }
 .fix-tag + .tabs-wrap { margin-top:35px; }
 .fix-tag + .tabs-wrap .tab-content-area { margin-top:40px; }
-
+.fix-tag a.on{ color:#4E32A5; font-weight:500; }
 
 /** _금액 바로뒤에 unit 붙는 case - type2 **/
 /* .form-wrap.type2 label { font-weight:500; font-size:0.88889rem; line-height:1.4375; letter-spacing:-0.4px; }
