@@ -1111,7 +1111,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .result-area:has(.time-limit) .tit { color:#333333; }
 
 /* 대출계좌목록 */
-.chart-wrap { padding:30px 0 20px; }
+.chart-wrap { padding:30px 0 40px; }
 .chart-wrap .inquiry-set-wrap { margin:0; padding:0; }
 .sub-top-wrap .txt-list-wrap .txt-detail-area { background:#FFFFFF; }
 .sub-top-wrap:has(.txt-list-wrap) { padding:20px; }
