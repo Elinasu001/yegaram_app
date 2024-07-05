@@ -2844,6 +2844,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .terms-txt .list.type4 > li { padding-left:15px; text-indent:-15px; }
 .terms-txt .list li > * { text-indent: initial; }
 
+.terms-txt .table-style,
 .terms-txt .table-wrap { overflow-x:auto ; }
 .terms-txt table { margin-top:10px; }
 .terms-txt .table-wrap  thead th strong { font-weight:500; }
