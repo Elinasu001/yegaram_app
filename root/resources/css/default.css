@@ -2737,8 +2737,9 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .amount.bigText .amount-txt { font-size:2rem; line-height:2rem; }
 
 
-/***관리자 뿌려지는 부분 관련하여  css 추가**/
-/* 상품소개 - 예가람 기준  */
+/*** 관리자 뿌려지는 부분 관련하여  css 추가**/
+
+/** 상품소개 - 예가람 기준  **/
 .product-detail .pr-detail { font-size:0.88889rem; line-height:1.38889; font-size:300; }
 .product-detail .pr-detail.default-wrap { padding:0; }
 /* .product-detail .default-wrap { padding:0 20px 0; } */
@@ -2829,14 +2830,29 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .layerpopup #intrateHtml .list-bull { margin-top:0px; }
 .layerpopup #intrateHtml .link-list > .tit { font-size: 0.88889rem; margin-bottom:10px; font-weight:600; }
 
-/* 상품소개 - 예가람 기준  */
 
-/* 약관 - 예가람 기준  */
+/** 약관 - 예가람 기준  **/
 .terms-txt { padding-bottom:60px; background:#FFFFFF; }
+
+
+.terms-txt .font16,
+.terms-txt dd,
+.terms-txt .txt  {  font-size:0.88889rem;  font-weight:400; color:#333333; }
+.terms-txt dd strong { display:block; margin-top:15px; }
+
 .terms-txt dt,
-.terms-txt dd  { font-size:0.88889rem; color:#333333; }
-.terms-txt dt { margin-top:30px; margin-bottom:10px; font-weight:600;}
-.terms-txt dt:first-child { margin-top:0; }
+.term-tit-wrap .tit { margin-bottom:10px;  font-size:0.88889rem;  font-weight:600; color:#333333; }
+
+.terms-txt .font16,
+.terms-txt dt { margin-top:30px; }
+/* .terms-txt dt:first-child { margin-top:0; } */
+
+.term-tit-wrap p.list-bull,
+.terms-txt p.list-bull { position: relative; padding-left:10px; font-weight:400; }
+.term-tit-wrap p.list-bull:before,
+.terms-txt p.list-bull:before { content:''; position: absolute; left:0px; top:9px; width:3px; height:3px; border-radius:50%; background:#999999;  } 
+.term-tit-wrap .list-bull,
+.terms-txt .list-bull  {  margin-top:5px;  }
 .terms-txt .list.type2 > li { padding-left:10px; text-indent:-10px; }
 .terms-txt .list.type2 li + li { margin-top:5px; }
 .terms-txt .list.type2 li .rice { margin-left:12px; }
@@ -2866,7 +2882,3 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .table-style tfoot td { border-top:1px solid #EEEEEE;font-size:0.88889rem; color:#666666; }
 .table-wrap td[rowspan]:last-child
 .table-style td[rowspan]:last-child{ border-right:0px; border-left:1px solid #EEEEEE; }
-/* .terms-txt .table-style td a { color:#626C74; } */
-/* .terms-txt .table-style thead + tbody th { font-weight:normal; } */
-
-/* 약관 - 예가람 기준  */
