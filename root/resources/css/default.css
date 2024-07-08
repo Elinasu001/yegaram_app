@@ -2843,7 +2843,8 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .terms-txt dd + dd strong { display:block; margin-top:30px; margin-bottom:-10px; }
 
 .terms-txt dt,
-.term-tit-wrap .tit { margin-bottom:10px;  font-size:0.88889rem;  font-weight:600; color:#333333; }
+.term-tit-wrap .tit,
+.terms-txt .table-style.caption-tit caption { margin-bottom:10px;  font-size:0.88889rem;  font-weight:600; color:#333333; }
 
 .terms-txt .font16,
 .terms-txt dt { margin-top:30px; }
@@ -2863,10 +2864,12 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .terms-txt .list.type4 { margin:10px 0; }
 .terms-txt .list li > * { text-indent: initial; }
 
+
+.terms-txt .table-style.caption-tit { margin-top:30px; }
+.terms-txt .table-style.caption-tit caption { position:inherit; text-indent: inherit; line-height: inherit; width:inherit; height:inherit; left:inherit; text-align:left; }
 .terms-txt .table-style,
 .terms-txt .table-wrap { overflow-x:auto ; }
 .terms-txt table { margin-top:10px; }
-.terms-txt .table-style.caption-tit { margin-top:30px; }
 .terms-txt .table-wrap  thead th strong { font-weight:500; }
 
 .terms-txt .table-style { border-bottom:1px solid #CCCCCC; }
