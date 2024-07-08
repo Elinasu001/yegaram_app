@@ -1,66 +1,63 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>예가람저축은행</title>
-<meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="Content-Script-Type" content="text/javascript">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<meta name="keywords" content="예가람저축은행keywords" />
-<meta name="description" content="예가람저축은행description" />
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>예가람저축은행</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="keywords" content="예가람저축은행keywords" />
+    <meta name="description" content="예가람저축은행description" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
 
-<meta name="apple-mobile-web-app-status-bar-style" content="white" />
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta http-equiv="Expires" content="-1">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Cache-Control" content="No-Cache">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="No-Cache">
 
-<link href="/resources/css/default.css" rel="stylesheet" />
-<link href="/resources/css/renewal.css" rel="stylesheet" />
+    <link href="/resources/css/default.css" rel="stylesheet" />
+    <link href="/resources/css/renewal.css" rel="stylesheet" />
 
 
-<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
-<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
-<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+    <link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
 
-<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
 
-<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
-<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common" 
-	data-menuId="dep/prc"
-	data-frameId="depAcnoOpenPrc2"
-	data-serviceCd="depAcnoOpenPrc2.frm" 
-	data-serverTime="20230803152535"
-	data-activeMode="local"
-	data-activeEnv="${active.env">
-</script>
+    <script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+    <script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+    <script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+    <script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common"
+        data-menuId="dep/prc" data-frameId="depAcnoOpenPrc2" data-serviceCd="depAcnoOpenPrc2.frm"
+        data-serverTime="20230803152535" data-activeMode="local" data-activeEnv="${active.env">
+        </script>
 
 
 <body>
     <!-- header -->
     <div id="headerWrap">
         <script>
-        $(document).ready(function(){
-            document.charset="euc-kr";
-            $("#headerWrap").load("../includes/header.html");
-        });
+            $(document).ready(function () {
+                document.charset = "euc-kr";
+                $("#headerWrap").load("../includes/header.html");
+            });
         </script>
     </div>
-	<!-- //header -->
+    <!-- //header -->
 
     <!--contentsWrap -->
     <div class="contentsWrap">
@@ -69,7 +66,7 @@
             <div class="default-wrap">
 
                 <div class="form-all-wrap">
-                    
+
                     <div class="check-box toggle">
                         <input type="checkbox" id="check01">
                         <label for="check01">
@@ -183,10 +180,32 @@
                     </div>
                 </div>
 
+                
+                <div class="check-wrap">
+                    <!--//[관리자페이지 - 예가람 레이아웃 - 라디오 버튼 : 관리자 약관 하드코딩은 감싸는 terms-txt 태그 필요]-->
+                    <div calss="terms-txt">
+                        <span class="radio-area">
+                            <span class="ctm-radio">
+                                <label for="TA00800900_3_2_1">
+                                    <input type="radio" name="TA00800900_3_1_1" id="TA00800900_3_2_1" value="N" checked="checked">요약동의서
+                                </label>
+                            </span>
+                            <span class="ctm-radio">
+                                <label for="TA00800900_3_2_2">
+                                    <input type="radio" name="TA00800900_3_1_1" id="TA00800900_3_2_2" value="Y">상세동의서
+                                </label>
+                            </span>
+                        </span>
+                    </div>
+                    <!--[관리자페이지 - 예가람 레이아웃 - 라디오 버튼 : 관리자 약관 하드코딩은 감싸는 terms-txt 태그 필요]//-->
+                </div>
+                
+
                 <div class="check-wrap">
                     <ul class="radio-list">
                         <li>
-                            <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked" class="monthly">
+                            <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked"
+                                class="monthly">
                             <label for="radio01_2" class="">납입일 선택</label>
                         </li>
                         <li>
@@ -213,12 +232,12 @@
                         </div>
                     </label>
                 </div>
-                
+
                 <div class="check-wrap">
                     <ul class="check-box">
                         <li class="ars">
                             <fieldset>
-                                <input type="radio" id="Chk01_1" name="Chk01" value="" class="" >
+                                <input type="radio" id="Chk01_1" name="Chk01" value="" class="">
                                 <label for="Chk01_1">ARS인증</label>
                             </fieldset>
                         </li>
@@ -306,12 +325,13 @@
                         </li>
                     </ul>
                 </div>
-                
+
                 <div class="arrow-button-wrap">
 
                     <ul class="arrow-button-list">
                         <li><a href="#none" onclick="">종합통장대출 신청</a></li>
-                        <li style="display:none;"><a href="#none" onclick="">종합통장대출 해지</a></li> <!-- [퍼블] 종합통장대출 해지 버튼 -->
+                        <li style="display:none;"><a href="#none" onclick="">종합통장대출 해지</a></li>
+                        <!-- [퍼블] 종합통장대출 해지 버튼 -->
                         <li><a href="#none" onclick="">계좌비밀번호 변경</a></li>
                         <li><a href="#none" onclick="">통장사본</a></li>
                     </ul>
@@ -327,7 +347,7 @@
                                     타인으로부터 신용등급 상향, 대출 등의 목적으로 통장 개설을 요청받은 사실이 있습니까?
                                 </p>
                             </div>
-                            
+
                             <ul>
                                 <li>
                                     <input type="radio" name="q4" id="q07" value="Y">
@@ -357,11 +377,11 @@
                                     <label for="q32" class="rd">아니오</label>
                                 </li>
                             </ul>
-                    
+
                             <ul class="list-bull">
                                 <li>가나다라</li>
                             </ul>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -373,7 +393,8 @@
                 <div class="content-wrap">
                     <div class="pop-header">
                         <h2 class="pop-title">등록구분</h2>
-                        <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                        <button type="button" name="button" class="btn-layer-close"
+                            data-focus="btn-layer-close">닫기</button>
                     </div>
                     <div class="ly-scroll-con ly-select">
                         <ul class="ly-select-list">
@@ -385,12 +406,12 @@
             </div>
             <!-- D: 등록구분 팝업 // -->
 
-            
+
         </div>
         <!-- //e: contents -->
-        
+
     </div>
     <!-- //contentsWrap -->
 </body>
-</html>
 
+</html>
