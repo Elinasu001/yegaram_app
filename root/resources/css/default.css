@@ -2866,6 +2866,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .terms-txt .table-style,
 .terms-txt .table-wrap { overflow-x:auto ; }
 .terms-txt table { margin-top:10px; }
+.terms-txt .table-style.caption-tit { margin-top:30px; }
 .terms-txt .table-wrap  thead th strong { font-weight:500; }
 
 .terms-txt .table-style { border-bottom:1px solid #CCCCCC; }
