@@ -2836,7 +2836,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 /** 약관 - 예가람 기준  **/
 .terms-txt { padding-bottom:60px; background:#FFFFFF; }
 
-
+.terms-txt .txt-box,
 .terms-txt .font16,
 .terms-txt dd,
 .terms-txt .txt  {  font-size:0.88889rem;  font-weight:400; color:#333333; }
