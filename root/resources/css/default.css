@@ -1587,7 +1587,7 @@ body.on { position:fixed; top:0; }
 .layer-up .form-all-wrap .form-wrap,
 .layer-up .select-wrap { margin-top:20px; }
 .layer-up .txtbox-wrap + .select-wrap { margin-top:15px; }
-.layer-up .default-wrap { /*margin-bottom:10px; padding:0 20px 10px;*/ padding:0 20px 10px; }
+.layer-up .default-wrap { /*margin-bottom:10px; padding:0 20px 10px;*/ padding:0 20px 10px; margin-bottom:0; }
 .layer-up:has(.fixed-btn-wrap) .default-wrap { padding-bottom:10px; }
 .layer-up .ly-scroll-con.type-high { max-height:60vh; }
 .layer-up .ly-scroll-con .qt-tit{ display:inline-block; margin-top:40px; margin-bottom:15px; font-weight:500; }
