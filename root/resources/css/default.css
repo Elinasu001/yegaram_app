@@ -1344,7 +1344,7 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 .layerpopup.laypop-all .pop-con-wrap.grid.login-banner .default-wrap section:last-child { padding-bottom:20px; }
 
 /* .default-wrap.product { padding:0 20px; } */
-.default-wrap { padding:0px 20px 60px; margin-bottom:60px; }
+.default-wrap { padding:0px 20px 60px; margin-bottom:40px; }
 .default-wrap.gray-wrap { padding:0 20px 60px; margin-bottom:0; }
 /* .default-wrap:has(> div.step-wrap) { padding-top:10px; } */
 /* .gray-wrap:has(.tabs-wrap) { padding-top:0; } */
