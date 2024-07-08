@@ -2331,6 +2331,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 /** [공통] 상품리스트 템플릿 **/
 .tooltip-form-wrap { margin-left:15px; display:flex; flex-direction:row-reverse; }
 .tooltip-wrap.type2 .tooltip-txt  { display:none; left:inherit; top:-53px; right:-10px; padding:12px 15px; background:#F1EBFD; font-weight:400; color:#612AD0; font-size:0.66667rem; line-height:1.58334; transform:none; transition:none; opacity:1; }
+.tooltip-wrap .tooltip-txt p { margin-top:0px!important; font-weight:400 !important; color:#612AD0 !important; font-size:0.66667rem !important; line-height:1.58334 !important; }
 .tooltip-wrap.type2 .tooltip-txt:before { z-index:2; left:inherit; right:13px; border-left-color:#F1EBFD; }
 .like {  z-index:10; display:block; width:24px; height:24px; font-size:0; background:url("../images/common/ico_heart.png") no-repeat 50% / 24px auto; }
 .like.active { background-image:url("../images/common/ico_heart_on.png"); }
@@ -2377,7 +2378,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .visual-area .tit-wrap > .tag li::before { content:"#"; display:inline; }
 .product-detail .visual-area .tit-wrap > .txt { font-size:1.11111rem; font-weight:400; color:#26282C; }
 .product-detail .visual-area .tit-wrap > .txt strong { font-weight:500; } */
-.product-detail .visual-area .desc-txt { padding:7px 0 30px; color:#666666; font-size:0.77778rem; }
+/* .product-detail .visual-area .desc-txt { padding:7px 0 30px; color:#666666; font-size:0.77778rem; } */
 .product-detail .visual-area .desc-txt + ul{ display:flex; justify-content:center;}
 .product-detail .visual-area .desc-txt + ul > li { width:50%; }
 .product-detail .visual-area .desc-txt + ul > li::before { content:""; display:inline-block; width:64px; height:64px; border-radius:50%; background-color:#fff; background-position:center; background-repeat:no-repeat; background-size:41px;  }
@@ -2390,7 +2391,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail.loan01 .visual-area .desc-txt + ul > li:nth-of-type(2)::before { background-image:url("../images/common/ico_product_rate.png"); }
 .product-detail.loan01 .visual-area .tit-wrap > .tag { display:none; }
 
-.product-detail .visual-area .desc-txt + ul > li > strong.tit { display:block; margin:8px 0 4px; color:#666666; font-size:0.77778rem; }
+/* .product-detail .visual-area .desc-txt + ul > li > strong.tit { display:block; margin:8px 0 4px; color:#666666; font-size:0.77778rem; } */
 .product-detail .visual-area .desc-txt + ul > li > span.exp { display:block; font-size:0.88889rem; font-weight:500; color:#033333;  }
 .product-detail .visual-area .flag-tit-wrap { display:block; margin-top:5px; }
 .product-detail .visual-area { margin:0 -20px; padding:20px 20px 145px; background:#F8F8F8; }
@@ -2405,13 +2406,13 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .visual-area .tit-wrap > .tag li::before { content:"#"; display:inline; }
 .product-detail .visual-area .tit-wrap > .txt { font-size:1.11111rem; font-weight:500; color:#26282C; }
 .product-detail .visual-area .tit-wrap > .txt strong { font-weight:500; }
-.product-detail .visual-area .desc-txt { padding:12px 0 30px; color:#666666; font-size:0.77778rem; }
+.product-detail .visual-area .desc-txt { margin:10px 0 30px; color:#666666; font-size:0.77778rem; }
 .product-detail .visual-area .desc-txt + ul{ display:flex; justify-content:center;}
 .product-detail .visual-area .desc-txt + ul > li { width:50%; }
 .product-detail .visual-area .desc-txt + ul > li::before { content:""; display:inline-block; width:64px; height:64px; border-radius:50%; background-color:#fff; background-position:center; background-repeat:no-repeat; background-size:48px;  }
 /* .product-detail .visual-area .desc-txt + ul > li:first-of-type::before { background-image:url("../images/common/ico_product01.png"); }
 .product-detail .visual-area .desc-txt + ul > li:nth-of-type(2):before { background-image:url("../images/common/ico_product02.png"); } */
-.product-detail .visual-area .desc-txt + ul > li > strong.tit { display:block; margin:8px 0 4px; color:#666666; font-size:0.77778rem; }
+.product-detail .visual-area .desc-txt + ul > li > strong.tit { display:block; margin:6px 0; color:#666666; font-size:0.77778rem; }
 .product-detail .visual-area .desc-txt + ul > li > span.exp { display:block; font-size:0.88889rem; font-weight:500; color:#333333;  }
 .product-detail .visual-area .flag-tit-wrap { display:block; margin-top:5px; }
 .product-detail .visual-area .icon-exp + .flag-tit-wrap { margin-top:15px; /*padding-right:40px;*/ }
@@ -2423,7 +2424,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 /* 대출상품 */
 .product-detail.loan01 .visual-area .flag-tit-wrap .tit { color:#ED008D; }
 .product-detail .visual-area .flag-tit-wrap .tooltip-wrap.type2 {position:absolute; right:0; top:0; }
-.product-detail .visual-area .flag-tit-wrap .tit { display:block; margin-top:10px; font-size:1.22222rem; font-weight:600; color:#260F54; word-break:normal; }
+.product-detail .visual-area .flag-tit-wrap .tit { display:block; margin-top:7px; font-size:1.22222rem; font-weight:600; color:#260F54; word-break:normal; }
 .product-detail .visual-area .label-info-wrap { padding:50px 0 40px; }
 .product-detail .visual-area .label-info-wrap:has(+ .text-bar-list.type-box) { padding-bottom:30px; }
 /* .product-detail .product-info { margin:0 -20px; padding:0; width:calc(100% + 40px); } */
@@ -2507,7 +2508,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .kdic-wrap > p { display:inline-block !important; width:calc(100% - 70px); margin-top:0px !important; color:#999; font-size:0.77778rem !important; line-height:1.5 !important; }
 
 /* 준법감사인 */
-.txt-junbub { margin-top:30px !important; color:#999;  font-size:0.77778rem; line-height:1.5; font-weight:300; }
+.txt-junbub { margin-top:40px !important; color:#999;  font-size:0.77778rem; line-height:1.5; font-weight:300; }
 .txt-junbub.type2 { color:#333333; font-weight:500; text-align: right; font-size:0.88889rem; line-height:1.278rem; }
 .arrow-button-list + .txt-junbub { margin-top:50px; }
 .product-info + .txt-junbub { margin-top:50px; }
