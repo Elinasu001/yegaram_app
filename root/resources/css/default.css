@@ -2867,7 +2867,9 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 .terms-txt .table-style.caption-tit { margin-top:30px; }
 .terms-txt .table-style.caption-tit caption { position:inherit; text-indent: inherit; line-height: inherit; width:inherit; height:inherit; left:inherit; text-align:left; }
-.terms-txt .table-style.caption-tit tbody th[scope="row"] { background:#F8F8F8; }
+.terms-txt .table-style.caption-tit tbody th[scope="row"] { background:#F8F8F8; color:#454545;}
+.terms-txt .table-style.caption-tit tbody td > strong { font-weight:400; }
+
 .terms-txt .table-style,
 .terms-txt .table-wrap { overflow-x:auto ; }
 .terms-txt table { margin-top:10px; }
