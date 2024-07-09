@@ -821,6 +821,7 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .select-box.type-line { flex:1; padding:0; border:none; border-radius: 0;  border-bottom:1px solid #DDDDDD;}
 .select-box.type-line :after { content:''; position:absolute; right:10px; top:0; width:24px; height:50px; background:url(../images/common/arrow_selbox.png) no-repeat 50%/24px auto; }
 .select-box.type-line .option { max-width: inherit; right:0; left:0; text-align: left !important; font-weight:400; }
+.select-box.type-line.on .option { color:#333333; }
 
 /* checkbox : on / off 스위치 토글 버튼 */
 .check-all-wrap { margin-top:40px;}
