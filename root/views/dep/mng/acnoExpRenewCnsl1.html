@@ -134,6 +134,7 @@
 				</div>
 				<!-- D : // 자동연장(원금) 선택 시 노출 -->
 
+				<!--//[퍼블-2]: 텍스트 수정 및 만기이자이체구분 레이아웃 수정-->
                 <div class="list-bull">
                     <div class="border"></div>
                     <strong>알아두세요</strong>
@@ -141,25 +142,21 @@
                         <li>예금 만기 시 원금 또는 원리금(원금+이자)을 계좌의 변경 없이 최대 3회차까지 자동으로 재예치 가능해요</li>
                         <li>재예치 회차에 관계없이 중도해지를 할 수 있어요</li>
                         <li>3회차 재예치 이후 계좌 해지는 인터넷뱅킹 또는 창구 방문을 통해 해지가 가능해요</li>
-                        <li>
-                            <strong class="color-666666">만기이자이체구분</strong>
-                            <ul>
-                                <li class="hyphen">
-                                    내부(타행) 이체
-                                    <ul class="list-bull mt0">
-                                        <li>만기 당일 발생한 세후 이자 금액을 제외한 원금만을 재예치해요 (발생한 세후 이자 금액은 등록하신 당 저축은행 또는 타행 본인 소유 입출금 가능 계좌로 자동 입금)</li>
-                                    </ul>
-                                <li class="hyphen">
-                                    원금+이자
-                                    <ul class="list-bull mt0">
-                                        <li>만기당일 발생한 원금과 세후이자 금액을 합산하여 재예치해요(비과세 종합저축 계좌의 경우 만기자동재예치 시 바과세 한도초과에 따른 재예치 오류가 발생할 수 있어요</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
                     </ul>
                 </div>
-				<!-- // [퍼블] 전체 변경 -->
+				<div class="list-bull">
+					<strong>만기이자이체구분</strong>
+					<ul>
+						<li>자동 연장(원금)<br/>
+							만기 당일 발생한 세후 이자 금액을 제외한 원금만을 재예치해요 (발생한 세후 이자 금액은 등록하신 당 저축은행 또는 타행 본인 소유 입출금 가능 계좌로 자동 입금)
+						</li>
+						<li>
+							자동 연장(원리금)<br/>
+							만기당일 발생한 원금과 세후이자 금액을 합산하여 재예치해요(비과세 종합저축 계좌의 경우 만기자동재예치 시 바과세 한도초과에 따른 재예치 오류가 발생할 수 있어요)
+						</li>
+					</ul>
+				</div>
+				<!--[퍼블-2]: 텍스트 수정 및 만기이자이체구분 레이아웃 수정//-->
 
 			</div>
 
@@ -173,7 +170,7 @@
         <!-- e: fixedBtnWrap -->
       
          <!--s:해지 신청 확인 레이어 (팝업)-->
-         <div id="lyPop2" class="layerpopup layer-up has-button show" style=" display:block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+         <div id="lyPop2" class="layerpopup layer-up has-button show" style=" display:none;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
             <div class="content-wrap">
                 <div class="pop-header">
                     <h2 class="pop-title">해지신청</h2>
