@@ -235,8 +235,14 @@
 				<a href="javascript:void(0)" class="btn btn-txt login">로그인</a>
 
 				<!--D: 알림버튼 -->
-				<a href="javascript:void(0)" class="btn btn-notify"><img src="/resources/images/header/btn_notify.png"
-						alt="알림"><em class="count-flag"><span>3</span></em></a>
+				<!-- <a href="javascript:void(0)" class="btn btn-notify"><img src="/resources/images/header/btn_notify.png"
+						alt="알림"><em class="count-flag"><span>3</span></em></a> [퍼블-7] 삭제 -->
+
+				<!--[퍼블-7] 검색버튼 추가 -->
+				<a href="javascript:void(0)" class="btn btn-search-menu">
+					<img src="/resources/images/header/btn_search_menu.png" alt="메뉴 검색">
+				</a>
+				<!--//[퍼블-7] 검색버튼 추가 -->
 
 				<!--D: 좋아요버튼 -->
 				<!-- <a href="javascript:void(0)" class="btn btn-like"><img src="/resources/images/header/btn_like.png" alt="좋아요"><em class="count-flag">3</em></a> -->
@@ -273,32 +279,36 @@
 						<div class="area-title-box">
 							<h2 class="area-title">빠른 서비스</h2>
 						</div>
+
+						<!-- [퍼블-7] 순서, 텍스트, 아이콘 변경/span 삭제 -->
 						<ul class="quick-service-list" id="MAIN_QUICK_MENU">
-							<li class="service-deposits">
+							<li class="service-loan">
 								<a href="#none">
-									<span>처음이신가요?</span>
-									빠른 계좌개설
+									<!-- <span>대출을 진행하고 싶어요!</span> -->
+									대출 이어하기
 								</a>
 							</li>
-							<li class="service-loan-inquiry">
+							<li class="service-deposits">
 								<a href="#none">
-									<span>이런 상품을 찾으시나요?</span>
-									예적금통장<br />계좌개설
+									<!-- <span>처음이신가요?</span> -->
+									빠른 계좌개설
 								</a>
 							</li>
 							<li class="service-contract">
 								<a href="#none">
-									<span>계약서 작성이 필요해요!</span>
-									전자계약서 작성
+									<!-- <span>계약서 작성이 필요해요!</span> -->
+									전자약정
 								</a>
 							</li>
-							<li class="service-loan">
+							<li class="service-loan-inquiry">
 								<a href="#none">
-									<span>대출을 진행하고 싶어요!</span>
-									신용조회 동의
+									<!-- <span>이런 상품을 찾으시나요?</span> -->
+									예적금 계좌개설
 								</a>
 							</li>
 						</ul>
+						<!-- //[퍼블-7] 순서, 텍스트, 아이콘 변경 -->
+
 					</section>
 					<!-- //[퍼블-5] 위치 이동, 전체 수정 -->
 
@@ -368,9 +378,9 @@
 							</h2>
 						</div>
 						<ul class="service-more">
-							<li class="kcb-score">
-								<a href="javascript:void(0);">대출이어하기</a><!-- [퍼블-5] 텍스트 수정 -->
-							</li>
+							<!-- <li class="kcb-score">
+								<a href="javascript:void(0);">대출이어하기</a>[퍼블-5] 텍스트 수정
+							</li> [퍼블-7] 삭제 -->
 							<li class="living-expenses">
 								<a href="javascript:void(0);">온라인 서류제출</a>
 							</li>

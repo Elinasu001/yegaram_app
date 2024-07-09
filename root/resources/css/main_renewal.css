@@ -57,12 +57,12 @@
 .quick-service-area .area-title { margin-bottom:0 !important; font-size:0.77778rem; }
 .quick-service-list { display: flex; justify-content: space-between; align-items: center; gap: 13px; flex-wrap: wrap; width: 100%; }
 .quick-service-list li { width: 48%; box-sizing: border-box; }
-.service-deposits a { background:url('../images/main/ico_service_deposits.png') no-repeat 89% 87%/ 55px auto; }
-.service-loan-inquiry a { background:url('../images/main/ico_service_loan_inquiry.png') no-repeat 89% 87%/ 55px auto; }
-.service-contract a { background:url('../images/main/ico_service_contract.png') no-repeat 89% 87%/ 55px auto; }
-.service-loan a { background:url('../images/main/ico_service_loan.png') no-repeat 89% 87%/ 55px auto; }
+.service-deposits a { background:url('../images/main/ico_service_deposits.png') no-repeat 92% 80%/ 55px auto; }
+.service-loan-inquiry a { background:url('../images/main/ico_service_loan_inquiry.png') no-repeat 92% 80%/ 55px auto; }
+.service-contract a { background:url('../images/main/ico_service_contract.png') no-repeat 92% 80%/ 55px auto; }
+.service-loan a { background:url('../images/main/ico_service_loan.png') no-repeat 92% 80%/ 55px auto; }
 
-.quick-service-list a { display:block; height:141px; padding:15px; border-radius:16px; background-color:#FFFFFF; font-weight:600; color:#333333; font-size:0.88889rem; }
+.quick-service-list a { display:block; height:130px; padding:18px 12px 15px; border-radius:16px; background-color:#FFFFFF; font-weight:600; color:#333333; font-size:0.88889rem; }
 .quick-service-list a span { color: #666666; display: block; font-size:0.66667rem; line-height:1.056rem; font-weight: 400; }
 .quick-service-list li.highlight a { border:1px solid #6836CB; color:#6836CB; background:#EEEBFF; }
 .quick-service-area .quick-menu-search { color:#757575; font-size:0.77778rem; line-height:1.5; }
