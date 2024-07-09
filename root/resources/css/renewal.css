@@ -128,7 +128,7 @@ body.fix { overflow:hidden; }
 .prod-list-info > li > p { font-size:0.9rem; color:#999999; }
 
 /* 공통 - 처리결과화면 */
-.result-area { text-align:center; }
+.result-area { text-align:center; font-size:0; }
 .result-area .bg-box { margin-top:30px; }
 .result-area  + .bg-box { margin-top:30px; }
 .result-area + .txt-list-wrap { margin-top:30px; }
@@ -1310,7 +1310,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 /* 약관/서식 */
 .terms-list.type2 li a:after { content:none; }
 .terms-list.type2 em { font-size:0.88889rem; line-height:1.278rem; color:#111111; }
-.terms-list li p {  padding-right:100px;}
+/* .terms-list li p {  padding-right:100px;} */
 .terms-list.type2 .btn { position:absolute; right:0; top:50%; }
 
 
