@@ -2029,7 +2029,7 @@ body.on { position:fixed; top:0; }
 .guide-txt-wrap .cont { padding-top:10px; }
 
 /*** 스텝 프로그레스 바 ***/
-.step-wrap { position:relative; margin:20px -20px; text-align:center; overflow: hidden;}
+.step-wrap { position:relative; /* margin:20px -20px;*/ margin:0px -20px; text-align:center; overflow: hidden;}
 .step-wrap .step-line{position:relative;height:8px;background:#EEEEEE}
 /*.step-wrap .step-line:before,*/
 .step-wrap .step-line:after { content:''; position:absolute; top:50%; left:-4px; width:6px; height:6px; background:#260F54; -webkit-transform:rotate(45deg) translateY(-80%); -ms-transform:rotate(45deg) translateY(-80%); transform:rotate(45deg) translateY(-80%); }
@@ -2700,7 +2700,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .fontsize-range-wrap .font-char.font-char-small{font-size:0.88889rem; line-height:1.4375;}
 .fontsize-range-wrap .font-char.font-char-big{font-size:1.33334rem; line-height:1.29167; font-weight: 600;}
 /* 버튼 위로 */
-.btn-top{ position:fixed; right:10px; bottom:12%; width:58px; height:58px; background:url(../images/common/btn_top_off.png) no-repeat 50% / 58px auto; z-index:10 }
+.btn-top{ position:fixed; right:13px; bottom:80px; width:58px; height:58px; background:url(../images/common/btn_top_off.png) no-repeat 50% / 58px auto; z-index:10 }
 .ios .btn-top { bottom:15%; }
 /* 사용자 아이디 로그인 */
 .main .login-id .default-wrap { padding-top:0; }
