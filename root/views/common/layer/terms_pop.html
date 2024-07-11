@@ -49,7 +49,17 @@
 	data-activeEnv="${active.env">
 </script>
 
+<script>
 
+</script>
+
+<style>
+
+    .layerpopup.laypop-all #pdfIframe { display:none; }
+    .layerpopup.laypop-all.show #pdfIframe { display:block; }
+    /* .layerpopup.laypop-all .default-wrap iframe{ display:none; }
+    .layerpopup.laypop-all.show .default-wrap  iframe{ display:block;  top:0;} */
+</style>
 <body>
     <!-- header -->
     <div id="headerWrap">
@@ -67,13 +77,18 @@
             <!--contents -->
             <div class="contents">
                 <div class="default-wrap">
+                    
+                    <div class="btn-cont-wrap">
+                        <a href="javascript:void(0);" class="btn btn-primary" onclick="openPopupUp('lyTermsPop');">버튼명</a>
+                    </div>
+
 
 
                 </div>
             </div>
             <!-- //contents -->
 
-            <div id="lyTermsPop" class="layerpopup laypop-all agree-layer show" style="display: block;">
+            <div id="lyTermsPop" class="layerpopup laypop-all show" >
                 <!-- s: contents -->
                 <div class="pop-header">
                     <h2 class="pop-title">약관명</h2>
@@ -83,8 +98,7 @@
                 <div class="pop-con-wrap" style="padding-bottom: 60px;">
                     <div class="default-wrap mb0">
                         <div class="info-wrap">
-                            PDF솔루션 들어갈 예정
-                            <iframe src="/resources/terms/P00001.pdf" style="width:100%; height:100%;" ></iframe>
+                            <iframe  id="pdfIframe" src="/resources/terms/P00001.pdf" style="width:100%; height:100%;"></iframe>
                         </div>
                         <!-- <div class="plus-minus-wrap">
                             <button type="button"><span>+</span></button>

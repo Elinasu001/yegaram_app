@@ -1343,7 +1343,7 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 .layerpopup.laypop-all .pop-con-wrap.grid .default-wrap section:last-child { padding-bottom:100px; }
 .layerpopup.laypop-all .pop-con-wrap.grid { height:100%; }
 .layerpopup.laypop-all .pop-con-wrap.grid.login-banner .default-wrap section:last-child { padding-bottom:20px; }
-.layerpopup.laypop-all form { height:100%; }
+/* .layerpopup.laypop-all form { height:100%; } */
 /* .default-wrap.product { padding:0 20px; } */
 .default-wrap { padding:0px 20px 60px; margin-bottom:40px; }
 .default-wrap.gray-wrap { padding:0 20px 60px; margin-bottom:0; }
@@ -2332,7 +2332,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 /** [공통] 상품리스트 템플릿 **/
 .tooltip-form-wrap { margin-left:15px; display:flex; flex-direction:row-reverse; }
 .tooltip-wrap.type2 .tooltip-txt  { display:none; left:inherit; top:-53px; right:-10px; padding:12px 15px; background:#F1EBFD; font-weight:400; color:#612AD0; font-size:0.66667rem; line-height:1.58334; transform:none; transition:none; opacity:1; }
-.tooltip-wrap .tooltip-txt p { margin-top:0px!important; font-weight:400 !important; color:#612AD0 !important; font-size:0.66667rem !important; line-height:1.58334 !important; }
+.tooltip-wrap .tooltip-txt p { margin-top:0px!important; font-weight:400 !important; /*color:#612AD0 !important;*/ font-size:0.66667rem !important; line-height:1.58334 !important; }
 .tooltip-wrap.type2 .tooltip-txt:before { z-index:2; left:inherit; right:13px; border-left-color:#F1EBFD; }
 .like {  z-index:10; display:block; width:24px; height:24px; font-size:0; background:url("../images/common/ico_heart.png") no-repeat 50% / 24px auto; }
 .like.active { background-image:url("../images/common/ico_heart_on.png"); }
