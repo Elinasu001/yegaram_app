@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common"
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm"
+	data-serverTime="20230803152535"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+</head>
+
+<style>
+    .default-wrap h3.tit-h3 {  display:block; margin:20px 0; font-size:20px; }
+    .default-wrap h4.tit-h4 {  display:block; margin:40px 0 0 0; font-size:16px; }
+    .bg-txt { background:#DDDDDD; padding:20px; font-size:16px; }
+    
+</style>
+
+<body>
+    <!-- header -->
+    <div id="headerWrap">
+        <script>
+        $(document).ready(function(){
+            document.charset="euc-kr";
+            $("#headerWrap").load("../includes/header.html");
+        });
+        </script>
+    </div>
+	<!-- //header -->
+
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+
+                <h3 class="tit-h3">결과 화면</h3>
+
+                <h4 class="tit-h4">• 진행 중일 경우</h4>
+                <section class="result-area ing">
+                    <p class="tit"><strong>신청하신 대출이<br/>심사 중이세요</strong></p>
+                    <div class="txtbox-wrap">
+                        <p>상담원이 연락 드릴 예정이에요</p>
+                    </div>
+                    <div class="txt-list-wrap">
+                        <div class="txt-detail-area">
+                            <div class="txt-detail-tit">
+                                <strong>XX론</strong>
+                            </div>
+                            <ul class="txt-list">
+                                <li>
+                                    <span class="tit">신청일시</span>
+                                    <span class="txt">YYYY.MM.DD hh:ss</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <h4 class="tit-h4">• 진행 안됐을 경우</h4>
+                <section class="result-area exclamation">
+                    <p class="tit"><strong>신청해주신 대출은<br>상담이 필요해요</strong></p>
+                    <div class="bg-box">
+                        <p class="box-tit"><strong>논스톱 자동대출</strong></p>
+                        <p class="box-desc">보다 정확한 상담을 위해<br>빠른시간 내에 당행 상담원이 연락 드릴게요</p>
+                    </div>
+                </section>
+
+                <h4 class="tit-h4">• 완료 됐을 경우</h4>
+                <section class="result-area checking">
+                    <p class="tit"><strong>전자계약서 작성을 완료했어요</strong></p>
+                    <div class="txtbox-wrap">
+                        <p>대출 심사와 대출금 입금을 위해<br>상담원이 연락드릴 예정이에요</p>
+                    </div>
+                </section>
+
+                <h4 class="tit-h4">• 결과 없을 경우</h4>
+                <section class="result-area nodata">
+                    <p lass="desc">검색결과가 없어요</p>
+                    <p class="desc">도로명, 지번주소, 지역명(동/리) + 건물명으로<br>다시 검색하세요</p>
+                </section>
+
+            </div>
+        </div>
+        <!-- //contents -->
+
+    </div>
+    <!-- //contentsWrap -->
+</body>
+</html>
+
