@@ -108,7 +108,7 @@
 					<!--D: 삭제 <div class="form-wrap">
 						<div class="input"> -->
 							<div id="rpyGbnDiv" class="form-wrap"><!--D: form-wrap 클래스 변경 -->
-								<div class="select-box" tabindex="1" onclick="openPopupUp('rpyGbnPop')">
+								<div class="select-box" tabindex="1" onclick="openPopupUp('lySel1');">
 									<label for="rpyGbnText">상환방식</label>
 									<span class="option" id="rpyGbnText">미선택</span>
 									<input type="hidden" id="rpyGbn" class="step1_validChk">
@@ -121,7 +121,7 @@
 					<div class="form-wrap" id="rpyAmtDiv">
 						<label for="RPY_AMT" class="formlabel onbasic">상환금액</label>
 						<div class="input">
-							<input type="text" title="상환금액" id="RPY_AMT" class="inp step1_validChk" onkeyup="validChk('step1'); removeErr(this);" name="RPY_AMT" value="" placeholder="금액을 입력해 주세요" required="">
+							<input type="text" title="상환금액" id="RPY_AMT" class="inp step1_validChk" onkeyup="validChk('step1'); removeErr(this);" name="RPY_AMT" value="" placeholder="" required="" readonly>
 							<span class="static-unit">원</span>
 						</div>
 					</div>
@@ -134,11 +134,11 @@
                 <!--E: 상환방식 -->
 
                 <!--S: 출금계좌 -->
-				<div id="rpyStep2" class="form-all-wrap" style="display:block;"><!--D:form-all-wrap 클래스 추가-->
+				<div id="rpyStep2" class="form-all-wrap"><!--D:form-all-wrap 클래스 추가-->
 					<!--D: 삭제 <div class="form-wrap">
 						<div class="input"> -->
 							<div id="wtchAcnoDiv" class="form-wrap"><!--D: form-wrap 클래스 변경-->
-								<div class="select-box" tabindex="1"  onclick="biz.acnoList('1', selWtchAcno);">
+								<div class="select-box" tabindex="1" >
 									<label for="wtchAcnoText">출금계좌</label>
 									<span class="option" id="wtchAcnoText">미선택</span>
 									<input type="hidden" id="WTCH_ACNO_16" name="WTCH_ACNO_16" class="step2_validChk">
@@ -162,7 +162,7 @@
 		</div>
 
 		<!--S: 상환방식 (팝업)-->
-		<div id="lySel1" class="layerpopup layer-up show" style="position: fixed; top: 351px; left: 0px; display: block;">
+		<div id="lySel1" class="layerpopup layer-up">
 			<div class="content-wrap">
 				<div class="pop-header">
 					<h2 class="pop-title">상환방식</h2>

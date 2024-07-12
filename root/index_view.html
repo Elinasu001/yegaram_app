@@ -30,6 +30,8 @@
         td[colspan="6"] {
             background-color: #a3cca3;; 
         }
+
+        .del td{ text-decoration-line: line-through;  }
         </style>
     </head>
     <body>
@@ -772,9 +774,17 @@
                                     <td class="modify">4/26</td>
                                     <td class="person">박수현</td>
                                     <td></td>
-                                    <td>로그인 방식 선택</td>
+                                    <td>로그인 방식 선택 (팝업)<br/>
+                                        - 7/12 다른 CS_Number 사용자 로그인 시,<br/>
+                                        인증수단 초기화 필요 알림(alert)<br/>
+                                        - 7/12 이전 휴대폰에서 로그인 시,<br/>
+                                        간편인증 수단 재등록 필요 알림(alert)
+                                    </td>
                                     <td>- 섹션 나눌 경우 (grid 사용)<br/>
-                                        - 4/29 (개발 수정 필요 : gird 클래스 위치 변경) - 전달 완료</td>
+                                        <b>
+                                        - 4/29 (개발 수정 필요 : gird 클래스 위치 변경) - 전달 완료<br/>
+                                        - 5/10 : 개발 팝업 적용으로 퍼블도 팝업으로 변경
+                                        </b></td>
                                     <td><a href="views/common/layer/login_select.html" target="_blank">/views/common/layer/login_select.html</a></td>
                                 </tr>
 
@@ -782,7 +792,8 @@
                                     <td class="modify">4/26</td>
                                     <td class="person">박수현</td>
                                     <td></td>
-                                    <td>사용자 아이디 로그인(팝업)</td>
+                                    <td>사용자 아이디 로그인(팝업)<br/>
+                                    </td>
                                     <td></td>
                                     <td><a href="views/common/layer/login.html" target="_blank">/views/common/layer/login.html</a></td>
                                 </tr>
@@ -1943,8 +1954,8 @@
                                     <td class="person"></td>
                                     <td></td>
                                     <td>종합통장 계좌상세</td>
-                                    <td>예적금 계좌상세와 동일하게 사용 / 차트부분은 색상부분 만 참고</td>
-                                    <td><a href="views/dep/inq/depAcnoSrch.html" target="_blank">depTrnHist.html</a></td>
+                                    <td>예적금 계좌상세와 동일하게 사용 / 차트부분은 색상부분 만 참고<br/><b>0705 - 기획현행화 : 계좌 다운로드 버튼 추가</b></td>
+                                    <td><a href="views/dep/inq/depTrnHist.html" target="_blank">depTrnHist.html</a></td>
                                 </tr>
                                 <tr>
                                     <td class="modify">5/30</td>
@@ -1956,16 +1967,16 @@
                                 </tr>
 
                                 <tr>
+                                    <td colspan="6" style="text-align:center">3. 대출계좌(계좌관리)</td>
+                                </tr>
+
+                                <tr>
                                     <td class="modify"></td>
                                     <td class="person"></td>
                                     <td></td>
                                     <td>종합통장대출</td>
                                     <td>예적금 계좌관리의 입출금 계좌와 동일하게 사용</td>
                                     <td><a href="views/dep/inq/depAcnoSrch2.html" target="_blank">depAcnoSrch2.html</a></td>
-                                </tr>
-
-                                <tr>
-                                    <td colspan="6" style="text-align:center">3. 대출계좌(계좌관리)</td>
                                 </tr>
 
                                 <tr>
@@ -2034,7 +2045,7 @@
                                     <td>이자(원리금) 납부정보 확인(회차상환)<br/>
                                         이자(원리금) 납부정보 확인(중도상환)
                                     </td>
-                                    <td></td>
+                                    <td><b>0712 - 기획현행화 : 텍스트 반영</b></td>
                                     <td><a href="views/lon/mng/intrWthd3.html" target="_blank">views/lon/mng/intrWthd3.html</a></td>
                                 </tr>
                                 
@@ -2057,7 +2068,18 @@
                                     <td class="modify">5/30</td>
                                     <td class="person">박수현</td>
                                     <td></td>
-                                    <td>금리인하요구 신청 이력 없음</td>
+                                    <td>
+                                        금리인하요구권 신청 불가</td>
+                                    <td></td>
+                                    <td><a href="views/lon/mng/intrReduReg5.html" target="_blank">views/lon/mng/intrReduReg5.html</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="modify">5/30</td>
+                                    <td class="person">박수현</td>
+                                    <td></td>
+                                    <td>
+                                        금리인하요구 신청 이력 없음</td>
                                     <td></td>
                                     <td><a href="views/lon/mng/intrReduReg1.html" target="_blank">views/lon/mng/intrReduReg1.html</a></td>
                                 </tr>
@@ -2069,7 +2091,7 @@
                                     <td>금리인하요구권 신청 약관동의<br/>
                                         - 1. 금융상품 중요사항 안내에 동의해주세요 (Alert)
                                     </td>
-                                    <td>디자인 변경 - intrReduReg2.html는 (Alert만 상용해주세요) / 약관동의는 terms.html 공통으로 사용하기로 변경됐습니다. </td>
+                                    <td>디자인 변경 - intrReduReg2.html는 (Alert만 상용해주세요) / <b>약관동의는 terms.html 공통으로 사용하기로 변경됐습니다.</b> </td>
                                     <td><a href="views/lon/mng/intrReduReg2.html" target="_blank">views/lon/mng/intrReduReg2.html</a></td>
                                 </tr>
 
@@ -2081,7 +2103,7 @@
                                         - 직업 (팝업)<br/>
                                         - 신청사유 (팝업)<br/>
                                     </td>
-                                    <td></td>
+                                    <td><b>7/11 기획현행화 : 주소폼 삭제<br/>7/11 기획현행화 : 주요 표시 완료</b></td>
                                     <td><a href="views/lon/mng/intrReduReg3.html" target="_blank">views/lon/mng/intrReduReg3.html</a></td>
                                 </tr>
 
@@ -2116,8 +2138,10 @@
                                     <td class="modify">5/30</td>
                                     <td class="person">박수현</td>
                                     <td></td>
-                                    <td>금리인하요구권 신청 불가<br/>
-                                        금리인하요구권 신청 완료<br/>
+                                    <td>
+                                        금리인하요구권 신청 완료 <br/>
+                                        - 자동 심사 결과가 반영된 경우<br/>
+                                        - 금리인하요구권 신청 완료<br/>
                                         - 직접 서류제출하기 선택 후 완료(수기 심사 케이스)<br/>
                                         - 금리인하 신청만 완료된 경우(수기 심사 케이스)<br/>
                                         금리 인하요구권 신청 실패
@@ -2148,7 +2172,7 @@
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출철회신청 안내</td>
-                                    <td></td>
+                                    <td><b>0712 - 기획현행화</b></td>
                                     <td><a href="views/lon/mng/loanWthdrwReg1.html" target="_blank">views/lon/mng/loanWthdrwReg1.html</a></td>
                                 </tr>
 
@@ -2166,7 +2190,7 @@
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출철회신청 이용약관</td>
-                                    <td></td>
+                                    <td><b>5/30 : 디자인 변경 - terms.html 공통으로 사용으로 변경</b></td>
                                     <td><a href="views/lon/mng/loanWthdrwReg2.html" target="_blank">views/lon/mng/loanWthdrwReg2.html</a></td>
                                 </tr>
 
@@ -2175,7 +2199,7 @@
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>대출철회신청 계좌 정보</td>
-                                    <td></td>
+                                    <td><b>0712 - 기획현행화</b></td>
                                     <td><a href="views/lon/mng/loanWthdrwReg3.html" target="_blank">views/lon/mng/loanWthdrwReg3.html</a></td>
                                 </tr>
 
@@ -2277,7 +2301,7 @@
                                         - 대출철회권안내 (팝업)<br/>
                                         - 중도상환 처리 동의 (팝업)<br/>
                                     </td>
-                                    <td></td>
+                                    <td><b>0712 - 기획현행화 : 텍스트 수정</b></td>
                                     <td><a href="views/lon/mng/loanRpyPrc1.html" target="_blank">views/lon/mng/loanRpyPrc1.html</a></td>
                                 </tr>
 
@@ -2338,7 +2362,7 @@
 
                 <div class="cont" >
                     <div class="guide">
-                        <h3 class="tit on">대출 - 대출상품/간편대출한도조회/대출신청/대출이어하기/대출신용조회동의/온라인서류제출/전자계약서 작성하기/계약서 확인(다운로드)/대출이용가이드 - 완료</h3>
+                        <h3 class="tit on">대출 - 대출상품/간편대출한도조회 - 0712 기획현행화 : 간편대출한도조회 같은 프로세스로 삭제/대출신청/대출이어하기/대출신용조회동의/온라인서류제출/전자계약서 작성하기/계약서 확인(다운로드) -  0712 기획현행화 : 계약내용_상세보기로 (변경)/대출이용가이드 - 완료</h3>
                         <summary></summary>
                         <table>
                             <caption></caption>
@@ -2703,10 +2727,10 @@
                                 </tr>
 
                                 <tr>
-                                    <td colspan="6" style="text-align:center">대출 _ 간편한도조회</td>
+                                    <td colspan="6" style="text-align:center">대출 _ 간편한도조회 <b>7/12 기획현행화- 기존 대출신청 프로세스랑 동일하여 삭제</b></td>
                                 </tr>
                                 
-                                <tr>
+                                <tr class="del">
                                     <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
@@ -2714,7 +2738,7 @@
                                     <td></td>
                                     <td><a href="views/lon/inq/qckLonLimt1.html" target="_blank">views/lon/inq/qckLonLimt1.html</a></td>
                                 </tr>
-                                <tr>
+                                <tr  class="del">
                                     <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
@@ -2722,7 +2746,7 @@
                                     <td><b>5/30 : 디자인 변경 - terms.html 공통 사용으로 변경</b></td>
                                     <td><a href="views/lon/inq/qckLonLimt2.html" target="_blank">views/lon/inq/qckLonLimt2.html</a></td>
                                 </tr>
-                                <tr>
+                                <tr  class="del">
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
@@ -2730,7 +2754,7 @@
                                     <td></td>
                                     <td><a href="" target="_blank">loanStbt.html</a></td>
                                 </tr>
-                                <tr>
+                                <tr  class="del">
                                     <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
@@ -2740,7 +2764,7 @@
                                     <td></td>
                                     <td><a href="views/lon/inq/qckLonLimt3.html" target="_blank">views/lon/inq/qckLonLimt3.html</a></td>
                                 </tr>
-                                <tr>
+                                <tr  class="del">
                                     <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
@@ -2748,7 +2772,7 @@
                                     <td><b>6/20 - gray-wrap 클래스 추가 , line 클래스 삭제 - 전달완료</b></td>
                                     <td><a href="views/lon/inq/qckLonLimt4.html" target="_blank">views/lon/inq/qckLonLimt4.html</a></td>
                                 </tr>
-                                <tr>
+                                <tr  class="del">
                                     <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
@@ -3013,7 +3037,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td colspan="6" style="text-align:center">대출 _ 계약서확인(다운로드)</td>
+                                    <td colspan="6" style="text-align:center">대출 _ 계약서확인(다운로드) > 0712 기획현행화 : 계약내용_상세보기로 변경</td>
                                 </tr>
 
                                 <tr>
@@ -3029,10 +3053,10 @@
                                     <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
-                                    <td>대출 계약서 목록(계약서 없음)<br/>
+                                    <td>0712 기획현행화 - 대출 계약서 목록(계약서 없음)<br/>
                                         대출 계약서 목록
                                     </td>
-                                    <td>새로운 페이지입니다.</td>
+                                    <td>새로운 페이지입니다. <br/><b>0712 기획현행화 - 계약서 없는 화면 추가 <br/>0712 기획현행화 - 텍스트 변경</b></td>
                                     <td><a href="views/lon/prc/loanTermsDwn01.html" target="_blank">views/lon/prc/loanTermsDwn01.html</a></td>
                                 </tr>
 
@@ -3040,9 +3064,8 @@
                                     <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
-                                    <td>대출 계약서 상세화면
-                                    </td>
-                                    <td>새로운 페이지입니다.</td>
+                                    <td>대출 계약서 상세화면</td>
+                                    <td>새로운 페이지입니다.<br/><b>0712 기획현행화 - 파일 다운로드 삭제</b></td>
                                     <td><a href="views/lon/prc/loanTermsDwn02.html" target="_blank">views/lon/prc/loanTermsDwn02.html</a></td>
                                 </tr>
 
