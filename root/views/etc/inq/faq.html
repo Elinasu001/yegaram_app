@@ -47,8 +47,21 @@
 	data-serverTime="20230803152535"
 	data-activeMode="local"
 	data-activeEnv="${active.env">
+
+  
+
+</script>
+<script>
+  $(document).ready(function(){
+        $('.fix-tag a').on('click', function(e){
+            e.preventDefault();
+            $('.fix-tag a').removeClass('on');
+            $(this).addClass('on');
+        })
+    });
 </script>
 
+</head>
 
 <body>
     <!-- header -->
@@ -85,7 +98,7 @@
                     <!--//D: 핫 키워드 버튼--><!--D: 텍스트 변경-->
                     <div class="fix-tag">
                         <span>#추천검색어</span>
-                        <a class="on" href="#none">#대출</a><!--D: on 클래스 : 선택됨-->
+                        <a href="#none">#대출</a><!--D: on 클래스 : 선택됨-->
                         <a href="#none">#자동이체</a>
                         <a href="#none">#예금</a>
                         <a href="#none">#적금</a>
