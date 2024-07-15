@@ -1359,7 +1359,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .accordion-area p,
 .accordion-area div {  font-size:0.88889rem;  line-height:1.278rem; font-weight: 500; color:#666666; }
 .accordion-area .accordion-check { float: right; }
-.accordion-area .accordion-check { display:block; font-weight:500; color:#4E32A5; }
+.accordion-area .accordion-check { display:none; font-weight:500; color:#4E32A5; }
 .accordion-area .btn.btn-sm { float:right; margin-top:-5px; }
 .accordion-sub {  display:none; font-size: 16px; }
 .accordion-sub  .cont { background: #FFFFFF; padding:10px; }
