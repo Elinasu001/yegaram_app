@@ -1356,9 +1356,11 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .accordion-tit{ font-size:0.88889rem; font-weight: 500; margin: 30px 0 40px; }
 .accordion-tit .txt { font-weight: 600; }
 .accordion-area { height:60px; border: 1px solid #DDDDDD; padding: 18px 0; border-radius: 15px; padding:20px; }
-.accordion-area p {  font-size:0.88889rem;  line-height:1.278rem; font-weight: 500; color:#666666; }
+.accordion-area p,
+.accordion-area div {  font-size:0.88889rem;  line-height:1.278rem; font-weight: 500; color:#666666; }
 .accordion-area .accordion-check { float: right; }
-.accordion-area .accordion-check { display:none; font-weight:500; color:#4E32A5; }
+.accordion-area .accordion-check { display:block; font-weight:500; color:#4E32A5; }
+.accordion-area .btn.btn-sm { float:right; margin-top:-5px; }
 .accordion-sub {  display:none; font-size: 16px; }
 .accordion-sub  .cont { background: #FFFFFF; padding:10px; }
 .accordion-sub .guide-area { padding:20px; margin-top: 15px; margin-bottom:30px; border-radius: 10px; background: #F8F8F8;}
