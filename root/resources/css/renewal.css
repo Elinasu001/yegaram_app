@@ -1383,3 +1383,10 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .layerpopup .pop-arrorw-area .next { background:url(../../resources/images/header/pop_btn_next.png) no-repeat 100%/40px auto; }
 
 .layerpopup.laypop-all .video-autoplay { width:100%; height:100%; }
+
+/* 결재 */
+.layer-up .ly-select .ly-select-list.check li > button { position:relative; background:#FFFFFF;  }
+.layer-up .ly-select .ly-select-list.check li > button::after,
+.layer-up .ly-select .ly-select-list.check li.active > button::after { content:''; position:absolute;  right:20px; transform: translateY(55%); width:20px; height:20px;}
+.layer-up .ly-select .ly-select-list.check li > button::after { content:'';  background:url(../images/common/chk_off.png)no-repeat 100%/20px auto;  }
+.layer-up .ly-select .ly-select-list.check li.active > button::after { content:'';  background:url(../images/common/chk_on.png)no-repeat 100%/20px auto;  }
