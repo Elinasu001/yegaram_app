@@ -226,6 +226,7 @@ html.font-size-3{ font-size: 24px;}
 .type-spread { margin:0 -20px; padding:0 20px; }
 .toast { position:fixed; right:50%; bottom:-10%; transform:translateX(50%); z-index:9999; width:max-content; max-width:calc(100% - 20px * 2); }
 .toast p { display:none; font-size:0.88889rem; line-height:1.4375; font-weight:400; color:#FFFFFF; background:rgb(39 6 107 / 90%); text-align:center; padding:15px 25px; box-shadow:0 5px 15px 0 rgb(55 41 131 / 30%); border-radius:15px; }
+.col-01 li { width:100%; }
 .col-02 li { width:calc(100% / 2); }
 .col-03 li { width:calc(100% / 3); }
 
@@ -2094,7 +2095,7 @@ input[type=search]::-webkit-search-cancel-button { -webkit-appearance:none; }
 /*.step-wrap + .tit-wrap { margin-top:20px; }*/
 /* .step-wrap + .tit-wrap { margin-top:20px; } */
 .tit-wrap + .form-wrap { margin-top:40px; }
-
+.tit-wrap + .info-wrap { margin-top:30px; }
 /** 싱글화면 - 서브 타이틀 **/
 /* .p-tit { margin-top:30px; font-size:1.2rem; font-weight:bold; }
 .s-tit{font-size:1.55556rem;font-weight:700;color:#2d2d2d;}
