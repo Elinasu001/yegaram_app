@@ -363,9 +363,12 @@ section > .result-wrap{ margin-top:40px; }
 
 /* 공동인증서 복사 */
 .choice-box { position: relative; border:1px solid; border:1px solid #DDDDDD; border-radius:15px; }
-.choice-box > a { display:inline-block; width:100%; padding:90px 20px 20px; text-align:center; }
-.choice-box > a.in { background:url("../images/common/img_cert_in.png") no-repeat top 30px center; background-size:130px auto; }
-.choice-box > a.out { background:url("../images/common/img_cert_out.png") no-repeat top 30px center; background-size:130px auto; }
+.choice-box > a,
+.choice-box > div { display:inline-block; width:100%; padding:90px 20px 20px; text-align:center; }
+.choice-box > a.in,
+.choice-box > div.in { background:url("../images/common/img_cert_in.png") no-repeat top 30px center; background-size:130px auto; }
+.choice-box > a.out,
+.choice-box > div.out { background:url("../images/common/img_cert_out.png") no-repeat top 30px center; background-size:130px auto; }
 .choice-box > a.mobile { background:url("../images/common/img_cert_mobile.png") no-repeat top 20px center; background-size:60px auto; }
 .choice-box > a.plus { background:url("../images/common/img_cert_plus.png") no-repeat top 20px center; background-size:60px auto; }
 .choice-box > a > p:nth-of-type(1) { font-size:0.77778rem; line-height:1.5; font-weight:600; }
@@ -1391,7 +1394,6 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .layer-up .ly-select .ly-select-list.check li > button::after { content:'';  background:url(../images/common/chk_off.png)no-repeat 100%/20px auto;  }
 .layer-up .ly-select .ly-select-list.check li.active > button::after { content:'';  background:url(../images/common/chk_on.png)no-repeat 100%/20px auto;  } */
 
-
 /* 셀렉트 팝업 결재 - 다건선택 */
 .ly-check-area > li.check-box:first-child { margin-top:0; }
 .ly-check-area > li.check-box { margin-top:10px; }
@@ -1401,3 +1403,12 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .ly-check-area > li.check-box input[type="checkbox"] + label::after { content:'';  background:url(../images/common/chk_off.png)no-repeat 100%/20px auto; }
 .ly-check-area > li.check-box input[type="checkbox"]:checked + label::after {  content:'';  background:url(../images/common/chk_on.png)no-repeat 100%/20px auto;  }
 .ly-check-area > li.check-box input[type="checkbox"]:checked + label { border:1px solid #4E32A5; background: #F4F5FB; font-weight:500; color:#4E32A5; }
+/* 셀렉트 팝업 결재 - 다건선택 결과 */
+.check-result-area  { display:flex; flex-wrap:wrap;}
+.check-result-area > li.check-box:first-child { margin-top:0; }
+.check-result-area > li.check-box { width:inherit; margin-right:10px;}
+.check-result-area > li.check-box input[type="checkbox"] + label { position:relative; padding-left:25px; font-size:0.88889rem; line-height:30px; }
+.check-result-area > li.check-box input[type="checkbox"] + label::before,
+.check-result-area > li.check-box input[type="checkbox"]:checked + label::before { position:absolute; left:0; top:50%; transform: translateY(-50%); width:16px; height:16px; }
+.check-result-area > li.check-box input[type="checkbox"] + label::before { content:'';  background:url(../images/common/chk_off.png)no-repeat 100%/16px auto; }
+.check-result-area > li.check-box input[type="checkbox"]:checked + label::before { content:'';  background:url(../images/common/chk_on.png)no-repeat 100%/16px auto; }
