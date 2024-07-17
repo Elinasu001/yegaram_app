@@ -1385,8 +1385,19 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .layerpopup.laypop-all .video-autoplay { width:100%; height:100%; }
 
 /* 결재 */
-.layer-up .ly-select .ly-select-list.check li > button { position:relative; background:#FFFFFF;  }
+/* .layer-up .ly-select .ly-select-list.check li > button { position:relative; background:#FFFFFF;  }
 .layer-up .ly-select .ly-select-list.check li > button::after,
 .layer-up .ly-select .ly-select-list.check li.active > button::after { content:''; position:absolute;  right:20px; transform: translateY(55%); width:20px; height:20px;}
 .layer-up .ly-select .ly-select-list.check li > button::after { content:'';  background:url(../images/common/chk_off.png)no-repeat 100%/20px auto;  }
-.layer-up .ly-select .ly-select-list.check li.active > button::after { content:'';  background:url(../images/common/chk_on.png)no-repeat 100%/20px auto;  }
+.layer-up .ly-select .ly-select-list.check li.active > button::after { content:'';  background:url(../images/common/chk_on.png)no-repeat 100%/20px auto;  } */
+
+
+/* 셀렉트 팝업 결재 - 다건선택 */
+.ly-check-area > li.check-box:first-child { margin-top:0; }
+.ly-check-area > li.check-box { margin-top:10px; }
+.ly-check-area > li.check-box input[type="checkbox"] + label { position:relative; display:block; width:100%; height:54px; border:1px solid #DDDDDD; border-radius: 10px; background:#FFFFFF; font-size:1rem; color:#26282C; line-height:54px; text-align: center; }
+.ly-check-area > li.check-box input[type="checkbox"] + label::after,
+.ly-check-area > li.check-box input[type="checkbox"]:checked + label::after { content:''; position:absolute;  right:20px; transform: translateY(55%); width:20px; height:20px; }
+.ly-check-area > li.check-box input[type="checkbox"] + label::after { content:'';  background:url(../images/common/chk_off.png)no-repeat 100%/20px auto; }
+.ly-check-area > li.check-box input[type="checkbox"]:checked + label::after {  content:'';  background:url(../images/common/chk_on.png)no-repeat 100%/20px auto;  }
+.ly-check-area > li.check-box input[type="checkbox"]:checked + label { border:1px solid #4E32A5; background: #F4F5FB; font-weight:500; color:#4E32A5; }

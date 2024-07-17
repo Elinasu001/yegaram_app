@@ -475,28 +475,37 @@
         <!-- //e: 풀팝업 -->
 
 
-        <!--[퍼블-2] : 240716 - 결재 팝업 추가-->
-        <div id="lySel3" class="layerpopup layer-up  has-button ">
+        <!--[퍼블-2] : 240716 - 결재 팝업 - 다건 선택 추가-->
+        <div id="lySel3" class="layerpopup layer-up  has-button">
             <div class="content-wrap">
                 <div class="pop-header">
                     <h2 class="pop-title">결재</h2>
                     <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
                 </div>
-                <div class="ly-scroll-con ly-select ">
-                    <ul class="ly-select-list check non-click">
-                        <li class=""><button>보험료납부</button></li>
-                        <li class=""><button>공과금납부</button></li>
-                        <li class=""><button>카드대금</button></li>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-check-area">
+                        <li class="check-box">
+                            <input type="checkbox" name="check" id="check01" value="">
+                            <label for="check01">보험료납부</label>
+                        </li>
+                        <li class="check-box">
+                            <input type="checkbox" name="check" id="check02" value="">
+                            <label for="check02">보험료납부</label>
+                        </li>
+                        <li class="check-box">
+                            <input type="checkbox" name="check" id="check03" value="">
+                            <label for="check03">보험료납부</label>
+                        </li>
                     </ul>
                 </div>
                 <div class="fixed-btn-wrap">
                     <div class="btn-wrap">
-                        <a href="#none" class="btn" onclick="closePopup('lyTermsPop')">동의</a>
+                        <a href="#none" class="btn" onclick="closePopup('lySel3')">확인</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!--[퍼블-2] : 240716 - 결결재 팝업 추가-->
+        <!--[퍼블-2] : 240716 - 결재 팝업 - 다건 선택 추가-->
 
     </div>
     <!-- //contentsWrap -->
