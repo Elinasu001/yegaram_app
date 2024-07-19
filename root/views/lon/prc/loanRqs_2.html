@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common"
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm"
+	data-serverTime="20230803152535"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+
+
+<body>
+    <!-- header -->
+    <header class="headerWrap">
+		<div class="headerLeft">
+			<a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+		</div>
+		<div class="headerCenter">
+			<h2 class="text"><span>대출신청</span></h2> <!--D: TEXT -->
+		</div>
+		<div class="headerRight">
+			<!-- <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a> -->
+		</div>
+	</header>
+	<!-- //header -->
+
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+                
+                <div class="tit-wrap">
+                    <p class="txt"><strong>추가적인 정보가<br/>더 필요해요</strong></p>
+                </div>
+                <!--S: FORM -->
+                <div class="form-all-wrap">
+
+                    <div class="form-wrap type2">
+                        <label for="LOAN_AMT" class="essential">대출신청금액</label><!--D: essential 클래스 추가-->
+                        <div class="input">
+                            <input type="tel" title="" class="validChk" id="LOAN_AMT" value="" placeholder="대출신청금액을 입력해주세요." pattern="[0-9]*"  maxlength="4" required="">
+                            <div class="value-wrap">
+                                <strong class="value"></strong>
+                                <span class="unit">만원</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-wrap">
+                        <div id="selDiv1" class="select-box openSel" tabindex="1">
+                            <label for="qValue1" class="essential">대출구분</label><!--D: essential 클래스 사용-->
+                            <span class="option" id="qText1">미선택</span>
+                        </div>
+                    </div>
+
+                    <div class="form-wrap">
+                        <div id="selDiv2" class="select-box openSel" tabindex="1">
+                            <label for="qValue2"  class="essential">기기모델</label><!--D: essential 클래스 사용-->
+                            <span class="option" id="qText2">미선택</span>
+                        </div>
+                    </div>
+
+                    <div class="form-wrap">
+                        <div id="selDiv3" class="select-box openSel" tabindex="1">
+                            <label for="qValue3" class="essential">수량</label><!--D: essential 클래스 사용-->
+                            <span class="option" id="qText3">미선택</span>
+                        </div>
+                    </div>
+
+                    <div class="form-wrap">
+                        <div id="selDiv4" class="select-box openSel" tabindex="1">
+                            <label for="qValue4" class="essential">담보종류</label><!--D: essential 클래스 사용-->
+                            <span class="option" id="qText4">미선택</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-all-wrap">
+
+                    <div class="form-wrap form-line address">
+                        <div class="check-account">
+                            <input type="checkbox" id="addrChkbox" value="">
+                            <label for="addrChkbox">
+                                <span>내 자택 주소와 동일해요</span>
+                            </label>
+                        </div>
+                        <label for="IRU_ZPCD" class="formlabel essential">사업장주소</label>
+                        <div class="input">
+                            <input type="text" title="우편번호" id="IRU_ZPCD" class="inp" name="IRU_ZPCD" value="" placeholder="우변번호 입력" required="">
+                            <button type="button" class="btn btn-sm">우편번호찾기</button>
+                        </div>
+                        <div class="input">
+                            <input type="text" title="기본주소" id="IRU_BSIC_ADDR" class="inp" name="IRU_BSIC_ADDR" value="" placeholder="기본주소 입력" required="">
+                        </div>
+                        <div class="input">
+                            <input type="text" title="상세주소" id="IRU_DTAD" class="inp" name="IRU_DTAD" value="" placeholder="상세주소 직접입력" required="" style="display:block;">
+                        </div>
+                    </div>
+
+                    <div class="form-wrap">
+                        <label for="ipt02" class="formlabel">비고</label>
+                        <div class="input">
+                            <textarea type="text" title="성명" id="ipt02" class="inp" name="" value=""  maxlength="" required="" placeholder="내용을 입력해 주세요">내용을 입력해 주세요
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--E: FORM -->
+            </div>
+        </div>
+        <!-- //contents -->
+
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap flexCol">
+                <a href="javascript:void(0);" class="btn disabled">대출신청</a><!--D: disabled 삭제 시 활성화-->
+                <a href="javascript:void(0);" class="btn txt">그만하기</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- //contentsWrap -->
+</body>
+</html>
+

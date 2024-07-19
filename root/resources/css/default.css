@@ -549,6 +549,7 @@ textarea:read-only { color:#333333; }
 .form-wrap > div.input input::placeholder { color:#CCCCCC; text-shadow:none; }
 .formlabel { display:block; position:relative; z-index:1; padding-top:3px; font-size:0.77778rem; font-weight:400; line-height:1.5; cursor:pointer; transition:all 0.3s; color:#999999;}
 .form-wrap > div:last-child { margin-bottom:0; }
+.form-wrap > div.input > span { margin-top:10px; display:block; }
 /* .form-wrap > div.input input::placeholder { color: transparent; } */
 /* .form-wrap.type-box > div.input input::placeholder { font-weight:300; color:#999999; } */
 /* .layerpopup .form-wrap > div.input input::placeholder { color:#CCCCCC; }
@@ -744,7 +745,7 @@ div:has(>.file-dwn) + div:has(>.file-dwn) .file-dwn { margin-top:10px; }
 .form-wrap.type2 > .input .unit { position:absolute; top:50%; right:0; transform:translateY(-50%); font-weight:700; font-size:1rem; } 디자인 변경 전 소스 */
 /* .form-wrap.type2 { margin-top:0; } */
 .form-wrap.type2 label { font-weight:500; font-size:0.88889rem; line-height:1.278rem; letter-spacing:-0.4px; color:#26282C; }
-.form-wrap.type2 > .input { /*height:50px;*/ /*margin-top:10px;*/ font-weight:700; color:#F1108E; font-size:1.94445rem; line-height:1.28571; line-height:50px; }
+.form-wrap.type2 > .input { /*height:50px;*/ margin-top:10px; font-weight:700; color:#F1108E; font-size:1.94445rem; line-height:1.28571; line-height:50px; }
 .form-wrap.type2 > div.input input { display:block; padding:0; border-bottom:none; font-weight:700; color:transparent; font-size:1.94445rem; line-height:50px; /*caret-color:#B088FF !important;*/ }
 .form-wrap.type2> div.input input::placeholder { color: transparent; }
 .form-wrap.type2 > div.input input:disabled + .value-wrap .value,
