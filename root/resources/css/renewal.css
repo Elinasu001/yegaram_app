@@ -95,7 +95,7 @@ body.fix { overflow:hidden; }
 /* 신분증 촬영 버튼 */
 /* .btn.btn-camera { padding-left:24px; } */
 .btn.btn-camera::before { content:""; display:inline-block; width:24px; height:24px; margin:-4px 3px 0 0; background:url("../images/common/ico_camera_white.png") no-repeat 50%/20px auto; vertical-align:middle; }
-.btn-cont-wrap .btn.btn-camera { margin:20px 0 10px; color:#260F54; }
+.btn-cont-wrap .btn.btn-camera { margin:20px 0 10px; color:#4E32A5; }
 .btn-cont-wrap .btn.btn-camera::before { width:22px; height:22px; margin:-5px 4px 0 0; background:url("../images/common/ico_camera_purple.png") no-repeat 50%/22px auto; }
 /* .btn-cont-wrap .btn + .btn { margin-left:10px; } */
 .btn-cont-wrap + .btn-cont-wrap { margin-top:15px; }
@@ -341,7 +341,7 @@ section > .result-wrap{ margin-top:40px; }
 .info-wrap .info-pre { font-family: 'Spoqa Han Sans Neo'; padding:15px; overflow:auto; white-space:pre-wrap; }
 .info-wrap .info-pre b { color:#000; }
 .tabs-wrap .tab-content-area .info-wrap { margin-top:40px; }
-.tab-iterm.col-01 + .tab-content-area .info-wrap { height:60vh; }/*개발 - pdf 한개 불러올 경우*/
+/* .tab-iterm.col-01 + .tab-content-area .info-wrap { height:71vh; } */
 
 /* 약관동의 text */
 .refer-txt { font-size:0.8rem; color:#999999; }
@@ -1282,6 +1282,9 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .terms-dsr-wrap { margin-top: 30px; }
 .terms-dsr-wrap .sub-tit-wrap .guide-txt-wrap .list-bull { margin-top:0; }
 .terms-dsr-wrap .sub-tit-wrap .guide-txt-wrap { margin-top:15px; }
+
+/* 버튼 */
+.dsr_con-wrap .form-all-wrap .form-wrap + .btn-cont-wrap { margin-top:30px; }
 
 /*공통*/
 .tit-wrap + .txtbox-wrap.ta-c { margin-top:40px; }
