@@ -1571,7 +1571,7 @@ body.on { position:fixed; top:0; }
 .prepare-area { overflow-y:scroll; max-height:350px; /*padding-bottom:20px;청test*/ }
 
 
-.layerpopup .content-wrap { z-index:20;  background:#fff; padding-bottom:100px; border-radius:20px 20px 0 0; }
+.layerpopup .content-wrap { z-index:20;  background:#fff; padding-bottom:20px; border-radius:20px 20px 0 0; }
 
 .type-alert > div { /*width:91.5%;*/ z-index:999; position:absolute; left:50%; bottom:20px; /* top:50%;*/ background:#fff; transform:translate(-50%,0); /*box-shadow:0 4px 8px 0 rgba(0,0,0,0.50);*/ }
 .layerpopup .sub-title { padding:20px 0; font-size:0.88889rem; line-height:1.4375; font-weight:500; color:#333; }
