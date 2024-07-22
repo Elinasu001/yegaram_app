@@ -3010,7 +3010,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td colspan="6" style="text-align:center">대출 _ 전자계약서작성하기</td>
+                                    <td colspan="6" style="text-align:center">대출 _ 전자계약서 작성하기</td>
                                 </tr>
 
                                 <tr>
@@ -3018,26 +3018,47 @@
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>전자계약서 이용약관</td>
-                                    <td>대출신청의 대출실행전자계약서 페이지와 동일 사용/ <b>5/30 : 디자인 변경 - terms.html 공통 사용으로 변경</b></td>
+                                    <td>대출신청의 대출실행전자계약서 페이지와 동일 사용 <b><br/>5/30 : 디자인 변경 - terms.html 공통 사용으로 변경<br/>[240722 기획/개발] - 페이지네이션 삭제 / 비디오 형식으로 개발에서 반영</b></td>
                                     <td><a href="views/lon/prc/loanSign.html" target="_blank">views/lon/prc/loanSign.html</a></td>
-                                </tr>
-
-                                <tr>
-                                    <td class="modify">5/24</td>
-                                    <td class="person">박수현</td>
-                                    <td></td>
-                                    <td>전자계약체결 내용확인</td>
-                                    <td>대출신청의 대출실행전자계약서 페이지와 동일 사용</td>
-                                    <td><a href="views/lon/prc/loanSign2.html" target="_blank">views/lon/prc/loanSign2.html</a></td>
                                 </tr>
 
                                 <tr>
                                     <td class="modify"></td>
                                     <td class="person">공통</td>
                                     <td></td>
-                                    <td>본인인증 (풀팝업)</td>
+                                    <td>타행 본인계좌 인증 (풀팝업)</td>
+                                    <td><b>[240722 기획현행화] - 프로세스 정리</b></td>
+                                    <td><a href="" target="_blank">out_bank_trans_popup.html</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td class="modify"></td>
+                                    <td class="person">공통</td>
                                     <td></td>
-                                    <td><a href="" target="_blank">user_auth.html</a></td>
+                                    <td>계좌인증 (풀팝업)</td>
+                                    <td><b>[240722 기획현행화] - 프로세스 정리</b></td>
+                                    <td><a href="" target="_blank">acno_auth_confirm.html</a></td>
+                                </tr>
+
+
+                                <tr>
+                                    <td class="modify">5/24</td>
+                                    <td class="person">박수현</td>
+                                    <td></td>
+                                    <td>전자계약체결 내용확인<br/>
+                                        - '전자계약서 이메일 발송' 컨펌 (Alert)<br/>
+                                        - [공통] 이메일 주소 : email.html
+                                        </td>
+                                    <td>대출신청의 대출실행전자계약서 페이지와 동일 사용<br/><b>[240722 기획현행화] - '전자계약서 이메일 발송' 컨펌 (Alert) 추가<br/>[240722 기획현행화] - 프로세스 공통 이메일 입력 (팝업) 추가</b></td>
+                                    <td><a href="views/lon/prc/loanSign2.html" target="_blank">views/lon/prc/loanSign2.html</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="modify"></td>
+                                    <td class="person">공통/개발</td>
+                                    <td></td>
+                                    <td>전자계약서 작성(공전소 솔루션)</td>
+                                    <td><b>[240722 기획현행화] - 프로세스 추가 (개발)</b></td>
+                                    <td><a href="" target="_blank"></a></td>
                                 </tr>
 
                                 <tr>
@@ -3049,16 +3070,25 @@
                                     <td><a href="" target="_blank">select_auth.html</a></td>
                                 </tr>
 
+                                <!-- <tr>
+                                    <td class="modify"></td>
+                                    <td class="person">공통</td>
+                                    <td></td>
+                                    <td>본인인증 (풀팝업)</td>
+                                    <td></td>
+                                    <td><a href="" target="_blank">user_auth.html</a></td>
+                                </tr> -->
+                               
                                 <tr>
                                     <td class="modify">5/24</td>
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>
-                                        전자계약서 작성 시간 초과 안내<br/>
                                         전자계약서 작성 완료(대출금 입금)<br/>
+                                        전자계약서 작성 시간 초과 안내<br/>
                                         전자계약서 작성 완료(상담원 연락 예정)
                                     </td>
-                                    <td></td>
+                                    <td><b>[240722 기획현행화] - 텍스트 반영</b></td>
                                     <td><a href="views/lon/prc/loanSign3.html" target="_blank">views/lon/prc/loanSign3.html</a></td>
                                 </tr>
 
@@ -3977,7 +4007,7 @@
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>전자민원신청 조회내역</td>
-                                    <td></td>
+                                    <td><b>[240722 기획현행화] - 민원신청버튼 추가</b></td>
                                     <td><a href="views/etc/inq/civilApply2.html" target="_blank">views/etc/inq/civilApply2.html</a></td>
                                 </tr>
 
@@ -4062,7 +4092,7 @@
                                     <td class="person">박수현</td>
                                     <td></td>
                                     <td>위법계약해지권</td>
-                                    <td><b>[ 240717 기획/개발 현행화 ] - 개발에서 관리 , 예가람 레이아웃 css 현행화</b></td>
+                                    <td></td>
                                     <td><a href="/views/etc/inq/illeagal.html" target="_blank">/views/etc/inq/illeagal.html</a></td>
                                 </tr>
 

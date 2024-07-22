@@ -146,11 +146,26 @@
 
         <div class="fixed-btn-wrap">
             <div class="btn-wrap flexCol"><!--D: flexCol 클래스 추가-->
-                <a href="#none" class="btn">전자서명</a><!--D: 텍스트 변경-->
+                <a href="#none" class="btn"  onclick="openPopup('lyAlert1');">전자서명</a><!--D: 텍스트 변경-->
                 <a href="#none" class="btn txt">그만하기</a><!--D: 위치 변경 및 btn txt 클래스 변경-->
             </div>
         </div>
 
+
+        <!--S: '전자계약서 이메일 발송' 컨펌 (Alert)-->
+        <div id="lyAlert1" class="layerpopup type-alert">
+            <div class="content-wrap">
+                
+                <div class="pop-con-wrap">
+                    <span class="pop-con"><b>yegaram@yegaram.co.kr</b> 로<br/>계약서를 받으시겠어요?</span>
+                </div>
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn btn-info" onclick="">취소</a>
+                    <a href="javascript:void(0);" class="btn"  onclick="closePopup('lyAlert1');">확인</a>
+                </div>
+            </div>
+        </div>
+        <!--E: '전자계약서 이메일 발송' 컨펌 (Alert-->
 
     </div>
     <!-- //contentsWrap -->
