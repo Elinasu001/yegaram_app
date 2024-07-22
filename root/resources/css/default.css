@@ -549,7 +549,7 @@ textarea:read-only { color:#333333; }
 .form-wrap > div.input input::placeholder { color:#CCCCCC; text-shadow:none; }
 .formlabel { display:block; position:relative; z-index:1; padding-top:3px; font-size:0.77778rem; font-weight:400; line-height:1.5; cursor:pointer; transition:all 0.3s; color:#999999;}
 .form-wrap > div:last-child { margin-bottom:0; }
-.form-wrap > div.input > span { margin-top:10px; display:block; }
+.form-wrap > div.input > span { display:block; }
 /* .form-wrap > div.input input::placeholder { color: transparent; } */
 /* .form-wrap.type-box > div.input input::placeholder { font-weight:300; color:#999999; } */
 /* .layerpopup .form-wrap > div.input input::placeholder { color:#CCCCCC; }
