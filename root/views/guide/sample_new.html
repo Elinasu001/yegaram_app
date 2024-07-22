@@ -385,8 +385,8 @@
 			if (ACTIVE_ENV == "WEB") {
 				try {
 					navigator.share({
-						title: "고려저축은행"
-						, title: "고려저축은행 " + pdnm + " 안내"
+						title: "예가람저축은행"
+						, title: "예가람저축은행 " + pdnm + " 안내"
 						, url: HOST_URL + '/lon/inq/loanDetail.frm?LINK_ACT=BBS_SELECT&PDCD=' + pdcd
 					});
 				} catch (e) {
@@ -394,7 +394,7 @@
 					copyURL();
 				}
 			} else {
-				window.plugins.socialsharing.share("고려저축은행 " + pdnm + " 안내", null, null, HOST_URL + '/lon/inq/loanDetail.frm?LINK_ACT=BBS_SELECT&PDCD=' + pdcd);
+				window.plugins.socialsharing.share("예가람저축은행 " + pdnm + " 안내", null, null, HOST_URL + '/lon/inq/loanDetail.frm?LINK_ACT=BBS_SELECT&PDCD=' + pdcd);
 			}
 		}
 
