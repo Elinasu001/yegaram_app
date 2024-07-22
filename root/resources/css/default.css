@@ -400,8 +400,8 @@ input[type="month"],
 input[type="search"],
 input[type="email"],
 input[type="number"]{ box-sizing:border-box; width:auto; background:#FFFFFF; border:none; font-size:0.88889rem; font-weight:400; line-height:1.278rem; font-family:inherit; border-radius:0; -webkit-appearance:none; -moz-appearance:none; appearance:none; color:#000; }
-textarea { overflow-y:scroll; width:100%; height:200px; border-radius:15px; background:#F8F8F8; font-size:0.88889rem; line-height:1.4375; white-space:pre-line; }
-textarea::placeholder { color:#CCCCCC; }
+textarea { overflow-y:scroll; width:100%; height:200px; border-radius:15px; background:#F8F8F8; font-size:0.88889rem; line-height:1.4375; white-space:pre-line; color:#999999;}
+textarea::placeholder { color:#999999; }
 select, .select-box { outline:none; appearance:none; -moz-appearance:none; -webkit-appearance:none; }/*????*/
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
