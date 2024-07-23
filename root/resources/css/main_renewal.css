@@ -211,6 +211,7 @@
 #event-lyPop .pop-header { padding:22px 20px 20px; }
 #event-lyPop .default-wrap { padding:0 15px; }
 #event-lyPop .pop-img { height:300px; overflow:auto; }
+#event-lyPop .pop-img:has(img) { height:100%; }
 .popup-close { display:flex; justify-content:space-between; position:fixed; bottom:0; left:0; right:0; padding:15px 20px 18px; background:#FFF; }
 .popup-close button{ font-size:0.88889rem; line-height:1.4375; }
 .pop-close-btn { color:#260F54; font-weight:bold; }
