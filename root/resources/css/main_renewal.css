@@ -157,6 +157,7 @@
 
 /* 로그인 후 예적금 카드 */
 .main .visaul-info-box .info-tit { overflow: hidden; /*padding-right: 35px;*/ padding-right: 30px; white-space: nowrap; text-overflow: ellipsis; }
+.main .visaul-info-box .info-tit .flag { margin-right:6px; }
 .main .bg-box { border-radius:15px; text-align:center; }
 .main .visaul-info-box + .bg-box { margin-top:20px; }
 .main .bg-box:has(.desc.nodata) { padding:29px 20px; }
@@ -209,6 +210,7 @@
 .pop-con-wrap:has(.pop-img) { margin-bottom:56px; overflow:hidden; }
 #event-lyPop .pop-header { padding:22px 20px 20px; }
 #event-lyPop .default-wrap { padding:0 15px; }
+#event-lyPop .pop-img { height:300px; overflow:auto; }
 .popup-close { display:flex; justify-content:space-between; position:fixed; bottom:0; left:0; right:0; padding:15px 20px 18px; background:#FFF; }
 .popup-close button{ font-size:0.88889rem; line-height:1.4375; }
 .pop-close-btn { color:#260F54; font-weight:bold; }
