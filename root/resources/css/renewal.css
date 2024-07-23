@@ -1128,7 +1128,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 
 /** 230829~ 이청아 **/
 /* 전자금융관리 */
-.img-wrap.otp { padding:30px 40px; }
+.img-wrap.otp { padding:40px 30px; }
 .tit-wrap:has(+.img-wrap.otp) { padding-bottom:20px; }
 .img-wrap + .form-wrap { margin-top:20px; }
 /* 빠른 계좌개설 - 약관 */
