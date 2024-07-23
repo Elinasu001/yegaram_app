@@ -708,6 +708,7 @@ input[type="file"]::file-selector-button { display:none; }
 .board-nav > div > a { display:flex; align-items:center; padding-right:10px; width:70%; font-size:0.77778rem; line-height:1.5; overflow:hidden;  }
 
 .notice_contents { min-height:150px; width:100%; margin-top:40px; padding:40px 0; border-top:1px solid #EEEEEE; border-bottom:1px solid #EEEEEE; }
+.notice_contents .app_go { color:#4E32A5; }/*전자민원신청 데이터 랑크 색상 추가*/
 .notice_contents + .btn-cont-wrap,
 .txt-list-wrap + .btn-cont-wrap,
 .terms-list.type2 + .btn-cont-wrap { margin-top:40px; }
@@ -1564,6 +1565,7 @@ body.on { position:fixed; top:0; }
 
 /* 디자인 추가 - 버튼 위아래로 있을 경우 */
 .layer-up.has-button:has(.fixed-btn-wrap .btn.txt) { padding-bottom:130px; }
+
 .layer-up.has-button .content-wrap { padding-bottom:20px; }
 .layer-up .txtbox-wrap { color:#666666; }
 
