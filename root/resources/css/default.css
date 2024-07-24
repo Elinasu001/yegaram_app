@@ -491,7 +491,8 @@ textarea:read-only { color:#333333; }
 .form-all-wrap .form-wrap.phone,
 .form-all-wrap .select-wrap + .form-wrap.form-line,
 .form-all-wrap .check-box.toggle + .form-wrap,
-.form-all-wrap .form-wrap + .radio-wrap:has(>.formlabel)  { margin-top:30px; }
+.form-all-wrap .form-wrap + .radio-wrap:has(>.formlabel) ,
+.form-all-wrap .radio-wrap + .form-wrap  { margin-top:30px; }
 .form-all-wrap .check-box.toggle + .form-wrap:has(.select-wrap) { margin-top:10px; }
 .form-all-wrap > .sub-tit-wrap,
 .form-all-wrap .form-wrap:has(>.check-result-area) .formlabel { margin-bottom:15px;}
@@ -1055,7 +1056,7 @@ input[type="hidden"] ~ .jumintext { left:15px; }
 .q-wrap.result-box { margin-top:20px; padding:20px; }
 
 /* 일반 라디오 버튼 - 06.28 수정 */
-.radio-list { display:flex; /*margin:10px 0;*/ gap:5px; flex-wrap:wrap; }
+.radio-list { display:flex; /*margin:10px 0;*/ gap:8px; flex-wrap:wrap; }
 .radio-list li { flex:1; position:relative; /*margin:10px 0;*/ }
 .radio-list li input { margin-right:10px; }
 .radio-list input[type="radio"] { display:none; }
@@ -1563,11 +1564,12 @@ body.on { position:fixed; top:0; }
 .layerpopup .fixed-btn-wrap { /*margin-top:10px;*/  background:#fff; bottom:0px; }
 .layerpopup.layer-up .fixed-btn-wrap {  padding:10px 20px 20px; }
 .layerpopup.has-button .ly-scroll-con.ly-select { padding:0 20px 0px !important; }
+
 /* 버튼 1개 있을 경우 */
-.layer-up.has-button { padding-bottom:30px; }
+.layer-up.has-button { padding-bottom:90px; }
 
 /* 디자인 추가 - 버튼 위아래로 있을 경우 */
-/* .layer-up.has-button:has(.fixed-btn-wrap .btn.txt) { padding-bottom:130px; } */
+.layer-up.has-button:has(.fixed-btn-wrap .btn.txt) { padding-bottom:130px; }
 
 .layer-up.has-button .content-wrap { padding-bottom:20px; }
 .layer-up .txtbox-wrap { color:#666666; }
