@@ -1697,6 +1697,7 @@ body.on { position:fixed; top:0; }
 .login-guide .swiper-pagination-bullet { border-radius: 50%; }
 
 /** Case 2 - 본문 컨텐츠 영역 **/
+.tabs-wrap.type2 { margin-top:30px; }
 .tabs-wrap.type2 .tab-item { flex-wrap:wrap; padding:4px; min-height:48px; border-radius:10px; background:#F8F8F8; }
 .tabs-wrap.type2 .tab-item:before { display:none; }
 .tabs-wrap.type2 .tab-item li {  height:40px; line-height:24px; padding:8px; margin-right:0; font-size:0.88889rem; border:0; border-radius:10px;  }
@@ -2550,7 +2551,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .fin-cal-wrap .select-wrap .select-box span.option { font-size:0.88889rem; line-height:1.4375; }
 
 /* 팝업 금융계산기 */
-.popcal-wrap { margin-top:30px; }
+/* .popcal-wrap { margin-top:30px; } */
 .popcal-result-wrap  { margin-top:40px; }
 
 
