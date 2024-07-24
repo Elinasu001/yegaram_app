@@ -1561,10 +1561,10 @@ body.on { position:fixed; top:0; }
 .layerpopup.layer-up .fixed-btn-wrap {  padding:10px 20px 20px; }
 .layerpopup.has-button .ly-scroll-con.ly-select { padding:0 20px 0px !important; }
 /* 버튼 1개 있을 경우 */
-.layer-up.has-button { padding-bottom:90px; }
+.layer-up.has-button { padding-bottom:30px; }
 
 /* 디자인 추가 - 버튼 위아래로 있을 경우 */
-.layer-up.has-button:has(.fixed-btn-wrap .btn.txt) { padding-bottom:130px; }
+/* .layer-up.has-button:has(.fixed-btn-wrap .btn.txt) { padding-bottom:130px; } */
 
 .layer-up.has-button .content-wrap { padding-bottom:20px; }
 .layer-up .txtbox-wrap { color:#666666; }
@@ -1673,6 +1673,9 @@ body.on { position:fixed; top:0; }
 .tabs-wrap02.type2 li.on a,
 .tabs-wrap.type2 .tab-item li a { padding:0; color:#4E32A5; }
 .tabs-wrap .tab-content > div  { margin-top:30px; }
+
+.tabs-wrap .tab-item[class*='col'] { justify-content: center; }
+.tabs-wrap .tab-item[class*='col-3'] li { width:calc(100%/3) }
 
 /** _탭리스트 swiper 적용 case **/
 .default-wrap.product .tabs.swiper { margin:0 -20px; } /*네이버앱 대응*/
@@ -2538,6 +2541,9 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .fin-cal-wrap .bg-box .color-F1108E { font-weight:500; }
 .fin-cal-wrap .select-wrap .select-box label { font-weight: 400; }
 .fin-cal-wrap .select-wrap .select-box span.option { font-size:0.88889rem; line-height:1.4375; }
+
+/* 팝업 금융계산기 */
+.fin-cal-wrap.pop-Cal { margin-top:40px; }
 
 /* 상품상세 border-top이 있는 중앙 정렬 txt */
 .sub-info-wrap { position:relative; margin-top:30px; padding:25px 100px 25px 30px; border-radius:15px; background:url("../images/common/visual_obj_info_02.png") no-repeat center right 20px; background-color:#F7F7F9; background-size:75px; font-size:0.77778rem; line-height:1.5; }
