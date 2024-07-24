@@ -561,7 +561,7 @@
 
             <!--[퍼블-2] : 금융상품 중요사항 안내 기획 반영-->
             <!--S: 금융상품 중요사항 안내 (팝업)-->
-            <div id="importantNotiPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display:none;">
+            <div id="importantNotiPop" class="layerpopup laypop-all" tabindex="0" data-focus-prev="btn-menu-close" style="display:block;">
                 <div class="pop-header">
                     <h2 class="pop-title">금융상품 중요사항 안내</h2>
                     <button type="button" name="button" class="btn-layer-close">닫기</button>
@@ -570,7 +570,10 @@
                     <div class="default-wrap">
                         <div class="accordion-guide-wrap">
                             <p class="accordion-tit bg-box"><span class="txt">「금융소비자 보호에 관한 법률」 제 19조 제1항에서 규정하고 있는 중요한 사항</span> 입니다. 모든 내용을 확인하시면 다음 단계로 넘어갈 수 있습니다.</p>
-                        
+                            <div class="btn-cont-wrap">
+                                <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
+                                <a href="javascript:void(0);" class="btn btn-sm gray" onclick="openPopupUp('calPopup')">금융계산기</a>
+                            </div>
                             <div class="accordion-area"><!--D: 확인버튼 눌렀을 경우 accordion-check display:block 적용 필요-->
                                 <p>1. 금리 및 변동여부
                                     <button type="button" name="button" class="btn btn-sm gray">확인했어요</button>
@@ -578,9 +581,6 @@
                                 </p>
                             </div>
                             <div class="accordion-sub" style="display:none;"><!--D: accordion-area 클릭할 경우 accordion-sub 영역 display:block; 필요-->
-                                <div class="btn-cont-wrap">
-                                    <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
-                                </div>
                                 <div class="guide-area">
                                     
                                     <div class="cont">
@@ -629,9 +629,9 @@
                                 </p>
                             </div>
                             <div class="accordion-sub" style="display:none;" >
-                                <div class="btn-cont-wrap">
+                                <!-- <div class="btn-cont-wrap">
                                     <a href="javascript:void(0);" class="btn btn-sm gray" >용어사전</a>
-                                </div>
+                                </div> -->
                                 <div class="guide-area">
                                     
                                     <div class="cont">
@@ -669,9 +669,9 @@
                                 </p>
                             </div>
                             <div class="accordion-sub" style="display:block;">
-                                <div class="btn-cont-wrap">
+                                <!-- <div class="btn-cont-wrap">
                                     <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
-                                </div>
+                                </div> -->
                                 <div class="guide-area">
                                     
                                     <div class="cont">
@@ -721,9 +721,9 @@
                                 </p>
                             </div>
                             <div class="accordion-sub">
-                                <div class="btn-cont-wrap">
+                                <!-- <div class="btn-cont-wrap">
                                     <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
-                                </div>
+                                </div> -->
                                 <div class="guide-area">
                                     
                                     <div class="cont">
@@ -747,9 +747,9 @@
                                 </p>
                             </div>
                             <div class="accordion-sub">
-                                <div class="btn-cont-wrap">
+                                <!-- <div class="btn-cont-wrap">
                                     <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
-                                </div>
+                                </div> -->
                                 <div class="guide-area">
                                     
                                     <div class="cont">
@@ -874,9 +874,9 @@
                                 </p>
                             </div>
                             <div class="accordion-sub" style="display:block;">
-                                <div class="btn-cont-wrap">
+                                <!-- <div class="btn-cont-wrap">
                                     <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
-                                </div>
+                                </div> -->
                                 <div class="guide-area">
                                     
                                     <div class="cont">
@@ -948,9 +948,9 @@
                                 </p>
                             </div>
                             <div class="accordion-sub" >
-                                <div class="btn-cont-wrap">
+                                <!-- <div class="btn-cont-wrap">
                                     <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
-                                </div>
+                                </div> -->
                                 <div class="guide-area">
                                     
                                     <div class="cont">
@@ -984,9 +984,9 @@
                                 </p>
                             </div>
                             <div class="accordion-sub" style="display:block;">
-                                <div class="btn-cont-wrap">
+                                <!-- <div class="btn-cont-wrap">
                                     <a href="javascript:void(0);" class="btn btn-sm gray">용어사전</a>
-                                </div>
+                                </div> -->
                                 <div class="guide-area">
                                     
                                     <div class="cont">
@@ -1074,7 +1074,7 @@
         <!--[퍼블-1] : 공통 추가 //-->
 
 
-                <!--s:전자계약서 작성하기 상세팝업-->
+        <!--s:전자계약서 작성하기 상세팝업-->
         <div id="guidePop5" class="layerpopup laypop-all has-button login-guide">
 
             <div class="content-wrap">
@@ -1196,7 +1196,279 @@
         </div>
         <!--e:전자계약서 작성하기 상세팝업-->
 
-	</div>  
+        <!--[퍼블-6] s: 금융계산기 팝업 추가-->
+        <div id="calPopup" class="layerpopup laypop-all show">
+            <!-- s: contents -->
+            <div class="pop-header">
+                <h2 class="pop-title">금융계산기</h2>
+                <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lypullPop')">닫기</button>
+            </div>
+            
+            <div class="pop-con-wrap">
+                <div class="default-wrap">
+                    <div class="popcal-wrap">
+                        <section class="tabs-wrap type2">
+                            <div class="tabs">
+                                <ul class="tab-item col-3">
+                                    <li class="on" data-tab="tab-cont004"><a href="#none">예금이자</a></li>
+                                    <li class="" data-tab="tab-cont005"><a href="#none">적금이자</a></li>
+                                    <li class="" data-tab="tab-cont006"><a href="#none">대출이자</a></li>
+                                </ul>
+                                <div class="tab-content-area">
+
+                                    <!-- // D: 예금이자 -->
+                                    <div id="tab-cont004" class="tab-content">
+                                        <div class="sub-tit-wrap">
+                                            <p class="tit">목돈을 일정기간 동안 예치할 경우의<br/>만기지급액과 이자를 자세히 보실 수 있습니다.</p>
+                                        </div>
+                                        <div class="form-all-wrap">
+
+                                            <div class="form-wrap">
+                                                <label for="" class="formlabel essential">예치금액</label>
+                                                <div class="input">
+                                                    <input type="tel" title="예치금액" id="" class="inp" value="" placeholder="금액 입력" required="">
+                                                    <span class="static-unit">원</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-wrap">
+                                                <label for="" class="formlabel essential">예치기간</label>
+                                                <div class="input">
+                                                    <input type="tel" title="예치기간" id="" class="inp" value="" placeholder="기간 입력" required="">
+                                                    <span class="static-unit">개월</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-wrap">
+                                                <label for="" class="formlabel">이자방식</label>
+                                                <ul class="check-result-area">
+                                                    <li class="check-box">
+                                                        <input type="checkbox" name="check" id="check01" value="">
+                                                        <label for="check01">단리</label>
+                                                    </li>
+                                                    <li class="check-box">
+                                                        <input type="checkbox" name="check" id="check02" value="">
+                                                        <label for="check02">월 복리</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="form-wrap">
+                                                <label for="" class="formlabel essential">예금금리</label>
+                                                <div class="input">
+                                                    <input type="tel" title="예금금리" id="" class="inp" value="" placeholder="금리 입력" required="">
+                                                    <span class="static-unit">%</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!--S: 계산 결과 : 예/적금 거치기간만 리스트 미포함-->
+                                        <div class="popcal-result-wrap">
+
+                                            <div class="bg-box ta-c">
+                                                <p><span class="color-4E32A5">매월 <span>882,499</span>원</span>을 납입해야하며, 총 상환금액은 <span class="color-4E32A5"><span>11,179,980</span>원</span> 이에요 (월 납입금액은 거치기간 이후 예시 금액)</p>
+                                            </div>
+
+                                        </div>
+                                        <!--E: 계산 결과-->
+
+                                    </div>
+                                    <!-- D: 예금이자 // -->
+
+                                    <!-- // D: 적금이자 -->
+                                    <div id="tab-cont005" class="tab-content dp-none">
+                                        <div class="sub-tit-wrap">
+                                            <p class="tit">목표기간동안 저축할 경우의<br/>만기지급액과 이자를 자세히 보실 수 있습니다.</p>
+                                        </div>
+                                        <div class="form-all-wrap">
+
+                                            <div class="form-wrap">
+                                                <label for="" class="formlabel">기준</label>
+                                                <ul class="check-result-area">
+                                                    <li class="check-box">
+                                                        <input type="checkbox" name="check" id="check13" value="">
+                                                        <label for="check13">단리</label>
+                                                    </li>
+                                                    <li class="check-box">
+                                                        <input type="checkbox" name="check" id="check14" value="">
+                                                        <label for="check14">복리</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="form-wrap">
+                                                <label for="" class="formlabel essential">월납입액</label>
+                                                <div class="input">
+                                                    <input type="tel" title="월납입액" id="" class="inp" value="" placeholder="금액 입력" required="">
+                                                    <span class="static-unit">원</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-wrap">
+                                                <label for="" class="formlabel essential">목표기간</label>
+                                                <div class="input">
+                                                    <input type="tel" title="목표기간" id="" class="inp" value="" placeholder="기간 입력" required="">
+                                                    <span class="static-unit">개월</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-wrap">
+                                                <label for="" class="formlabel essential">적금금리</label>
+                                                <div class="input">
+                                                    <input type="tel" title="적금금리" id="" class="inp" value="" placeholder="금리 입력" required="">
+                                                    <span class="static-unit">%</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!--S: 계산 결과 : 예/적금 거치기간만 리스트 미포함 -->
+                                        <div class="popcal-result-wrap">
+
+                                            <div class="bg-box ta-c">
+                                                <p><span class="color-4E32A5">매월 <span>882,499</span>원</span>을 납입해야하며, 총 상환금액은 <span class="color-4E32A5"><span>11,179,980</span>원</span> 이에요 (월 납입금액은 거치기간 이후 예시 금액)</p>
+                                            </div>
+
+                                        </div>
+                                        <!--E: 계산 결과-->
+                                    </div>
+                                    <!-- D: 적금이자 // -->
+
+                                    <!-- // D: 대출이자 -->
+                                    <div id="tab-cont006" class="tab-content dp-none">
+                                        <div class="sub-tit-wrap">
+                                            <p class="tit">금액과 기간을 입력하시면<br/>대출 계산 결과를 확인하실 수 있습니다.</p>
+                                        </div>
+                                        <div class="form-all-wrap">
+
+                                            <div class="form-wrap">
+                                                <label for="" class="formlabel essential">대출금액</label>
+                                                <div class="input">
+                                                    <input type="tel" title="대출금액" id="" class="inp" value="" placeholder="금액 입력" required="">
+                                                    <span class="static-unit">원</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-wrap">
+                                                <label for="" class="formlabel">대출금리</label>
+                                                <div class="input">
+                                                    <input type="tel" title="대출금리" id="" class="inp" value="" placeholder="금리 입력" required="">
+                                                    <span class="static-unit">%</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-wrap">
+                                                <label for="" class="formlabel essential">대출기간</label>
+                                                <div class="input">
+                                                    <input type="tel" title="대출기간" id="" class="inp" value="" placeholder="기간 입력" required="">
+                                                    <span class="static-unit">개월</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-wrap">
+                                                <label for="" class="formlabel essential">거치기간</label>
+                                                <div class="input">
+                                                    <input type="tel" title="거치기간" id="" class="inp" value="" placeholder="기간 입력" required="">
+                                                    <span class="static-unit">개월</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-wrap">
+                                                <label for="" class="formlabel">대출상환방식</label>
+                                                <ul class="check-result-area">
+                                                    <li class="check-box">
+                                                        <input type="checkbox" name="check" id="check15" value="">
+                                                        <label for="check15">원금균등상환</label>
+                                                    </li>
+                                                    <li class="check-box">
+                                                        <input type="checkbox" name="check" id="check16" value="">
+                                                        <label for="check16">원리금균등상환</label>
+                                                    </li>
+                                                    <li class="check-box">
+                                                        <input type="checkbox" name="check" id="check17" value="">
+                                                        <label for="check17">원금만기일시상환</label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                        <!--S: 계산 결과-->
+                                        <div class="popcal-result-wrap">
+
+                                            <div class="bg-box ta-c">
+                                                <p><span class="color-4E32A5">매월 <span>882,499</span>원</span>을 납입해야하며, 총 상환금액은 <span class="color-4E32A5"><span>11,179,980</span>원</span> 이에요 (월 납입금액은 거치기간 이후 예시 금액)</p>
+                                            </div>
+
+                                            <div class="txt-list-wrap">
+
+                                                <!--S: 반복문-->
+                                                <div class="txt-detail-area">
+                                                    <div class="txt-detail-tit">
+                                                        <strong>거치기간 이내 상환 예정금액</strong>
+                                                    </div>
+                                                    <ul class="txt-list">
+                                                        <li>
+                                                            <span class="tit">상환원금</span>
+                                                            <span class="txt">0원</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="tit">이자금액</span>
+                                                            <span class="txt">월 49,166원</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="tit">납입금액</span>
+                                                            <span class="txt">월 49,166원</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="txt-detail-area">
+                                                    <div class="txt-detail-tit">
+                                                        <strong>거치기간 이내 상환 예정금액</strong>
+                                                    </div>
+                                                    <ul class="txt-list">
+                                                        <li>
+                                                            <span class="tit">상환원금</span>
+                                                            <span class="txt">0원</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="tit">이자금액</span>
+                                                            <span class="txt">월 49,166원</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="tit">납입금액</span>
+                                                            <span class="txt">월 49,166원</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <!--E: 반복문-->
+
+                                            </div>
+
+                                        </div>
+                                        <!--E: 계산 결과-->
+                                    </div>
+                                    <!-- D: 대출이자 // -->
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap flexRow">
+                    <a href="#none" class="btn btn-info">초기화</a>
+                    <a href="#none" class="btn">계산하기</a>
+                </div>
+            </div>
+
+        </div>
+        <!--[퍼블-6] e: 금융계산기 팝업 추가-->
+
+	</div>
 	<!-- //e: contentsWrap -->
 
 
