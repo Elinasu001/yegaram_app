@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common"
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm"
+	data-serverTime="20230803152535"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+</head>
+
+<body>
+    <!-- header -->
+    <div id="headerWrap">
+        <script>
+        $(document).ready(function(){
+            document.charset="euc-kr";
+            $("#headerWrap").load("../includes/header.html");
+        });
+        </script>
+    </div>
+	<!-- //header -->
+
+    <!--contentsWrap -->
+    <div class="contentsWrap">
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+                
+
+            </div>
+        </div>
+        <!-- //contents -->
+
+        <div id="underStandingconfirmPop" class="layerpopup laypop-all testaaa" tabindex="0" data-focus-prev="btn-layer-close" style="display:block;">
+            <div class="pop-header">
+                <h2 class="pop-title">동시대출 진행여부 확인</h2>
+                <button type="button" name="button" class="btn-layer-close">닫기</button>
+            </div>
+            <div class="pop-con-wrap">
+                <div class="default-wrap ">
+
+                    <div class="tit-wrap">
+                        <p class="txt has-icon"><strong>고객님, 혹시 동시대출 진행 중이신가요?</strong></p>
+                        <div class="bg-box">
+                            <p class="box-desc">당사의 대출상품 <strong class="color-4E32A5">빅머니M(균등)</strong>은 고객님께서 당사에만 대출을 신청하는 경우를 가정하여 고객님의 대출한도를 부여해요</p>
+                            <p class="box-desc">대출 이후 타 금융기관에 동시대출이 확인되는 경우 기한이익 상실 및 법 조치 등이 실행될 수 있어 현재 타 금융기관에 신청 및 심사 진행중인 대출이 있는 경우 대출 신청을 철회하시기를 당부 드려요</p>
+                        </div>
+                    </div>
+
+                    <section class="terms-area">
+                        <div class="q-wrap">
+                            <p>1. 타 금융기관에 대출 심사를 진행 중이신가요?</p>
+                            <ul>
+                                <li>
+                                    <input type="radio" class="radioClass" name="qq1" id="qq11" value="Y">
+                                    <label for="qq11" class="rd">예</label>
+                                </li>
+                                <li>
+                                    <input type="radio" class="radioClass" name="qq1" id="qq12" value="N">
+                                    <label for="qq12" class="rd">아니오</label>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="q-wrap">
+                            <p>2. 본인은 상기 항목의 내용을 사실대로 기재하였고, 향후 결과에 이의를 제기하지 않겠습니다.</p>
+                            <ul>
+                                <li>
+                                    <input type="radio" class="radioClass" name="qq2" id="qq21" value="Y">
+                                    <label for="qq21" class="rd">예</label>
+                                </li>
+                                <li>
+                                    <input type="radio" class="radioClass" name="qq2" id="qq22" value="N">
+                                    <label for="qq22" class="rd">아니오</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="confirm-wrap">
+                            <span class="confirm-date">신청인 본인 이가람 (인)</span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap">
+                    <a href="javascript:void(0);" class="btn disabled" >확인했어요</a><!--D: disabled 삭제 시 활성화-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- //contentsWrap -->
+</body>
+</html>
+
