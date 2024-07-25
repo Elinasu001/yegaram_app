@@ -1303,7 +1303,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .sub-cont-wrap + .btn-cont-wrap,
 .loan-info-wrap + .btn-cont-wrap { margin-top:40px; }
 
-.hr-line { height:1px; background: #EEEEEE; margin:40px 0; }
+.hr-line { height:8px; background: #F9FAFC; margin:40px -20px; }
 .hr-line + .terms-area,
 .terms-area .tit-wrap { margin-top:0;  margin-bottom:0;}
 .terms-area .tit-wrap + .q-wrap { margin-top:30px; }
