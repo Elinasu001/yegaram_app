@@ -755,11 +755,89 @@
         <!-- //contents -->
 
 		<div class="fixed-btn-wrap">
-			<div class="btn-wrap">
-				<a href="#none" class="btn">확인</a>
+			<div class="btn-wrap flexCol">
+				<a href="#none" class="btn" onclick="openPopup('lypullPop')">상세보기</a>
+				<a href="#none" class="btn txt">확인</a>
 			</div>
-			
 		</div>
+
+		<!-- s: 부채잔액증명서 상세보기 -->
+        <div id="lypullPop" class="layerpopup laypop-all">
+            <!-- s: contents -->
+            <div class="pop-header">
+                <h2 class="pop-title">부채잔액증명서 상세보기</h2>
+                <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lypullPop')">닫기</button>
+            </div>
+            
+            <div class="pop-con-wrap">
+                <div class="default-wrap">
+				
+					<div class="visaul-info-box style2">
+						<strong class="info-tit">
+							정기예금(복리)
+						</strong>
+						<div class="account-area">
+							<p class="account">123-12-12-1234567</p>
+							<button type="button" class="btn-copy">복사하기</button><!--D: 버튼 추가-->
+						</div>
+						<ul class="amount-area border-none">
+							<li>
+								<span class="num"><em>500,000원</em></span>
+							</li>
+						</ul>
+					</div>
+	
+					<!--S: 상세보기-->
+					<div class="txt-list-wrap type-result">
+						<div class="txt-detail-area">
+							<div class="txt-detail-tit">
+								<strong>발급내역</strong>
+							</div>
+							<ul class="txt-list">
+								<li>
+									<span class="tit">발행번호</span>
+									<span class="txt">123</span>
+								</li>
+								<li>
+									<span class="tit">발급기준일</span>
+									<p class="txt">YYY.MM.DD</p>
+								</li>
+								<li>
+									<span class="tit">발급목적</span>
+									<span class="txt">결산용</span>
+								</li>
+								<li>
+									<span class="tit">예금종류</span>
+									<span class="txt">정기예금(복리)</span>
+								</li>
+								<li>
+									<span class="tit">개설일</span>
+									<span class="txt">YYY.MM.DD</span>
+								</li>
+								<li>
+									<span class="tit">이메일주소</span><!--D: 이메일주소로 텍스트 변경-->
+									<span class="txt">
+										yegaram1234<br/>
+										@yegaramsb.co.kr</span>
+								</li>
+							</ul>
+						</div>
+		
+					</div>
+					<!--E: 상세보기-->
+	
+					<!--D:금융거래확인서 상세보기 동일-->
+				</div>
+            </div>
+
+            <div class="fixed-btn-wrap">
+                <div class="btn-wrap">
+                    <a href="#none" class="btn" onclick="closePopup('lypullPop')">확인</a>
+                </div>
+            </div>
+
+        </div>
+        <!-- //e: 부채잔액증명서 상세보기 -->
 
     </div>
     <!-- //contentsWrap -->
