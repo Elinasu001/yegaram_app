@@ -253,7 +253,7 @@ html.font-size-3{ font-size: 24px;}
 .desc-txt { font-weight:400; color:#333333; font-size:0.88889rem; line-height:1.4375; }
 .exp-txt { margin-top:10px; font-weight:400; color:#4E32A5; font-size:0.88889rem; line-height:1.4375; }
 /* .exp-txt + .select-form-wrap { margin-top:40px; } */
-.exp-txt:last-child { margin-bottom:40px; }
+/* .exp-txt:last-child { margin-bottom:40px; } */
 /* .exp-txt span { color:#808080; } */
 .form-wrap.type2 + .exp-txt { margin:10px 0 40px; }
 .label-txt { color:#000; font-size:0.88889rem; line-height:1.4375; }
@@ -535,7 +535,10 @@ textarea:read-only { color:#333333; }
 /* .txt-list-wrap + .select-form-wrap { margin-top:20px; } */
 .txt-list-wrap + .check-account { margin-top:10px; }
 .validChk + .select-form-wrap { margin-top:40px; }
-.info-txt + .form-wrap { margin-top:40px; }
+.info-txt + .form-wrap,
+.exp-txt + .form-wrap,
+.select-wrap:has(.info-txt) + .select-wrap,
+.select-wrap:has(.exp-txt) + .select-wrap { margin-top:40px; }
 .info-txt + .form-wrap + .bg-box { margin-top:40px; }
 .inquiry-set-wrap + .select-form-wrap { margin-top:20px; }
 .inquiry-set-wrap + .form-wrap { margin-top:40px; }

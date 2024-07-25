@@ -1293,7 +1293,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .sub-tit-wrap.line .txt { margin-top:0; }
 .sub-tit-wrap.line { border-bottom:1px solid #111111; padding-bottom:10px;}
 
-.form-tit .txt { font-size:0.77778rem; line-height: 1.5; font-weight: 500; color:#999999; }
+.form-tit .txt { font-size:0.77778rem; line-height: 1.5; font-weight: 400; color:#999999; }
 .form-all-wrap + .btn-cont-wrap { margin-top:40px; }
 
 .form-all-wrap .tit-wrap  + .form-wrap,
