@@ -137,7 +137,7 @@
                                 <div class="input">
                                     <div class="select-wrap" id="div_WTCH_BKNM">
                                         <div class="select-box" tabindex="1" onclick="removeErr(this); biz.bank(wtchBankCallback);">
-                                            <label for="WTCH_BKNM">은행선택</label>
+                                            <label for="WTCH_BKNM" class="essential">은행선택</label>
                                             <span class="option" id="WTCH_BKNM" >미선택</span>
                                         </div>
                                         <input type="hidden" id="WTCH_BKCD" name="WTCH_BKCD" value="" class="validChk"/><!-- 출금은행코드 -->
@@ -150,7 +150,7 @@
                                 <div class="input">
                                     <input type="tel" title="계좌번호" id="TRNF_ACNO" 
                                     class="inp validChk" name="TRNF_ACNO" value="" 
-                                    placeholder="계좌번호를 입력해주세요" pattern="[0-9]*" oninput="UtilFunc.inputMaxLength(this);" onkeyup="removeErr(this); validChk();" onclick="removeErr(this);" onchange="validChk();" maxlength="16" required numberOnly>
+                                    placeholder="계좌번호 입력" pattern="[0-9]*" oninput="UtilFunc.inputMaxLength(this);" onkeyup="removeErr(this); validChk();" onclick="removeErr(this);" onchange="validChk();" maxlength="16" required numberOnly>
                                 </div>
                                 <p class="error-txt">계좌번호를 입력해주세요</p>
                             </div>
@@ -166,7 +166,7 @@
                             <li>예금 만기 시 원금 또는 원리금(원금+이자)을 계좌의 변경 없이 최대 3회차까지 자동으로 재예치 가능해요</li>
                             <li>재예치 회차에 관계없이 중도해지를 할 수 있어요</li>
                             <li>3회차 재예치 이후 계좌 해지는 인터넷뱅킹 또는 창구 방문을 통해 해지가 가능해요</li>
-                            <li>
+                            <!-- <li>
                                 <strong class="color-666666">만기이자이체구분</strong>
                                 <ul>
                                     <li class="hyphen">
@@ -181,6 +181,19 @@
                                         </ul>
                                     </li>
                                 </ul>
+                            </li> -->
+                        </ul>
+                    </div>
+
+                    <div class="list-bull">
+                        <strong>만기이자이체구분</strong>
+                        <ul>
+                            <li>자동 연장(원금)<br/>
+                                만기 당일 발생한 세후 이자 금액을 제외한 원금만을 재예치해요 (발생한 세후 이자 금액은 등록하신 당 저축은행 또는 타행 본인 소유 입출금 가능 계좌로 자동 입금)
+                            </li>
+                            <li>
+                                자동 연장(원리금)<br/>
+                                만기당일 발생한 원금과 세후이자 금액을 합산하여 재예치해요(비과세 종합저축 계좌의 경우 만기자동재예치 시 바과세 한도초과에 따른 재예치 오류가 발생할 수 있어요)
                             </li>
                         </ul>
                     </div>
@@ -195,7 +208,7 @@
             </div>
 
               <!--S: 자동만기여부 선택(팝업)-->
-            <div id="lyPop2" class="layerpopup layer-up show" style=" display: block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+            <div id="lyPop2" class="layerpopup layer-up show" style=" display: none;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
                 <div class="content-wrap">
                     <div class="pop-header">
                         <h2 class="pop-title">자동만기여부</h2>
@@ -212,7 +225,7 @@
             </div>
             <!--E: 자동만기여부 선택(팝업)-->
             <!--S: 만기자동 재예치/만기해지송금 안내(팝업)-->
-        <div id="lyPop2" class="layerpopup layer-up has-button show" style=" display: block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+        <div id="lyPop2" class="layerpopup layer-up has-button show" style=" display: none;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
             <div class="content-wrap">
                 <div class="pop-header">
                     <h2 class="pop-title">만기자동 재예치/만기해지송금 안내</h2>

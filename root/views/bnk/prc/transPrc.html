@@ -75,8 +75,15 @@
         </div>
         <!-- //contents -->
 
+        <div class="fixed-btn-wrap">
+            <div class="btn-wrap flexCol">
+                <a href="javascript:void(0);" class="btn" onclick="openPopupUp('lyPop1')">가입하기</a>
+                <a href="javascript:void(0);" class="btn txt">그만하기</a>
+            </div>
+        </div>
+
         <!--S: 그만하기 (팝업)-->
-        <div id="lyPop1" class="layerpopup layer-up has-button show" style="display: block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+        <div id="lyPop1" class="layerpopup layer-up has-button show"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
             <div class="content-wrap">
                 <div class="pop-header">
                     <h2 class="pop-title"></h2>
@@ -91,7 +98,7 @@
             <!--D: fixed-btn-wrap 버튼은 content-wrap 밖으로 위치-->
             <div class="fixed-btn-wrap">
                 <div class="btn-wrap">
-                    <a href="javascript:void(0);" class="btn">확인</a>
+                    <a href="javascript:void(0);" class="btn" onclick="closePopup('lyPop1')">확인</a>
                 </div>
             </div>
         </div>
