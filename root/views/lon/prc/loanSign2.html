@@ -86,7 +86,7 @@
                     </div>
                 </div>
                 <!--E: 디자인 추가-->
-                <p class="info-txt"><span class="color-4E32A5">2.5% </span>를 제외하고 송금됩니다.</p>
+                <!-- <p class="info-txt"><span class="color-4E32A5">2.5% </span>를 제외하고 송금됩니다.</p> -->
 
                 <!-- <div class="amount-wrap">
                     <p><span class="color-4E32A5">2.5% </span>를 제외하고 송금됩니다.</p>
@@ -174,7 +174,35 @@
                 </div>
             </div>
         </div>
-        <!--E: '전자계약서 이메일 발송' 컨펌 (Alert-->
+        <!--E: '전자계약서 이메일 발송' 컨펌 (Alert)-->
+
+        <!--S: [240726 기획/개발현행화] - 팝업 버튼 있을 경우-->
+        <div id="lyPop2" class="layerpopup layer-up has-button show"  style="display:block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">진행 전 확인해 주세요!</h2>
+                    <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con">
+                    <div class="txtbox-wrap">
+                        <p>
+                            * 대출실행 금액에서 1회차 보증료와 송금 수수료가 제외되고 송금됩니다.
+                        </p>
+                        <p>
+                            - 햇살론은 서민금융진흥원 보증부대출로 대출기간 동안 보증료가 발생됩니다.</br>
+                            - 보증료는 대출기간(보증기간)동안 분할납부(보증잔액*보증료율*보증일수/365)되며, 납부금액은 매월 결제일 이전에 서민금융진흥원에서 문자로 안내됩니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="fixed-btn-wrap">
+                    <div class="btn-wrap">
+                        <a href="#none" class="btn">확인</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!--E: 팝업 버튼 있을 경우-->
 
     </div>
     <!-- //contentsWrap -->
