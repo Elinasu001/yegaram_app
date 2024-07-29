@@ -81,12 +81,18 @@
                     <div class="form-all-wrap"><!--D: 5/13 - form 전체 감쌀 경우 : form-all-wrap / slect-box를 감쌀 경우 slect-wrap이 아닌 form-wrap으로 감싸주세요-->
 
                         <div class="form-wrap type2">
-                            <label for="LOAN_AMT" class="essential">대출신청금액</label><!--D: essential 클래스 추가-->
+                            <!--[퍼블-1] : 버튼 추가-->
+                            <div class="form-tit">
+                                <label for="LOAN_AMT" class="essential">대출신청금액</label><!--D: essential 클래스 추가-->
+                                <button type="button" class="btn btn-sm">금융계산기</button>
+                            </div>
+                            <!--//[퍼블-1] : 버튼 추가-->
                             <div class="input">
                                 <input type="tel" title="" class="validChk" id="LOAN_AMT" value="" placeholder="대출신청금액을 입력해주세요." pattern="[0-9]*"  maxlength="4" required="">
                                 <div class="value-wrap">
                                     <strong class="value"></strong>
                                     <span class="unit">만원</span>
+                                    <button type="reset" class="btn-delete">삭제</button>
                                 </div>
                             </div>
                         </div>
@@ -169,7 +175,7 @@
             </div>
 
             <!--S: 대출금리 확인 (팝업)-->
-            <div id="lyPop1" class="layerpopup layer-up has-button show" style=" display: block;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
+            <div id="lyPop1" class="layerpopup layer-up has-button show" style=" display: none;"><!-- [D] has-button 클래스 : 하단버튼 있을 경우 사용 -->
                 <div class="content-wrap">
                     <div class="pop-header">
                         <h2 class="pop-title">대출 금리</h2>
@@ -197,7 +203,7 @@
             <!--E: 대출금리 확인 (팝업)-->
 
             <!--S: 대출신청금액 입력 (Alert)-->
-            <div id="lyAert1" class="layerpopup type-alert on" style="display: block;">
+            <div id="lyAert1" class="layerpopup type-alert on" style="display: none;">
                 <div class="content-wrap">
                     
                     <div class="pop-con-wrap">
@@ -211,7 +217,7 @@
             <!--E: 대출신청금액 입력 (Alert)-->
 
             <!--S: 대출기간 (팝업)-->
-            <div id="lySel2" class="layerpopup layer-up show" style="display: block;">
+            <div id="lySel2" class="layerpopup layer-up show" style="display: none;">
                 <div class="content-wrap">
                     <div class="pop-header">
                         <h2 class="pop-title">대출기간</h2>
@@ -234,7 +240,7 @@
             <!--E: 대출기간 (팝업)-->
 
             <!--S: 상환방법 (팝업)-->
-            <div id="lySel3" class="layerpopup layer-up show" style="display: block;">
+            <div id="lySel3" class="layerpopup layer-up show" style="display: none;">
                 <div class="content-wrap">
                     <div class="pop-header">
                         <h2 class="pop-title">상환방법</h2>
