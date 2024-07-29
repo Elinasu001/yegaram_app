@@ -1197,14 +1197,14 @@
         <!--e:전자계약서 작성하기 상세팝업-->
 
         <!--[퍼블-6] s: 금융계산기 팝업 추가-->
-        <div id="calPopup" class="layerpopup laypop-all show">
+        <div id="calPopup" class="layerpopup laypop-all show" style="display:block;">
             <!-- s: contents -->
             <div class="pop-header">
                 <h2 class="pop-title">금융계산기</h2>
                 <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lypullPop')">닫기</button>
             </div>
             
-            <div class="pop-con-wrap">
+            <div class="pop-con-wrap" style="padding-bottom: 103px;">
                 <div class="default-wrap">
                     <div class="popcal-wrap">
                         <section class="tabs-wrap type2">
@@ -1232,10 +1232,10 @@
                                             </div>
 
                                             <div class="form-wrap">
-                                                <label for="" class="formlabel essential">예치기간</label>
+                                                <label for="" class="formlabel essential">예금금리</label>
                                                 <div class="input">
-                                                    <input type="tel" title="예치기간" id="" class="inp" value="" placeholder="기간 입력" required="">
-                                                    <span class="static-unit">개월</span>
+                                                    <input type="tel" title="예금금리" id="" class="inp" value="" placeholder="금리 입력" required="">
+                                                    <span class="static-unit">%</span>
                                                 </div>
                                             </div>
 
@@ -1253,25 +1253,15 @@
                                                 </ul>
                                             </div>
 
+
                                             <div class="form-wrap">
-                                                <label for="" class="formlabel essential">예금금리</label>
-                                                <div class="input">
-                                                    <input type="tel" title="예금금리" id="" class="inp" value="" placeholder="금리 입력" required="">
-                                                    <span class="static-unit">%</span>
+                                                <div class="select-box">
+                                                    <label for="" class="formlabel essential">예치기간</label>
+                                                    <span class="option" id="">미선택</span>
                                                 </div>
                                             </div>
 
                                         </div>
-
-                                        <!--S: 계산 결과 : 예/적금 거치기간만 리스트 미포함-->
-                                        <div class="popcal-result-wrap">
-
-                                            <div class="bg-box ta-c">
-                                                <p><span class="color-4E32A5">매월 <span>882,499</span>원</span>을 납입해야하며, 총 상환금액은 <span class="color-4E32A5"><span>11,179,980</span>원</span> 이에요 (월 납입금액은 거치기간 이후 예시 금액)</p>
-                                            </div>
-
-                                        </div>
-                                        <!--E: 계산 결과-->
 
                                     </div>
                                     <!-- D: 예금이자 // -->
@@ -1282,6 +1272,25 @@
                                             <p class="tit">목표기간동안 저축할 경우의<br/>만기지급액과 이자를 자세히 보실 수 있습니다.</p>
                                         </div>
                                         <div class="form-all-wrap">
+
+                                            
+
+                                            <div class="form-wrap">
+                                                <label for="" class="formlabel essential">월납입액</label>
+                                                <div class="input">
+                                                    <input type="tel" title="월납입액" id="" class="inp" value="" placeholder="금액 입력" required="">
+                                                    <span class="static-unit">원</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-wrap">
+                                                <label for="" class="formlabel essential">적금금리</label>
+                                                <div class="input">
+                                                    <input type="tel" title="적금금리" id="" class="inp" value="" placeholder="금리 입력" required="">
+                                                    <span class="static-unit">%</span>
+                                                </div>
+                                            </div>
+
 
                                             <div class="radio-wrap">
                                                 <label for="" class="formlabel">기준</label>
@@ -1298,40 +1307,14 @@
                                             </div>
 
                                             <div class="form-wrap">
-                                                <label for="" class="formlabel essential">월납입액</label>
-                                                <div class="input">
-                                                    <input type="tel" title="월납입액" id="" class="inp" value="" placeholder="금액 입력" required="">
-                                                    <span class="static-unit">원</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-wrap">
-                                                <label for="" class="formlabel essential">목표기간</label>
-                                                <div class="input">
-                                                    <input type="tel" title="목표기간" id="" class="inp" value="" placeholder="기간 입력" required="">
-                                                    <span class="static-unit">개월</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-wrap">
-                                                <label for="" class="formlabel essential">적금금리</label>
-                                                <div class="input">
-                                                    <input type="tel" title="적금금리" id="" class="inp" value="" placeholder="금리 입력" required="">
-                                                    <span class="static-unit">%</span>
+                                                <div class="select-box">
+                                                    <label for="" class="formlabel essential">목표기간</label>
+                                                    <span class="option" id="">미선택</span>
                                                 </div>
                                             </div>
 
                                         </div>
 
-                                        <!--S: 계산 결과 : 예/적금 거치기간만 리스트 미포함 -->
-                                        <div class="popcal-result-wrap">
-
-                                            <div class="bg-box ta-c">
-                                                <p><span class="color-4E32A5">매월 <span>882,499</span>원</span>을 납입해야하며, 총 상환금액은 <span class="color-4E32A5"><span>11,179,980</span>원</span> 이에요 (월 납입금액은 거치기간 이후 예시 금액)</p>
-                                            </div>
-
-                                        </div>
-                                        <!--E: 계산 결과-->
                                     </div>
                                     <!-- D: 적금이자 // -->
 
@@ -1358,22 +1341,6 @@
                                                 </div>
                                             </div>
 
-                                            <div class="form-wrap">
-                                                <label for="" class="formlabel essential">대출기간</label>
-                                                <div class="input">
-                                                    <input type="tel" title="대출기간" id="" class="inp" value="" placeholder="기간 입력" required="">
-                                                    <span class="static-unit">개월</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-wrap">
-                                                <label for="" class="formlabel essential">거치기간</label>
-                                                <div class="input">
-                                                    <input type="tel" title="거치기간" id="" class="inp" value="" placeholder="기간 입력" required="">
-                                                    <span class="static-unit">개월</span>
-                                                </div>
-                                            </div>
-
                                             <div class="radio-wrap">
                                                 <label for="" class="formlabel">대출상환방식</label>
                                                 <ul class="radio-list">
@@ -1392,68 +1359,124 @@
                                                 </ul>
                                             </div>
 
-                                        </div>
-
-                                        <!--S: 계산 결과-->
-                                        <div class="popcal-result-wrap">
-
-                                            <div class="bg-box ta-c">
-                                                <p><span class="color-4E32A5">매월 <span>882,499</span>원</span>을 납입해야하며, 총 상환금액은 <span class="color-4E32A5"><span>11,179,980</span>원</span> 이에요 (월 납입금액은 거치기간 이후 예시 금액)</p>
+                                            <div class="form-wrap">
+                                                <div class="select-box">
+                                                    <label for="" class="formlabel essential">대출기간</label>
+                                                    <span class="option" id="">미선택</span>
+                                                </div>
                                             </div>
 
-                                            <div class="txt-list-wrap">
-
-                                                <!--S: 반복문-->
-                                                <div class="txt-detail-area">
-                                                    <div class="txt-detail-tit">
-                                                        <strong>거치기간 이내 상환 예정금액</strong>
-                                                    </div>
-                                                    <ul class="txt-list">
-                                                        <li>
-                                                            <span class="tit">상환원금</span>
-                                                            <span class="txt">0원</span>
-                                                        </li>
-                                                        <li>
-                                                            <span class="tit">이자금액</span>
-                                                            <span class="txt">월 49,166원</span>
-                                                        </li>
-                                                        <li>
-                                                            <span class="tit">납입금액</span>
-                                                            <span class="txt">월 49,166원</span>
-                                                        </li>
-                                                    </ul>
+                                            <div class="form-wrap">
+                                                <div class="select-box">
+                                                    <label for="" class="formlabel essential">거치기간</label>
+                                                    <span class="option" id="">미선택</span>
                                                 </div>
-
-                                                <div class="txt-detail-area">
-                                                    <div class="txt-detail-tit">
-                                                        <strong>거치기간 이내 상환 예정금액</strong>
-                                                    </div>
-                                                    <ul class="txt-list">
-                                                        <li>
-                                                            <span class="tit">상환원금</span>
-                                                            <span class="txt">0원</span>
-                                                        </li>
-                                                        <li>
-                                                            <span class="tit">이자금액</span>
-                                                            <span class="txt">월 49,166원</span>
-                                                        </li>
-                                                        <li>
-                                                            <span class="tit">납입금액</span>
-                                                            <span class="txt">월 49,166원</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-
-                                                <!--E: 반복문-->
-
                                             </div>
 
                                         </div>
-                                        <!--E: 계산 결과-->
+
                                     </div>
                                     <!-- D: 대출이자 // -->
                                 </div>
+
                             </div>
+
+                            <!--S: 계산 결과-->
+                            <hr class="hr-line">
+
+                            <div class="popcal-result-wrap">
+                                <!--S: [240729 기획현행화] 테이블 방식으로 변경-->
+                                <div class="table-type table-row">
+                                    <div class="table-scroll">
+                                        <table>
+                                            <caption>
+                                                회차, 상환금, 납입원금, 이자, 대출잔액 항목이 있습니다.
+                                            </caption>
+                                            <colgroup>
+                                                <col width="20%">
+                                                <col width="40%">
+                                                <col width="*%">
+                                            </colgroup>
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">회차</th>
+                                                <th scope="col">상환금(원)</th>
+                                                <th scope="col">납입원금(원)</th>
+                                                <th scope="col">이자(원)</th>
+                                                <th scope="col">대출잔액(원)</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1,200,000</td>
+                                                <td>0</td>
+                                                <td>1,200,000</td>
+                                                <td>1,200,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>1,200,000</td>
+                                                <td>0</td>
+                                                <td>1,200,000</td>
+                                                <td>1,200,000</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!--E: [240729 기획현행화] 테이블 방식으로 변경-->
+
+                                <!-- [240729 기획현행화] - 삭제 <div class="bg-box ta-c">
+                                    <p><span class="color-4E32A5">매월 <span>882,499</span>원</span>을 납입해야하며, 총 상환금액은 <span class="color-4E32A5"><span>11,179,980</span>원</span> 이에요 (월 납입금액은 거치기간 이후 예시 금액)</p>
+                                </div>
+
+                                <div class="txt-list-wrap">
+
+                                    <div class="txt-detail-area">
+                                        <div class="txt-detail-tit">
+                                            <strong>거치기간 이내 상환 예정금액</strong>
+                                        </div>
+                                        <ul class="txt-list">
+                                            <li>
+                                                <span class="tit">상환원금</span>
+                                                <span class="txt">0원</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">이자금액</span>
+                                                <span class="txt">월 49,166원</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">납입금액</span>
+                                                <span class="txt">월 49,166원</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="txt-detail-area">
+                                        <div class="txt-detail-tit">
+                                            <strong>거치기간 이내 상환 예정금액</strong>
+                                        </div>
+                                        <ul class="txt-list">
+                                            <li>
+                                                <span class="tit">상환원금</span>
+                                                <span class="txt">0원</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">이자금액</span>
+                                                <span class="txt">월 49,166원</span>
+                                            </li>
+                                            <li>
+                                                <span class="tit">납입금액</span>
+                                                <span class="txt">월 49,166원</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div> -->
+
+                            </div>
+                            <!--E: 계산 결과-->
                         </section>
                     </div>
                 </div>
