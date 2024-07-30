@@ -9,7 +9,8 @@
 <meta http-equiv="Content-Style-Type" content="text/css">
 <meta name="keywords" content="예가람저축은행keywords" />
 <meta name="description" content="예가람저축은행description" />
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0, viewport-fit=cover"> -->
+	<meta name="viewport" content="user-scalable=no,width=375">
 
 <meta name="apple-mobile-web-app-status-bar-style" content="white" />
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +34,7 @@
 <script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
 <script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
-<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js"></script>
 <script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
 <script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
 <script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
@@ -52,12 +53,19 @@
     .default-wrap h3.tit-h3 {  display:block; margin:20px 0; font-size:20px; }
     .default-wrap h4.tit-h4 {  display:block; margin:20px 0; font-size:16px; }
     .bg-txt { background:#DDDDDD; padding:20px; font-size:16px; }
-
-    .layerpopup.laypop-all .default-wrap { display:none; }
-    .layerpopup.laypop-all.show .default-wrap { display:block; }
 </style>
 <script>
+    // $(window).load(function(){
+    //     var container = $('.layer-up');
+    //     var fixedBtnWrap = container.find('.fixed-btn-wrap:visible');
+    //     var fixedBtnWrapTxt = fixedBtnWrap.find('.btn.txt');
 
+    //     if (!fixedBtnWrapTxt) {
+    //         container.css('padding-bottom','90px');
+    //     }else {
+    //         container.css('padding-bottom','130px');
+    //     }
+    // });
 </script>
 <body>
     <!-- header -->
@@ -151,17 +159,21 @@
                     <button type="button" name="button" class="btn-layer-close" data-focus="btn-layer-close">닫기</button>
                 </div>
                 <div class="ly-scroll-con">
-                    1111111<br/>
-                    1111111<br/>
-                    1111111<br/>
-                    1111111<br/>
-                    1111111<br/>
-                    1111111<br/>
-                    1111111<br/>
-                    1111111<br/>
-                    1111111<br/>
-                    1111111<br/>
-                    1111111<br/>
+                    <div class="txtbox-wrap">
+                        <p>
+                            1111111<br/>
+                            1111111<br/>
+                            1111111<br/>
+                            1111111<br/>
+                            1111111<br/>
+                            1111111<br/>
+                            1111111<br/>
+                            1111111<br/>
+                            1111111<br/>
+                            1111111<br/>
+                            1111111<br/>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -211,9 +223,15 @@
                         </p>
                     </div>
                 </div>
-                <div class="fixed-btn-wrap">
+                <div class="fixed-btn-wrap" style="display:block;">
                     <div class="btn-wrap flexCol">
-                        <a href="javascript:void(0);" class="btn close">확인</a>
+                        <a href="javascript:void(0);" class="btn" onclick="closePopup('lyPop3');">확인</a>
+                        <a href="javascript:void(0);" class="btn txt">버튼명</a>
+                    </div>
+                </div>
+                <div class="fixed-btn-wrap" style="display:none;">
+                    <div class="btn-wrap flexCol">
+                        <a href="javascript:void(0);" class="btn" onclick="closePopup('lyPop3');">확인</a>
                         <a href="javascript:void(0);" class="btn txt">버튼명</a>
                     </div>
                 </div>
@@ -466,8 +484,9 @@
             </div>
 
             <div class="fixed-btn-wrap">
-                <div class="btn-wrap">
+                <div class="btn-wrap flexCol">
                     <a href="#none" class="btn" onclick="closePopup('lypullPop')">확인</a>
+                    <a href="#none" class="btn txt">확인</a>
                 </div>
             </div>
 

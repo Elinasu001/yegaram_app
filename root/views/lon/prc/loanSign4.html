@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>예가람저축은행</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="예가람저축은행keywords" />
+<meta name="description" content="예가람저축은행description" />
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0, viewport-fit=cover"> -->
+	<meta name="viewport" content="user-scalable=no,width=375">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+
+<link href="/resources/css/default.css" rel="stylesheet" />
+<link href="/resources/css/renewal.css" rel="stylesheet" />
+
+
+<link href="/resources/css/swiper-bundle.min.css" rel="stylesheet" />
+<link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+
+<script type="text/javascript" src="/resources/js/lib/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.cookie.js"></script>
+
+<script type="text/javascript" src="/resources/js/lib/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/TweenMax.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/jquery.animateSprite.min.js"></script>
+<script type="text/javascript" src="/resources/js/lib/default.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/ui.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/lib/rolldate.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_cont.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_auth.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_funs.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_nsl.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/app_common_util.js?v=20230803152535"></script>
+<script type="text/javascript" src="/resources/js/biz_common.js?version=20230803152535" id="biz_common"
+	data-menuId="dep/prc"
+	data-frameId="depAcnoOpenPrc2"
+	data-serviceCd="depAcnoOpenPrc2.frm"
+	data-serverTime="20230803152535"
+	data-activeMode="local"
+	data-activeEnv="${active.env">
+</script>
+
+<script>
+
+    // $(window).load(function(){
+    //     var container = $('.contentsWrap.grid');
+    //     var fixedBtnWrap = container.find('.fixed-btn-wrap .btn.txt');
+        
+    //     if (!fixedBtnWrap.is(':visible')) {
+    //         container.find('.default-wrap').css('padding', '0px 20px 10px 20px');
+    //     }
+    // });
+
+
+
+</script>
+<body>
+    <!-- header -->
+    <header class="headerWrap">
+		<div class="headerLeft">
+			<a href="javascript:void(0)" class="btn btnBack"><img src="/resources/images/header/btn_back.png" alt="이전페이지 이동하기"></a>
+		</div>
+		<div class="headerCenter">
+			<h2 class="text"><span>대출신청</span></h2> <!--D: TEXT -->
+		</div>
+		<div class="headerRight">
+			<!-- <a href="javascript:void(0)" class="btn btn-menu "><img src="/resources/images/header/btn_menu.png" alt="전체메뉴"></a> -->
+		</div>
+	</header>
+	<!-- //header -->
+
+    <!--contentsWrap -->
+    <div class="contentsWrap grid"><!--D: 이용문의 하단 고정으로 grid 클래스 추가 - section 구조 필요-->
+        <!--contents -->
+        <div class="contents">
+            <div class="default-wrap">
+
+                <!--S: 전자계약서 작성 완료(상담원 연락 예정) -->
+                <section class="result-area checking">
+                    <p class="tit"><strong>전자계약서 작성을 완료했어요</strong></p>
+                    <div class="txtbox-wrap">
+                        <p>대출 심사와 대출금 입금을 위해</br/>상담원이 연락드릴 예정이에요</p>
+                    </div>
+                </section>
+                <!--E: 전자계약서 작성 완료(상담원 연락 예정) -->
+
+                <!--S: 이용문의 (하단고정 - 일괄 적용) : 이 페이지 모든 결과 화면은 이용문의 내용이 일괄 적용됩니다.-->
+                <section class="sub-info-wrap">
+                    <div class="tel">이용문의 <strong>1877-7788</strong></div>
+                    <p>평일 09:00 ~ 18:00<br>(주말 및 공휴일 휴무)</p>
+                </section>
+                <!--E: 이용문의 (하단고정 - 일괄 적용)-->
+                
+            </div>
+        </div>
+        <!-- //contents -->
+        
+        <div class="fixed-btn-wrap" style="display:none;">
+            <div class="btn-wrap flexCol">
+                <a href="javascript:void(0);" class="btn">대출신청 상태보기</a>
+                <!-- <a href="javascript:void(0);" class="btn txt">홈으로</a> -->
+            </div>
+        </div>
+
+        <div class="fixed-btn-wrap" style="display:block;">
+            <div class="btn-wrap flexCol">
+                <a href="javascript:void(0);" class="btn">대출신청 상태보기</a>
+                <a href="javascript:void(0);" class="btn txt">홈으로</a>
+            </div>
+        </div>
+        <!--E: 대출신청 완료(상담원 전황 예정)/전자계약서 작성 완료(상담원 연락 예정)-->
+
+    </div>
+    <!-- //contentsWrap -->
+</body>
+</html>
+
