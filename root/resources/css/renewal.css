@@ -1295,6 +1295,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .event-wrap  .swiper-pagination-bullet { width:12px !important; height:12px !important; border:0 !important; background:#D8D8D8 !important; opacity:1 !important; }
 .event-wrap  .swiper-pagination-bullet-active { background:#4E32A5 !important; }
 
+.event-wrap .pop-header { height:20px; }
 .event-wrap .pop-img { height:350px; overflow:auto; }
 .event-wrap .swiper-slide  {overflow:auto;  }
 
