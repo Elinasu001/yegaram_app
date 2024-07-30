@@ -210,7 +210,7 @@
 .pop-con-wrap:has(.pop-img) { margin-bottom:56px; overflow:hidden; }
 #event-lyPop .pop-header { padding:22px 20px 20px; }
 #event-lyPop .default-wrap { padding:0 15px; }
-#event-lyPop .pop-img { /*height:300px;*/ overflow:auto; }
+/* #event-lyPop .pop-img { height:300px; overflow:auto; } */
 #event-lyPop .pop-img:has(img) { height:100%; }
 .popup-close { display:flex; justify-content:space-between; position:fixed; bottom:0; left:0; right:0; padding:15px 20px 18px; background:#FFF; }
 .popup-close button{ font-size:0.88889rem; line-height:1.4375; }
@@ -374,3 +374,5 @@
 .family-site .select-wrap { margin-top: 0; display: inline-block; margin-right: 10px; width: calc(100% - 54px); }
 .family-site .select-wrap select { width: 100%; border: 1px solid #EEEEEE; height: 40px; font-size: 14px; color: #666666; padding: 0 15px; box-sizing: border-box; background: url('../images/dsr/common/ico_arrow.png') no-repeat 96%/24px auto; }
 .family-site button { width: 40px; height: 40px; border-radius: 50%; background: #EEEEEE; color: #666666; text-indent: 0; text-transform: uppercase; font-size: 0.88889rem; }
+
+
