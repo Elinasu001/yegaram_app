@@ -1094,13 +1094,15 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 .fixed-btn-wrap.no-fixed { position:relative !important; }
 
 /** 하단 텍스트 style **/
+.fixed-btn-wrap .btn-txt,
 .btn.txt{ height:initial !important;  padding:10px; font-size:0.88889rem !important; line-height:1.278rem !important; background:#FFFFFF !important; color:#666666 !important; }
-
+.fixed-btn-wrap  .btn-txt:after { content: none;}
 /** normal style **/
 .btn-wrap { display:flex; gap:10px; }
 .btn-wrap .btn { display:block; position:relative; width:100%; height:60px; border-radius:30px; background:#4E32A5; font-weight:500; color:#fff; font-size:1rem; line-height:60px; text-align:center; }
 /* .btn-wrap.flexRow .btn.btn-info { width:53%; } */
 .btn-wrap.flexRow .btn.btn-info + .btn { width:150%; }
+.fixed-btn-wrap .btn + .btn-txt,
 .btn-wrap .btn + .btn.txt { padding:0; padding-top:10px; }
 
 /** disabled style **/
