@@ -1296,7 +1296,8 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .event-wrap  .swiper-pagination-bullet-active { background:#4E32A5 !important; }
 
 .event-wrap .pop-header { height:20px; }
-.event-wrap .pop-img { height:350px; overflow:auto; }
+.event-wrap .pop-img.text { height:350px; overflow:auto; }
+/* .event-wrap .pop-img { overflow:auto; } */
 .event-wrap .swiper-slide  {overflow:auto;  }
 
 /*** 모집인 ***/
@@ -1441,3 +1442,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .check-result-area > li.check-box input[type="checkbox"]:checked + label::before { position:absolute; left:0; top:50%; transform: translateY(-50%); width:16px; height:16px; }
 .check-result-area > li.check-box input[type="checkbox"] + label::before { content:'';  background:url(../images/common/chk_off.png)no-repeat 100%/16px auto; }
 .check-result-area > li.check-box input[type="checkbox"]:checked + label::before { content:'';  background:url(../images/common/chk_on.png)no-repeat 100%/16px auto; }
+
+
+/* 앱 설치하기 */
+.app-install-wrap { margin-top:40px; border-radius: 10px; overflow: hidden; }
