@@ -1102,8 +1102,7 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 .btn-wrap .btn { display:block; position:relative; width:100%; height:60px; border-radius:30px; background:#4E32A5; font-weight:500; color:#fff; font-size:1rem; line-height:60px; text-align:center; }
 /* .btn-wrap.flexRow .btn.btn-info { width:53%; } */
 .btn-wrap.flexRow .btn.btn-info + .btn { width:150%; }
-.fixed-btn-wrap .btn + .btn-txt,
-.btn-wrap .btn + .btn.txt { padding:0; padding-top:10px; }
+.btn-wrap .btn + .btn.txt { padding:0; /*padding-top:10px;*/ }
 
 /** disabled style **/
 .btn-wrap .btn.disabled,
@@ -1576,7 +1575,7 @@ body.on { position:fixed; top:0; }
 .layer-up.has-button { padding-bottom:90px; }
 
 /* 디자인 추가 - 버튼 위아래로 있을 경우 */
-.layer-up.has-button:has(.fixed-btn-wrap .btn.txt) { padding-bottom:130px; }
+.layer-up.has-button:has(.fixed-btn-wrap .btn.txt) { padding-bottom:110px; }
 
 .layer-up.has-button .content-wrap { padding-bottom:20px; }
 .layer-up .txtbox-wrap { color:#666666; }
