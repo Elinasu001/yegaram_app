@@ -1094,8 +1094,8 @@ form:has(input[type="tel"]:focus)  ~ .fixed-btn-wrap { position:relative !import
 .fixed-btn-wrap.no-fixed { position:relative !important; }
 
 /** 하단 텍스트 style **/
-.fixed-btn-wrap .btn-txt,
 .btn.txt{ height:initial !important;  padding:10px; font-size:0.88889rem !important; line-height:1.278rem !important; background:#FFFFFF !important; color:#666666 !important; }
+.fixed-btn-wrap .btn-txt { height:initial !important; padding-top:10px; font-size:0.88889rem !important; line-height:1.278rem !important; background:#FFFFFF !important; color:#666666 !important; } /*개발대응*/
 .fixed-btn-wrap  .btn-txt:after { content: none;}
 /** normal style **/
 .btn-wrap { display:flex; gap:10px; }
