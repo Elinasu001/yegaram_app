@@ -178,24 +178,29 @@
 
         <!--S: 이벤트 스와이퍼 팝업 -->
 		<div id="event-lyPop-swiper" class="layerpopup layer-up show">
-			<div class="content-wrap event-wrap">
+			<div class="content-wrap event-wrap"><!--D: evnet-wrap : swiper 사용 / pop-header 높이 줄임-->
 				<div class="pop-header">
 					<h2 class="pop-title"></h2>
 				</div>
 				<div class="pop-con-wrap">
 					<div class="default-wrap">
-						<div class="pop-img text"><!--D: text 클래스 : 관리자 - 텍스트 들어갈 경우 / 이미지만 들어갈 경우 text 클래스 삭제 -->
+						<div class="pop-img "><!--D:  text 클래스 : 관리자 - 텍스트 들어갈 경우 사용--><!--D: evnet-wrap 클래스 : pop-header 텍스트 들어갈 경우 이 위치로 이동-->
 							<div class="event-img swiper">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
 										<a href="javascript:void(0);">
 											<div class="swiper-img">
-												이미지가 들어가는 영역
+												<img src="/resources/images/common/event-pop-img.png" alt="이벤트 이미지">
 											</div>
 										</a>
 									</div>
 									<div class="swiper-slide">
-											텍스트 텍스트
+                                        <a href="javascript:void(0);">
+											<div class="swiper-img">
+												<img src="/resources/images/common/event-pop-img.png" alt="이벤트 이미지">
+											</div>
+										</a>
+											<!-- 텍스트 텍스트
 											<br/>
 											<br/>
 											<br/>
@@ -231,12 +236,12 @@
 											<br/>
 											<br/>
 											<br/>
-											텍스트 텍스트
+											텍스트 텍스트 -->
 									</div>
 									<div class="swiper-slide">
 										<a href="javascript:void(0);">
 											<div class="swiper-img">
-												이미지가 들어가는 영역
+												<img src="/resources/images/common/event-pop-img.png" alt="이벤트 이미지">
 											</div>
 										</a>
 									</div>
@@ -284,15 +289,14 @@
 
 
         <!--S: 이벤트 풀팝업-->
-        <div id="event-lyPullPop" class="layerpopup laypop-all on" tabindex="0" data-focus-prev="btn-menu-close"
-			style="display: none;">
+        <div id="event-lyPullPop" class="layerpopup laypop-all on" tabindex="0" data-focus-prev="btn-menu-close">
 			<div class="pop-header">
 				<h2 class="pop-title">이벤트 타이틀</h2>
 			</div>
-			<div class="pop-con-wrap">
-				<div class="default-wrap type-spread">
+			<div class="pop-con-wrap event-pull-wrap">
+				<div class="default-wrap ">
 					<div class="pop-img">
-						<img src="../resources/images/common/event-pop-img-pull.png" alt="이벤트 이미지">
+						<img src="/resources/images/common/event-pop-img-pull.png" alt="이벤트 이미지">
 					</div>
 				</div>
 			</div>
