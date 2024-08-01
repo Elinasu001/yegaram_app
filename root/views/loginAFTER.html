@@ -544,42 +544,161 @@ $(document).ready(function(){
 	<!-- //e: 레이어팝업 - 큰글씨설정  -->
 
 	<!-- [퍼블-3] 이벤트 팝업 -->
-	<div id="event-lyPop" class="layerpopup layer-up show" style="display: block;">
-		<div class="content-wrap">
+
+	<!--D: 이벤트 풀팝업-->
+	<div id="event-lyPullPop" class="layerpopup laypop-all on" tabindex="0" data-focus-prev="btn-menu-close"
+			style="display: block;">
 			<div class="pop-header">
 				<h2 class="pop-title">이벤트 타이틀</h2>
 			</div>
-			<div class="pop-con-wrap">
+			<div class="pop-con-wrap event-pull-wrap">
 				<div class="default-wrap">
 					<div class="pop-img">
-						<img src="../resources/images/common/event-pop-img.png" alt="이벤트 이미지">
+						<img src="../resources/images/common/event-pop-img-pull.png" alt="이벤트 이미지">
 					</div>
 				</div>
 			</div>
 			<div class="popup-close">
-				<button type="button" name="button" class="pop-out-btn" onclick="closePopup('event-lyPop')">7일 그만보기</button>
-				<button type="button" name="button" class="pop-close-btn" onclick="closePopup('event-lyPop')">닫기</button>
+				<button type="button" name="button" class="pop-out-btn" onclick="closePopup('event-lyPullPop')">7일
+					그만보기</button>
+				<button type="button" name="button" class="pop-close-btn"
+					onclick="closePopup('event-lyPullPop')">닫기</button>
 			</div>
 		</div>
-	</div>
+		<!--D: 이벤트 풀팝업//-->
 
-	<div id="event-lyPullPop" class="layerpopup laypop-all on" tabindex="0" data-focus-prev="btn-menu-close" style="display: block;">
-		<div class="pop-header">
-			<h2 class="pop-title">이벤트 타이틀</h2>
-		</div>
-		<div class="pop-con-wrap">
-			<div class="default-wrap type-spread">
-				<div class="pop-img">
-					<img src="../resources/images/common/event-pop-img-pull.png" alt="이벤트 이미지">
+		<!-- [퍼블-8] 이벤트 스와이퍼 팝업 -->
+		<div id="event-lyPop-swiper" class="layerpopup layer-up show" style="display: block;">
+			<div class="content-wrap event-wrap"><!--D: evnet-wrap : swiper 사용 / pop-header 높이 줄임-->
+				<div class="pop-header">
+					<h2 class="pop-title"></h2>
+				</div>
+				<div class="pop-con-wrap">
+					<div class="default-wrap">
+						<div class="pop-img"><!--D:  text 클래스 : 관리자 - 텍스트 들어갈 경우 사용--><!--D: evnet-wrap 클래스 : pop-header 텍스트 들어갈 경우 이 위치로 이동-->
+							<div class="event-img swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a href="javascript:void(0);">
+											<div class="swiper-img">
+												<img src="../resources/images/common/event-pop-img.png" alt="이벤트 이미지">
+											</div>
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="javascript:void(0);">
+											<div class="swiper-img">
+												<img src="../resources/images/common/event-pop-img.png" alt="이벤트 이미지">
+											</div>
+										</a>
+											<!-- 텍스트 텍스트
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											텍스트 텍스트
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											텍스트 텍스트
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											<br/>
+											텍스트 텍스트 -->
+									</div>
+									<div class="swiper-slide">
+										<a href="javascript:void(0);">
+											<div class="swiper-img">
+												<img src="../resources/images/common/event-pop-img.png" alt="이벤트 이미지">
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+						<script>
+							$(document).ready(function(){
+		
+							// 하단배너는 고정
+							var newsSlider = new Swiper('.event-img.swiper', {
+								slidesPerView: 1,
+								spaceBetween : 20,
+								pagination : {
+									el : '.swiper-pagination',
+									// clickable : true,
+								},
+								observer:true,
+								observeParents:true,
+								// autoplay: {
+								// 	delay: 3000,
+								// 	disableOnInteraction: false,
+								// },
+								loop : false,
+								// loopedSlides: 1,
+								centeredSlides: true,
+								// initialSlide: 0,
+								//   slidesPerGroup: 1,
+								//   roundLengths: true,
+								loopAdditionalSlides: 1,
+							});
+		
+							})
+						</script>
+					</div>
+				</div>
+				<div class="popup-close">
+					<button type="button" name="button" class="pop-out-btn" onclick="closePopup('event-lyPop-swiper')">7일 그만보기</button>
+					<button type="button" name="button" class="pop-close-btn" onclick="closePopup('event-lyPop-swiper')">닫기</button>
 				</div>
 			</div>
 		</div>
-		<div class="popup-close">
-			<button type="button" name="button" class="pop-out-btn" onclick="closePopup('event-lyPullPop')">7일 그만보기</button>
-			<button type="button" name="button" class="pop-close-btn" onclick="closePopup('event-lyPullPop')">닫기</button>
+		<!-- [퍼블-8] 이벤트 스와이퍼 팝업 -->
+
+		<!--D: 이벤트 팝업-->
+		<div id="event-lyPop" class="layerpopup layer-up show" style="display: block;">
+			<div class="content-wrap">
+				<div class="pop-header">
+					<h2 class="pop-title">이벤트 타이틀</h2>
+				</div>
+				<div class="pop-con-wrap">
+					<div class="default-wrap">
+						<div class="pop-img">
+							<img src="../resources/images/common/event-pop-img.png" alt="이벤트 이미지">
+						</div>
+					</div>
+				</div>
+				<div class="popup-close">
+					<button type="button" name="button" class="pop-out-btn" onclick="closePopup('event-lyPop')">7일 그만보기</button>
+					<button type="button" name="button" class="pop-close-btn" onclick="closePopup('event-lyPop')">닫기</button>
+				</div>
+			</div>
 		</div>
-	</div>
-	
+		<!--D: 이벤트 팝업//-->
+
 	<!-- // [퍼블-3] 이벤트 팝업 -->
 	
 	<!-- s: 상단 이동 버튼 -->
