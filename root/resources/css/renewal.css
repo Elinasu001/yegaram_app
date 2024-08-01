@@ -1283,22 +1283,26 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .go-bank-img { content:''; width:178px; height:32px; margin-bottom:30px; background: url(../images/common/gobank_app.png)no-repeat center/178px auto; }
 
 
-/*메인 이벤트 팝업*/
-.event-wrap .event-img { padding:0; height:100%;  }
+/** 메인 이벤트 팝업 **/
+.layerpopup .event-wrap .pop-header { height:20px; }
+.layerpopup .event-wrap .pop-con-wrap { margin-bottom:30px !important; }
+.layerpopup .event-pull-wrap .default-wrap { margin-bottom:0; padding:0 15px; } /* 풀팝업일 경우 */
+.layerpopup .event-wrap .default-wrap { padding:0 15px; } /* 일반 팝업일 경우 */
+
+.layerpopup .event-wrap .pop-img.text { height:350px; overflow:auto; } /* 관리자 - 텍스트로 들어갈 경우 */
+.layerpopup .event-wrap .event-img { padding:0; height:100%;  }
+
+/*메닝 이벤트 팝업 슬라이드*/
 .event-wrap .swiper-wrapper {margin:0; height:100%; }
-.event-wrap .swiper-slide  { margin:0; width:100%; height:100%; }
+.event-wrap .swiper-slide  { margin:0; padding-bottom:30px; width:100%; height:100%; overflow:auto; }
 .event-wrap .swiper-slide a  { display:block; overflow:hidden; width:100%; height:100%; }
 .event-wrap .swiper-slide .swiper-img { display:block; height:100%; min-height:200px;  }
-.event-wrap .swiper-slide .swiper-img img { display:block; width:100%; max-height:100%; margin:0 auto; padding-bottom:35px;}
+.event-wrap .swiper-slide .swiper-img img { display:block; width:100%; max-height:100%; margin:0 auto; /*padding-bottom:35px;*/}
 
 .event-wrap  .swiper-pagination { top:initial !important; position:absolute; bottom:0 !important; background:#fff;   }
-.event-wrap  .swiper-pagination-bullet { width:12px !important; height:12px !important; border:0 !important; background:#D8D8D8 !important; opacity:1 !important; }
-.event-wrap  .swiper-pagination-bullet-active { background:#4E32A5 !important; }
+.event-wrap  .swiper-pagination-bullet { width:12px !important; height:12px !important; border:0 !important; background:#CACACA !important; opacity:1 !important; }
+.event-wrap  .swiper-pagination-bullet-active { background:#260F54 !important; width:30px !important; border-radius: 9px; }
 
-.event-wrap .pop-header { height:20px; }
-.event-wrap .pop-img.text { height:350px; overflow:auto; }
-/* .event-wrap .pop-img { overflow:auto; } */
-.event-wrap .swiper-slide  {overflow:auto;  }
 
 /*** 모집인 ***/
 /* 약관 */

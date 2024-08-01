@@ -23,7 +23,8 @@
 .main .default-wrap { margin:0; padding:24px 20px 60px; }
 .main .default-wrap:has(>.tit-wrap:first-child) { padding-top:0; }
 .main .layer-up .default-wrap { padding: 20px 10px; }
-.main .layer-up .event-wrap .default-wrap { padding:0px 20px; }
+.main .layer-up .event-wrap .default-wrap { padding:0px 15px; }
+.main .laypop-all .event-pull-wrap .default-wrap { margin-bottom:0; padding:0 15px; }
 .main .type-spread { margin: 0 -20px; padding: 0; }
 .main .type-spread .area-title { padding: 0 20px; }
 .contentsWrap [class*="-area"] + [class*="-area"] { margin-top:40px; }
@@ -87,18 +88,18 @@
 .recom-slider-wrap .btn-go-link:after { content:none; }
 
 /* 추천상품 슬라이더 */
-.recom-slider-wrap .recom-pagination .swiper-pagination-bullet{width:9px; height:9px; background:#999; }
-.recom-slider-wrap .recom-pagination .swiper-pagination-bullet-active { width:30px; border-radius:9px; background:#BCB5CA;}
+.recom-slider-wrap .recom-pagination .swiper-pagination-bullet{width:9px; height:9px; background:#CACACA; }
+.recom-slider-wrap .recom-pagination .swiper-pagination-bullet-active { width:30px; border-radius:9px; background:#260F54;}
 .recom-pagination { text-align: center; margin-top: 18px; }
 
 /* 예금계좌 슬라이더 */
-.recom-areadep .recomDep-pagination .swiper-pagination-bullet{width:9px; height:9px; background:#999; }
-.recom-areadep .recomDep-pagination .swiper-pagination-bullet-active { width:30px; border-radius:9px; background:#BCB5CA;}
+.recom-areadep .recomDep-pagination .swiper-pagination-bullet{width:9px; height:9px; background:#CACACA; }
+.recom-areadep .recomDep-pagination .swiper-pagination-bullet-active { width:30px; border-radius:9px; background:#260F54;}
 .recomDep-pagination { text-align: center; margin-top: 18px; }
 
 /* 대출계좌 슬라이더 */
-.recom-arealon .recomLon-pagination .swiper-pagination-bullet{width:9px; height:9px; background:#999; }
-.recom-arealon .recomLon-pagination .swiper-pagination-bullet-active { width:30px; border-radius:9px; background:#BCB5CA;}
+.recom-arealon .recomLon-pagination .swiper-pagination-bullet{width:9px; height:9px; background:#CACACA; }
+.recom-arealon .recomLon-pagination .swiper-pagination-bullet-active { width:30px; border-radius:9px; background:#260F54;}
 .recomLon-pagination { text-align: center; margin-top: 18px; }
 
 /** 처음 오셨나요? **/
@@ -209,7 +210,7 @@
 
 /* 이벤트 팝업 */
 .pop-con-wrap:has(.pop-img) { margin-bottom:56px; overflow:hidden; }
-#event-lyPop .pop-header { padding:22px 20px 20px; }
+/* #event-lyPop .pop-header { padding:22px 20px 20px; } */
 #event-lyPop .default-wrap { padding:0 15px; }
 /* #event-lyPop .pop-img { height:300px; overflow:auto; } */
 #event-lyPop .pop-img:has(img) { height:100%; }
