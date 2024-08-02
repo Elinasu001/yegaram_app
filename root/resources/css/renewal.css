@@ -848,13 +848,14 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .inquiry-set-wrap.list-style-wrap .radio-list.txt-button li.active button:before { content:none; }
 .inquiry-set-wrap.list-style-wrap .radio-list.txt-button li button:active { border-color:#9F7CE3; background:#ffffff; font-weight:500; color:#612AD0; font-size:0.77778rem; }
 .inquiry-set-wrap.list-style-wrap .radio-list.txt-button li button:active:before { border:1px solid #EEEBFF;}
-.inquiry-set-wrap.list-style-wrap .radio-list.txt-button li + li { margin-left:5px; }
+/* .inquiry-set-wrap.list-style-wrap .radio-list.txt-button li + li { margin-left:5px; } */
 .inquiry-set-wrap.list-style-wrap .radio-list.txt-button.two-line { flex-wrap: wrap; }
 .inquiry-set-wrap.list-style-wrap .radio-list.txt-button.two-line li { flex: none; }
 .inquiry-set-wrap.list-style-wrap .radio-list.txt-button.two-line li:nth-child(5) { margin-left: 0; }
 .inquiry-set-wrap.list-style-wrap .radio-list.txt-button.two-line li:nth-child(n+4)  ~ li { margin-top: 5px; }
 .inquiry-set-wrap.list-style-wrap .radio-list.txt-button.two-line li:nth-last-child(n+4),
 .inquiry-set-wrap.list-style-wrap .radio-list.txt-button.two-line li:nth-last-child(n+4) ~ li { width:calc((100% - 20px) / 4); }
+.inquiry-set-wrap.list-style-wrap .radio-list { gap:5px; }
 .price-input .input { margin-top:10px; }
 .price-input .inp { width:100%; height:50px; padding-left:15px; color:#333333; background:#F8F8F8; border-radius:10px; outline:none; }
 .price-input .static-unit { /*display:none;*/ position:absolute; top: 50%; right:15px; transform:translateY(-50%); }
