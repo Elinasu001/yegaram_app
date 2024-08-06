@@ -2809,6 +2809,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .product-detail .table-wrap,
 .pr-detail .table-wrap,
 #intrateHtml .table-wrap { overflow-x:auto; margin-top:10px; margin-bottom:10px; }
+.table-wrap  { overflow-x:auto; }
 .product-detail .table-wrap th,
 #intractInfo .table-wrap th,
 .pr-detail .table-wrap th { border-top:1px solid #EEEEEE; font-weight:500; font-size:0.88889rem; }
