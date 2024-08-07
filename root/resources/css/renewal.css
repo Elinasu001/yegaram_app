@@ -1451,3 +1451,13 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 
 /* 앱 설치하기 */
 .app-install-wrap { margin-top:40px; border-radius: 10px; overflow: hidden; }
+
+
+/* 운영일 경우 */
+.main .notice-slide-wrap + .default-wrap { padding-top:60px; }/*main*/
+.main .notice-slide-wrap  { position:fixed; z-index:11; }/*main*/
+.main #menuWrap .notice-slide-wrap { position:initial; z-index: initial; }/*menu*/
+.notice-slide-wrap {padding:5px 20px; margin:0 -20px; overflow:hidden; background:#DD0000; }
+.notice-slide-wrap .notice-text { display:inline-flex; gap:10px; text-align: rigth; width:100%;}
+.notice-slide-wrap .notice-text marquee { font-weight:600; font-size:0.66667rem; color:#FFFFFF; }
+.menuWrap .notice-slide-wrap { position: initial; z-index: initial; }
