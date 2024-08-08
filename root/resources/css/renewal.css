@@ -1453,7 +1453,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .app-install-wrap { margin-top:40px; border-radius: 10px; overflow: hidden; }
 
 
-/* 운영일 경우 */
+/* 운영/검증 - 개발 */
 .main .contents.notice .default-wrap{ padding-top:60px; }/*main*/
 .main .notice-slide-wrap  { position:fixed; z-index:11; }/*main*/
 .main #menuWrap .notice-slide-wrap { position:initial; z-index: initial; }/*menu*/
@@ -1461,6 +1461,6 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .notice-slide-wrap { width:100%; padding:5px 20px; /*margin:0 -20px;*/ overflow:hidden; background:#DD0000; }/*베타*/
 .notice-slide-wrap.notice-stg { background: #2B66F6; }/*검증*/
 
-.notice-slide-wrap .notice-text { display:inline-flex; gap:10px; text-align: right; width:100%;}
+.notice-slide-wrap .notice-text { /*display:inline-flex; gap:10px;*/ text-align: right; width:100%;}
 .notice-slide-wrap .notice-text marquee { font-weight:600; font-size:0.66667rem; color:#FFFFFF; }
-.menuWrap .notice-slide-wrap { position: initial; z-index: initial; }
+.menuWrap .notice-slide-wrap { position: initial; z-index: initial; }                                                                                                                                                                  
