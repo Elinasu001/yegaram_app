@@ -1537,7 +1537,6 @@ body.on { position:fixed; top:0; }
 .layerpopup.laypop-all .btn-layer-close:after { content:none; }
 .layerpopup.laypop-all .pop-con-wrap{ min-height:calc(100% - 146px); padding-top:50px; /*padding-bottom:100px;*/ }
 .layerpopup.laypop-all .pop-con-wrap:not(:has(+.fixed-btn-wrap)) { padding-bottom:0; } /*전체메뉴-풀팝업 테스트(청)*/
-.layerpopup.laypop-all .pop-con-wrap:not(:has(+.fixed-btn-wrap .btn-text)),
 .layerpopup.laypop-all .pop-con-wrap:has(+.fixed-btn-wrap .btn-txt) { padding-bottom:146px; }
 .layerpopup.laypop-all .pop-con-wrap .pop-con-area{padding-bottom:7rem;}
 .layerpopup.laypop-all .pop-header.bg-pattern{border-color:#191e2a;color:#fff;}
