@@ -490,27 +490,81 @@
         <!-- //e: 약관풀팝업 -->
 
         <!-- s: 풀팝업 -->
-        <div id="lypullPop" class="layerpopup laypop-all">
+        <div id="lypullPop" class="layerpopup laypop-all show">
             <!-- s: contents -->
             <div class="pop-header">
                 <h2 class="pop-title">풀팝업</h2>
                 <button type="button" name="button" class="btn-layer-close" onclick="closePopup('lypullPop')">닫기</button>
             </div>
             
-            <div class="pop-con-wrap">
+            <div class="pop-con-wrap" style="padding-bottom: 93px;">
                 <div class="default-wrap">
 
+                    <section class="result-area ing">
+                        <p class="tit"><strong>신청하신 대출이<br/>심사 중이세요</strong></p>
+                        <div class="txtbox-wrap">
+                            <p>상담원이 연락 드릴 예정이에요</p>
+                        </div>
+                        <div class="txt-list-wrap">
+                            <div class="txt-detail-area">
+                                <div class="txt-detail-tit">
+                                    <strong>XX론</strong>
+                                </div>
+                                <ul class="txt-list">
+                                    <li>
+                                        <span class="tit">신청일시</span>
+                                        <span class="txt">YYYY.MM.DD hh:ss</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section><section class="result-area ing">
+                        <p class="tit"><strong>신청하신 대출이<br/>심사 중이세요</strong></p>
+                        <div class="txtbox-wrap">
+                            <p>상담원이 연락 드릴 예정이에요</p>
+                        </div>
+                        <div class="txt-list-wrap">
+                            <div class="txt-detail-area">
+                                <div class="txt-detail-tit">
+                                    <strong>XX론</strong>
+                                </div>
+                                <ul class="txt-list">
+                                    <li>
+                                        <span class="tit">신청일시</span>
+                                        <span class="txt">YYYY.MM.DD hh:ss</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
             </div>
 
-            <div class="fixed-btn-wrap">
+            <div id="fixedBtn" class="fixed-btn-wrap">
                 <div class="btn-wrap flexCol">
-                    <a href="#none" class="btn" onclick="closePopup('lypullPop')">확인</a>
-                    <a href="#none" class="btn txt">확인</a>
+                    <a href="#none" id="lypullPopBtnYes" class="btn" onclick="closePopup('lypullPop')" style="display:none;">알겠어요</a>
+                    <a href="#none" id="lypullPopBtnConfirm" class="btn" onclick="closePopup('lypullPop')">확인했어요</a>
                 </div>
             </div>
-
         </div>
+
+        <!-- <script>
+            $('#lypullPop:visible').scroll(function(){
+                var scrollTop = $(this).scrollTop();
+                var innerHeight = $(this).innerHeight();
+                var scrollHeight = $(this).prop('scrollHeight');
+
+                if (scrollTop + innerHeight >= scrollHeight){
+                    $('#lypullPopBtnYes').hide();
+                    $('#lypullPopBtnConfirm').show();
+                    
+                }else{
+                    $('#lypullPopBtnYes').show();
+                    $('#lypullPopBtnConfirm').hide();
+                }
+            })
+        </script> -->
         <!-- //e: 풀팝업 -->
 
 
