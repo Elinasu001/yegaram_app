@@ -2603,6 +2603,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .prod-box:last-child .label-info-wrap:last-child { padding-bottom:0; }
 .prod-box .label-info-wrap .label { font-size:0.77778rem; line-height:1.5; }
 .prod-box .label-info-wrap .info { font-size:1.11111rem; font-weight:600; /*line-height:1.4375;*/ padding-top:4px; }
+.prod-box .label-info-wrap .info .ex { font-size:0.88889rem; }
 .prod-box .desc { margin-top:20px; color:#666666; font-size:0.88889rem; line-height:1.4375; }
 
 /* 모집인 상품선택 */
