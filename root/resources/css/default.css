@@ -307,8 +307,9 @@ html.font-size-3{ font-size: 24px;}
 .flag.style5{  border:1px solid #FFE9F5;  color:#F648AA; background: #FFE9F5; } /* 접수/대기 */
 .flag.style6 { border:1px solid #E3F6F8; color:#00A2C4; background: #E3F6F8; }  /* 처리중/진행중 */
 .flag.style7 { border:1px solid #EFF4FF; color:#2B66F6; background: #EFF4FF; }  /* 완료 */
-.flag.style8   { border:1px solid #FFEFEF; color:#FF0000; background:#FFEFEF; } /* 거절/분실 */
-.flag.style9   { border:1px solid #EFF0F2; color:#666666; background:#EFF0F2; } /* 취소 */
+.flag.style8 { border:1px solid #FFEFEF; color:#FF0000; background:#FFEFEF; } /* 거절/분실 */
+.flag.style9 { border:1px solid #EFF0F2; color:#666666; background:#EFF0F2; } /* 취소 */
+.flag.style10 { border:1px solid #F1EBFD; color:#612AD0; background:#F1EBFD; } /* 대출 - 이어하기 */
 
 .success { font-weight:500; color:#2B66F6; }/* 내역조회완료 - 파랑  */
 .error:not(>.check-account) { font-weight:500; color:#FF0000; }/* 내역조회실패 - 빨강  */
