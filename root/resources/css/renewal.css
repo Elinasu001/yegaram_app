@@ -1076,16 +1076,12 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .bg-type02 > div { background:url("../images/common/mybucket_bg_mini02.png") center no-repeat; }
 .layerpopup:has(.pop-bg-box) .default-wrap { padding:0; }
 
-
-
 /* 전자금융관리 */
 .tit-box.tit-right { text-align:right; }
 .tit-box.tit-right .more-btn { position:static; }
 .tit-box.tit-right + .txt-list-wrap { margin-top:15px; }
 .txt-list-wrap + .tabs-wrap { margin-top:20px; }
 .tabs-wrap + .default-wrap { padding-top:20px; }
-
-
 
 /** 상품 비교 테이블 **/
 /* #lyPullPop01 .default-wrap:after { content:''; position:absolute; top:140px; bottom:40px; right:0; width:30px; background:linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 70%, rgba(255,255,255,1) 100%); }
@@ -1143,7 +1139,6 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .default-wrap:has(.txt-list-wrap) .btn-cont-wrap.btn-add { margin-top:40px; }
 /* .default-wrap > .tit-wrap { padding:20px 0 40px; } */
 .txt-list-wrap .btn-cont-wrap.btn-add:first-of-type { margin-top:20px; }
-
 
 /** 230829~ 이청아 **/
 /* 전자금융관리 */
@@ -1209,13 +1204,11 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .terms-notice-wrap .list-bull.type-large { margin-top:0; }
 .terms-notice-wrap .list-bull.type-large.num li { padding-left:25px; font-size:0.88889rem; line-height:1.4375; }
 
-
 /* 휴면계좌 */
 .default-wrap > .alignment-both-side > .sub-tit-wrap { margin:10px 0 15px; }
 
 /* 계좌해지 */
 .cnl-wrap { margin-top:40px; }
-
 
 /* 로그인  img_faceid */
 .icCerti { position: relative;  margin-top:100px; border:1p solid red; width:48px; height:48px; font-size:0; }
@@ -1224,14 +1217,12 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .icCerti.figPoint::after { background:url(../images/common/ico_figPoint.png) 100%/48px auto; }
 .icCerti.pattern::after { background:url(../images/common/ico_pattern.png) 100%/48px auto; }
 
-
 /* 키패드 */
 .showFormBx ul li { border-radius: 50% !important;   }
 .showFormBx ul li.on { background-color: #492BA2; }
 .popup2 .btnSection .btnCustom.exchange .exchangeBox { background:url() }
 .popup2 .btnSection .btnCustom span{ color:#26282C !important; }
 .popup2 .btnSection .btnCustom:hover { background:#F6F2FF; }
-
 
 /* 대출약정 - 전자계약체결 내용확인 */
 .amount-wrap { background:#F8F8F8; border-radius:10px; padding:20px; margin-top:40px;}
@@ -1241,11 +1232,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .amount-wrap .num-area .num span { color:#4E32A5; }
 .amount-wrap .num-area .txt { color:#666666; font-size:0.77778rem; line-height: 1rem; }
 
-
-
 /* .layerpopup.laypop-all .default-wrap.grid {} */
-
-
 
 /* 공인인증서 리스트 .type2 */
 /* .list-icon.type2 > li { display:inline-block; width:100%; height:unset; padding:20px 20px 20px 90px; border:1px solid #DDD; border-radius:15px; background:#fff; font-size:0; }
@@ -1259,9 +1246,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .list-icon.type2 > li .s-txt { font-size:0.66667rem; line-height:1.58334; color:#999; }
 .popup2 .btnSection .btnCustom:hover { background:#F6F2FF; } */
 
-
-
-/**대출가이드**/
+/** 대출이용가이드 **/
 .loan-guide-list { letter-spacing:-5px; }
 .loan-guide-list li{ display:inline-block; margin-top:30px; width:calc(50% - 10px); text-align:center;  letter-spacing:normal; }
 .loan-guide-list li:nth-child(even){ margin-left:10px; }
@@ -1287,7 +1272,6 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .login-guide .swiper-slide .swiper-txt strong .bk { color:#111111; }
 .login-guide .swiper-slide .swiper-img { display:block; position:absolute; top:125px; bottom:0; left:0; right:0;  }
 .login-guide .swiper-slide .swiper-img img{ display:block; position:absolute; bottom:0; width:100%; max-height:100%; margin:0 auto; padding-bottom:30px;}
-
 .login-guide .swiper-pagination { position:absolute; bottom:0 !important; background:#fff; }
 .login-guide .swiper-pagination-bullet { width:12px !important; height:12px !important; border:0 !important; background:#D8D8D8 !important; opacity:1 !important; }
 .login-guide .swiper-pagination-bullet-active{ background:#4E32A5 !important; }
@@ -1296,29 +1280,26 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .txtbox-wrap.ta-c { display:flex; flex-direction: column; align-items: center; }
 .go-bank-img { content:''; width:178px; height:32px; margin-bottom:30px; background: url(../images/common/gobank_app.png)no-repeat center/178px auto; }
 
-
 /** 메인 이벤트 팝업 **/
 .layerpopup .event-wrap .pop-header { height:20px; }
 .layerpopup .event-wrap .pop-con-wrap { margin-bottom:30px !important; }
 .layerpopup .event-pull-wrap .default-wrap { margin-bottom:0; padding:0 15px; } /* 풀팝업일 경우 */
 .layerpopup .event-wrap .default-wrap { padding:0 15px; } /* 일반 팝업일 경우 */
-
 .layerpopup .event-wrap .pop-img.text { height:350px; overflow:auto; } /* 관리자 - 텍스트로 들어갈 경우 */
 .layerpopup .event-wrap .event-img { padding:0; height:100%;  }
 
-/*메닝 이벤트 팝업 슬라이드*/
+/* 메닝 이벤트 팝업 슬라이드 */
 .event-wrap .swiper-wrapper {margin:0; height:100%; }
 .event-wrap .swiper-slide  { margin:0; padding-bottom:30px; width:100%; height:100%; overflow:auto; }
 .event-wrap .swiper-slide a  { display:block; overflow:hidden; width:100%; height:100%; }
 .event-wrap .swiper-slide .swiper-img { display:block; height:100%; min-height:200px;  }
 .event-wrap .swiper-slide .swiper-img img { display:block; width:100%; max-height:100%; margin:0 auto; /*padding-bottom:35px;*/}
+.event-wrap .swiper-pagination { top:initial !important; position:absolute; bottom:0 !important; background:#fff;   }
+.event-wrap .swiper-pagination-bullet { width:12px !important; height:12px !important; border:0 !important; background:#CACACA !important; opacity:1 !important; }
+.event-wrap .swiper-pagination-bullet-active { background:#260F54 !important; width:30px !important; border-radius: 9px; }
 
-.event-wrap  .swiper-pagination { top:initial !important; position:absolute; bottom:0 !important; background:#fff;   }
-.event-wrap  .swiper-pagination-bullet { width:12px !important; height:12px !important; border:0 !important; background:#CACACA !important; opacity:1 !important; }
-.event-wrap  .swiper-pagination-bullet-active { background:#260F54 !important; width:30px !important; border-radius: 9px; }
 
-
-/*** 모집인 ***/
+/** 모집인 **/
 /* 약관 */
 .terms-dsr-wrap { margin-top: 30px; }
 .terms-dsr-wrap .sub-tit-wrap .guide-txt-wrap .list-bull { margin-top:0; }
@@ -1345,6 +1326,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .loan-info-wrap + .btn-cont-wrap { margin-top:40px; }
 
 .hr-line { height:8px; background: #F9FAFC; margin:40px -20px; }
+
 .hr-line + .terms-area,
 .terms-area .tit-wrap { margin-top:0;  margin-bottom:0;}
 .terms-area .tit-wrap + .q-wrap { margin-top:30px; }
@@ -1352,19 +1334,17 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .terms-area .radio-wrap { margin-top:20px; }
 /* .terms-area .tit { text-align:right; } */
 .terms-area .tit-wrap > .s-txt { margin-top:10px; }
+
 /* 신고안내 */
 .txtbox-wrap .img {content:''; width:80px; height:80px; }
 .txtbox-wrap .img.unfair { background: url(../../resources/images/dsr/page/bg_unfair.png)no-repeat center 100%/80px auto; }
 .txtbox-wrap .img.certi { background: url(../../resources/images/dsr/page/bg_certi.png)no-repeat center 100%/80px auto; }
-
 
 /* 약관/서식 */
 .terms-list.type2 li a:after { content:none; }
 .terms-list.type2 em { font-size:0.88889rem; line-height:1.278rem; color:#111111; }
 /* .terms-list li p {  padding-right:100px;} */
 .terms-list.type2 .btn { position:absolute; right:0; top:50%; }
-
-
 
 /* accordion */
 .accordion-wrap .answer-wrap { margin-top:initial; border-top:initial; }
@@ -1423,8 +1403,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .accordion-sub .guide-area .cont .sub-tit-wrap .bg-box { border-radius:0; font-size:0.88889rem; }
 /* .accordion-sub .guide-area .cont img {  } */
 
-
-/*약관*/
+/** pdf약관 - 여러개일 경우 **/
 .layerpopup .pop-header .left-area { position: fixed; top:0;; left:20px; font-size:0.88889rem; font-weight:500; color:#26282C; }
 .layerpopup .pop-arrorw-area { display:flex; align-items: center; }
 .layerpopup .pop-arrorw-area .page-num { display:inline-block; font-size:0.88889rem; font-weight:400; color:#666666; }
@@ -1442,7 +1421,8 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .layer-up .ly-select .ly-select-list.check li > button::after { content:'';  background:url(../images/common/chk_off.png)no-repeat 100%/20px auto;  }
 .layer-up .ly-select .ly-select-list.check li.active > button::after { content:'';  background:url(../images/common/chk_on.png)no-repeat 100%/20px auto;  } */
 
-/* 셀렉트 팝업 결재 - 다건선택 */
+/** 셀렉트 팝업 결재 **/
+/* 다건선택 팝업*/
 .ly-check-area > li.check-box:first-child { margin-top:0; }
 .ly-check-area > li.check-box { margin-top:10px; }
 .ly-check-area > li.check-box input[type="checkbox"] + label { position:relative; display:block; width:100%; height:54px; border:1px solid #DDDDDD; border-radius: 10px; background:#FFFFFF; font-size:1rem; color:#26282C; line-height:54px; text-align: center; }
@@ -1451,7 +1431,7 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .ly-check-area > li.check-box input[type="checkbox"] + label::after { content:'';  background:url(../images/common/chk_off.png)no-repeat 100%/20px auto; }
 .ly-check-area > li.check-box input[type="checkbox"]:checked + label::after {  content:'';  background:url(../images/common/chk_on.png)no-repeat 100%/20px auto;  }
 .ly-check-area > li.check-box input[type="checkbox"]:checked + label { border:1px solid #4E32A5; background: #F4F5FB; font-weight:500; color:#4E32A5; }
-/* 셀렉트 팝업 결재 - 다건선택 결과 */
+/* 다건선택 - 적합성 적정성 */
 .check-result-area  { display:flex; flex-wrap:wrap;}
 .check-result-area > li.check-box:first-child { margin-top:0; }
 .check-result-area > li.check-box { width:inherit; margin-right:10px;}
@@ -1461,25 +1441,18 @@ div:has(.txt-list-wrap) + .btn-cont-wrap.btn-add { margin-top:40px; }
 .check-result-area > li.check-box input[type="checkbox"] + label::before { content:'';  background:url(../images/common/chk_off.png)no-repeat 100%/16px auto; }
 .check-result-area > li.check-box input[type="checkbox"]:checked + label::before { content:'';  background:url(../images/common/chk_on.png)no-repeat 100%/16px auto; }
 
-
 /* 앱 설치하기 */
 .app-install-wrap { margin-top:40px; border-radius: 10px; overflow: hidden; }
 
-
-/* 운영/검증 - 개발 */
+/** 운영/검증 - 개발 **/
 .main .contents.notice .default-wrap{ padding-top:60px; }/*main*/
 .main .notice-slide-wrap  { position:fixed; z-index:11; }/*main*/
 .main #menuWrap .notice-slide-wrap { position:initial; z-index: initial; }/*menu*/
-
-.notice-slide-wrap { width:100%; padding:5px 20px; /*margin:0 -20px;*/ overflow:hidden; background:#DD0000; }/*베타*/
+.notice-slide-wrap { width:100%; padding:5px 20px; overflow:hidden; background:#DD0000; }/*베타*/
 .notice-slide-wrap.notice-stg { background: #2B66F6; }/*검증*/
-
-/* .notice-slide-wrap .notice-text { text-align: right; width:100%;} */
-/* .menuWrap .notice-slide-wrap { position: initial; z-index: initial; } */
 .notice-slide-wrap .flow-text { display:flex; flex:0 0 auto; white-space:nowrap; overflow: hidden; transition: 0.3s;  }
 .notice-slide-wrap .flow-text .flowr-wrap { vertical-align: middle; font-weight:600; font-size:0.66667rem; color:#FFFFFF; }
 .flowr-wrap { animation: textLoop 10s linear infinite; padding-right: 1.4881vw; }
-
 @keyframes textLoop {
   0% {
     -webkit-transform: translate3d(0, 0, 0);

@@ -2705,7 +2705,6 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .amount-area .num { font-weight:700; color:#333333; font-size:0.88889rem; line-height:1.4375; text-align:right; }
 .amount-area .num em { font-weight:700; color:#4E32A5; font-size:1.11111rem; line-height:1.35; }
 .amount-area + .progress-area { margin-top:10px; }
-
 .amount-area .num.point { color:#492BA2; }
 
 /* 폼 토글제어 */
@@ -2779,7 +2778,7 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 
 /*** 관리자 뿌려지는 부분 관련하여  css 추가**/
 
-/** 상품소개 - 예가람 기준  **/
+/** 상품소개 - 예가람 기준 (상품상세, 금리안내 (팝업) **/
 .product-detail .pr-detail { font-size:0.88889rem; line-height:1.38889; font-size:300; }
 .product-detail .pr-detail.default-wrap { padding:0; }
 /* .product-detail .default-wrap { padding:0 20px 0; } */
@@ -2872,9 +2871,8 @@ input[type="month"]::-webkit-calendar-picker-indicator { background:none; }
 .layerpopup #intrateHtml .link-list > .tit { font-size: 0.88889rem; margin-bottom:10px; font-weight:600; }
 
 
-/** 약관 - 예가람 기준  **/
+/** 고객센터_금융소비자보호 - 예가람 기준  **/
 .terms-txt { padding-bottom:60px; background:#FFFFFF; }
-
 .terms-txt .txt-box,
 .terms-txt .font16,
 .terms-txt dd,
