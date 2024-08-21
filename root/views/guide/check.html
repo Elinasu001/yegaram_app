@@ -46,8 +46,12 @@
         data-menuId="dep/prc" data-frameId="depAcnoOpenPrc2" data-serviceCd="depAcnoOpenPrc2.frm"
         data-serverTime="20230803152535" data-activeMode="local" data-activeEnv="${active.env">
         </script>
+</head>
 
-
+<style>
+    h3 {  padding-left:30px; font-size:18px; font-weight:600; color:#111111; margin-top:40px; margin-bottom:10px; }
+    h3::after{ position:absolute; content:'•'; top:12px; left:0; transform: translateY(-50%);  }
+</style>
 <body>
     <!-- header -->
     <div id="headerWrap">
@@ -64,10 +68,11 @@
     <div class="contentsWrap">
         <!-- s: contents -->
         <div class="contents">
+
             <div class="default-wrap">
-
+                
+                <h3>check-box + toggle버튼/ check-box + tooltip + toggle버튼</h3>
                 <div class="form-all-wrap">
-
                     <div class="check-box toggle">
                         <input type="checkbox" id="check01">
                         <label for="check01">
@@ -104,125 +109,9 @@
                             </div>
                         </label>
                     </div>
-
-                    <!-- <div class="form-wrap">
-                        <div id="rolldate" class="select-box type2 type-dd" tabindex="1">
-                            <label for="">연월일</label>
-                            <span class="option">미선택</span>
-                        </div>
-                    </div>
-
-                    <div class="form-wrap">
-                        <div id="rolldate2" class="select-box type2 type-dd" tabindex="1">
-                            <label for="">일</label>
-                            <span class="option">미선택</span>
-                        </div>
-                    </div>
-
-                    <div class="form-wrap">
-                        <div id="rolldate3" class="select-box type2 type-mm" tabindex="1">
-                            <label for="">월</label>
-                            <span class="option">미선택</span>
-                        </div>
-                    </div>
-
-                    <div class="form-wrap">
-                        <div id="rolldate4" class="select-box type2 type-yy" tabindex="1">
-                            <label for="">년도</label>
-                            <span class="option">미선택</span>
-                        </div>
-                    </div>
-
-                    <div class="form-wrap">
-                            <div id="rolldate5" class="select-box type2 type-yy" tabindex="1">
-                                <label for="">연월</label>
-                                <span class="option">미선택</span>
-                            </div>
-                    </div> -->
                 </div>
 
-
-                <div class="check-wrap">
-                    <div class="check-box toggle">
-                        <input type="checkbox" id="check03">
-                        <label for="check03">
-                            <span>대표계좌설정</span>
-                            <div class="switch-btn">
-                                <span class="off">OFF</span>
-                                <span class="on">ON</span>
-                                <div class="inside"></div>
-                            </div>
-                        </label>
-                    </div>
-
-                    <div class="check-box toggle">
-                        <input type="checkbox" id="check04">
-                        <label for="check04">
-                            <span>
-                                출금중지설정
-                                <div class="tooltip-wrap">
-                                    <a href="#none" class="tooltip-btn">?</a>
-                                    <div class="tooltip-txt">
-                                        <p>
-                                            출금중지설정을 ON으로<br>
-                                            변경 시 해당계좌는 출금 및<br>
-                                            이체가 불가능해요
-                                        </p>
-                                        <button type="button" class="tooltip-close">닫기</button>
-                                    </div>
-                                </div>
-                            </span>
-                            <div class="switch-btn">
-                                <span class="off">OFF</span>
-                                <span class="on">ON</span>
-                                <div class="inside"></div>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-
-                
-                <div class="check-wrap">
-                    <!--//[관리자페이지 - 예가람 레이아웃 - 라디오 버튼 : 관리자 약관 하드코딩은 감싸는 terms-txt 태그 필요]-->
-                    <div calss="terms-txt">
-                        <span class="radio-area">
-                            <span class="ctm-radio">
-                                <label for="TA00800900_3_2_1">
-                                    <input type="radio" name="TA00800900_3_1_1" id="TA00800900_3_2_1" value="N" checked="checked">요약동의서
-                                </label>
-                            </span>
-                            <span class="ctm-radio">
-                                <label for="TA00800900_3_2_2">
-                                    <input type="radio" name="TA00800900_3_1_1" id="TA00800900_3_2_2" value="Y">상세동의서
-                                </label>
-                            </span>
-                        </span>
-                    </div>
-                    <!--[관리자페이지 - 예가람 레이아웃 - 라디오 버튼 : 관리자 약관 하드코딩은 감싸는 terms-txt 태그 필요]//-->
-                </div>
-                
-
-                <div class="check-wrap">
-                    <ul class="radio-list">
-                        <li>
-                            <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked"
-                                class="monthly">
-                            <label for="radio01_2" class="">납입일 선택</label>
-                        </li>
-                        <li>
-                            <input type="radio" name="radio01" id="radio01_1" value="" onclick="">
-                            <label for="radio01_1" class="">매월 말일</label>
-                        </li>
-                    </ul>
-
-                    <div class="check-account">
-                        <input type="checkbox" id="chk01" name="check" value="">
-                        <label for="chk01">
-                            <span>주소(현재 거주지)와 동일</span>
-                        </label>
-                    </div>
-                </div>
-
+                <h3>toggle 버튼</h3>
                 <div class="toggle-wrap">
                     <input type="checkbox" id="blncChk">
                     <label for="blncChk">
@@ -234,7 +123,124 @@
                     </label>
                 </div>
 
-                <div class="check-wrap">
+                <h3>관리자 페이지(as-is 예가람 레이아웃) - 라디오 버튼</h3>
+                <!--//[관리자페이지 - 예가람 레이아웃 - 라디오 버튼 : 관리자 약관 하드코딩은 감싸는 terms-txt 태그 필요]-->
+                <div calss="terms-txt">
+                    <span class="radio-area">
+                        <span class="ctm-radio">
+                            <label for="TA00800900_3_2_1">
+                                <input type="radio" name="TA00800900_3_1_1" id="TA00800900_3_2_1" value="N" checked="checked">요약동의서
+                            </label>
+                        </span>
+                        <span class="ctm-radio">
+                            <label for="TA00800900_3_2_2">
+                                <input type="radio" name="TA00800900_3_1_1" id="TA00800900_3_2_2" value="Y">상세동의서
+                            </label>
+                        </span>
+                    </span>
+                </div>
+                <!--[관리자페이지 - 예가람 레이아웃 - 라디오 버튼 : 관리자 약관 하드코딩은 감싸는 terms-txt 태그 필요]//-->
+                <h3>TOBE 예가람 공통 - 라디오 버튼</h3>
+                <ul class="radio-list">
+                    <li>
+                        <input type="radio" name="radio01" id="radio01_2" value="" onclick="" checked="checked"
+                            class="monthly">
+                        <label for="radio01_2" class="">납입일 선택</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="radio01" id="radio01_1" value="" onclick="">
+                        <label for="radio01_1" class="">매월 말일</label>
+                    </li>
+                </ul>
+
+                <h3>주소 - 체크버튼</h3>
+                <div class="check-account">
+                    <input type="checkbox" id="chk01" name="check" value="">
+                    <label for="chk01">
+                        <span>주소(현재 거주지)와 동일</span>
+                    </label>
+                </div>
+
+
+                <h3>적합성 적정성 정보 확인 [lon/prc/loanStbt.html] - 체크버튼</h3>
+                <div class="check-result-wrap">
+                    <ul class="check-result-area">
+                        <li class="check-box">
+                            <input type="checkbox" name="check" id="check01" value="">
+                            <label for="check01">보험료납부</label>
+                        </li>
+                        <li class="check-box">
+                            <input type="checkbox" name="check" id="check02" value="">
+                            <label for="check02">공과금납부</label>
+                        </li>
+                        <li class="check-box">
+                            <input type="checkbox" name="check" id="check03" value="">
+                            <label for="check03">카드대금</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <h3>대출이어하기 리스트[views/lon/prc/accMrtgPrc1_2.html] - 체크버튼</h3>
+                <div class="form-all-wrap">
+                    <ul class="check-box bank_list logo">
+                        <li>
+                            <fieldset>
+                                <input type="checkbox" id="Chk01_12" name="Chk01" value="" class="">
+                                <label for="Chk01_12">
+                                    <div class="tit-area">
+                                        <strong class="tit">온라인 햇살론</strong>
+                                        <em class="flag style10">이어하기</em>
+                                    </div>
+                                    <span class="exp">신청일자 : 2024.07.25</span>
+                                    <span class="exp">접수경로 : (온)핀다</span>
+                                </label>
+                                
+                            </fieldset>
+                        </li>
+                        <li>
+                            <fieldset>
+                                <input type="checkbox" id="Chk01_13" name="Chk01" value="" class="">
+                                <label for="Chk01_13">
+                                    <div class="tit-area">
+                                        <strong class="tit">온라인 햇살론</strong>
+                                        <em class="flag style10">이어하기</em>
+                                    </div>
+                                    <span class="exp">신청일자 : 2024.07.25</span>
+                                    <span class="exp">접수경로 : (온)핀다</span>
+                                </label>
+                            </fieldset>
+                        </li>
+                        <li>
+                            <fieldset>
+                                <input type="checkbox" id="Chk01_14" name="Chk01" value="" class="">
+                                <label for="Chk01_14">
+                                    <div class="tit-area">
+                                        <strong class="tit">온라인 햇살론</strong>
+                                        <em class="flag style9">신청취소</em>
+                                    </div>
+                                    <span class="exp">신청일자 : 2024.07.25</span>
+                                    <span class="exp">접수경로 : (온)핀다</span>
+                                </label>
+                            </fieldset>
+                        </li>
+                        <li>
+                            <fieldset>
+                                <input type="checkbox" id="Chk01_15" name="Chk01" value="" class="" disabled="">
+                                <label for="Chk01_15">
+                                    <div class="tit-area">
+                                        <strong class="tit">온라인 햇살론</strong>
+                                        <em class="flag style9">신청취소</em>
+                                    </div>
+                                    <span class="exp">신청일자 : 2024.07.25</span>
+                                    <span class="exp">접수경로 : (온)핀다</span>
+                                </label>
+                            </fieldset>
+                        </li>
+                    </ul>
+                </div>
+                
+                <h3>라디오 버튼</h3>
+                <div class="form-all-wrap">
                     <ul class="check-box">
                         <li class="ars">
                             <fieldset>
@@ -254,7 +260,7 @@
                     </div>
                 </div>
 
-                <div class="check-wrap">
+                <div class="form-all-wrap">
                     <ul class="check-box">
                         <li class="mydata">
                             <fieldset>
@@ -277,28 +283,7 @@
                     </ul>
                 </div>
 
-                <div class="check-wrap"><!--D: check-wrap 만 감싸줌-->
-                    <ul class="list-icon type2 list-cert">
-                        <li class="joint on"><!-- D: 클래스 on 추가 시 선택된 스타일로 변경됨 -->
-                            <a>
-                                <p class="tit">예가람(YEGARAM)</p>
-                                <p class="txt">01223456789012</p>
-                                <p class="s-txt mt10">발급자 : yessign</p>
-                                <p class="s-txt">만료일 : YYYY-MM-DD</p>
-                            </a>
-                        </li>
-                        <li class="joint">
-                            <a>
-                                <p class="tit">예가람(YEGARAM)</p>
-                                <p class="txt">01223456789012</p>
-                                <p class="s-txt mt10">발급자 : yessign</p>
-                                <p class="s-txt">만료일 : YYYY-MM-DD</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="check-wrap">
+                <div class="form-all-wrap">
                     <ul class="check-box flex-col type2">
                         <li class="elecId">
                             <fieldset>
@@ -327,18 +312,39 @@
                     </ul>
                 </div>
 
+                <h3>인증서 리스트 - on클래스(선택) </h3>
+                <div class="form-all-wrap">
+                    <ul class="list-icon type2 list-cert">
+                        <li class="joint on"><!-- D: 클래스 on 추가 시 선택된 스타일로 변경됨 -->
+                            <a>
+                                <p class="tit">예가람(YEGARAM)</p>
+                                <p class="txt">01223456789012</p>
+                                <p class="s-txt mt10">발급자 : yessign</p>
+                                <p class="s-txt">만료일 : YYYY-MM-DD</p>
+                            </a>
+                        </li>
+                        <li class="joint">
+                            <a>
+                                <p class="tit">예가람(YEGARAM)</p>
+                                <p class="txt">01223456789012</p>
+                                <p class="s-txt mt10">발급자 : yessign</p>
+                                <p class="s-txt">만료일 : YYYY-MM-DD</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <h3>arrow-button-list</h3>
                 <div class="arrow-button-wrap">
-
                     <ul class="arrow-button-list">
                         <li><a href="#none" onclick="">종합통장대출 신청</a></li>
                         <li style="display:none;"><a href="#none" onclick="">종합통장대출 해지</a></li>
-                        <!-- [퍼블] 종합통장대출 해지 버튼 -->
                         <li><a href="#none" onclick="">계좌비밀번호 변경</a></li>
                         <li><a href="#none" onclick="">통장사본</a></li>
                     </ul>
-
                 </div>
 
+                <h3>yes/no</h3>
                 <div class="terms-wrap">
                     <div class="terms-area">
                         <!-- <strong>금융거래목적 확인</strong> -->
@@ -389,27 +395,26 @@
 
             </div>
 
-            <!-- // D: 등록구분 팝업 -->
-            <div id="lySel01" class="layerpopup layer-up"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
-                <div class="content-wrap">
-                    <div class="pop-header">
-                        <h2 class="pop-title">등록구분</h2>
-                        <button type="button" name="button" class="btn-layer-close"
-                            data-focus="btn-layer-close">닫기</button>
-                    </div>
-                    <div class="ly-scroll-con ly-select">
-                        <ul class="ly-select-list">
-                            <li><button>주민등록번호</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
-                            <li><button>법인(기업) 사업자번호</button></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- D: 등록구분 팝업 // -->
-
-
         </div>
         <!-- //e: contents -->
+
+        <!-- // D: 등록구분 팝업 -->
+        <div id="lySel01" class="layerpopup layer-up"><!-- [D] 클래스 has-button 추가 시 하단 fixed 버튼 있을 시 스타일 노출-->
+            <div class="content-wrap">
+                <div class="pop-header">
+                    <h2 class="pop-title">등록구분</h2>
+                    <button type="button" name="button" class="btn-layer-close"
+                        data-focus="btn-layer-close">닫기</button>
+                </div>
+                <div class="ly-scroll-con ly-select">
+                    <ul class="ly-select-list">
+                        <li><button>주민등록번호</button></li><!-- [D] 클래스 active 추가 시 활성화 스타일 노출 -->
+                        <li><button>법인(기업) 사업자번호</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- D: 등록구분 팝업 // -->
 
     </div>
     <!-- //contentsWrap -->
