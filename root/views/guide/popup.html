@@ -241,7 +241,7 @@
 									<div class="swiper-slide">
 										<a href="javascript:void(0);">
 											<div class="swiper-img">
-												<img src="/resources/images/common/event-pop-img.png" alt="이벤트 이미지">
+												<img src="/resources/images/common/event-pop-img.png" alt="이벤트 이미지" style="height:500px;">
 											</div>
 										</a>
 									</div>
@@ -254,6 +254,7 @@
 		
 							// 하단배너는 고정
 							var newsSlider = new Swiper('.event-img.swiper', {
+                                autoHeight : true,//높이 조절 필요할 경우
 								slidesPerView: 1,
 								spaceBetween : 20,
 								pagination : {
